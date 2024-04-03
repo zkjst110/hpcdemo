@@ -5,7 +5,7 @@
 
 Hyperchain文档
 ======================================
-
+This is a label for a new branch and a new relese v1.1
 .. toctree::
    :maxdepth: 2
    :caption: 平台介绍:
