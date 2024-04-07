@@ -5,6 +5,7 @@
 
 Hyperchain文档
 ======================================
+i create a branch named v1.0 and then merge it in branch1.1.here is a word from origin v1.0 branch(have deleted now):
 This is a label for a new branch and a new branch v1.0.test the same release tag and branch name .
 
 .. toctree::
