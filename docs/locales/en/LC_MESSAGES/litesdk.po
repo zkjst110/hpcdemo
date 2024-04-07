@@ -1,0 +1,2592 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/litesdk.rst:4 f2b291654f9d4ec79f3b63010a21d4d1
+msgid "Litesdk"
+msgstr ""
+
+#: ../../source/litesdk.rst:6 43b3cdfe7d5c4826bf3eb0966be18c66
+#, python-format
+msgid "`完整Litesdk使用手册 <https://upload.filoop.com/RTD-Hyperchain%2FLiteSDK.zip>`_"
+msgstr ""
+
+#: ../../source/litesdk.rst:9 dae42ea6b4644f64b089c06d1ebf57e0
+msgid "第一章. 前言"
+msgstr ""
+
+#: ../../source/litesdk.rst:11 0a8c6f024e8a4516863f214cdfd775bd
+msgid ""
+"**LiteSDK**\\ 是一个\\ **轻量JavaSDK工具**\\ "
+"，提供与Hyperchain区块链平台交互的接口以及一些处理工具。该文档⾯向Hyperchain区块链平台的应⽤开发者，提供hyperchain "
+"Java SDK的 使⽤指南。"
+msgstr ""
+
+#: ../../source/litesdk.rst:14 7598901868bb4b9aa015ec9ce706d2b3
+msgid ""
+"如需尝试SDK的demo，可将项目clone到本地，配置好Java环境(推荐使用1.8)和maven构建工具，可运行对应的发送交易和查询接口，例如合约调用的demo可在\\"
+" `此处 "
+"<https://github.com/hyperchain/javasdk/tree/master/src/test/java/cn/hyperchain/sdk>`__\\"
+" 找到，对应的资源文件和合约demo也在resource文件夹下。"
+msgstr ""
+
+#: ../../source/litesdk.rst:16 4e88a050acb844d19cec2bfdc8db3d2b
+msgid ""
+"同时如需更好的使用SDK来操作区块链平台发送交易，建议阅读Hyperchain区块链底层平台\\ `介绍文档 "
+"<http://docs.hyperchain.cn/>`__\\ ，如需详细文档介绍可联系运维人员。"
+msgstr ""
+
+#: ../../source/litesdk.rst:18 01cf69f1abf6485a8b7e93808411ac94
+msgid "同时对于EVM、HVM合约调用，也需详细阅读对应的合约介绍了解相关概念后再使用SDK进行操作。"
+msgstr ""
+
+#: ../../source/litesdk.rst:20 32f86168dab4498790cda43a1f904a29
+msgid "EVM Solidity合约文档链接：https://solidity.readthedocs.io/en/latest/"
+msgstr ""
+
+#: ../../source/litesdk.rst:22 fc2490d3653b492daf5d01de81d36225
+msgid "HVM 合约文档链接见Hyperchain介绍文档。"
+msgstr ""
+
+#: ../../source/litesdk.rst:25 0dc25ff6f1bf40628e82885c8058eaee
+msgid "第二章. 初始化"
+msgstr ""
+
+#: ../../source/litesdk.rst:28 1ffdfd215fe74c278382de8dfc8d9d9c
+msgid "2.1 创建HttpProvider对象"
+msgstr ""
+
+#: ../../source/litesdk.rst:30 77be5b9e3bd44b3d9477238dbf75bec4
+msgid ""
+"``HttpProvider``\\ 是一个接口，负责管理与节点的连接，实现\\ ``HttpProvider``\\ "
+"接口的类需要提供底层的通信实现，目前\\ **LiteSDK**\\ 已有默认的实现类\\ ``DefaultHttpProvider``\\ "
+"，创建\\ ``DefaultHttpProvider``\\ 需要通过\\ **Builder**\\ 模式创建，示例如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:48 3e111d78390d410caac53f936cf44be3
+msgid ""
+"``Builder(int readTimeout, int writeTimeout, int connectTimeout)``\\ "
+"自定义\\ **https协议**\\ 的读取超时时间、写超时时间和连接超时时间，单位为s。"
+msgstr ""
+
+#: ../../source/litesdk.rst:49 9a9f1462e4814061bec844d7f81d728e
+msgid "``setUrl()``\\ 可以设置连接的节点\\ **URL**\\ （格式为\\ **ip+jsonRPC端口**\\ ）;"
+msgstr ""
+
+#: ../../source/litesdk.rst:50 1600c824c5c5424d87dfc3a1ddc1cc00
+msgid "``https()``\\ 设置启动\\ **https协议**\\ 连接并设置使用的证书(需要传的参数类型为输入流)。"
+msgstr ""
+
+#: ../../source/litesdk.rst:53 97e2791cb00a42b4b612729bf330b5f6
+msgid "2.2 创建GrpcProvider对象"
+msgstr ""
+
+#: ../../source/litesdk.rst:55 056faff19cdd4a12b2f7326d0b45bdb7
+msgid ""
+"``GrpcProvider``\\ 是接口\\ ``HttpProvider``\\ 的一个实现类，\\ "
+"``DefaultHttpProvider``\\ 通过jsonrpc与节点进行通信，而\\ ``GrpcProvider``\\ "
+"通过grpc双向流与节点进行通信，创建\\ ``GrpcProvider``\\ 需要通过Builder模式创建，示例如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:72 22e6c1f878d9439db9958fa010b08d4a
+msgid "``Builder(long time)``\\ 自定义grpc向节点请求的超时时间，单位为ms。"
+msgstr ""
+
+#: ../../source/litesdk.rst:73 25eca88432344b4d88282034e23b4e90
+msgid "``setUrl``\\ 可以设置连接的节点\\ **URL**\\ （格式为\\ **ip+grpc**\\ 端口）"
+msgstr ""
+
+#: ../../source/litesdk.rst:74 f4eb8188c80b49b2ae484ae972a8c438
+msgid ""
+"``setStreamNum``\\ 设置本连接与节点之间同一种类型的grpc双向流的最大数量，默认值为1，通常来说其值可设置为使用该\\ "
+"``GrpcProvider``\\ 的线程数量。"
+msgstr ""
+
+#: ../../source/litesdk.rst:77 5f00b1b6dfca43eab05aac16cac35aaf
+msgid "2.3 创建ProviderManager对象"
+msgstr ""
+
+#: ../../source/litesdk.rst:79 fc766236fb3440c2ba0b95a7016e1e1d
+msgid ""
+"每个节点的连接都需要一个\\ ``HttpProvider``\\ ，而\\ ``ProviderManager``\\ 负责集成、管理这些\\ "
+"``HttpProvider``\\ ，创建\\ ``ProviderManager``\\ 有两种方式，一种是通过\\ "
+"``createManager()``\\ 创建，另一种是和\\ ``HttpProvider``\\ 一样通过\\ **Builder**\\ "
+"模式创建。使用前者创建会使用\\ ``ProvideManager``\\ "
+"的默认配置参数，而如果想定制更多的属性则需要通过后者的方式创建，示例如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:81 4e53c7f8bf7b4d81aca4eb8c283e428f
+msgid ""
+"另外，每个节点都有一个对应的TxVersion，可通过\\ ``getTxVersion(nodeId)``\\ "
+"接口获取对应节点的TxVersion，发送到节点的transaction的TxVersion必须与节点一致才能通过验签。\\ "
+"``providerManager``\\ 对象在创建时会通过\\ ``TxVersion.setGlobalTxVersion``\\ "
+"设置全局的TxVersion。\\ ``Transaction``\\ 对象也可通过\\ ``setTxVersion``\\ "
+"函数设置单次交易的TxVersion。"
+msgstr ""
+
+#: ../../source/litesdk.rst:83 5df2055b84c843e78678fc7ec65ab1f2
+msgid "为全局设置txVersion(不推荐修改)："
+msgstr ""
+
+#: ../../source/litesdk.rst:91 76bb930965934a6aaf7af4fe53e4fb95
+msgid "或者为单个交易设置txVersion："
+msgstr ""
+
+#: ../../source/litesdk.rst:97 fa4afb52ee92460ca7e85af7b1b8a0f1
+msgid ""
+"一般而言，使用新版本LiteSDK访问hyperchain默认txVersion为1.0，对于hyperchain2.0来说，sdk将自动识别平台txVersion，\\"
+" **不需要手动进行设置**\\ 。"
+msgstr ""
+
+#: ../../source/litesdk.rst:99 f59fdd75de41452a865e4516992b597b
+msgid "节点平台与TxVersion对应关系如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:102 372eadaf6cce4e84bae935d1fb63e87e
+msgid "平台使用版本"
+msgstr ""
+
+#: ../../source/litesdk.rst:102 6f4dd5c7d02e44c5b3474fab7b6bc8d1
+msgid "TxVersion版本"
+msgstr ""
+
+#: ../../source/litesdk.rst:104 f1d898b70ca94ea883214fddf435d57f
+msgid "hyperchain 1.x"
+msgstr ""
+
+#: ../../source/litesdk.rst:104 3ded1465c9cd4705a334729d33bffdd0
+msgid "1.0"
+msgstr ""
+
+#: ../../source/litesdk.rst:105 16f9818c97ee43d7862b2920c7e92502
+msgid "hyperchain 2.0.0"
+msgstr ""
+
+#: ../../source/litesdk.rst:105 2514686874ab4d2092b948004c02fafe
+msgid "2.3"
+msgstr ""
+
+#: ../../source/litesdk.rst:121 86a86dc2e10243dea3c40cb5f454fed3
+msgid "方式1："
+msgstr ""
+
+#: ../../source/litesdk.rst:123 055ab438d06f41e4835eb6b31acca633
+msgid ""
+"只需要传\\ ``HttpProvider``\\ 对象，其他都使用\\ ``ProvideManager``\\ "
+"的默认配置，如不启用证书、使用的\\ **namespace**\\ 配置项为\\ **global**\\ 。"
+msgstr ""
+
+#: ../../source/litesdk.rst:125 693e343b8bf2486fa66c8449028d68d9
+msgid ""
+"方式2： \\* ``namespace()``\\ 可以设置对应的\\ **namespace名**; \\* "
+"``providers()``\\ 设置需要管理的\\ ``HttpProvider``\\ 对象们; \\* "
+"``grpcProviders``\\ 设置需要管理的\\ ``GrpcProvider``\\ 对象； \\* "
+"``enableTCert()``\\ 设置使用的证书(**需要传的参数类型为输入流)**\\ 。注：例子中未出现的方法还有一个\\ "
+"``cfca(InputStream sdkCert, InputStream sdkCertPriv)``\\ ，功能与\\ "
+"``enableTCert()``\\ 相同，两者的区别是证书校验是否通过\\ **cfca机构**\\ ，且在创建\\ "
+"``ProvideManager``\\ 对象过程中两个方法只能使用其中一个。"
+msgstr ""
+
+#: ../../source/litesdk.rst:130 cc6514614f9e42d59ca380657fcd02f8
+msgid "注：enableTcert里面的sdkcert_cert，sdkcert_priv，unique_pub，unique_priv，分别对应证书目录下的sdkcert_cert，key_priv，unique_pub，unique_priv文件。"
+msgstr ""
+
+#: ../../source/litesdk.rst:133 05265ddc29e0428e82652cbc77925858
+msgid "2.4 创建服务"
+msgstr ""
+
+#: ../../source/litesdk.rst:135 bbb8fc24385347b69bf9466cc1d616fc
+msgid ""
+"相关的一类服务集合由一个专门的\\ ``Service``\\ "
+"接口管理，并通过对应的实现类实现具体的创建过程（如封装发送请求需要附带的参数）。\\ **LiteSDK**\\ 通过\\ "
+"``ServiceManager``\\ 类负责管理创建所有的\\ ``Service``\\ 对象，以下是一个创建获取节点信息的服务的例子："
+msgstr ""
+
+#: ../../source/litesdk.rst:146 c31d4dad6e4a4639bba059501d8b721a
+msgid ""
+"实际上每个服务创建对应创建一个请求，这个请求都继承了共同的父类——``Request``\\ ，\\ **LiteSDK**\\ 将根据不同的\\"
+" ``Service``\\ 接口，返回不同\\ ``Request``\\ 子类，同时将用户调用接口的参数\\ ``params``\\ "
+"封装到\\ ``Request``\\ 请求中，而在创建\\ ``Request``\\ "
+"的过程中会附带一个具体的响应类型的声明，该响应类型也将根据不同的\\ ``Service``\\ 接口与\\ ``Request``\\ 绑定。"
+msgstr ""
+
+#: ../../source/litesdk.rst:148 5b1021a73b1d46e3ba83fbcdeb1d80e6
+msgid "``Request``\\ 拥有\\ ``send()``\\ 和\\ ``sendAsync()``\\ 同步发送和异步发送两个方法："
+msgstr ""
+
+#: ../../source/litesdk.rst:150 5b4dd8cdb54742fca70493134c4f41de
+msgid "``send()``: 同步发送返回\\ ``Request``\\ 根据不同接口绑定的\\ ``Response``"
+msgstr ""
+
+#: ../../source/litesdk.rst:152 81f58a4049a140fb90f7afd7911a9c7a
+msgid ""
+"``sendAsync()``: 异步发送返回\\ ``Request``\\ 根据不同接口绑定了\\ ``Response``\\ 的\\ "
+"``Future``\\ 接口"
+msgstr ""
+
+#: ../../source/litesdk.rst:156 c875e0a5da6e48adad4651dc4bd12b84
+msgid "2.5 获取结果"
+msgstr ""
+
+#: ../../source/litesdk.rst:158 0487999d17b9472995d4eb582f2f6851
+msgid ""
+"同样地，响应也都继承了共同的父类——``Response``\\ ，通过调用\\ ``Request``\\ 的\\ ``send()``\\ "
+"方法得到，\\ **LitesSDK**\\ 会将不同的返回结果\\ ``result``\\ 根据接口封装成不同的\\ "
+"``Response``\\ 子类，如 **2.3** 所说\\ ``Response``\\ 类型在生成\\ ``Request``\\ "
+"时绑定。\\ ``Response``\\ 可以获取状态码、状态消息等，而不同的\\ ``Response``\\ "
+"可以获取到不同的结果，有时也需要进一步获取到更具体的信息。示例如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:167 980fee5928af4f3bbf1e5c1181d31008
+msgid ""
+"当\\ ``ProvideManager``\\ 管理多个节点连接时，返回的节点信息应该是一个数组，这时就需要调用示例中的\\ "
+"``getResult()``\\ 方法将返回结果转换成更准确的类型。"
+msgstr ""
+
+#: ../../source/litesdk.rst:170 e822de0e1e834e919751b04e8639c042
+msgid "第三章. 交易"
+msgstr ""
+
+#: ../../source/litesdk.rst:172 06f4a4e6531d443caa6186d2a4c9c86f
+msgid ""
+"**LiteSDK**\\ 的交易接口需要用到交易体，交易体的应用场景分为两类：一类\\ **是普通的转账交易，不涉及虚拟机**\\ ，一类是\\"
+" **合约交易，和虚拟机相关**\\ 。两者虽然都名为交易，但实际执行的功能和应用场景都不同，且转账交易的实现由\\ "
+"``TxService``\\ 提供，合约交易的实现由\\ ``ContractService``\\ 提供。"
+msgstr ""
+
+#: ../../source/litesdk.rst:175 9e18e8c9b1e74f65b520b46717cf1bf5
+msgid "合约接口"
+msgstr ""
+
+#: ../../source/litesdk.rst:177 fc46e7e4bb4045d09263ee02cf073b38
+msgid "以交易体结构为核心的交易主要应用在合约交易上，即将想要执行的操作和数据封装成一笔交易体，再调用合约服务(``ContractService``)的接口去执行。"
+msgstr ""
+
+#: ../../source/litesdk.rst:179 095fe9b5c5cc45aebc6f144ef062f263
+msgid ""
+"绑定合约接口的\\ ``Response``\\ 子类只有\\ ``TxHashResponse``\\ 和\\ "
+"``ReceiptResponse``\\ ，前者封装了\\ ``ReceiptResponse``\\ 类型的参数，实际是\\ **tx "
+"hash**\\ ，拿到\\ ``TxHashResponse``\\ 后调用\\ **polling**\\ 方法可通过\\ **tx "
+"hash**\\ 去查找获取真正的交易回执；后者\\ ``ReceiptResponse``\\ 即为交易回执，无需再调用\\ "
+"**polling**\\ 查询。"
+msgstr ""
+
+#: ../../source/litesdk.rst:183 c675e5bf205044b1964c81a997a34fe0
+msgid "``TxHashResponse``\\ 的主要方法如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:202 297f4290570f48ec8b1dcd6b9f319371
+msgid ""
+"LiteSDK的合约接口较特殊，交易相关的接口目前提供了\\ **部署合约、调用合约、管理合约、通过投票管理合约**\\ "
+"四种接口。其中以grpc开头的接口表示该接口只有在创建\\ ``ProviderManager``\\ 对象时，设置了\\ "
+"``GrpcProvider``\\ 与节点通信才可使用，且绑定了\\ ``ReceiptResponse``\\ 。"
+msgstr ""
+
+#: ../../source/litesdk.rst:228 675db4b69218450a89a80d82cdc9df66
+msgid ""
+"根据要创建的合约服务不同，封装的\\ ``Transaction``\\ 交易体也会不同。\\ "
+"**并且LiteSDK支持HVM、EVM、BVM、FVM三种形式的合约**\\ ，这几种也会影响到交易体的创建。"
+msgstr ""
+
+#: ../../source/litesdk.rst:231 ae0e9f83f36145e890905ccc97f017a4
+msgid "转账交易"
+msgstr ""
+
+#: ../../source/litesdk.rst:233 aebb51f0cb914c78899ee57886395206
+msgid "转账交易的实现主要是TxService提供，主要有三个接口。"
+msgstr ""
+
+#: ../../source/litesdk.rst:243 29b18f6babed49ec9b11ca9d6616be9b
+msgid ""
+"前两个接口分别绑定了\\ ``TxHashResponse``\\ 和\\ ``TxHashesResponse``\\ "
+"，当拿到这两个响应时调用\\ ``polling()``\\ 方法就可以获取真正的交易回执，前者返回\\ "
+"``ReceiptResponse``\\ ，后者返回\\ ``ArrayList<ReceiptResponse>``\\ 。第三个接口\\ "
+"``grpcSendTxReturnReceipt``\\ 绑定了\\ ``ReceiptResponse``\\ "
+"，即可以直接获得交易回执。转账交易和合约接口类似，主要的不同在于交易体的创建，转账交易通过内部类\\ ``Builder``\\ 调用\\ "
+"``transfer()``\\ 方法创建。"
+msgstr ""
+
+#: ../../source/litesdk.rst:254 02304ab4d40644399537105591f590b9
+msgid "**创建交易体并调用服务的具体流程如下。**"
+msgstr ""
+
+#: ../../source/litesdk.rst:257 38a3c139332341c0b9cf991d95f61f0f
+msgid "创建账户"
+msgstr ""
+
+#: ../../source/litesdk.rst:259 6c6d2227625c4324a971b74afff06632
+msgid "这个过程分为两步，先创建\\ ``AccountService``\\ 对象，再利用该对象创建账户，示例如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:266 efd40b282fde4147a95583d301facde2
+msgid ""
+"如第二章所说，创建\\ ``Service``\\ 对象需要指定\\ ``ProviderManager``\\ 对象，且使用\\ "
+"``genAccount()``\\ 创建账户时需要指定加密算法，如示例中使用\\ **SMRAW算法**\\ （只有\\ **ECRAW**\\"
+" 、\\ **SMRAW**\\ 、\\ **ED25519RAW**\\ 不需要密码参数，其余的加密算法需要手动设置\\ "
+"**password**\\ ）。另外，对于要使用\\ **PKI算法**\\ 创建的账户，需要传入其使用的\\ **PFX证书**\\ "
+"的输入流以及该证书对应的密码。原因是PFX证书内包含生成其的私钥，解密该私钥需要对应密码。"
+msgstr ""
+
+#: ../../source/litesdk.rst:268 ca63768438b3450aae9d3d7584c4fbe4
+msgid "``AccountService``\\ 提供的接口如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:292 fe98bee616be4077bf3ee2315e7e1f8d
+msgid "前五个接口是用于生成账户。余下接口是查询账户相关信息，其说明如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:294 456247c583ce4145913620f7c915840e
+msgid "``getBalance``\\ 方法则可以查询该账户所有的余额，需要传一个\\ **合约地址**\\ 为参数。"
+msgstr ""
+
+#: ../../source/litesdk.rst:295 1afaeb94b2b74d54a1837e9f77656eae
+msgid "``getRoles``\\ 方法则可以查询该账户所有的角色，需要传一个\\ **合约地址**\\ 为参数。"
+msgstr ""
+
+#: ../../source/litesdk.rst:296 77c6b61c8601467ab01bde1d98d65d88
+msgid "``getAccountsByRole``\\ 方法则可以查询具有改角色的账户列表，需要传一个\\ **角色名称**\\ 为参数。"
+msgstr ""
+
+#: ../../source/litesdk.rst:297 8c6f6f572aa649cf9c4b9e1ee7682f3a
+msgid "``getStatus`` 方法则可以查询普通账户的状态，需要穿一个普通\\ **账户地址**\\ 为参数。"
+msgstr ""
+
+#: ../../source/litesdk.rst:300 0f09845dc6ad43a988d0407ac516f419
+msgid "目前Account服务支持的所有加密算法如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:325 f3de6b99816f44b6a06eaaa0d59357ff
+msgid "交易体创建"
+msgstr ""
+
+#: ../../source/litesdk.rst:327 e68733ad98534e75a244eb0994d3b5bc
+msgid ""
+"**LiteSDK**\\ 使用\\ **Builder**\\ 模式来负责对\\ ``Transaction``\\ 的创建，通过调用\\ "
+"``build()``\\ 函数来获取到\\ ``Transaction``\\ 实例。HVM、EVM、BVM和FVM分别有各自的\\ "
+"**Builder**\\ ：\\ ``HVMBuilder``\\ 、\\ ``EVMBuilder、BVMBuilder``\\ 、\\ "
+"``FVMBuilder``\\ ，继承同一个父类\\ ``Builer``\\ 。目前\\ **Builder**\\ "
+"模式提供了五种交易体的封装，分别对应\\ **部署合约、调用合约、升级合约、冻结合约、解冻合约**\\ "
+"，其中前两个服务的交易体分别定义在HVM、EVM、BVM、FVM各自的\\ ``Builder``\\ 子类中，后三者都是\\ "
+"**管理合约**\\ 这一服务的子服务，定义在父类\\ ``Builder``\\ 中。"
+msgstr ""
+
+#: ../../source/litesdk.rst:355 3f96ca6344f54cb591046edc1e348b70
+msgid "下面是创建各个服务的交易体\\ ``Transaction``\\ 的实例。"
+msgstr ""
+
+#: ../../source/litesdk.rst:358 4a75c2eed6b9454187568d055f055dcb
+msgid "部署合约"
+msgstr ""
+
+#: ../../source/litesdk.rst:361 ../../source/litesdk.rst:417
+#: ../../source/litesdk.rst:515 ../../source/litesdk.rst:553
+#: ../../source/litesdk.rst:591 1b7ff0b74e8c408c9ef2d69268252545
+#: 1d457b640db447ef895b3d4673e93506 b9092ebc5dcd407da8c9cc74a56f2714
+#: e047f97c7226466d9ff86d321cd96177 f3298a3eed9341c68f26782912d5342c
+msgid "HVM"
+msgstr ""
+
+#: ../../source/litesdk.rst:369 fcbfc2f99c7f4aedab276ea02f1e58c2
+msgid "创建交易体时需要指定要\\ **部署的jar包(封装成流)**\\ 。"
+msgstr ""
+
+#: ../../source/litesdk.rst:372 ../../source/litesdk.rst:480
+#: ../../source/litesdk.rst:526 ../../source/litesdk.rst:564
+#: ../../source/litesdk.rst:602 1974cb8bd2374c5c95cb04304fc8199b
+#: 1d90ce740639414ab0c140949b5e6e17 39592fd22c674aff9abbe38913420241
+#: 7a3f4651330740ada4152ad9f94230c2 c41737bc554441cf8c46758e4902406e
+msgid "EVM"
+msgstr ""
+
+#: ../../source/litesdk.rst:388 986217af5a5545f485b66ff02ed98706
+msgid "创建交易体时需要指定要\\ **部署的合约的bin、abi文件的字符串内容以及合约名**\\ 。"
+msgstr ""
+
+#: ../../source/litesdk.rst:391 ../../source/litesdk.rst:493
+#: ../../source/litesdk.rst:537 ../../source/litesdk.rst:575
+#: ../../source/litesdk.rst:613 08c0c80f48764215b4aede692f2ad5b0
+#: 4390bd1dfa9747fbb1cfac35f7ca58de 5283b89bd9ef4c41a74a79570a374da2
+#: b721d630999041f9ad7bea2251718e68 b89e3e90b7324137868fbde1c35ff7dc
+msgid "FVM"
+msgstr ""
+
+#: ../../source/litesdk.rst:393 c35d10503d4142da8626b10009eb88f4
+msgid "待部署的合约构造函数不带参数使用方式如下"
+msgstr ""
+
+#: ../../source/litesdk.rst:400 1a9b5d6378eb488b99b7f2fd27e03d28
+msgid "如果待部署的合约构造函数有参数那么使用方式如下"
+msgstr ""
+
+#: ../../source/litesdk.rst:409 7f7625ce2dd54871bfd7bcb88b2b8c26
+msgid "创建交易体时需要指定要\\ **部署的合约的wasm文件**"
+msgstr ""
+
+#: ../../source/litesdk.rst:412 74badba8ac7946748e0f51ee06181c64
+msgid "调用合约"
+msgstr ""
+
+#: ../../source/litesdk.rst:419 5d51beebc17749d99205fb213469042d
+msgid "hvm调用合约有四种方式："
+msgstr ""
+
+#: ../../source/litesdk.rst:421 adeec4de246a4b029722b5b2c70bdc7c
+msgid "**InvokeBean**\\ 调用"
+msgstr ""
+
+#: ../../source/litesdk.rst:422 bf5c11fc2047434ab2c81d6c74af4c07
+msgid "直接调用合约方法（类似evm）"
+msgstr ""
+
+#: ../../source/litesdk.rst:423 edf5b5859b3d4af7bfe5b730aecfb10d
+msgid "通过hvm-abi文件调用"
+msgstr ""
+
+#: ../../source/litesdk.rst:424 95cdd404a1024db3b8e59e16e550e1dd
+msgid "通过hvm-abi文件进行并行合约调用"
+msgstr ""
+
+#: ../../source/litesdk.rst:426 ab3b049447f44fb5abb4acd4f07541a4
+msgid "InvokeBean调用如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:432 d00641dca646486da552a7cfb615a5a6
+msgid "创建交易体时需要指定\\ **合约地址**\\ 和\\ **InvokeBean**\\ (HVM中新提出的概念，请先通过HVM文档了解)。"
+msgstr ""
+
+#: ../../source/litesdk.rst:434 dbdebaf3c5a34a90bfd2d6a75d69bfed
+msgid "直接调用合约方法如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:440 1ffe49bf8b2141fa843c545d46328c9a
+msgid "params类型为\\ ``InvokeDirectlyParams``\\ ，具体的构造方式见附录。"
+msgstr ""
+
+#: ../../source/litesdk.rst:442 63ec0f5fc1634a6ca36e8e6111cfc663
+msgid "通过hvm.abi文件调用合约"
+msgstr ""
+
+#: ../../source/litesdk.rst:458 fb742f59f28941fba7ef5f6fcffd20b5
+msgid "通过hvm.abi文件进行合约并行调用"
+msgstr ""
+
+#: ../../source/litesdk.rst:460 bdb27cd7bf7d44b7baec8fb35a889f14
+msgid "hvm支持区块间的hvm合约调用并行执行，hvm合约并行调用的具体内容请参考HVM使用手册，这里只给出使用示例。"
+msgstr ""
+
+#: ../../source/litesdk.rst:488 d6c17d0c1f604c3889a4decd0fa5b8bb
+msgid "创建交易体时需要指定\\ **调用方法**\\ 、\\ **abi文件**\\ 和\\ **方法参数**\\ 。"
+msgstr ""
+
+#: ../../source/litesdk.rst:505 ebb918daef7248399c82c661b7f1a2a1
+msgid "创建交易体时需要指定\\ **调用方法，abi以及参数**"
+msgstr ""
+
+#: ../../source/litesdk.rst:508 f18f316bec7449d4a9427745ea2868e1
+msgid "升级合约"
+msgstr ""
+
+#: ../../source/litesdk.rst:510 4e247dbc4db44548a2d5277f0d1c5f1c
+msgid "升级合约使用ContractService的maintain接口。"
+msgstr ""
+
+#: ../../source/litesdk.rst:521 ede77356251d4cd78bc2300f2120457a
+msgid "创建交易体时需要指定\\ **合约地址**\\ 和\\ **读取新合约jar包得到的字符串**"
+msgstr ""
+
+#: ../../source/litesdk.rst:532 1537a606c1c849bd90b5f39aaf90346d
+msgid "创建交易体时需要指定\\ **合约地址**\\ 和\\ **升级的新合约的bin文件字符串**\\ 。"
+msgstr ""
+
+#: ../../source/litesdk.rst:543 18c90814025645b88747906fb9e1e6db
+msgid "创建交易体时需要指定\\ **合约地址**\\ 和\\ **升级的新合约的wasm文件**\\ 。"
+msgstr ""
+
+#: ../../source/litesdk.rst:546 b59290df3e5a46c8b2087f0e0be75428
+msgid "冻结合约"
+msgstr ""
+
+#: ../../source/litesdk.rst:548 fd82863201a04d6aa22b74d7180220b6
+msgid "冻结合约使用ContractService的maintain接口。"
+msgstr ""
+
+#: ../../source/litesdk.rst:559 ../../source/litesdk.rst:570
+#: ../../source/litesdk.rst:581 ../../source/litesdk.rst:597
+#: ../../source/litesdk.rst:608 ../../source/litesdk.rst:619
+#: 0f13d127d881479e91a7723636f547a5 7b4f90e3357145fa9eba4e2f8401f9f3
+#: 87bb478efb414d0c95ba07c6721f7678 9c699b82968b419a81fb5f876af44ae8
+#: f22d7473df094d7fa856d3fb389427c2 fb6933d97b0549e3bc8979a9c3fbfce9
+msgid "创建交易体时需要指定\\ **合约地址**\\ 。"
+msgstr ""
+
+#: ../../source/litesdk.rst:584 00b6acfe860f4e5dafbeb00faf711613
+msgid "解冻合约"
+msgstr ""
+
+#: ../../source/litesdk.rst:586 5241432cf65c4522ba6472e299c446ba
+msgid "解冻合约使用ContractService的maintain接口。"
+msgstr ""
+
+#: ../../source/litesdk.rst:622 01daaa7a2b734bf28080759d61bdcf44
+msgid "simulate交易"
+msgstr ""
+
+#: ../../source/litesdk.rst:624 ff50fa129c784563b49e61e583ea5b89
+msgid ""
+"simulate交易执行不会更改区块链的账本状态，这是其和普通交易最大的不同。在使用方式上，两者没有什么区别，只需要在构建simulate交易时设置其\\"
+" ``simulate``\\ 标志，即可如发送普通交易一样，发送simulate交易。"
+msgstr ""
+
+#: ../../source/litesdk.rst:626 ce71b5ed4e414ab081369742c893bbed
+msgid "构建simulate交易示例如下"
+msgstr ""
+
+#: ../../source/litesdk.rst:636 5c174e951c804d9ebf9e84df205a8412
+msgid "交易体的payload"
+msgstr ""
+
+#: ../../source/litesdk.rst:638 d9f4ae7abe064e12b3f7da0e7ab964bd
+msgid ""
+"在创建交易体时，会根据传入的参数生成payload。如果是HVM合约相关的\\ ``transaction``\\ ，可通过\\ "
+"``Decoder``\\ 提供的\\ ``decodeHVMPayload(String payload)``\\ "
+"方法对payload进行解析，返回\\ ``HVMPayload``\\ 对象。"
+msgstr ""
+
+#: ../../source/litesdk.rst:644 d651dae749a1457eb7f29c7da70d54a3
+msgid "``HVMPayload``\\ 结构如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:654 cbfb6a7adf434c258e46a3a9a31b0cf0
+msgid ""
+"其中\\ ``invokeBeanName``\\ 为调用的HVM合约的名字，\\ ``invokeArgs``\\ 为调用的参数，\\ "
+"``invokeMethods``\\ 为调用的合约方法。"
+msgstr ""
+
+#: ../../source/litesdk.rst:656 245bd904cc2344b4a3af002b960297b6
+msgid ""
+"如果是BVM合约相关的\\ ``transaction``\\ ，可通过\\ ``Decoder``\\ 提供的\\ "
+"``decodeBVMPayload(String payload)``\\ 方法对payload进行解析，返回\\ "
+"``Operation``\\ 对象，从\\ ``Operation``\\ "
+"中可以获取BVM交易调用的内置合约方法(methodName)和参数(args)。"
+msgstr ""
+
+#: ../../source/litesdk.rst:659 3956f8880da54361a99f8c6e448d5edd
+msgid "交易体设置TxVersion"
+msgstr ""
+
+#: ../../source/litesdk.rst:661 d59b2042eb354e2f949b05813035039f
+msgid ""
+"``transaction``\\ 对象在创建时，其TxVersion属性值默认为全局的TxVersion，也可通过\\ "
+"``setTxVersion``\\ 函数来设置交易体的TxVersion属性。"
+msgstr ""
+
+#: ../../source/litesdk.rst:668 9f2126a1a843468892c62a013d5f14f5
+msgid "交易体签名"
+msgstr ""
+
+#: ../../source/litesdk.rst:670 436a08792902450bb83dd24f74572df3
+msgid "通过\\ ``Transaction``\\ 提供的\\ ``sign()``\\ 方法，需要指定\\ ``Account``\\ 对象。"
+msgstr ""
+
+#: ../../source/litesdk.rst:677 ef73d3ebce9b4369ad7a9224a5020886
+msgid "创建请求"
+msgstr ""
+
+#: ../../source/litesdk.rst:679 7a065909b82e485baecbcb4abfd4dcfd
+msgid "这个过程分为两步，先创建\\ ``ContractService``\\ 对象，再指定之前构造的交易体调用相应的服务接口，示例如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:692 6c1d507ef1b44bfe9cc6d2c6c8727252
+msgid "发送交易体"
+msgstr ""
+
+#: ../../source/litesdk.rst:694 c1c6f98bd8bf4e6f96be4b134204e9b4
+msgid ""
+"如果创建请求调用的是普通接口，不是\\ **grpc**\\ 的服务接口，那么这个过程实际分为两步，调用\\ ``send()``\\ "
+"部署合约拿到响应，再对响应解析拿到\\ ``ReceiptResponse``\\ （执行结果）。如果创建请求调用的是\\ **grpc**\\ "
+"服务接口，只需要调用\\ ``send()``\\ 方法拿到\\ ``ReceiptResponse``\\ 响应就结束了。"
+msgstr ""
+
+#: ../../source/litesdk.rst:705 c48757de2b334db5ae65c9d4b8b1a8fa
+msgid "合约辅助接口"
+msgstr ""
+
+#: ../../source/litesdk.rst:707 de6d8bc6218a4ed491857d5b32223fb2
+msgid "LiteSDK除了提供上述与合约交易相关的接口，还提供了以下编译合约、获取合约状态等查询接口，其响应类型如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:709 f4e132a389d149c8916105a2f88d40ee
+msgid "CompileContractResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:710 d68f3659ab284e458782f73c892068fd
+msgid "StringResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:711 f3400c1deeea4be58770b6f5b94f0e16
+msgid "DeployerListResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:713 ed18aadfbbbf4086a8831fd0bec2b913
+msgid "**CompileContractResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:715 27f7d01b0ac748b9bb2b6ec2e80500c4
+msgid ""
+"通过\\ ``result``\\ 接收返回结果，\\ ``result``\\ 实际类型是内部类\\ ``CompileCode``\\ "
+"，可通过\\ ``getResult()``\\ 方法得到。"
+msgstr ""
+
+#: ../../source/litesdk.rst:731 6d1d86e7057d458e97459aab5b14fd6a
+msgid "**StringResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:733 0aa0bb3809374d258a186eb891badacf
+msgid ""
+"通过\\ ``result``\\ 接收返回结果，\\ ``result``\\ 实际类型是String，可通过\\ "
+"``getResult()``\\ 方法得到。"
+msgstr ""
+
+#: ../../source/litesdk.rst:742 a0c27d7e7f614ce1818ec0d0017e2f0b
+msgid "**DeployerListResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:744 7d05eeef119e45c4b002cd9e0405a34e
+msgid ""
+"通过\\ ``result``\\ 接收返回结果，\\ ``result``\\ 实际类型是List，可通过\\ "
+"``getResult()``\\ 方法得到。"
+msgstr ""
+
+#: ../../source/litesdk.rst:753 efc1941a687645569e172ea008b2f896
+msgid "以下为合约的相关查询接口"
+msgstr ""
+
+#: ../../source/litesdk.rst:782 1f70ba61df8c4536851b53c33271fdaa
+msgid "编译Solidity合约"
+msgstr ""
+
+#: ../../source/litesdk.rst:784 ../../source/litesdk.rst:796
+#: ../../source/litesdk.rst:808 ../../source/litesdk.rst:820
+#: ../../source/litesdk.rst:832 ../../source/litesdk.rst:844
+#: ../../source/litesdk.rst:856 ../../source/litesdk.rst:868
+#: ../../source/litesdk.rst:880 ../../source/litesdk.rst:892
+#: ../../source/litesdk.rst:928 ../../source/litesdk.rst:941
+#: ../../source/litesdk.rst:960 ../../source/litesdk.rst:989
+#: ../../source/litesdk.rst:1009 ../../source/litesdk.rst:1028
+#: ../../source/litesdk.rst:1039 ../../source/litesdk.rst:1051
+#: ../../source/litesdk.rst:1063 ../../source/litesdk.rst:1075
+#: ../../source/litesdk.rst:1089 ../../source/litesdk.rst:1100
+#: ../../source/litesdk.rst:1111 ../../source/litesdk.rst:1124
+#: ../../source/litesdk.rst:1136 ../../source/litesdk.rst:1148
+#: ../../source/litesdk.rst:1173 ../../source/litesdk.rst:1202
+#: ../../source/litesdk.rst:1231 ../../source/litesdk.rst:1260
+#: ../../source/litesdk.rst:1288 ../../source/litesdk.rst:1310
+#: ../../source/litesdk.rst:1325 ../../source/litesdk.rst:1391
+#: ../../source/litesdk.rst:1459 ../../source/litesdk.rst:1474
+#: ../../source/litesdk.rst:1498 ../../source/litesdk.rst:1509
+#: ../../source/litesdk.rst:1525 ../../source/litesdk.rst:1549
+#: ../../source/litesdk.rst:1568 ../../source/litesdk.rst:1579
+#: ../../source/litesdk.rst:1590 ../../source/litesdk.rst:1614
+#: ../../source/litesdk.rst:1636 ../../source/litesdk.rst:1655
+#: ../../source/litesdk.rst:1753 ../../source/litesdk.rst:1764
+#: ../../source/litesdk.rst:1777 ../../source/litesdk.rst:1803
+#: ../../source/litesdk.rst:1814 ../../source/litesdk.rst:1829
+#: ../../source/litesdk.rst:1841 ../../source/litesdk.rst:1866
+#: ../../source/litesdk.rst:1877 ../../source/litesdk.rst:1943
+#: ../../source/litesdk.rst:1955 ../../source/litesdk.rst:1969
+#: ../../source/litesdk.rst:2036 ../../source/litesdk.rst:2047
+#: ../../source/litesdk.rst:2059 ../../source/litesdk.rst:2071
+#: ../../source/litesdk.rst:2083 ../../source/litesdk.rst:2094
+#: ../../source/litesdk.rst:2156 ../../source/litesdk.rst:2173
+#: ../../source/litesdk.rst:2191 ../../source/litesdk.rst:2210
+#: 00cb5e3d0edb4e9183efb3450d00a999 01760817a0594d8eb4dc1ade12581af0
+#: 02c9f22d716a42269fa2642b6ae7dcce 044b2d83ddd74af0ae5d36ab7b081521
+#: 07378f0a9ee5455d84a5b7d202046ea4 08f6d72f603949739ad66ada3ea8075e
+#: 092594127a3f4d6a86de6fc71c5ffead 092f9fd41e414f4e9f41d5e11bb82ab7
+#: 0961b46b7c2547219d3f6238fb7394e6 0fef29168e0e443b8ef8ce0cee0fccf6
+#: 105f94817b3f4ce5a6b0ef36e4bd8741 13e0219d576d4ca1895bdad260c5515a
+#: 1c383eee090e441581925bf908bfa187 1f78990038f94c7a8975e144a50f3934
+#: 200b6d0ddef1491cb3c0b2332e9bf63a 24ea903a48924be49256478b509676f5
+#: 2522f3cf657d40b7875170e9b9519454 25d6e37d94d941dc990e14ce0e55354e
+#: 2cb00a1e257941069921669430f27adc 356d865cbb7a4563aa5fe95f0117909c
+#: 3a41da1fc3a24b4498ea00bdcb7ec83a 460e1fb967b545f18054d2c1699e8363
+#: 46d01c6e6f5c41398134370fde2e015d 476ea9716d36465ebb7e5ee7eb2af3c6
+#: 48f3a34ed3984d0599dc2f922d286571 5200e1636f3b4703872b353da6256ff9
+#: 528067c97120410cacfd4d1f9fa81987 52d27422d1cd43919e719ff14be0580d
+#: 56eafecc7c174cf99ae3eab99a099ee3 5aebcb36de384c2bbbf702853227d24f
+#: 5c175482cc624dac8412b74df75300bf 5f40fa5720cc412184cf801674369b5a
+#: 6246870a994449b0bbad2f18d442982d 631bdfcc727742dc998ca4e9f9b7a020
+#: 675d471339af4e0a93d3066bd3e96903 7d055aa4ba8a438f97272bd88e51ad0d
+#: 84447d179d044c6e93db2b081cb17a7e 87b55da8b9a34556b35616e87b54004a
+#: 89539f3fc718427ba0d18496ec796729 95241a2a4d344c7f9d15a8af0915b1b9
+#: 95486829438d431ca146899e2ade4901 96021ca58e8445398912a452d83b7b54
+#: 9ee46a4922f244668711d376da28f8f8 a4302cd514ad435b9c2b983e2d8d3159
+#: a55c6a4bd23545369e67dfd2c8b2e6d9 a9c960b0f4c54ce7ab36f0711e8861fa
+#: aa592d194b164d7fbc86dfb82b5e03c8 ac7ff2508c974572bb809d70d7879d3d
+#: aee4505f2f264738ba1a50b16180bd6a aeeb4cd94d47423db64161c8a428479e
+#: b1713bfd7bd144a7aa5181200445de7f b1bbba9a5e2e4716b4e22e7f5bb42a37
+#: b7bd19ca43184b969a5c8fb34ae80ef8 b988f2901abe4e0492cfbe7a54070f65
+#: c04314239ce04d7f9bd9f2f23d378c9f c22baac7328744adbc51cbc53af4a44b
+#: c2e14645e92f48a781660d83cde37517 c58d12bc739f493ba8b4f46ac17a7a28
+#: d1417110c87a40dabd19b70258319e91 dc8d9051135b41739a7bb706ec31caaa
+#: dd2b5c4386c44713ab4a43f6a23baea2 dea0bea55a27420081f6b448b9a02cfe
+#: ec4e0ad96cac491e81742c249ee54e5a f5cc39b66233416cb9c6c797252c0bcf
+#: fa396bdc6d784fa29583a06656a7e8a8 fa7e985631fa4a908e4ecd3d62f5aa5c
+#: fd8631f6ab114388897b1ec7222e8197 fe6f554713554a2c99ce24114d9c4c85
+msgid "参数："
+msgstr ""
+
+#: ../../source/litesdk.rst:786 2b4273e8499846a9bd880a966c6063a8
+msgid "code solidity合约源码"
+msgstr ""
+
+#: ../../source/litesdk.rst:787 ../../source/litesdk.rst:799
+#: ../../source/litesdk.rst:811 ../../source/litesdk.rst:823
+#: ../../source/litesdk.rst:835 ../../source/litesdk.rst:847
+#: ../../source/litesdk.rst:859 ../../source/litesdk.rst:871
+#: ../../source/litesdk.rst:883 ../../source/litesdk.rst:895
+#: ../../source/litesdk.rst:932 ../../source/litesdk.rst:945
+#: ../../source/litesdk.rst:966 1bfe04b906504150879c292b7bda29df
+#: 1cb7e44774f343b0a38bf6686f32b8fb 3173eb1e0d8540129126884c2305bbe9
+#: 782b3377f6f34fbd94d4ceef321f69a7 7a5a95f613534d30957bbad3a01d0121
+#: 7e73a4350c9540b4a235ddff872aab10 813be4e58fdd4dd1ac04d0c27df703ed
+#: 95879b69d6384fb58a9c6d965f9375e0 97bbcc24a3414f2c8ef01ae8cb3701a0
+#: 9bcd47ba79144ab0bb0abda177143a82 a03b1adcabc8430d9c81a93f3bfed6ca
+#: ef0b0f1407c24d4280f8ce667f5f25e6 ef4e95996da844dabe95688502a4e59e
+msgid "nodeIds 请求向哪些节点发送"
+msgstr ""
+
+#: ../../source/litesdk.rst:794 4a7fd65958414fe99569d95ec5cc2a7c
+msgid "获取合约源码"
+msgstr ""
+
+#: ../../source/litesdk.rst:798 ../../source/litesdk.rst:834
+#: ../../source/litesdk.rst:846 ../../source/litesdk.rst:858
+#: 0b2151bb0b4245ce9b0d3e3221dae64e 3a5658ec1bf64e22847a07105a615586
+#: 42a8d42795144c72b62d9e3480c0763b 501dec3876bc4f1dae065e846c8f5db6
+msgid "addr 合约地址"
+msgstr ""
+
+#: ../../source/litesdk.rst:806 b9d209f7f4ee46ed9e2920268a459d15
+msgid "获取账户部署的合约数量"
+msgstr ""
+
+#: ../../source/litesdk.rst:810 5cdc899dfac14b558ea0906820858ca4
+msgid "addr 账户地址"
+msgstr ""
+
+#: ../../source/litesdk.rst:818 b01befe7fe924dae87326660f4291445
+msgid "获取账户部署的合约地址列表"
+msgstr ""
+
+#: ../../source/litesdk.rst:822 d371b677642448b08454d1fdebb1ccdf
+msgid "address 账户地址"
+msgstr ""
+
+#: ../../source/litesdk.rst:830 a48daa76a5004588b2dc3d540b5d6d05
+msgid "获取合约状态"
+msgstr ""
+
+#: ../../source/litesdk.rst:842 00f4243e1f724ebaa74e7275c4c560d0
+msgid "获取合约的部署账户"
+msgstr ""
+
+#: ../../source/litesdk.rst:854 b5cef954b5ef4127bbed080983a925ef
+msgid "获取合约的部署时间"
+msgstr ""
+
+#: ../../source/litesdk.rst:866 e20222c46003441ebf24308709596ade
+msgid "获取合约状态by cname"
+msgstr ""
+
+#: ../../source/litesdk.rst:870 ../../source/litesdk.rst:882
+#: ../../source/litesdk.rst:894 405d7a7430bc4d97a3eab8a4eff36c1e
+#: 651a0e1d1db741c983260d67c0f08549 dd51573ec7ea4573b9ae0434d097f0d4
+msgid "cname 合约名"
+msgstr ""
+
+#: ../../source/litesdk.rst:878 739e1c04c86a4362895cfa04a8da8978
+msgid "获取合约的部署账户by cname"
+msgstr ""
+
+#: ../../source/litesdk.rst:890 881f713ab0f54da5b143eacfa014ab7b
+msgid "获取合约的部署时间by cname"
+msgstr ""
+
+#: ../../source/litesdk.rst:902 32d04b568f124cc0927f1b2d39036682
+msgid "第四章. Transaction接口(TxService)"
+msgstr ""
+
+#: ../../source/litesdk.rst:904 2c3ed171308d4ae69d047fd6578bd717
+msgid "**注：该章的Transaction与第三章的交易体概念不同，该章的接口主要主要用于查询之前在链上的执行信息，将返回的信息封装为Transaction结构体。**"
+msgstr ""
+
+#: ../../source/litesdk.rst:906 a22679992a57446eba0a759ef1b7f455
+msgid "TxService接口繁多，返回的执行结果根据情况封装共对应五种响应："
+msgstr ""
+
+#: ../../source/litesdk.rst:908 ../../source/litesdk.rst:2271
+#: cdebb3ad79bf4aee959e37a3dc0e5f44 e892fe1308a449d0905d76765bf71d6d
+msgid "TxResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:909 ../../source/litesdk.rst:2272
+#: 2a81f870d6e74a5eb1f2c1afc6f16303 ec938995a4c54630a4f68a15b2bdc9c3
+msgid "TxCountWithTSResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:910 ../../source/litesdk.rst:2273
+#: ac9b95dbef9e4b8b9075d57510081e87 ade26b5b30f84ec3b4a5e75f5229bdad
+msgid "TxCountResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:911 ../../source/litesdk.rst:2274
+#: 92686aaab1c1402ca184e0ebb14c347c f5956c823a0f4ce09b0a3e50b1c32920
+msgid "TxAvgTimeResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:912 ../../source/litesdk.rst:2275
+#: 1e3f5bdf841146ebadb63018b4b01fcc 7377cdb1c8a54e36b37d4808e438a7c5
+msgid "ReceiptListResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:914 398e5582563d4074a9ca5f44a8edbb62
+msgid "详细结构请参考第十一章"
+msgstr ""
+
+#: ../../source/litesdk.rst:917 3fad9bede9c84376958369c8cbf8fac0
+msgid "4.1 查询交易by transaction hash(getTransactionByHash)"
+msgstr ""
+
+#: ../../source/litesdk.rst:919 1891d5c207b74ad3be34dbb32115a437
+msgid "参数： \\* txHash 交易hash \\* nodeIds 请求向哪些节点发送"
+msgstr ""
+
+#: ../../source/litesdk.rst:926 631da73fb084453597e2dbf06aaf46ac
+msgid "4.2 查询交易by block hash(getTxByBlockHashAndIndex)"
+msgstr ""
+
+#: ../../source/litesdk.rst:930 ../../source/litesdk.rst:1065
+#: 4efd16225ace48418c74400a1e31dffb c17b6de6f7e24bb584ae9312248f9105
+msgid "blockHash 区块哈希值"
+msgstr ""
+
+#: ../../source/litesdk.rst:931 ../../source/litesdk.rst:944
+#: 1ac5590c90574f3a96fc151837ca7f41 5049e68a021a400a9171db56b7940bcb
+msgid "index 区块内的交易索引值"
+msgstr ""
+
+#: ../../source/litesdk.rst:939 70702d6c01ea40dd99e0ade3d9ab0aea
+msgid "4.3 查询交易by block number(getTxByBlockNumAndIndex)"
+msgstr ""
+
+#: ../../source/litesdk.rst:943 ../../source/litesdk.rst:1126
+#: ../../source/litesdk.rst:2096 58b68249625b4dafb07bb818d3b402d3
+#: 755cae176dfb4e2cbb916499d8d0815f 850e774688e7451683bbc6063dd48911
+msgid "blockNumber 区块号"
+msgstr ""
+
+#: ../../source/litesdk.rst:951 ../../source/litesdk.rst:972
+#: ../../source/litesdk.rst:1000 ../../source/litesdk.rst:1159
+#: ../../source/litesdk.rst:1190 ../../source/litesdk.rst:1219
+#: ../../source/litesdk.rst:1248 ../../source/litesdk.rst:1277
+#: ../../source/litesdk.rst:1299 ../../source/litesdk.rst:1538
+#: ../../source/litesdk.rst:1559 ../../source/litesdk.rst:1603
+#: ../../source/litesdk.rst:1624 ../../source/litesdk.rst:1668
+#: 07ce6801fa3d44ec8b1101e949c6320a 2a019abfc2b9457aaed0d75898566946
+#: 52e5834203444de291372ad547555167 582ad1d034f940c4910bbda5c79e5bf6
+#: 62f5a054b2c44d6eb07cf723b22e6b13 83d0773d37234ff4916c8e8127ded3cc
+#: 946c0461ce104230b8a19fad077a5cff a1248de8ad634ba0840dc1683be3e53f
+#: b0bd57efabfe475e8ab801cfb5520ae3 b6649f8736074e2ba32673d83afc0eb5
+#: bbc1ae2118b74a6bb01952660cc569dd c91b1d99cb784569ad10c14dbeb61186
+#: d7b6b587239d4126a8173b540ea6fafa e36bd23026454907847fae08e793e2f4
+msgid "重载方法如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:958 8bd76bb5f39442dab79c4a5d30c040bb
+msgid "4.4 查询交易by time with limit(getTransactionsByTimeWithLimit)"
+msgstr ""
+
+#: ../../source/litesdk.rst:962 cdfcba07c05d4d0f8cf6dc06f1dacd71
+msgid "startTime 起始时间戳"
+msgstr ""
+
+#: ../../source/litesdk.rst:963 68c6439ad6c2474d81736b920113a7bc
+msgid "endTime 结束时间戳"
+msgstr ""
+
+#: ../../source/litesdk.rst:964 ../../source/litesdk.rst:993
+#: ../../source/litesdk.rst:1152 5ef1b636f8734cf0a62241346c894040
+#: a3c37637007b4374b4adcfa454844c18 fb9b655681eb4e7d9587bd1997f5be75
+msgid "metaData 分页相关参数"
+msgstr ""
+
+#: ../../source/litesdk.rst:965 2f7059dfd78d4ade8457f175a709c3f7
+msgid "filter 交易过滤条件"
+msgstr ""
+
+#: ../../source/litesdk.rst:987 cf6c97259da046b4a6bc0902140e2785
+msgid "4.5 查询交易 with limit(getTxsWithLimit)"
+msgstr ""
+
+#: ../../source/litesdk.rst:991 ../../source/litesdk.rst:1011
+#: ../../source/litesdk.rst:1150 37e92f8eb0ef4fde8f44362701adb1d2
+#: 6ff4d88a3c0b4b23bfa68aca68947b36 8fe3d24bd3be4151b8bd6147a7d18d7c
+msgid "from 区块区间起点"
+msgstr ""
+
+#: ../../source/litesdk.rst:992 ../../source/litesdk.rst:1012
+#: ../../source/litesdk.rst:1151 e119a81c39ec4bac9260e4ec5a3f0609
+#: e1cca8dd8fe14691a7d6539a1d244cd8 ebc02e8af0654fa5b5decf99f21eab15
+msgid "to 区块区间终点"
+msgstr ""
+
+#: ../../source/litesdk.rst:994 ../../source/litesdk.rst:1013
+#: ../../source/litesdk.rst:1066 ../../source/litesdk.rst:1153
+#: ../../source/litesdk.rst:1779 ../../source/litesdk.rst:2038
+#: ../../source/litesdk.rst:2050 ../../source/litesdk.rst:2062
+#: ../../source/litesdk.rst:2074 ../../source/litesdk.rst:2085
+#: ../../source/litesdk.rst:2097 ../../source/litesdk.rst:2160
+#: ../../source/litesdk.rst:2178 ../../source/litesdk.rst:2195
+#: 12577629427e4f3a971a9ca3b9982c22 3f1c3422083e4e5eb0b72738ed76c58c
+#: 3f8ae6d99cae4445a4b93b4168df5b5f 4d466d1f79f948c9a9018c26079f6bf5
+#: 78b8cc53c6db474cab41ce4f7b627ecc 8088eda488ba4ed7a1063832a5b6b3f5
+#: 98cc9fb67e93457699a7248afe5396eb c6f31835da834ec6a972848e35a0f1b9
+#: d9573f04f7c54530b30bc8d97b4af7d3 e064e091051f482a82e56fcd6faac665
+#: e23f1d64fd4e4a9cb08aea3c3805ee8c e2b8ec7ebe284051b8fda79fb7d87c92
+#: fb82d570984249e5a2f2947c0c5a366c ffef017defb341dfb78c911ed25b26cb
+msgid "nodeIds 说明请求向哪些节点发送"
+msgstr ""
+
+#: ../../source/litesdk.rst:1007 66ddbd577bc546c58246d4b896702fbf
+msgid "4.6 查询指定区块区间交易平均处理时间(getTxAvgTimeByBlockNumber)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1019 1c3c7b44995742c3b8f5b5fed6453e54
+msgid "重载方法如下:"
+msgstr ""
+
+#: ../../source/litesdk.rst:1026 693c5d2aafdf4fdba594542a46612d82
+msgid "4.7 查询链上所有交易量(getTransactionsCount)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1030 ../../source/litesdk.rst:1042
+#: ../../source/litesdk.rst:1054 ../../source/litesdk.rst:1078
+#: ../../source/litesdk.rst:1102 ../../source/litesdk.rst:1115
+#: ../../source/litesdk.rst:1127 ../../source/litesdk.rst:1139
+#: ../../source/litesdk.rst:1184 ../../source/litesdk.rst:1213
+#: ../../source/litesdk.rst:1242 ../../source/litesdk.rst:1271
+#: ../../source/litesdk.rst:1293 ../../source/litesdk.rst:1314
+#: ../../source/litesdk.rst:1339 ../../source/litesdk.rst:1401
+#: ../../source/litesdk.rst:1462 ../../source/litesdk.rst:1477
+#: ../../source/litesdk.rst:1500 ../../source/litesdk.rst:1514
+#: ../../source/litesdk.rst:1530 ../../source/litesdk.rst:1553
+#: ../../source/litesdk.rst:1570 ../../source/litesdk.rst:1581
+#: ../../source/litesdk.rst:1597 ../../source/litesdk.rst:1618
+#: ../../source/litesdk.rst:1641 ../../source/litesdk.rst:1660
+#: 0526aa8140004531b386552c9ca2635f 0b7393b1108846bf92543d9005a7e646
+#: 107d37b076674fc58c156d18551df12e 2fdcee0f6cb94b5489cff7d419769278
+#: 4503711daddc419f959e268e2866ffff 4c66000b05fc4130b9f36c9d49009170
+#: 518b5ee275ce4e4fb6a4ef52c6fa8e93 580d2886de29461bb1c3665a207279ed
+#: 78d142fd6bf84c21903f4e8426165f6b 7b08498951c945e79df196ec69fcb154
+#: 8300c5d93f3a47bf9c1337c345124592 89d9096430a340a494b567f0c262e670
+#: ae69829d28804cd7b6ea05a82743a2ab b6276a27f8954e5fb79df163462bcaae
+#: bbd3facbdaea44a394e744a40e1053a6 c37b74ad753b46e49c2217968f5f92de
+#: c7e5d399e1de44398a26ee1a15980003 d7f1a8b268024512aa12b0be95828621
+#: db4f6119deaa4b0c81e0b45da26c6909 e1da9343d62e487b9d94f23ea7f89360
+#: e2ac305471d04acbb957a26c394bddda e759616e03a7459faa0f81c70f16be86
+#: e9c62f7406f445c3896550bfbc5131a3 ea617476d24c41e19b2eceec5cc11e3d
+#: ecfb6cc646d04dcb86bd8ef630a7bd08 f62f68f3a0674fa4844a9e83d6061268
+#: f9b341251714460b82b057e5e8e0a4da fb1148aa9acc4263a625817ed790e7d1
+msgid "nodeIds 说明请求向哪些节点发送。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1037 ba8c932cebac42ee865fd8bd69aa4092
+msgid "4.8 查询交易回执信息by transaction hash(getTransactionReceipt)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1041 ../../source/litesdk.rst:1053
+#: 461b3f8a6d3344189c7c2d04ed2c2dfa eb4c02740f794564ac7972ed44d2b757
+msgid "txHash 交易hash。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1049 a428115de88d475b9bbf769063a98ed7
+msgid "4.9 查询上链的交易回执信息(getConfirmedTransactionReceipt)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1061 1120de4d64284024bae54abe23421ebe
+msgid "4.10 查询区块交易数量by block hash(getBlockTxCountByHash)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1073 fe5bd70bacf7424d8bfc36f530d5c017
+msgid "4.11 查询区块交易数量by block number(getBlockTxCountByNumber)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1077 ../../source/litesdk.rst:1527
+#: 2df174b2c2c34dccb6d82c2b3f5925a1 48f3dd2ea1224bfda3da88bb3dba09d8
+msgid "blockNumber 区块号。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1085 9637c8fe953e469485151a7132fb66cf
+msgid "4.12 查询平台当前的交易版本号(getTxVersion)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1087 278c708847f04562b978506f2f2552a4
+msgid "getTxVersion接口会在创建ProviderManager对象时调用，并设置全局的TxVersion。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1091 251f6e2ef3b9491b9c8c21b21501ba39
+msgid "nodeId 说明请求哪个节点平台的交易版本号"
+msgstr ""
+
+#: ../../source/litesdk.rst:1098 df12be065c9148e1b367963e95a0f66e
+msgid "4.13 查询链上所有非法交易交易量(getInvalidTransactionsCount)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1109 56e73248efb64c6d9312caedcaaca7d3
+msgid "4.14 查询链上指定时间段内的非法交易交易量(getInvalidTxsCountByTime)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1113 4a772711d342421c838b7631547f1d77
+msgid "startTime 开始时间"
+msgstr ""
+
+#: ../../source/litesdk.rst:1114 7c108b2d0ae841b8a0b69506436aa6ec
+msgid "endTime 截止时间"
+msgstr ""
+
+#: ../../source/litesdk.rst:1122 f9a3d06967024d31a8aa0ed22d92c609
+msgid "4.15 查询一个区块中的所有非法交易 by block number(getInvalidTxsByBlockNumber)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1134 4d9ade3262f64eeb81be780f74cb8d62
+msgid "4.16 查询一个区块中的所有非法交易 by block hash(getInvalidTxsByBlockHash)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1138 f332ec01d0204df4b912a221ccb2f3e3
+msgid "blockHash 区块哈希"
+msgstr ""
+
+#: ../../source/litesdk.rst:1146 4e3ee1fc75784515bf45d214a02e3c1a
+msgid "4.17 查询非法交易 with limit(getInvalidTxsWithLimit)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1168 f2075e1097a94cf5adfd6b36e2cd8066
+msgid "4.18 查询下一页交易(getNextPageTransactions)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1170 ../../source/litesdk.rst:1199
+#: ../../source/litesdk.rst:1228 ../../source/litesdk.rst:1257
+#: 1cc4e5f05d39422bb97d600edf21b748 81a8d4922e1e400bbe003f93b527d43e
+#: eb578b6d41b142e4abd97966e0a6b986 fb55fcf587154c849443655cbeaf13de
+msgid ""
+"注意：当输入的区块范围较大并且这个范围内符合条件的交易数量非常大时，\\ **请求响应延迟将非常高**\\ "
+"。存在服务器资源被该请求处理长时间占用的风险，应尽量 避免使用。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1175 ../../source/litesdk.rst:1204
+#: ../../source/litesdk.rst:1233 ../../source/litesdk.rst:1262
+#: 37075945875540df9132429b89fe2230 85d4da667a6c4a3b8ff20ccd3edd4ff5
+#: 920966970ee34a42b3ee5cf690226bf5 a9caf1549e894539a4a72d82cc77c386
+msgid "blkNumber 从该区块开始计数。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1176 ../../source/litesdk.rst:1205
+#: ../../source/litesdk.rst:1234 ../../source/litesdk.rst:1263
+#: 3f76303d5a2c44299bf65c81d7c935f7 46ed4ae2b7d549bbb1d4237fa12d1499
+#: d765589e15ca46eb88ea5b7bf785e57c f4e8ed8e304947b980b505ea3182c3cb
+msgid "txIndex 起始交易在blkNumber号区块的位置偏移量。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1177 ../../source/litesdk.rst:1206
+#: ../../source/litesdk.rst:1235 ../../source/litesdk.rst:1264
+#: 016f368a78d246ab8602a1ab0184179e 0f2489c3ae8d4d89bfca8065f0dfd922
+#: 50ff9b1652fa44268742b24704f092be 762569688829413eadbb9c03ed90d347
+msgid "minBlkNumber 截止计数的最小区块号。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1178 ../../source/litesdk.rst:1207
+#: ../../source/litesdk.rst:1236 ../../source/litesdk.rst:1265
+#: 03085fa78b374721af14b98bf6c4896e 9484241105fa4f5f815cfe8eb9801f3a
+#: b5fa8cc351314abebd13ea7d63a92938 d6c48d3f6b6047a59769aa5a23873356
+msgid "maxBlkNumber 截止计数的最大区块号。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1179 ../../source/litesdk.rst:1208
+#: ../../source/litesdk.rst:1237 ../../source/litesdk.rst:1266
+#: 26fedb718bbd4155a6ab7718f52ce00a 5245172876e0432ab1a8be11512af6fe
+#: a3b44a75c7c9437ab3bf91e896cdbdae edc1cecc1cdc4442a0e394afd5534370
+msgid "separated 表示要跳过的交易条数（一般用于跳页查询）。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1180 ../../source/litesdk.rst:1209
+#: ../../source/litesdk.rst:1238 ../../source/litesdk.rst:1267
+#: 3211dba4f2314cd9aa92cf2231e07203 61780b63be2b4a2c81fe6da93a682445
+#: 663e745199564194bed8a97c0af23b60 70971ab8c53d424e8e54646dc8a2a38a
+msgid "pageSize 表示要返回的交易条数。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1181 ../../source/litesdk.rst:1210
+#: ../../source/litesdk.rst:1239 ../../source/litesdk.rst:1268
+#: 5983193f76704b1db80a02fcf392bb70 71de9a62ddb242c2b70861372e5f8382
+#: a6af8afca0c347178d89c2a8207419d8 b0968870a6de4601b4a3fb75f778add8
+msgid ""
+"containCurrent "
+"true表示返回的结果中包括blkNumber区块中位置为txIndex的交易，如果该条交易不是合约地址为address合约的交易，则不算入。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1183 ../../source/litesdk.rst:1212
+#: ../../source/litesdk.rst:1241 ../../source/litesdk.rst:1270
+#: ../../source/litesdk.rst:1292 090a105f567547d29d98ede8cda837c3
+#: b6784b4fa87b408991e987ac7dd248b3 c094b77c19094096a648ef7cc77921ba
+#: d2d87b8c95754514bb515bcddea6405c d9f9a366789b44eeb9bfc80909c9ecc0
+msgid "address 合约地址。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1197 66a9473da4fd424baa55b68aee61d569
+msgid "4.19 查询上一页交易(getPrevPageTransactions)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1226 1db51d8f23c6461cb8feb7fbb075dd02
+msgid "4.20 查询下一页非法交易(getNextPageInvalidTransactions)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1255 79efb9a47ab64424a235f80aacb121d4
+msgid "4.21 查询上一页非法交易(getPrevPageInvalidTransactions)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1284 53311a67ad2245a991f6ffdd6a543e31
+msgid "4.22 查询区块区间交易数量by contract address(getTransactionsCountByContractAddr)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1286 1ccbc376a6ed433094ab0a5ff9097a25
+msgid ""
+"注意：当输入的区块范围较大并且这个范围内符合条件的交易数量非常大时，\\ **请求响应延迟将非常高**\\ "
+"。存在服务器资源被该请求处理长时间占用的风险，应尽量避免使用。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1290 ../../source/litesdk.rst:1551
+#: ../../source/litesdk.rst:1592 bf3ee5e318c64567947346289c4f2a2c
+#: fac76d369c9942a183d928ad7936462c fcf1773368a64ede9e28b05222d7729e
+msgid "from 起始区块号。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1291 ../../source/litesdk.rst:1552
+#: ../../source/litesdk.rst:1593 0d3cec72cd414b3ca3a22846570cbebf
+#: 38c2a3adc221445a8f96983687b46d70 5d0624bfd5064b89a93003fd64ea95e2
+msgid "to 终止区块号。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1306 eeca906d0d304901821ddf60bfbaf03a
+msgid "4.23 查询指定时间区间内的交易数量(getTxsCountByTime)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1308 2092538478ba44018c8143f513c74ea9
+msgid ""
+"注意：当输入的时间范围较大并且这个范围内的区块较多时，\\ **请求响应延迟将升高**\\ "
+"。存在服务器资源被该请求处理长时间占用的风险，应尽量避免使用。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1312 0f049f7b2521422e8d307bb12e2283d7
+msgid "startTime 起起始时间戳(单位ns)。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1313 ../../source/litesdk.rst:1617
+#: 632518f057c7456891b2af24d32d94ea 74fc00cde8a34f389ecf3e691bc67875
+msgid "endTime 结束时间戳(单位ns)。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1321 4d39c3fccc5c4d23bf72766fce93911b
+msgid "4.24 查询指定extraID的交易by extraID(getTxsByExtraID)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1323 ../../source/litesdk.rst:1389
+#: 1f49980b42a64a33a1dff68e4c5ee343 b88a354fd48d4a8d91e203afbdb82381
+msgid "该接口只要在访问的节点开启数据索引功能时才可用。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1327 3af30de3e502458494dc96f771717180
+msgid ""
+"mode [可选] 表示本次查询请求的查询模式，目前有0、1、2三个值可选，默认为0。0 表示按序精确查询模式，即筛选出的的交易 extraId "
+"数组的数值和顺序都与查询条件完全一致。1 表示非按序精确查询模式，即筛选出的交易 extraId 数组包含查询条件里指定的全部数值，顺序无要求。2"
+" 表示非按序匹配查询模式，即筛选出的交易 extraId 数组包含部分或全部查询条件指定的值，且顺序无要求。。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1335 ../../source/litesdk.rst:1397
+#: 387e038a85a4498faec408ddc2701ad5 a9ffa3373dc848b38f732916f81ee76c
+msgid "detail [可选] 是否返回详细的交易内容，默认为false。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1336 0623d64009fc456ca9206d5a03bb2b66
+msgid ""
+"metaData [可选] "
+"分页相关参数。指定本次查询的起始位置、查询方向以及返回的条数。若未指定，则默认从最新区块开始向前查询，默认返回条数上限是5000条。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1338 580d1997594e4df7ab67d15acf01d83f
+msgid "filter [必选] 指定本次查询过滤条件。包括交易extraId和交易接收方地址。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1341 ../../source/litesdk.rst:1403
+#: 9b8fdb937e204e4d93797f32e74ce111 b8637b22f05d4ebf8bb5d7f1c636443c
+msgid "MetaDataParam 结构如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:1343 ../../source/litesdk.rst:1405
+#: 6b75def9e90a4fb389ada32a0dd08dc7 f5ebb6505a554a618734f786b91eef84
+msgid ""
+"pagesize [可选] 表示本次查询返回多少 条交易。如果未指定，则pagesize默认 "
+"值为5000，如果超过5000，则使用节点默认值5000。如果符合条件的交易数量实际上超过pagesize，则返回结果里hasmore为true。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1346 ../../source/litesdk.rst:1408
+#: a56b75fb97b643d3b714c18321356bdb a6aa7021b224429098450c5b6557abc6
+msgid ""
+"bookmark [可选] "
+"表示本次查询的书签位置，即起始位置，返回的结果里不包含用户指定的书签所对应的交易。如果未指定且backward为false，则默认从最新区块开始向前遍历，如果未指定且backward为true，则默认从创世区块开始向后遍历。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1348 ../../source/litesdk.rst:1410
+#: 189a02372f80475389695ccb117c4ea5 7d3d3b5d09cf48b3a95d45b3a0d709eb
+msgid ""
+"backward [可选] 表示本次查询的方向，false表示以起始位置为起点从高区块往低区块遍历，true表示以起 始位 "
+"置为起点从低区块往高区块遍历，默认查询方向为false。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1352 ../../source/litesdk.rst:1414
+#: 31cb5a64793748488434c5b7b9942421 7759e392d50749d0adbe1ececd59da05
+msgid "Bookmark 结构如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:1354 ../../source/litesdk.rst:1416
+#: 48ece8be4bbe47ee81eec19e851338c5 5874ae28dc9b41f3a1292a75a65e1dd6
+msgid "blkNum 交易所在区块号。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1355 ../../source/litesdk.rst:1417
+#: 70d4a8b977974e80aff0274cfcb854f8 c8cc5c69c0a5419a814ce21b5118e63c
+msgid "txIndex 交易索引号，即交易在区块内的位置。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1357 ../../source/litesdk.rst:1419
+#: 575a8844ff5b48399a345c32c8bed5ae cb352f2365714e8dbcb20b29ff4775c1
+msgid "FilterParam 结构如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:1359 9c723abfb96e4b7eb5856158c1a763dd
+msgid "extraId [必选] 指定交易extraId的值，类型为数组，数组元素可以为Long或者string。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1361 ../../source/litesdk.rst:1425
+#: 03eb36204dc44b52bffe87471e829f8c 0ea55af9864949b6a6463a118da28265
+msgid "txTo [可选] 指定交易接收方的地址。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1363 6abee1899aaf4e8b94c0472b17395662
+msgid "客户端可以利用该接口实现区块链的“分页查询”，根据返回结果里的hasmore来判断是否要继续查询剩下的数据。下面对该接口的参数做进一步说明："
+msgstr ""
+
+#: ../../source/litesdk.rst:1365 ../../source/litesdk.rst:1432
+#: 3f007531cac14ee7b8860204ed75497e c76d89cdb1ef44fe9e289b512426cf28
+msgid ""
+"如果查询条件未指定 metadata，则 metadata.backward 默认为 "
+"false、书签位置默认为最新区块最后一条交易，从书签位置开始往前遍历，limit默认为5000条。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1368 a3bd3a1183754a0094c5f6ddcf61d89e
+msgid ""
+"如果查询条件里未指定 metadata.bookmark，若 metadata.backward 为 "
+"false，则默认书签位置为最新区块的最后一条交易，若metadata.backward 为 true，则默认书签位置为第一个区块的第一条交易。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1372 c700b26531d84a188bb8f5860f351ad3
+msgid ""
+"如果查询条件里指定的书签位置 metadata.bookmark 位于区块区间 [1, latest] 里，则我们需要根据 "
+"metadata.backward 的值来调整遍历的区块区间。如果 metadata.backward 为false，则区块区间调整为 [1, "
+"metadata.bookmark.blkNum]，如果 metadata.backward 为true，则区块区间调整为 "
+"[metadata.bookmark.blkNum, latest]。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1378 5e8c6cfdc46c4447a14c8f91c2f05c4c
+msgid ""
+"当 backward 为 false 的时 候，如果指定的书签位置在区块1之前，则接口返回error。当 backward 为 true "
+"的时候，如果指定的书签位置在最新区块之后，则接口返回error。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1387 6553a11d0e534b118b8e60d1e3b383a1
+msgid "4.25 查询指定filter的交易by filter(getTxsByFilter)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1393 53eda7c30eb346619a0eac99c5bbc5e7
+msgid ""
+"mode [可选] 表示本次查询请求的查询模式，目前有 0、1 两个值可选，默认为0。0 "
+"表示多条件与查询模式，即交易对应字段的值与查询条件里所有指定的字段值都完全一致。1 "
+"表示多条件或询模式，即交易对应字段的值至少有一个等于查询条件里指定的字段值。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1398 3fde0752688a496b8fde6a2b5d4ac2e6
+msgid "metaData [可选] 指定本次查询的起始位置、查询方向以及返回的条数。若未指定，则默认从最新区块开始向前查询，默认返回条数上限是5000条。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1400 88d93c1ed8c148d58f63e70b05b04f5c
+msgid "filter [必选] 指定本次查询过滤条件。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1421 3923d88328ab4bd89e824fa13c7758be
+msgid "txHash [可选] 指定交易的哈希值。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1422 b1827ecbd0c9453a9e78d6197b55c8a8
+msgid "blkNumber [可选] 指定交易所在的区块号。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1423 0b26a99d8bff4b5fb48bcff570f1cac3
+msgid "txIndex [可选] 指定交易在区块内的索引位置。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1424 29d498b65c7048eda639603e16567763
+msgid "txFrom [可选] 指定交易发送方的地址。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1426 3b878baa0b2740ef8d1419361378f249
+msgid "extraId [可选] 指定交易extraId的值，类型为数组，数组元素可以为long或者String。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1429 c052c423197a4b21b9237cf3ef8cc123
+msgid "客户端可以利用该接口实现区块链的“分页查询”，根据返回结果里的 hasmore 来判断是否要继续查询剩下的数据。下面对该接口的参数做进一步说明："
+msgstr ""
+
+#: ../../source/litesdk.rst:1435 9f9d1f581ec74be181b40bce68a04ec0
+msgid ""
+"如果查询条件里未指定 metadata.bookmark，若 metadata.backward 为 "
+"false，则默认书签位置为最新区块的最后一条交易，若 metadata.backward 为 true，则默认书签位置为第一个区块的第一条交易。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1439 a829cc0713ea488d8f4def887313c7b2
+msgid ""
+"如果查询条件里指定的书签位置 metadata.bookmark 位于区块区间 [1, latest] 里， 则我们需要根据 "
+"metadata.backward 的值来调整遍历的区块区间。如果 metadata.backward 为false，则区块区间调整为 [1, "
+"metadata.bookmark.blkNum]，如果 metadata.backward 为true，则区块区间调整为 "
+"[metadata.bookmark.blkNum, latest]。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1445 5a20b5d15c714624908b12a7add9b917
+msgid ""
+"当 backward 为 false 的时候，如果指定的书签位置在区块1之前，则接口返回error。当 backward 为 true "
+"的时候，如果指定的书签位置在最新区块之后，则接口返回error。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1454 9cd8245daba24f45a6eef1dfd441dd93
+msgid "4.26 查询批量交易by hash list(getBatchTxByHash)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1456 2e921f96a8e14327bad49d40da3d978b
+msgid ""
+"注意：当输入的交易哈希非常多时，\\ **请求响应延迟将升高**\\ "
+"。如果返回的数据量超过节点所在服务器内存大小时，将导致处理查询请求的节点出现\\ **OOM（Out Of Memory）**\\ 风险，可使用 "
+"**tx_getTransactionByHash** 接口替代。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1461 ../../source/litesdk.rst:1476
+#: b170bb73b97749f0b565e124903ceadc fe552ec4d9054461acac9dc0d844bd94
+msgid "txHashList 交易的哈希数组, 哈希值为32字节的十六进制字符串。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1469 e8428033eca945baaa023971adef7649
+msgid "4.27 查询批量回执by hash list(getBatchReceipt)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1471 c92daf87a9f241ed8b866f1a692aaa44
+msgid ""
+"注意：当输入的交易哈希非常多时，\\ **请求响应延迟将升高**\\ "
+"。如果返回的数据量超过节点所在服务器内存大小时，将导致处理查询请求的节点出现\\ **OOM（Out Of Memory）**\\ 风险，可使用 "
+"**tx_getTransactionReceipt** 接口替代。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1484 1f3084c03f8c420fb733d115658a515d
+msgid "第五章. BlockService相关接口"
+msgstr ""
+
+#: ../../source/litesdk.rst:1486 0c27434f605c486d95efc46516975180
+msgid "BlockService接口与TxService相似，只是获取的对象是区块信息。同样地，BlockService对象也有很多对应的响应类型："
+msgstr ""
+
+#: ../../source/litesdk.rst:1488 ../../source/litesdk.rst:2369
+#: 7162ad57efa34e5f9923adaa6f4b30d9 8e4f54ff3bf64e12b8cd3a32c45065f9
+msgid "BlockResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:1489 ../../source/litesdk.rst:2370
+#: 3b167902627549f980ea017b291a0d94 4b0775db78c64bab9fb9686c0ac53d74
+msgid "BlockNumberResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:1490 ../../source/litesdk.rst:2371
+#: 6f3f0e2cefcb4d07a8c17f8c04d55f8c 95176e220fec427aab149d64e62fb8e3
+msgid "BlockAvgTimeResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:1491 ../../source/litesdk.rst:2372
+#: 568f214123a94de8b28cd6d43224ba02 6d36875fce6749f98b2f2dd6cd9c3f69
+msgid "BlockCountResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:1493 ../../source/litesdk.rst:2031
+#: 52f5b3738fc1461094ef95b2d924e1e6 859df00087134892af46d8530ee0ea9b
+msgid "详细结构请参考第十章。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1496 be433b30c85a4bfe812ba79e877f4406
+msgid "5.1 获取最新区块(getLastestBlock)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1507 e5062572c2d14e759159760b2ae8c276
+msgid "5.2 查询区块by block hash(getBlockByHash)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1511 89c50d2d13ab49da837f10602d1ee912
+msgid "blockHash 区块的哈希值,32字节的十六进制字符串。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1512 ../../source/litesdk.rst:1528
+#: ../../source/litesdk.rst:1639 ../../source/litesdk.rst:1658
+#: 19f1040d33a746089cf6b83c158bd5d0 35180938d9cf46edb7deceadd15041ac
+#: 9e33686ee6564402b13fed294f91238a baa1b360a5cf4090b75ebbd54918b308
+msgid ""
+"isPlain (可选) 默认为false，表示返回的区块\\ **包括**\\ 区块内的交易信息，如果指定为true，表示返回的区块\\ "
+"**不包括**\\ 区块内的交易。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1523 7be4417da1f64b4790dac87c6985eb3f
+msgid "5.3 查询区块by block number(getBlockByNum)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1547 49b9281a8ac14c29a406f8dea22a3c34
+msgid "5.4 查询区块平均生成时间(getAvgGenerateTimeByBlockNumber)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1566 1dc127b28e674a91bb4fc856f8f1addb
+msgid "5.5 查询最新区块号，即链高(getChainHeight)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1577 13a74ec169d547a5841f6d01087b448a
+msgid "5.6 查询创世区块号(getGenesisBlock)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1588 ed3e7ef50fc144f3bb84df3e8674821a
+msgid "5.7 查询指定区间区块with limit(getBlocksWithLimit)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1594 aa412ce68041477ea197e8a105f3931c
+msgid "size 查询的区块数量"
+msgstr ""
+
+#: ../../source/litesdk.rst:1595 812bbcd540ea414c9622f3fdcaf0bb5d
+msgid ""
+"isPlain (可选)，默认为false，表示返回的区块\\ **包括**\\ 区块内的交易信息，如果指定为true，表示返回的区块\\ "
+"**不包括**\\ 区块内的交易。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1610 27045639b880425faf09e3e7a692bd39
+msgid "5.8 查询指定时间区间内的区块数量(getBlocksByTime)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1612 9840b4c8b45244d4928c4f2fc375e110
+msgid "注意：当输入的时间范围较大时，\\ **请求响应延迟将升高**\\ 。存在服务器资源被该请求处理长时间占用的风险，应尽量避免使用此接口。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1616 bc16dea1e7fa4182aa9f42e2faa7bf78
+msgid "startTime 起始时间戳(单位ns)。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1631 933cf1646e8a4be3ad4183889f5bf69a
+msgid "5.9 查询批量区块by block hash list(getBatchBlocksByHash)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1633 64a9fa179a02414ab149eac5c9bc1417
+msgid ""
+"注意：当输入的区块哈希非常多时，\\ **请求响应延迟将升高**\\ "
+"。如果返回的数据量超过节点所在服务器内存大小时，将导致处理查询请求的节点出现\\ **OOM（Out Of Memory）**\\ 风险，可使用 "
+"**tx_getBlockByHash** 接口替代。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1638 218c7b50ed554009bbff6f4b1ff259ce
+msgid "blockHashList 要查询的区块哈希数组，哈希值为32字节的十六进制字符串。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1650 e9159ddde06742f3a840400c02648fde
+msgid "5.10 查询批量区块by block number list(getBatchBlocksByNum)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1652 6d31d4769f3c46039e75a8faf7ff2d25
+msgid ""
+"注意：当输入的区块号非常多时，\\ **请求响应延迟将升高**\\ "
+"。如果返回的数据量超过节点所在服务器内存大小时，将导致处理查询请求的节点出现\\ **OOM（Out Of Memory）**\\ 风险，可使用 "
+"**tx_getBlockByNumber** 接口替代。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1657 c1ce7e66043a410fb2790e44f8424233
+msgid "blockNumberList 要查询的区块号数组。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1677 5d31b3c0acd946f9a41deac8f149de2b
+msgid "第六章. Node相关接口（NodeService）"
+msgstr ""
+
+#: ../../source/litesdk.rst:1679 1e11207d91714ba784009dd50b2ab386
+msgid "NodeService接口用于获取节点信息。NodeService对象对应的响应类型如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:1681 1cc5ccc3e1ab470e981b1a60da0d3b0c
+msgid "NodeResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:1682 7ce69e582dd84e159446e0d44b6c3edb
+msgid "NodeHashResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:1683 f184c89d536a4c32b3e0ed5bc36b2b19
+msgid "NodeStateResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:1685 ../../source/litesdk.rst:2374
+#: 548871ebb50a4640be905772b93da4a8 65feaa96099f4da0a907d07d1365fed1
+msgid "分别对应的结构如下。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1687 78f910ce5dee499e92c32034d8e619e9
+msgid "**NodeResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:1689 87e8665caf554352ad7ba5097c9c440b
+msgid ""
+"通过\\ ``result``\\ 接收返回结果，\\ ``result``\\ 实际类型是内部类\\ ``Node``\\ ，可通过\\ "
+"``getResult()``\\ 方法得到。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1709 3d55019aee57421e85d930f1c5c7cf4a
+msgid "**NodeHashResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:1711 f831fa06708343b580f8eeee2ec2fc6b
+msgid "通过\\ ``result``\\ 接收返回结果，\\ ``result``\\ 实际类型是\\ ``String``"
+msgstr ""
+
+#: ../../source/litesdk.rst:1720 f6854aabdc194abf8f535c0ef066c78f
+msgid "**NodeStateResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:1722 2cba1b1ae28f4db0ba18369cf8f0b31b
+msgid ""
+"通过\\ ``result``\\ 接收返回结果，\\ ``result``\\ 实际类型是内部类\\ ``NodeState``\\ "
+"，可通过\\ ``getResult()``\\ 方法得到。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1751 dbc885b621ba4d28a952b65102298241
+msgid "6.1 获取节点信息"
+msgstr ""
+
+#: ../../source/litesdk.rst:1755 6c34ff7f000d463c9e6ce7de1d610a78
+msgid "ids 说明请求向哪些节点发送。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1762 bdad0a32665e459aa5aafd231dade155
+msgid "6.2 获取节点哈希"
+msgstr ""
+
+#: ../../source/litesdk.rst:1766 f7833c950f014384bf81baaaae3ae7af
+msgid "nodeIds 节点ID"
+msgstr ""
+
+#: ../../source/litesdk.rst:1775 610b9792aa3249ef8139c68d3ba03f75
+msgid "6.3 获取节点状态信息"
+msgstr ""
+
+#: ../../source/litesdk.rst:1786 a57ef01925b847a3af3fdb633767d840
+msgid "第七章. MQ相关接口(MQService)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1788 eff498cff2a440f5a48c89db4a2065a2
+msgid ""
+"MQService接口用于与\\ **RabbitMQ**\\ 进行交互。由于开发时间较早，\\ ``MQService``\\ "
+"对应的响应类型只有\\ ``MQResponse``\\ 一种，这与之前提到的接口都不太相同："
+msgstr ""
+
+#: ../../source/litesdk.rst:1790 6c67c3f8d95b4c71a774f8978ed75551
+msgid "``MQResponse``\\ 接口结构如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:1801 a7061f66bfb44993bd7b45b4917924f4
+msgid "7.1 通知MQ服务器正常工作"
+msgstr ""
+
+#: ../../source/litesdk.rst:1805 ../../source/litesdk.rst:1820
+#: ../../source/litesdk.rst:1846 ../../source/litesdk.rst:1857
+#: ../../source/litesdk.rst:1868 ../../source/litesdk.rst:1880
+#: ../../source/litesdk.rst:1949 ../../source/litesdk.rst:1974
+#: ../../source/litesdk.rst:1987 ../../source/litesdk.rst:2002
+#: ../../source/litesdk.rst:2015 10947958c56346319c60ecc7ae1e4455
+#: 157c11215c364742ade8768ddd2f0700 1ec6d9d08d6d4e5fa10f52d1e532839c
+#: 6918ce822089479eb5a424e2682a270b 79cbce3f1ae34ad4a3d7e0f24a64a4d0
+#: a5e69f106a104f94b62eaab2bb741b5f a9293cec26244d8c846df2450c8a26d0
+#: ca43608ef7764b38b7ed2a919c7dc02b cd6929da879b49f8a4be3d7a363d6bdf
+#: cd94406c0d41495b835c36266c875718 eb3af603052c44ee927047f3a1761072
+msgid "nodeIds 说明请求向某个节点发送，nodeIds有且只能有一个"
+msgstr ""
+
+#: ../../source/litesdk.rst:1812 599db657185347d9af153248e9872bfe
+msgid "7.2 注册队列"
+msgstr ""
+
+#: ../../source/litesdk.rst:1816 ../../source/litesdk.rst:1843
+#: ../../source/litesdk.rst:1945 ../../source/litesdk.rst:1971
+#: 3ee16fa6d0e0415f8a157b637fae6a70 84a24538d49d4455b8602f33320d38be
+#: cc984facd6654a349e9188eeea2b9869 e8264c905cbf4b5ca22ddc3c593e0e63
+msgid "from 调用该接口的账户地址"
+msgstr ""
+
+#: ../../source/litesdk.rst:1817 ../../source/litesdk.rst:1844
+#: ../../source/litesdk.rst:1946 ../../source/litesdk.rst:1972
+#: ../../source/litesdk.rst:2000 ../../source/litesdk.rst:2013
+#: 132fb324079e43ecae75f431959a7164 3e1ea0ee18764f47bf1322c06449e53a
+#: 76dd61b430e445dc9037d6616b4aac9f 8e4e4e0d85c345798f533c9adaf8f8a5
+#: c7cee3709b3a4ab9beafc4cf9b873772 d88227551ebb440f9443c197fc383765
+msgid "queueName 队列名称"
+msgstr ""
+
+#: ../../source/litesdk.rst:1818 ../../source/litesdk.rst:1947
+#: 09e0aab4c99542f08d0d4a75098e24d9 ec08bbe868e242339c4bfec3fa68da8a
+msgid "routingkeys 想要订阅的消息类型"
+msgstr ""
+
+#: ../../source/litesdk.rst:1819 ../../source/litesdk.rst:1948
+#: 05df3119768a4905a8b7caa6d43bd228 3b6a23ac4bc34d22a8d9b7deafe89fde
+msgid "isVerbose 推送区块时是否推送交易列表，true表示是"
+msgstr ""
+
+#: ../../source/litesdk.rst:1827 1e2566a279e34e1c86df598d73644a8d
+msgid "7.3 注册队列(with mqParam)"
+msgstr ""
+
+#: ../../source/litesdk.rst:1831 fb6cd86236044386a9d17370455a78cc
+msgid "mqParam 注册队列所需参数，除了7.2中的参数外，新增了合约event事件的相关过滤参数"
+msgstr ""
+
+#: ../../source/litesdk.rst:1839 46ec75c7a6864b1997611034a6b62a41
+msgid "7.4 注销队列"
+msgstr ""
+
+#: ../../source/litesdk.rst:1845 ../../source/litesdk.rst:1973
+#: 74119b983c8847c7bb1746346e20799b df96cdd9b12f4cbd88d8dac635c0aa44
+msgid "exchangerName exchanger 名称"
+msgstr ""
+
+#: ../../source/litesdk.rst:1853 527fd3f44ba948f2b590ff7f68758a8f
+msgid "7.5 获取所有队列名称"
+msgstr ""
+
+#: ../../source/litesdk.rst:1855 ../../source/litesdk.rst:1985
+#: ../../source/litesdk.rst:1998 ../../source/litesdk.rst:2011
+#: ../../source/litesdk.rst:2251 7abfc16d023447c181a6b549c3f15424
+#: 95af36b2ed3e4b518b0f1fb3cfa80c02 967fee7f34824c35be757302623c6841
+#: b446ef090a224cd3868a08350d54214b b48bb5f4f4014c5e884c1f83bf1bf7a5
+msgid "参数"
+msgstr ""
+
+#: ../../source/litesdk.rst:1864 0b90ef25c31347479a9e65fd00e18c37
+msgid "7.6 获取所有exchanger名称"
+msgstr ""
+
+#: ../../source/litesdk.rst:1875 0063c5e0dfd9453585656299c816bae0
+msgid "7.7 删除exchanger"
+msgstr ""
+
+#: ../../source/litesdk.rst:1879 885959cc4f5840d7abddaa612bb70af1
+msgid "exchangerName exchanger名称"
+msgstr ""
+
+#: ../../source/litesdk.rst:1887 a3c17b9488334c4e8f7360bf8df2ad60
+msgid "第八章. MQGrpcService相关接口"
+msgstr ""
+
+#: ../../source/litesdk.rst:1889 71d9698f44214ae39dd932f45d0aafc3
+msgid ""
+"MQGrpcService依赖grpc服务提供MQ相关功能，无需依赖第三方软件进行消息推送。MQGrpcService的响应类型沿用了MQService的\\"
+" ``MQResponse``\\ ，同时新增了\\ ``MQGrpcConsumeResponse``\\ 作为消费接口的响应类型。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1891 6bb66a17b0214ccfa17fe80962899491
+msgid "注意：在使用此服务时，创建ProviderManager对象时，必须提供grpcProvider。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1893 140e014417d54787bb9d8a90b198ce52
+msgid "MQResponse为注册队列、注销队列、获取队列名称、停止消费接口的响应类型"
+msgstr ""
+
+#: ../../source/litesdk.rst:1902 e8e05c65be8945d993132bb39aa20d30
+msgid ""
+"``MQGrpcConsumeResponse``\\ 为消费MQ信息接口的响应类型，仅提供一个\\ ``getResult``\\ "
+"方法，返回值为实现了Iterator接口的\\ ``ServerStreamManager``\\ 对象。用户可以通过\\ ``next``\\ "
+"方法不停的获取来自平台的MQ消息，如果平台没有新的消息产生，则next方法会阻塞。MQ消息可通过\\ "
+"``Decoder.decodeMQMessage``\\ 方法进行解析。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1904 f15fa01fd1e64f109e745d6981d6b01c
+msgid "注意：队列A，在同一时刻，只能被一个客户端消费。即对于在一号节点注册的队列A，如果客户端甲已经调用consume接口消费了该队列，那么在这个时刻，客户端乙将无法同时消费队列A。只有当客户端甲调用stopConsume接口，停止消费队列A之后，客户端乙才可以消费队列A。"
+msgstr ""
+
+#: ../../source/litesdk.rst:1941 af3ff677f2e0461b8c56e7901b375279
+msgid "8.1 注册队列"
+msgstr ""
+
+#: ../../source/litesdk.rst:1957 615a3776df8840c5956103061f895f94
+msgid "mqParam 注册队列所需参数，除了上述方法中的参数外，新增了合约event事件的相关过滤参数"
+msgstr ""
+
+#: ../../source/litesdk.rst:1967 b9340f3eea42421bad9b688b517b0b7b
+msgid "8.2 注销队列"
+msgstr ""
+
+#: ../../source/litesdk.rst:1983 0e30aa07e1784da5b067ad81ddeb2b40
+msgid "8.3 获取所有队列名称"
+msgstr ""
+
+#: ../../source/litesdk.rst:1994 bd08958c59c744bf9e2cf994f742c56a
+msgid "8.4 消费MQ信息"
+msgstr ""
+
+#: ../../source/litesdk.rst:1996 b6c82c3e402a469ebe5e360e92d33b47
+msgid "注意：本消费接口使用完之后，应及时调用停止消费MQ信息接口，不然该队列无法被再次消费。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2009 a2ea2ca517074fc48ad68664d04d2721
+msgid "8.5 停止消费MQ信息"
+msgstr ""
+
+#: ../../source/litesdk.rst:2022 546291d4bf7c4b5da05f3bad1fd1a5b0
+msgid "第九章. ArchiveService相关接口"
+msgstr ""
+
+#: ../../source/litesdk.rst:2024 565cb8a1d5254bd6b44a619681379215
+msgid "``ArchiveService``\\ 接口用于快照和归档相关工作，对应的响应类型如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:2026 ../../source/litesdk.rst:2435
+#: 82875e7233384d42ab338bfb410deb20 ae0cfabba038499aa441370a19b9105a
+msgid "ArchiveResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:2027 ../../source/litesdk.rst:2436
+#: b507cbab74ba468e9de9622a6ad8328f fd54d7bc18b94f7eaf315c8d5bc2e4e8
+msgid "ArchiveFilterIdResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:2028 ../../source/litesdk.rst:2437
+#: 333173bffc0e4f58ad10662eb0eca904 f212a4b7b1ae426c88458f7cba30c5bd
+msgid "ArchiveBoolResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:2029 ../../source/litesdk.rst:2438
+#: 1c0aaefbbe0c472983e1064646e8b224 64d0acc67a7a4a00be464d16eea9ed44
+msgid "ArchiveStringResponse"
+msgstr ""
+
+#: ../../source/litesdk.rst:2034 3171349c1c49419e983de6818e90d0d9
+msgid "9.1 列出所有快照"
+msgstr ""
+
+#: ../../source/litesdk.rst:2045 27fa2f9b42eb47df83797ff19bc5f4e8
+msgid "9.2 数据归档（直接归档）"
+msgstr ""
+
+#: ../../source/litesdk.rst:2049 fc4f7970b8c149c5a3f887ef427751ee
+msgid "blkNumber 区块号"
+msgstr ""
+
+#: ../../source/litesdk.rst:2057 880eefb0fb7f4d308c496d4ddda0f8a6
+msgid "9.3 查询归档数据状态"
+msgstr ""
+
+#: ../../source/litesdk.rst:2061 ../../source/litesdk.rst:2073
+#: d535bc3845484257ba1d35af74984b7c dc11058e6c5543c8a8469fa1cf2eccbb
+msgid "filterId 快照id"
+msgstr ""
+
+#: ../../source/litesdk.rst:2069 bc95c2ab2c8d45dfb3e84791e750117f
+msgid "9.4 查询归档数据是否存在"
+msgstr ""
+
+#: ../../source/litesdk.rst:2081 d82af50a6fbf40ef9848debb34273c16
+msgid "9.5 查询最近一次归档的进度"
+msgstr ""
+
+#: ../../source/litesdk.rst:2092 b409407d21524d8d936a749d41302ebb
+msgid "9.6 制作快照"
+msgstr ""
+
+#: ../../source/litesdk.rst:2104 42887bd9a2f44d008bf97b01c649a6c9
+msgid "第十章. SqlService相关接口"
+msgstr ""
+
+#: ../../source/litesdk.rst:2107 e988036a96ea437490777a67511894c8
+msgid "10.1 创建SQL交易体"
+msgstr ""
+
+#: ../../source/litesdk.rst:2109 d8020710f8ed4011a6e894d8358b9e0b
+msgid ""
+"**LiteSDK**\\ 使用\\ **Builder**\\ 模式来负责对\\ ``Transaction``\\ 的创建，通过调用\\ "
+"``build()``\\ 函数来获取到\\ ``Transaction``\\ "
+"实例。SQL交易体由SQLBuilder负责创建，其提供了5种SQL交易体的封装，包括\\ **创建数据库**\\ 、\\ **冻结数据库**\\"
+" 、\\ **解冻数据库**\\ 、\\ **删除数据库**\\ 、\\ **调用SQL**\\ 。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2111 87e6ce3166514823930e0ced7fd788d3
+msgid "**创建数据库**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2119 160e312d045f481cbc3469d6969869d6
+msgid "**冻结数据库**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2127 83c6c6d1912f40e38598e1a29dd6f55b
+msgid "**解冻数据库**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2135 96cae193d24f405a92c2df9f51493aa7
+msgid "**删除数据库**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2143 f588c0294ac7407390f6e64563b51993
+msgid "**调用SQL**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2152 1a4d68ff013a479a82c5901a9dbe113b
+msgid "10.2 创建数据库"
+msgstr ""
+
+#: ../../source/litesdk.rst:2154 52c4b2835f1840c6b80f464c64ede9fb
+msgid "创建数据库交易成功后，可通过交易回执查询创建的数据库地址。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2158 57227a8b9fd748caa312f0badbd241fa
+msgid "transaction 创建数据库的交易体"
+msgstr ""
+
+#: ../../source/litesdk.rst:2171 62757765ab2542f1b1cf82f4dedea61f
+msgid "10.3 管理数据库生命周期"
+msgstr ""
+
+#: ../../source/litesdk.rst:2175 e9169f7dc7f745878a67bc259377f1e1
+msgid "transaction 管理数据库生命周期的交易体，即冻结数据库、解冻数据库或者删除数据库的交易体"
+msgstr ""
+
+#: ../../source/litesdk.rst:2189 81862244222b43c69fcc4a8429c97b04
+msgid "10.4 调用SQL"
+msgstr ""
+
+#: ../../source/litesdk.rst:2193 ce4b549cf635469dbc9371fa6c4805ec
+msgid "transaction 调用SQL的交易体"
+msgstr ""
+
+#: ../../source/litesdk.rst:2206 9a43995352624fe8825766f9a39ea3a1
+msgid "10.5 SQL执行结果解码"
+msgstr ""
+
+#: ../../source/litesdk.rst:2208 123e0c91478443c180e6cfc4246b1f84
+msgid "类似于HVM，SQL的执行结果解码方法在Decoder类中"
+msgstr ""
+
+#: ../../source/litesdk.rst:2212 a48308052a004dfea64a5389958ff3b5
+msgid "encode sql的执行结果，即sql交易的回执"
+msgstr ""
+
+#: ../../source/litesdk.rst:2219 e85adbe419a0477d804734caf7f55062
+msgid "10.6 Chunk结构的使用"
+msgstr ""
+
+#: ../../source/litesdk.rst:2221 fbf398ba9b4943868da782a0567f5c12
+msgid "chunk结构保存了sql的执行结果，使用方法类似于jdbc的ResultSet"
+msgstr ""
+
+#: ../../source/litesdk.rst:2223 ce98a1f6ed324ad3aae8a1e567e8f395
+msgid "**10.6.1 DML语句**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2225 1e19aa21db8d4ecbb27fd0dfa31f8b43
+msgid "对于DML语句，通过getUpdateCount方法可以获得sql语句对应的修改行数"
+msgstr ""
+
+#: ../../source/litesdk.rst:2231 209c24eea21f4834985ef23a0f1d310f
+msgid "也可以通过getLastInsertID获得插入的自增键"
+msgstr ""
+
+#: ../../source/litesdk.rst:2237 128f5bfe38aa4344b45b6e4a08023ca1
+msgid "**10.6.2 DQL语句**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2239 5c681ec325ad4d1aaefa41cb7ded042e
+msgid "对于DQL语句，chunk的使用方法类似于jdbc的ResultSet"
+msgstr ""
+
+#: ../../source/litesdk.rst:2241 796cf506e045442db2c064523d633429
+msgid "调用next接口将游标移动到查询结果的下一行，游标初始位置为第一行之前。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2247 fc9981315a734f87b79ad6a9ec75a486
+msgid "如果返回结果为false表示游标已经移动到最后一行之后了。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2249 270935c92e1448b8bc6214bb1c0e31db
+msgid "调用getValue接口将获得游标指向的当前行以及参数对应列所指向的数据的值。返回结果的类型取决于该列在数据库表中的数据类型。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2253 9600f554449448d68983aa6823d64cdc
+msgid "columnIdex 列坐标，范围为[0,n-1]，n为列的数量"
+msgstr ""
+
+#: ../../source/litesdk.rst:2259 bc1d1e3b90c741fbaf2768df0219029b
+msgid "chunk同时也提供指定类型的数据获取的方法，对应方法如下，XXX表示类型，如getFloat，getTime等。该类使用方法与getValue一致，不过需要注意的是，XXX类型必须和数据库表中该列的类型一致或者能过相互转换，否则无法获得正确的结果或者会抛出异常。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2266 787685b9e2a344e382c74d2177a1566e
+msgid "第十一章. 接口响应类型结构体介绍"
+msgstr ""
+
+#: ../../source/litesdk.rst:2269 f5f7000b9f2c4c0d813591feb23dbc2b
+msgid "11.1 TxService接口对应的响应类型"
+msgstr ""
+
+#: ../../source/litesdk.rst:2277 ../../source/litesdk.rst:2440
+#: 2d425c5907074d69bccfc63d7c955f86 64b59878a1fd43a7ae2575c21c31d780
+msgid "分别对应的结构如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:2279 bb87d5b73def4960ba0f3456b9bbe11f
+msgid "**TxResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2281 482df4e4655d434fa2627c2df4a76460
+msgid ""
+"通过\\ ``result``\\ 接收返回结果，\\ ``result``\\ 实际结构是内部类\\ ``Transaction``\\ "
+"，可通过\\ ``getResult()``\\ 方法得到。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2307 17ce0ccc776a47c4bcfb901d68d63221
+msgid "**TxCountWithTSResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2309 120e02f11aaf4a798ef1f146005ca773
+msgid ""
+"通过\\ ``result``\\ 接收返回结果，\\ ``result``\\ 实际类型是内部类\\ ``TxCount``\\ ，可通过\\ "
+"``getResult()``\\ 方法得到。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2323 8cbfbe0095d64bdb8eca70ec1eede8b6
+msgid "**TxCountResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2325 5956d251d061429f99d82d078de62bd6
+msgid ""
+"继承\\ ``TxCountWithTSResponse``\\ 通过\\ ``result``\\ 接收返回结果，\\ ``result``\\"
+" 实际类型是\\ ``TxCount``\\ ，可通过\\ ``getResult()``\\ 方法得到。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2332 6f7e800e108b40db81d8b14a9875142f
+msgid "**TxAvgTimeResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2334 ../../source/litesdk.rst:2398
+#: ../../source/litesdk.rst:2408 4ce99ba876fe4e429dcebd7b167d7671
+#: 5f6671cdb4bf4a8da89dc062369d8e43 bdda7d9171ad46a2a7064c8ff130f806
+msgid ""
+"通过\\ ``result``\\ 接收返回结果，\\ ``result``\\ 实际类型是\\ ``String``\\ ，可通过\\ "
+"``getResult()``\\ 方法得到。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2342 257dee5804204164b24c1b0b59243230
+msgid "**ReceiptListResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2344 5f1c61ba29e54a8280fc3c45b91af094
+msgid ""
+"通过\\ ``result``\\ 接收返回结果，\\ ``result``\\ 实际类型是内部类\\ ``Receipt``\\ ，可通过\\ "
+"``getResult()``\\ 方法得到。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2352 364dcec3c70b4358b1026f4522e97e82
+msgid "``Receipt``\\ 结构如下"
+msgstr ""
+
+#: ../../source/litesdk.rst:2367 7d70fbbae6f74e1a8e6ff5cd7f4f03ae
+msgid "11.2 BlockService接口对应的响应类型"
+msgstr ""
+
+#: ../../source/litesdk.rst:2376 a92a538ba2c245e19fcdcdcedf1fde90
+msgid "**BlockResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2378 ab279bd6797d45868946e239074e6559
+msgid ""
+"通过\\ ``result``\\ 接收返回结果，\\ ``result``\\ 实际类型是内部类\\ ``Block``\\ ，可通过\\ "
+"``getResult()``\\ 方法得到。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2396 e3830653d1a344cba171f69706f7d9d3
+msgid "**BlockNumberResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2406 ec9f843a230345e5b1f4cce8dbfaa65b
+msgid "**BlockAvgTimeResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2417 5502cc13548247d0b92891d3420fce85
+msgid "**BlockCountResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2419 f5c663644b2247c1a025f9694d2e456a
+msgid ""
+"通过\\ ``result``\\ 接收返回结果，\\ ``result``\\ 实际类型是内部类\\ ``BlockCount``\\ "
+"，可通过\\ ``getResult()``\\ 方法得到。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2433 04dfc32e6d7d472593ed9e259f2c8a59
+msgid "11.3 ArchiveService接口对应的响应类型"
+msgstr ""
+
+#: ../../source/litesdk.rst:2442 42880434317b470aae84d97075789839
+msgid "**ArchiveResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2444 91517e49934f4f09958bb7853b117185
+msgid ""
+"通过\\ ``result``\\ 接收返回结果，\\ ``result``\\ 实际结构是内部类\\ ``Archive``\\ ，可通过\\ "
+"``getResult()``\\ 方法得到。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2461 8026885a13004a419ad7080df5e9e70f
+msgid "**ArchiveFilterIdResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2463 ../../source/litesdk.rst:2483
+#: 6dec910cbe4b45518d4a72b28319d4a5 e0336282e295432c8ff41792f76848b8
+msgid ""
+"通过\\ ``result``\\ 接收返回结果，\\ ``result``\\ 实际结构是\\ ``String``\\ ，可通过\\ "
+"``getResult()``\\ 方法得到。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2471 18cb4244ddb94c868b6008dcdd6ee5be
+msgid "**ArchiveBoolResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2473 7e26f750347b4675bd802f2bc5c7eec7
+msgid ""
+"通过\\ ``result``\\ 接收返回结果，\\ ``result``\\ 实际结构是\\ ``Boolean``\\ ，可通过\\ "
+"``getResult()``\\ 方法得到。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2481 f4ad486271ad4d4582b52a1e44e15b9a
+msgid "**ArchiveStringResponse**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2492 97a997b623994c148cdf9eae7277437b
+msgid "附录"
+msgstr ""
+
+#: ../../source/litesdk.rst:2495 700615a5f8304b08948ff119cbcf239c
+msgid "附录 A Solidity与Java的编码解码"
+msgstr ""
+
+#: ../../source/litesdk.rst:2498 f63dd69def61443c99e78a5902eff675
+msgid "类型对应"
+msgstr ""
+
+#: ../../source/litesdk.rst:2500 ef3d9a99f5924a10912e979731a48fdf
+msgid ""
+"当使用\\ **LiteSDK**\\ "
+"编译solidity合约时，由于java和solidity本身类型的不兼容，所以在调用solidity方法传参数的时候需要对java类型进行相应的编码解码，LiteSDK内部的\\"
+" ``Abi``\\ 类，\\ **与solidity的abi文件对应，用来提供solidity合约的函数入参、返回值等信息**\\ "
+"，方便我们对solidity类型和java类型做转换，目前Litesdk支持的对应类型如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:2503 66e9c1b4d0fb45c09fc6d11a75cbb22e
+msgid "JAVA"
+msgstr ""
+
+#: ../../source/litesdk.rst:2503 342a8f0bcf1b43c8ba1357614c3f4726
+msgid "SOLIDITY"
+msgstr ""
+
+#: ../../source/litesdk.rst:2505 265582bcfa564506ac15a9e971314d7e
+msgid "``boolean/Boolean``"
+msgstr ""
+
+#: ../../source/litesdk.rst:2505 413a8e7ca429430b891a0769ada4859c
+msgid "``bool``"
+msgstr ""
+
+#: ../../source/litesdk.rst:2506 ../../source/litesdk.rst:2507
+#: 38440e4e79b04aa083460c043fe97055 48be9f739f194165862200c341f4bbb2
+msgid "``BigInteger``"
+msgstr ""
+
+#: ../../source/litesdk.rst:2506 1c08f5f3bb374140963fc75592ecf0b3
+msgid "``int、int8、int16……int256``"
+msgstr ""
+
+#: ../../source/litesdk.rst:2507 acba246ae37648ffa8805414036fe7ce
+msgid "``uint、uint8、uint16……uint256``"
+msgstr ""
+
+#: ../../source/litesdk.rst:2508 291062e7d76b41d68c09690d1800d8a8
+msgid "``String``"
+msgstr ""
+
+#: ../../source/litesdk.rst:2508 ../../source/litesdk.rst:2510
+#: a9b42ddc7ba847d6bb75be160cf60947 b474e2dc2faa40d4906e9fbcb46e6edf
+msgid "``string``"
+msgstr ""
+
+#: ../../source/litesdk.rst:2509 7c4076ea85934d7194c44b3551f6714d
+msgid "``byte[]/Byte[]``"
+msgstr ""
+
+#: ../../source/litesdk.rst:2509 e0e49723ebce43ffb48379354fcb8644
+msgid "``bytes、bytes1、bytes2……bytes32``"
+msgstr ""
+
+#: ../../source/litesdk.rst:2510 e6f9f7d97247442999e57d51611e7ea0
+msgid "``address``"
+msgstr ""
+
+#: ../../source/litesdk.rst:2511 c82a3b0a239345fcbeebf6ccf94771ef
+msgid "``Array``/``List``"
+msgstr ""
+
+#: ../../source/litesdk.rst:2511 8e57ef152d2f478d8bdaaddb0373fdfb
+msgid "``array``"
+msgstr ""
+
+#: ../../source/litesdk.rst:2515 2344d939ad1b407c92f4c28436a6ef47
+msgid "编码"
+msgstr ""
+
+#: ../../source/litesdk.rst:2517 cf90cefdabd44e439e28091bcf3cfaaf
+msgid "编码时需要提供以下信息："
+msgstr ""
+
+#: ../../source/litesdk.rst:2519 a60a218f70ca4a9ba6780f671a194399
+msgid "solidity合约对应的abi对象，"
+msgstr ""
+
+#: ../../source/litesdk.rst:2520 ../../source/litesdk.rst:2537
+#: 9d5fa6b7f86a4f27bc8f58dd9433cb2e d789e0035f1d4adaa968f1ae1eb4adb5
+msgid "调用方法名"
+msgstr ""
+
+#: ../../source/litesdk.rst:2521 b9d5bdfc90df4b9dbcc73fb6628b4fda
+msgid "封装后的java参数"
+msgstr ""
+
+#: ../../source/litesdk.rst:2523 0f613a379a3e4ffeadfdd2f0dd32533d
+msgid "实现java与solidity之间的类型转换。（注：如果是部署需要提供bin文件，具体参照\\ `部署合约 <#部署合约>`__\\ 一节）"
+msgstr ""
+
+#: ../../source/litesdk.rst:2526 dda09961834c4e29be856b84e6b184b2
+msgid "Abi对象"
+msgstr ""
+
+#: ../../source/litesdk.rst:2528 288a9fc8e7b64ac0b623bf152596564e
+msgid ""
+"通过\\ **LiteSDK**\\ 提供的\\ ``FileUtil``\\ 工具类读取文件内容得到abi字符串，并利用\\ ``Abi``\\"
+" 类的\\ ``fromJson``\\ 方法生成封装的Abi对象，使用方法如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:2539 f42f109912a244c284d5a945ec20cb84
+msgid "调用方法名需要按格式\\ ``$(method_name)(type1[,type2…])``\\ 填，假如solidity的函数签名为"
+msgstr ""
+
+#: ../../source/litesdk.rst:2547 b0b485b06ddd4e7ca2a54f1e2975c77a
+msgid "则我们提供的调用方法名为\\ ``TestUint(uint8)``\\ ，如果函数多个参数，则调用方法名的类型之间用\\ **,**\\ 分隔。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2550 834ebe0583bd43efba4669f5f471e685
+msgid "封装的java参数"
+msgstr ""
+
+#: ../../source/litesdk.rst:2552 45a51879dbd84e48a8b2992ef9a427a3
+msgid ""
+"**LiteSDK**\\ 提供了\\ ``FuncParams``\\ 工具类封装\\ **需要转换成solidity类型的java参数**\\"
+" ，使用方法如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:2565 3d777b12f755407d88b812ab11ae5722
+msgid "解码"
+msgstr ""
+
+#: ../../source/litesdk.rst:2567 071cdbd069ac4003bf316cb24b115c9b
+msgid "解码与编码类似，需要提供\\ **Abi对象、方法名和编码的solidity结果**\\ ，具体可见\\ `编码 <#编码>`__\\ 一节。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2569 4c1d1317eb214f4ca9803874f4fad40a
+msgid "调用evm合约得到交易回执\\ ``ReceiptResponse``\\ 后，需要对solidity合约的返回值进行解析，使用方法如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:2586 84dc72700a5c451d9d717f224650a243
+msgid "附录B HVM合约相关使用方式"
+msgstr ""
+
+#: ../../source/litesdk.rst:2589 8fdbbe1c418e4ef18b58d24415692266
+msgid "直接调用HVM合约方法的参数封装"
+msgstr ""
+
+#: ../../source/litesdk.rst:2591 65e17f926cac42c09e32f3b19908e761
+msgid "直接调用HVM合约方法封装参数需要用到类\\ ``InvokeDirectlyParams``\\ 。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2593 ../../source/litesdk.rst:2611
+#: 2d6285d451c94d23b91e2ec35e991a7a 403ead5ef4de4624b2bc3c9609709430
+msgid "示例如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:2595 d2fb3d3aadf64727988899000126f3e1
+msgid "假设调用合约方法\\ ``add(int a, int b)``\\ ，传入参数（10，100）；"
+msgstr ""
+
+#: ../../source/litesdk.rst:2607 3db0008e134548b3b16c547b54ddee10
+msgid "HVM合约交易回执解码"
+msgstr ""
+
+#: ../../source/litesdk.rst:2609 4ebb4b9d1c96432887f46cea0a1e4f79
+msgid "调用HVM（Java）合约后，获取到的交易回执可以使用`Decoder.decodeHVM进行解码。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2613 a2ff45b299d348ef90657de384459cd7
+msgid "假设调用合约方法\\ ``public Integer add(int a, int b)``\\ ，返回值类型是Integer；"
+msgstr ""
+
+#: ../../source/litesdk.rst:2621 3bdfeee04556440c90ddb56536e8b4ad
+msgid "附录C 平台错误码和对应原因"
+msgstr ""
+
+#: ../../source/litesdk.rst:2624 ca0324d0e7b7430ebe79b689c5ed1669
+msgid "**code**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2624 ccb798bba8014e1e9f45e5692b5bbb6f
+msgid "**含义**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2626 1a771e71cda34e29830d42d03338b46e
+msgid "0"
+msgstr ""
+
+#: ../../source/litesdk.rst:2626 7b7ae5cb2fe04832b1832c47fe2c70ea
+msgid "请求成功"
+msgstr ""
+
+#: ../../source/litesdk.rst:2627 20b661229d874300a6a3ed0c6519f38a
+msgid "-32700"
+msgstr ""
+
+#: ../../source/litesdk.rst:2627 8e7af8e658bc49d5a0abd82be41c0199
+msgid "服务端接收到无效的json。该错误发送于服务器尝试解析json文本"
+msgstr ""
+
+#: ../../source/litesdk.rst:2628 b139b2d160b841dbb59920a74a803d8c
+msgid "-32600"
+msgstr ""
+
+#: ../../source/litesdk.rst:2628 74d439e779e1434da05d700307bec071
+msgid "无效的请求（比如非法的JSON格式）"
+msgstr ""
+
+#: ../../source/litesdk.rst:2629 ab68a5f3b5aa4fb19dc84f58651a1db5
+msgid "-32601"
+msgstr ""
+
+#: ../../source/litesdk.rst:2629 4cc1c55dbad146e2a93db1aac83bf6d9
+msgid "方法不存在或者无效"
+msgstr ""
+
+#: ../../source/litesdk.rst:2630 a866312e10d64dad9fa8528e21821eb6
+msgid "-32602"
+msgstr ""
+
+#: ../../source/litesdk.rst:2630 d0477f5aea9044378b90e92768fdedd2
+msgid "无效的方法参数"
+msgstr ""
+
+#: ../../source/litesdk.rst:2631 1181662a413b4b6daeebe813eb1b889f
+msgid "-32000"
+msgstr ""
+
+#: ../../source/litesdk.rst:2631 6becf57593cc49b9895062f4cd1186a1
+msgid "Hyperchain内部错误或者空指针或者节点未安装solidity环境"
+msgstr ""
+
+#: ../../source/litesdk.rst:2632 e387d57f36cd4189869f6315efd79343
+msgid "-32001"
+msgstr ""
+
+#: ../../source/litesdk.rst:2632 05269709fe744b1fae3995f090faaf46
+msgid "查询的数据不存在"
+msgstr ""
+
+#: ../../source/litesdk.rst:2633 e9c772f12dd743de839822d1724c75e3
+msgid "-32002"
+msgstr ""
+
+#: ../../source/litesdk.rst:2633 213be316c7cf4c1a91723183a98b84a9
+msgid "余额不足"
+msgstr ""
+
+#: ../../source/litesdk.rst:2634 d104b038122e4486be8dd5a3911e18f0
+msgid "-32003"
+msgstr ""
+
+#: ../../source/litesdk.rst:2634 42d4cb246e9e47a2969196d38df30450
+msgid "签名非法"
+msgstr ""
+
+#: ../../source/litesdk.rst:2635 c9d97970a5ed45e9b33566d147cba568
+msgid "-32004"
+msgstr ""
+
+#: ../../source/litesdk.rst:2635 33f6bb1876c944e8bdd109d43d7e3782
+msgid "合约部署出错"
+msgstr ""
+
+#: ../../source/litesdk.rst:2636 a3cfb317d8e94f53b18bcaca6786a7b9
+msgid "-32005"
+msgstr ""
+
+#: ../../source/litesdk.rst:2636 00f13016834c455483b1f0264a4e6d6c
+msgid "合约调用出错"
+msgstr ""
+
+#: ../../source/litesdk.rst:2637 255acfefbb5f4dafa0b887174a5ebb66
+msgid "-32006"
+msgstr ""
+
+#: ../../source/litesdk.rst:2637 ccb75b1da6f542bba8c8fae6eac2c985
+msgid "系统繁忙(平台需要处理交易量达到限制)"
+msgstr ""
+
+#: ../../source/litesdk.rst:2638 905f8b1b1e0e4d528d77468e75b56be2
+msgid "-32007"
+msgstr ""
+
+#: ../../source/litesdk.rst:2638 e12fc39e39414527b7ff8845f37e5526
+msgid "交易重复"
+msgstr ""
+
+#: ../../source/litesdk.rst:2639 b5652645f4474d819f0e18cbd890cee2
+msgid "-32008"
+msgstr ""
+
+#: ../../source/litesdk.rst:2639 9e7f6e1504b6403eacf09d187816407b
+msgid "合约操作权限不够"
+msgstr ""
+
+#: ../../source/litesdk.rst:2640 c8557a524cb848da956f8d1ba86fafc5
+msgid "-32009"
+msgstr ""
+
+#: ../../source/litesdk.rst:2640 cd1e5d0dc5b14e7ba6cd1cef887b4e3f
+msgid "账户不存在"
+msgstr ""
+
+#: ../../source/litesdk.rst:2641 646baf63da4f457f8e875ca7360689ea
+msgid "-32010"
+msgstr ""
+
+#: ../../source/litesdk.rst:2641 2ef7946dfaaf4a94a55268e896012540
+msgid "namespace不存在"
+msgstr ""
+
+#: ../../source/litesdk.rst:2642 ff61734477724255b267e57fdb07fee2
+msgid "-32011"
+msgstr ""
+
+#: ../../source/litesdk.rst:2642 3b8ccbd3c32348d3956ea36d45bcf6e6
+msgid "账本上无区块产生，查询最新区块的时候可能抛出该错误"
+msgstr ""
+
+#: ../../source/litesdk.rst:2643 4877364bec184af6b9b32da33a46c35f
+msgid "-32012"
+msgstr ""
+
+#: ../../source/litesdk.rst:2643 21d5afbc3e7a4f5ca80cea337ff23f4a
+msgid "订阅不存在"
+msgstr ""
+
+#: ../../source/litesdk.rst:2644 83a5489b323049bb951d53d94ab516e1
+msgid "-32013"
+msgstr ""
+
+#: ../../source/litesdk.rst:2644 458c160386b34cffb817a98415212e39
+msgid "数据归档、快照相关错误"
+msgstr ""
+
+#: ../../source/litesdk.rst:2645 4cda06510f774a998a6c6d9596504db6
+msgid "-32021"
+msgstr ""
+
+#: ../../source/litesdk.rst:2645 7b7a9ff69c724173b06bcd0bd5d04eb7
+msgid "过时接口"
+msgstr ""
+
+#: ../../source/litesdk.rst:2646 7c2dae57b5a84723a8cae57512e0f440
+msgid "-32097"
+msgstr ""
+
+#: ../../source/litesdk.rst:2646 6f9eca96d9214844995d1611bab40b3a
+msgid "Hypercli用户令牌无效"
+msgstr ""
+
+#: ../../source/litesdk.rst:2647 6abd511f40d746199cc6c69808a150fe
+msgid "-32098"
+msgstr ""
+
+#: ../../source/litesdk.rst:2647 44dad11d65db4a729eba97877a40e9e9
+msgid "请求未带cert或者错误cert导致认证失败"
+msgstr ""
+
+#: ../../source/litesdk.rst:2648 a1dce92bf436409ca2999f57b4fc3297
+msgid "-32099"
+msgstr ""
+
+#: ../../source/litesdk.rst:2648 17a3b7136e2c4eed827f1b2bd1fe70de
+msgid "请求tcert失败"
+msgstr ""
+
+#: ../../source/litesdk.rst:2649 25eca999617241349ed1cd5e3465003a
+msgid "\\"
+msgstr ""
+
+#: ../../source/litesdk.rst:2649 2deaaf880fa94613b3ae2827cc74842b
+msgid "参数错误(指定节点发送时，指定index错误)"
+msgstr ""
+
+#: ../../source/litesdk.rst:2650 e1c46a9c0f594dba8e372eec77e59a1b
+msgid "-9993"
+msgstr ""
+
+#: ../../source/litesdk.rst:2650 d0c5a3534bd14e5bb0e959b6a84d0d59
+msgid "文件下载失败"
+msgstr ""
+
+#: ../../source/litesdk.rst:2651 1ca35d1bf59b42729324b8e7123faeb2
+msgid "-9994"
+msgstr ""
+
+#: ../../source/litesdk.rst:2651 3f34253110a449c09c5e092ba51feec2
+msgid "FileMgrHttpProvider不支持的request类型请求"
+msgstr ""
+
+#: ../../source/litesdk.rst:2652 545a3efdd0c94b5da29572654fd034bc
+msgid "-9995"
+msgstr ""
+
+#: ../../source/litesdk.rst:2652 a2e984c388884162975499ea42594df3
+msgid "请求失败(通常是请求体过长)"
+msgstr ""
+
+#: ../../source/litesdk.rst:2653 8d616b91cf8d419ab934f75dee7f717f
+msgid "-9996"
+msgstr ""
+
+#: ../../source/litesdk.rst:2653 8cb204e57e6a4cf79893ed465ae0c294
+msgid "请求失败(通常是请求消息错误)"
+msgstr ""
+
+#: ../../source/litesdk.rst:2654 8db0ebf8d62e4e1e818fcb66e16cd68e
+msgid "-9997"
+msgstr ""
+
+#: ../../source/litesdk.rst:2654 e36d295541414959a78b4e325ffaaf38
+msgid "异步请求失败"
+msgstr ""
+
+#: ../../source/litesdk.rst:2655 3d4bd6d0493d4bb6b970379d19466f1e
+msgid "-9998"
+msgstr ""
+
+#: ../../source/litesdk.rst:2655 ef2548dc374741a9a908bc3be962cdfa
+msgid "请求超时(轮询结束未获得回执)"
+msgstr ""
+
+#: ../../source/litesdk.rst:2656 bff209afe78d4729bf5639433f0aa340
+msgid "-9999"
+msgstr ""
+
+#: ../../source/litesdk.rst:2656 2f303e53625e4c6fa6741b077a5b02a8
+msgid "获取平台响应失败"
+msgstr ""
+
+#: ../../source/litesdk.rst:2659 cbd7f84f53714ccfa3b4bc304a757ff9
+msgid "上述为平台api和sdk接口可能返回的状态码的说明，其中-999x的状态码为sdk对平台返回状态码或网络请求结果的封装，简化上层处理逻辑；其余状态码为平台api接口的原生返回结果。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2661 61af569e5a804166bac599675a5bf46f
+msgid "在通过LiteSDK调用查询接口时，例如查询交易Hash对应的交易回执或者通过区块号查询区块内容时，LiteSDK将不会对查询接口进行交易状态码的封装，返回原生状态码，查询结果即为平台返回结果；当发生网络断连问题导致查询接口无法获得Response时，将返回-999x状态码。"
+msgstr ""
+
+#: ../../source/litesdk.rst:2663 994aa6a9789c469c9d4977c172b616ce
+msgid "当通过LiteSDK发送交易时，由于平台执行交易为异步执行，通过先返回交易Hash，在通过交易Hash查询回执的方式，所以LiteSDK将发送交易和查询交易回执进行了拆分，一个完整的发送交易并获得回执过程如下："
+msgstr ""
+
+#: ../../source/litesdk.rst:2671 12046678d2da4a40afa8216c66fd1f0d
+msgid "通过调用\\ ``request.send()``\\ 将交易发送到链上，"
+msgstr ""
+
+#: ../../source/litesdk.rst:2673 776be010c0834fd197b26d4e17fa3a45
+msgid "返回状态码为0并获取交易Hash表示交易已成功上链"
+msgstr ""
+
+#: ../../source/litesdk.rst:2674 2a3f27cc2c494a53929e0e07c5f28239
+msgid "当出现-9995或者-9996时表示请求返送失败，交易未上链"
+msgstr ""
+
+#: ../../source/litesdk.rst:2675 b2d4f33085224a67abce82731b220026
+msgid "**当出现-9999时表示网络出现断连，此时无法确定是交易还未发送成功还是获取Response时出现错误，不明确错误原因**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2676 53dd585ad0e941feb217d202385b4d56
+msgid "其余情况均为平台返回交易上链失败错误，交易未上链"
+msgstr ""
+
+#: ../../source/litesdk.rst:2678 8af35ee561ed4b8e8b52e788558478e0
+msgid "通过调用\\ ``txHashResponse.polling()``\\ 可以 通过交易Hash获取交易回执："
+msgstr ""
+
+#: ../../source/litesdk.rst:2681 80a1ebf1b1e04efbbb989e49e1bb14b3
+msgid "返回状态码为0时表示查找回执成功，交易执行成功"
+msgstr ""
+
+#: ../../source/litesdk.rst:2682 4f74dc3d07f04af2addab5d331d5ec15
+msgid "**由于轮询查找回执时可能平台尚未完成交易执行(-32001)、平台达到流量限制(-32006)或网络抖动(-9996,-9999)等原因，轮询过程将持续到轮询次数结束，此时若任未获取到回执，将抛出-9998的错误，此时表示轮询查询回执不成功，可能平台尚未执行完该笔交易，不明确错误原因**"
+msgstr ""
+
+#: ../../source/litesdk.rst:2683 3962869849ce435ca750d91b7247b3c4
+msgid "其余情况下轮询获取到回执均表示查找回执成功，但交易执行失败，成为非法交易"
+msgstr ""
+

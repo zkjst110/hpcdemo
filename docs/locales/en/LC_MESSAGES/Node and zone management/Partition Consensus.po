@@ -1,0 +1,307 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Node Consensus.rst:4 and f776d4df7d574ef181c2bd832d4e91de
+#: management/Partition zone
+msgid "分区共识"
+msgstr ""
+
+#: ../../source/Node 301785ba6a954a58a9a2c344d44b3ed3 Consensus.rst:7 and
+#: management/Partition zone
+msgid "功能概述"
+msgstr ""
+
+#: ../../source/Node 64e05f30e6bc46209c3b70761554216c Consensus.rst:8 and
+#: management/Partition zone
+msgid "多分区架构如下图所示，使用时需遵循以下规则："
+msgstr ""
+
+#: ../../source/Node Consensus.rst:10 and df6eeaf17a3a46e69ed9b1f870eeabbc
+#: management/Partition zone
+msgid "所有节点都必须在 **global** 这个namespace下；"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:11 a3c1805baf074c23b64f1c76ca3811e9 and
+#: management/Partition zone
+msgid "任意四个及以上节点可以组成一个新的namespace；"
+msgstr ""
+
+#: ../../source/Node 5fbd4de82a264363a3a66a0ef4ef5707 Consensus.rst:12 and
+#: management/Partition zone
+msgid "在多namespace运行的情况下，某一个ns的宕机不影响其他ns运行；"
+msgstr ""
+
+#: ../../source/Node 8e0979232ddd47a7b7824d1c5ea393d6 Consensus.rst:13 and
+#: management/Partition zone
+msgid "但是如果global宕机，所有ns将一起停止。"
+msgstr ""
+
+#: ../../source/Node 60f075c5d79f419f904c5630fb22e828 Consensus.rst:15 and
+#: management/Partition zone
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:184 and d73a465983f24168844045b82849e500
+#: management/Partition zone
+msgid "image0"
+msgstr ""
+
+#: ../../source/Node 09598ce5f47847c7934acc093d1c405b Consensus.rst:19 and
+#: management/Partition zone
+msgid "使用说明"
+msgstr ""
+
+#: ../../source/Node 0b7eebc7272b4d089946dadd70cb6784 Consensus.rst:20 and
+#: management/Partition zone
+msgid "多分区的使用可以在节点启动时配置，也可以在启动后通过IPC命令进行动态增删。"
+msgstr ""
+
+#: ../../source/Node 84fd8dee91f24b008b7e1df362212d17 Consensus.rst:23 and
+#: management/Partition zone
+msgid "节点启动配置"
+msgstr ""
+
+#: ../../source/Node 6b1c2537ec9844f5b026ec907fb5f7db Consensus.rst:24 and
+#: management/Partition zone
+msgid ""
+"节点在启动前可以配置多个分区。其中，global分区是必须存在的，且必须连接网络中的所有节点。在系统资源充足的情况下，其他分区的个数不做限制。每一个分区下的"
+" ``ns_dynamic.toml`` 文件需要配置该分区下连接的节点。"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:40 and e31db9250bc94207baed851ff2eb3f6d
+#: management/Partition zone
+msgid "此外，节点的 ``configuration/dynamic.toml`` 中需要加入其他分区"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:58 and d44cf00e27fc4423aee526f05163d696
+#: management/Partition zone
+msgid "start字段表示节点启动时是否启动该分区。如需全部启动，则将start均设置为true。"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:62 and d7e2512f5456469cb062fb51d57b9ac1
+#: management/Partition zone
+msgid "节点动态增删分区"
+msgstr ""
+
+#: ../../source/Node 78eb9ab9e3cb48a2bf655fd3626d8d6d Consensus.rst:63 and
+#: management/Partition zone
+msgid "节点在启动后，可以通过ipc命令增删分区。"
+msgstr ""
+
+#: ../../source/Node 138ec004a628424e8c5fbf03e6f061f8 Consensus.rst:65 and
+#: management/Partition zone
+msgid "namespace有4个子命令，分别用于 **启动（start）、停止（stop）、删除（destroy）、列举（list）namespace**。"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:67 acced6899b234b188961b1e649da0058 and
+#: management/Partition zone
+msgid "namespace相关的ipc命令时针对节点级别的，启停namespace只影响该节点中的ns列表，而不会影响全局的ns列表。如果要在已有分区中增删节点，需要使用配置交易增删节点功能。"
+msgstr ""
+
+#: ../../source/Node 2c6aee8e9b654404a904938da16fdbdd Consensus.rst:69 and
+#: management/Partition zone
+msgid "**namespace start**"
+msgstr ""
+
+#: ../../source/Node 1fe05680484f4a67a03a6e83aedf71fa Consensus.rst:71 and
+#: management/Partition zone
+msgid "**命令** ： namespace start <namespace name>"
+msgstr ""
+
+#: ../../source/Node 111d2ad1ddfb4586b66676af0d097cfa Consensus.rst:73 and
+#: management/Partition zone
+msgid "启动一个namespace。启动的namespace需要保证还未在线上运行，且配置文件准备正确。"
+msgstr ""
+
+#: ../../source/Node 0d6e96ae0c0a48a38ccbce996a6447d2
+#: 2573b7b9615d4980b0942711650f374f 4ccc9c71272641dca41a46630c508f5d
+#: 53f60092049c46aea9b70eaad563d611 Consensus.rst:75 Consensus.rst:91
+#: Consensus.rst:104 Consensus.rst:117 and management/Partition zone
+msgid "例子::"
+msgstr ""
+
+#: ../../source/Node 031f0c52aad34cc99c1c4aee6d41d141 Consensus.rst:85 and
+#: management/Partition zone
+msgid "**namespace stop**"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:87 and f09603bc0b474bc5bbb5c8c2bc04b977
+#: management/Partition zone
+msgid "**命令**：namespace stop <namespace name>"
+msgstr ""
+
+#: ../../source/Node 6097be60bdd6400abec4ff6913473242 Consensus.rst:89 and
+#: management/Partition zone
+msgid "停止一个正在运行的namespace。"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:98 and dadd92c3734e4b6592aeb993f7ce021e
+#: management/Partition zone
+msgid "**namespace destroy**"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:100 a983b842cb78423e898c899c98dfe974 and
+#: management/Partition zone
+msgid "**命令**：namespace destroy <namespace name>"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:102 and ed51ed515d3a4ee48c5b6583fbbd7ec6
+#: management/Partition zone
+msgid "删除一个namespace下的所有数据。"
+msgstr ""
+
+#: ../../source/Node 8cf88781c3af475a910fafb3027d19c7 Consensus.rst:111 and
+#: management/Partition zone
+msgid "**namespace list**"
+msgstr ""
+
+#: ../../source/Node 7024373e3b424b5da9f0eb981a84424d Consensus.rst:113 and
+#: management/Partition zone
+msgid "**命令**：namespace list"
+msgstr ""
+
+#: ../../source/Node 6a09ab1a26c34303b50acb10b478ba2c Consensus.rst:115 and
+#: management/Partition zone
+msgid "列举目前正在运行的namespace。"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:124 and c5b77d9272e1413abc9e59897f0fe89e
+#: management/Partition zone
+msgid "使用示例"
+msgstr ""
+
+#: ../../source/Node 7a36dfb726df467794d0e02f042a4697 Consensus.rst:126 and
+#: management/Partition zone
+msgid "**1. 节点运行过程中，某节点加入一个分区**"
+msgstr ""
+
+#: ../../source/Node 1941737e37e746898a4c18185e27357a Consensus.rst:128 and
+#: management/Partition zone
+msgid ""
+"该节点在configuration目录下建立一个该分区名对应的文件夹，放入配置好的ns_dynamic.toml和ns_static文件，使用ipc命令namespace"
+" start <namespace name>即可。"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:130 and de456924734c49a7a075e6723547f6e0
+#: management/Partition zone
+msgid "**2. 节点运行过程中，某节点停止运行一个分区**"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:132 and c74480fdc59c4ee3affcb02710443942
+#: management/Partition zone
+msgid "该节点使用ipc命令namespace stop <namespace name>即可。"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:136 and f5be1e7e3477406eb6c6db068737cefe
+#: management/Partition zone
+msgid "操作实例"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:139 and e16d768ccc4942ca8f951a760358c99e
+#: management/Partition zone
+msgid "场景说明"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:140 and c37eb5cddac941c5b59e50e18702732c
+#: management/Partition zone
+msgid "以要建立如图所示的一个分区架构为例，初始有global和ns1分区，运行一段时间后添加ns2分区。"
+msgstr ""
+
+#: ../../source/Node 5e66f7b08db54b6db723c621c3d953a4 Consensus.rst:142 and
+#: management/Partition zone
+msgid "|image2|"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:185 and e97c80a7da4f45baac476f6ed5a626a8
+#: management/Partition zone
+msgid "image2"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:145 and c9089d50e5d94f8481057c003165946c
+#: management/Partition zone
+msgid "节点启动"
+msgstr ""
+
+#: ../../source/Node 5b1b893e7b054c619263308af46b5729 Consensus.rst:146 and
+#: management/Partition zone
+msgid "启动时node1、2、4、5配置global和ns1两个分区，node3、6仅配置global分区启动。"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:149 and cead98542cef452e82827bb9073d365b
+#: management/Partition zone
+msgid "增加分区"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:150 and c9c438e6a98c4be585257044c97e49c2
+#: management/Partition zone
+msgid ""
+"node2、3、5、6在configuration文件夹下建立ns2文件夹，里面写入配置文件，通过ipc命令namespace start "
+"ns2新增分区ns2。"
+msgstr ""
+
+#: ../../source/Node 1903345ef5484c33873bb12da29b6e0d Consensus.rst:153 and
+#: management/Partition zone
+msgid "分区新增节点"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:154 and c340b1d1ea604229b4e7be7a65611e45
+#: management/Partition zone
+msgid ""
+"如ns2分区增加4号节点。首先通过配置交易在ns2分区中申请加入node4。然后node4在configuration文件夹下建立ns2文件夹，里面写入配置文件，通过ipc命令namespace"
+" start ns2启动分区ns2。"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:158 and d3fc98aa5c1143b998da344ef15acf09
+#: management/Partition zone
+msgid "接口参数说明"
+msgstr ""
+
+#: ../../source/Node 2bcee2c776e34d9393e6e47c913f4919 Consensus.rst:159 and
+#: management/Partition zone
+msgid "向节点发送交易的接口参数中有namespace字段，默认为global，若需要向其他分区发送请求，该字段填入分区名即可。例如::"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:177 and bfdafc8ed7e14e6e949ffcab9528cec1
+#: management/Partition zone
+msgid "注意事项"
+msgstr ""
+
+#: ../../source/Node 9df68e9c10da42689488703b5622ac4d Consensus.rst:179 and
+#: management/Partition zone
+msgid "节点的ipc命令只能控制节点自身的分区启停，并不能完成增删节点操作，增删节点需要通过配置交易完成。"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:180 and fb12b6761d464e17aa770443c126b069
+#: management/Partition zone
+msgid "当使用ipc命令退出global分区后，整个节点将退出。"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:181 and f2d8d547dba5405c8217dbb1e1484dc9
+#: management/Partition zone
+msgid "分区退出后，dynamic.toml配置中分区的start值将改为false，若节点重启时需要启动该分区，请调整配置文件。"
+msgstr ""
+
+#: ../../source/Node Consensus.rst:182 and c4ab4cc2e3b3416daaea3578a6741dd6
+#: management/Partition zone
+msgid "分区间彼此独立，但共享系统资源，若业务要求多分区架构，需要保证有更高的机器配置，可以考虑将节点各分区的数据挂载在不同磁盘下。"
+msgstr ""
+

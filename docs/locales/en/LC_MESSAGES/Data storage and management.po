@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Data 0392cceda09545ee87afe0a85705660b and management.rst:2
+#: storage
+msgid "数据存储使用手册"
+msgstr ""
+
+#: ../../source/Data and bec72aeb482d4171b79fed16ca31fb6b management.rst:5
+#: storage
+msgid "可信文件共享"
+msgstr ""
+
+#: ../../source/Data 6d87697fc2db437f8fb1bf950d72c93c and management.rst:7
+#: storage
+msgid ":ref:`可信文件共享使用手册 <Trusted-File-Sharing>`"
+msgstr ""
+
+#: ../../source/Data 7f84a11c086b4ab7a2fe8f227e51c2f1 and management.rst:10
+#: storage
+msgid "数据索引"
+msgstr ""
+
+#: ../../source/Data and df15a061224c411396ebdb2fe04e7578 management.rst:12
+#: storage
+msgid ":ref:`数据索引使用手册 <Data-Index>`"
+msgstr ""
+
+#: ../../source/Data a4603f107a5045069591c07650739e22 and management.rst:15
+#: storage
+msgid "数据归档"
+msgstr ""
+
+#: ../../source/Data and bccedae34e89467bb7be3e9428bdc5e1 management.rst:17
+#: storage
+msgid ":ref:`数据归档使用手册 <Data-Archiving>`"
+msgstr ""
+
+#: ../../source/Data and d084c57799e247139e4ec4697ee675fb management.rst:20
+#: storage
+msgid "账本加密"
+msgstr ""
+
+#: ../../source/Data 8f18c9a58ae24ea19fad2b9f02fdc6b6 and management.rst:22
+#: storage
+msgid ":ref:`账本加密使用手册 <Zhang-to-encrypt>`"
+msgstr ""
+

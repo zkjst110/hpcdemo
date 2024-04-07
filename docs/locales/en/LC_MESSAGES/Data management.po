@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Data a63624884d234e8f8c7c40dd451f5254 management.rst:2
+msgid "数据管理"
+msgstr ""
+
+#: ../../source/Data 4210c9f553cd46368682b4ecce743e99 management.rst:5
+msgid "数据归档"
+msgstr ""
+
+#: ../../source/Data 7df02d9de5fd4867aa3c60eeb35f9593 management.rst:7
+msgid "随着区块链运行时间的增长，区块链系统存储的数据容量将高速增长，且数据的增长的速度甚至会超过存储介质容量增长的速度，从而限制区块链技术的发展。为此，平台实现了区块链数据归档，在不停机的情况下，将一部分线上数据迁移到线下存储。以此解决在有限存储空间下区块链数据的存储问题。平台也提供归档数据浏览器，支持用户查阅归档数据。平台也实现了归档数据恢复的功能，在不影响链上正常工作的情况下，支持运维人员将线下存储的数据恢复至线上。"
+msgstr ""
+
+#: ../../source/Data 586571dd328c4bed99c2021f12c8aa53 management.rst:9
+msgid "数据归档针对的主体是区块数据，同时包括区块对应的日志数据、索引数据、交易回执数据。平台支持用户自定义归档范围，用户可以直接指定一个已经被提交的区块号作为参数，创世区块到入参区块的数据将被归档至线下。另外，考虑到直接归档的流程较为耗时，直接归档的请求返回和归档流程将异步进行，用户可通过查询归档结果的接口查询归档是否成功。数据归档功能支持各节点自主定义归档范围，节点间无需同步归档。数据归档对区块链的变化如下图所示:"
+msgstr ""
+
+#: ../../source/Data a593d7aae5634d258f522ae4ab833f2d management.rst:11
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/Data 55640fdc84d5456bb989dc689cdf2e1c management.rst:99
+msgid "image0"
+msgstr ""
+
+#: ../../source/Data bef79004a1d24d5aa81151ade89c5368 management.rst:14
+msgid "数据索引"
+msgstr ""
+
+#: ../../source/Data 6922b52367834d2ab8ff418821b04e06 management.rst:16
+msgid "数据查询是区块链应用中最普遍的场景，但由于区块链独特的账本结构，一直以来都缺少一种高效安全的查询手段。"
+msgstr ""
+
+#: ../../source/Data 53e0f280aaef44bfb2101aec8696c1ea management.rst:18
+msgid ""
+"区块链底层的账本数据以Key-Value键值对模型进行存储，目前只能提供基于key "
+"的精确检索，而在实际应用场景存在更广泛的基于value（业务数据）的检索需求。比如在商品溯源场景中，我们可能要通过商品ID来检索出该商品在整个流通过程中的交易，受限于区块链底层数据的存储特点，只能通过遍历区块的方式来检索，效率十分低下。为了提高检索效率，目前有两种解决思路，一种是将商品ID到交易哈希的映射关系存储在外部数据库当中，但数据安全难以得到有效保障；另一种是将映射关系存储在智能合约中，但随着数据量增大，合约会遇到性能瓶颈，检索效率依然难以得到提升。"
+msgstr ""
+
+#: ../../source/Data f4cbc455d0c6468ba4492c4fa28903b1 management.rst:20
+msgid "为了解决上述问题，平台依托底层索引数据库，从区块中提取关键信息存储到索引数据库中，实现高效安全的业务数据自定义条件检索功能，极大简化了上层业务系统开发和维护复杂度。平台采用内嵌式索引数据库，保证检索结果可信的同时，极大提升了业务数据的检索效率，检索速度达毫秒级。为了更加贴合实际使用场景，平台支持自定义多条业务索引信息，满足更加精准的检索需求，同时支持精准、匹配（模糊）、多条件查询等多种检索模式，并支持大数据量分页查询，避免出现查询接口OOM问题。"
+msgstr ""
+
+#: ../../source/Data 1673abfd654144038118656348ad629a management.rst:22
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/Data 6ccab4151686403bb46ac2245b0fbfa3 management.rst:100
+msgid "image1"
+msgstr ""
+
+#: ../../source/Data a4844ddd2266437cb9c60771f5c703ad management.rst:24
+msgid "数据索引的应用十分广泛，特别是在查询频繁的存证类场景中。以茶品溯源场景为例，当茶品溯源平台将茶品采摘、加工、质检、物流、销售流程中的相关信息以交易的形式上链存证时，用户可在交易的ExtraID字段中输入茶品批次、类型、原产地、经销地点等自定义索引信息，这些索引信息将存储在底层专用索引数据库当中。随后，用户可调用相应接口，通过精确检索模式查询某一批次编号的产品全流程交易信息，或通过多条件检索模式查询云南产普洱茶的交易信息。"
+msgstr ""
+
+#: ../../source/Data 3ca7d079e1164acfa912bdd6486d3540 management.rst:27
+msgid "文件保险箱"
+msgstr ""
+
+#: ../../source/Data 060d578422ee452c91883f89d0ac0785 management.rst:29
+msgid "中心化的文件存储与共享存在易篡改、低可信、单点故障等问题，而区块链因其可信任、安全不可篡改、冗余备份、多方协作等特性在文件可信存储与共享方面具有天然的优势，但目前区块链对于商业化文件存储与共享存在成本高、容量小、性能差、结构单一等问题，具体表现在："
+msgstr ""
+
+#: ../../source/Data edc82535405441efb1ee9c58ee3a4a25 management.rst:31
+msgid ""
+"**文件容量大导致系统性能下降** "
+"。目前的区块链技术架构，大容量的文本、文件由每个节点全量直接链上存储不仅需要消耗大量的存储资源，还会严重影响平台性能，无法满足商业场景的需求。"
+msgstr ""
+
+#: ../../source/Data 3da99f78c6984eceb95152533d4742f0 management.rst:33
+msgid "**链上存储结构单一** 。区块链的存储结构对结构化文件友好，但不适于图片、音视频等非结构化文件的直接存储，无法适应涉及大量非结构化文件的应用场景。"
+msgstr ""
+
+#: ../../source/Data 8db52d41e7a7469eb7fc3e53f79ec1bb management.rst:35
+msgid "为此，平台通过自研文件保险箱功能，通过链上存证、链下传输的文件分离存储模型，实现了文件可信存储、安全共享与高效查询。在保证平台性能和稳定性不受影响的情况下，能支持GB级别图片、音视频等非结构化文件的可信存储，并通过区块链网络定向流传输共享。向用户提供节点白名单和用户白名单，支持用户多维度自定义授权存储节点与用户下载权限，允许用户按需查询、下载文件，有效降低链上非结构性文件存储与共享的成本并增强可用性、可控性。可信文件共享由一方上传文件，多方同步文件索引信息、定向共享文件，功能示意图如下所示："
+msgstr ""
+
+#: ../../source/Data c6dec852a8df4134afe75fb825a01696 management.rst:37
+msgid "|image2|"
+msgstr ""
+
+#: ../../source/Data 23f0b159741345eaa832408624e23cd1 management.rst:101
+msgid "image2"
+msgstr ""
+
+#: ../../source/Data aeeb0c343c764a059bb038fa1cae5b0a management.rst:39
+msgid "为保障文件的安全存储和可信共享，文件保险箱功能架构图如下："
+msgstr ""
+
+#: ../../source/Data 444384a3d741461188f89e5022854830 management.rst:43
+msgid "**传输路径** ：文件将由客户端上传至节点存储。任意节点间的文件传输都是通过P2P网络完成的，没有“中间商”能窃取文件。"
+msgstr ""
+
+#: ../../source/Data e1434a0b7c67452aa5d5b00bf0602e9c management.rst:44
+msgid ""
+"**落盘加密** "
+"：在节点中独立设立文件空间（或对接文件系统），将节点收到的文件落盘至文件空间中存储，落盘时对文件进行加密处理，保障文件明文无法不通过区块链获取。"
+msgstr ""
+
+#: ../../source/Data 58c3940dffd64290a5b1a02d922b96f8 management.rst:45
+msgid "**存储权限** ：节点和节点间共享文件时，对请求文件的节点进行权限查验，节点的权限将记录在区块链上，保障权限设置全局统一。"
+msgstr ""
+
+#: ../../source/Data 05d87e0f68df46f2abf03221c59a5770 management.rst:46
+msgid "**下载权限** ：节点向用户提供文件下载时，对请求文件的用户进行权限查验，用户的权限将记录在区块链上，保障权限设置全局统一。"
+msgstr ""
+
+#: ../../source/Data 36fe37cbb682452aab79f901da3c67e7 management.rst:47
+msgid ""
+"**文件校验** "
+"：文件的传输可分为三个环节，文件上传、文件节点间传输、用户下载文件。其中文件上传后，区块链账本中将记录不可篡改的文件数字指纹。在任意环节的文件传输，节点都将自动的对所传输的文件与账本中的文件指纹进行比对校验。"
+msgstr ""
+
+#: ../../source/Data 34dbd504462f4b238be567b11ebd5e70 management.rst:50
+msgid "预言机"
+msgstr ""
+
+#: ../../source/Data d16690941ed4436496588ad65e24887e management.rst:52
+msgid "在中国人民银行发布的《区块链能做什么？不能做什么？》的报告中，预言机定义如下：区块链外信息写入区块链内的机制，一般被成为预言机。预言机解决的是链外数据不可信、不确定而导致不可用的问题，由于区块链对于用户来说是一个黑盒，只了解输入和输出但不知晓内部的细节，系统内部为了满一致性要求，需保持合约运行结果的一致性和确定性，但如Web天气服务、航班动态信息、随机数等都是变化的数据，区块链想使用这些动态变化的数据就需要预言机。预言机作为区块链和外部世界的桥梁，通过可信计算技术以及建立信任的约束机制，让区块链系统打破了封闭，使区块链主动获取外部数据成为现实。"
+msgstr ""
+
+#: ../../source/Data 6ae5935119fe45cc9161a68e4e45ccfd management.rst:54
+msgid "预言机使用过程中首先需要事先部署oracle合约，负责与预言机服务交互，用户编写自己的用户合约去调用oracle合约对外部预言机合约请求数据，预言机服务向外部请求数据再将数据返回给oracle合约，最终返回给用户合约触发合约执行逻辑（详见下图预言机示例）。"
+msgstr ""
+
+#: ../../source/Data 541e7dded7c9430dab2019aae40c1527 management.rst:56
+msgid "|image3|"
+msgstr ""
+
+#: ../../source/Data 3464052ee5234c2fa4224d18c7876623 management.rst:102
+msgid "image3"
+msgstr ""
+
+#: ../../source/Data bde6664c32f04f578577409482c66894 management.rst:58
+msgid "对于数据源获取：Oracle预言机可以从外部引入世界状态的信息，包括网站数据、传感器采集数据、随机数、跨链数据等实时、动态、可变的数据；"
+msgstr ""
+
+#: ../../source/Data 23bfcb599b10430e8f903c283e9b05f3 management.rst:60
+msgid "对于预言机服务：平台支持硬件TEE可信以及软件可信“双可信”预言机服务，保证预言机服务在数据处理，数据传输过程中的真实可信；"
+msgstr ""
+
+#: ../../source/Data 7e3bfc47072d4891ba94c86cf42bb0bc management.rst:62
+msgid "对于数据安全：支持HTTPS、TLS等安全传输协议，保证数据传输过程中防篡改且真实性可查验。"
+msgstr ""
+
+#: ../../source/Data be150a7cf70c4f058eb54452476af04d management.rst:65
+msgid "链上SQL"
+msgstr ""
+
+#: ../../source/Data 8fcf716a71ee4969b2125a8f7586a400 management.rst:67
+msgid "针对区块链数据操作方式与联盟链业务人员使用习惯不符的问题，为提升平台的易用性、降低用户对使用区块链的学习成本，平台自研链上SQL执行引擎，支持业务人员使用熟悉的SQL语句进行数据操作。链上SQL为链原生的SQL语句执行引擎，支持使用符合MySQL语法规则的SQL语句进行链上数据的增删改查。"
+msgstr ""
+
+#: ../../source/Data 3323c309fcc94f28ae81e065f2141229 management.rst:71
+msgid "链上SQL具有以下功能特性："
+msgstr ""
+
+#: ../../source/Data ae30973fcf734c7aa1bd5362d86f2503 management.rst:73
+msgid "**应用快速链改**"
+msgstr ""
+
+#: ../../source/Data 2dde07976cc8467c8c896de4c6f4eff8 management.rst:75
+msgid "提供支持标准JDBC协议的区块链专用JDBC驱动，支持通过变更驱动，快速完成业务应用系统的链改。"
+msgstr ""
+
+#: ../../source/Data b5ea30a17d484f54b399afdfff0fc7c4 management.rst:76
+msgid "提供数据迁移工具，帮助用户将存储在传统关系型/非关系型数据库的数据迁移至区块链中，快速完成数据链改。"
+msgstr ""
+
+#: ../../source/Data 2e6728b0be984289a5b5574428c5f5cc management.rst:78
+msgid "**简单、易用、可信**"
+msgstr ""
+
+#: ../../source/Data 0b578c78fa3547ca9b7f0551dfdcea01 management.rst:80
+msgid "支持符合MySQL语法规则的SQL语句，满足数据操作需求。"
+msgstr ""
+
+#: ../../source/Data 11290b5b7b3f4f7db0f8f25ae4385ccd management.rst:81
+msgid "SQL语句链上执行，保障分布式数据操作一致性。"
+msgstr ""
+
+#: ../../source/Data cd41bb7a5420433db5c44c51426eca9e management.rst:84
+msgid "分区共识"
+msgstr ""
+
+#: ../../source/Data 0a2913841f104fcfa41e1c75dc41a033 management.rst:86
+msgid "区块链冗余存储的特性决定了区块链网络中的每个节点都需要存储一份全量账本数据，而在商业应用中，存在敏感数据只能在有限节点间进行共享，或者不同业务间数据需要相互隔离的需求。"
+msgstr ""
+
+#: ../../source/Data 8c430c07ee884ba495d3f2efb23ad202 management.rst:88
+msgid "为此，平台设计了分区共识（Namespace）机制，不同分区间的交易共识、执行、存储完全解耦，不仅实现了交易数据对其他分区不可见，同时，由于交易并行执行，分区性能也不会随分区数量增加而显著下降。平台支持分区及分区成员的动态管理，允许用户在不停机的情况下，进行分区以及分区节点的增删，快速适应业务需求变化。"
+msgstr ""
+
+#: ../../source/Data ffca7c81476c4c10b8205c8d46fc0156 management.rst:90
+msgid "通过分区共识机制，需要进行隔离的数据可以仅在指定分区内进行共享和存储。原本通过建不同的链实现数据隔离的模式，需要在每次建链时重新部署节点，十分繁琐，而现在的分区隔离模式只需单次部署节点，便可按照实际需求选择加入一个或多个分区，在实现数据隔离的同时有效降低了部署及运维复杂度。"
+msgstr ""
+
+#: ../../source/Data bd0aee663e014397b500cd3884f093ab management.rst:92
+msgid "|image4|"
+msgstr ""
+
+#: ../../source/Data d3f101348b6542ad9bad02d8d6c58e18 management.rst:103
+msgid "image4"
+msgstr ""
+
+#: ../../source/Data 5070cb3507bd45529519c534609ffb50 management.rst:94
+msgid "图中描述了分区共识在政务数据治理场景中的应用。区块链政务数据治理平台的数据协作链承载了民生服务、企业服务等业务，不同业务数据间存在隔离需求。建链时，各委办局部署各自节点，并通过配置确立初始分区及成员节点。随着试点范围的扩大，牵头部门可在民生服务和企业服务分区的基础上，通过IPC命令动态新增政务服务分区，并通过发送交易动态新增其他市/区委办局节点，逐步完善整个政务数据治理平台的搭建。"
+msgstr ""
+

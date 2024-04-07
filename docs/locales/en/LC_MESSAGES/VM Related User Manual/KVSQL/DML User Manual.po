@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/VM 079627ef9da544a2bba02b8012f45651 Manual.rst:4
+#: Manual/KVSQL/DML Related User
+msgid "DML语句使用手册"
+msgstr ""
+
+#: ../../source/VM 816b8892eb504505ae6651b86d56f2c3 Manual.rst:7
+#: Manual/KVSQL/DML Related User
+msgid "INSERT"
+msgstr ""
+
+#: ../../source/VM 86f8aadaaee94fa797e2d211c8bbb8da Manual.rst:73
+#: Manual/KVSQL/DML Related User
+msgid "UPDATE"
+msgstr ""
+
+#: ../../source/VM 9be621a65c4547579ccaf294f4f747ee Manual.rst:211
+#: Manual/KVSQL/DML Related User
+msgid "DELETE"
+msgstr ""
+

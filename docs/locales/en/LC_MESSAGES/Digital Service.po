@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Digital 36a6802084934ebebbccc81dc767aa2d Service.rst:2
+msgid "数字服务"
+msgstr ""
+
+#: ../../source/Digital 1021fe7d55214d4891f92f6a71e391e6 Service.rst:5
+msgid "数字藏品"
+msgstr ""
+
+#: ../../source/Digital Service.rst:7 fb3092b422ab4ab8b14ae0ca655df68c
+msgid "数字藏品（NFT）定义了一种生态中不可分割的、具有唯一性的代币交互和流通的接口规范，是用于表示数字藏品的唯一加密货币令牌。数字藏品由于其非同质化、不可拆分的特性，使得它可以锚定现实世界中商品的概念，例如通证化的门票、一瓶珍贵的红酒、独特设计的珠宝等等。数字藏品可将任意有价值的事物通证化，并追溯该信息的所有权，实现信息与价值的交汇。"
+msgstr ""
+
+#: ../../source/Digital 5d26ac60de704df68871946f7500fc5e Service.rst:9
+msgid "平台设计了链原生支持数字藏品账户，解决一个合约账户存储全量数据的问题，实现藏品全平台唯一性，增加互操作性。在通用链的基础上，将数字藏品定义为区块链账户，在智能合约中发布的数字藏品可直接映射到底层区块链账户中，基于这一系列操作完成对数字藏品的全生命流程功能支持。数字藏品链功能通用，可构建多使用场景的数字藏品应用，满足业务使用场景功能和非功能需求。"
+msgstr ""
+
+#: ../../source/Digital 933c53ed470b4b028bdd3b399f482783 Service.rst:11
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/Digital 1647fd28139a477881cfaaccfb46d19d Service.rst:22
+msgid "image0"
+msgstr ""
+
+#: ../../source/Digital 7b1c6cfb3aee4b06aadb59612935105c Service.rst:13
+msgid "链原生数字藏品架构具有以下功能特性："
+msgstr ""
+
+#: ../../source/Digital 1e3096a2b33348fa983a1d8f0d437090 Service.rst:15
+msgid "支持ERC-721、ERC-1155、ERC-998，性能更高；"
+msgstr ""
+
+#: ../../source/Digital Service.rst:16 b3cd70063611440599308d8915219960
+msgid "支持创世数字藏品、创世账户、创世合约的发布；"
+msgstr ""
+
+#: ../../source/Digital Service.rst:17 ec67728e94234089933fb28f855498d6
+msgid "基于索引数据库灵活支持对特定用户、特定藏品、特定操作的数字藏品交易链路溯源；"
+msgstr ""
+
+#: ../../source/Digital 8a5881324a86493eb59289e7e063b030 Service.rst:18
+msgid "基于大文件功能，原生管理藏品源文件，支持上传、下载、更新等操作及相关权限管理；"
+msgstr ""
+
+#: ../../source/Digital 3e367d36c76849c58c9b650f27681479 Service.rst:19
+msgid "联盟链交易费用稳定，可监管性强。"
+msgstr ""
+

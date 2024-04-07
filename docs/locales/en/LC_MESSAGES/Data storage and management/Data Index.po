@@ -1,0 +1,541 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Data 8aa328c544dc4e478761e854de385b5d Index.rst:4 and
+#: management/Data storage
+msgid "数据索引"
+msgstr ""
+
+#: ../../source/Data 9fcd51efb9064a459ac1e05861c9709e Index.rst:7 and
+#: management/Data storage
+msgid "功能概述"
+msgstr ""
+
+#: ../../source/Data 73e65521397348c08a593b9d2c8ce836 Index.rst:9 and
+#: management/Data storage
+msgid "索引数据库设计目的是提高部分现有接口查询效率以及提供交易数据索引的功能。"
+msgstr ""
+
+#: ../../source/Data 9f2583aa1ee34d0098c406ceb85e05cf Index.rst:11 and
+#: management/Data storage
+msgid "客户端可以向开启索引数据库的节点发起查询请求，过滤出交易from、交易to、交易extraId、区块写入时间戳范围为指定值的符合条件的交易。交易extraId与交易extra类似，用户可自定义与业务相关的数据，区别在于："
+msgstr ""
+
+#: ../../source/Data Index.rst:13 and b2216585c46849fa8f6f9b8d6c37e5f3
+#: management/Data storage
+msgid "extra 类型是string，而 extraId 类型是数组，数组元素可以为int64类型或者string类型，每个数组元素都可作为交易的索引；"
+msgstr ""
+
+#: ../../source/Data 4138346ad17d40f2b8c710830a29ee15 Index.rst:14 and
+#: management/Data storage
+msgid ""
+"extra 为实际完整业务数据内容，可能为一个JSON字符串；而 extraId "
+"为实际用于业务内容索引的字段，它可以与extra内容存在业务关联也可以无关联，完全取决于客户端的设计。对于节点来说，节点不关心这两个字段存储的实质内容，但是可以通过"
+" extraId 的值快速定位到与其相关的交易有哪些。"
+msgstr ""
+
+#: ../../source/Data 46a5b2be71c143989679df3e6b5f09cf Index.rst:16 and
+#: management/Data storage
+msgid "目前支持的数据索引功能常用应用场景包括："
+msgstr ""
+
+#: ../../source/Data Index.rst:18 and f3be1abb4ffa4e9683602f1bff47d5cc
+#: management/Data storage
+msgid ""
+"**存证类** ：对存证场景中的图片、视频、PDF等大文件数据，将文件哈希存储在 extraId "
+"中，建立文件哈希到交易哈希的映射，可快速通过文件哈希检索到文件的存证交易信息，并在必要时返回原文件。"
+msgstr ""
+
+#: ../../source/Data Index.rst:19 and b97dd04424444caaafa3b304278ebc46
+#: management/Data storage
+msgid ""
+"**溯源类** "
+"：每个商品拥有唯一ID，将商品ID存储在extraId中，可通过商品ID快速检索到该商品生产、物流、分销等流通过程中的所有交易信息，实现全品类、全流程的商品质量溯源。"
+msgstr ""
+
+#: ../../source/Data 32f3865733194757b2dda2fa504549e1 Index.rst:20 and
+#: management/Data storage
+msgid ""
+"**查询过滤** "
+"：可通过数据索引中的过滤功能，快速查询交易相关信息，如查询某个交易发送方或者交易接收方地址下的所有交易等，借此开展精确高效的交易查询。"
+msgstr ""
+
+#: ../../source/Data 81a3d7bc5ac04cdda8ea0063b9d7e177 Index.rst:23 and
+#: management/Data storage
+msgid "**术语说明**"
+msgstr ""
+
+#: ../../source/Data 9b9e4aef00fd4ede8af95616c782317c Index.rst:29 and
+#: management/Data storage
+msgid "术语名称"
+msgstr ""
+
+#: ../../source/Data Index.rst:30 and c57fde2fb6f646f0a402abd777cbb5ed
+#: management/Data storage
+msgid "解释说明"
+msgstr ""
+
+#: ../../source/Data 14cd533b0cf14258984d05e5ab10ee3d Index.rst:31 and
+#: management/Data storage
+msgid "一层索引"
+msgstr ""
+
+#: ../../source/Data 10ce87179c8647a89d9a35e9992188c4 Index.rst:32 and
+#: management/Data storage
+msgid "从块链数据里提取出来的关键信息，作为交易索引数据，这些数据称作一层索引，被存储在索引数据库中。"
+msgstr ""
+
+#: ../../source/Data 0c563d5a544246fbada7f2a20767e00a Index.rst:33 and
+#: management/Data storage
+msgid "二层索引"
+msgstr ""
+
+#: ../../source/Data 844471fb1a1343deb195cb22e51170c4 Index.rst:34 and
+#: management/Data storage
+msgid "为了进一步提高交易查询效率，在一层索引数据的基础上创建的数据库索引，也即索引数据库索引。"
+msgstr ""
+
+#: ../../source/Data 44acbf765e8c4586870714ce11a76523 Index.rst:38 and
+#: management/Data storage
+msgid "安装及初始化"
+msgstr ""
+
+#: ../../source/Data 5ffb91cdcad44d538b30af015c713554 Index.rst:40 and
+#: management/Data storage
+msgid ""
+"数据索引功能是 **可选的** （默认不开启），即可以通过节点开关配置来决定节点是否启用索引数据库功能，相关配置位于 "
+"``configuration/global/ns_static.toml`` 中。"
+msgstr ""
+
+#: ../../source/Data 7619f9adba8f42279be9ae0fddbc4b2f Index.rst:42 and
+#: management/Data storage
+msgid "平台默认不开启数据索引功能， **如果您想启用该功能，请将下述配置复制到 ns_static.toml 中，并做好相应配置**。"
+msgstr ""
+
+#: ../../source/Data 016588940c4d4e039feb09acbb640c5f Index.rst:44 and
+#: management/Data storage
+msgid "``database.indexdb.layer1.enable``：是否开启数据索引功能(true, false)；"
+msgstr ""
+
+#: ../../source/Data 6c35086e41084456856010b4db3b9e32 Index.rst:45 and
+#: management/Data storage
+msgid "``database.indexdb.layer1.dbType``：指定索引数据库底层存储引擎，可选项为mongodb；"
+msgstr ""
+
+#: ../../source/Data Index.rst:46 a7f330befc4342bc8dbba997b9cc8231 and
+#: management/Data storage
+msgid "``database.indexdb.mongodb.uri``：若采用MongoDB，需配置MongoDB的URL。"
+msgstr ""
+
+#: ../../source/Data Index.rst:48 and d5aa503f5f8245f7a6e05137d7b2dcea
+#: management/Data storage
+msgid "示例如下::"
+msgstr ""
+
+#: ../../source/Data Index.rst:59 and c90cd77a00ca43ca9014f5e690ee17ed
+#: management/Data storage
+msgid "安装MongoDB"
+msgstr ""
+
+#: ../../source/Data 7063316640a94ad7b2601f5669341954 Index.rst:62 and
+#: management/Data storage
+msgid "下载安装包"
+msgstr ""
+
+#: ../../source/Data 74fd57e11b5e4cd382156186ceeb08e5 Index.rst:63 and
+#: management/Data storage
+msgid ""
+"数据索引功能目前依赖于外接MongoDB数据库，本部分将先介绍 MasOS、CentOS7 两种操作系统下的 MongoDB "
+"安装部署步骤。MongoDB 版本必须为 4.2 及以上。"
+msgstr ""
+
+#: ../../source/Data Index.rst:65 and dc2e7f6befa24eedad136e71643c8b7f
+#: management/Data storage
+msgid "总体来说，MongoDB的安装只需要下载安装包、解压安装包然后配置系统环境变量即可。"
+msgstr ""
+
+#: ../../source/Data 19e32be8845e48848a812d16f25ca406 Index.rst:67 and
+#: management/Data storage
+msgid "首先，请根据操作系统类型至MongoDB官网下载相应的MongoDB安装包（版本推荐4.2.5及以上版本，Package选择“tgz”）："
+msgstr ""
+
+#: ../../source/Data Index.rst:69 and b0fe8c225823496bb4296f9f01c7a3d6
+#: management/Data storage
+msgid "https://www.mongodb.com/try/download/community"
+msgstr ""
+
+#: ../../source/Data Index.rst:72 and b704d67326ef4ba89b40cc67fd494f23
+#: management/Data storage
+msgid "然后，将安装包放到自己指定的安装目录下，进行解压缩："
+msgstr ""
+
+#: ../../source/Data 3a27004095ec4652980dc578483911e6 Index.rst:74 and
+#: management/Data storage
+msgid "MacOS::"
+msgstr ""
+
+#: ../../source/Data 247cb6d89bd4462998969f7e36dbba32 Index.rst:78 and
+#: management/Data storage
+msgid "CentOS::"
+msgstr ""
+
+#: ../../source/Data Index.rst:83 and f72ebafee7b74c7f8a317bc487e7077a
+#: management/Data storage
+msgid "配置系统环境变量"
+msgstr ""
+
+#: ../../source/Data 9fcddaf47d594811a2b72590d8d38aed Index.rst:84 and
+#: management/Data storage
+msgid "修改 ``~/.zshrc`` 或者 ``~/.bashrc`` 文件，在文件末尾添加::"
+msgstr ""
+
+#: ../../source/Data 20eca4d34463459b9fb957ed89d26e59 Index.rst:89 and
+#: management/Data storage
+msgid "其中， ``<your mongodb install path>`` 为上一步解压缩后生成的目录的路径。添加完成以后，执行::"
+msgstr ""
+
+#: ../../source/Data 9349c190925a46449d67c6761964346f Index.rst:95 and
+#: management/Data storage
+msgid "至此，MongoDB Server安装完毕。"
+msgstr ""
+
+#: ../../source/Data 51e75ce7fb8848948822b84c6c2c6c90 Index.rst:98 and
+#: management/Data storage
+msgid "启动MongoDB服务"
+msgstr ""
+
+#: ../../source/Data Index.rst:99 and e359f7c9b4c24cb7ad04d7b66f9c9686
+#: management/Data storage
+msgid ""
+"将 **MongoDB启动目录** （点击\\ `此处 "
+"<https://upload.filoop.com/mongodb.tar.gz>`__\\ "
+"下载启动目录）的mongodb压缩包，解压缩后放到节点部署目录的上一级。"
+msgstr ""
+
+#: ../../source/Data 20c02ce4882a494f8d489dbc80d3d5cf Index.rst:101 and
+#: management/Data storage
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/Data Index.rst:643 and fc603c7969934ce49dca0fcd1dc8fd86
+#: management/Data storage
+msgid "image1"
+msgstr ""
+
+#: ../../source/Data Index.rst:109 and fc33cddd14e347a3b1d8ca34c0d28327
+#: management/Data storage
+msgid "实际上，mongodb目录可以解压缩放到任意 **具有读写权限** 的位置。"
+msgstr ""
+
+#: ../../source/Data Index.rst:112 and b7a951164a5e4984bba650dd4bca8643
+#: management/Data storage
+msgid "修改配置文件"
+msgstr ""
+
+#: ../../source/Data 9d05a933c79a46d19861a908720c045d Index.rst:113 and
+#: management/Data storage
+msgid "要启动数据索引功能，主要有两个配置需要修改:"
+msgstr ""
+
+#: ../../source/Data 81e00b932a094e57a695768bacb8f8ae Index.rst:115 and
+#: management/Data storage
+msgid "``database.indexdb.layer1.enable`` 设置为 **true**"
+msgstr ""
+
+#: ../../source/Data 430b256ad20d45ccb23b1fdb19793581 Index.rst:116 and
+#: management/Data storage
+msgid "``database.indexdb.mongodb.uri`` 设置为 **MongoDB URI**"
+msgstr ""
+
+#: ../../source/Data 47e3cbdad618448a9c4ccf5eece0ddda Index.rst:118 and
+#: management/Data storage
+msgid "修改后的配置文件如下::"
+msgstr ""
+
+#: ../../source/Data 3acffa4b5c1849a883ecb3ea83ab5439 Index.rst:142 and
+#: management/Data storage
+msgid "启动数据索引服务"
+msgstr ""
+
+#: ../../source/Data Index.rst:143 and d77318cbf611453bb1dda26f3e900eae
+#: management/Data storage
+msgid "请根据规范正常启动节点，即可启用数据索引服务。如果您的节点已经在运行过程中，请停机完成初始配置后再启动。"
+msgstr ""
+
+#: ../../source/Data 9be9b7030f7e44029be809382b2d507c Index.rst:146 and
+#: management/Data storage
+msgid "使用说明"
+msgstr ""
+
+#: ../../source/Data 1c6e7fcc91b34af6b51df0f37f5d1ed0 Index.rst:149 and
+#: management/Data storage
+msgid "外部接口JSONRPC"
+msgstr ""
+
+#: ../../source/Data Index.rst:150 and eb8e1a06f4874288b8b6e19fcb5be137
+#: management/Data storage
+msgid "数据索引功能相关的JSON-RPC接口如下："
+msgstr ""
+
+#: ../../source/Data 16c9e37a0e6d40ef940b7935d816d51e Index.rst:156 and
+#: management/Data storage
+msgid "RPC方法"
+msgstr ""
+
+#: ../../source/Data 9a1e4c9b3fac4e9ab5a1570f3e95d105 Index.rst:157 and
+#: management/Data storage
+msgid "功能"
+msgstr ""
+
+#: ../../source/Data 00a89156c1bb4545a6012bf2d8baf8e4 Index.rst:158
+#: Index.rst:169 and d016453ceb2a49c7b06a57b6f8bf8504 management/Data storage
+msgid "tx_sendTransaction"
+msgstr ""
+
+#: ../../source/Data 744b5a7763964d3ab382bae4848616ec Index.rst:159 and
+#: management/Data storage
+msgid "发送交易"
+msgstr ""
+
+#: ../../source/Data 1154df56e3474b87818a93e593f0bce3
+#: 2e3a48c9197d42829cb2009a2d2e0df3 Index.rst:160 Index.rst:215 and
+#: management/Data storage
+msgid "tx_getTransactionsByExtraID"
+msgstr ""
+
+#: ../../source/Data 78c92b6fc0534169b63f5bc6bca60893 Index.rst:161 and
+#: management/Data storage
+msgid "查询extraId为指定值的交易"
+msgstr ""
+
+#: ../../source/Data 6cbbccbfe8c94ebea1c2ab57e6397abc
+#: 8c19b44c6f874b10a51e469a2144215a Index.rst:162 Index.rst:417 and
+#: management/Data storage
+msgid "tx_getTransactionsByFilter"
+msgstr ""
+
+#: ../../source/Data Index.rst:163 and f2ef678b1b9f44cc8d0d953f2876c5f5
+#: management/Data storage
+msgid "查询符合过滤条件的交易"
+msgstr ""
+
+#: ../../source/Data 57d825a725234520b68b96ca499a1edd
+#: 71de6469cc544ff384ca41c1ad24848e Index.rst:164 Index.rst:556 and
+#: management/Data storage
+msgid "tx_getTransactionsByTimeWithLimit"
+msgstr ""
+
+#: ../../source/Data Index.rst:165 and c48a64b243254aebb0dbf8a35609042e
+#: management/Data storage
+msgid "查询指定时间区间内的交易（可用于分页）"
+msgstr ""
+
+#: ../../source/Data Index.rst:170 and c05e816f22304bb0845370c74d1d7d31
+#: management/Data storage
+msgid ""
+"发送交易的时候可以自定义extraId字段的值，该值作为这笔交易的可索引信息。由于交易结构的ExtraId的值支持int64数组、string数组或者包含int64和string的数组，因此在发送交易的接口里"
+" **新增了两个参数 extraIdInt64 和 extraIdString** ，类型分别为 []int64 和 []string。"
+msgstr ""
+
+#: ../../source/Data Index.rst:172 and cf7e347e63ab4c61bc747869d9cac449
+#: management/Data storage
+msgid ""
+"新增的这两个参数均为可选参数，分别用来接收不同数据类型的索引值。允许接收到的发送交易请求参数里 "
+"**不包含这两个字段、只包含extraIdInt64字段、只包含extraIdString字段或者同时包含这两个字段** "
+"。如果同时包含这两个字段，则最终生成的交易结构的ExtraId值为这两个数组的拼接， "
+"**数组拼接顺序为int64数组后面拼接string数组**。"
+msgstr ""
+
+#: ../../source/Data Index.rst:174 and dbe7115def4a4b20bdd0294734774e65
+#: management/Data storage
+msgid "**Example1**：该例子最终生成的交易结构ExtraId字段为 [\"0F384\"]::"
+msgstr ""
+
+#: ../../source/Data 672578fdbbea498fbb0c96b35256b3ba Index.rst:193 and
+#: management/Data storage
+msgid "**Example2**：该例子最终生成的交易结构ExtraId字段为 [100, \"0F384\"]::"
+msgstr ""
+
+#: ../../source/Data 675561b93fa947da96e411e49a8b0813
+#: 7a12046413b24de190dbf37377b11d50 Index.rst:217 Index.rst:419 and
+#: management/Data storage
+msgid "**接口含义**"
+msgstr ""
+
+#: ../../source/Data 3e9470f7edd24abeac9b759dd5ed8651 Index.rst:219 and
+#: management/Data storage
+msgid "根据extraId的值和交易接收方地址(可选)来查询符合查询条件的交易。"
+msgstr ""
+
+#: ../../source/Data 2a1efc31412a44ad9ccf63f3e7fd554c Index.rst:221
+#: Index.rst:423 and fb3b2d48f4634ddb84db4b7f4f74f265 management/Data storage
+msgid "**输入参数**"
+msgstr ""
+
+#: ../../source/Data 67da174937814d16823edb90e3ec93ea
+#: 6881a38d24824e9aaf869407a883b723 Index.rst:223 Index.rst:425 and
+#: management/Data storage
+msgid "该接口的入参定义如下::"
+msgstr ""
+
+#: ../../source/Data 4d692b8272e64cc6a9938f06a14190ee Index.rst:232 and
+#: management/Data storage
+msgid "Metadata结构包含以下可用成员::"
+msgstr ""
+
+#: ../../source/Data Index.rst:240 Index.rst:442 and
+#: b7599397dc61440e91fc23e7df46ce78 d607fcc208ed41c2997535a6f7e21c5d
+#: management/Data storage
+msgid "**Bookmark** 结构有以下可用成员::"
+msgstr ""
+
+#: ../../source/Data 176e1e3c9f62479991b12d31a9504c89
+#: 643a0ea3856740009cf4682b2b6d7b3e Index.rst:247 Index.rst:449 and
+#: management/Data storage
+msgid "**Filter** 结构包含以下可用成员::"
+msgstr ""
+
+#: ../../source/Data 2334f462da354dbb8f6b8c3faa31c379 Index.rst:254
+#: Index.rst:460 and d3ff615bc17043428d395bb1a3f9dd33 management/Data storage
+msgid "**返回值**"
+msgstr ""
+
+#: ../../source/Data 4398ec7b2ded469e82b2aeb8a322bffb
+#: 609b3a9bdca543e8923ab928a8196370 Index.rst:256 Index.rst:462 and
+#: management/Data storage
+msgid "该接口返回值定义如下::"
+msgstr ""
+
+#: ../../source/Data 7ee669d27679446d9f60641919e7534c Index.rst:263 and
+#: management/Data storage
+msgid "**TransactionResult** 结构如下::"
+msgstr ""
+
+#: ../../source/Data 0fed29413b0f477c88f6b3febd627b15 Index.rst:287 and
+#: management/Data storage
+msgid "**TransactionSummary** 结构如下::"
+msgstr ""
+
+#: ../../source/Data 50d0e8f6ae3340ac8f5b59a4532e749b Index.rst:297 and
+#: management/Data storage
+msgid ""
+"**注意：该接口必须要指定 extraId "
+"的值，交易接收方地址为可选项；当节点的索引数据库创建了针对该地址的extraId部分索引的时候，提供地址可以加快查询速度。**"
+msgstr ""
+
+#: ../../source/Data 50315a767dc9453abedd81a2df8b47fa Index.rst:299 and
+#: management/Data storage
+msgid "**Example1** ::"
+msgstr ""
+
+#: ../../source/Data 2cf22974adfc49e6b09a02f237943044 Index.rst:358 and
+#: management/Data storage
+msgid "**Example2** ::"
+msgstr ""
+
+#: ../../source/Data 5c32c6f04e4941fe953f23dd0952a808 Index.rst:421 and
+#: management/Data storage
+msgid "根据过滤条件来查询符合查询条件的交易。"
+msgstr ""
+
+#: ../../source/Data 67b8d83ac1d14726b45c94ecf7dbebcf Index.rst:434 and
+#: management/Data storage
+msgid "**Metadata** 结构包含以下可用成员::"
+msgstr ""
+
+#: ../../source/Data 44d38e4c2615402b8fd03c48fdc23495 Index.rst:469 and
+#: management/Data storage
+msgid "**TransactionResult** 和 **TransactionSummary**"
+msgstr ""
+
+#: ../../source/Data 719a8bf4983a47ec8d4ee077e538892a Index.rst:471 and
+#: management/Data storage
+msgid "结构定义请参见 ``getTransactionByExtraID`` 接口"
+msgstr ""
+
+#: ../../source/Data 953d9d0eee204747bc6ac8faf88a4b6f Index.rst:473 and
+#: management/Data storage
+msgid "**Example**::"
+msgstr ""
+
+#: ../../source/Data 3c30b8115d7c4280af9053a79a9b50c8 Index.rst:558 and
+#: management/Data storage
+msgid "如果节点未开启索引数据库，则接口查询方法走原来的逻辑，直接遍历filelog里的区块数据。如果节点开启了索引数据库，则查询方法与原来不同，首先检索索引数据库再从filelog里取到交易详情。"
+msgstr ""
+
+#: ../../source/Data Index.rst:560 and cc51c4f267f34f9ab92a045af6c31ed7
+#: management/Data storage
+msgid "不管节点是否开启了索引功能，当接口入参一样时，期望查询得到的结果也完全一样。"
+msgstr ""
+
+#: ../../source/Data 15f8b3e3ab1a4632bf969773cc793462 Index.rst:562 and
+#: management/Data storage
+msgid "接口参数详情请参考接口文档"
+msgstr ""
+
+#: ../../source/Data 98569a2557de4b27be0e107205b2d633 Index.rst:567 and
+#: management/Data storage
+msgid "外部接口IPC"
+msgstr ""
+
+#: ../../source/Data Index.rst:569 and f33cf38a3b124edeabd27f4938f29939
+#: management/Data storage
+msgid ""
+"增加索引数据库相关的IPC命令，命令为`indexdb`，用于创建( create )、删除( delete )、查询( list "
+")索引数据库二层索引。"
+msgstr ""
+
+#: ../../source/Data 2c893b1c95f14968801b34bf43ea01d3 Index.rst:571 and
+#: management/Data storage
+msgid "indexdb子命令如下::"
+msgstr ""
+
+#: ../../source/Data 7de8e42cb1434530b6476dfa04e5e501 Index.rst:589 and
+#: management/Data storage
+msgid ""
+"由于索引数据库是namespace级别的，因此每次使用 `indexdb` "
+"命令都需要指定命令作用域，所谓作用域即表示该命令要作用于哪个namespace。因此 `indexdb` 命令提供了注册作用域( register"
+" )和查询当前作用域( scope )的子命令。"
+msgstr ""
+
+#: ../../source/Data 0b49a920870c456ea4eef742ae87bf82 Index.rst:591 and
+#: management/Data storage
+msgid ""
+"用户也可以不注册 `indexdb` 命令作用域，而在子命令后面指定 `-d` 即可，表示使用默认(default)的namespace "
+"**global** 作用域。"
+msgstr ""
+
+#: ../../source/Data Index.rst:593 and bb385148c50c4f64b41356c4af8ac235
+#: management/Data storage
+msgid "下面列举一些使用例子::"
+msgstr ""
+
+#: ../../source/Data 28be50a7a5b74977bc3087e4a3bfe52c Index.rst:639 and
+#: management/Data storage
+msgid "数据索引附件资源"
+msgstr ""
+
+#: ../../source/Data Index.rst:641 and beade5e3b22a4fb59c883294747a6eaa
+#: management/Data storage
+msgid "（咨询平台运维人员获取）"
+msgstr ""
+

@@ -1,0 +1,254 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Chain Authority Management/Contract Naming Service.rst:4
+#: bdb79815730348fca9b8366c50eecca3
+msgid "合约命名服务CNS"
+msgstr ""
+
+#: ../../source/Chain 5e297a6390994fe7a19afa659872dd49 Authority
+#: Management/Contract Naming Service.rst:7
+msgid "合约命名"
+msgstr ""
+
+#: ../../source/Chain 5b50952ad59e4555991c8b0200d7b8cb Authority
+#: Management/Contract Naming Service.rst:9
+msgid "合约命名，为一个合约地址绑定一个别名。目前一个合约地址只能有一个合约命名，一个合约命名只能绑定一个合约地址。其操作步骤如下："
+msgstr ""
+
+#: ../../source/Chain 48886ea2faf2441c8667f94d4ace0ba7 Authority
+#: Management/Contract Naming Service.rst:11
+msgid "由一个链级管理员发送交易，执行bvm合约，创建一个合约命名类型的提案；"
+msgstr ""
+
+#: ../../source/Chain Authority Management/Contract Naming Service.rst:13
+#: dd23071ba0ae49fbbf76ab5e2989587d
+msgid "如果提案的阈值大于1，需要其他的链级管理员发送交易，执行bvm合约，对这个提案投票，当收集到足够的同意票数后提案进入等待执行状态；"
+msgstr ""
+
+#: ../../source/Chain Authority Management/Contract Naming Service.rst:15
+#: e1cb992aa5c84f6893d33e0b1a368d3f
+msgid "创建这个提案的链级管理员发送交易，执行bvm合约，执行这个投票通过的提案，完成合约地址与合约命名的绑定。"
+msgstr ""
+
+#: ../../source/Chain 1fcd501208534f52bd278d740bff8fd0 Authority
+#: Management/Contract Naming Service.rst:17
+msgid "合约地址与合约命名绑定之后，可以通过合约命名执行合约，也可以根据合约命名查询相应数据。"
+msgstr ""
+
+#: ../../source/Chain Authority Management/Contract Naming Service.rst:20
+#: eb392117aae246c3bd9e72df079cc646
+msgid "创建合约命名类型的提案"
+msgstr ""
+
+#: ../../source/Chain Authority Management/Contract Naming Service.rst:22
+#: d388a2cca0bf408bab7163a9978d48d5
+msgid "使用LiteSDK发送交易，执行bvm合约，创建合约命名类型的提案时："
+msgstr ""
+
+#: ../../source/Chain Authority Management/Contract Naming Service.rst:24
+#: f1cca10ac12f42a983ce5a48597602d2
+msgid ""
+"使用 `CNSBuilder` 提供的 `setCName` 方法构造合约命名操作的内容，使用 `build` 方法构造合约命名操作 "
+"`CNSOperation` ；"
+msgstr ""
+
+#: ../../source/Chain Authority Management/Contract Naming Service.rst:26
+#: ee07154207e24d38be8c2dfb4dd19f61
+msgid ""
+"使用 `ProposalBuilder` 提供的 `createForCNS` 方法构造创建提案操作的内容，使用 `build` 方法构造提案操作"
+" `ProposalOperation` ；"
+msgstr ""
+
+#: ../../source/Chain Authority Management/Contract Naming Service.rst:28
+#: Service.rst:91 dd71223507324d3784956d86ef4bba59
+#: eae468922a224abfbaa177c31a2b78ff
+msgid ""
+"使用 `BVMBuilder` 提供的 `invoke` 方法构造执行bvm合约的交易内容，使用 `build` 方法构造交易 "
+"`Transaction` ；"
+msgstr ""
+
+#: ../../source/Chain 75b3b6740a754fba908eacaef2fad62b Authority
+#: Management/Contract Naming Service.rst:30 Service.rst:65 Service.rst:93
+#: a500cba0418648c3bc396882085ccf69 f2fa70d4b3e54d408826b61368e6c02d
+msgid "使用 `Transaction` 提供的 `sign` 方法，用链级管理员账户私钥对交易签名；"
+msgstr ""
+
+#: ../../source/Chain 14455e46b34742c9892c8a9cd48222bc
+#: 69141bab65a148719e01dad4386fed80 Authority Management/Contract Naming
+#: Service.rst:32 Service.rst:67 Service.rst:95
+#: c9e52b6d386d48b1aef0001a94df209a
+msgid ""
+"使用 `ContractService` 提供的 `invoke` 方法构造执行合约的交易请求，再通过请求中的 `send` 方法发送请求，使用 "
+"`polling` 获取交易回执。"
+msgstr ""
+
+#: ../../source/Chain 87e2d131c2874e6cbc9e0487d13dd39e Authority
+#: Management/Contract Naming Service.rst:34
+msgid "最后使用 `Decoder` 提供的 `decodeBVM` 方法解析回执即可拿到交易执行结果。"
+msgstr ""
+
+#: ../../source/Chain Authority Management/Contract Naming Service.rst:36
+#: f50f8168ddda472fb8f509e0fcc28c9e
+msgid ""
+"例如，链级管理员A需要创建一个提案，为合约地址 `0x1234567890123456789012345678901234567890` "
+"绑定一个合约命名 `Bank` ，通过LiteSDK发送交易创建合约命名类型提案的示例如下::"
+msgstr ""
+
+#: ../../source/Chain 7a09ebf387aa44b9967d3a9ca24b17c0 Authority
+#: Management/Contract Naming Service.rst:55
+msgid "对合约命名类型的提案进行投票"
+msgstr ""
+
+#: ../../source/Chain 6cfabf195b3b48c2bbdf1ddc73143f1d Authority
+#: Management/Contract Naming Service.rst:57
+msgid "当提案阈值大于1时，需要其他的链级管理员投票同意，通过后提案进入等待执行状态。"
+msgstr ""
+
+#: ../../source/Chain 270bbcf773454984bd898ef39de5effa Authority
+#: Management/Contract Naming Service.rst:59
+msgid "使用LiteSDK发送交易，执行bvm合约，对提案投票时："
+msgstr ""
+
+#: ../../source/Chain 1bb1c577590945a8ae30effdb22d44d2 Authority
+#: Management/Contract Naming Service.rst:61
+msgid ""
+"使用 `ProposalBuilder` 提供的 `vote` 方法构造提案投票操作的内容，使用 `build` 方法构造提案操作 "
+"`ProposalOperation` ；"
+msgstr ""
+
+#: ../../source/Chain 7f51c066f46e4065be040c717584eb26 Authority
+#: Management/Contract Naming Service.rst:63
+msgid ""
+"使用 `BVMBuilder` 提供 `invoke` 方法构造执行bvm合约的交易内容，使用 `build` 方法构造交易 "
+"`Transaction` ；"
+msgstr ""
+
+#: ../../source/Chain Authority Management/Contract Naming Service.rst:69
+#: da12fa541b074e298db6ec207fbb9c10
+msgid "例如，链级管理员B对上述创建的提案投赞同票（假设上述提案的id是1），通过LiteSDK发送交易对提案进行投票对示例如下::"
+msgstr ""
+
+#: ../../source/Chain 2ad496ebde374e29864035df3e49674c Authority
+#: Management/Contract Naming Service.rst:85
+msgid "执行合约命名类提案"
+msgstr ""
+
+#: ../../source/Chain Authority Management/Contract Naming Service.rst:87
+#: af99fd69d015448b8c6cb8642b54b869
+msgid "当提案投票通过后，处于等待执行状态时，提案创建者可发送交易，执行bvm合约，执行提案。"
+msgstr ""
+
+#: ../../source/Chain 4f09d2b095504b71bc1cd423c68f626d Authority
+#: Management/Contract Naming Service.rst:89
+msgid ""
+"使用 `ProposalBuilder` 提供的 `execute` 方法构造执行提案操作的内容，使用 `build` 方法构造提案操作 "
+"`ProposalOperation` ；"
+msgstr ""
+
+#: ../../source/Chain 11f2531e561143908e593e712dced612 Authority
+#: Management/Contract Naming Service.rst:97
+msgid "例如，链级管理员A发送交易执行提案，通过LiteSDK发送交易对提案进行投票对示例如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Management/Contract Naming Service.rst:113
+#: cbe034dfef0941ecb73a69ad501716db
+msgid "根据合约命名执行合约"
+msgstr ""
+
+#: ../../source/Chain Authority Management/Contract Naming Service.rst:115
+#: aed47e82818b4f97af3c35fea5ebe78d
+msgid "根据合约命名执行合约时，使用 `Builder` 提供的 `invokeByName` 方法构造相应的交易内容，发送交易，执行合约。"
+msgstr ""
+
+#: ../../source/Chain Authority Management/Contract Naming Service.rst:117
+#: c9b9ba98ac724acd91f61c0fc7692c3b
+msgid ""
+"例如，evm合约 `0x123456789012345678901234567890123456789` 的合约命名为 `Bank` "
+"，通过合约命名执行这个合约的示例如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Management/Contract Naming Service.rst:129
+#: be6020c386524296a646b84f27fdd214
+msgid "LiteSDK中合约命名相关接口"
+msgstr ""
+
+#: ../../source/Chain 35e3660ca63240c484d6d038b87dc68d Authority
+#: Management/Contract Naming Service.rst:132
+msgid "根据合约地址查询合约命名（getNamebyAddress）"
+msgstr ""
+
+#: ../../source/Chain 0884819328fd4845aa8ab6369de5af60
+#: 27117cdcba214fdbbc1df1b32d9f69eb Authority Management/Contract Naming
+#: Service.rst:134 Service.rst:149 Service.rst:164
+#: e60087cf1eea48298cd676cfce8dc9e3
+msgid "参数："
+msgstr ""
+
+#: ../../source/Chain Authority Management/Contract Naming Service.rst:136
+#: e739ae2c910a46d286c84ffe637b3c33
+msgid "address 合约地址"
+msgstr ""
+
+#: ../../source/Chain 4bae6c7c09444fe1a22f9269fb2dfa78 Authority
+#: Management/Contract Naming Service.rst:138 Service.rst:153 Service.rst:166
+#: c77ae1e2cc3c48f6b1a5fc8f7aeec005 d862d04879e247b5b0a7fdf7ff18bd82
+msgid "nodeIds 请求向哪些节点发送"
+msgstr ""
+
+#: ../../source/Chain 23c2bb1ec9ae44f681441505b77b8725 Authority
+#: Management/Contract Naming Service.rst:144
+msgid "拿到 `NameResponse` 后，通过 `getName` 方法拿到合约命名。 `getName` 方法返回的是一个字符串。"
+msgstr ""
+
+#: ../../source/Chain 1a104160513d4e87bde588a74b20f89c Authority
+#: Management/Contract Naming Service.rst:147
+msgid "根据合约命名查询合约地址（getAddressByName）"
+msgstr ""
+
+#: ../../source/Chain 70704ac2f3a5480c8cd8e3eecc17d384 Authority
+#: Management/Contract Naming Service.rst:151
+msgid "name 合约命名"
+msgstr ""
+
+#: ../../source/Chain 025dd13e5e524f69a2ab99f214a1add5 Authority
+#: Management/Contract Naming Service.rst:159
+msgid "拿到 `AddressResponse` 后，通过 `getAddress` 方法拿到合约地址。 `getAddress` 方法返回的是一个字符串。"
+msgstr ""
+
+#: ../../source/Chain Authority Management/Contract Naming Service.rst:162
+#: a913a1bd8e4d41aa818b028c7a4fab3f
+msgid "查询所有合约地址到合约命名的映射关系（getAllCNS）"
+msgstr ""
+
+#: ../../source/Chain 35c2c948e8194422a8e7b3800e8a6c2a Authority
+#: Management/Contract Naming Service.rst:172
+msgid ""
+"拿到 `AllCNSResponse` 后，通过 `getAllCNS` 方法拿到所以的合约地址到合约命名的映射关系。 `getAllCNS` "
+"方法返回的是key为合约地址，value为合约命名的map。"
+msgstr ""
+
+#: ../../source/Chain Authority Management/Contract Naming Service.rst:174
+#: db55bc9114cf4b0f84e08016ee0a880f
+msgid "例如：evm合约 `0x1234567890123456789012345678901234567890`。 ​"
+msgstr ""
+

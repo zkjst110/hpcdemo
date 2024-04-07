@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/External 5f03b3423dca4c26ba6438782b9bcaed Interface.rst:2
+msgid "外部接口"
+msgstr ""
+
+#: ../../source/External Interface.rst:5 c122bc3929f44ce4973b195c1d5f94c3
+msgid "多语言SDK"
+msgstr ""
+
+#: ../../source/External 0cd311acde7e4c0bb060ae4285873424 Interface.rst:7
+msgid "SDK作为与趣链区块链平台交互的工具，是上层应用和区块链平台连接的桥梁。SDK功能强大，用户不仅可以通过SDK快速访问区块链、开发合约编写业务逻辑，还可以通过SDK进行用户管理、事件订阅以及灵活配置。通常，SDK会提供外部API接口，将应用给出的参数进行封装、加密、签名等，形成http请求后发送给平台，平台收到请求后返回结果，然后SDK对返回的结果进行解析，返回给上层，形成上层应用与区块链一个完整的交互流程。为适应不同语言开发工程师管理区块链平台，平台具有多语言SDK支持，如JavaSDK、GoSDK、JSSDK、CSDK、C#SDK等，优先推荐使用JavaSDK。目前的SDK架构具有完成的功能接口支以及灵活易用的工具支持。"
+msgstr ""
+
+#: ../../source/External Interface.rst:9 bf1fc9dfd10047079fdfc4d362716667
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/External 2fdf64cfe6f842b19dc0e64dca437dcd Interface.rst:43
+msgid "image0"
+msgstr ""
+
+#: ../../source/External Interface.rst:11 f0a56bb54b07420b8b73507859450b8f
+msgid "SDK整体架构主要分为基本架构和扩展工具两大部分。基本架构可以支持完备高效的主流程操作，包括账户证书管理、合约部署调用、区块交易查询、数据编解码以及安全网络通讯，来进行合约开发的一系列工作；工具支持是基于SDK基本架构构建的一个完备的系统生态，对证书、日志级别、网络协议进行灵活的配置，支持合约、查询、日志、异常管理等基本工具，为了方便用户区块链数据的查询和管理，SDK提供了数据归档、消息订阅以及外部数据源等扩展功能，总而言之，SDK可以满足用户对区块链操作的各种需求。"
+msgstr ""
+
+#: ../../source/External 21f52de4758b4c79baed8499783cf366 Interface.rst:14
+msgid "JSON-RPC"
+msgstr ""
+
+#: ../../source/External 459cd22498274b9c9bb1b06ad96276bb Interface.rst:16
+msgid ""
+"JSON-"
+"RPC是一个无状态且轻量级的远程过程调用(RPC)协议。它允许运行在基于socket、http等诸多不同消息传输环境的同一进程中,其使用JSON作为数据格式。发送一个请求对象至服务端代表一个RPC调用,一个请求对象包含下列成员:"
+msgstr ""
+
+#: ../../source/External 84a0531cda59455fabc33a50ea7a989b Interface.rst:18
+msgid "jsonrpc:指定JSON-RPC协议版本的字符串,如果是2.0版本,则必须准确写为 “2.0”。"
+msgstr ""
+
+#: ../../source/External Interface.rst:19 e4a2c10759044f1991d08a9e1ff9b6af
+msgid ""
+"method:表示所要调用方法名称的字符串。以RPC开头的方法名,用英文句号(U+002E or ASCII "
+"46)连接的为预留给RPC内部的方法名及扩展名,且不能在其他地方使用。"
+msgstr ""
+
+#: ../../source/External Interface.rst:20 a5550ab1d81c45b7b318335db02f5a5a
+msgid "params:调用方法所需要的结构化参数值,该成员参数可以被省略。"
+msgstr ""
+
+#: ../../source/External Interface.rst:21 be8263e2f8634242b16dcd82bd327996
+msgid "id:已建立客户端的唯一标识id,该值必须包含一个字符串、数值或NULL值。如果不包含该成员则被认定为是一次通知调用。该值一般不为NULL,若为数值则应为整数。"
+msgstr ""
+
+#: ../../source/External Interface.rst:23 fef7058aca714cf389718c03eaef4b88
+msgid "当发起一次rpc调用时,服务端都必须回复一个JSON对象作为响应,响应对象包含下列成员:"
+msgstr ""
+
+#: ../../source/External Interface.rst:25 d5aab3c707ba4f5193f736650e66f076
+msgid "jsonrpc: 指定JSON-RPC协议版本的字符串,如果是2.0版本,则必须准确写为“2.0”。"
+msgstr ""
+
+#: ../../source/External Interface.rst:26 a59b434ba1cd4123b294874233531284
+msgid "result: 该成员在成功时必须包含，当调用方法失败时必须不包含该成员。服务端中的被调用方法决定了该成员的值。"
+msgstr ""
+
+#: ../../source/External Interface.rst:27 c2d82ba6116b40ada2979b8cfbe69668
+msgid "error: 该成员在失败时必须包含，当没有错误引起时,不包含该成员。若引起错误,则该成员对象将包含code和message两个属性。"
+msgstr ""
+
+#: ../../source/External Interface.rst:28 f0a9e270d3fd4288a2aace1abc230e13
+msgid ""
+"id: "
+"该成员必须包含。该成员值必须与请求对象中的id成员值一致。若在检查请求对象id时错误(例如参数错误或无效请求),则该值必须为空值（NULL）。"
+msgstr ""
+
+#: ../../source/External Interface.rst:32 acb1c630abff4333aeff71d713ac9a78
+msgid "gRPC消息推送"
+msgstr ""
+
+#: ../../source/External 6e8f88b6461144a197003f1c9d825ba2 Interface.rst:34
+msgid "gPRC消息推送主要替代依赖于第三方mq进行消息推送的问题，消息推送主要包含grpc层、mq模块层及sdk端的调用，调用方式主要支持普通调用模式、服务端单向流调用模式、客户端单向流调用模式及双向流调用模式。"
+msgstr ""
+
+#: ../../source/External Interface.rst:36 e50f034f46204decab82a725a15c4dd2
+msgid "**普通调用模式**：最为传统的调用方式，即客户端发起一次请求，服务端响应一个数据；"
+msgstr ""
+
+#: ../../source/External Interface.rst:37 d7fcf08af57544649f24ecce11cbb79d
+msgid "**服务端单向调用模式**：这种模式是客户端发起一次请求，服务端返回一段连续的数据流；"
+msgstr ""
+
+#: ../../source/External 83513d7b2ac14c51879c13702c56ac7d Interface.rst:38
+msgid "**客户端单向调用模式**：与服务端数据流模式相反，这次是客户端源源不断的向服务端发送数据流，而在发送结束后，由服务端返回一个响应；"
+msgstr ""
+
+#: ../../source/External 0f25dc20025c455c828c05e7c8c3da98 Interface.rst:39
+msgid "**双向流调用模式**：客户端和服务端都可以向对方发送数据流，这个时候双方的数据可以同时互相发送，也就是可以实现实时交互。"
+msgstr ""
+

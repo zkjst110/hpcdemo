@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Prepare.rst:2 9b5667d64508468d99f7fc4cdb27a575
+msgid "准备工作"
+msgstr ""
+
+#: ../../source/Prepare.rst:5 b41daf644b9c4281aa7b2e1995ae1ae9
+msgid "操作系统版本要求"
+msgstr ""
+
+#: ../../source/Prepare.rst:7 90487b14517c4e16ad9ddba481b031a6
+msgid "以下图表说明了趣链区块链平台对于不同操作系统的版本要求。"
+msgstr ""
+
+#: ../../source/Prepare.rst:9 37956f06803f4b4c9214fde22403415e
+msgid "**不同平台版本要求：**"
+msgstr ""
+
+#: ../../source/Prepare.rst:12 3d9f26d222f34524a8969883e62590c6
+msgid "操作系统"
+msgstr ""
+
+#: ../../source/Prepare.rst:12 6bc5fcc16dff4e2590e3ce244dba09db
+msgid "系统版本"
+msgstr ""
+
+#: ../../source/Prepare.rst:12 21edfb057ff1441c922cf9d30b020bf3
+msgid "系统架构"
+msgstr ""
+
+#: ../../source/Prepare.rst:14 8cefb25d9f42404fb78e9a36d4dbf6e1
+msgid "RHEL"
+msgstr ""
+
+#: ../../source/Prepare.rst:14 ../../source/Prepare.rst:16
+#: 07150a950f464604a40eaa97f1f10221 39015c62ee674088b5247a97ac0cdf77
+msgid "6 及以上"
+msgstr ""
+
+#: ../../source/Prepare.rst:14 ../../source/Prepare.rst:16
+#: ../../source/Prepare.rst:18 ../../source/Prepare.rst:20
+#: ../../source/Prepare.rst:22 1c13bc3114c049ed9ed899aefd16893f
+#: 1e757e15a509427facf713599e471757 4b6aa2ad2b5649b889c9a5f663abc907
+#: 5efbae0e6ad04617a1a02ddc6165ebe4 6f95c52f71a54a9a8de0d28533adda97
+msgid "amd64, 386"
+msgstr ""
+
+#: ../../source/Prepare.rst:16 0e84b898fdbd498b91958efb73729028
+msgid "CentOS"
+msgstr ""
+
+#: ../../source/Prepare.rst:18 7431f2e19e364170b41cc646654f898e
+msgid "SLES"
+msgstr ""
+
+#: ../../source/Prepare.rst:18 f5c5f77856674a01897da8eac66902c7
+msgid "11SP3 及以上"
+msgstr ""
+
+#: ../../source/Prepare.rst:20 8d57fb4509114616a34253373fbd4d65
+msgid "Ubuntu"
+msgstr ""
+
+#: ../../source/Prepare.rst:20 35267c36ffa442499309752c080e432d
+msgid "14.04 及以上"
+msgstr ""
+
+#: ../../source/Prepare.rst:22 e7ba84a320c040ae94e05a211122cc19
+msgid "macOS"
+msgstr ""
+
+#: ../../source/Prepare.rst:22 758e575d00484c50a94f1c0cad24604b
+msgid "10.8 及以上"
+msgstr ""
+
+#: ../../source/Prepare.rst:25 d839c273c7914dfa9e551f3ebf2eb98f
+msgid "**硬件标准：**"
+msgstr ""
+
+#: ../../source/Prepare.rst:27 3dd63e550b604919a3291ca359962ced
+msgid "最低配置要求：CPU 1.8GHz、内存 2GB、核心 2核、带宽 2Mb。"
+msgstr ""
+
+#: ../../source/Prepare.rst:29 494fa761e783494385528c32f36d3bfd
+msgid "推荐配置要求：CPU 2.3GHz、内存 16GB、核心 8核、带宽 20Mb。"
+msgstr ""
+
+#: ../../source/Prepare.rst:31 041c30da0c9c4ef1917e8ca234f3be3f
+msgid "**注意：如果是本地部署带宽无要求**"
+msgstr ""
+
+#: ../../source/Prepare.rst:34 bc17b9fb6b4747f4a25bb8a2c70d4797
+msgid "安装合约编译器(可选)"
+msgstr ""
+
+#: ../../source/Prepare.rst:36 ad89fb154db74902bca7edb4d4d040b5
+msgid ""
+"趣链区块链平台支持用\\ `Solidity <https://solidity.readthedocs.org/en/latest/>`__\\"
+" 编写的智能合约，然后将它编译为字节码并部署到区块链中。"
+msgstr ""
+
+#: ../../source/Prepare.rst:38 7c761039cfd24e0ea0f89227873736b1
+msgid "鉴于我们是用Solidity语言编写的合约，所以需要确保我们已经安装名为\\ ``solc`` \\ 的合约编译器。"
+msgstr ""
+
+#: ../../source/Prepare.rst:40 fba8dc9563b24ada97a8a8d415909d0a
+msgid ""
+"我们已经在源码中提供了一些平台的通用安装包，您可以直接使用他们来快速安装 ``solc`` ，您也可以参考官方文档来完成安装 - "
+"`安装Solidity <https://solidity.readthedocs.io/en/latest/installing-"
+"solidity.html#installing-solidity>`__."
+msgstr ""
+
+#: ../../source/Prepare.rst:44 daf883eb3bed406e997d55b45f3e3aea
+msgid "最高支持solidity编译版本为0.8.x，需添加编译选项 ``--evm-version=homestead``"
+msgstr ""
+
+#: ../../source/Prepare.rst:46 d03bbd7f7a9142caa2afbb869be1a88d
+msgid ""
+"另外，针对使用Java语言编写的智能合约，我们需要安装JDK环境和maven构建工具。可以参考官方文档来完成安装 - `安装JDK "
+"<https://www.oracle.com/java/technologies/downloads/>`__. `安装Maven "
+"<https://maven.apache.org/index.html>`__."
+msgstr ""
+

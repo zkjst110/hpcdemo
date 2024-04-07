@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Chain 6d0d3b36e8884a5089a54c3e2b91a371 Authority Life
+#: Management.rst:4 Management.rst:7 Management/Contract
+#: a330e484fa1e4c97bf8db344e7347a41
+msgid "合约生命周期管理"
+msgstr ""
+
+#: ../../source/Chain Authority Life Management.rst:10 Management/Contract
+#: dcd5beaa8c4c48108b571d0eb5c125bf
+msgid "合约生命周期管理概述"
+msgstr ""
+
+#: ../../source/Chain 5fb9a456f57f431393a02df41098790b Authority Life
+#: Management.rst:12 Management/Contract
+msgid "合约生命周期管理包括合约的部署、升级、冻结、解冻以及销毁操作。现合约生命周期可通过两种方式进行管理，一种是不投票的方式，使用默认对方式管理合约；一种是投票对方式，需要提出申请，合约管理员审核通过后才能进行合约管理操作。"
+msgstr ""
+
+#: ../../source/Chain 2dae7bb2bfa14138ab723c8f09cd6e04 Authority Life
+#: Management.rst:14 Management/Contract
+msgid ""
+"当前使用投票方式管理合约还是不投票的方式管理合约取决于配置项 `proposal.contract.vote.enable` "
+"的值，当值为true时只能使用投票管理合约，当值为false时只能使用不投票的方式管理合约（默认方式）。如果采用投票的方式管理合约，需要多少赞同票才通过则通过配置项"
+" `proposal.contract.vote.threshold` 的值确定。这两个配置项的修改和查询方式参考 :ref:`链级配置管理 "
+"<chain-conf-manage>`。"
+msgstr ""
+
+#: ../../source/Chain Authority Life Management.rst:16 Management/Contract
+#: a6d511dd22bf483ab96ce85c0fd072e2
+msgid "**本文后续提到的合约生命周期管理都是通过投票的方式来管理合约**，本文描述的也是如何通过投票的方式来管理合约。"
+msgstr ""
+
+#: ../../source/Chain 79bf156071364f088e4e5e66ed994925 Authority Life
+#: Management.rst:18 Management/Contract
+msgid "合约生命周期管理也是通过提案的方式来进行修改，提案的状态迁移如下："
+msgstr ""
+
+#: ../../source/Chain 3e5ca5424aa7488d9dfda3041b3616bc Authority Life
+#: Management.rst:20 Management/Contract
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/Chain 2fbe4499616d4ddfb6651cc89e90f2e2 Authority Life
+#: Management.rst:222 Management/Contract
+msgid "image1"
+msgstr ""
+
+#: ../../source/Chain 7f832e3614884808850ea7fdb6a78e33 Authority Life
+#: Management.rst:22 Management/Contract
+msgid ""
+"通过提案管理合约生命周期的流程如下：（关于合约管理员的相关使用说明参考 :ref:`链级角色管理 <chain-role-"
+"manage>`，关于提案的总体介绍参考 :ref:`链级权限管理 <chain-auth-manage>`）"
+msgstr ""
+
+#: ../../source/Chain 920046028cec41dea2be7a2114f13676 Authority Life
+#: Management.rst:24 Management/Contract
+msgid "由用户发送交易创建提案，提案中包含对合约的操作；"
+msgstr ""
+
+#: ../../source/Chain Authority Life Management.rst:26 Management/Contract
+#: c1e58f17621c482da47bb7bf9fe6d808
+msgid "由合约管理员发送交易对提案进行投票，交易中携带有投票的提案编号和是否赞同提案中携带的内容；"
+msgstr ""
+
+#: ../../source/Chain 1fc164b93600416790ba224dd46591f4 Authority Life
+#: Management.rst:28 Management/Contract
+msgid "当提案投票通过后，由提案创建者发送交易执行提案，交易中携带由执行的提案编号。"
+msgstr ""
+
+#: ../../source/Chain 65536e1b61484d8f8a91b192b10f433e Authority Life
+#: Management.rst:30 Management/Contract
+msgid "合约生命周期管理包含的操作如下："
+msgstr ""
+
+#: ../../source/Chain 39fd0d6af93b42e2b5b097fb8d0dd934 Authority Life
+#: Management.rst:32 Management/Contract
+msgid "部署合约，即将合约部署到区块链上以供使用。返回值为部署是否成功以及相应的合约地址"
+msgstr ""
+
+#: ../../source/Chain 6935acbcda17464e9b5e8692d9a31702 Authority Life
+#: Management.rst:34 Management/Contract
+msgid "升级合约，即对已有的合约进行升级"
+msgstr ""
+
+#: ../../source/Chain 62cfe7f6a3624583961f5caaab287e0c Authority Life
+#: Management.rst:36 Management/Contract
+msgid "维护合约，即对已有的合约进行冻结、解冻和销毁操作"
+msgstr ""
+
+#: ../../source/Chain 87dba6008425479182a5719b5b48f46e Authority Life
+#: Management.rst:39 Management/Contract
+msgid "litesdk接口说明"
+msgstr ""
+
+#: ../../source/Chain Authority Life Management.rst:41 Management/Contract
+#: ca541769b07d4a40bde772eefbf2c078
+msgid ""
+"litesdk提供了 `ProposalBuilder` 构造器用于构造提案的操作，在 `ProposalBuilder` 中提供了 "
+"`createForContract` 、 `vote` 、 `cancel` 和 `execute` "
+"方法分别用于创建合约管理类提案、提案投票、取消提案和执行提案的提案操作，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Life Management.rst:80 Management/Contract
+#: e7de82931ce444b69ead8ba4e09478f3
+msgid ""
+"在创建合约管理类提案操作时，根据提案内容中需要对合约的操作不同，接收的合约管理类操作不同。litesdk为合约管理类操作 "
+"`ContractOperation` 提供了构造器 `ContractBuilder`，里面提供了 `deploy` 、 `upgrade` 、"
+" `upgradeByName` 、 `maintain` 、 `maintainByName` 以及 `build` 方法，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain 967ab7d2addd47dcacf5b514aec8774a Authority Life
+#: Management.rst:146 Management/Contract
+msgid ""
+"合约生命周期管理的操作构造好后，用ProposalBuild构造器构造提案相关的操作，创建好之后，使用 `BVMBuilder` 提供的 "
+"`invoke` 方法构造bvm的交易体，使用 `build` 方法构造出交易 `transaction` ，并为交易设置 `txVersion`"
+" 并使用 `sign` 方法签名，得到最终可以发送执行的交易体。"
+msgstr ""
+
+#: ../../source/Chain Authority Life Management.rst:149 Management/Contract
+#: f3990bf2966c45548785a9b99c955203
+msgid "litesdk使用示例"
+msgstr ""
+
+#: ../../source/Chain 4307dc499e24444eb144fe67f612ecfb Authority Life
+#: Management.rst:151 Management/Contract
+msgid "使用litesdk部署合约、升级合约、冻结合约，其代码如下::"
+msgstr ""
+

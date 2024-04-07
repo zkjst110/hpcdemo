@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/General Concepts.rst:2 f62c871837334b38b029e6e54d910135
+msgid "通用概念"
+msgstr ""
+
+#: ../../source/General 9b5bb7e8ddb941a88123c7449e98bbb6 Concepts.rst:5
+msgid "基础术语"
+msgstr ""
+
+#: ../../source/General 02ae0c38e15041d38a83ad787bd3f2db Concepts.rst:7
+msgid "**交易（Transaction）**：区块链上的一个事务请求，用来承载具体业务操作数据的结构。区块链上所有针对世界状态的变化操作均是基于交易来完成的。"
+msgstr ""
+
+#: ../../source/General 0d42cb279eed4b809becdc51cc0be485 Concepts.rst:8
+msgid ""
+"**区块（Block）**：区块链上存储打包交易数据以及交易执行结果数据的一种组织形式。区块彼此之间通过前向的应用彼此链接形成区块链。 "
+"每个区块记录着上一个区块的哈希值、本区块中的交易集合、本区块的哈希等基础数据。"
+msgstr ""
+
+#: ../../source/General 457ec68795fa4647a76c4a03dad8cdd9 Concepts.rst:9
+msgid "**账本（Ledger）**：所有存储到区块链上的数据称之为账本。"
+msgstr ""
+
+#: ../../source/General 0bb5b0c605054196a7a20eea0e8073f9 Concepts.rst:10
+msgid ""
+"**区块哈希（Block "
+"Hash）**：本区块体的哈希值，区块链通过哈希算法对一个交易区块中的交易信息进行加密,并把信息压缩成由一串数字和字母组成的散列字符串。"
+msgstr ""
+
+#: ../../source/General Concepts.rst:11 d70c5e8dd1054fdd8e2441071b3edca3
+msgid "**地址（Address）**：区块链中用地址来标识一条交易的发起方以及接收方。"
+msgstr ""
+
+#: ../../source/General 852fc623a276481a91b0cfad062d1fce Concepts.rst:12
+msgid ""
+"**交易回执（Transaction "
+"Receipt）**：交易的执行结果。区块链是异步的系统，交易执行后需要共识，与传统架构不同，不能直接返回交易执行是否成功，因此需在回执中查看最终交易结果。"
+msgstr ""
+
+#: ../../source/General 32be36d63a50410e80255865dcf62b90 Concepts.rst:13
+msgid ""
+"**智能合约（Smart "
+"Conctract）**：智能合约是指在区块链网络中自动执行的程序，智能合约是区块链的重要特征，区块链实现业务逻辑的重要载体。"
+msgstr ""
+
+#: ../../source/General Concepts.rst:14 aa4fc535621a4450b845919e54d03d8d
+msgid ""
+"**共识算法（Consensus "
+"Algorithm）**：保障分布式系统中各节点间达成一致采用的计算方法，常见的算法包括PoW、PoS、DPoS、PBFT、RAFT、RBFT等。"
+msgstr ""
+
+#: ../../source/General 8d0282f59f394713bb74746c4e9dbd1a Concepts.rst:15
+msgid "**账户（Account）**：区块链上的基本操作对象，区块链上的所有交易操作均需要基于链上已存在的账户来实现。可分为普通账户和合约账户。"
+msgstr ""
+
+#: ../../source/General 652724ef9bc84df58b7e803b9c422350 Concepts.rst:16
+msgid ""
+"**合约账户（Contract "
+"Account）**：合约账户是智能合约的操作载体，表示智能合约部署成功之后分配的合约地址以及这个合约对应的属性的集合。"
+msgstr ""
+
+#: ../../source/General 617580f09e1f407295b5e5227a2b5cdd Concepts.rst:17
+msgid "**区块高度（Block Height）**：区块高度，简称块高，用来识别区块在区块链中的位置，并据此找到和这个区块相关的所有基础属性和交易记录。"
+msgstr ""
+
+#: ../../source/General Concepts.rst:18 d502849fe15c4144acacf4b629c6319e
+msgid ""
+"**证书颁发机构（Certificate "
+"Authority）**：数字证书颁发机构是受信任的第三方机构，颁发的数字证书是为最终用户数据加密的公共密钥。"
+msgstr ""
+
+#: ../../source/General Concepts.rst:19 c975255e612e4575bf77a3fdf0c9026d
+msgid ""
+"**私钥（Private "
+"Key）**：与公钥相伴而生，公钥是由私钥通过特定的非对称加密算法生成，而用户需要保存好私钥，用于对该账户在区块链上所有发起的交易的签名。"
+msgstr ""
+
+#: ../../source/General 4695c8842ac8477993165c0dcee37fb6 Concepts.rst:20
+msgid ""
+"**国密算法（National Secret Algorithm "
+"）**：国家密码局认定的国产密码算法,其中包括了对称加密算法,椭圆曲线非对称加密算法,杂凑算法。具体包括SM1,SM2,SM3等。"
+msgstr ""
+
+#: ../../source/General Concepts.rst:21 a599d69439e341e7870e3eec412e6bbd
+msgid "**共识节点（Validate Peer）**：也称VP节点，参与共识过程，验证数据一致性后将数据同步存储在区块链上的节点，具有投票权。"
+msgstr ""
+
+#: ../../source/General 3b58d8f2f0684af8b0aa91e6493988b0 Concepts.rst:22
+msgid ""
+"**非共识节点（Non-Validate "
+"Peer）**：也称NVP节点、查询节点或备份节点，可以连接区块链内任意一个共识节点，同步链上数据，但该节点只提供查询服务，不能参与共识过程，不能对数据进行校验，没有投票权；该节点的存在可以帮助系统分担查询服务的网络流量压力，同时可以实现数据的快速反馈，减少响应时间，提供更好的交互体验。"
+msgstr ""
+
+#: ../../source/General Concepts.rst:23 e74554c2a6714a37b08e89eff7b1cd42
+msgid "**对等网络（Peer-to-Peer Networks）**：一种仅包含对控制和操作能力等效的节点的计算机网络。"
+msgstr ""
+
+#: ../../source/General 1828b6ccc7a146dcbab8428c0f7f54b5 Concepts.rst:24
+msgid "**节点（Node）**：提供分布式账本的所有功能或者部分功能的实体。"
+msgstr ""
+

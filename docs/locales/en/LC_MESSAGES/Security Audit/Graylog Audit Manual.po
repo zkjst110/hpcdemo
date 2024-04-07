@@ -1,0 +1,909 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Security 86f7f8ceaa1d489ea2dc53ebfe5aed96 Audit Audit/Graylog
+#: Manual.rst:4
+msgid "Graylog Audit Manual"
+msgstr ""
+
+#: ../../source/Security 186056cfbda24a30a0b83cf2a61561dc Audit Audit/Graylog
+#: Manual.rst:7
+msgid "1. 引言"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:10
+#: db49851ac5da470dad0573e63e33f415
+msgid "1.1 编写目的"
+msgstr ""
+
+#: ../../source/Security 561f2031a8364c34b6e226ae918bfb83 Audit Audit/Graylog
+#: Manual.rst:12
+msgid "本文档主要是说明Hyperchain用户如何使用graylog作为审计后端。在Hyperchain配置文件开启审计后，以及配置好审计后端为graylog即可使用graylog作为审计后端。"
+msgstr ""
+
+#: ../../source/Security 55fbfa8b1d994b4195cf2e40714dec5e Audit Audit/Graylog
+#: Manual.rst:14
+msgid "本文档将会详细的说明如何安装部署使用graylog，以及一些可能遇到的注意事项。"
+msgstr ""
+
+#: ../../source/Security 388647451d6b4ae6bf79191b8c8b1e39 Audit Audit/Graylog
+#: Manual.rst:17
+msgid "1.2 参考文献"
+msgstr ""
+
+#: ../../source/Security 551ce8c1fa4a42399fd766bef0a1907d Audit Audit/Graylog
+#: Manual.rst:19
+msgid "graylog 官方网站： `https://www.graylog.org/ <https://www.graylog.org/>`_"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:21
+#: ffdc86771ac04a1999ecd83eaa716681
+msgid ""
+"关于graylog的使用也可以查看graylog官方说明文档： `https://docs.graylog.org/en/3.3/ "
+"<https://docs.graylog.org/en/3.3/>`_"
+msgstr ""
+
+#: ../../source/Security 621f0e0c309443c883c0b10e55439290 Audit Audit/Graylog
+#: Manual.rst:24
+msgid "2. 安装和初始化"
+msgstr ""
+
+#: ../../source/Security 03056a57b93a4811b9fb1bbcd066a191 Audit Audit/Graylog
+#: Manual.rst:26
+msgid "graylog 安装部署一般分为单机版部署和集群版部署。"
+msgstr ""
+
+#: ../../source/Security 7612405180c44ec48d66eb7e4cd71e25 Audit Audit/Graylog
+#: Manual.rst:28
+msgid "单机版部署足以应对日常的审计使用，集群版部署主要是为了更好地发挥elasticsearch的性能，主要是适用于大数据分析，本文档不推荐使用集群部署graylog平台"
+msgstr ""
+
+#: ../../source/Security 7a59b7b523d540b2b1204356b52cf0ea Audit Audit/Graylog
+#: Manual.rst:30
+msgid ""
+"无论是单机部署和集群部署都需要了解一些graylog的部署特性。graylog "
+"作为审计后端需要3个组件共同完成，包括graylog(提供浏览器界面以及审计数据分析前端) "
+"、Elasticsearch（用于审计数据分析处理后端）、MongoDB(存储一些graylog的配置信息)。"
+msgstr ""
+
+#: ../../source/Security 7d28e557af964cda883b0c58554a874e Audit Audit/Graylog
+#: Manual.rst:32
+msgid "Graylog节点应重点关注CPU功能。这些还可以为浏览器提供用户界面。"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:34
+#: c8c52cea4f074384a9f6ee41601b6c04
+msgid "Elasticsearch节点应具有尽可能多的内存和高速磁盘。因为数据的处理和存储依赖内存和磁盘。"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:36
+#: eb068d36b33b4d09a894d95a0f628558
+msgid "MongoDB存储元信息和配置数据，不需要很多资源。"
+msgstr ""
+
+#: ../../source/Security 7a2a000065974f2d856903d47b9fb2b5 Audit Audit/Graylog
+#: Manual.rst:39
+msgid "2.1 单机版部署"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:41
+#: b61ef100ed7d41e0919cb384901bc672
+msgid "单机版部署架构图如下所示："
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:43
+#: e88a2adfd5ff414d816231d4562723e7
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/Security 794531a39b444557a8b795ca3c069bc4 Audit Audit/Graylog
+#: Manual.rst:418
+msgid "image0"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:45
+#: d7416c1df1bd45b2a5b15bb0904be394
+msgid "graylog 单机版审计数据处理流程："
+msgstr ""
+
+#: ../../source/Security 5451b803bc1a4ebfb006586a6b3decd5 Audit Audit/Graylog
+#: Manual.rst:47
+msgid ""
+"hyperchain平台将数据通过TCP/TLS 通信协议传输审计数据到Graylog平台， "
+"graylog平台由graylog、mongodb、ElasticSearch "
+"组成。审计数据到达graylog平台后将数据发送给elasticsearch， elasticsearch "
+"对于数据建立索引以及存储方便graylog进行数据检索以及数据的查看。elasticsearch "
+"分析完成数据后将分析结果返回给graylog，graylog将分析结果通过浏览器展示给用户。"
+msgstr ""
+
+#: ../../source/Security 9a35bf0878a3474e95b92595ee49339f Audit Audit/Graylog
+#: Manual.rst:50
+msgid "2.1.1 安装说明"
+msgstr ""
+
+#: ../../source/Security 5b7577c6a4ef4536bacb6198ec6662f2 Audit Audit/Graylog
+#: Manual.rst:52
+msgid "单机版部署将graylog、mongodb、elasticsearch都放在一台服务器进行设置和使用,推荐使用单机部署，节省服务器资源以及节约时间成本。"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:54 Manual.rst:215
+#: af01dde4d38f49a285dd1342a4a12afd eb0040df639c42c99a669d01e6dce7cd
+msgid ""
+"默认情况下，用户无需从graylog官方网站下载 "
+"graylog平台进行部署配置，我们提供已经配置好的graylog、mongodb、elasticsearch "
+"供用户下载使用，这么做的目的是为了简化用户对于这三个组件的配置修改，方便快速使用审计功能。"
+msgstr ""
+
+#: ../../source/Security 4f3d80e8434a48ecbb23a0e9fe18af80 Audit Audit/Graylog
+#: Manual.rst:56
+#, python-format
+msgid ""
+"`graylog-elasticsearch-mongodb.tar.gz.zip <https://upload.filoop.com/RTD-"
+"Hyperchain%2Fgraylog-elasticsearch-mongodb.tar.gz.zip>`_"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:58
+#: bafc798b000147a593c4af3408da7577
+msgid ""
+"下载上述附件，得到 graylog-elasticsearch-mongodb.tar.gz.zip 压缩包(为了减少体积，压缩了两次"
+")，然后使用下面命令进行解压得到graylog-elasticsearch-mongodb 文件夹，文件夹里面包含了 "
+"elasticsearch-6.8.5、graylog-3.3.0、mongodb-linux-x86_64-rhel70-4.2.7三个组件"
+msgstr ""
+
+#: ../../source/Security 3ec524fb04d74dd8855a59a1ab5b2d00 Audit Audit/Graylog
+#: Manual.rst:66
+msgid ""
+"接下来分别进入三个组件的目录修改配置文件，首先修改elasticsearch的配置文件，进入elasticsearch-6.8.5目录，配置文件在config目录下,"
+" 进入config目录，可以看到如下的配置文件目录："
+msgstr ""
+
+#: ../../source/Security 6fcd23fddeb445398e06ee50e3e52d0e Audit Audit/Graylog
+#: Manual.rst:68
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:419
+#: a56d982ed01e4a648b8c8a93bd3209df
+msgid "image1"
+msgstr ""
+
+#: ../../source/Security 144607f78e7845398eab12329f8a9248 Audit Audit/Graylog
+#: Manual.rst:70
+msgid ""
+"上述的配置文件大多数时候默认即可，不需要修改。但是为了更好的发挥机器性能，可以修改jvm.options，将jvm的最大堆内存和最小堆内存调整为合适大小（默认堆内存为1G大小。最大设置为机器物理内存的一半，不能超过32G）。"
+" 本文介绍使用的机器配置为16G内存，设置为堆内存为4G"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:72
+#: a71272bf49774f08b6ed31173c317d04
+msgid "|image2|"
+msgstr ""
+
+#: ../../source/Security 55d2abd3f96348d6b770e1a2590952ef Audit Audit/Graylog
+#: Manual.rst:420
+msgid "image2"
+msgstr ""
+
+#: ../../source/Security 72aee2dbe8e047a58bacdd46ce270826 Audit Audit/Graylog
+#: Manual.rst:74
+msgid "接下来进入graylog-3.3.0目录，修改graylog的配置文件。graylog目录文件如下图所示："
+msgstr ""
+
+#: ../../source/Security 884098c4f3fe4e84b654f80f949b4ded Audit Audit/Graylog
+#: Manual.rst:76
+msgid "|image3|"
+msgstr ""
+
+#: ../../source/Security 11c78896dd324ce8ba4942c659b26cec Audit Audit/Graylog
+#: Manual.rst:421
+msgid "image3"
+msgstr ""
+
+#: ../../source/Security 26a7b61006b140c8947ad2d460760910 Audit Audit/Graylog
+#: Manual.rst:78
+msgid "graylog 配置文件为graylog.conf, 这个文件里面需要修改graylog 使用的用户名和密码即可，具体修改配置为下图所示："
+msgstr ""
+
+#: ../../source/Security 21e4dfc3cfe44ded8fcad5dc056cf46f Audit Audit/Graylog
+#: Manual.rst:80
+msgid "|image4|"
+msgstr ""
+
+#: ../../source/Security 0fbca577a60141ba929f244d732428f5 Audit Audit/Graylog
+#: Manual.rst:422
+msgid "image4"
+msgstr ""
+
+#: ../../source/Security 3cd978cff5744d87b61c01bab1f9409d Audit Audit/Graylog
+#: Manual.rst:82
+msgid ""
+"**password_secret**   是用来加密密码的字符串，这个必须使用 `pwgen` 命令生成一个用于密码加密的字符串, "
+"（如果没有pwgen 命令，可以对应操作系统的pwgen 软件）生成方式如下::"
+msgstr ""
+
+#: ../../source/Security 19375bbe7573485e8a9240f7202ba68f Audit Audit/Graylog
+#: Manual.rst:86
+msgid "默认的graylog root用户名 为 `admin` 。如果不想设置新的用户，那么默认为admin 用户即可。"
+msgstr ""
+
+#: ../../source/Security 28d57cf1ecf648ebb3115acfe5d1df1a Audit Audit/Graylog
+#: Manual.rst:88
+msgid ""
+"重新设置密码 可以更改 **root_password_sha2** 字段， 使用 下面命令可以生成 root 密码hash (替换 "
+"yourpassword 为你要设置的密码) ，如果没有 shasum命令，可以安装对应操作系统的shasum 软件"
+msgstr ""
+
+#: ../../source/Security 43f176a7e9af4e8cabad28698d4caaec Audit Audit/Graylog
+#: Manual.rst:94
+msgid "如果用户不需要设置用户名和密码则可以使用我们默认设置好的用户名和密码即可"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:96
+#: e9b0d9d431224646b8357d14d5b1b8db
+msgid "用户名：hyperchain  密码：hyperchain"
+msgstr ""
+
+#: ../../source/Security 22796ef341cb4ae084b73228e3d1e982 Audit Audit/Graylog
+#: Manual.rst:98
+msgid ""
+"最后就剩mongodb ，mongodb 一般不建议修改任何配置，直接使用即可。如果需要配置mongodb 端口和配置, "
+"，可以修改mongod.conf 文件。mongodb 目录如下："
+msgstr ""
+
+#: ../../source/Security 137331c8048b4563827d40e3f981c333 Audit Audit/Graylog
+#: Manual.rst:100
+msgid "|image5|"
+msgstr ""
+
+#: ../../source/Security 9281636ca1854a75a1ee4b8c569f6689 Audit Audit/Graylog
+#: Manual.rst:423
+msgid "image5"
+msgstr ""
+
+#: ../../source/Security 217d5888cf264069b1fd764029df9be1 Audit Audit/Graylog
+#: Manual.rst:103
+msgid "2.1.2 启动说明"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:105
+#: d9aa6566ee6d4e1ca8e2ed3a3c13773b
+msgid "graylog平台启动需要有严格的启动依赖顺序，mongodb->elasticsticsearch->graylog， 启动需要遵循上述顺序启动。"
+msgstr ""
+
+#: ../../source/Security 9637eeb71e5943b6af7a4c0b650902dc Audit Audit/Graylog
+#: Manual.rst:107
+msgid ""
+"首先启动mongodb， 进入mongodb-linux-x86_64-rhel70-4.2.7 目录， 然后执行下面的命令。  --dbpath"
+" 指明了mongodb 的data目录，可以按照mongodb安装目录进行配置即可，默认不需要修改。"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:113
+#: aa98d53fecc24474b300c421017a71fc
+msgid ""
+"执行完成上述命令后，mongodb 就会在后台启动了，可以使用下面的命令查看mongod "
+"进程是否存在，如果存在说明启动成功，如果不存在说明启动失败，需要查看日志mongodb.log文件找原因"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:119
+#: f14554e58a66471b93023c51afec05ee
+msgid ""
+"接下来启动elasticsearch, 进入 elasticsearch-6.8.5目录，执行下面命令启动elasticsearch。-d "
+"参数表示启动elasticsearch 使用后台启动的方式"
+msgstr ""
+
+#: ../../source/Security 6935d0a397d54cc39b900e456ea4e528 Audit Audit/Graylog
+#: Manual.rst:125
+msgid ""
+"执行完成上述命令后， "
+"elasticsearch就会在后台启动了，可以使用下面的命令查看elasticsearch版本信息，如果存在说明启动成功，如果不存在说明启动失败，可以查看logs文件夹下的graylog.log"
+" 文件，通过日志判断错误类型然后根据下面的注意事项查找解决方案"
+msgstr ""
+
+#: ../../source/Security 744af8245554408583e89c295e6ebbb2 Audit Audit/Graylog
+#: Manual.rst:131
+msgid "接下来启动graylog, 进入graylog-3.3.0 目录，执行下面的命令启动graylog"
+msgstr ""
+
+#: ../../source/Security 97d0e304f17441c880e75b1f024e0cf9 Audit Audit/Graylog
+#: Manual.rst:137
+msgid ""
+"执行完成上述命令后， graylog就会在后台启动了，可以使用下面的命令查看graylog "
+"进程是否存在，如果存在说明启动成功，如果不存在说明启动失败，可以查看log文件夹下的graylog-server.log "
+"文件，通过日志判断错误类型然后根据下面的安装易出现问题介绍查找解决方案。"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:143
+#: d8bbeafe6ae4401b80e4955cf457dd0f
+msgid "查看log文件夹下的graylog-server.log文件 如果出现了下图所示，就说明graylog启动成功"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:145
+#: bf66402508ed4a1c97bb707149b629b8
+msgid "|image6|"
+msgstr ""
+
+#: ../../source/Security 34c21608a3dc4318a96f573377bef5d0 Audit Audit/Graylog
+#: Manual.rst:424
+msgid "image6"
+msgstr ""
+
+#: ../../source/Security 9a573e05d604458389ab1cbb4b48347a Audit Audit/Graylog
+#: Manual.rst:148
+msgid "2.1.3 graylog页面设置"
+msgstr ""
+
+#: ../../source/Security 83763ec6592d424898f3ff7c0eeb0d0a Audit Audit/Graylog
+#: Manual.rst:150
+msgid ""
+"昨晚上述配置设置后，基本就可以启动成功了。但是此时graylog还不能接收消息，需要在graylog "
+"页面上进行一些额外设置才能够使其接收我们的审计消息。"
+msgstr ""
+
+#: ../../source/Security 0f62d4b5fb61498383c942762721fb94
+#: 8ad42df230c44c6ead29101abfa22d32 Audit Audit/Graylog Manual.rst:152
+#: Manual.rst:351
+msgid ""
+"在网页上访问 `http://127.0.0.1:9000/ <http://172.22.67.51:9000/>`_ ， "
+"ip地址是graylog平台所部署的服务器地址,端口是graylog默认端口为9000，可以看到如下界面，提示登录"
+msgstr ""
+
+#: ../../source/Security 0c358093100f4530a47ff725c17d8197 Audit Audit/Graylog
+#: Manual.rst:154
+msgid "|image7|"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:425
+#: e4c86c5df6ff426f8976d1f8d9541658
+msgid "image7"
+msgstr ""
+
+#: ../../source/Security 779d976ba29240899e840471fc536219 Audit Audit/Graylog
+#: Manual.rst:156
+msgid "此时我们使用用户名和密码都是hyperchain进行登录即可。"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:158
+#: cf1352ef0c974583b1bceef7297dd741
+msgid ""
+"首先设置input信息，点击input即可进行进入input创建页面。默认情况下我们已经创建好了一个input, "
+"用户无需创建新的input，只需要对其进行设置即可"
+msgstr ""
+
+#: ../../source/Security 462d0aa61c544e8ea8489d4bf2a20006 Audit Audit/Graylog
+#: Manual.rst:160
+msgid "|image8|"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:426
+#: cad8a60a52b34b9d9a844b90c05db388
+msgid "image8"
+msgstr ""
+
+#: ../../source/Security 8c8fd6e9ab7d4966b4ce3108d7d346a5 Audit Audit/Graylog
+#: Manual.rst:162
+msgid "点击Edit input 按钮，"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:164
+#: d27310e5c7564728a0a76ad5acf5f409
+msgid "|image9|"
+msgstr ""
+
+#: ../../source/Security 37adbec6bae6422f9a2146c150a24826 Audit Audit/Graylog
+#: Manual.rst:427
+msgid "image9"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:166
+#: ef3455f733624f2c9671d40151400f1f
+msgid ""
+"一般情况下只需要进行节点的选择即可，因为只有elasticsearch一个节点，也可以直接选择为global 。 "
+"**如果需要变更端口，那么变更的端口需要和** hyperchain **平台设置的graylog地址端口匹配**"
+msgstr ""
+
+#: ../../source/Security 056df29df6da463fb33873bbd9e5d26b Audit Audit/Graylog
+#: Manual.rst:168
+msgid "|image10|"
+msgstr ""
+
+#: ../../source/Security 971abc785b6f4d758bbc46e9a20097b7 Audit Audit/Graylog
+#: Manual.rst:428
+msgid "image10"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:170
+#: ac59b77f5c204118a544e9c6010cd0ec
+msgid "核对hyperchain所有节点的配置文件，确保ip和端口和graylog匹配"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:172
+#: f1765b3cee5e49a1811060eaf4ecd93c
+msgid "|image11|"
+msgstr ""
+
+#: ../../source/Security 683df545c78c4c87a02757bc3c9a7d2e Audit Audit/Graylog
+#: Manual.rst:429
+msgid "image11"
+msgstr ""
+
+#: ../../source/Security 2648078a1d8a40fd953c93b9c1a37855 Audit Audit/Graylog
+#: Manual.rst:174
+msgid "做完上述操作后就可以使用hyperchain发送审计日志到graylog平台了"
+msgstr ""
+
+#: ../../source/Security 6a5bad1d5b094aa7a20422410f26f529 Audit Audit/Graylog
+#: Manual.rst:177
+msgid "2.1.4 graylog平台停止"
+msgstr ""
+
+#: ../../source/Security 0156563012c049f7b8d8ee0ebc7ee637 Audit Audit/Graylog
+#: Manual.rst:179
+msgid "graylog平台停止 需要依次停止graylog、elasticsearch、mongodb 3个组件，具体操作如下"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:181
+#: cfb91eae815742ee8e234067b34aa376
+msgid "停止graylog,  进入graylog-3.3.0 目录，执行下面的命令停止graylog, 不能暴力停止，否则会丢失审计数据"
+msgstr ""
+
+#: ../../source/Security 1bb9e3360f674dd8af882c1041938261 Audit Audit/Graylog
+#: Manual.rst:187
+msgid "停止elasticsearch, elasticsearch停止比较简单，直接找到对应的pid, 然后杀死即可"
+msgstr ""
+
+#: ../../source/Security 5468966e86af411682c3a840bd7da6e5 Audit Audit/Graylog
+#: Manual.rst:193
+msgid "停止mongodb，mongodb停止比较简单，直接找到对应的pid, 然后杀死即可"
+msgstr ""
+
+#: ../../source/Security 7bebb66aa7534d45bc3b6d5d58cc7336 Audit Audit/Graylog
+#: Manual.rst:200
+msgid "2.2 集群版部署"
+msgstr ""
+
+#: ../../source/Security 4ec70cff621e495bb03cfefee41fb56d Audit Audit/Graylog
+#: Manual.rst:202
+msgid ""
+"集群部署比较麻烦，而且没有固定的架构和服务器组合模式，一切都需要根据实际的资源情况以及业务量决定，这里为了简单说明起见，推荐使用 "
+"下图的部署架构，如果有更复杂的业务需求，可以查看graylog官方的介绍文档 "
+"`__https://docs.graylog.org/en/3.3/pages/architecture.html__ "
+"<https://docs.graylog.org/en/3.3/pages/architecture.html>`_ 进行更大规模的架构部署"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:204
+#: cf8cb8720036452d95fcc2e27f252426
+msgid "|image12|"
+msgstr ""
+
+#: ../../source/Security 6b8a7dfb497046599b0fbb1c531c4bb1 Audit Audit/Graylog
+#: Manual.rst:430
+msgid "image12"
+msgstr ""
+
+#: ../../source/Security 88dfe06619594c3797957e57ef906e55 Audit Audit/Graylog
+#: Manual.rst:206
+msgid ""
+"graylog多节点部署架构说明： "
+"多节点架构推荐将每个组件分散在不同的服务器上，来达到最大的性能。但是这种情况下需要机器数量较多，而且维护比较麻烦。上图展示了 "
+"3节点的情况。分别为3个Elasticsearch、3个graylog、3个mongoDB 的情况。 "
+"应用数据通过负载均衡器均衡地分发到graylog 3个节点上， graylog3节点又分别与elasticsearch 集群进行数据交换。 "
+"3个mongoDB组件 "
+"用来存储所有的graylog的元数据信息和配置信息，这样一个简单的集群模式就配置完成了。该架构图并没有规定每个组件被放置在哪个物理机器上，具体组合情况可以根据机器资源以及业务需要进行更合理的配置使用。"
+msgstr ""
+
+#: ../../source/Security 21be68ce1f724079a4d6dd6eb2c8f421 Audit Audit/Graylog
+#: Manual.rst:209
+msgid "2.2.1 安装说明"
+msgstr ""
+
+#: ../../source/Security 51aef934dbeb4fac86f48a6f44e10bf1 Audit Audit/Graylog
+#: Manual.rst:211
+msgid "本文推荐使用 3节点的配置使用，并且将elasticsearch 与graylog和mongodb部署在同一台物理机器上，需要3台机器进行配置。"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:213
+#: cd993cd2ab784f00a95dfb6fc47b01f4
+msgid ""
+"为了方便介绍，这里本文档使用的三节点ip地址  分别为：172.22.67.51、172.22.67.51、172.22.67.51。 "
+"默认172.22.67.51 为主节点。"
+msgstr ""
+
+#: ../../source/Security 0df3e846dcba4a5e97696dff00da541b Audit Audit/Graylog
+#: Manual.rst:217
+msgid ""
+"下载得到 graylog-elasticsearch-mongodb.tar 压缩包，将该压缩包分别上传到对应部署的3台服务器上"
+"，然后分别使用下面命令进行解压得到graylog-elasticsearch-mongodb 文件夹，文件夹里面包含了 "
+"elasticsearch-6.8.5、graylog-3.3.0、mongodb-linux-x86_64-rhel70-4.2.7三个组件"
+msgstr ""
+
+#: ../../source/Security 4504255265f64cbe93d54cbe1256c92b Audit Audit/Graylog
+#: Manual.rst:223
+msgid ""
+"首先配置mongodb集群，首先分别进入3个节点的mongodb-linux-x86_64-rhel70-4.2.7目录. "
+"mogondb的配置文件为mongod.conf 文件, 找到之后配置文件之后，修改每个节点的mongodb配置文件为下面所示::"
+msgstr ""
+
+#: ../../source/Security 30ae607c8caf4d439d3b522a4f4584fc Audit Audit/Graylog
+#: Manual.rst:241
+msgid ""
+"配置文件修改完成之后需要做mongodb的初始化工作，目的是将所有节点进行联通。初始化mongodb "
+"集群前需要启动所有机器上的mongodb节点，启动步骤跟启动单机版mongodb相同。 启动完毕所有的mongodb "
+"节点之后。然后选取一个节点作为主节点，这里选择1号节点作为主节点。然后主节点上操作，将其他的节点加入集群中，具体操作步骤如下："
+msgstr ""
+
+#: ../../source/Security 5646f635519c4070b8c32e50c4258373 Audit Audit/Graylog
+#: Manual.rst:243
+msgid "|image13|"
+msgstr ""
+
+#: ../../source/Security 932cb50dbf0e4d54abff38e532d78c3e Audit Audit/Graylog
+#: Manual.rst:431
+msgid "image13"
+msgstr ""
+
+#: ../../source/Security 4365f8b8db6847ceac0c69f079e6cfa7 Audit Audit/Graylog
+#: Manual.rst:245
+msgid "进入1号节点的mongodb目录执行下面命令，进入mongo 控制台"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:251
+#: b24993115f794bc88a4b1daabf529ca0
+msgid "|image14|"
+msgstr ""
+
+#: ../../source/Security 8295ed295ecc4d71a704f287028e08ae Audit Audit/Graylog
+#: Manual.rst:432
+msgid "image14"
+msgstr ""
+
+#: ../../source/Security 3202849f2f0c48a88d3c455f3234f4b7 Audit Audit/Graylog
+#: Manual.rst:253
+msgid "进入控制台之后，接下来初始化集群信息，执行下面的命令， 进入集群初始化，在实际部署的时候，需要将各个节点的ip进行替换"
+msgstr ""
+
+#: ../../source/Security 8de24e18e7f54d7f96e90e018bae5ba3 Audit Audit/Graylog
+#: Manual.rst:266
+msgid "执行完成上述命令后，控制台会显示执行完成后的说明信息"
+msgstr ""
+
+#: ../../source/Security 8bf8877169d94884aa0fdda30c0b4084 Audit Audit/Graylog
+#: Manual.rst:268
+msgid "|image15|"
+msgstr ""
+
+#: ../../source/Security 300af8a506b747a59e200d5a2df4b04b Audit Audit/Graylog
+#: Manual.rst:433
+msgid "image15"
+msgstr ""
+
+#: ../../source/Security 98b6fc1d138e4518b6c7bfbb711f1b1e Audit Audit/Graylog
+#: Manual.rst:270
+msgid "我们可以继续执行下面的命令进行查看各个节点的配置信息"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:276
+#: a82a7d1a33304b84ad37cc05420c83ff
+msgid "|image16|"
+msgstr ""
+
+#: ../../source/Security 8c8fdd8355af43d4a56dcab34ea5a4d5 Audit Audit/Graylog
+#: Manual.rst:434
+msgid "image16"
+msgstr ""
+
+#: ../../source/Security 593d7696cda44b0aa321b26ab4a8560d Audit Audit/Graylog
+#: Manual.rst:278
+msgid ""
+"至此mongodb 集群就已经配置完成，并且已经启动了， "
+"如果后续再次重启，只需要停止，然后像启动单节点mongodb一样分别启动即可，无需再次初始化集群信息。"
+msgstr ""
+
+#: ../../source/Security 61e235597ab2410f845d9a1effc11053 Audit Audit/Graylog
+#: Manual.rst:280
+msgid ""
+"接下来配置elasticsearch 集群信息, 进入每个节点的elasticsearch-6.8.5 "
+"目录下面的config目录修改每个elasticsearch 节点的配置文件。"
+msgstr ""
+
+#: ../../source/Security 85eb3dec9e104262a2e9df537f90bb1a Audit Audit/Graylog
+#: Manual.rst:282
+msgid "在每个节点的elasticsearch.yaml 文件最后一样分别添加如下信息, 也可以修改原有的配置。"
+msgstr ""
+
+#: ../../source/Security 7f50255e13024e6796fc34cd90f5d2a9 Audit Audit/Graylog
+#: Manual.rst:304
+msgid "按照上面说明修改完每个节点elasticsearch.yml配置文件后，就完成了elasticsearch 的配置，接下来开始配置graylog。"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:306
+#: dd1c94caeae0496d9844751aa7e50ffc
+msgid ""
+"分别进入各节点的graylog-3.3.0 目录, 删除各节点下面的graylog-server-node-id 文件， "
+"这个文件是用来唯一标识graylog的身份的，在集群中每个graylog应该有不同的身份，所以不能够再使用默认的统一的身份，应让graylog重新生成该文件，并且将文件路径改为绝对路径，方便下次重启直接使用"
+msgstr ""
+
+#: ../../source/Security 3c56a25878284605bffcddbfdc15c2df Audit Audit/Graylog
+#: Manual.rst:308
+msgid "开始修改graylog.conf 配置文件， 将graylog.conf 文件中的下面项进行对应的修改, 尤其要注意这其中有两个需要注释掉::"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:311
+#: b4c32cf0dfa144f6ad0dc0636e22ac42
+msgid ""
+"is_master = true #这里需要将相对路径替换为绝对路径 node_id_file = /data/yangp/graylog-"
+"elasticsearch-mongodb/graylog-3.3.0/graylog-server-node-id "
+"elasticsearch_hosts = "
+"http://172.22.67.51:9200,http://172.22.67.52:9200,http://172.22.67.53:9200"
+" mongodb_uri = "
+"mongodb://172.22.67.51:27017,172.22.67.52:27017,172.22.67.53:27017/graylog"
+" #elasticsearch_shards = 1 "
+"(需要将这两行注释掉，因为这个是单节点情况下的配置，集群模式为了更好的性能,不应该使用该配置) #elasticsearch_replicas ="
+" 0"
+msgstr ""
+
+#: ../../source/Security 34d419e5c0914e9ab9ebea6deefa52a1 Audit Audit/Graylog
+#: Manual.rst:319
+msgid ""
+"#node2 graylog.conf 配置 is_master = false #这里需要将相对路径替换为绝对路径 node_id_file ="
+" /data/yangp/graylog-elasticsearch-mongodb/graylog-3.3.0/graylog-server-"
+"node-id elasticsearch_hosts = "
+"http://172.22.67.51:9200,http://172.22.67.52:9200,http://172.22.67.53:9200"
+" mongodb_uri = "
+"mongodb://172.22.67.51:27017,172.22.67.52:27017,172.22.67.53:27017/graylog"
+" #elasticsearch_shards = 1 "
+"(需要将这两行注释掉，因为这个是单节点情况下的配置，集群模式为了更好的性能,不应该使用该配置) #elasticsearch_replicas ="
+" 0"
+msgstr ""
+
+#: ../../source/Security 3e6bb15212474d298fe23ea67f1810ee Audit Audit/Graylog
+#: Manual.rst:328
+msgid ""
+"#node3 graylog.conf 配置 is_master = false #这里需要将相对路径替换为绝对路径 node_id_file ="
+" /data/yangp/graylog-elasticsearch-mongodb/graylog-3.3.0/graylog-server-"
+"node-id elasticsearch_hosts = "
+"http://172.22.67.51:9200,http://172.22.67.52:9200,http://172.22.67.53:9200"
+" mongodb_uri = "
+"mongodb://172.22.67.51:27017,172.22.67.52:27017,172.22.67.53:27017/graylog"
+" #elasticsearch_shards = 1 "
+"(需要将这两行注释掉，因为这个是单节点情况下的配置，集群模式为了更好的性能,不应该使用该配置) #elasticsearch_replicas ="
+" 0"
+msgstr ""
+
+#: ../../source/Security 6c136bfd66184afc861dff1e5e995c86 Audit Audit/Graylog
+#: Manual.rst:337
+msgid "做完上述操作后，集群的配置就已经完成了，接下来就可以启动了"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:340
+#: cf48ada697f94c90915a2b24484d557a
+msgid "2.2.2 启动说明"
+msgstr ""
+
+#: ../../source/Security 76c8a01f236644cfbdf24c0b0d2b6b4b Audit Audit/Graylog
+#: Manual.rst:342
+msgid "集群的启动和单节点的启动命令是一样的，严格遵守各个组件的启动顺序，节点之间并没有启动先手顺序之分。"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:344
+#: e063887fa26c4a4a92c067f7657a2b51
+msgid "在每个节点按照单机那种命令依次启动集群中的所有节点即可完成启动。"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:347
+#: d3ad24ffdb7745a889950356bb104aef
+msgid "2.2.3 graylog页面设置"
+msgstr ""
+
+#: ../../source/Security 7b353c1414974ab8881877bb58e6beeb Audit Audit/Graylog
+#: Manual.rst:349
+msgid ""
+"graylog集群配置完成后，就可以启动graylog页面了，因为我们启动了三个graylog节点，所以可以访问三者中间的任意一个graylog即可查看我们的审计数据，无需访问三个graylog节点进行查看,"
+" 这里我们选择172.22.67.51 这台机器进行页面查看"
+msgstr ""
+
+#: ../../source/Security 0fd6981a6f514258ae74972829783853 Audit Audit/Graylog
+#: Manual.rst:353
+msgid "|image17|"
+msgstr ""
+
+#: ../../source/Security 12f6fa1562a64bec9d56869880134402 Audit Audit/Graylog
+#: Manual.rst:435
+msgid "image17"
+msgstr ""
+
+#: ../../source/Security 28bdaa7e39f342b7bcafc2cd05c2de99 Audit Audit/Graylog
+#: Manual.rst:355
+msgid "跟单节点设置一样，首先设置input信息"
+msgstr ""
+
+#: ../../source/Security 8d618808c7f14cdb813c154cfad1efa2 Audit Audit/Graylog
+#: Manual.rst:357
+msgid "|image18|"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:436
+#: c6fcd4f74075404ab889c29f73fe4fb1
+msgid "image18"
+msgstr ""
+
+#: ../../source/Security 012c68a5b1274b6cb0b781302fe0de7c Audit Audit/Graylog
+#: Manual.rst:359
+msgid "点击Edit Input"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:361
+#: a8f27bac593b4e4a9e32d8b99827c7db
+msgid "|image19|"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:437
+#: dea2e53ddcc14d31a4b4c78ae438e653
+msgid "image19"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:363
+#: a9bfe65cdf2745e881ffe19883648ec7
+msgid "这里需要将Global 勾选，这样就可以在任意一个graylog页面观测到发送到所有graylog的审计信息"
+msgstr ""
+
+#: ../../source/Security 11bfe76110234f18af8a31a13be987a6 Audit Audit/Graylog
+#: Manual.rst:365
+msgid "|image20|"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:438
+#: d896d092e9c04fafad062b3b6169966f
+msgid "image20"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:367
+#: ee909571dbb64d01bb3a6bdb5e431346
+msgid "input设置完成之后, 会发现 已经有3个input在running呢"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:369
+#: f8316ca6939a4a9e87f8c5132ee1b99e
+msgid "|image21|"
+msgstr ""
+
+#: ../../source/Security 59153520581d48708b43bd3111cb0094 Audit Audit/Graylog
+#: Manual.rst:439
+msgid "image21"
+msgstr ""
+
+#: ../../source/Security 594c35a7b3f14d368f14bb0359bebce7 Audit Audit/Graylog
+#: Manual.rst:371
+msgid "至此，graylog集群的所有配置就完成了，接下来核对hyperchain区块链平台的配置"
+msgstr ""
+
+#: ../../source/Security 762be201a0b64a7b822c77e6454d0dc9 Audit Audit/Graylog
+#: Manual.rst:373
+msgid "|image22|"
+msgstr ""
+
+#: ../../source/Security 285c91a209b94b759dfe86f71e053187 Audit Audit/Graylog
+#: Manual.rst:440
+msgid "image22"
+msgstr ""
+
+#: ../../source/Security 33a1059c39454478aec757307389ad0c Audit Audit/Graylog
+#: Manual.rst:375
+msgid "确保hyperchain配置文件的节点信息和graylog集群地址列表一致即可。"
+msgstr ""
+
+#: ../../source/Security 6748ddbead004bccaa9d8ad3b07e9513 Audit Audit/Graylog
+#: Manual.rst:377
+msgid "接下来就可以通过hyperchain发送审计日志到区块链平台了。"
+msgstr ""
+
+#: ../../source/Security 006054ea273a44839e1a1c0d6f106c35 Audit Audit/Graylog
+#: Manual.rst:380
+msgid "2.2.4 graylog平台停止"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:382
+#: a4a7e2ae08944c5083697a2a68786f5b
+msgid "集群的停止和单机的停止是一样的，在每个节点按照单机那种命令依次停止集群中的所有节点即可完成集群的停止。"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:385
+#: c25e5f5a831f4f29b97e39d29b437869
+msgid "3. 注意事项"
+msgstr ""
+
+#: ../../source/Security 7d48d391499c4cb0b1758f8fc61aa3d1 Audit Audit/Graylog
+#: Manual.rst:387
+msgid "启动elasticsearch 的时候，出现下面的错误"
+msgstr ""
+
+#: ../../source/Security 5422a67417ea4e419a44f229b145c855 Audit Audit/Graylog
+#: Manual.rst:389
+msgid "|image23|"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:441
+#: a51b746fa542493d97d9af12df4fc3ea
+msgid "image23"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:391
+#: b8db306019994d4dacc2c07819faf4d3
+msgid ""
+"出现这个问题是java环境变量没有配置，graylog 和elasticsearch启动依赖java, 所以需要配置java环境， "
+"注意：jdk需要配置8-11之间的，太低版本或者太高版本都不支持。"
+msgstr ""
+
+#: ../../source/Security 2555f599046146a6bc2af8eab4e3e254 Audit Audit/Graylog
+#: Manual.rst:393
+msgid ""
+"elasticsearch 启动失败，进入elasticsearch-6.8.5 文件夹下的 logs文件，查看graylog.log 发现出现 "
+"bootstrap checks failed,"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:395
+#: ea93bea9af0e45b397d10de385e1ed87
+msgid "|image24|"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:442
+#: ce6b08915922425ab7fdb28efed531dd
+msgid "image24"
+msgstr ""
+
+#: ../../source/Security 59acb2cb81a84359814e2a85287a2afb Audit Audit/Graylog
+#: Manual.rst:397
+msgid ""
+"出现这个错误的原因是因为linux系统的最大句柄数默认为65530， 而elasticsearch "
+"所需要的文件句柄数超过了该限制，所以需要修改linux系统的最大的句柄数，修改方法如下::"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:401
+#: cb27cfda2a9f4de3ab067dd15479724f
+msgid "在最后一行添加一行"
+msgstr ""
+
+#: ../../source/Security 56de20a7e7e64206b11f4c0dc85ddd92 Audit Audit/Graylog
+#: Manual.rst:403
+msgid "vm.max_map_count~~=~~262144"
+msgstr ""
+
+#: ../../source/Security 7732daa0683c4b259f7f30fe228ed0bb Audit Audit/Graylog
+#: Manual.rst:405
+msgid "然后执行 下面的命令重新载入配置文件::"
+msgstr ""
+
+#: ../../source/Security 197ce7565dd04010af110650115e9826 Audit Audit/Graylog
+#: Manual.rst:409
+msgid ""
+"`Mongodb 启动报错:\"/sys/kernel/mm/transparent_hugepage/enabled is "
+"'always'\"_张馨如的专栏-CSDN博客 "
+"<https://blog.csdn.net/u013075468/article/details/51471033>`_"
+msgstr ""
+
+#: ../../source/Security Audit Audit/Graylog Manual.rst:416
+#: d949d6d5dc4b44a7ae5fc75d3e5c76fa
+msgid ""
+"`MongDB 启动警告 WARNING: soft rlimits too low_KK 笔记：专注数据【精通SQL Server "
+"合作请私信】-CSDN博客 "
+"<https://blog.csdn.net/kk185800961/article/details/45613267>`_"
+msgstr ""
+

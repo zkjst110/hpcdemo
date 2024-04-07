@@ -1,0 +1,164 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Chain 8b8449ffa7df4461a4a31befa9bdbe0f Authority Life
+#: Management.rst:4 Management.rst:7 Management/Account
+#: da03c156ae1f4043a2833de3d09e9d50
+msgid "账户生命周期管理"
+msgstr ""
+
+#: ../../source/Chain Authority Life Management.rst:10 Management/Account
+#: aa3d6807d5564981b4e39f997e9d55c2
+msgid "功能描述"
+msgstr ""
+
+#: ../../source/Chain 6e3bc5fdc203465d8b5044485c7dd85e Authority Life
+#: Management.rst:12 Management/Account
+msgid "账户生命周期管理提供账户注册和注销的功能，另外提供了查询账户状态的接口。（本文描述的账户指用户账户，非合约账户）。"
+msgstr ""
+
+#: ../../source/Chain 1164548808944722a0f8aae029223881
+#: 82c9d49c0ce84882a75bcbcea7c643cc Authority Life Management.rst:15
+#: Management.rst:82 Management/Account
+msgid "账户注册"
+msgstr ""
+
+#: ../../source/Chain 88e753dbaf554ab393b66bc53935129c Authority Life
+#: Management.rst:17 Management/Account
+msgid ""
+"账户注册接收两个参数，一个参数为注册的账户地址address，一个参数为账户对应的idcert，用于注册证书与账户的对应关系，只有链级管理员账户才有权限进行此操作。链级管理员的相关说明参考"
+" :ref:`链级角色管理 <chain-role-manage>`"
+msgstr ""
+
+#: ../../source/Chain 4db83987871947489dfee01f2ce3ee7f Authority Life
+#: Management.rst:19 Management/Account
+msgid ""
+"注册时使用的证书对应的地址需要为账户地址。如果用于注册的地址在注册前在链上已经存在（作为交易的from或to），则对账户地址没有要求。如果用于注册的地址在注册前在链上不存在，则需要满足，注册的地址以"
+" `0xffffffffff` 开头。"
+msgstr ""
+
+#: ../../source/Chain 243a78db58cb49068a15791e5c2a72ac Authority Life
+#: Management.rst:22 Management.rst:118 Management/Account
+#: a40000d20c77486bb808dec3a86473a3
+msgid "账户注销"
+msgstr ""
+
+#: ../../source/Chain 9a3e642b0309437c975d9067112d2a0f Authority Life
+#: Management.rst:24 Management/Account
+msgid "账户注销接收两个参数，一个参数为要注销的账户地址address，一个参数为注销账户时使用的sdkcert，用于注销账户地址，只有链级管理员账户才有权限进行此操作。"
+msgstr ""
+
+#: ../../source/Chain Authority Life Management.rst:26 Management/Account
+#: a4d26fe88f3040d39d7a5ec9fb6e3a80
+msgid "注销时，被注销的账户需要为证书账户，即注册了证书与此账户的对应关系且没有被注销，使用的sdkcert需要与被注销的账户地址对应的证书是同一ca机构签发的。"
+msgstr ""
+
+#: ../../source/Chain 7a7d17df27b34d3b92302ccfc84be66c Authority Life
+#: Management.rst:29 Management.rst:153 Management/Account
+#: e38aae015df0497899a20be1e52fae6c
+msgid "查询账户状态"
+msgstr ""
+
+#: ../../source/Chain 878f8d101f174608b192399ac23b5a70 Authority Life
+#: Management.rst:31 Management/Account
+msgid "用户可通过提供的查询账户状态的接口查询账户的状态。账户可能的状态如下："
+msgstr ""
+
+#: ../../source/Chain 3f2d3012584c40c48b5db7ef5222ec7f Authority Life
+#: Management.rst:33 Management/Account
+msgid "normal 即普通账户（没有注册证书与账户对应关系的账户）"
+msgstr ""
+
+#: ../../source/Chain 578f2e8e13df48959cd89559467f1746 Authority Life
+#: Management.rst:35 Management/Account
+msgid "cert 即证书账户（注册了证书与账户对应关系且没有被注销的账户）"
+msgstr ""
+
+#: ../../source/Chain Authority Life Management.rst:37 Management/Account
+#: ff8e4a9a91444666b8204810cd7deb3b
+msgid "abandon 即注销账户（注册了证书与账户对应关系且被注销的账户）"
+msgstr ""
+
+#: ../../source/Chain 35ef066c1c4441aa91c624e835c96e92 Authority Life
+#: Management.rst:40 Management/Account
+msgid "litesdk使用说明"
+msgstr ""
+
+#: ../../source/Chain Authority Life Management.rst:43 Management/Account
+#: e03317ba2da548b990cf1409c3302534
+msgid "账户生命周期管理接口"
+msgstr ""
+
+#: ../../source/Chain Authority Life Management.rst:45 Management/Account
+#: f5c7ad20af534b7ab091a3a2f3e1b4f7
+msgid ""
+"在litesdk中，提供了构造账户生命周期管理（注册和注销）操作的构造器 `AccountBuilder` ，其中提供了 `register` 和"
+" `abandon` 方法，分别用于构造 `AccountContract` 合约中的 `Register` 和 `Abandon` "
+"方法，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Life Management.rst:65 Management/Account
+#: ec108266afbc446196c72a1c34851dc9
+msgid ""
+"账户生命周期管理的操作创建好之后，使用 `BVMBuilder` 提供的 `invoke` 方法构造bvm的交易体，使用 `build` "
+"方法构造出交易 `transaction` ，并为交易设置 `txVersion` 并使用 `sign` 方法签名，得到最终可以发送执行的交易体。"
+msgstr ""
+
+#: ../../source/Chain Authority Life Management.rst:68 Management/Account
+#: de5987eb36854f02956c7aef82b469dc
+msgid "账户状态查询接口"
+msgstr ""
+
+#: ../../source/Chain Authority Life Management.rst:70 Management/Account
+#: a59eff0a407f4e8ea808bdb3e43c9e2c
+msgid "在litesdk的AccountService中提供了getStatus接口，用于查询账户状态，其接口如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Life Management.rst:76 Management/Account
+#: cab7ff4ffcdc421da9b6b4be4c2e1aad
+msgid "`getStatus` 方法可以查询普通账户的状态，需要传一个普通 **账户地址** 为参数。"
+msgstr ""
+
+#: ../../source/Chain 27ea1b9aab474dee96a703772a4b3fc0 Authority Life
+#: Management.rst:79 Management/Account
+msgid "litesdk使用"
+msgstr ""
+
+#: ../../source/Chain Authority Life Management.rst:84 Management/Account
+#: d9b14703c2b14877922a8700a78b3ee3
+msgid ""
+"账户注册方法接收两个参数，一个参数为注册的账户地址address，一个参数为账户对应的idcert，用于注册证书与账户的对应关系。。使用 "
+"`HashBuilder` 提供的 `set` 方法构造一个 `BuiltinOperation` ，然后使用 `BVMBuilder` 提供的 "
+"`invoke` 方法设置参数，使用 `build` 方法构造 `Transaction` ，然后使用 `ContractService` 提供的"
+" `invoke` 方法构造请求，最后将请求发出拿到响应结果，其示例如下::"
+msgstr ""
+
+#: ../../source/Chain 999b30859bbb496f82816a067156f1cf Authority Life
+#: Management.rst:120 Management/Account
+msgid "账户注销方法接收两个参数，一个参数为要注销的账户地址address，一个参数为注销账户时使用的sdkcert，用于注销账户地址。其示例如下::"
+msgstr ""
+
+#: ../../source/Chain 644525c76179428e947aa002d25a6bd6 Authority Life
+#: Management.rst:155 Management/Account
+msgid "查询账户状态接收一个参数，为账户地址，其示例如下::"
+msgstr ""
+

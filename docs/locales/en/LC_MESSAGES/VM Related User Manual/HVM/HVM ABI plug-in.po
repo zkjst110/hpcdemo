@@ -1,0 +1,839 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: e07e6d8b9bde4bbb9e78ce0112bdee2e plug-in.rst:4
+msgid "HVM ABI插件使用手册"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: e2762052fed54a2da62e063d8a517fa3 plug-in.rst:7
+msgid "概述"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: ddcf294a4528428393ed9c53bd13039f plug-in.rst:9
+msgid "HVM提供了一种maven插件hvm-abi，插件目前包含以下功能："
+msgstr ""
+
+#: ../../source/VM 3f2954eab68843ecaaca703f1b5f1554 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:11
+msgid "ABI生成：插件可以生成HVM合约的ABI文件。用户可以通过ABI在SDK中生成合约执行的payload，进行合约的调用。"
+msgstr ""
+
+#: ../../source/VM 4df36b3ee17a4ff5a1e932969f735bd4 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:13
+msgid "字节码增强：对原始hvm合约的字节码进行增强处理，从而让合约中的storefield实现懒加载功能（指当合约执行过程中使用到某个storefield时，hvm执行引擎会从账本中读取数据），提高合约直接调用的性能。"
+msgstr ""
+
+#: ../../source/VM 39ee7276a2a84b9ba8b4af9c1367ef4b ABI Manual/HVM/HVM Related
+#: User plug-in.rst:16
+msgid "hvm-abi获取"
+msgstr ""
+
+#: ../../source/VM 2794b4c701ff4e5785954febd67fc44f ABI Manual/HVM/HVM Related
+#: User plug-in.rst:18
+msgid "目前hvm-abi并没有发布到公共maven仓库中，如果需要使用有以下两种方法："
+msgstr ""
+
+#: ../../source/VM 15afb7a52c6a4528be055b0422200c8b ABI Manual/HVM/HVM Related
+#: User plug-in.rst:20
+msgid "联系基础平台部的运维人员获取hvm-abi的jar包，放入到本地的maven仓库中"
+msgstr ""
+
+#: ../../source/VM 6d5ef959989346d79b4ef69824fa66e6 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:22
+msgid "如果在趣链内网环境下，可以在内网中的maven仓库获取。"
+msgstr ""
+
+#: ../../source/VM 77fbdcd9d5b54ad1be9129769a0853e6 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:26
+msgid "1. 使用hvm-abi插件生成abi文件"
+msgstr ""
+
+#: ../../source/VM 6e2e18c7bbc34488b4eb20893c283971 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:28
+msgid "用户可以在自己的HVM合约项目的pom.xml文件中加入， **其中configuration的部分需要根据合约实际情况进行修改** 。"
+msgstr ""
+
+#: ../../source/VM 1691840078b4416abe2626e2a488c5bb ABI Manual/HVM/HVM Related
+#: User plug-in.rst:53
+msgid "其中"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: b9a693700c8b4d53bbc0c1c82758cda6 plug-in.rst:55
+msgid "<jarFile> 中是hvm合约的jar包路径"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: d586eb70b6154a15939ed8266e805bdd plug-in.rst:57
+msgid "<invokeBeanPath> 是hvm合约的class字节码文件夹路径"
+msgstr ""
+
+#: ../../source/VM 133e6e1d1530453ca952929a57171f69 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:59
+msgid ""
+"<invokeBeanPackages>中包含很多<param>标签，每个<param>标签中都是一个实现 *BaseInvoke* "
+"接口的类的全限定名。"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: aac5fae27cf44be1ad1861d088ce0701 plug-in.rst:61
+msgid "<outputFile>中存放的是生成的.abi的存放目录"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: a271445d52614fedaf3098684ed41654 plug-in.rst:63
+msgid "在生成合约jar文件后，执行以下命令可以生成hvm.abi文件。"
+msgstr ""
+
+#: ../../source/VM 075d6c5c54724a2eb7702afc7f2a3825 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:70
+msgid "abi文件格式"
+msgstr ""
+
+#: ../../source/VM 4ed53091923e4e758dfe4adbab45e9ce ABI Manual/HVM/HVM Related
+#: User plug-in.rst:72
+msgid "HVM目前提供两种合约调用的方式：通过invokeBean和直接调用，abi文件通过一种 `BeanAbi` 的类型保存调用所需的基本信息："
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: b8fa5829a9f04abb9e6e5f8ab6ed3a5a plug-in.rst:74
+msgid "invokeBean：扫描<invokeBeanPackages>中所有的类文件，每一个invokeBean对应一个 `BeanAbi` 。"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: e6a87a4a4a844c6f8adbe58c3221dc97 plug-in.rst:76
+msgid "直接调用：扫描合约体的 **除构造方法和钩子方法以外的** `public` **方法** ，每一个方法对应一个 `BeanAbi` 。"
+msgstr ""
+
+#: ../../source/VM 3c1168eb07a34fe8a5adb0ff2d29f779 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:79
+msgid "entry"
+msgstr ""
+
+#: ../../source/VM 3bb8606a18f941bcad08cd2dc5e3a4e6 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:81
+msgid "hvm.abi中通过一个 `entry` 的结构体表示一个变量，其结构如下："
+msgstr ""
+
+#: ../../source/VM 8d4f77f9da8f4fa28e9ca0c496e04e9c ABI Manual/HVM/HVM Related
+#: User plug-in.rst:83
+msgid "name： 变量名称"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: f3bfe3225d4b43ae8fb71c18e57103a3 plug-in.rst:85
+msgid "type：变量类型"
+msgstr ""
+
+#: ../../source/VM 1cccb56d4e37406faae5731d2f2882ae ABI Manual/HVM/HVM Related
+#: User plug-in.rst:87
+msgid "structname：如果变量是结构体则代表结构体类的名称"
+msgstr ""
+
+#: ../../source/VM 9ec44693288844328c0ecf8076ff8217 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:89
+msgid "properties：是一个entry数组，与type有关："
+msgstr ""
+
+#: ../../source/VM 8ca903b1d8bc4e039e9a73661e4bbd43 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:91
+msgid "Map：长度为2，分别表示key和value的变量类型信息；"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: b83903a55ccc4ca5a1a9b810c62205a7 plug-in.rst:93
+msgid "List：长度为1，表示元素的变量类型信息；"
+msgstr ""
+
+#: ../../source/VM 86856dbda6844e06aeb5fc8b6ed7256e ABI Manual/HVM/HVM Related
+#: User plug-in.rst:95
+msgid "基础类型：为空"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: d3f3fbc9c1964ff7aa742f30a147936d plug-in.rst:97
+msgid "结构体：表示该结构体各字段变量类型信息；"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: f777bc37985e4464b374ad563f8b51a9 plug-in.rst:100
+msgid "BeanAbi"
+msgstr ""
+
+#: ../../source/VM 08147f66cb774cc98cefd7e4e8aa1ae1 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:102
+msgid "hvm.abi中以json的形式保存了一个 `BeanAbi` 类型的数组，BeanAbi包含的参数如下："
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: cbd301e2aba245a2b6d2496f13ae668e plug-in.rst:104
+msgid "version：hvm.abi的版本"
+msgstr ""
+
+#: ../../source/VM 6cbffe98355e4f74a2905c638384a216 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:106
+msgid "beanName：实现*BaseInvoke*接口的类的名称"
+msgstr ""
+
+#: ../../source/VM 404bf23c4db34b258f41343b536ab80a ABI Manual/HVM/HVM Related
+#: User plug-in.rst:108
+msgid "inputs：invoke方法的参数，是一个entry数组"
+msgstr ""
+
+#: ../../source/VM 72e424ae2c5648eb9cc0549f498c47b6 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:110
+msgid "output：invoke方法的返回值，为entry类型"
+msgstr ""
+
+#: ../../source/VM 0f171dae871b48b6add5c24b8a6da4a5 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:112
+msgid "structs：HVM合约中的结构体，是一个entry数组"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: f9fba1fd3be5486989458b1cc607c0b8 plug-in.rst:114
+msgid "beanType：表示beanAbi的类型，有 `InvokeBean` 和 `MethodBean` 两种类型"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: fa97612436564e54949587bc938f1cac plug-in.rst:116
+msgid "InvokeBean：以InvokeBean的形式调用合约"
+msgstr ""
+
+#: ../../source/VM 9bcfb28a3fe84fd688ad84ef921af32d ABI Manual/HVM/HVM Related
+#: User plug-in.rst:118
+msgid "MethodBean：以DirectlyInvoke的形式调用合约"
+msgstr ""
+
+#: ../../source/VM 1bc456e7596c40f983b502f5fb373600 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:120
+msgid "classBytes：invokeBean的字节码， **是** `**InvokeBean**` **类型特有的参数**"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: cef2a1591266415d809ba4b173481cf2 plug-in.rst:122
+msgid "hvm.abi的示例可以在 **demo实例** 小节中查看。"
+msgstr ""
+
+#: ../../source/VM 13ecd230f6564d4797fb1d86d67c5500 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:125
+msgid "gosdk使用abi文件"
+msgstr ""
+
+#: ../../source/VM 0b24c03316704679bf24fa36d0949411 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:127
+msgid "本节将介绍如何在gosdk中通过abi文件调用hvm合约。"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: a88699fd137c4cb098fdb6ddef85ede3 plug-in.rst:130
+msgid "部署hvm合约"
+msgstr ""
+
+#: ../../source/VM 7581c01351304a049de11fd20faba92c ABI Manual/HVM/HVM Related
+#: User plug-in.rst:132
+msgid "**读取jar文件**"
+msgstr ""
+
+#: ../../source/VM 61ab15ab990a45c485f9051a1f27f082 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:134
+msgid "gosdk中提供了hvm.ReadJar()函数来读取jar文件::"
+msgstr ""
+
+#: ../../source/VM 05f11ba7f03e448495c54962b254da34 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:139
+msgid "**部署合约**"
+msgstr ""
+
+#: ../../source/VM 930b9e6d139544a09fce690bc6d764df ABI Manual/HVM/HVM Related
+#: User plug-in.rst:141
+msgid "将从jar文件读取的内容作为payload，通过交易进行合约部署::"
+msgstr ""
+
+#: ../../source/VM 7b6f8d72345843d5b22473e45d845b39 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:150
+msgid "获取指定方法/InvokeBean的abi"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: b9f0004e52284e1283ee2bb291d1b12d plug-in.rst:152
+msgid "将abi的json数据读到abiJson中，通过GenAbi获取abi实例::"
+msgstr ""
+
+#: ../../source/VM 3a75e110f81446c8ab3443e7dd189126 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:158
+msgid "在gosdk中给abi提供了以下两个函数："
+msgstr ""
+
+#: ../../source/VM 71aa9d3e4cdd483a9dd3014a464ac9f4 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:160
+msgid "**GetBeanAbi**"
+msgstr ""
+
+#: ../../source/VM 6b6da2f0db0f48d887a02acd526aa659 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:166
+msgid "查找abi中符合beanName且 `beanType` 为 `InvokeBean` **类型** 的BeanAbi，返回的BeanAbi唯一。"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: eb664732bb574532af5cf6743b0b2aab plug-in.rst:168
+msgid "**GetMethodAbi**"
+msgstr ""
+
+#: ../../source/VM 9fb16e1fca904fe9b8b7a99d3dec2a75 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:174
+msgid ""
+"根据方法的名称返回 `MethodBean` **类型** 的 `BeanAbi` "
+"。考虑到Java中的方法存在重载的情况，Java的方法重载具有以下特点：在同一个类中， 允许存在一个以上的同名方法， 只要它们的 "
+"**参数个数或者参数类型不同** 即可， **与返回值无关** 。"
+msgstr ""
+
+#: ../../source/VM 7164620b76ad45a097abbda281f28e79 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:176
+msgid "因此，我们对methodName进行以下规定："
+msgstr ""
+
+#: ../../source/VM 697b236b12e34edd9f1861560c829ef8 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:179
+msgid "格式"
+msgstr ""
+
+#: ../../source/VM 8182b3ed696d4e1190189260f7e89816 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:179
+msgid "描述"
+msgstr ""
+
+#: ../../source/VM 97ae65b62f8b4fefbba19c4b31430e99 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:179
+msgid "示例"
+msgstr ""
+
+#: ../../source/VM 188fa1a636974bbba49979c059f9647b ABI Manual/HVM/HVM Related
+#: User plug-in.rst:181
+msgid "name"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: ee67d9ab7cb5492c9dba3b4be7ed352c plug-in.rst:181
+msgid "通过方 法名进行查询，返回第一个na me符合的BeanAbi。若存在重载 方法，不建议使用这种方式。"
+msgstr ""
+
+#: ../../source/VM 747543fd47014834a2f0409941964f3d ABI Manual/HVM/HVM Related
+#: User plug-in.rst:181
+msgid "abi.GetMethodAbi(”Hello“)"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: f214936126bb4e408008c3895de490c9 plug-in.rst:186
+msgid "name (params)"
+msgstr ""
+
+#: ../../source/VM 8d39ad7274f74157b1997e8eb798b5f6 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:186
+msgid ""
+"通过方法名和参 数类型进行查询，参数类型对 应abi中input的参数structNa me，两个参数之间通过,分隔。 能够准确查询到方法名和参数"
+" 类型符合的BeanAbi。若存在重 载方法，建议使用这种方式。"
+msgstr ""
+
+#: ../../source/VM 7061eaa8da35453d80b2d0dc997e239c ABI Manual/HVM/HVM Related
+#: User plug-in.rst:186
+msgid ""
+"abi.GetMethodAbi(“Hello ()”)abi.GetMethodAbi(“Hello "
+"(java.lang.String)”)abi.Get MethodAbi(“Hello(int;int)”)"
+msgstr ""
+
+#: ../../source/VM 210bd3eb2f7f4302a43edf8c9c2540d2 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:196
+msgid "通过BeanAbi生成payload"
+msgstr ""
+
+#: ../../source/VM 5795fa3c88b342b8a62083e67b2cecb3 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:198
+msgid ""
+"在我们获得了 `BeanAbi` 以后，我们可以通过 `GenPayload` 函数构造对应的payload，需要传入 `BeanAbi` "
+"以及对应的参数params（ **要求与** `BeanAbi` **的Inputs参数个数和类型一致** ）。"
+msgstr ""
+
+#: ../../source/VM 88f147f67d6a485ea545ad428ff0c290 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:204
+msgid "我们对传入的params参数做了以下规定："
+msgstr ""
+
+#: ../../source/VM 9c299de0f01849839ca4540352cf082c ABI Manual/HVM/HVM Related
+#: User plug-in.rst:206
+msgid "基本类型数据：传入这个参数的字符串形式。如对于 `int 6` ，传入 `”6”` 这个字符串。"
+msgstr ""
+
+#: ../../source/VM 6b9122e305ba49f3a8e6c54e366274f7 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:208
+msgid "list类型和Array类型：传入interface数组。如对于List<String>，我们传入"
+msgstr ""
+
+#: ../../source/VM 3485308d9cbe49a6ad5d072471750970 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:214
+msgid "map类型：传入interface数组。如对于map<String,Bean>，我们传入"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: a18180d002a24886820e7889b46198db plug-in.rst:220
+msgid "具体表格如下："
+msgstr ""
+
+#: ../../source/VM 7fd5ca599a0841218b62d0aacf5c38a7 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:223
+msgid "类 型"
+msgstr ""
+
+#: ../../source/VM 5c0a0c79f5784e538293e496841a21ed ABI Manual/HVM/HVM Related
+#: User plug-in.rst:223
+msgid "写法1"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: b33facd833cf444ab952b1450d7e5a42 plug-in.rst:223
+msgid "写法2(json格式)"
+msgstr ""
+
+#: ../../source/VM 8b1ef8fb103b46dda017faa00dfb6ac0 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:225
+msgid "Bool"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: a03206693fdd484a85246d1b694ff125 db840917c353478fad9f5a4787a45569
+#: plug-in.rst:225
+msgid "“true”"
+msgstr ""
+
+#: ../../source/VM 9c23ca98ffbe4c1cb8170a61856431b5 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:227
+msgid "Char"
+msgstr ""
+
+#: ../../source/VM 3e6168b53a7d470e93a1f49f0b652ec6
+#: 5fd989761bf64e20bba1ed505e6df10d ABI Manual/HVM/HVM Related User
+#: plug-in.rst:227
+msgid "“c”"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: a2bfaadd88944398af756a452c25b964 plug-in.rst:229
+msgid "Short"
+msgstr ""
+
+#: ../../source/VM 18640ce5c0294cadada01c8a60c5dbd0
+#: 1e0e1ce2010b4dac8a0ea032cd0ce2a2 5bd48282af52498baca50382d7691a60
+#: 745a8709b2ca409882008b0fb0a200ff ABI Manual/HVM/HVM Related User
+#: plug-in.rst:229 plug-in.rst:231
+msgid "“20”"
+msgstr ""
+
+#: ../../source/VM 926cb492d01b4bcaa23718a4fa93be1d ABI Manual/HVM/HVM Related
+#: User plug-in.rst:231
+msgid "Int"
+msgstr ""
+
+#: ../../source/VM 080bb4395ea74a239244f2f0282e4d71 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:233
+msgid "Float"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: d6f87d6a02374b36ab4765081962ce0b defc51b82e404ce4a068c04139ca5916
+#: plug-in.rst:233
+msgid "“1.1”"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: a1c5ef02af2a4537a769b1653295d82e plug-in.rst:235
+msgid "Double"
+msgstr ""
+
+#: ../../source/VM 6b8d75576af84ecbb1f4604f953fc9d7
+#: 78c68d91620f4e86b7a1b4ef778f6360 ABI Manual/HVM/HVM Related User
+#: plug-in.rst:235
+msgid "“1.11”"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: e143bfd872404ae28c2c815691ca4d92 plug-in.rst:237
+msgid "Byte"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: b7586fb4fe3441c093e800211634d978 c2e1b10d603c46ac92ccff33a256edca
+#: plug-in.rst:237
+msgid "“1”"
+msgstr ""
+
+#: ../../source/VM 6646dc2dff234b469619fc986d254d12 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:239
+msgid "Long"
+msgstr ""
+
+#: ../../source/VM 093f1aa7532849e895e9d56f34c67f8c
+#: 95af041b69c84136a3661d18b68479aa ABI Manual/HVM/HVM Related User
+#: plug-in.rst:239
+msgid "“10000000000”"
+msgstr ""
+
+#: ../../source/VM 59ee7bcdf3db4b82ac8f9ff5abd3d38c ABI Manual/HVM/HVM Related
+#: User plug-in.rst:241
+msgid "List"
+msgstr ""
+
+#: ../../source/VM 9d368caacef241fb901634291df39f29 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:241
+msgid "[]interface{}{“strList1”, “strList2”}"
+msgstr ""
+
+#: ../../source/VM 22027a1b95b543acaed6b3da07d9a594
+#: 882c073f247948dfb1317c9b7016df32 ABI Manual/HVM/HVM Related User
+#: plug-in.rst:241 plug-in.rst:256
+msgid "``[\"strList1\",\"strList2\"]``"
+msgstr ""
+
+#: ../../source/VM 2494ac45b40743429813f01c35d57e4e ABI Manual/HVM/HVM Related
+#: User plug-in.rst:244
+msgid "Map"
+msgstr ""
+
+#: ../../source/VM 1536ff48adca46e8bf77296d120d64e7 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:244
+msgid ""
+"[]interf ace{}{[]interface{}{“bean1”, bean1}, []interface{}{“bean2”, "
+"bean2}}"
+msgstr ""
+
+#: ../../source/VM 28f4011c42b840dcb902a9c33134b35f ABI Manual/HVM/HVM Related
+#: User plug-in.rst:244
+msgid "``{789: {456:12.2},234:{345:12.2}}``"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: f9683878ea744be59ff9d3fa06bd557b plug-in.rst:250
+msgid "Struct"
+msgstr ""
+
+#: ../../source/VM 1c7f45d302a841d3955c219ee7af4957 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:250
+msgid "bean1 := []interface{}{“hvm-bean1”, person} （其中person是基本类型）"
+msgstr ""
+
+#: ../../source/VM 4b93403d48004e9c89a406a3331e56bd ABI Manual/HVM/HVM Related
+#: User plug-in.rst:250
+msgid ""
+"``{\"bean1\":{\"beanName\":\"hv m-bean1\",\"person\":{\"name\":\"t "
+"om\",\"age\":21}},\"bean2\":{\"bea nName\":\"hvm-bean2\",\"person\": "
+"{\"name\":\"jack\",\"age\":18}}}``"
+msgstr ""
+
+#: ../../source/VM 1430835e14d0448f975fda3bb424711a ABI Manual/HVM/HVM Related
+#: User plug-in.rst:256
+msgid "Array"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: ff1ab39e46594dde8c31cf12dafa7c73 plug-in.rst:256
+msgid "array1 = []interface{}{“strList1”, “strList2”}"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: cd76b4fef239446fbb62821935a76003 plug-in.rst:261
+msgid "此外，gosdk中还提供了一种hvm.Convert()方法，将go支持的type（如map，list）转成上面这个表格所示的[]interface{}"
+msgstr ""
+
+#: ../../source/VM 0abd48652fde4c8692a88a9f2695b064 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:274
+msgid "demo实例"
+msgstr ""
+
+#: ../../source/VM 5e3f170983424cb7b2699798c2c6df14 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:276
+msgid "为了更好地帮助用户理解abi的使用方式，我们给出了一个demo使用实例。"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: a71a7827978345c59d6dd80c9a4e503c plug-in.rst:279
+msgid "合约代码"
+msgstr ""
+
+#: ../../source/VM 2353b78ae7724ddf8966f29ecf8d84cd ABI Manual/HVM/HVM Related
+#: User plug-in.rst:281
+msgid "下面的代码给出了用于演示的合约，主要功能为在日志中打印传入的参数。"
+msgstr ""
+
+#: ../../source/VM 0a104e8f212449d48829936ff5aa085f ABI Manual/HVM/HVM Related
+#: User plug-in.rst:328
+msgid "InvokeBean调用"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: d3cef39524c04513acef4bc5d48be0a3 plug-in.rst:330
+msgid "首先我们通过InvokeBean调用我们的合约，InvokeBean的代码如下::"
+msgstr ""
+
+#: ../../source/VM 0b5b6136cf134d2d84cfa20940fd9354 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:350
+msgid "该InvokeBean对应的abi数据如下::"
+msgstr ""
+
+#: ../../source/VM 5037d6457a3b4cfd9ff6d78130010b62 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:384
+msgid "可以看出，要构造该payload，我们需要传入 `int，int，int[]` 类型的参数，因此在gosdk中的使用代码如下::"
+msgstr ""
+
+#: ../../source/VM 7ef25ef4d27740fa849006fedf2a383f ABI Manual/HVM/HVM Related
+#: User plug-in.rst:395
+msgid "payload还可以下面的形式构造::"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: de357e5c8f0c491d859ca6bb3cbd6abb plug-in.rst:402
+msgid "调用成功后，会在平台的日志中打印以下内容::"
+msgstr ""
+
+#: ../../source/VM 9a4549a3e02247b08964c7f64f8cd3bd ABI Manual/HVM/HVM Related
+#: User plug-in.rst:409
+msgid "直接调用"
+msgstr ""
+
+#: ../../source/VM 420b692f1644469a9ac8e72372858078 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:411
+msgid ""
+"直接调用与InvokeBean调用使用abi的方法类似，我们将通过直接调用的方式调用 `printMan` 、 `printMap` 、 "
+"`printList` 这三个方法，他们逻辑可以在前面 **合约代码** 处查看。"
+msgstr ""
+
+#: ../../source/VM 5d424330764f4812970857a80aea162d ABI Manual/HVM/HVM Related
+#: User plug-in.rst:413
+msgid "**printMan**"
+msgstr ""
+
+#: ../../source/VM 28d1704805b14350ba9949dfee04ca9e ABI Manual/HVM/HVM Related
+#: User plug-in.rst:415
+msgid "`printMan` 方法的abi如下::"
+msgstr ""
+
+#: ../../source/VM 7b8924491dbb4db6915faa7ac24f8c6c ABI Manual/HVM/HVM Related
+#: User plug-in.rst:448
+msgid "可以看出，要构造该payload，我们需要传入 `Man` 类型的参数，在gosdk中的使用代码如下::"
+msgstr ""
+
+#: ../../source/VM 4262374f64f64a859b63bdeead25afa9
+#: 5082023504484f4e843f8f0d55bead95 54e2d492e7c94c51801733865e0d9b68 ABI
+#: Manual/HVM/HVM Related User plug-in.rst:459 plug-in.rst:517 plug-in.rst:559
+msgid "调用成功后，会在平台打印以下内容::"
+msgstr ""
+
+#: ../../source/VM 998f714f7e394697a2b7c4c6008f199e ABI Manual/HVM/HVM Related
+#: User plug-in.rst:463
+msgid "**printMap**"
+msgstr ""
+
+#: ../../source/VM 68354f5190da409a80fdb66221d37524 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:465
+msgid "`printMap` 方法的abi如下::"
+msgstr ""
+
+#: ../../source/VM 468ac0c7c62d4748a9c51b9d56cc6356
+#: 5b9b9e1b91c5453eb336bbd196a11a27 ABI Manual/HVM/HVM Related User
+#: plug-in.rst:506 plug-in.rst:548
+msgid "相应的调用代码如下::"
+msgstr ""
+
+#: ../../source/VM 3ec36e2b095f4adab25cfee605c552af ABI Manual/HVM/HVM Related
+#: User plug-in.rst:521
+msgid "**printList**"
+msgstr ""
+
+#: ../../source/VM 4352106740fe4727b1d629915748ad81 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:523
+msgid "`printList` 方法abi内容如下::"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: dd5c0632f2454d0bb7b7ab721cbc2848 plug-in.rst:566
+msgid "2. 使用hvm-abi对合约进行增强"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: b852552f605d4b4b83f117e35af48fbf plug-in.rst:569
+msgid "hvm-abi插件字节码增强相关配置"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: b92a97750cd44557b4e3784775b12712 plug-in.rst:571
+msgid "用户可以在自己的HVM合约项目的pom.xml文件中加入以下内容。其中主要包含以下参数："
+msgstr ""
+
+#: ../../source/VM 251b51a6f5094b73b0b33a81b66a1d4c ABI Manual/HVM/HVM Related
+#: User plug-in.rst:573
+msgid ""
+"<inputPaths>：待增强合约jar文件的路径。如果传入的路径是jar文件，则会对该jar文件进行字节码增强处理；如果传入的路径是文件夹，那么会对该文件夹下所有的带有"
+" `jar` 后缀的文件进行字节码增强处理。"
+msgstr ""
+
+#: ../../source/VM 742a6400bc564e2096d1e39164f5fa39 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:575
+msgid "<outputPaths>：合约增强后的jar文件的输出路径，建议输出路径是一个空的文件夹。"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: c47fc1c5a26b46ec9c1fe74fd8b00442 plug-in.rst:577
+msgid ""
+"在插件中，可以配置多个 `inputPath` 和多个 `outputPath` ，要求配置的 `inputPath` 个数与 "
+"`outputPath` 个数相同，并且第n个 `inputPath` 对应第n个 `outputPath` 。"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: bb3e2f256c784db5b196cf4867a38d95 plug-in.rst:606
+msgid "其他插件配置说明"
+msgstr ""
+
+#: ../../source/VM 13010fec0bff4b668c6c07053d3de8f6 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:608
+msgid "为了maven包引用不出现冲突，这里要求使用 `mven-jar-plugin` 的插件版本为 `3.1.0` 。"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: f3b1e77d98e84371a0fc577babd98795 plug-in.rst:611
+msgid "执行合约增强的命令"
+msgstr ""
+
+#: ../../source/VM 3d2751d0cf2541ff8b0e3259d5e0b3e1 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:613
+msgid "在完成上述配置后，在终端输入以下命令可以生成增强合约的jar文件。"
+msgstr ""
+
+#: ../../source/VM 57f1fe0a97bc4b219afe97d9567e5b23 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:619
+msgid "以对bank.jar进行增强为例，效果如下图所示，插件会对inputpath下的合约jar文件进行处理，并在outputpath路径下输出两个合约jar文件："
+msgstr ""
+
+#: ../../source/VM 4623866aa72e445e965e147bd7f25106 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:621
+msgid "bank-hvm.jar：如果在客户端需要使用合约中的某些类，则可以引入这个jar包依赖。"
+msgstr ""
+
+#: ../../source/VM 08f75ad4c4b3488f8e06c2989dbc4945 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:623
+msgid ""
+"bank-hvm-"
+"deploy.jar：在合约部署/升级时，将deploy.jar文件传到节点端进行部署/升级，该合约jar的大小相比原合约jar会稍大， "
+"**需要注意是否超过了hvm合约jar大小的最大限制** 。"
+msgstr ""
+
+#: ../../source/VM 404dc373c48d4f96b91bf344c091f591 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:625
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/VM 3cf91aae53c94908a667e5fbbb8e5f83 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:719
+msgid "image0"
+msgstr ""
+
+#: ../../source/VM 2e9b9d6e368f4612b6db0c7182a3859d ABI Manual/HVM/HVM Related
+#: User plug-in.rst:628
+msgid "执行效果"
+msgstr ""
+
+#: ../../source/VM 5a3d9d2eb5754b1f98d01201b8f7d3c8 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:630
+msgid "使用hvm增强合约后，合约的部署、调用、升级、冻结等操作与原先的合约一致，使用上并不会有差异。"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: a0d13d30cc1f464c8b4c0641b98861db plug-in.rst:632
+msgid ""
+"hvm增强合约目前在 **直接调用的场景下相比原始合约有性能提升，** "
+"其提升程度取决于合约中storefield的个数以及直接调用中使用的storefield个数。合约原本storefield个数越多，被直接调用的方法。而在invokeBean调用的场景下，两者的性能一致。"
+msgstr ""
+
+#: ../../source/VM 0de2e7d96aaf4f4da3be9653086a2932 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:635
+msgid "配合hvmType注解元素使用"
+msgstr ""
+
+#: ../../source/VM 6faf420071b3484cb4360f9ad5b2920f ABI Manual/HVM/HVM Related
+#: User plug-in.rst:637
+msgid ""
+"用户在编写HVM合约时，建议 **使用StoreField注解元素hvmType。** "
+"hvmType会告知hvm执行引擎所要实例化的类型，在字节码增强的场景下，效率更高。"
+msgstr ""
+
+#: ../../source/VM 6566da18619948f6b00b9dd5a88463ca ABI Manual/HVM/HVM Related
+#: User plug-in.rst:639
+msgid "HVM合约中提供了HyperMap、HyperList、HyperTable、NestedMap四种账本数据结构类，用户在编写合约时需要通过以下两种方式声明字段，合约才能正常执行："
+msgstr ""
+
+#: ../../source/VM 2dde2d189f1c4874bf9ba7cfc9252005 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:641
+msgid "使用hvmType注解元素。推荐使用这种写法"
+msgstr ""
+
+#: ../../source/VM 8f1f75e6f1684f82b6242d09d99237ff ABI Manual/HVM/HVM Related
+#: User plug-in.rst:662
+msgid "声明时创建实例"
+msgstr ""
+
+#: ../../source/VM 3d07b980580c4697a602b4734f9a4083 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:684
+msgid "注意事项"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: cccd835819994ff1b8cb9041e1bd1192 plug-in.rst:686
+msgid "在使用hvm字节码增强功能时，有以下几点需要注意："
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: dd6319bdcb5d4d5d95ae06774188dd5a plug-in.rst:688
+msgid "如果合约存在跨合约调用， **要求两个合约都经过字节码增强** 。不允许增强合约和非增强合约之间进行跨合约调用。"
+msgstr ""
+
+#: ../../source/VM 9bbbc50073124b4f8fc3be24fb765d99 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:690
+msgid "使用跨合约调用时，建议通过接口的形式来调用"
+msgstr ""
+
+#: ../../source/VM 19fbbf2daff8472f8daf66c17de4f847 ABI Manual/HVM/HVM Related
+#: User plug-in.rst:701
+msgid "建议通过合约的钩子函数 `onInit` 和 `onCreated` 来编写合约的初始化逻辑。不建议在构造方法和类初始化方法中编写合约逻辑。"
+msgstr ""
+
+#: ../../source/VM ABI Manual/HVM/HVM Related User
+#: c37d5d6587564ec2b0425970014794cd plug-in.rst:703
+msgid "建议将StoreField声明为类实例字段"
+msgstr ""
+
+#: ../../source/VM 04015271c35c4e32928859a506e4330c ABI Manual/HVM/HVM Related
+#: User plug-in.rst:717
+msgid ""
+"不建议合约引用非JDK和hvm-sdk以外包的类。如果合约中类或类实例的字段，那么合约Jar包中必须有这个类的class文件"
+"，即使用JDK和hvm-sdk包以外类并操作字段，hvm-abi将无法进行增强。"
+msgstr ""
+

@@ -1,0 +1,1632 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/VM 3ca58fced9d047a79a67352b6655e37b Manual.rst:4
+#: Manual/KVSQL/Expression Related User
+msgid "Expression 使用手册"
+msgstr ""
+
+#: ../../source/VM 1ef8d4024a5d49dcadab37077ca8aa0e Manual.rst:7
+#: Manual/KVSQL/Expression Related User
+msgid "buildin Function映射表"
+msgstr ""
+
+#: ../../source/VM 639f44bee44e4af189e73ba8e055754a Manual.rst:9
+#: Manual/KVSQL/Expression Related User
+msgid "mysql中支持内置函数，内置函数在词法分析阶段就会被解析成特定的终结符类型，下面给出内置函数到终结符类型的映射关系表。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:12 Manual/KVSQL/Expression Related User
+#: f13783bcd3a74cfd98b9c31c00a520ce
+msgid "函数名"
+msgstr ""
+
+#: ../../source/VM 8bb19103355d4b4ca56270dac1d5f26d Manual.rst:12
+#: Manual/KVSQL/Expression Related User
+msgid "终结符类型"
+msgstr ""
+
+#: ../../source/VM Manual.rst:14 Manual/KVSQL/Expression Related User
+#: f688b66c215d482292691e5656aab236
+msgid "ADDDATE"
+msgstr ""
+
+#: ../../source/VM Manual.rst:14 Manual/KVSQL/Expression Related User
+#: b814fbe432ac4fe1b33de7dfac87b9e1
+msgid "builtinAddDate"
+msgstr ""
+
+#: ../../source/VM 8fac93d18393489ab768f23d32d48ee9 Manual.rst:15
+#: Manual/KVSQL/Expression Related User
+msgid "BIT_AND"
+msgstr ""
+
+#: ../../source/VM Manual.rst:15 Manual/KVSQL/Expression Related User
+#: d35b81b891e34e4181e69af77c6119e6
+msgid "builtinBitAnd"
+msgstr ""
+
+#: ../../source/VM 9c174a91f1be40429a04e5219d8e34e3 Manual.rst:16
+#: Manual/KVSQL/Expression Related User
+msgid "BIT_OR"
+msgstr ""
+
+#: ../../source/VM 477a439d56e349d2821648b3a5ae2075 Manual.rst:16
+#: Manual/KVSQL/Expression Related User
+msgid "builtinBitOr"
+msgstr ""
+
+#: ../../source/VM 2491c6e6a56d420f9f136aaa61b607ee Manual.rst:17
+#: Manual/KVSQL/Expression Related User
+msgid "BIT_XOR"
+msgstr ""
+
+#: ../../source/VM 731ecaf58fce4144b802c896c137a527 Manual.rst:17
+#: Manual/KVSQL/Expression Related User
+msgid "builtinBitXor"
+msgstr ""
+
+#: ../../source/VM Manual.rst:18 Manual/KVSQL/Expression Related User
+#: d7187b923a24445c8d19aa473e8ebd2b
+msgid "CAST"
+msgstr ""
+
+#: ../../source/VM 1794b7fe30034c2ca2966dee719ecea0 Manual.rst:18
+#: Manual/KVSQL/Expression Related User
+msgid "builtinCast"
+msgstr ""
+
+#: ../../source/VM 87b7e5665ee342daad229012c307e5b5 Manual.rst:19
+#: Manual/KVSQL/Expression Related User
+msgid "COUNT"
+msgstr ""
+
+#: ../../source/VM Manual.rst:19 Manual/KVSQL/Expression Related User
+#: a7eba99633a44825817b5e2a28cb0224
+msgid "builtinCount"
+msgstr ""
+
+#: ../../source/VM Manual.rst:20 Manual/KVSQL/Expression Related User
+#: ef8fd98c0aed437ca8128bef5cf909de
+msgid "CURDATE"
+msgstr ""
+
+#: ../../source/VM 8f7c9a3f2e6e4202ac001fc1f5a15204 Manual.rst:20
+#: Manual/KVSQL/Expression Related User
+msgid "builtinCurDate"
+msgstr ""
+
+#: ../../source/VM 12ae68c1a5c246c69f9433575f8132b9 Manual.rst:21
+#: Manual/KVSQL/Expression Related User
+msgid "CURTIME"
+msgstr ""
+
+#: ../../source/VM Manual.rst:21 Manual/KVSQL/Expression Related User
+#: b362d65acdc545869d4b208007de41f8
+msgid "builtinCurTime"
+msgstr ""
+
+#: ../../source/VM Manual.rst:22 Manual/KVSQL/Expression Related User
+#: cccbc7929d124d9e85d06c91f330c4c8
+msgid "DATE_ADD"
+msgstr ""
+
+#: ../../source/VM Manual.rst:22 Manual/KVSQL/Expression Related User
+#: f7f20549c31f4971a095c24ff677904b
+msgid "builtinDateAdd"
+msgstr ""
+
+#: ../../source/VM 1ae4c5b73b3b4e40b9562e3b82f00184 Manual.rst:23
+#: Manual/KVSQL/Expression Related User
+msgid "DATE_SUB"
+msgstr ""
+
+#: ../../source/VM Manual.rst:23 Manual/KVSQL/Expression Related User
+#: add9b346469f4e5b855fe5fc5b2241a9
+msgid "builtinDateSub"
+msgstr ""
+
+#: ../../source/VM 02dade8779a74a76a8676784a2647c21 Manual.rst:24
+#: Manual/KVSQL/Expression Related User
+msgid "EXTRACT"
+msgstr ""
+
+#: ../../source/VM 4881b992ba554ffd8fbff268a993f143 Manual.rst:24
+#: Manual/KVSQL/Expression Related User
+msgid "builtinExtract"
+msgstr ""
+
+#: ../../source/VM 7f310e9a727d4124b2369295e39fb679 Manual.rst:25
+#: Manual/KVSQL/Expression Related User
+msgid "GROUP_CONCAT"
+msgstr ""
+
+#: ../../source/VM Manual.rst:25 Manual/KVSQL/Expression Related User
+#: ec3cf0e5153842eab7503ac2928b0fa9
+msgid "builtinGroupConcat"
+msgstr ""
+
+#: ../../source/VM 14760ace245f41f892828dee4f37c3fb Manual.rst:26
+#: Manual/KVSQL/Expression Related User
+msgid "MAX"
+msgstr ""
+
+#: ../../source/VM 07921a650cd04af8ac759540373ae5f6 Manual.rst:26
+#: Manual/KVSQL/Expression Related User
+msgid "builtinMax"
+msgstr ""
+
+#: ../../source/VM 604e3e7aedb94de0807fd203877e557b Manual.rst:27
+#: Manual/KVSQL/Expression Related User
+msgid "MID"
+msgstr ""
+
+#: ../../source/VM 5743503ac38b4d2691ee57b3bb67ad4f
+#: 86c2fc7e7e6f4b56ae8b462f9ec30010 Manual.rst:27 Manual.rst:37 Manual.rst:38
+#: Manual/KVSQL/Expression Related User c0700f7c2b0f42c2904be87eac09e07e
+msgid "builtinSubstring"
+msgstr ""
+
+#: ../../source/VM Manual.rst:28 Manual/KVSQL/Expression Related User
+#: ac5e135ed8af4a7db42116e0a46c8124
+msgid "MIN"
+msgstr ""
+
+#: ../../source/VM Manual.rst:28 Manual/KVSQL/Expression Related User
+#: ce9db06df6964f75be91ba037d6ca55f
+msgid "builtinMin"
+msgstr ""
+
+#: ../../source/VM Manual.rst:29 Manual/KVSQL/Expression Related User
+#: d539d3dab3a34b2ca21a72fb0cadd0f8
+msgid "NOW"
+msgstr ""
+
+#: ../../source/VM Manual.rst:29 Manual/KVSQL/Expression Related User
+#: c72503bd2c834da69e81a510243e72b9
+msgid "builtinNow"
+msgstr ""
+
+#: ../../source/VM 19d8c7d8680d4b078a614b80c90c9f50 Manual.rst:30
+#: Manual/KVSQL/Expression Related User
+msgid "POSITION"
+msgstr ""
+
+#: ../../source/VM 443dc83d5dff4f76af32fd63c573e0dc Manual.rst:30
+#: Manual/KVSQL/Expression Related User
+msgid "builtinPosition"
+msgstr ""
+
+#: ../../source/VM Manual.rst:31 Manual/KVSQL/Expression Related User
+#: fadc5fefbd404681b157b17eac7d9609
+msgid "SESSION_USER"
+msgstr ""
+
+#: ../../source/VM 838280c056d043f29b268f3bce607850 Manual.rst:31 Manual.rst:41
+#: Manual/KVSQL/Expression Related User a5a47b68f0ea44a78231f8107c92153e
+msgid "builtinUser"
+msgstr ""
+
+#: ../../source/VM Manual.rst:32 Manual/KVSQL/Expression Related User
+#: ce68cba861914e85bb22f9b8a008529b
+msgid "STD"
+msgstr ""
+
+#: ../../source/VM Manual.rst:32 Manual.rst:33 Manual.rst:34
+#: Manual/KVSQL/Expression Related User aa4f88e216794f2fb850e251655c8f54
+#: cb3ed330019a4275bef004b96a7be13f e39653cdf10d47609e8aff5253c0b891
+msgid "builtinStddevPop"
+msgstr ""
+
+#: ../../source/VM Manual.rst:33 Manual/KVSQL/Expression Related User
+#: c219668a4540456f96f80a2fbbcc255f
+msgid "STDDEV"
+msgstr ""
+
+#: ../../source/VM 528c258373704c6cafa55a0788d0017c Manual.rst:34
+#: Manual/KVSQL/Expression Related User
+msgid "STDDEV_POP"
+msgstr ""
+
+#: ../../source/VM 756aa77cf15442679dd13992ffb95b15 Manual.rst:35
+#: Manual/KVSQL/Expression Related User
+msgid "STDDEV_SAMP"
+msgstr ""
+
+#: ../../source/VM Manual.rst:35 Manual/KVSQL/Expression Related User
+#: a30854d586d04255b59e6500301d0b13
+msgid "builtinStddevSamp"
+msgstr ""
+
+#: ../../source/VM 5e7eb0a30dce4796af4e4cbf048495fc Manual.rst:36
+#: Manual/KVSQL/Expression Related User
+msgid "SUBDATE"
+msgstr ""
+
+#: ../../source/VM 10e3f60de97044719e22ec0c656e5af0 Manual.rst:36
+#: Manual/KVSQL/Expression Related User
+msgid "builtinSubDate"
+msgstr ""
+
+#: ../../source/VM 12d9187249a94a4da69a23d60c1ab5d6 Manual.rst:37
+#: Manual/KVSQL/Expression Related User
+msgid "SUBSTR"
+msgstr ""
+
+#: ../../source/VM 5e6176bea84c44a59920dec966c0fee2 Manual.rst:38
+#: Manual/KVSQL/Expression Related User
+msgid "SUBSTRING"
+msgstr ""
+
+#: ../../source/VM 91de886e478b48c4992308527ae7109b Manual.rst:39
+#: Manual/KVSQL/Expression Related User
+msgid "SUM"
+msgstr ""
+
+#: ../../source/VM Manual.rst:39 Manual/KVSQL/Expression Related User
+#: ada4302973414174b6fcec4bf1c21b86
+msgid "builtinSum"
+msgstr ""
+
+#: ../../source/VM Manual.rst:40 Manual/KVSQL/Expression Related User
+#: c7e5fc7555344b93bfaa8509d2996199
+msgid "SYSDATE"
+msgstr ""
+
+#: ../../source/VM Manual.rst:40 Manual/KVSQL/Expression Related User
+#: aca56ed230f14e4ab0d2932e7d9f7738
+msgid "builtinSysDate"
+msgstr ""
+
+#: ../../source/VM 23a1281d5d864e05bd7ea7f0da5c6b13 Manual.rst:41
+#: Manual/KVSQL/Expression Related User
+msgid "SYSTEM_USER"
+msgstr ""
+
+#: ../../source/VM 97d0616926d84ca793e8bae0c75a2aeb Manual.rst:42
+#: Manual/KVSQL/Expression Related User
+msgid "TRIM"
+msgstr ""
+
+#: ../../source/VM 83e4b6e21aba4c75a545879208b978e0 Manual.rst:42
+#: Manual/KVSQL/Expression Related User
+msgid "builtinTrim"
+msgstr ""
+
+#: ../../source/VM 714bb07276e04d56a3b01feafc00b471 Manual.rst:43
+#: Manual/KVSQL/Expression Related User
+msgid "VARIANCE"
+msgstr ""
+
+#: ../../source/VM 3f9c644892084c90a8063739a0c09332
+#: 7c24d88417904a6587f43cd53e71eada Manual.rst:43 Manual.rst:44
+#: Manual/KVSQL/Expression Related User
+msgid "builtinVarPop"
+msgstr ""
+
+#: ../../source/VM 209c958eb1734718aab3df9df857e0e2 Manual.rst:44
+#: Manual/KVSQL/Expression Related User
+msgid "VAR_POP"
+msgstr ""
+
+#: ../../source/VM Manual.rst:45 Manual/KVSQL/Expression Related User
+#: f9d4f63d58b445dba2dc1b970c719c6e
+msgid "VAR_SAMP"
+msgstr ""
+
+#: ../../source/VM Manual.rst:45 Manual/KVSQL/Expression Related User
+#: d6e6c7e1f99e47f5abd29fedbc3a6b4c
+msgid "builtinVarSamp"
+msgstr ""
+
+#: ../../source/VM Manual.rst:51 Manual/KVSQL/Expression Related User
+#: d4a163a9a59a43c1aad518cad6c20b84
+msgid "pipes              \"||\""
+msgstr ""
+
+#: ../../source/VM 88e9fc9807054e1b8e235171607f8d3b Manual.rst:54
+#: Manual/KVSQL/Expression Related User
+msgid "singleAtIdentifier \"identifier with single leading at\""
+msgstr ""
+
+#: ../../source/VM Manual.rst:54 Manual/KVSQL/Expression Related User
+#: a496eb3b38a64350b7bed9afc52dd3fd
+msgid "doubleAtIdentifier \"identifier with double leading at\""
+msgstr ""
+
+#: ../../source/VM 969aea5f55c3487e9f2c2cfb7767cd2e Manual.rst:56
+#: Manual/KVSQL/Expression Related User
+msgid "binaryType        \"BINARY\""
+msgstr ""
+
+#: ../../source/VM 306168b1dade453f82d2d627d01ddcf0 Manual.rst:95
+#: Manual/KVSQL/Expression Related User
+msgid "%token  <item>"
+msgstr ""
+
+#: ../../source/VM 30558944750142baa0eb810fa6efd484 Manual.rst:59
+#: Manual/KVSQL/Expression Related User
+msgid "assignmentEq \":=\""
+msgstr ""
+
+#: ../../source/VM Manual.rst:61 Manual/KVSQL/Expression Related User
+#: fd37bd2ac2ff40c7b12b257f4dc85480
+msgid ""
+"/* The following tokens belong to ReservedKeyword. Notice: make sure "
+"these tokens are contained in ReservedKeyword. */ falseKwd          "
+"\"FALSE\" trueKwd           \"TRUE\""
+msgstr ""
+
+#: ../../source/VM Manual.rst:65 Manual/KVSQL/Expression Related User
+#: d68cf65460df47f0af3480b4e9277514
+msgid ""
+"/* The following tokens belong to UnReservedKeyword. Notice: make sure "
+"these tokens are contained in UnReservedKeyword. */ pipesAsOr "
+"weightString          \"WEIGHT_STRING\""
+msgstr ""
+
+#: ../../source/VM Manual.rst:69 Manual/KVSQL/Expression Related User
+#: b8542f62e36846daa7785b353e9e547f
+msgid ""
+"/* The following tokens belong to TiDBKeyword. Notice: make sure these "
+"tokens are contained in TiDBKeyword. */ builtinAddDate builtinBitAnd "
+"builtinBitOr builtinBitXor builtinCast builtinCount builtinCurDate "
+"builtinCurTime builtinDateAdd builtinDateSub builtinExtract "
+"builtinGroupConcat builtinMax builtinMin builtinNow builtinPosition "
+"builtinSubDate builtinSubstring builtinSum builtinSysDate "
+"builtinStddevPop builtinStddevSamp builtinTrim builtinUser builtinVarPop "
+"builtinVarSamp"
+msgstr ""
+
+#: ../../source/VM Manual.rst:98 Manual/KVSQL/Expression Related User
+#: a146e39b99e84d73a8da77035b7b80be
+msgid "%token      <item>"
+msgstr ""
+
+#: ../../source/VM 7dd8d848aae6418aa32bf7e8705e655c Manual.rst:98
+#: Manual/KVSQL/Expression Related User
+msgid "jss          \"->\" juss         \"->>\""
+msgstr ""
+
+#: ../../source/VM 6efc609b1d2048758ba45692ef236f27 Manual.rst:100
+#: Manual/KVSQL/Expression Related User
+#, python-format
+msgid "%%"
+msgstr ""
+
+#: ../../source/VM 3f08a082ed6d4d98ac4de129f61c96f2 Manual.rst:102
+#: Manual/KVSQL/Expression Related User
+msgid "Expression:"
+msgstr ""
+
+#: ../../source/VM Manual.rst:103 Manual/KVSQL/Expression Related User
+#: db9b87637bcb49ae87bc7e4a0b8c2b75
+msgid "singleAtIdentifier assignmentEq Expression"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: faa67e8143c84e1c875517eea1a9aa2d
+msgid "Expression logOr Expression"
+msgstr ""
+
+#: ../../source/VM 92ca4c78388d4ae0a72b03971f756658 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "Expression \"XOR\" Expression"
+msgstr ""
+
+#: ../../source/VM 7cd9a46e3df84bdcabba9d5a29da03d8 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "Expression logAnd Expression"
+msgstr ""
+
+#: ../../source/VM 0654b913ecce4518acdddc094a51a2be Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"NOT\" Expression"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: ea2a3a84ea93450b992328e6bf100145
+msgid "BoolPri IsOrNotOp trueKwd"
+msgstr ""
+
+#: ../../source/VM 52c1b14df2474e52bb9b1c505245fd93 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "BoolPri IsOrNotOp falseKwd"
+msgstr ""
+
+#: ../../source/VM 32568c6346914f1283bb6e921b54eb45 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "BoolPri"
+msgstr ""
+
+#: ../../source/VM 3d5acf7b0e4b4feaba36624cfdcaca9c Manual.rst:112
+#: Manual/KVSQL/Expression Related User
+msgid "BitExpr:"
+msgstr ""
+
+#: ../../source/VM 7896022f1f774fe2a8313b54374561d8 Manual.rst:113
+#: Manual/KVSQL/Expression Related User
+msgid "BitExpr '|' BitExpr"
+msgstr ""
+
+#: ../../source/VM 96bf359eb19d46fbb0e2e643903e16c2 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "BitExpr '&' BitExpr"
+msgstr ""
+
+#: ../../source/VM 7e123ddeca604bceb5af1d7647de8ccc Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "BitExpr \"<<\" BitExpr"
+msgstr ""
+
+#: ../../source/VM 476bf0f434754a06ae8498e04f3dea61 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "BitExpr \">>\" BitExpr"
+msgstr ""
+
+#: ../../source/VM 0fec165015fa46dab16afb7886211ec7 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "BitExpr '+' BitExpr"
+msgstr ""
+
+#: ../../source/VM 28610f05028b4f6cb2b59231cd2142f8 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "BitExpr '-' BitExpr"
+msgstr ""
+
+#: ../../source/VM 67dcaddb948f40eb8bcbc760ea0611b0 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "BitExpr '*' BitExpr"
+msgstr ""
+
+#: ../../source/VM 48a1199b213a459db6594905251ffbfe Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "BitExpr '/' BitExpr"
+msgstr ""
+
+#: ../../source/VM 8315bcd184ae4ec8924e55bfdefd948d Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "BitExpr '%' BitExpr"
+msgstr ""
+
+#: ../../source/VM 51bbef5009a3469eac3fab7d55e0a121 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "BitExpr \"DIV\" BitExpr"
+msgstr ""
+
+#: ../../source/VM 14e3aab02e5544cbafb01f053965eec6 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "BitExpr \"MOD\" BitExpr"
+msgstr ""
+
+#: ../../source/VM 2889a2802ced4b349ee80cde29cc85ca Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "BitExpr '^' BitExpr"
+msgstr ""
+
+#: ../../source/VM 832a5bdcb04449fab16cc0d6b93ff21f Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "SimpleExpr"
+msgstr ""
+
+#: ../../source/VM 51ff32c7d99a451c8aa312e08e61f276 Manual.rst:127
+#: Manual/KVSQL/Expression Related User
+msgid "SimpleExpr:"
+msgstr ""
+
+#: ../../source/VM 6ffa20f3f60b4c7594b23942a83d73cf Manual.rst:128
+#: Manual/KVSQL/Expression Related User
+msgid "SimpleIdent"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: b192543e16c54b6cbbbb667148273c98
+msgid "FunctionCallKeyword"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: bd192626c8e6420796e7687c0963b9b4
+msgid "FunctionCallNonKeyword"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: c0828f6dbc654d19a934f6aee14266c6
+msgid "FunctionCallGeneric"
+msgstr ""
+
+#: ../../source/VM 9b04c458f59843f7a4873e83eee48a8d Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "Literal"
+msgstr ""
+
+#: ../../source/VM 59fcff0b66404ad989de1fa5137a4737 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "SumExpr"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: d5f2831c91f54abf90f9c346e92fc58c
+msgid "'!' SimpleExpr"
+msgstr ""
+
+#: ../../source/VM 9ffaedb4616f4b28b372eac15c174a76 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "'~' SimpleExpr"
+msgstr ""
+
+#: ../../source/VM 293f6ab93816461ab1c9e8b6ccc3d375 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "'-' SimpleExpr"
+msgstr ""
+
+#: ../../source/VM 9deeddd71fe84d4aace046e9f479d8b2 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "'+' SimpleExpr"
+msgstr ""
+
+#: ../../source/VM 3024cb46668e4c779dfe8104885f1b40 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "SimpleExpr pipes SimpleExpr"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: fa1a5d221f8f4eb994a973e339899323
+msgid "not2 SimpleExpr"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: e5fe47c7729548c39569d1b2a088c3ce
+msgid "SubSelect"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: dcd4224502ba4292adff9aea0eaae965
+msgid "'(' Expression ')'"
+msgstr ""
+
+#: ../../source/VM 74c1896a70e5456fbb308bbac1c7629f Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "'(' ExpressionList ',' Expression ')'"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: c5712244739144609130bd42d76e5438
+msgid "\"ROW\" '(' ExpressionList ',' Expression ')'"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: bfd2698f5ad84d77b17ae4cbda6714a3
+msgid "\"EXISTS\" SubSelect"
+msgstr ""
+
+#: ../../source/VM 77ca006757d14ccea934e3aba07eda40 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"BINARY\" SimpleExpr"
+msgstr ""
+
+#: ../../source/VM 05c9a8cd52ea4e52bda282317aa44a84 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "builtinCast '(' Expression \"AS\" CastType ')'"
+msgstr ""
+
+#: ../../source/VM 26b9747a7bb34e76972d363782e695be Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"CASE\" ExpressionOpt WhenClauseList ElseOpt \"END\""
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: cd3caddeeedb4156958d377e1467e1c4
+msgid "\"CONVERT\" '(' Expression ',' CastType ')'"
+msgstr ""
+
+#: ../../source/VM 60fab8faf4fd498690e871433cfc970a Manual.rst:150
+#: Manual/KVSQL/Expression Related User
+msgid "SimpleIdent:"
+msgstr ""
+
+#: ../../source/VM 11098d7556d34614b923140bf2a5896f
+#: 3535350367d442fcb850e6ea4c74a04f Manual.rst Manual.rst:151 Manual.rst:185
+#: Manual.rst:292 Manual/KVSQL/Expression Related User
+#: d900b3dd1dc04f17b6674f3b6d3237f5 f0c2d4df77694d9a9360dc19c45479ae
+msgid "Identifier"
+msgstr ""
+
+#: ../../source/VM 23cb13d0527041cdae15260dce5a4136 Manual.rst
+#: Manual/KVSQL/Expression Related User ce5b81e4eaad4631a282e7d948da8e37
+#: d61da1365f064487a186144b1910adb4
+msgid "Identifier '.' Identifier"
+msgstr ""
+
+#: ../../source/VM 93e1acfe25564edf831650134ee28469 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "'.' Identifier '.' Identifier"
+msgstr ""
+
+#: ../../source/VM Manual.rst:155 Manual/KVSQL/Expression Related User
+#: b89f076c0d8e4528b276993f92e6c76e
+msgid "BoolPri:"
+msgstr ""
+
+#: ../../source/VM 2be1e341f75d413abda3fb35164425fd Manual.rst:156
+#: Manual/KVSQL/Expression Related User
+msgid "BoolPri IsOrNotOp \"NULL\""
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: e33bbb7e6fdf4021a141cebdb06e0de2
+msgid "BoolPri CompareOp PredicateExpr"
+msgstr ""
+
+#: ../../source/VM 07b0e9e22ce6474a96b7e15e9b30b582 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "BoolPri CompareOp AnyOrAll SubSelect"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: dc9447a8a1354c8fafff8f3c2f2f47b2
+msgid "PredicateExpr"
+msgstr ""
+
+#: ../../source/VM 9081246765f9483e8320c281e9221d92 Manual.rst:161
+#: Manual/KVSQL/Expression Related User
+msgid "PredicateExpr:"
+msgstr ""
+
+#: ../../source/VM 467094bb48b24ef4a5b30fa92c93ead0 Manual.rst:162
+#: Manual/KVSQL/Expression Related User
+msgid "BitExpr InOrNotOp '(' ExpressionList ')'"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: e8697dea1e534848ab3981d430c26ae2
+msgid "BitExpr InOrNotOp SubSelect"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: a8881c6acd184c15906f64cc5add1aca
+msgid "BitExpr BetweenOrNotOp BitExpr \"AND\" PredicateExpr"
+msgstr ""
+
+#: ../../source/VM 890542002bf64399b0966ea37ee7dd51 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "BitExpr LikeOrNotOp SimpleExpr LikeEscapeOpt"
+msgstr ""
+
+#: ../../source/VM 46bfb436cf9c48408f838495e1bfbbc9 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "BitExpr RegexpOrNotOp SimpleExpr"
+msgstr ""
+
+#: ../../source/VM 00ba4e05d309465185db5a8f083415fc Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "BitExpr"
+msgstr ""
+
+#: ../../source/VM 4c4c10c5518940599c56b30d7bd5470f Manual.rst:169
+#: Manual/KVSQL/Expression Related User
+msgid "InOrNotOp:"
+msgstr ""
+
+#: ../../source/VM Manual.rst:170 Manual/KVSQL/Expression Related User
+#: bd25b63c333b4473a675700df71ef0b1
+msgid "\"IN\""
+msgstr ""
+
+#: ../../source/VM 73f2f29416ef4f5bbf1e7251a9f9179a Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"NOT\" \"IN\""
+msgstr ""
+
+#: ../../source/VM Manual.rst:173 Manual/KVSQL/Expression Related User
+#: dd647a8fa0054e8fb791d1dc798616ac
+msgid "ExpressionList:"
+msgstr ""
+
+#: ../../source/VM 83099b3fa62e460684f4b09d87025c03 Manual.rst Manual.rst:174
+#: Manual/KVSQL/Expression Related User cee9faaa30b246548c95608ac13881ca
+msgid "Expression"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: a9c8c6a0d176454d8e3d2c5178cf3a27
+msgid "ExpressionList ',' Expression"
+msgstr ""
+
+#: ../../source/VM 5ce450ff98ac404897b9c67f2450cd15 Manual.rst:177
+#: Manual/KVSQL/Expression Related User
+msgid "//FulltextSearchModifierOpt: //  /* empty */"
+msgstr ""
+
+#: ../../source/VM Manual.rst:180 Manual/KVSQL/Expression Related User
+#: e432d2ed492f41a0b3020c8d3a0d35ff
+msgid "ColumnNameList:"
+msgstr ""
+
+#: ../../source/VM 5672c10bcca9488082b6a5fce2b44ba7 Manual.rst:181
+#: Manual/KVSQL/Expression Related User
+msgid "ColumnName"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: b9960c49b977479298b151412b83f6f5
+msgid "ColumnNameList ',' ColumnName"
+msgstr ""
+
+#: ../../source/VM 8a08ac52cc9d499db4b0122533fcaaa1 Manual.rst:184
+#: Manual/KVSQL/Expression Related User
+msgid "ColumnName:"
+msgstr ""
+
+#: ../../source/VM Manual.rst:188 Manual/KVSQL/Expression Related User
+#: d370fe8adc944164b1475d90984be536
+msgid "IsOrNotOp:"
+msgstr ""
+
+#: ../../source/VM 888e2f10deb9401abda51140dabbd4dd Manual.rst:189
+#: Manual/KVSQL/Expression Related User
+msgid "\"IS\""
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: eebdfca613f844ca93a6034ac91232b3
+msgid "\"IS\" \"NOT\""
+msgstr ""
+
+#: ../../source/VM 659f713a2d7748868da657f5b4cbdbb6 Manual.rst:192
+#: Manual/KVSQL/Expression Related User
+msgid "BetweenOrNotOp:"
+msgstr ""
+
+#: ../../source/VM 9208a231ca534110a76c84d5c8e5b147 Manual.rst:193
+#: Manual/KVSQL/Expression Related User
+msgid "\"BETWEEN\""
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: bfdc1476880f4db2aa7e5bd70940562f
+msgid "\"NOT\" \"BETWEEN\""
+msgstr ""
+
+#: ../../source/VM 4dadcafc54d2469f88c0ba2a464d3a6c Manual.rst:196
+#: Manual/KVSQL/Expression Related User
+msgid "LikeOrNotOp:"
+msgstr ""
+
+#: ../../source/VM 74fecfa1740a4ad1b7fe5bdf48e6c55e Manual.rst:197
+#: Manual/KVSQL/Expression Related User
+msgid "\"LIKE\""
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: ae89b89f96bd4c52b8754fcdbe26aa2d
+msgid "\"NOT\" \"LIKE\""
+msgstr ""
+
+#: ../../source/VM 4b9144b72ed34b419265b041509f5960 Manual.rst:200
+#: Manual/KVSQL/Expression Related User
+msgid "LikeEscapeOpt:"
+msgstr ""
+
+#: ../../source/VM 12d82eb9af7c483d87d9188264880d47
+#: 2616816957514ab98de8555425ed890e 2dde5c2262ba456c8aba8a0b197d5acf
+#: 3bbddfcd7e58497d8b44ee9c8e9f3682 3f135f9090c94121b15ce4be17ae6d8a
+#: 4551bff5b4934e91a6f7576fd098c03e 5e910e73d9074a5d8ea847375d55a9ce
+#: 8c5c5a30813245e2b13422199f9bcec1 920d0fd6336c4dcfa7c1dd56771ae44b
+#: Manual.rst:201 Manual.rst:255 Manual.rst:272 Manual.rst:276 Manual.rst:285
+#: Manual.rst:348 Manual.rst:360 Manual.rst:382 Manual.rst:400 Manual.rst:413
+#: Manual.rst:417 Manual.rst:425 Manual.rst:430 Manual.rst:441
+#: Manual/KVSQL/Expression Related User a4e22dbee8a843ea8ff39824a6ab83ad
+#: a5cb2d6645f54257b5eb7fe235d33b51 b18c608d6b974868a08a4236255d1076
+#: bdb812dfe8974e868c7e2b8841a2284e f5717a1a015541959433ade8e8a0f5fe
+msgid "/* empty */"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: ebfcffaec0e545e2a9d49f0bc6bf9043
+msgid "\"ESCAPE\" stringLit"
+msgstr ""
+
+#: ../../source/VM 879b41e1f88d4772a2c05bd299338679 Manual.rst:204
+#: Manual/KVSQL/Expression Related User
+msgid "RegexpOrNotOp:"
+msgstr ""
+
+#: ../../source/VM Manual.rst:205 Manual/KVSQL/Expression Related User
+#: a5a027c1977b48469ed949f14ff522bd
+msgid "RegexpSym"
+msgstr ""
+
+#: ../../source/VM 7e7b638a7aae469abdedf2339a09cc2b Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"NOT\" RegexpSym"
+msgstr ""
+
+#: ../../source/VM Manual.rst:208 Manual/KVSQL/Expression Related User
+#: dba3e2e56fd8439da2f4d9e61e8d51e1
+msgid "RegexpSym:"
+msgstr ""
+
+#: ../../source/VM 96ad6877f2b44cba8d3af96d639c4699 Manual.rst:209
+#: Manual/KVSQL/Expression Related User
+msgid "\"REGEXP\""
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: f708c943beaf42c39dab403cc4ec3dd9
+msgid "\"RLIKE\""
+msgstr ""
+
+#: ../../source/VM Manual.rst:212 Manual/KVSQL/Expression Related User
+#: e3bfeecf89db48f4b370b43e46664034
+msgid "logOr:"
+msgstr ""
+
+#: ../../source/VM 1fc97b5b5e354c04aa853c291bd3278e Manual.rst:213
+#: Manual/KVSQL/Expression Related User
+msgid "pipesAsOr"
+msgstr ""
+
+#: ../../source/VM 296ab48d51e040f689679935c35dbf29 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"OR\""
+msgstr ""
+
+#: ../../source/VM 6bfd9bc2db6b42dcb871de5a632128c9 Manual.rst:216
+#: Manual/KVSQL/Expression Related User
+msgid "CompareOp:"
+msgstr ""
+
+#: ../../source/VM 2da646362c0a4b0a85b7cfa946899c53 Manual.rst:217
+#: Manual/KVSQL/Expression Related User
+msgid "\">=\""
+msgstr ""
+
+#: ../../source/VM 4f0036dbd8ba412c9f8fef9f25668d4e Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "'>'"
+msgstr ""
+
+#: ../../source/VM 346e479f5203478dbb0cced9287268bd Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"<=\""
+msgstr ""
+
+#: ../../source/VM 9cf6f5c760f741f5ae2f20039000c3ef Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "'<'"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: cc8390c68a8c4ab3add21274614bb9e6
+msgid "\"!=\""
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: c8c6a0f2cfe84796a63da21f226981a6
+msgid "\"<>\""
+msgstr ""
+
+#: ../../source/VM 451fe39f1c004a07b34cd077f30177e7 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"=\""
+msgstr ""
+
+#: ../../source/VM 01d0306460914d779f85a27a3cb34dae Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"<=>\"  // NullEQ"
+msgstr ""
+
+#: ../../source/VM 022d41238e6640d69b200136829dbb91 Manual.rst:226
+#: Manual/KVSQL/Expression Related User
+msgid "AnyOrAll:"
+msgstr ""
+
+#: ../../source/VM Manual.rst:227 Manual/KVSQL/Expression Related User
+#: e7ce9288cf2449bea21d73643da6d2ce
+msgid "\"ANY\""
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: f9b677c8efd5463990d74278ed2722dc
+msgid "\"SOME\""
+msgstr ""
+
+#: ../../source/VM 8cd1684331114f96ac2965460b90070a Manual.rst Manual.rst:352
+#: Manual/KVSQL/Expression Related User aa8edaff99054d61868758968bb1f05c
+msgid "\"ALL\""
+msgstr ""
+
+#: ../../source/VM Manual.rst:231 Manual/KVSQL/Expression Related User
+#: f7649775a17040c5b7657bdccf662248
+msgid "SubSelect:"
+msgstr ""
+
+#: ../../source/VM 1996f9b854c444ec8e5a83d80f1872c9 Manual.rst:232
+#: Manual/KVSQL/Expression Related User
+msgid "'(' SelectStmt ')' // please see DQL"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: ec2738c456fc4312bb5ca3d8437278ca
+msgid "'(' SetOprStmt ')' // please see DQL"
+msgstr ""
+
+#: ../../source/VM Manual.rst:235 Manual/KVSQL/Expression Related User
+#: fe65c730c11f4ac29ce07ac036efbfec
+msgid "FunctionCallKeyword:"
+msgstr ""
+
+#: ../../source/VM 845e18c1702e4d1c81075bad6ee09a7b Manual.rst:236
+#: Manual/KVSQL/Expression Related User
+msgid "FunctionNameConflict '(' ExpressionListOpt ')'"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: e208c293b19643a0a893e9b7e1794023
+msgid "FunctionNameOptionalBraces OptionalBraces"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: b1a9b51edade4006ac2a0b09f3a7bbd2
+msgid "builtinCurDate '(' ')'"
+msgstr ""
+
+#: ../../source/VM 0744af5766b444ac82e46b31e2f5f83a Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "FunctionNameDatetimePrecision FuncDatetimePrec"
+msgstr ""
+
+#: ../../source/VM 6c461d4c028e4db6997f59cdf2bc7629 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"MOD\" '(' BitExpr ',' BitExpr ')'"
+msgstr ""
+
+#: ../../source/VM 20d3bb80e5cc4f3293515b4425c2c78e Manual.rst:243
+#: Manual/KVSQL/Expression Related User
+msgid "FunctionCallNonKeyword:"
+msgstr ""
+
+#: ../../source/VM 75179143b4634ba0899bbdf184565d0a Manual.rst:244
+#: Manual/KVSQL/Expression Related User
+msgid "builtinCurTime '(' FuncDatetimePrecListOpt ')'"
+msgstr ""
+
+#: ../../source/VM 576909fd16c444d29969692629a4ff88 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "builtinTrim '(' Expression ')'"
+msgstr ""
+
+#: ../../source/VM 6f306e66932b4b2f8a58a515cefd71d3 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "builtinTrim '(' Expression \"FROM\" Expression ')'"
+msgstr ""
+
+#: ../../source/VM 35b31c040fae41edb19684d64df605b3 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "builtinTrim '(' TrimDirection \"FROM\" Expression ')'"
+msgstr ""
+
+#: ../../source/VM 401eb47d5f4a42e78d83579f014b8325 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "builtinTrim '(' TrimDirection Expression \"FROM\" Expression ')'"
+msgstr ""
+
+#: ../../source/VM 31319742c8f2486e86c58f62c1f69638 Manual.rst:250
+#: Manual/KVSQL/Expression Related User
+msgid "FunctionCallGeneric:"
+msgstr ""
+
+#: ../../source/VM 86383ec91be742269e216c8e7c5dc557 Manual.rst:251
+#: Manual/KVSQL/Expression Related User
+msgid "identifier '(' ExpressionListOpt ')'"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: eaaee91c1bf34ce2b39032bfc0e9911b
+msgid "Identifier '.' Identifier '(' ExpressionListOpt ')'"
+msgstr ""
+
+#: ../../source/VM Manual.rst:254 Manual/KVSQL/Expression Related User
+#: a78cfad858334ec592e458a8a5f8451f
+msgid "ExpressionListOpt:"
+msgstr ""
+
+#: ../../source/VM 0c60961c879f4a64b823de3a46cd854a Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "ExpressionList"
+msgstr ""
+
+#: ../../source/VM Manual.rst:258 Manual/KVSQL/Expression Related User
+#: d066b752d46f42c980c371fe7b2570ef
+msgid "FunctionNameConflict: |   \"IF\""
+msgstr ""
+
+#: ../../source/VM 471f864852804af6a3879ad23f66421c Manual.rst:261
+#: Manual/KVSQL/Expression Related User
+msgid "FunctionNameOptionalBraces: |   \"CURRENT_DATE\" |   \"UTC_DATE\""
+msgstr ""
+
+#: ../../source/VM Manual.rst:265 Manual/KVSQL/Expression Related User
+#: ea62080eff4646f1bb78eb824010cba3
+msgid "FunctionNameDatetimePrecision:"
+msgstr ""
+
+#: ../../source/VM 315519a6a1b5412f980c7207d4b3bc05 Manual.rst:266
+#: Manual/KVSQL/Expression Related User
+msgid "\"CURRENT_TIME\""
+msgstr ""
+
+#: ../../source/VM 17c814c1c2bf45aea35a7cbd513aeba0 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"CURRENT_TIMESTAMP\""
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: d390d9b5c8274f9daa78719708a9fa6d
+msgid "\"UTC_TIME\""
+msgstr ""
+
+#: ../../source/VM 44a3205119ae48daa81f0a6e2d49b2b7 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"UTC_TIMESTAMP\""
+msgstr ""
+
+#: ../../source/VM Manual.rst:271 Manual/KVSQL/Expression Related User
+#: a22ed9ad2b484beda003cb2133727155
+msgid "OptionalBraces:"
+msgstr ""
+
+#: ../../source/VM 3fd8166e70594c6e844247f4805eda5e
+#: 916137601f82448e863bd749b921667e Manual.rst Manual/KVSQL/Expression Related
+#: User
+msgid "'(' ')'"
+msgstr ""
+
+#: ../../source/VM 992f7c8923794e8fa9e3b9002a6d3592 Manual.rst:275
+#: Manual/KVSQL/Expression Related User
+msgid "FuncDatetimePrec:"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: b7bb15a813f247c4974fb80c4b464b8c
+msgid "'(' intLit ')'"
+msgstr ""
+
+#: ../../source/VM 53d17da840754fada69fbc0fc026e2a9 Manual.rst:280
+#: Manual/KVSQL/Expression Related User
+msgid "StringName:"
+msgstr ""
+
+#: ../../source/VM 0cdd3be491084fdead9ea6291e375d7e
+#: 5da83896b44d4d95907508a1299f6719 Manual.rst:281 Manual.rst:319
+#: Manual/KVSQL/Expression Related User
+msgid "stringLit"
+msgstr ""
+
+#: ../../source/VM 9d1135640b74433cbc682e8eb98c5e8a Manual.rst:284
+#: Manual/KVSQL/Expression Related User
+msgid "FuncDatetimePrecListOpt:"
+msgstr ""
+
+#: ../../source/VM 34f3b2418d0f49b9a1ab2ad94285b491 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "FuncDatetimePrecList"
+msgstr ""
+
+#: ../../source/VM Manual.rst:289 Manual/KVSQL/Expression Related User
+#: fdca14853352456c8931b6ef648d34c3
+msgid "FuncDatetimePrecList:"
+msgstr ""
+
+#: ../../source/VM 1a7a27302e1e408e8e04bef082737480 Manual.rst Manual.rst:289
+#: Manual.rst:304 Manual.rst:410 Manual/KVSQL/Expression Related User
+#: ac20d2a4428f4823842dfd7329d9ee60 d1231147e9f04355ac13eec82430436f
+#: ffdfb7da34644f03862a048b5a27dcf0
+msgid "intLit"
+msgstr ""
+
+#: ../../source/VM Manual.rst:291 Manual/KVSQL/Expression Related User
+#: f4691ebece4140349c6346b11ba92ba3
+msgid "TableName:"
+msgstr ""
+
+#: ../../source/VM Manual.rst:295 Manual/KVSQL/Expression Related User
+#: c13e72406cb94776b8a9f50a825fdb9f
+msgid "SignedNum:"
+msgstr ""
+
+#: ../../source/VM Manual.rst:296 Manual/KVSQL/Expression Related User
+#: fe2305189de14008a9c5633fc24d7e36
+msgid "Int64Num"
+msgstr ""
+
+#: ../../source/VM 304d1614d9594c4d97d24aaaf26209f3 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "'+' Int64Num"
+msgstr ""
+
+#: ../../source/VM 5ff2de1a64ab4f7eaa5ded608a98f1c5 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "'-' NUM"
+msgstr ""
+
+#: ../../source/VM Manual.rst:301 Manual/KVSQL/Expression Related User
+#: d74892be47a5449ea435d4675b95ce46
+msgid "Int64Num:"
+msgstr ""
+
+#: ../../source/VM Manual.rst:301 Manual.rst:407 Manual/KVSQL/Expression
+#: Related User cabe2fef37394c019f6c3ff77f66118f
+#: f764edf6a4754d209f669a4fbf832695
+msgid "NUM"
+msgstr ""
+
+#: ../../source/VM 6951616d419042c9aeff7315ee10a9f0 Manual.rst:304
+#: Manual.rst:410 Manual/KVSQL/Expression Related User
+#: aae4c975f6a24c9086ea5b9f493f0474
+msgid "NUM:"
+msgstr ""
+
+#: ../../source/VM Manual.rst:306 Manual/KVSQL/Expression Related User
+#: c6ee94dc054d4d8e8a57dc83cf30b046
+msgid "Literal:"
+msgstr ""
+
+#: ../../source/VM 4865460c69d54532b6a90f5e2eba64af Manual.rst:307
+#: Manual/KVSQL/Expression Related User
+msgid "\"FALSE\""
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: baa89b1fff2e49d6acc9f6f5a5bd0d7d
+msgid "\"NULL\""
+msgstr ""
+
+#: ../../source/VM 16e7aa8a94dd4b53948db5096a706f48 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"TRUE\""
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: c672f762d91b480f9e40145411351ebd
+msgid "floatLit"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: a8c266ac950747b49320e48dbaa3f898
+msgid "decLit"
+msgstr ""
+
+#: ../../source/VM 732f69d03b49405f80a0db6506dff70c Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "StringLiteral"
+msgstr ""
+
+#: ../../source/VM 920f62ea318c4c7a93c3ddea17153143 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"UNDERSCORE_CHARSET\" stringLit"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: b81e2836042b4f9c804fa5c91a8bfffe
+msgid "hexLit"
+msgstr ""
+
+#: ../../source/VM 30edb6337c8d431995c28163c4479fc7 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "bitLit"
+msgstr ""
+
+#: ../../source/VM Manual.rst:318 Manual/KVSQL/Expression Related User
+#: df20e709b4ae4c02800afb8f2c27ced0
+msgid "StringLiteral:"
+msgstr ""
+
+#: ../../source/VM 5291d8f550bb462c8ea86fe3a4bf1f9c Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "StringLiteral stringLit"
+msgstr ""
+
+#: ../../source/VM 082beb91aec44229a8a06496c4d3f136 Manual.rst:322
+#: Manual/KVSQL/Expression Related User
+msgid "SumExpr:"
+msgstr ""
+
+#: ../../source/VM 121a8128123b4c07bbb56e42c4e64faf Manual.rst:323
+#: Manual/KVSQL/Expression Related User
+msgid "\"AVG\" '(' BuggyDefaultFalseDistinctOpt Expression ')'"
+msgstr ""
+
+#: ../../source/VM 21f531df62d543c6957d4793916d77a2 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "builtinBitAnd '(' Expression ')'"
+msgstr ""
+
+#: ../../source/VM 4d6f7fb7bd0b44cabd9901f818e6ba0b Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "builtinBitAnd '(' \"ALL\" Expression ')'"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: d32471d71a0d4fa19d2e3e6e9c6c79cc
+msgid "builtinBitOr '(' Expression ')'"
+msgstr ""
+
+#: ../../source/VM 16d9c26379b743dd804f1ff25c425a57 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "builtinBitOr '(' \"ALL\" Expression ')'"
+msgstr ""
+
+#: ../../source/VM 19a4b84de87340bdabd65c8b484acc96 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "builtinBitXor '(' Expression ')'"
+msgstr ""
+
+#: ../../source/VM 7c9ac564e2094aa3a24121e1d0445423 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "builtinBitXor '(' \"ALL\" Expression ')'"
+msgstr ""
+
+#: ../../source/VM 3e2dd77d9e48465baadf1dec70133b67 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "builtinCount '(' DistinctKwd ExpressionList ')'"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: e2286b607c7848fc9a33e81a98cc5109
+msgid "builtinCount '(' \"ALL\" Expression ')'"
+msgstr ""
+
+#: ../../source/VM 66bd2cdf42ad49d3902181bb4f4b9a5a Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "builtinCount '(' Expression ')'"
+msgstr ""
+
+#: ../../source/VM 800018c7597c4355b6b83a0a9786def4 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "builtinCount '(' '*' ')'"
+msgstr ""
+
+#: ../../source/VM 88b17ca0974745e0b8e0aae2b5437456 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid ""
+"builtinGroupConcat '(' BuggyDefaultFalseDistinctOpt ExpressionList "
+"OrderByOptional OptGConcatSeparator ')'"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: ab2b09a25ada4ab2920dfc4db8eeea1a
+msgid "builtinMax '(' BuggyDefaultFalseDistinctOpt Expression ')'"
+msgstr ""
+
+#: ../../source/VM 1eaeeac60d17479f8a40154653832886 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "builtinMin '(' BuggyDefaultFalseDistinctOpt Expression ')'"
+msgstr ""
+
+#: ../../source/VM 96ef9642e95b42a882590d5b240077b3 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "builtinSum '(' BuggyDefaultFalseDistinctOpt Expression ')'"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: c3ccfdbb21254f4684262389b81fcc27
+msgid "builtinStddevPop '(' BuggyDefaultFalseDistinctOpt Expression ')'"
+msgstr ""
+
+#: ../../source/VM 750df06417fe4296b8ae69dbcc32f900 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "builtinStddevSamp '(' BuggyDefaultFalseDistinctOpt Expression ')'"
+msgstr ""
+
+#: ../../source/VM 7af6e7a2f5d54413bd6a55ff35ef3e97 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "builtinVarPop '(' BuggyDefaultFalseDistinctOpt Expression ')'"
+msgstr ""
+
+#: ../../source/VM 05ab596fe9804e8f9558a398dcf3cce7 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "builtinVarSamp '(' BuggyDefaultFalseDistinctOpt Expression ')'"
+msgstr ""
+
+#: ../../source/VM 0df211a6247142f496d74fff940518d7 Manual.rst:343
+#: Manual/KVSQL/Expression Related User
+msgid "BuggyDefaultFalseDistinctOpt:"
+msgstr ""
+
+#: ../../source/VM 5a1915c730aa46b4a5fd21cd60fc0883 Manual.rst:344
+#: Manual/KVSQL/Expression Related User
+msgid "DefaultFalseDistinctOpt"
+msgstr ""
+
+#: ../../source/VM 44803a1b14f6451892689bf575006005 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "DistinctKwd \"ALL\""
+msgstr ""
+
+#: ../../source/VM 78f72cefeb7a44549474b3c17b8c298c Manual.rst:347
+#: Manual/KVSQL/Expression Related User
+msgid "DefaultFalseDistinctOpt:"
+msgstr ""
+
+#: ../../source/VM 7318dd42658249e8bbfa225f456d3c1d Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "DistinctOpt"
+msgstr ""
+
+#: ../../source/VM 180174d8529b42c4bc5edd67a70f4a01 Manual.rst:351
+#: Manual/KVSQL/Expression Related User
+msgid "DistinctOpt:"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: ecf22106aacc4d929e74a2a6263e994d
+msgid "DistinctKwd"
+msgstr ""
+
+#: ../../source/VM Manual.rst:355 Manual/KVSQL/Expression Related User
+#: e89a2a771cbe4cf78f6f53471bf89500
+msgid "DistinctKwd:"
+msgstr ""
+
+#: ../../source/VM Manual.rst:356 Manual/KVSQL/Expression Related User
+#: fe3e816b15004bf3a5e82f6bae490ffc
+msgid "\"DISTINCT\""
+msgstr ""
+
+#: ../../source/VM 1bdc3fe2626b4097b316edd65edc85a3 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"DISTINCTROW\""
+msgstr ""
+
+#: ../../source/VM 6b5408c5135c42bf9c008d0d9e4f2eb6 Manual.rst:359
+#: Manual/KVSQL/Expression Related User
+msgid "OrderByOptional:"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: dc1d005d071f4bedbd99596a6a993a8c
+msgid "OrderBy"
+msgstr ""
+
+#: ../../source/VM Manual.rst:364 Manual.rst:367 Manual/KVSQL/Expression
+#: Related User be3bc36a9ef942348c099c595a8505e4
+#: da17e85621464d74a34aae795bd19a30
+msgid "OrderBy:"
+msgstr ""
+
+#: ../../source/VM 21f1a0244f8147f58b6b9e9c44b270f8 Manual.rst:364
+#: Manual.rst:367 Manual/KVSQL/Expression Related User
+#: cf00ca03a2e443eeb3b88722871fa68e
+msgid "\"ORDER\" \"BY\" ByList"
+msgstr ""
+
+#: ../../source/VM 38b57d97c2a742aa9e2e27b2157f8a9d Manual.rst:369
+#: Manual/KVSQL/Expression Related User
+msgid "ByList:"
+msgstr ""
+
+#: ../../source/VM Manual.rst:370 Manual/KVSQL/Expression Related User
+#: bdf4468f108d472aa9f68c178f2fc1d1
+msgid "ByItem"
+msgstr ""
+
+#: ../../source/VM 8869f229b76046259a32c9fc33f9c8f1 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "ByList ',' ByItem"
+msgstr ""
+
+#: ../../source/VM 4ebcd577e67e42e9a780b7a89ac426a5 Manual.rst:374
+#: Manual/KVSQL/Expression Related User
+msgid "ByItem:"
+msgstr ""
+
+#: ../../source/VM Manual.rst:374 Manual/KVSQL/Expression Related User
+#: dca916cc53fe4f03aae2f79bbc9d1e80
+msgid "Expression Order"
+msgstr ""
+
+#: ../../source/VM Manual.rst:376 Manual/KVSQL/Expression Related User
+#: cc9f690d1a8545dc90c29c2cc682eb05
+msgid "Order:"
+msgstr ""
+
+#: ../../source/VM 6889b557d1c84bfdaa5af82ca0e15be0 Manual.rst:377
+#: Manual/KVSQL/Expression Related User
+msgid "/* EMPTY */"
+msgstr ""
+
+#: ../../source/VM 9e65969f3415479684e80174aa4753a6 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"ASC\""
+msgstr ""
+
+#: ../../source/VM 550e3f48af024ca5b3f557c7c946f71e Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"DESC\""
+msgstr ""
+
+#: ../../source/VM Manual.rst:381 Manual/KVSQL/Expression Related User
+#: ecb3e364142a46e9be474bd45a7357ea
+msgid "OptGConcatSeparator:"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: bdfe4321c18842b1aaf6dcd820086daf
+msgid "\"SEPARATOR\" stringLit"
+msgstr ""
+
+#: ../../source/VM Manual.rst:385 Manual/KVSQL/Expression Related User
+#: dc7ce068e4b443c4bc24571aaf7836e2
+msgid "CastType:"
+msgstr ""
+
+#: ../../source/VM Manual.rst:386 Manual/KVSQL/Expression Related User
+#: fa9f4a5f1e394aa2bf919aa617e910a9
+msgid "\"BINARY\" OptFieldLen"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: f01ab1f601004b97b9bc1c4b28b55cae
+msgid "Char OptFieldLen OptBinary"
+msgstr ""
+
+#: ../../source/VM 753e4333ed3c46a6bdf9b1d071bfe179 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"DATE\""
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: b01cce42a1174e74861e7c8bad6976da
+msgid "\"DATETIME\" OptFieldLen"
+msgstr ""
+
+#: ../../source/VM 182a00909754457f9c4fc0ccebfb6b20 Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"DECIMAL\" FloatOpt"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: ab75ba1c868c4a4d899ff742a07220f3
+msgid "\"TIME\" OptFieldLen"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: a0af3bd7a8544f6691ed1854553227ed
+msgid "\"SIGNED\" OptInteger"
+msgstr ""
+
+#: ../../source/VM 10daf6d675db437685cc47d14319208c Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "\"UNSIGNED\" OptInteger"
+msgstr ""
+
+#: ../../source/VM 1163dcf1f7344848b5034590c2a8bdf4 Manual.rst:394
+#: Manual/KVSQL/Expression Related User
+msgid "//| \"JSON\" |   \"DOUBLE\" |   \"FLOAT\" FloatOpt |   \"REAL\""
+msgstr ""
+
+#: ../../source/VM Manual.rst:399 Manual/KVSQL/Expression Related User
+#: eb956814689847e0a6c9f2131bc08e17
+msgid "OptFieldLen:"
+msgstr ""
+
+#: ../../source/VM 1effa960df8e459d95990c85f248a08a Manual.rst
+#: Manual/KVSQL/Expression Related User a9981a7d87774fe0922ba2653384c23c
+msgid "FieldLen"
+msgstr ""
+
+#: ../../source/VM Manual.rst:404 Manual/KVSQL/Expression Related User
+#: d598252e5df1401b8e1c79b44bd7cbd5
+msgid "FieldLen:"
+msgstr ""
+
+#: ../../source/VM 9aac86a4d7994f188b1449048b7b5a5d Manual.rst:404
+#: Manual/KVSQL/Expression Related User
+msgid "'(' LengthNum ')'"
+msgstr ""
+
+#: ../../source/VM 1297cb0a87bd4aa6a3086e2610399f76 Manual.rst:407
+#: Manual/KVSQL/Expression Related User
+msgid "LengthNum:"
+msgstr ""
+
+#: ../../source/VM 5a1dac0695014f6e962a5625e67b4545 Manual.rst:414
+#: Manual/KVSQL/Expression Related User
+msgid "OptBinary:"
+msgstr ""
+
+#: ../../source/VM 1d7532c49ad14189b640d110b18560c5 Manual.rst:416
+#: Manual/KVSQL/Expression Related User
+msgid "FloatOpt:"
+msgstr ""
+
+#: ../../source/VM 62466f3923d54deabe500b1698b2e18c Manual.rst
+#: Manual/KVSQL/Expression Related User
+msgid "Precision"
+msgstr ""
+
+#: ../../source/VM Manual.rst:422 Manual/KVSQL/Expression Related User
+#: a2289dd3a8114607aea2716f742caeeb
+msgid "Precision:"
+msgstr ""
+
+#: ../../source/VM 9352e038e1cb439fac9cc2b95ce99003 Manual.rst:422
+#: Manual/KVSQL/Expression Related User
+msgid "'(' LengthNum ',' LengthNum ')'"
+msgstr ""
+
+#: ../../source/VM 3b67b0e72ca54aa1b965cc4d3009f2fd Manual.rst:424
+#: Manual/KVSQL/Expression Related User
+msgid "OptInteger:"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: ba48b46af46341d6ba2b3daaa366bbf9
+msgid "\"INTEGER\""
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: ddb67d92335247cea14250393fe4e4ce
+msgid "\"INT\""
+msgstr ""
+
+#: ../../source/VM Manual.rst:429 Manual/KVSQL/Expression Related User
+#: fb0abb6799174274b6c94f1d5e8b0221
+msgid "ExpressionOpt:"
+msgstr ""
+
+#: ../../source/VM 5ada34fb164b493183a561eb943191d0 Manual.rst:433
+#: Manual/KVSQL/Expression Related User
+msgid "WhenClauseList:"
+msgstr ""
+
+#: ../../source/VM 3027d689727141eaaf16256d0a1dc741 Manual.rst:434
+#: Manual/KVSQL/Expression Related User
+msgid "WhenClause"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: be8b099b37084a51a5448639fe271c69
+msgid "WhenClauseList WhenClause"
+msgstr ""
+
+#: ../../source/VM 39086e1c7aa34b53af194e8642c2ee3b Manual.rst:438
+#: Manual/KVSQL/Expression Related User
+msgid "WhenClause:"
+msgstr ""
+
+#: ../../source/VM 62b7bb97648a46ec9ab842a629bde306 Manual.rst:438
+#: Manual/KVSQL/Expression Related User
+msgid "\"WHEN\" Expression \"THEN\" Expression"
+msgstr ""
+
+#: ../../source/VM Manual.rst:440 Manual/KVSQL/Expression Related User
+#: bcec43fc69794a0095819c095a1f78f3
+msgid "ElseOpt:"
+msgstr ""
+
+#: ../../source/VM Manual.rst Manual/KVSQL/Expression Related User
+#: a6751a2f7e494fc4bf8f2467727e5554
+msgid "\"ELSE\" Expression"
+msgstr ""
+

@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Consensus 5affe9c5d59b43ba819498b2032e75a2 manual.rst:4 related
+#: user
+msgid "共识相关使用手册"
+msgstr ""
+
+#: ../../source/Consensus e6fc533adc86429db129a3fb49d510f7 manual.rst:7 related
+#: user
+msgid "NoxBFT"
+msgstr ""
+
+#: ../../source/Consensus 37805fabae1a4295ac745802d0e920c9 manual.rst:8 related
+#: user
+msgid "此文档描述Hyperchain中如何使用NoxBFT共识算法，使软件开发人员能清楚地了解NoxBFT共识，便于Hyperchain的开发工作。"
+msgstr ""
+
+#: ../../source/Consensus 57b3f5e0a84a4ac683a4ded021e71ad2 manual.rst:10
+#: related user
+msgid "NoxBFT使用手册： :ref:`NoxBFT<NoxBFT-User-Manual>`"
+msgstr ""
+
+#: ../../source/Consensus 367bf6d57f3944b6991fdfc041988d2a manual.rst:13
+#: related user
+msgid "线下共识切换"
+msgstr ""
+
+#: ../../source/Consensus 417d1bcc0604422eb89129fab1d777f4 manual.rst:14
+#: related user
+msgid "此文档描述Hyperchain中如何完成共识算法的线下切换，在v2.7.0版本中，目前仅支持RBFT到NoxBFT的线下切换步骤。"
+msgstr ""
+
+#: ../../source/Consensus 45ec86ddbc28404e9a1638bf9000e0de manual.rst:16
+#: related user
+msgid "线下共识切换使用手册： :ref:`线下共识算法切换<Consensus-Switch-User-Manual>`"
+msgstr ""
+

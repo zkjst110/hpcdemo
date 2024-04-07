@@ -1,0 +1,192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Chain Authority Configuration Management.rst:4 Management/Chain
+#: e61a713f547e401fb98646253af1c6aa
+msgid "链级配置管理"
+msgstr ""
+
+#: ../../source/Chain 81b7076738b643e7a4636dbe3288bf30 Authority Configuration
+#: Management.rst:6 Management/Chain
+msgid "链级配置管理用于同步变更链级的配置。"
+msgstr ""
+
+#: ../../source/Chain 37d1ec4589cb4372866205f7d441b681 Authority Configuration
+#: Management.rst:9 Management/Chain
+msgid "链级配置管理概述"
+msgstr ""
+
+#: ../../source/Chain 87e7859f71d4456cbed3eba09481a1ec Authority Configuration
+#: Management.rst:11 Management/Chain
+msgid "链级配置的修改通过提案修改，提案的状态迁移如下："
+msgstr ""
+
+#: ../../source/Chain Authority Configuration Management.rst:13
+#: Management/Chain c88c77e136084033aac009eb0f074298
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/Chain 1146281fa42e421db1acdb459e7f1788 Authority Configuration
+#: Management.rst:239 Management/Chain
+msgid "image1"
+msgstr ""
+
+#: ../../source/Chain Authority Configuration Management.rst:15
+#: Management/Chain ac51d5446b554bb89b86284d99336ca9
+msgid "通过提案修改链级配置的流程如下：（关于链级管理员的相关使用说明参考 :ref:`链级角色管理 <chain-role-manage>`。"
+msgstr ""
+
+#: ../../source/Chain 4cd0437da8444435b6635d99d1282879 Authority Configuration
+#: Management.rst:17 Management/Chain
+msgid "关于提案的总体介绍参考 :ref:`链级权限管理 <chain-auth-manage>`）。"
+msgstr ""
+
+#: ../../source/Chain 3e0c5e0f61a042519135735b99df1dbf Authority Configuration
+#: Management.rst:19 Management/Chain
+msgid "由链级管理员发送交易创建提案，提案中包含了要修改的链级配置项及对应的值；"
+msgstr ""
+
+#: ../../source/Chain Authority Configuration Management.rst:21
+#: Management/Chain fb72f582f1514bbd96924391fef3554e
+msgid "由其他的链级管理员发送交易对提案进行投票，交易中携带有投票的提案编号和是否赞同提案中携带的内容；"
+msgstr ""
+
+#: ../../source/Chain 58f1b9b8accc465c92c5fc24d71fea3e Authority Configuration
+#: Management.rst:23 Management/Chain
+msgid "当提案投票通过后，由提案创建者发送交易执行提案，交易中携带由执行的提案编号。"
+msgstr ""
+
+#: ../../source/Chain 1605a73790d144c8b05aa78014cf86e3 Authority Configuration
+#: Management.rst:25 Management/Chain
+msgid "可通过提案修改的链级配置项如下："
+msgstr ""
+
+#: ../../source/Chain Authority Configuration Management.rst:27
+#: Management/Chain a0cf5788408d4375a22f6f7cd489ac02
+msgid "设置proposal.timeout的值，即提案超时时间（默认超时时间为5分钟，即最短超时时间，当设置当超时时间小于最短超时时间时，会设置为最短超时时间）；"
+msgstr ""
+
+#: ../../source/Chain Authority Configuration Management.rst:29
+#: Management/Chain f513b088af254a699070ee7b4608f232
+msgid "设置proposal.threshold的值，即提案的投票阈值（默认值为链级管理员总个数，另外阈值的范围为1-链级管理员总数，不能小于1，不能大于链级管理员总数）；"
+msgstr ""
+
+#: ../../source/Chain 14938db3be934718a84c7cd7e3792fa8 Authority Configuration
+#: Management.rst:31 Management/Chain
+msgid "设置proposal.contract.vote.enable的值，即是否开启通过投票管理合约生命周期，默认关闭；"
+msgstr ""
+
+#: ../../source/Chain 5e95204737324c10be3d26bbb506ff00 Authority Configuration
+#: Management.rst:33 Management/Chain
+msgid "设置proposal.contract.vote.threshold的值，即合约生命周期管理提案的投票阈值（默认值为合约管理员总个数，另外阈值的范围为1-合约管理员总数，不能小于1，不能大于合约管理员总数）；"
+msgstr ""
+
+#: ../../source/Chain 67804730e7a648ca9092e205b12eefb3 Authority Configuration
+#: Management.rst:35 Management/Chain
+msgid "设置filter.enable的值，即是否开启交易拦截过滤器；"
+msgstr ""
+
+#: ../../source/Chain 1d4b0ed053a54105a7c29c3b257c07a6 Authority Configuration
+#: Management.rst:37 Management/Chain
+msgid "设置filter.rules的值，即交易拦截过滤规则。"
+msgstr ""
+
+#: ../../source/Chain Authority Configuration Management.rst:39
+#: Management/Chain a70ffdbe93bc41c89bfa2803696c5cfa
+msgid "在内置的提案合约初始化时（第一次发交易执行提案操作时），会将带有余额的账户初始化为链级管理员和合约管理员，并将提案阈值以及合约生命周期管理的投票阈值默认设为对应管理员的总数、提案的超时时间默认设为5分钟（当设置的超时时间小于5分钟时，会设置为5分钟），即创建提案的交易打包时间+5分钟则为提案超时时间。"
+msgstr ""
+
+#: ../../source/Chain 3588576050c940719768884e7ac25b8d Authority Configuration
+#: Management.rst:43 Management/Chain
+msgid "litesdk接口说明"
+msgstr ""
+
+#: ../../source/Chain Authority Configuration Management.rst:46
+#: Management/Chain c777a59e13d74f6b93dc1ee5bf684f96
+msgid "链级配置管理接口"
+msgstr ""
+
+#: ../../source/Chain 4030b0d85c9f4c029327009227e6adc6 Authority Configuration
+#: Management.rst:48 Management/Chain
+msgid ""
+"litesdk提供了 `ProposalBuilder` 构造器用于构造提案的操作，在 `ProposalBuilder` 中提供了 "
+"`createForConfig` 、 `vote` 、 `cancel` 和 `execute` "
+"方法分别用于创建配置类提案、提案投票、取消提案和执行提案的提案操作，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Configuration Management.rst:87
+#: Management/Chain f65e53cdec344530910e5663b0672bab
+msgid ""
+"在创建配置类提案操作时，根据提案内容中需要修改的配置项不同，接收的配置类操作不同。litesdk为配置类操作 `ConfigOperation` "
+"提供了构造器 `ConfigBuilder` ，里面提供了 `setFilterEnable` 、 `setFilterRules` 、 "
+"`setProposalTimeout` 、 `setProposalThreshold` 、 `setContractVoteEnable` 、"
+" `setContractVoteThreshold` 以及 `build` 方法，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain 2210654d16c04fa384fddadb8466e4a1 Authority Configuration
+#: Management.rst:147 Management/Chain
+msgid ""
+"链级配置管理的操作构造好后，用ProposalBuild构造器构造提案相关的操作，创建好之后，使用 `BVMBuilder` 提供的 "
+"`invoke` 方法构造bvm的交易体，使用 `build` 方法构造出交易 `transaction` ，并为交易设置 `txVersion`"
+" 并使用 `sign` 方法签名，得到最终可以发送执行的交易体。"
+msgstr ""
+
+#: ../../source/Chain 93824079a46742919397f850c8da44e7 Authority Configuration
+#: Management.rst:151 Management/Chain
+msgid "链级配置查询接口"
+msgstr ""
+
+#: ../../source/Chain Authority Configuration Management.rst:153
+#: Management/Chain d9bec4ce8e254fe2a3b57b6ebf91932b
+msgid "另外，litesdk在ConfigService中还提供了查询当前链的配置的接口，其说明如下："
+msgstr ""
+
+#: ../../source/Chain 793d660669ea464b9d640c2fd2d644a9 Authority Configuration
+#: Management.rst:155 Management/Chain
+msgid "参数："
+msgstr ""
+
+#: ../../source/Chain 1a64df27b69842489584b7a9963f2e33 Authority Configuration
+#: Management.rst:157 Management/Chain
+msgid "nodeIds 请求向哪些节点发送"
+msgstr ""
+
+#: ../../source/Chain 5d25a20d0bf646b4b1ab291b7bff3f03 Authority Configuration
+#: Management.rst:163 Management/Chain
+msgid "拿到 `ConfigResponse` 后，通过 `getConfig` 方法拿到配置信息，配置信息是 `toml` 格式的字符串。"
+msgstr ""
+
+#: ../../source/Chain 803624597b5247719da10440920597dc Authority Configuration
+#: Management.rst:167 Management/Chain
+msgid "javasdk使用示例"
+msgstr ""
+
+#: ../../source/Chain Authority Configuration Management.rst:169
+#: Management/Chain bf830a0b65844c0b80b1d616a42bae13
+msgid "通过提案修改配置filter.enable的值为false，修改filter.rules的值，修改proposal.threshold的值为4，修改proposal.timeout的值为8min，修改proposal.contract.vote.enable的值为true，proposal.contract.vote.threshold的值为3，其代码如下::"
+msgstr ""
+
+#: ../../source/Chain 6d9c64ea5c6d468eb29fa9b2fa595dea Authority Configuration
+#: Management.rst:225 Management/Chain
+msgid "通过javasdk查询配置，其代码如下::"
+msgstr ""
+

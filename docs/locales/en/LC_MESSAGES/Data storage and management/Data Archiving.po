@@ -1,0 +1,347 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Data 7f0403fe2f16490fa0a6ebf1bf6cc3e9 Archiving.rst:4 and
+#: management/Data storage
+msgid "数据归档"
+msgstr ""
+
+#: ../../source/Data Archiving.rst:7 and c6c00c2764714df9980c4c69fed1194f
+#: management/Data storage
+msgid "功能概述"
+msgstr ""
+
+#: ../../source/Data 9aad17b6e25e46099f7c30cd164b1721 Archiving.rst:9 and
+#: management/Data storage
+msgid "数据归档功能的主要职责是将一部分旧的线上数据移到线下转存。"
+msgstr ""
+
+#: ../../source/Data Archiving.rst:11 and b423ce4335774c86964739d154e88d72
+#: management/Data storage
+msgid "一次完整的归档过程包括："
+msgstr ""
+
+#: ../../source/Data Archiving.rst:13 and f68b0de1f7524ef1a3a978b70b99fa92
+#: management/Data storage
+msgid "filelog数据从线上到线下的迁移，包括区块数据、区块对应的日志数据、交易回执数据。"
+msgstr ""
+
+#: ../../source/Data 8192924968d94a309b566f5c9ed3e836 Archiving.rst:14 and
+#: management/Data storage
+msgid "leveldb数据从线上到线下的迁移，主要包括交易索引数据。"
+msgstr ""
+
+#: ../../source/Data Archiving.rst:16 and f5b059351d2343d695ecebeb89c35a58
+#: management/Data storage
+msgid "新创建的数据包括："
+msgstr ""
+
+#: ../../source/Data Archiving.rst:18 and da5c2326d01c4b97aa62c80d386e5875
+#: management/Data storage
+msgid "snapshot.meta：存储本次归档的manifest内容；"
+msgstr ""
+
+#: ../../source/Data 9c3e13f970cb489bb9f1c038ec520d13 Archiving.rst:19 and
+#: management/Data storage
+msgid "archive.meta：存储本次archive过程中迁移的数据的统计结果；"
+msgstr ""
+
+#: ../../source/Data Archiving.rst:20 a86f472aad5f4e758761421050597adc and
+#: management/Data storage
+msgid "archive.record：为保证本次archive流程的完整性记录文件。"
+msgstr ""
+
+#: ../../source/Data Archiving.rst:25 and f2d41e5197b447829eba88e8a30b5762
+#: management/Data storage
+msgid "使用说明"
+msgstr ""
+
+#: ../../source/Data 9b911a5405a84c63bb8a261626ddedcb Archiving.rst:27 and
+#: management/Data storage
+msgid ""
+"用户可以直接指定一个已经被提交的区块号作为参数，归档结果为：[创世区块, 入参区块) "
+"的数据将被归档至线下，入参区块将成为新的创世区块。考虑直接归档的流程较为耗时，直接归档的请求返回和归档流程是异步的，可以通过后文提到的查询归档结果的接口查询归档是否成功。"
+" 需要注意的是，必须保证归档操作涉及到的区块是早于 `ns_static.toml` 配置文件中 "
+"`duplicate.tx_active_time` 加上 `duplicate.tx_drift_time` "
+"的，即若这两个配置分别为24h和5m（默认配置），那么只能归档24小时5分钟之前生成的区块。 "
+"此外，需要保证归档的区块号小于或等于最新的一个checkpoint，checkpoint为整10的数。例如目前区块高度为125，则checkpoint为120，归档的区块号必须小于等于120。"
+msgstr ""
+
+#: ../../source/Data Archiving.rst:32 and ec62aca995db43cc854da46de92e0149
+#: management/Data storage
+msgid "归档数据"
+msgstr ""
+
+#: ../../source/Data 1868142052e74612a79e85dc5608c7ba Archiving.rst:33
+#: Archiving.rst:47 Archiving.rst:86 ac3332eaaaf14f5c9c37b4f572df37a3 and
+#: de59dc0e70b74ab39a1a636224257a4e management/Data storage
+msgid "调用JSONRPC接口::"
+msgstr ""
+
+#: ../../source/Data 462b4aab65944f80919b7bfaed300e4d Archiving.rst:42 and
+#: management/Data storage
+msgid ""
+"该请求会返回一个长度为32的随机字符串，标识当前创世区块对应的世界状态数据库，从 "
+"``namespaces/global/data/archive`` 文件夹中可以找到 ``SNAPSHOT_FileterID`` "
+"为名称的归档数据库。"
+msgstr ""
+
+#: ../../source/Data 5a06e0801b284c13a5bd1777a2608339 Archiving.rst:45 and
+#: management/Data storage
+msgid "查询归档结果"
+msgstr ""
+
+#: ../../source/Data 8a208b22b7404873ae81aff7c4e58c4b Archiving.rst:56 and
+#: management/Data storage
+msgid "该接口用于查询指定的filterID对应的数据，从当前的链上状态来看其归档的状态。可以通过查询请求的返回值判断当前归档的状态。"
+msgstr ""
+
+#: ../../source/Data Archiving.rst:58 and b5ba9c4dca434ac1a1923b4dde0d0c2b
+#: management/Data storage
+msgid "not finish：未完成该filterID对应的归档任务。"
+msgstr ""
+
+#: ../../source/Data 296aef32fdfc4373844f22c9a0d63656 Archiving.rst:59 and
+#: management/Data storage
+msgid "achieved：已完成该filterID对应的归档任务。"
+msgstr ""
+
+#: ../../source/Data 1178e9c1f0e84365819370bfe841aeb9 Archiving.rst:60 and
+#: management/Data storage
+msgid "restore：该filterID对应的归档任务已被恢复至链上。"
+msgstr ""
+
+#: ../../source/Data 9fa4ffc43e154f409608644171628d77 Archiving.rst:63 and
+#: management/Data storage
+msgid "查询最新归档结果"
+msgstr ""
+
+#: ../../source/Data 27f80a61b61b40ddbf5dad2b40bd47dc Archiving.rst:65 and
+#: management/Data storage
+msgid "查询直接归档的jsonrpc接口调用方式为::"
+msgstr ""
+
+#: ../../source/Data 65440a75761c4710bcd5d1053e8e12f4 Archiving.rst:69 and
+#: management/Data storage
+msgid "该接口用于查询最近一次归档或restore的进度。可以通过查询请求的返回值判断当前归档的状态，如果归档失败也将显示失败的原因。"
+msgstr ""
+
+#: ../../source/Data 811bd719a9564f97ae1f9681963f2900 Archiving.rst:71 and
+#: management/Data storage
+msgid "archive running：归档任务正在进行"
+msgstr ""
+
+#: ../../source/Data 2295c5656b60447da35dad9d5fc7b52f Archiving.rst:72 and
+#: management/Data storage
+msgid "archive failed：归档任务已经失败"
+msgstr ""
+
+#: ../../source/Data Archiving.rst:73 and d4cd6d3a71754e9d84fb10259e493a54
+#: management/Data storage
+msgid "archive finished：归档任务完成"
+msgstr ""
+
+#: ../../source/Data Archiving.rst:74 and e5a50cf3125e485fbbc9dffc74610401
+#: management/Data storage
+msgid "archive rollback：归档任务失败了，但已经被平台自动回滚到归档前的状态"
+msgstr ""
+
+#: ../../source/Data 4450446a01b04216b6232871009b0a21 Archiving.rst:75 and
+#: management/Data storage
+msgid "restore running：恢复任务正在进行"
+msgstr ""
+
+#: ../../source/Data 8e883959ca754c139c2f4340b5e0f86f Archiving.rst:76 and
+#: management/Data storage
+msgid "restore failed：恢复任务已经失败"
+msgstr ""
+
+#: ../../source/Data Archiving.rst:77 and dda4a61ea9da4b7dabdfe50ff8c17411
+#: management/Data storage
+msgid "restore finished：恢复任务完成"
+msgstr ""
+
+#: ../../source/Data 82e28478d06445b5ae5807966a7d6ead Archiving.rst:78 and
+#: management/Data storage
+msgid "restore rollback：恢复任务失败了，但已经被平台自动回滚到恢复前的状态"
+msgstr ""
+
+#: ../../source/Data 1a58a3540c3f4270942ab18cd9e2a3ce Archiving.rst:79 and
+#: management/Data storage
+msgid "never archived：不曾归档"
+msgstr ""
+
+#: ../../source/Data 957dcf69ad0c4220aba37764e033ae38 Archiving.rst:81 and
+#: management/Data storage
+msgid "若归档或restore失败，还将显示失败原因。"
+msgstr ""
+
+#: ../../source/Data 2b8cddf60b024aedba07a51adc6e76dd Archiving.rst:84 and
+#: management/Data storage
+msgid "查询归档列表"
+msgstr ""
+
+#: ../../source/Data 7a8f0ff34f324e219338635fc491b8ec Archiving.rst:95 and
+#: management/Data storage
+msgid "该接口将返回目前归档过的所有记录，即snapshot.meta中所有manifest记录，返回的信息包括以下字段，当有多次归档记录时，则会有多组下列信息。"
+msgstr ""
+
+#: ../../source/Data 31cc771382ee4de5882ac9684642f530 Archiving.rst:97 and
+#: management/Data storage
+msgid "FilterID：归档编号"
+msgstr ""
+
+#: ../../source/Data 3b187ee21f2249a9b1bd5622b0880f53 Archiving.rst:98 and
+#: management/Data storage
+msgid "Height：本次归档的终点区块号。"
+msgstr ""
+
+#: ../../source/Data 314ca185274f4568806ca7da12de5058 Archiving.rst:99 and
+#: management/Data storage
+msgid "Genesis：本次归档的起点区块号。"
+msgstr ""
+
+#: ../../source/Data Archiving.rst:100 and fd24e1f1654d4fd9b92d9de515854e9d
+#: management/Data storage
+msgid "hash：本次归档的终点区块的区块哈希。"
+msgstr ""
+
+#: ../../source/Data 57c8c95486cc4542aef141d421ca67cf Archiving.rst:101 and
+#: management/Data storage
+msgid "MerkleRoot：截至本次归档的终点区块的账本状态默克尔根。"
+msgstr ""
+
+#: ../../source/Data 9bc8af0acd1c40af94c270c614670a11 Archiving.rst:102 and
+#: management/Data storage
+msgid "Namespace：本次归档的对应分区。"
+msgstr ""
+
+#: ../../source/Data Archiving.rst:103 ab93e75a8d7a442799b49f4515d04496 and
+#: management/Data storage
+msgid "TxCount：0号区块到本次归档高度间所有的合法交易数量。"
+msgstr ""
+
+#: ../../source/Data Archiving.rst:104 and b58cf75067d948e1b02f2c9839c83b5d
+#: management/Data storage
+msgid "InvalidTxCount：0号区块到本次归档高度间所有的非法交易数量。"
+msgstr ""
+
+#: ../../source/Data 91a96f634e68491fa6e603180838ad99 Archiving.rst:105 and
+#: management/Data storage
+msgid "Status：本次归档的归档结果。"
+msgstr ""
+
+#: ../../source/Data 415cb284052d43f487b1ebdda49ea2c9 Archiving.rst:106 and
+#: management/Data storage
+msgid "DBVersion：*该字段为内部使用字段，对用户无特殊意义*"
+msgstr ""
+
+#: ../../source/Data 65631f1e8bf0427391aba6312e6029bd Archiving.rst:109 and
+#: management/Data storage
+msgid "数据库变更"
+msgstr ""
+
+#: ../../source/Data Archiving.rst:110 and bf093ea48c3447cca59c2405c623dfa5
+#: management/Data storage
+msgid "归档成功后的数据库结构如下："
+msgstr ""
+
+#: ../../source/Data 383b559974264125a899ac0b19932225 Archiving.rst:112 and
+#: management/Data storage
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/Data 517e5d145b3345baa47eb1876f7300b3 Archiving.rst:142 and
+#: management/Data storage
+msgid "image1"
+msgstr ""
+
+#: ../../source/Data 9303fabc80954d1db3d5db130b90789f Archiving.rst:114 and
+#: management/Data storage
+msgid "归档成功后的数据库结构如下，所有归档的数据在配置的archive目录下，每一个文件夹名为filterID，其中一个为0号区块的snapshot，其余的为每次归档的数据存放目录。第一次归档，snapshot.meta文件中会多两条记录，其中一条为当前的归档请求对应的manifest文件，另一条是为配合0号区块的世界状态数据库而存在的manifest记录，但这条记录并不表示一次实际的归档操作。"
+msgstr ""
+
+#: ../../source/Data Archiving.rst:117 and f67f3c6b319c4b77a4527f63405deb6f
+#: management/Data storage
+msgid "归档数据线下查询"
+msgstr ""
+
+#: ../../source/Data 4f7473b878594746a5ed9458535c6773 Archiving.rst:119 and
+#: management/Data storage
+msgid ""
+"提供Archive-Reader归档数据浏览器组件，用于在独立服务器资源使用Archive-reader进行归档数据的查询浏览。Archive-"
+"Reader的使用指南详见 **Archive-Reader使用手册** 。"
+msgstr ""
+
+#: ../../source/Data 56c50dcabf8f4ed9868dec08a158a86a Archiving.rst:122 and
+#: management/Data storage
+msgid "归档数据恢复至区块链"
+msgstr ""
+
+#: ../../source/Data Archiving.rst:124 and f9997d781b094f14bf78917af56a2b07
+#: management/Data storage
+msgid ""
+"支持使用IPC命令进行归档数据的恢复。 IPC命令： - restore<namespace><filterID><shouldSync> - "
+"namespace：归档数据恢复至目标分区的标识。 - filterID：归档数据对应的归档编号。需要从最近归档的部分开始恢复。 - "
+"shouldSync：True/False，是否同步返回回执消息。"
+msgstr ""
+
+#: ../../source/Data 1d676b5ea34a448eb38aa3f382e5d3b1 Archiving.rst:130 and
+#: management/Data storage
+msgid "True：归档数据恢复完成后才返回归档数据恢复的回执消息。"
+msgstr ""
+
+#: ../../source/Data 07bf7292eddf45c8ae066dfae82f9b0a Archiving.rst:131 and
+#: management/Data storage
+msgid "False：归档数据恢复发起后就返回回执消息，归档数据恢复的执行结果需用户自行轮询检查。"
+msgstr ""
+
+#: ../../source/Data Archiving.rst:134 and c2e42789b3d1481a92855d5d3cc804fe
+#: management/Data storage
+msgid "注意事项"
+msgstr ""
+
+#: ../../source/Data 671c16a378f5494abc863cc0be3358e7 Archiving.rst:135 and
+#: management/Data storage
+msgid "各个子文件夹为各次归档产生的文件，其中accountdb与statedb文件夹存储的是snapshot数据，如果要在此基础上进一步做归档，这两个文件夹不能删除。其余文件夹的删除对于线上功能不会有任何影响。即不可删除最后一次归档产生的snapshot文件夹中的accountdb与statedb。"
+msgstr ""
+
+#: ../../source/Data 029da177347a4c39ba7c9adc55096698 Archiving.rst:136 and
+#: management/Data storage
+msgid "archive.meta与snapshot.meta文件为flato系统级别重要文件，不可删除。"
+msgstr ""
+
+#: ../../source/Data 43f55cdd93df4ba5b672b68bc3b352f5 Archiving.rst:137 and
+#: management/Data storage
+msgid "如果想要恢复归档完的数据到线上，需要采用运维手段调用ipc接口。"
+msgstr ""
+
+#: ../../source/Data Archiving.rst:138 and c9233c3b03ad47c6870d39d3b9e1e742
+#: management/Data storage
+msgid "请在归档前估算归档的数据量，并在磁盘中预留该部分的空间，因为归档过程中会发生多一倍的数据膨胀。线下数据生成后才会删除线上数据，释放磁盘空间。"
+msgstr ""
+
+#: ../../source/Data 51d5d3f6797a419387cf40712df44553 Archiving.rst:139 and
+#: management/Data storage
+msgid "由于去重需要，可以归档的最新区块产生时间需要早于tx_active_time，tx_active_time配置于ns_static.toml中。"
+msgstr ""
+

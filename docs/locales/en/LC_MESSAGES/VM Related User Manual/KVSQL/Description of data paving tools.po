@@ -1,0 +1,248 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/VM 500e4c0797d74d21af66783762505b52 Manual/KVSQL/Description
+#: Related User data of paving tools.rst:4
+msgid "数据铺底工具说明"
+msgstr ""
+
+#: ../../source/VM Manual/KVSQL/Description Related User
+#: a3bd6a35c7e14b5faad73a15ebbc0d30 data of paving tools.rst:6
+msgid "> 一键链改数据铺底工具是为了将已有的mysql数据迁移到hyperchain平台。迁移过程需要mysql自带的 `mysqldump` 工具辅助"
+msgstr ""
+
+#: ../../source/VM Manual/KVSQL/Description Related User
+#: b4b51e028f984fb79ad91dc942899c19 data of paving tools.rst:8
+msgid "> 迁移前请确认当前使用的mysql语法特性hyperchain平台均能支持或能够修改后支持。"
+msgstr ""
+
+#: ../../source/VM 9422ec66b4134ebc865f0ca32706b5df Manual/KVSQL/Description
+#: Related User data of paving tools.rst:11
+msgid "1. 导出数据"
+msgstr ""
+
+#: ../../source/VM Manual/KVSQL/Description Related User data
+#: e1472cf3dc4548f6b5c093f9ca4d5ca7 of paving tools.rst:14
+msgid "1.1 使用工具导出数据"
+msgstr ""
+
+#: ../../source/VM Manual/KVSQL/Description Related User data
+#: e4f80b7ef58148d6bb9326c74698f1a9 of paving tools.rst:16
+msgid ""
+"使用mysql的数据导出工具进行数据导出，需要导出 `.sql` 文件我们推荐使用 `mysqldump` "
+"导出工具进行导出，当前datadump工具只针对特定内容的sql文件进行处理，即导出的文件需要满足一定的格式::"
+msgstr ""
+
+#: ../../source/VM 5278f18f88164a4ba5286502a02a7032 Manual/KVSQL/Description
+#: Related User data of paving tools.rst:27
+msgid "注意上述使用 `mysqldump` 时必须包含这些参数，否则工具可能无法正常工作。"
+msgstr ""
+
+#: ../../source/VM 973b065b02e54518b8ae299779662127 Manual/KVSQL/Description
+#: Related User data of paving tools.rst:30
+msgid "1.2 语法检查"
+msgstr ""
+
+#: ../../source/VM Manual/KVSQL/Description Related User
+#: bb175776dc9b4727af30b892530c2e15 data of paving tools.rst:32
+msgid ""
+"导出数据后，需要检查导出文件中是否有不支持的语法，并进行修改。此步骤需要对比hyperchain支持的mysql语法，重点确认建表语句中是否包含不支持的语法，并进行修改。"
+" 例如，hyperchain中不支持手动设置字符集，因此建表语句::"
+msgstr ""
+
+#: ../../source/VM 46886aa3546446e8a8bcf615d722954b Manual/KVSQL/Description
+#: Related User data of paving tools.rst:41
+msgid "需要修改为::"
+msgstr ""
+
+#: ../../source/VM Manual/KVSQL/Description Related User data
+#: ef23c0e8c76c4f459e378fc73e21916b of paving tools.rst:51
+msgid "2. 启动hyperchain平台"
+msgstr ""
+
+#: ../../source/VM 963dcd1a4e484264b6931eea5759669a Manual/KVSQL/Description
+#: Related User data of paving tools.rst:53
+msgid "推荐使用SOLO节点进行数据铺底，后续再将SOLO节点的数据迁移到正式的节点"
+msgstr ""
+
+#: ../../source/VM Manual/KVSQL/Description Related User data
+#: f60f183f2856410b947230c297c2c446 of paving tools.rst:56
+msgid "3. 修改datadump配置文件"
+msgstr ""
+
+#: ../../source/VM Manual/KVSQL/Description Related User data
+#: dbb51c0fafdd4eb3b0280dfef7810111 of paving tools.rst:58
+msgid "工具默认的目录如下::"
+msgstr ""
+
+#: ../../source/VM Manual/KVSQL/Description Related User data
+#: e0e26047955e46e9862d7fbfdfc7feb8 of paving tools.rst:81
+msgid "4. 运行命令，进行数据铺底"
+msgstr ""
+
+#: ../../source/VM 8a780cd2b12c4223a6395559eb4f1a89 Manual/KVSQL/Description
+#: Related User data of paving tools.rst:83
+msgid "命令的详细使用方式可以通过命令查看::"
+msgstr ""
+
+#: ../../source/VM Manual/KVSQL/Description Related User data
+#: fc18b79a3f5c4c1c94695d96957e6bfa of paving tools.rst:88
+msgid "4.1 创建库"
+msgstr ""
+
+#: ../../source/VM Manual/KVSQL/Description Related User data
+#: e7b3b7f557ec40d39732486bed763957 of paving tools.rst:90
+msgid "创建库的命令如下::"
+msgstr ""
+
+#: ../../source/VM Manual/KVSQL/Description Related User data
+#: ebc419ef0b55447b9b257c0ffb8c13bc of paving tools.rst:94
+msgid "执行成功后会打印一个\"库\"地址"
+msgstr ""
+
+#: ../../source/VM 30b02ed130e348afbfc6607a509f683b Manual/KVSQL/Description
+#: Related User data of paving tools.rst:97
+msgid "4.2 插入数据到库中"
+msgstr ""
+
+#: ../../source/VM 02fbb940947a46368fa582d1c32c52ef Manual/KVSQL/Description
+#: Related User data of paving tools.rst:99
+msgid "命令如下::"
+msgstr ""
+
+#: ../../source/VM 43352a14e2154b169e104e67cbfc54e9 Manual/KVSQL/Description
+#: Related User data of paving tools.rst:103
+msgid ""
+"其中 `-t` 代表并发开启的线程数量，数字越大发送的速率越快（*注意平台最好关掉流控以提高执行效率*）,命令的执行会遍历文件夹下所有 以 "
+"`.sql` 结尾的文件，并执行里面的建表语句以及 `INSERT` 语句"
+msgstr ""
+
+#: ../../source/VM 3a25b4a0b13c4310a9d4f234923b27fb Manual/KVSQL/Description
+#: Related User data of paving tools.rst:105
+msgid "检查命令以及hyperchain平台日志是否有报错，直到命令执行结束。"
+msgstr ""
+
+#: ../../source/VM 43e7c3b41f34415ea78378edb594fee2 Manual/KVSQL/Description
+#: Related User data of paving tools.rst:107
+msgid ""
+"*注意：datadump默认在发送数据的时候不查询回执，即一笔交易不确认是否执行成功，因此过程中需确认平台是否产生error, "
+"如需在工具端查询回执实时确认执行成功与否，需开启 `--checkRecept` 选项，但同时运行效率会大大降低。*"
+msgstr ""
+
+#: ../../source/VM 9f898c57e30f46c389d0cc7d5eef1c1c Manual/KVSQL/Description
+#: Related User data of paving tools.rst:110
+msgid "附："
+msgstr ""
+
+#: ../../source/VM 8b82700ee6c5439fa993747adb261280 Manual/KVSQL/Description
+#: Related User data of paving tools.rst:112
+msgid "datadump命令参数： 子命令:"
+msgstr ""
+
+#: ../../source/VM Manual/KVSQL/Description Related User
+#: d3e7a9e10019464a89e290b8625f3642 data of paving tools.rst:115
+msgid "1. createDatabase"
+msgstr ""
+
+#: ../../source/VM Manual/KVSQL/Description Related User data
+#: dc19f85ab74e452288a542099d6796b5 of paving tools.rst:117
+msgid "在平台上创建一个\"库\"，返回一个\"库\"地址 参数："
+msgstr ""
+
+#: ../../source/VM 941c89c445a54cc18b0d128302bf8b76 Manual/KVSQL/Description
+#: Related User da0c2beb4eaa47c18fde06b65dcf9901 data of paving tools.rst:119
+#: tools.rst:130
+msgid "--sdkConfig value, -c value Required, sdk configgosdk的配置文件路径"
+msgstr ""
+
+#: ../../source/VM 9a50dd6c5e6948379621e53a33e5f735 Manual/KVSQL/Description
+#: Related User c0535a3727b541a2bdc3eceada68b178 data of paving tools.rst:121
+#: tools.rst:132
+msgid ""
+"--accountFilePath value, -a value Required, account json "
+"file包含account的account json文件路径"
+msgstr ""
+
+#: ../../source/VM 0dd6822146c048db8f9333587443c7d6
+#: 423c6376951e4a8ca7df690a1be5e105 Manual/KVSQL/Description Related User data
+#: of paving tools.rst:123 tools.rst:134
+msgid ""
+"--accountPassword value, -p value account "
+"passwordaccount账户的密码（如果有，没有则不必指定）"
+msgstr ""
+
+#: ../../source/VM 38f96e5531e841389b8d2a92f04e7e5b Manual/KVSQL/Description
+#: Related User data of paving tools.rst:126
+msgid "2. mysql2hpc"
+msgstr ""
+
+#: ../../source/VM 34b974795252487684edce3e7dc07754 Manual/KVSQL/Description
+#: Related User data of paving tools.rst:128
+msgid "将sql文件数据转移到hyperchain平台 参数："
+msgstr ""
+
+#: ../../source/VM 4e5923e501814855b84a6ee72fdc3883 Manual/KVSQL/Description
+#: Related User data of paving tools.rst:136
+msgid ""
+"--databaseAddress value, -d value databaseAddress of kvsql运行 "
+"`createDatabase` 得到的地址"
+msgstr ""
+
+#: ../../source/VM Manual/KVSQL/Description Related User
+#: be0818216fb24b3c800a6033ed933075 data of paving tools.rst:138
+msgid ""
+"--slqDir value, -s value slqfile dir with datadump "
+"output使用mysqldump导出的sql文件的目录"
+msgstr ""
+
+#: ../../source/VM Manual/KVSQL/Description Related User
+#: a65809f17c6c452190857fb5e2eb8e5c data of paving tools.rst:140
+msgid ""
+"--maxConcurrent value, -t value maximum number of concurrent send "
+"(default: 2)发送的最大并发数"
+msgstr ""
+
+#: ../../source/VM Manual/KVSQL/Description Related User
+#: c643f9efba6c4ca1afd528ef1fd930e3 data of paving tools.rst:142
+msgid ""
+"--checkRecept, -r whether check recept of send "
+"tx是否校验发送交易的回执（开启后发送速率将降低，但每次发送后会检查是否执行成功）"
+msgstr ""
+
+#: ../../source/VM 53ae640e10b74ced9879424bcc06f005 Manual/KVSQL/Description
+#: Related User data of paving tools.rst:144
+msgid ""
+"--insertWithDBName, -i whether insert statement with db name before table"
+" name like database.table插入语句中表名前是否包含库名"
+msgstr ""
+
+#: ../../source/VM 6c728acbe05846b08d1742cc11dc0889 Manual/KVSQL/Description
+#: Related User data of paving tools.rst:148
+msgid "工具包附件（工具需要根据最新sdk重新打包一份 否则2.7.0链使用交易签名非法）："
+msgstr ""
+
+#: ../../source/VM Manual/KVSQL/Description Related User
+#: ca2328eb52ac4ad59a190ce79e4c10ed data of paving tools.rst:150
+#, python-format
+msgid "`附件 <https://upload.filoop.com/RTD-Hyperchain%2Fdata_tool_0_0_2.tar.gz>`_"
+msgstr ""
+

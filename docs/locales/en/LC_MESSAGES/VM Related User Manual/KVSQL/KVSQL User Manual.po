@@ -1,0 +1,1141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/VM 58a6a993044244449947202e6fe5585a Manual.rst:4
+#: Manual/KVSQL/KVSQL Related User
+msgid "一键链改使用手册"
+msgstr ""
+
+#: ../../source/VM 06a86492894e478d9028879cf32fef2d Manual.rst:6
+#: Manual/KVSQL/KVSQL Related User
+msgid ":ref:`数据铺底工具说明 <Description-of-data-paving-tools>`"
+msgstr ""
+
+#: ../../source/VM Manual.rst:7 Manual/KVSQL/KVSQL Related User
+#: d32cacedc8694b248eb93480e63f64c6
+msgid ":ref:`一键链改Demo说明 <Description-of-KVSQL-Demo>`"
+msgstr ""
+
+#: ../../source/VM Manual.rst:8 Manual/KVSQL/KVSQL Related User
+#: a505c3e4b2ad44f281e91cddbee4248c
+msgid ":ref:`DDL语句使用手册 <DDL-User-Manual>`"
+msgstr ""
+
+#: ../../source/VM Manual.rst:9 Manual/KVSQL/KVSQL Related User
+#: bf027cdc08b5422cafc6c211f6eb80a9
+msgid ":ref:`DML语句使用手册 <DML-User-Manual>`"
+msgstr ""
+
+#: ../../source/VM 5366db4d0f3f4f5babb64daeb5b9a8b6 Manual.rst:10
+#: Manual/KVSQL/KVSQL Related User
+msgid ":ref:`DQL语句使用手册 <DQL-User-Manual>`"
+msgstr ""
+
+#: ../../source/VM Manual.rst:11 Manual/KVSQL/KVSQL Related User
+#: ab32844cae8749d781f10dd3d4e39af9
+msgid ":ref:`Expression使用手册 <Expression-User-Manual>`"
+msgstr ""
+
+#: ../../source/VM 5ae62286db1e44c18f0621249465056c Manual.rst:12
+#: Manual/KVSQL/KVSQL Related User
+msgid ":ref:`数据类型Type使用手册 <Data-Type-User-Manual>`"
+msgstr ""
+
+#: ../../source/VM 216fabbb3acb482cb1c98b4a4f07339c Manual.rst:13
+#: Manual/KVSQL/KVSQL Related User
+msgid ":ref:`Operators&Funtions使用手册 <Operators-Funtions-User-Manual>`"
+msgstr ""
+
+#: ../../source/VM 8996617202634e229a7509e7e7615d61 Manual.rst:17
+#: Manual/KVSQL/KVSQL Related User
+msgid "1. 引言"
+msgstr ""
+
+#: ../../source/VM 1efb35644b3c4c2bb5414e30a5475301 Manual.rst:20
+#: Manual/KVSQL/KVSQL Related User
+msgid "1.1 编写目的"
+msgstr ""
+
+#: ../../source/VM 332db61bf903498198b920a16687fe24 Manual.rst:22
+#: Manual/KVSQL/KVSQL Related User
+msgid "本文档用于介绍Hyperchain一键链改功能的使用方法。面向的用户为应用开发人员，为其在将现有应用进行”一键链改”或者直接基于一键链改功能进行新应用的开发时作为指导和参考。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:25 Manual/KVSQL/KVSQL Related User
+#: a855b33eabc24a64acd86c0097042080
+msgid "1.2背景"
+msgstr ""
+
+#: ../../source/VM Manual.rst:27 Manual/KVSQL/KVSQL Related User
+#: fe0cfd8b6726472f97456710d77e87bf
+msgid "作为领先的区块链底层平台，为提升数据使用的便捷程度所提供的数据使用方式，方便区块链服务于更多的业务场景，Hyperchain拟内生支持SQL语句的使用，能够简化用户将数据从普通业务转换为区块链业务应用的适配复杂度。通常，用户只需将原来MySql的JDBC驱动变更为一键链改提供的JDBC驱动，即可完成应用上链。"
+msgstr ""
+
+#: ../../source/VM 6f4023cde5494b92886428a36bdf61c7 Manual.rst:30
+#: Manual/KVSQL/KVSQL Related User
+msgid "1.3术语"
+msgstr ""
+
+#: ../../source/VM Manual.rst:33 Manual/KVSQL/KVSQL Related User
+#: ebf528e10f7d4b3fa84dbb4905908c99
+msgid "名词"
+msgstr ""
+
+#: ../../source/VM 1c14ecdb6fd140a597af63c46d7ae088 Manual.rst:33
+#: Manual/KVSQL/KVSQL Related User
+msgid "解释"
+msgstr ""
+
+#: ../../source/VM 0e79a57048e749138559ad724f54498e Manual.rst:35
+#: Manual/KVSQL/KVSQL Related User
+msgid "JDBC"
+msgstr ""
+
+#: ../../source/VM 1fc8cfdd2c8e425ba11a01e7456da9b2 Manual.rst:35
+#: Manual/KVSQL/KVSQL Related User
+msgid ""
+"Java数据库连接，（Java Database Connectivity，简称JDBC）是 一 种可用于执行 SQL 语句的 Java "
+"API。JDBC 为数据库应用开发人 员、数据库前台开发人员提供了一种标准的应用程序设计接口， 使开发人员可以用纯 Java "
+"语言编写完整的数据库应用程序。"
+msgstr ""
+
+#: ../../source/VM 7a53ff72e3ac42c9a91e49ed728fc915 Manual.rst:42
+#: Manual/KVSQL/KVSQL Related User
+msgid "DDL"
+msgstr ""
+
+#: ../../source/VM 3a2fc341b03a4ea3b437b606c0d37b45 Manual.rst:42
+#: Manual/KVSQL/KVSQL Related User
+msgid "数据定义语言，主要为创建、修 改、删除数据库的逻辑结构，其中包括表结构，视图和索引等。"
+msgstr ""
+
+#: ../../source/VM 2a1db15ddeb541da81abedaf93a5433b Manual.rst:45
+#: Manual/KVSQL/KVSQL Related User
+msgid "DML"
+msgstr ""
+
+#: ../../source/VM Manual.rst:45 Manual/KVSQL/KVSQL Related User
+#: a4008a01530f4b388ebf15ba1a61dcef
+msgid "数据操纵语 言，主要用于数据库中数据的修改，包括添加、删除、修改等。"
+msgstr ""
+
+#: ../../source/VM 6508e7658a1b43d7ba1ffc65327bb9c2 Manual.rst:48
+#: Manual/KVSQL/KVSQL Related User
+msgid "DQL"
+msgstr ""
+
+#: ../../source/VM 797f57d221f847e2b897e7bf83706f93 Manual.rst:48
+#: Manual/KVSQL/KVSQL Related User
+msgid "数据查询语言，用于数据库中数据的检索查询。"
+msgstr ""
+
+#: ../../source/VM 685144b5577a402b8a4651b67d972b8a Manual.rst:52
+#: Manual/KVSQL/KVSQL Related User
+msgid "2. 安装和初始化"
+msgstr ""
+
+#: ../../source/VM Manual.rst:55 Manual/KVSQL/KVSQL Related User
+#: b50fdaf2faed4f98aca775b6141e6294
+msgid "2.1 平台安装"
+msgstr ""
+
+#: ../../source/VM 8ebaa5ac5d5e40a88569f3ad27757083 Manual.rst:57
+#: Manual/KVSQL/KVSQL Related User
+msgid "一键链改为Hyperchain平台提供的一个新特性，请确认安装包含一键链改功能特性的Hyperchain平台版本。"
+msgstr ""
+
+#: ../../source/VM 441f4393ca6d4042afff8d6e640b0fda Manual.rst:60
+#: Manual/KVSQL/KVSQL Related User
+msgid "2.2 创建“库”"
+msgstr ""
+
+#: ../../source/VM 1b366f96eeb541d384eb856eadf9cdcf Manual.rst:62
+#: Manual/KVSQL/KVSQL Related User
+msgid "Hyperchain平台支持SQL语句的执行，与MySql存在概念上的差异："
+msgstr ""
+
+#: ../../source/VM 3f53785b55e54ce4aa7c31e1f308b8af Manual.rst:65
+#: Manual/KVSQL/KVSQL Related User
+msgid "元素"
+msgstr ""
+
+#: ../../source/VM 4298325082fc409ba71f1fbb84e8d394 Manual.rst:65
+#: Manual/KVSQL/KVSQL Related User
+msgid "描述"
+msgstr ""
+
+#: ../../source/VM 27719dcfccb2470b997ab1c1b7001867 Manual.rst:67
+#: Manual/KVSQL/KVSQL Related User
+msgid "合约地址"
+msgstr ""
+
+#: ../../source/VM 32988b55ebb14a85938c4e2312a49012 Manual.rst:67
+#: Manual/KVSQL/KVSQL Related User
+msgid ""
+"区块链上的数据将存储在 一个地址下，由于联盟链的数据为联盟链成员或全链所有，因 此将数据归属于一个用户使用的账户不合适，应参考智能合约 "
+"的模式，为多个强关联的数据表创建一个合约地址作为“库”。"
+msgstr ""
+
+#: ../../source/VM 594acefb088648fdbb25f9f742af8807 Manual.rst:72
+#: Manual/KVSQL/KVSQL Related User
+msgid "表"
+msgstr ""
+
+#: ../../source/VM Manual.rst:72 Manual/KVSQL/KVSQL Related User
+#: e0aee591089d4d2580fd5ac9c20df07c
+msgid "一个合约地 址下可以有多张数据表，表用于记录业务数据，应拥有primary key，并于创建时建立索引。"
+msgstr ""
+
+#: ../../source/VM 1ca2758fb323468fa9358e18d992f35a Manual.rst:76
+#: Manual/KVSQL/KVSQL Related User
+msgid "列"
+msgstr ""
+
+#: ../../source/VM 83487855324d456b88dd7c64336927d2 Manual.rst:76
+#: Manual/KVSQL/KVSQL Related User
+msgid "一张数据表内可以有多列，初期不支持对列的修改"
+msgstr ""
+
+#: ../../source/VM 55e9401ee6d04566bee037b3b19be7a0 Manual.rst:78
+#: Manual/KVSQL/KVSQL Related User
+msgid "行值"
+msgstr ""
+
+#: ../../source/VM 45af08f3c3ef4ce889f71618375f87a6 Manual.rst:78
+#: Manual/KVSQL/KVSQL Related User
+msgid "普通的行值，按列的数据规则插入的数据。"
+msgstr ""
+
+#: ../../source/VM 150130f4959e46c9ad3db9e34d94cd62 Manual.rst:81
+#: Manual/KVSQL/KVSQL Related User
+msgid "因此，类似于MySql使用前需要创建一个库，在Hyperchain上也需要进行类似操作先创建一个”库”。其操作方式为通过SDK向区块链平台发起一个创建库请求，示例代码如下（详见litesdk文档）::"
+msgstr ""
+
+#: ../../source/VM Manual.rst:89 Manual/KVSQL/KVSQL Related User
+#: d3cabd2bf6764ab3a432f81ac6191633
+msgid "上述示例中最终得到 `contractAddress` 即为“库”地址，供后续步骤使用。"
+msgstr ""
+
+#: ../../source/VM 014c0270e01645a6935452614fa8119e Manual.rst:92
+#: Manual/KVSQL/KVSQL Related User
+msgid "3.操作说明"
+msgstr ""
+
+#: ../../source/VM Manual.rst:94 Manual/KVSQL/KVSQL Related User
+#: b05f30f268924576897ec20c8e0c85e1
+msgid "完成Hyperchain平台安装和初始化后，即可开始进行应用的改造。应用改造包括驱动配置改造与应用功能检查"
+msgstr ""
+
+#: ../../source/VM 70ccca4b2c5d442b9c316d156a1f104b Manual.rst:97
+#: Manual/KVSQL/KVSQL Related User
+msgid "3.1 替换驱动配置"
+msgstr ""
+
+#: ../../source/VM 9951388004c146ca9c3e646998bfbf0b Manual.rst:99
+#: Manual/KVSQL/KVSQL Related User
+msgid "我们提供了一个JDBC驱动，用于替代传统SQL数据库的JDBC驱动。通过对驱动接口的调用，会直接与区块链平台进行交互。"
+msgstr ""
+
+#: ../../source/VM 1ea49ca5da21454191c1db39bc3a7340 Manual.rst:101
+#: Manual/KVSQL/KVSQL Related User
+msgid "替换驱动配置的步骤为："
+msgstr ""
+
+#: ../../source/VM Manual.rst:103 Manual/KVSQL/KVSQL Related User
+#: fecde4571c2b4c0c9798f59b75ea6a66
+msgid "**替换JDBC class name**"
+msgstr ""
+
+#: ../../source/VM Manual.rst:105 Manual/KVSQL/KVSQL Related User
+#: dda1fcd9f95d4d308a7ce96746e99551
+msgid "一键链改驱动class name为 `cn.hyperchain.sql.driver.KVSQLDriver` ，将其替换mysql的驱动名称"
+msgstr ""
+
+#: ../../source/VM Manual.rst:107 Manual/KVSQL/KVSQL Related User
+#: fb1982ac3f32436f8661fe6cf0404d15
+msgid "**替换url**"
+msgstr ""
+
+#: ../../source/VM 4e2194f78f7d4dd3a1699ef58ecb40e7 Manual.rst:109
+#: Manual/KVSQL/KVSQL Related User
+msgid "数据库的URL设计遵循JDBC规范，如下"
+msgstr ""
+
+#: ../../source/VM 5721ada353714a409d13dac69b2d848e Manual.rst:111
+#: Manual/KVSQL/KVSQL Related User
+msgid ""
+"`jdbc:kvsql://blockchain/<database_name>?property1=value1&property2=value2"
+" "
+"<jdbc:kvsql://blockchain/<database_name>?property1=value1&property2=value2>`_"
+msgstr ""
+
+#: ../../source/VM 2375ccdcaa5f42d9abfc4f71610a7571 Manual.rst:113
+#: Manual/KVSQL/KVSQL Related User
+msgid "其含义如下："
+msgstr ""
+
+#: ../../source/VM 18376c26cae843d58ac28eb0fdb0f278 Manual.rst:116
+#: Manual/KVSQL/KVSQL Related User
+msgid "内容"
+msgstr ""
+
+#: ../../source/VM 11c61e27528d42f99f107f904b9835a1 Manual.rst:116
+#: Manual/KVSQL/KVSQL Related User
+msgid "含义"
+msgstr ""
+
+#: ../../source/VM 2da5907323b3451b9f2f83be35fb7087 Manual.rst:118
+#: Manual/KVSQL/KVSQL Related User
+msgid "jdbc"
+msgstr ""
+
+#: ../../source/VM 970ba52d578d4cb3b68e156d0d908764 Manual.rst:118
+#: Manual/KVSQL/KVSQL Related User
+msgid "代表jdbc协议"
+msgstr ""
+
+#: ../../source/VM 533c7a5183434371b276ca63573a7597 Manual.rst:120
+#: Manual/KVSQL/KVSQL Related User
+msgid "kvsql"
+msgstr ""
+
+#: ../../source/VM 20f93fc341534af0afe86f9f536ad677 Manual.rst:120
+#: Manual/KVSQL/KVSQL Related User
+msgid "协议实现标识"
+msgstr ""
+
+#: ../../source/VM 5e6e533ba01c4bc1b5f4c40bdcd9df89 Manual.rst:122
+#: Manual/KVSQL/KVSQL Related User
+msgid "blockchain"
+msgstr ""
+
+#: ../../source/VM 2e67600205e9478c800f917638697fc2 Manual.rst:122
+#: Manual/KVSQL/KVSQL Related User
+msgid "固定字符，当前未保留内容"
+msgstr ""
+
+#: ../../source/VM Manual.rst:124 Manual/KVSQL/KVSQL Related User
+#: e8afd4fab5ec49cbad6b7a7bd334f625
+msgid "使用的 库名称（具体为库地址，为2.2中创建的结果）"
+msgstr ""
+
+#: ../../source/VM 6aed52293ccd4c5fa6f2c5beeac51bc8 Manual.rst:127
+#: Manual/KVSQL/KVSQL Related User
+msgid "property1 =value1&property2=value2"
+msgstr ""
+
+#: ../../source/VM 037e000687f9416bb2ae82da17e10b81 Manual.rst:127
+#: Manual/KVSQL/KVSQL Related User
+msgid "连接属性，可以 将配置项直接写入url，具体配置项可参考下文"
+msgstr ""
+
+#: ../../source/VM 445c92d7ac0c427482c1603e10b42b00 Manual.rst:131
+#: Manual/KVSQL/KVSQL Related User
+msgid "说明：url中传入的配置项会被通过properties传入的配置项所覆盖。"
+msgstr ""
+
+#: ../../source/VM 8921cdd97cbc490ca727831ec5317e45 Manual.rst:133
+#: Manual/KVSQL/KVSQL Related User
+msgid "**修改驱动配置项**"
+msgstr ""
+
+#: ../../source/VM Manual.rst:135 Manual/KVSQL/KVSQL Related User
+#: b77085f167bc45a8ba94d6945e68f148
+msgid ""
+"与MySql JDBC驱动的配置项类似，一键链改JDBC驱动也有自己的配置项，用户可以使用和MySql "
+"JDBC驱动配置项相同的方式进行配置，区别是配置项名称有所不同。"
+msgstr ""
+
+#: ../../source/VM 2ef39a7440fe40728814b7f671ee4ee1 Manual.rst:138
+#: Manual/KVSQL/KVSQL Related User
+msgid "配 置项名称"
+msgstr ""
+
+#: ../../source/VM 582a8968b24247b3b325592c65a1d876 Manual.rst:138
+#: Manual/KVSQL/KVSQL Related User
+msgid "配置项说明"
+msgstr ""
+
+#: ../../source/VM Manual.rst:138 Manual/KVSQL/KVSQL Related User
+#: ddc612478dd74c1583637de08238dad2
+msgid "缺省值"
+msgstr ""
+
+#: ../../source/VM 19795287e89140cf82dc735e2e0183f4 Manual.rst:138
+#: Manual/KVSQL/KVSQL Related User
+msgid "最低版 本要求"
+msgstr ""
+
+#: ../../source/VM 777a9b2040584f328d2f5bcf98186c2b Manual.rst:141
+#: Manual/KVSQL/KVSQL Related User
+msgid "基本"
+msgstr ""
+
+#: ../../source/VM Manual.rst:141 Manual/KVSQL/KVSQL Related User
+#: a7ab08c23ef8443995dfc80892408add
+msgid "user"
+msgstr ""
+
+#: ../../source/VM Manual.rst:141 Manual/KVSQL/KVSQL Related User
+#: e9197d3de159462fb183af4693454d0d
+msgid "区块链账户（Account）"
+msgstr ""
+
+#: ../../source/VM 7fa510def048434badb697af4f5bcdca
+#: 83ac430698054d63aff76c13b9df12fc Manual.rst:141 Manual.rst:145
+#: Manual.rst:190 Manual/KVSQL/KVSQL Related User
+#: e8ba23e1a4eb4533ba50245d39c71d6b
+msgid "必须配置"
+msgstr ""
+
+#: ../../source/VM 120fa87c6e5e46ef92be416efef2e0da
+#: 131ae1aabba743b1be4e3bf32f53d469 1d57e0e8737648589633010903f6d05c
+#: 1e6ca14058a04c138938239808ab9385 219139448ddd4983843f10b8a8f62b52
+#: 28904cb795e14ea0ad1c175a305615c6 29ddb5c4bc2340409df550a893b53a04
+#: 2dea331d03d84494ad44feaf38b9faa0 2e7904ea0d6740ef95a1fe658b507b7c
+#: 30ef928ce74c4101975ed94bfc4d7f48 3bb1305d850c477ca316106a90729136
+#: 42ca33a57c1e42cf961221009c8ecc8f 45aebeecac6740669766929c9c9f626c
+#: 4948f73d5b904737ac39e4163e97e52a 4d829276abba4e20a20734b4ca760597
+#: 5193b66c934141b3804280f0a44de458 5290fade496b410b886f8655022e6c91
+#: 549018f1e2b44802beff60e4cb931205 58f4e1a986154d8bac9f16126e961582
+#: 59337a2dfea24a70b92cad7f6362a936 623c23b5107e40ad996f37abfc1a6643
+#: 65492b766cce47388e229e645bea230b 6d7cbf6e86e04106b8b1630215010e56
+#: 7196e4b4aa674102ad35d9c67d3cb506 720917aeb38a464188d29c4d77948d2f
+#: 736d22f3df344508b647c43a51aa94b3 76ca55085f864eeea58c73fec865501e
+#: 777177f252f5473fb7fabfba53dd63d5 7ff6a0ebcf414765b9df826c0965ae5c
+#: 81d2e6be5f1c4965b60a3a2afe3072fd 8349423cdc40432795473aecd9ef0130
+#: 860b06ff3e9a4ea39a0dc45053c174aa 86d819b7ff2147659944ea1665050736
+#: 893dfbf832e44f068cb5e5a02d99f1d5 8b289887bf6043349bc38337c58876e1
+#: 935c2722a78f44e4805d6d5cd95f83c0 962a22ccd79d472790b78eba87a2edde
+#: Manual.rst:141 Manual.rst:143 Manual.rst:145 Manual.rst:147 Manual.rst:149
+#: Manual.rst:151 Manual.rst:153 Manual.rst:155 Manual.rst:158 Manual.rst:160
+#: Manual.rst:162 Manual.rst:164 Manual.rst:167 Manual.rst:169 Manual.rst:171
+#: Manual.rst:174 Manual.rst:177 Manual.rst:182 Manual.rst:184 Manual.rst:187
+#: Manual.rst:190 Manual.rst:192 Manual.rst:197 Manual.rst:201 Manual.rst:207
+#: Manual.rst:211 Manual.rst:216 Manual.rst:221 Manual.rst:227 Manual.rst:231
+#: Manual.rst:235 Manual.rst:244 Manual.rst:249 Manual.rst:257 Manual.rst:261
+#: Manual.rst:265 Manual.rst:271 Manual.rst:278 Manual.rst:282 Manual.rst:290
+#: Manual.rst:294 Manual.rst:299 Manual.rst:303 Manual.rst:311 Manual.rst:316
+#: Manual/KVSQL/KVSQL Related User a91bcb3a75414326aef5254bbd878f86
+#: c39b22ed2f78427283d840dce6375b36 c409c5b78b4e41c18e8e17a42122e308
+#: d5ea3f1db38b404c82ad5193b04fb44c d6b5d67eed2143cc94274519d2e7f0e0
+#: fa9bc0c8cdc54f78a8c4c132af3611cc fe0cdb7c017e41b5a326821c3fb0d035
+#: ff3baf3d4bce460cac9208dd2c680baa
+msgid "1.0.0"
+msgstr ""
+
+#: ../../source/VM 86d954c9a100498095a2f8ae8486322b Manual.rst:143
+#: Manual/KVSQL/KVSQL Related User
+msgid "password"
+msgstr ""
+
+#: ../../source/VM 1d912c8241ae4f3abc21ac1c7bf7efb1 Manual.rst:143
+#: Manual/KVSQL/KVSQL Related User
+msgid "区块链账户加密密码"
+msgstr ""
+
+#: ../../source/VM Manual.rst:145 Manual/KVSQL/KVSQL Related User
+#: a3f191368f634d63932287a905442fa7
+msgid "SDK相关"
+msgstr ""
+
+#: ../../source/VM Manual.rst:145 Manual/KVSQL/KVSQL Related User
+#: ff6aa53676914355a5a1418b8e64e847
+msgid "urls"
+msgstr ""
+
+#: ../../source/VM Manual.rst:145 Manual/KVSQL/KVSQL Related User
+#: fd0e161c19954200be92ecd8361887c4
+msgid "区块链节点的url列表"
+msgstr ""
+
+#: ../../source/VM Manual.rst:147 Manual/KVSQL/KVSQL Related User
+#: dd4ae2a1ac3c4eefb93c54b9ce2929bf
+msgid "namespace"
+msgstr ""
+
+#: ../../source/VM Manual.rst:147 Manual/KVSQL/KVSQL Related User
+#: a0868e393dcb4b05815e3028a6a64141
+msgid "区块链的namespace"
+msgstr ""
+
+#: ../../source/VM 4aa563aa365448dca4dc30807ca35f24 Manual.rst:147
+#: Manual/KVSQL/KVSQL Related User
+msgid "global"
+msgstr ""
+
+#: ../../source/VM Manual.rst:149 Manual/KVSQL/KVSQL Related User
+#: df09415eeedc487086be4a5803cda1de
+msgid "attempt"
+msgstr ""
+
+#: ../../source/VM Manual.rst:149 Manual/KVSQL/KVSQL Related User
+#: cc88d53f500b4b8da220e01bb715b0d8
+msgid "SDK重发次数"
+msgstr ""
+
+#: ../../source/VM 372c6a931f6943c9a775f5d62798de78 Manual.rst:149
+#: Manual/KVSQL/KVSQL Related User
+msgid "10"
+msgstr ""
+
+#: ../../source/VM 198f5de03de140babaaf63ccde830875 Manual.rst:151
+#: Manual/KVSQL/KVSQL Related User
+msgid "sleepTime"
+msgstr ""
+
+#: ../../source/VM 05afe7c834da4ae8943d25ac69828af7 Manual.rst:151
+#: Manual/KVSQL/KVSQL Related User
+msgid "SDK重发间隔"
+msgstr ""
+
+#: ../../source/VM 0fba3429e83441129e97da1440691e20
+#: 3906ff33bbcc423fabe8d5e9ab0d952f Manual.rst:151 Manual.rst:153
+#: Manual/KVSQL/KVSQL Related User
+msgid "50"
+msgstr ""
+
+#: ../../source/VM 3f14713e44384e38bd6cdbf9a2580af3 Manual.rst:153
+#: Manual/KVSQL/KVSQL Related User
+msgid "stepSize"
+msgstr ""
+
+#: ../../source/VM Manual.rst:153 Manual/KVSQL/KVSQL Related User
+#: dddd9466b34a48d49cd7ded09367e336
+msgid "SDK重发间隔增长幅度"
+msgstr ""
+
+#: ../../source/VM 927877c12f014a7189ab2af78a1983fe Manual.rst:155
+#: Manual/KVSQL/KVSQL Related User
+msgid "sendTCert"
+msgstr ""
+
+#: ../../source/VM 2c3f455447a44fe5a959444d7d636105 Manual.rst:155
+#: Manual/KVSQL/KVSQL Related User
+msgid "SD K发送交易是否开启证书"
+msgstr ""
+
+#: ../../source/VM 06e5761152a9453a8a597cd9410aa678
+#: 3df2a38de8aa4a85ad64e677141ad91a 445fcdb79eec481b800ed88874fbd8ce
+#: 6170ad0ade47444499b54b3d4d255466 64cefbc6ec0c44508b8e6a888b357b55
+#: 6f18b5e4136c483a8e3c25dc83b4a859 732fac3376ef4d87a8b4385bee2535a5
+#: 7760abf7ac12462dabf500a216597970 7ba380903db04bd88f766e71c25198f7
+#: 7cac2ab2b1e24daea2e72daf44f30593 Manual.rst:155 Manual.rst:167
+#: Manual.rst:182 Manual.rst:197 Manual.rst:211 Manual.rst:235 Manual.rst:249
+#: Manual.rst:257 Manual.rst:261 Manual.rst:265 Manual.rst:278 Manual.rst:311
+#: Manual.rst:316 Manual/KVSQL/KVSQL Related User
+#: b8adc9e6eeec4f538404ce6efc08e47c bf6d597df1b94a048256cdfcda852f82
+#: ca3be9fbab8340c2876810a5120e7cda
+msgid "false"
+msgstr ""
+
+#: ../../source/VM Manual.rst:158 Manual/KVSQL/KVSQL Related User
+#: e037a65cdf594a46834183c7abf75a4c
+msgid "sdkCert"
+msgstr ""
+
+#: ../../source/VM Manual.rst:158 Manual/KVSQL/KVSQL Related User
+#: b634653d8cd54bf99f87f421ae338978
+msgid "sdkCert证书(字符串)"
+msgstr ""
+
+#: ../../source/VM 0327688706304d7f8ec7f8c26bfef314 Manual.rst:160
+#: Manual/KVSQL/KVSQL Related User
+msgid "sdkPriv"
+msgstr ""
+
+#: ../../source/VM 111b444b4b9c403aadcd216017d80279 Manual.rst:160
+#: Manual/KVSQL/KVSQL Related User
+msgid "sdkPriv(字符串)"
+msgstr ""
+
+#: ../../source/VM Manual.rst:162 Manual/KVSQL/KVSQL Related User
+#: a3a8ee3afe074996bfc470ec7dd39fc6
+msgid "uniquePub"
+msgstr ""
+
+#: ../../source/VM 84fa2568e67a4245a29d057ed1cd90b7 Manual.rst:162
+#: Manual/KVSQL/KVSQL Related User
+msgid "uniquePub证书(字符串)"
+msgstr ""
+
+#: ../../source/VM Manual.rst:164 Manual/KVSQL/KVSQL Related User
+#: c20f48535799402c89c71b49dc8ea393
+msgid "u niquePriv"
+msgstr ""
+
+#: ../../source/VM Manual.rst:164 Manual/KVSQL/KVSQL Related User
+#: b0c6b538501a4bab85c716ee56e263fb
+msgid "uniquePriv（字符串）"
+msgstr ""
+
+#: ../../source/VM 7c6d35972cd54e439aa29c53c72b9f15 Manual.rst:167
+#: Manual/KVSQL/KVSQL Related User
+msgid "https"
+msgstr ""
+
+#: ../../source/VM Manual.rst:167 Manual/KVSQL/KVSQL Related User
+#: f33ae732f3ba456a8c4ee0b6df9de343
+msgid "是否开启https"
+msgstr ""
+
+#: ../../source/VM Manual.rst:169 Manual/KVSQL/KVSQL Related User
+#: bcbf759d4f4148cd875f5a02c44e4cd6
+msgid "tlsCA"
+msgstr ""
+
+#: ../../source/VM Manual.rst:169 Manual/KVSQL/KVSQL Related User
+#: cdf3276b3dba4c60bcc254f1a01d719d
+msgid "tlsCA证书（字符串）"
+msgstr ""
+
+#: ../../source/VM 115d50353b2d416abbf1902307bc8d7d Manual.rst:171
+#: Manual/KVSQL/KVSQL Related User
+msgid "tl sPeerCert"
+msgstr ""
+
+#: ../../source/VM 8d638a9bd046455f820996ec323bd583 Manual.rst:171
+#: Manual/KVSQL/KVSQL Related User
+msgid "tlsP eerCert证书（字符串）"
+msgstr ""
+
+#: ../../source/VM 629b06516c434799b9ceb7257d3d5323 Manual.rst:174
+#: Manual/KVSQL/KVSQL Related User
+msgid "tl sPeerPriv"
+msgstr ""
+
+#: ../../source/VM 1a8a441505494b19a8fa2b94f10fd328 Manual.rst:174
+#: Manual/KVSQL/KVSQL Related User
+msgid "tlsPeerPriv（字符串）"
+msgstr ""
+
+#: ../../source/VM 75d4b1bcc573461ca7a0eabe5cfbed83 Manual.rst:177
+#: Manual/KVSQL/KVSQL Related User
+msgid "rea dSimulate"
+msgstr ""
+
+#: ../../source/VM 029aeb845b7640298cc910e6d0b93af6 Manual.rst:177
+#: Manual/KVSQL/KVSQL Related User
+msgid "是否开启查询 语句为simulate交易（ 即所有的select语句走 simulate查询不上链）"
+msgstr ""
+
+#: ../../source/VM 065b9be669bb43a697d9ee3967000785
+#: 0e8d9cd451394b5084be30d8f45ace55 1f4eb6c5133e44d38cf5f72fb8e31d75
+#: 3c8df9aea35346bba75104d70688bb3d 447d52845f29443f8ca4a14ed66dcdee
+#: 92f4936eb2734571bb3ffb91b7bde11c Manual.rst:177 Manual.rst:207
+#: Manual.rst:216 Manual.rst:221 Manual.rst:227 Manual.rst:231 Manual.rst:244
+#: Manual.rst:282 Manual.rst:290 Manual.rst:294 Manual.rst:299
+#: Manual/KVSQL/KVSQL Related User c3b790c1dc9b49dbac2b1f69bcaf5d74
+#: dbe123e767814459ad37fb5865410182 e3917bdcd6d04871b7c7f23a4da48a61
+#: f28e20690e1444bfac45a16c585f6e28 fb06c76f6464410ba7b61f22972f5fb1
+msgid "true"
+msgstr ""
+
+#: ../../source/VM Manual.rst:182 Manual/KVSQL/KVSQL Related User
+#: f4685d4ea80e4bab97e565da4d7df1a7
+msgid "cfca"
+msgstr ""
+
+#: ../../source/VM 56aa18f601a944588faacd82f8a2d4a5 Manual.rst:182
+#: Manual/KVSQL/KVSQL Related User
+msgid "是否使用cfca"
+msgstr ""
+
+#: ../../source/VM 67925d19073549318fd05573dc4bae2a Manual.rst:184
+#: Manual/KVSQL/KVSQL Related User
+msgid "cf caSdkCert"
+msgstr ""
+
+#: ../../source/VM 49de1d41b63c4f26b0882a68b1c3cc61 Manual.rst:184
+#: Manual/KVSQL/KVSQL Related User
+msgid "cfca sdkCert证书(字符串)"
+msgstr ""
+
+#: ../../source/VM Manual.rst:187 Manual/KVSQL/KVSQL Related User
+#: f2556c61a61343e6851b1301fa544266
+msgid "cf caSdkPriv"
+msgstr ""
+
+#: ../../source/VM Manual.rst:187 Manual/KVSQL/KVSQL Related User
+#: e26964e1521049bd81d8dadf51b468b2
+msgid "cfca sdkPriv(字符串)"
+msgstr ""
+
+#: ../../source/VM Manual.rst:190 Manual/KVSQL/KVSQL Related User
+#: d75b8680b22a442da24c2d581f0819d5
+msgid "其他"
+msgstr ""
+
+#: ../../source/VM Manual.rst:190 Manual/KVSQL/KVSQL Related User
+#: e31c0a4378294184adcbdac74c5119e8
+msgid "dbname"
+msgstr ""
+
+#: ../../source/VM 21155f14433142239e5a4fec6c1b192a Manual.rst:190
+#: Manual/KVSQL/KVSQL Related User
+msgid "”库”地址"
+msgstr ""
+
+#: ../../source/VM Manual.rst:192 Manual/KVSQL/KVSQL Related User
+#: b2281873786b43148bb90c872a3e6da2
+msgid "logger"
+msgstr ""
+
+#: ../../source/VM Manual.rst:192 Manual/KVSQL/KVSQL Related User
+#: f7dcf37196054f639a8c6a25674f3f51
+msgid "指定使用的logger类"
+msgstr ""
+
+#: ../../source/VM 381b893d530f4ff4a5bb0c31c7297319 Manual.rst:192
+#: Manual/KVSQL/KVSQL Related User
+msgid "cn. hyperchain. sql.log.Sta ndardLogger"
+msgstr ""
+
+#: ../../source/VM Manual.rst:197 Manual/KVSQL/KVSQL Related User
+#: caf8fd428eeb48e4a0b152f16e220bfb
+msgid "p rofileSQL"
+msgstr ""
+
+#: ../../source/VM Manual.rst:197 Manual/KVSQL/KVSQL Related User
+#: e28ce5097422434c9ca5043713918cfb
+msgid "是否打印单次调用时间 （向平台请求以及得到 响应的时间）消耗日志"
+msgstr ""
+
+#: ../../source/VM Manual.rst:201 Manual/KVSQL/KVSQL Related User
+#: de1e60ed0c50467989e7da13263d6f98
+msgid "characte rEncoding"
+msgstr ""
+
+#: ../../source/VM 6291b7b16bb34c8f8f9ee09adbb5d8c9 Manual.rst:201
+#: Manual/KVSQL/KVSQL Related User
+msgid "驱 动程序在处理字符串时 应该使用什么字符编码"
+msgstr ""
+
+#: ../../source/VM 5f51438902bc450980db47b685e8f034 Manual.rst:201
+#: Manual/KVSQL/KVSQL Related User
+msgid "utf-8"
+msgstr ""
+
+#: ../../source/VM 94c05836e0194f5ea827739b77d65354 Manual.rst:207
+#: Manual/KVSQL/KVSQL Related User
+msgid "co ntinueBat chOnError"
+msgstr ""
+
+#: ../../source/VM 4a87884225094ff7ab342e42fc64ead6 Manual.rst:207
+#: Manual/KVSQL/KVSQL Related User
+msgid "Batch执行 时一条语句执行出错是 否继续执行剩下的语句"
+msgstr ""
+
+#: ../../source/VM Manual.rst:211 Manual/KVSQL/KVSQL Related User
+#: cc7f707de6534f0782386f3b6e26ac47
+msgid "gene rateSimpl eParamete rMetadata"
+msgstr ""
+
+#: ../../source/VM 27f3494e4e234d79b66399dc93463014 Manual.rst:211
+#: Manual/KVSQL/KVSQL Related User
+msgid "是否 生成简单的参数元数据"
+msgstr ""
+
+#: ../../source/VM 0f6501ea132145efb8a924f6cb70c7ca Manual.rst:216
+#: Manual/KVSQL/KVSQL Related User
+msgid "pro cessEscap eCodesFor PrepStmts"
+msgstr ""
+
+#: ../../source/VM Manual.rst:216 Manual/KVSQL/KVSQL Related User
+#: d5e445493b334ffe8da23a0ac5d228dd
+msgid "是否在prepare statement中处理转义"
+msgstr ""
+
+#: ../../source/VM 6425124a782e4a90a36c0f09771824a8 Manual.rst:221
+#: Manual/KVSQL/KVSQL Related User
+msgid "useStream LengthsIn PrepStmts"
+msgstr ""
+
+#: ../../source/VM Manual.rst:221 Manual/KVSQL/KVSQL Related User
+#: e1d7dba269554434b99e4d238ffaea2b
+msgid "是否使用 PreparedStatement/Res ultSet.setXXXStream() 方 法调用中的流长度参数"
+msgstr ""
+
+#: ../../source/VM Manual.rst:227 Manual/KVSQL/KVSQL Related User
+#: d92749b06b0f4b82a190a99e08f05691
+msgid "emptySt ringsConv ertToZero"
+msgstr ""
+
+#: ../../source/VM 56d36ba9edfc4a0f8cffdffdee668f24 Manual.rst:227
+#: Manual/KVSQL/KVSQL Related User
+msgid "驱动 程序是否应允许从空字 符串字段转换为数值“0”"
+msgstr ""
+
+#: ../../source/VM 2a5d5548ba974710bb1d3bccd15f884e Manual.rst:231
+#: Manual/KVSQL/KVSQL Related User
+msgid "jdbcC ompliantT runcation"
+msgstr ""
+
+#: ../../source/VM 4b362433ad044cc8a404d9fa600e46d5 Manual.rst:231
+#: Manual/KVSQL/KVSQL Related User
+msgid "是 否截断数据时抛出异常"
+msgstr ""
+
+#: ../../source/VM Manual.rst:235 Manual/KVSQL/KVSQL Related User
+#: f61f5171bdff41f59c0701788d2fa96a
+msgid "padChars WithSpace"
+msgstr ""
+
+#: ../../source/VM 2a31b86693404680abf2f0d2dec89dfe Manual.rst:235
+#: Manual/KVSQL/KVSQL Related User
+msgid "如果结果集列具有 CHAR 类型并且该值未填充 DDL 中为该 列指定的字符数量，驱 动程序是否应该用空格 填充剩余的字符（符合 ANSI）"
+msgstr ""
+
+#: ../../source/VM 73cd8771063f45ebb8436fab74cfabaa Manual.rst:244
+#: Manual/KVSQL/KVSQL Related User
+msgid "tiny Int1isBit"
+msgstr ""
+
+#: ../../source/VM 9e41704ed48b4c8186ffea586e9f7889 Manual.rst:244
+#: Manual/KVSQL/KVSQL Related User
+msgid "驱动程 序是否应该将数据类型 TINYINT(1) 视为 BIT 类型"
+msgstr ""
+
+#: ../../source/VM Manual.rst:249 Manual/KVSQL/KVSQL Related User
+#: c834bffb40a44d5b9f7267f0fbdd4d04
+msgid "trans formedBit IsBoolean"
+msgstr ""
+
+#: ../../source/VM 21336002626c441695bacab4e06fa5e8 Manual.rst:249
+#: Manual/KVSQL/KVSQL Related User
+msgid "如果驱动程序将 TINYINT(1) 转换为不同的 类型，它是否应该使用 BOOLEAN 而不是 BIT"
+msgstr ""
+
+#: ../../source/VM 915d2284af61492fb15703184cab7eb4 Manual.rst:257
+#: Manual/KVSQL/KVSQL Related User
+msgid "autoDe serialize"
+msgstr ""
+
+#: ../../source/VM Manual.rst:257 Manual/KVSQL/KVSQL Related User
+#: c05680a98e45446280b21c3e488ffe5d
+msgid "驱动程序是否应该自动 检测和反序列化存储在 BLOB 字段中的对象？"
+msgstr ""
+
+#: ../../source/VM 8664fa6cb6a144aa9b6fc50be1d975ac Manual.rst:261
+#: Manual/KVSQL/KVSQL Related User
+msgid "blobsA reStrings"
+msgstr ""
+
+#: ../../source/VM 061504a9750b46d1aa27a0ec9ef8c42f Manual.rst:261
+#: Manual/KVSQL/KVSQL Related User
+msgid "驱 动程序是否应该始终将 BLOB 视为字符串"
+msgstr ""
+
+#: ../../source/VM Manual.rst:265 Manual/KVSQL/KVSQL Related User
+#: dd4b412c22fd4620988eee9b70dc04f2
+msgid "functio nsNeverRe turnBlobs"
+msgstr ""
+
+#: ../../source/VM Manual.rst:265 Manual/KVSQL/KVSQL Related User
+#: e12af59b034c4b6d8b8a451b7dfb9c64
+msgid "驱动程 序是否应该始终将返回 BLOB 的函 数中的数据视为字符串"
+msgstr ""
+
+#: ../../source/VM 0e2edbdd909d4e02a08235cff32d3977 Manual.rst:271
+#: Manual/KVSQL/KVSQL Related User
+msgid "clo bCharacte rEncoding"
+msgstr ""
+
+#: ../../source/VM Manual.rst:271 Manual/KVSQL/KVSQL Related User
+#: f038e10b07c648d089b49fa02ad7ef9d
+msgid "用于发送和检索 TEXT、MEDIUMTEXT 和 LONGTEXT 值的字符编 码，而不是配置的连接 characterEncoding"
+msgstr ""
+
+#: ../../source/VM 0d2d17ffd2ad470383029fe55fe61617 Manual.rst:271
+#: Manual/KVSQL/KVSQL Related User
+msgid "null"
+msgstr ""
+
+#: ../../source/VM 89df8d684b724f3a80eebd05648262db Manual.rst:278
+#: Manual/KVSQL/KVSQL Related User
+msgid "emulat eLocators"
+msgstr ""
+
+#: ../../source/VM 5ac6217c02ca4291ad81942486c2c646 Manual.rst:278
+#: Manual/KVSQL/KVSQL Related User
+msgid "是 否应该使用定位器模拟 java.sql.Blobs"
+msgstr ""
+
+#: ../../source/VM 84f1955e741d4c9985744f4bd932755e Manual.rst:282
+#: Manual/KVSQL/KVSQL Related User
+msgid "treatU tilDateAs Timestamp"
+msgstr ""
+
+#: ../../source/VM 6c7b4822908f4fa2b25ec9dc63902676 Manual.rst:282
+#: Manual/KVSQL/KVSQL Related User
+msgid ""
+"出于 Prepared Statement.setObject() 的目 的，驱动程序是否应将 java.util.Date 视为 "
+"TIMESTAMP？"
+msgstr ""
+
+#: ../../source/VM 31ddeb3dfafd42669ba831259a0460ad Manual.rst:290
+#: Manual/KVSQL/KVSQL Related User
+msgid "sen dFraction alSeconds"
+msgstr ""
+
+#: ../../source/VM 7da8de71e66c4ef9888687d62eb57766 Manual.rst:290
+#: Manual/KVSQL/KVSQL Related User
+msgid "是否从 TIMESTAMP 秒发送小数部分"
+msgstr ""
+
+#: ../../source/VM Manual.rst:294 Manual/KVSQL/KVSQL Related User
+#: fed564a7e9fb455d9283756276c098ed
+msgid "s endFracti onalSecon dsForTime"
+msgstr ""
+
+#: ../../source/VM 018d69b5fe174873bf55ce080a40173b Manual.rst:294
+#: Manual/KVSQL/KVSQL Related User
+msgid "是否呈现小数秒"
+msgstr ""
+
+#: ../../source/VM 42eae33c418a47c4a142bc0ababa60a2 Manual.rst:299
+#: Manual/KVSQL/KVSQL Related User
+msgid "yearI sDateType"
+msgstr ""
+
+#: ../../source/VM 28cf6ce3b05c48bab630e2ef8cb7aad9 Manual.rst:299
+#: Manual/KVSQL/KVSQL Related User
+msgid "是否应该将 MySQL 类型“YEAR”视为 java.sql.Date"
+msgstr ""
+
+#: ../../source/VM Manual.rst:303 Manual/KVSQL/KVSQL Related User
+#: c60cb04022684744a785632e7dfc6b7b
+msgid "ze roDateTim eBehavior"
+msgstr ""
+
+#: ../../source/VM 0c0c1cc345364678af40181bd3eeb5db Manual.rst:303
+#: Manual/KVSQL/KVSQL Related User
+msgid ""
+"当驱动程 序遇到完全由零组成的 DATETIME 值（MySQL 用于表示无效日期）时 会发生什么？有效值为 "
+"“EXCEPTION”、“ROUND” 和“CONVERT_TO_NULL”。"
+msgstr ""
+
+#: ../../source/VM 82dca87cf2e843099a4079b9b6afe2af Manual.rst:303
+#: Manual/KVSQL/KVSQL Related User
+msgid "EXCEPTION"
+msgstr ""
+
+#: ../../source/VM 919e37c2dca542b49cb6342adfbe3908 Manual.rst:311
+#: Manual/KVSQL/KVSQL Related User
+msgid "useColum nNamesInF indColumn"
+msgstr ""
+
+#: ../../source/VM 26995ae5197d41c98350724ad248e0a8 Manual.rst:311
+#: Manual/KVSQL/KVSQL Related User
+msgid "将此属性 设置为“true”将提供与 JDBC-3.0 和早期版本的 JDBC 规范一致的行为"
+msgstr ""
+
+#: ../../source/VM 056bcf5dd1dd4febbe3069091ac27acc Manual.rst:316
+#: Manual/KVSQL/KVSQL Related User
+msgid "useOldAli asMetadat aBehavior"
+msgstr ""
+
+#: ../../source/VM 420867074e48471e9a4bcdf0ba97e0d3 Manual.rst:316
+#: Manual/KVSQL/KVSQL Related User
+msgid ""
+"驱动程序是否应该 对列和表的“AS”子句使 用旧行为，并且只返回 ResultSetMet aData.getColumnName() 或 "
+"ResultSetMe taData.getTableName() 的别名（如果有 ）而不是原始列/表名称"
+msgstr ""
+
+#: ../../source/VM 80c78f644ccf45acbaf4b6bbf9ecc5cf Manual.rst:329
+#: Manual/KVSQL/KVSQL Related User
+msgid ""
+"**注** "
+"**：标注为“必须配置”的配置项为使用一键链改功能必须配置的配置项，不管是通过url配置还是properties配置，必须有一个地方要包含。**"
+msgstr ""
+
+#: ../../source/VM 736d0832a00e4503908cb5308ff2adc6 Manual.rst:331
+#: Manual/KVSQL/KVSQL Related User
+msgid ""
+"需要说明的是，任何可以将配置项传入到Driver的connect方法所需要的Properties参数的方式，均可以作为配置项传入的方式，例如，在使用Spring"
+" Boot框架时可以通过其默认使用的数据库连接池hikari提供的方式进行配置项传入::"
+msgstr ""
+
+#: ../../source/VM 945b54ee32444e70b0a0c48661305b77 Manual.rst:343
+#: Manual/KVSQL/KVSQL Related User
+msgid "3.2 检查应用中当前不支持的功能"
+msgstr ""
+
+#: ../../source/VM 3db30d8ff2144ce4b8bd94fea910bfc2 Manual.rst:345
+#: Manual/KVSQL/KVSQL Related User
+msgid "一键链改JDBC驱动实现了标准的JDBC协议，但由于区块链平台和传统SQL数据库存在差异，部分在传统数据库中（如：MySQL）支持的功能特性并未在Hyperchain中支持或使用语法有些许差异，因此用户在使用一键链改JDBC驱动时需要检查应用中是否有使用到不支持与有差异的特性，并进行更改与规避。"
+msgstr ""
+
+#: ../../source/VM 3cda8e6f87614085b17ce426cd5f8c17 Manual.rst:348
+#: Manual/KVSQL/KVSQL Related User
+msgid "3.2.1 检查JDBC不支持的功能列表"
+msgstr ""
+
+#: ../../source/VM 054ffbcc6dbd4b0797c901f883e4f3b9 Manual.rst:350
+#: Manual/KVSQL/KVSQL Related User
+msgid "以下特性当前不支持："
+msgstr ""
+
+#: ../../source/VM Manual.rst:353 Manual/KVSQL/KVSQL Related User
+#: bd48dd6fabd748b785095248d62b5832
+msgid "不支持的特性"
+msgstr ""
+
+#: ../../source/VM Manual.rst:353 Manual/KVSQL/KVSQL Related User
+#: f7ff1fa8bde54551b58844169b2c780e
+msgid "修改与规避建议"
+msgstr ""
+
+#: ../../source/VM 55ae3b43bd9b4dbba580283fb2c4e0e3 Manual.rst:355
+#: Manual/KVSQL/KVSQL Related User
+msgid "不支持事务"
+msgstr ""
+
+#: ../../source/VM 324043e199b8428aa1f68e905c64f390 Manual.rst:355
+#: Manual/KVSQL/KVSQL Related User
+msgid "建议在应用层进行事务的控制"
+msgstr ""
+
+#: ../../source/VM 2125cf381ea8419e99ce6ea093cfa689 Manual.rst:356
+#: Manual/KVSQL/KVSQL Related User
+msgid "不支持存储过程"
+msgstr ""
+
+#: ../../source/VM 71a5ad69bfa8400d90a30bf1100a2a50 Manual.rst:357
+#: Manual/KVSQL/KVSQL Related User
+msgid "不支持设置事务隔离级别"
+msgstr ""
+
+#: ../../source/VM Manual.rst:358 Manual/KVSQL/KVSQL Related User
+#: b8cd11b94d844538a01d156ab9bb4bfd
+msgid "不支持Catalog"
+msgstr ""
+
+#: ../../source/VM 2284655001b34350bfb21f607bd3caab Manual.rst:359
+#: Manual/KVSQL/KVSQL Related User
+msgid "不支持设置只读模式"
+msgstr ""
+
+#: ../../source/VM 661e777b425644f6988b9632561b85d5 Manual.rst:360
+#: Manual/KVSQL/KVSQL Related User
+msgid "不支持获取Warning"
+msgstr ""
+
+#: ../../source/VM 00cc173a35364522b73dcac702cb90b7 Manual.rst:361
+#: Manual/KVSQL/KVSQL Related User
+msgid "不支持typeMap"
+msgstr ""
+
+#: ../../source/VM Manual.rst:362 Manual/KVSQL/KVSQL Related User
+#: a3982148b9c145af909143181c7b057a
+msgid "不支持setClientInfo"
+msgstr ""
+
+#: ../../source/VM Manual.rst:366 Manual/KVSQL/KVSQL Related User
+#: fbbe4f2c8ca14c4fb34fb182e3c1c3bc
+msgid "3.2.2 检查使用的SQL的语法与Mysql的差异性"
+msgstr ""
+
+#: ../../source/VM 81187aec5d48490bab5b0431f5710649 Manual.rst:368
+#: Manual/KVSQL/KVSQL Related User
+msgid ""
+"一键链改辅助用户将基于SQL语句开发的业务应用系统迁移至区块链上，并成为运行在区块链上业务系统。平台已支持的数据类型、运算符、函数、表达式请参考 "
+"**“Operators & Functions使用手册”，“数据类型Type使用手册”，“Expression使用手册”** 。"
+msgstr ""
+
+#: ../../source/VM 0693abab0fc04b688c6cf27cc75870f5 Manual.rst:370
+#: Manual/KVSQL/KVSQL Related User
+msgid "区块链的数据都将记录在一个地址中，一键链改功能的表数据将记录在一个合约地址中，一个合约地址可记录多个表，因此可将存储表数据的合约地址理解为存储多张表的一个业务数据库。用户需规划库表关系，将表数据写入正确的合约地址下。"
+msgstr ""
+
+#: ../../source/VM 58659aad60ab4d309951c98046ac0930 Manual.rst:372
+#: Manual/KVSQL/KVSQL Related User
+msgid ""
+"平台已支持常用的SQL语句，包括：用于创建表、插入行值、修改行值、删除行值、查询行值。SQL语句表达范式请参考 "
+"**“DDL语句使用手册”，“DML语句使用手册”，“DQL语句使用手册”** 。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:374 Manual/KVSQL/KVSQL Related User
+#: a59f3c4a57274e2cacf4de15cf0fc72e
+msgid "在使用本功能进行数据操作时，请注意以下事项："
+msgstr ""
+
+#: ../../source/VM Manual.rst:376 Manual/KVSQL/KVSQL Related User
+#: b6f5eaa10b164ed6b622e66d00b95765
+msgid "在区块链中使用SQL语句将通过向链上提交携带拟执行的SQL语句的交易，一个包含子语句的SQL语句被视为一笔交易进行执行。"
+msgstr ""
+
+#: ../../source/VM 642ff4a0dbea4c19afeb7f4e616c9b7b Manual.rst:378
+#: Manual/KVSQL/KVSQL Related User
+msgid "在对表进行创建时，需明确定义会使用的索引列（主键、索引键）。在表创建后，暂不支持对表结构进行变更、增删索引列、删除表、查询表结构的操作，亦不支持外键的设置。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:380 Manual/KVSQL/KVSQL Related User
+#: f577770e234d4c4092342ebb46ae95bf
+msgid "在对表进行行值定位、行值查询时，建议基于索引列进行查询，否则将触发全表扫描的行为。面对数据规模较大的表，若进行全表扫描则容易导致执行时间较长乃至执行超时的情况。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:382 Manual/KVSQL/KVSQL Related User
+#: dc5c99c80d54485da9ea74c95b7368f9
+msgid "由于本功能的执行将由区块链完成，因此语句执行后不可回退，执行隔离级别默认为串行执行。平台支持一次性输入多条SQL语句进行执行，多条SQL语句为自动提交模式，不支持使用事务特性控制SQL语句的执行结果。"
+msgstr ""
+
+#: ../../source/VM 38b6fe995a8a4bff8d6f96c53692eecb Manual.rst:384
+#: Manual/KVSQL/KVSQL Related User
+msgid "上述SQL语句相关的使用文档中未明确支持的SQL语句、数据类型、运算及函数皆为暂不支持的功能。"
+msgstr ""
+
+#: ../../source/VM 044319f128f14a139f1c5d0e4a843c11 Manual.rst:386
+#: Manual/KVSQL/KVSQL Related User
+msgid "本功能支持联表、并表、多表的操作，但不支持外键的使用，需注意在业务中是否使用了外键。"
+msgstr ""
+
+#: ../../source/VM 2ad3825d4dc84d259cd6b325dfeb7c17 Manual.rst:389
+#: Manual/KVSQL/KVSQL Related User
+msgid "4. 注意事项"
+msgstr ""
+
+#: ../../source/VM Manual.rst:391 Manual/KVSQL/KVSQL Related User
+#: e2f9bc8f41114742af19a6ee7858884c
+msgid "由于hibernate以及当前平台特性的限制，当前不支持hibernate中的 `ddl-auto` 配置项，请将其设置为 `none` 。"
+msgstr ""
+
+#: ../../source/VM 244b5c2e068b4338b4b5548efaf9545b Manual.rst:393
+#: Manual/KVSQL/KVSQL Related User
+msgid ""
+"由于当前不支持事务以及相关的语法（如select ... for "
+"update;)，因此在使用框架（如ORM框架）时不支持依赖事务以及其相关语法的特性，如JPA主键自增策略中的 "
+"`GenerationType.AUTO` 由于其依赖 `select ... for update;` 语法，因此无法使用。"
+msgstr ""
+
+#: ../../source/VM 45f6e34c90074124a8fdf3efed284378 Manual.rst:395
+#: Manual/KVSQL/KVSQL Related User
+msgid "由于区块链系统与MySql的差异，应用通过驱动与区块链平台进行交互时需要进行SDK轮询，默认延时可能会比使用MySql时高，可以通过调整SDK轮询配置以及区块链打包时间进行实际调整。"
+msgstr ""
+
+#: ../../source/VM 7d7fd12130214980a81080b0cd910b50 Manual.rst:397
+#: Manual/KVSQL/KVSQL Related User
+msgid ""
+"当前默认开启simulate查询，即所有selcet查询语句均为simulate交易，实际使用时可根据需要进行配置调整；另外，如需要控制特定语句走simulate,"
+" 特定语句不走simulate，可以在应用端构造两个实例，两个实例使用不同的配置进行。"
+msgstr ""
+

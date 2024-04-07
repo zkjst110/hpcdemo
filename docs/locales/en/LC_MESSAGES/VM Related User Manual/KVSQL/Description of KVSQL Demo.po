@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/VM Demo.rst:4 KVSQL Manual/KVSQL/Description Related User
+#: a44989c2731449f1a54e5abb260badc7 of
+msgid "一键链改Demo说明"
+msgstr ""
+
+#: ../../source/VM 9132f3713ab8484e827f4432e78d40ea Demo.rst:6 KVSQL
+#: Manual/KVSQL/Description Related User of
+msgid "> 一键链改Demo是为用户更快速的了解一键链改特性而准备的示例项目"
+msgstr ""
+
+#: ../../source/VM 480d441e3e28431d9b0b63d4f14ca6db Demo.rst:8 KVSQL
+#: Manual/KVSQL/Description Related User of
+msgid ""
+"> This project is the Demo project of Application for use kvsql with "
+"hyperchain."
+msgstr ""
+
+#: ../../source/VM 8edf121a3da84fafba728e9ad43c0657 Demo.rst:10 KVSQL
+#: Manual/KVSQL/Description Related User of
+msgid "> There are two branches:"
+msgstr ""
+
+#: ../../source/VM 7e9af772a5764ef9bee2302bb14921b0 Demo.rst:12 KVSQL
+#: Manual/KVSQL/Description Related User of
+msgid "> - hibernate : This branch is the Demo of use Spring Boot and hibernate"
+msgstr ""
+
+#: ../../source/VM 7411ae927b8245d4bc33c9815d860286 Demo.rst:14 KVSQL
+#: Manual/KVSQL/Description Related User of
+msgid "> - Mybatis：This branch is the Demo of use Spring Boot and mybatis"
+msgstr ""
+
+#: ../../source/VM Demo.rst:17 KVSQL Manual/KVSQL/Description Related User
+#: e236c2e7468a4aee8fb7d2852904e9e3 of
+msgid "运行步骤"
+msgstr ""
+
+#: ../../source/VM 352bf097c9974de59803d0f2d49a6549 Demo.rst:19 KVSQL
+#: Manual/KVSQL/Description Related User of
+msgid "启动对应hyperchain平台"
+msgstr ""
+
+#: ../../source/VM 1986d3f2dcc94c3aba4fc89bd1acd4c8 Demo.rst:21 KVSQL
+#: Manual/KVSQL/Description Related User of
+msgid "步骤详见部署文档"
+msgstr ""
+
+#: ../../source/VM 75cba5d7b2f249b1afac11eac1c08590 Demo.rst:23 KVSQL
+#: Manual/KVSQL/Description Related User of
+msgid "运行CreateDataBase中的main方法，进行\"库\"和\"表\"的创建"
+msgstr ""
+
+#: ../../source/VM Demo.rst:25 KVSQL Manual/KVSQL/Description Related User
+#: d214ac1351214c6199486533c0cb338c of
+msgid "修改application-dev.yml配置文件，修改\"库\"地址以及urls"
+msgstr ""
+
+#: ../../source/VM 92996d3d612848c6ac2c19c7b7bf9165 Demo.rst:27 KVSQL
+#: Manual/KVSQL/Description Related User of
+msgid "启动应用，打开swagger"
+msgstr ""
+
+#: ../../source/VM Demo.rst:31 KVSQL Manual/KVSQL/Description Related User
+#: acf0030e58904b79af8c19156d0535d2 of
+msgid "http://localhost:8089/swagger-ui.html"
+msgstr ""
+
+#: ../../source/VM Demo.rst:33 KVSQL Manual/KVSQL/Description Related User
+#: de79ecbf866f45148aec7996b77e9319 of
+msgid "For more usage step, please see the Usage Document."
+msgstr ""
+
+#: ../../source/VM Demo.rst:35 KVSQL Manual/KVSQL/Description Related User
+#: ded52b71c23541e89a818626b350dc0b of
+msgid "附Demo文件包（demo包需要根据最新的sdk重新打包  否则2.7.0链使用交易签名非法）："
+msgstr ""
+
+#: ../../source/VM Demo.rst:37 KVSQL Manual/KVSQL/Description Related User
+#: a476d337f9ec491c920fd149408d915c of
+#, python-format
+msgid ""
+"`sql-driver-demo.tar.gz <https://upload.filoop.com/RTD-Hyperchain%2Fsql-"
+"driver-demo.tar.gz>`_"
+msgstr ""
+
+#: ../../source/VM 2c5d6220aa574575a455369d1708103a Demo.rst:39 KVSQL
+#: Manual/KVSQL/Description Related User of
+msgid "外网使用时的依赖(手动添加到工程中)："
+msgstr ""
+
+#: ../../source/VM Demo.rst:41 KVSQL Manual/KVSQL/Description Related User
+#: f6b25ae4dc9843df87807768b62da25f of
+#, python-format
+msgid ""
+"`kvsql-jdbc-driver-0.2.0-jar-with-dependencies.jar "
+"<https://upload.filoop.com/RTD-Hyperchain%2Fkvsql-jdbc-driver-0.2.0-jar-"
+"with-dependencies.jar>`_"
+msgstr ""
+

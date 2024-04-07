@@ -1,0 +1,322 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Chain Authority Management.rst:4 Management/Interface
+#: d3d80cb64fa344ef90e1b4b992409469
+msgid "接口权限管理"
+msgstr ""
+
+#: ../../source/Chain 99e207c9037f458bb52817e978e5bae2 Authority
+#: Management.rst:7 Management/Interface
+msgid "功能概述"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:8 Management/Interface
+#: cdbe81bc4f124782a571e9c83cf25182
+msgid ""
+"权限，即是资源和操作的一套组合。接口权限控制，即是某种用户/角色对接口这一资源对操作控制，权限控制中有三个重要元素： "
+"**人（用户/角色）、资源（要控制的对象）、操作（如何控制如增删改查）**。"
+msgstr ""
+
+#: ../../source/Chain 8fca02e8b52a4492b7e155f5b1f21306 Authority
+#: Management.rst:10 Management/Interface
+msgid "当前的平台接口权限设计中，只有对于交易类的接口权限管理，其通过SDKCert进行证书验证，而RPC方法中很多是没有签名验签的，需要在RPC层做权限拦截控制，对用户访问接口进行权限验证，保证业务场景中用户访问链上信息的安全性。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:12 Management/Interface
+#: d71c29c4447c43659a398ddfcf8fb747
+msgid ""
+"节点管理员主要参与节点级别的权限管理，主要负责 **机构内部节点的接口访问权限管理**，节点管理员一般由节点运维人员担任，负责 "
+"**功能的开关管理以及初始规则设定**，节点管理员可以预先设置好对应的账户角色和接口权限管理规则，当接口权限管理的开关开启时，所有的查询请求（不包含发送交易的接口）都需要携带请求发送者的信息，即需要知道是哪个账户发送了此次请求，进行账户级别的接口访问控制，保障区块链系统接口访问安全。"
+msgstr ""
+
+#: ../../source/Chain 33939275592848b2b8dec4adfc2a165c Authority
+#: Management.rst:14 Management/Interface
+msgid "**注意**：如果某一节点针对某一namespace设置了该节点的接口访问规则，则只对此节点中对应对namespace生效，对于此节点对其他namespace和其他节点是不生效的。"
+msgstr ""
+
+#: ../../source/Chain 9bc196c97c58402f99b738fe64520383 Authority
+#: Management.rst:18 Management/Interface
+msgid "使用说明"
+msgstr ""
+
+#: ../../source/Chain 790cdc1e407b4b8a91a365009cf1cad0 Authority
+#: Management.rst:19 Management/Interface
+msgid "接口权限管理的使用步骤如下："
+msgstr ""
+
+#: ../../source/Chain 25816ee9b29647da959e1bf7c8c4cce6 Authority
+#: Management.rst:21 Management/Interface
+msgid "**设置开关** （接口权限管理是节点级的，默认关闭）；"
+msgstr ""
+
+#: ../../source/Chain 168f7cd99245443eb5ffd40cdb969759 Authority
+#: Management.rst:22 Management/Interface
+msgid "**角色管理** （为账户设置节点级的角色，角色的设定没有限制，不需要先创建角色再设置，直接为账户设置角色即可）；"
+msgstr ""
+
+#: ../../source/Chain 0a362c235d764681a63d6f43a10c78e5 Authority
+#: Management.rst:23 Management/Interface
+msgid "**规则管理** （基于角色来设置管理规则，当开关开启时，规则生效）。"
+msgstr ""
+
+#: ../../source/Chain 59ee87caef824e52aef385444802449f Authority
+#: Management.rst:27 Management/Interface
+msgid "设置开关"
+msgstr ""
+
+#: ../../source/Chain 1b3dfbda940f44cca3d859cc5fbaa5ed Authority
+#: Management.rst:28 Management/Interface
+msgid "接口权限管理的开关通过ipc命令进行管理。"
+msgstr ""
+
+#: ../../source/Chain 4bb3e0e753f14d06934804493c5bad59 Authority
+#: Management.rst:30 Management/Interface
+msgid "ipc启动命令::"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:34 Management/Interface
+#: f4a36dee1f1c46d18aeba96d8c7e7980
+msgid "通过此命令进入ipc操作页面。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:38 Management/Interface
+#: b88759e120a343089d2200470734b74f
+msgid "开启开关"
+msgstr ""
+
+#: ../../source/Chain 08ce05a0e42d43c583fa942cfff5f9b0 Authority
+#: Management.rst:40 Management/Interface
+msgid "`auth namespace_name start` 命令即可开启当前节点中对应namespace的接口权限管理功能。"
+msgstr ""
+
+#: ../../source/Chain 4c8fc51496814b658eb12283459cfee1 Authority
+#: Management.rst:42 Management/Interface
+msgid "建议：节点运维人员在开启对应namespace的接口权限管理功能之前，最好预先设置好对应的账户角色和接口权限管理规则，开启后，规则生效。另外，当用户设置的规则发生死锁或其他不可控的情况（例如，没有用户可以访问接口），可由节点运维人员将开关关闭，重新设置好角色、规则后再开启。"
+msgstr ""
+
+#: ../../source/Chain 7ac0efce38c0475287bee9baa61ce40b Authority
+#: Management.rst:44 Management/Interface
+msgid "另外，当接口权限管理的开关开启时，所有的请求（无论是查询类的还是发交易类的）都需要携带请求发送者的信息，即需要知道是那个账户发送了此次请求，对应的在sdk中也有提供相应的接口，在调用查询之前，设置使用的账户。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:46 Management/Interface
+#: bbfc545fa33c46e79f9a338ae0ad0227
+msgid "示例：通过ipc命令开启global的接口权限管理功能，其命令如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:50 Management/Interface
+#: ea337ad038bb47c8b76b3a762b4f33d6
+msgid "使用litesdk设置发送请求的账户，其接口如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:67 Management/Interface
+#: bb803ab5007e4d83bf1aabee27ba4eab
+msgid "示例：使用litesdk设置默认的发送请求的账户::"
+msgstr ""
+
+#: ../../source/Chain 19fff641a3ed4c4fb9d9e9bed32fde7f Authority
+#: Management.rst:75 Management/Interface
+msgid "关闭开关"
+msgstr ""
+
+#: ../../source/Chain 90ec01353c19482c934d9b378f791c58 Authority
+#: Management.rst:77 Management/Interface
+msgid "`auth namespace_name stop` 命令即可关闭当前节点中对应namespace的接口权限管理功能。"
+msgstr ""
+
+#: ../../source/Chain 3dd6c84fe3314fdc8785cbd54cd91527 Authority
+#: Management.rst:79 Management/Interface
+msgid "示例：通过ipc命令关闭global的接口权限管理功能，其命令如下::"
+msgstr ""
+
+#: ../../source/Chain 667b55f5d9a841c3b2e06a6390ddeba2 Authority
+#: Management.rst:85 Management/Interface
+msgid "角色管理"
+msgstr ""
+
+#: ../../source/Chain 1b37200933a648039088ee30915389a1 Authority
+#: Management.rst:86 Management/Interface
+msgid "此处描述的角色管理是指的账户与节点级角色的管理。"
+msgstr ""
+
+#: ../../source/Chain 4118987ad3ae4ff380a1dda7ed012045 Authority
+#: Management.rst:89 Management/Interface
+msgid "添加角色"
+msgstr ""
+
+#: ../../source/Chain 3b76c713d7894e439261d58afe5d6934 Authority
+#: Management.rst:91 Management/Interface
+msgid "通过auth_addRole接口，可为账户添加节点级角色。"
+msgstr ""
+
+#: ../../source/Chain 55e5e99ad7674a9788799b7153ddf085 Authority
+#: Management.rst:93 Management/Interface
+msgid ""
+"示例：使用litesdk为账户 `bfa5bd992e3eb123c8b86ebe892099d4e9efb783` 添加角色 "
+"`accountReader` 和 `blockReader` ，其代码如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:118 Management/Interface
+#: c4f3532e02f24c3982a081f11a5ed654
+msgid "删除角色"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:120 Management/Interface
+#: c6077edc12fe47f6a991a2aab67472a8
+msgid "通过auth_deleteRole接口，可以删除账户的节点级角色。"
+msgstr ""
+
+#: ../../source/Chain 503d41302ad54dce8b613b5e7a519870 Authority
+#: Management.rst:122 Management/Interface
+msgid ""
+"示例：使用litesdk为账户 `bfa5bd992e3eb123c8b86ebe892099d4e9efb783` 删除角色 "
+"`accountReader`  ，其代码如下::"
+msgstr ""
+
+#: ../../source/Chain 4a86bed561974210baf099e4a7a4a89f Authority
+#: Management.rst:147 Management/Interface
+msgid "查询账户角色"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:149 Management/Interface
+#: a5d3704b529848139cfabbec74e561c9
+msgid "通过auth_getRole接口，可以查询账户的角色信息。"
+msgstr ""
+
+#: ../../source/Chain 253bdb12d1564acfb69d30db99e50fbc Authority
+#: Management.rst:151 Management/Interface
+msgid "示例：使用litesdk查询账户 `bfa5bd992e3eb123c8b86ebe892099d4e9efb783` 的角色，其代码如下::"
+msgstr ""
+
+#: ../../source/Chain 6c0cec805628419c976c2089bc63c83c Authority
+#: Management.rst:178 Management/Interface
+msgid "查询角色账户"
+msgstr ""
+
+#: ../../source/Chain 99facc367b724a298247ae6d955a3cba Authority
+#: Management.rst:180 Management/Interface
+msgid "通过auth_getAddress接口，可以查询拥有某角色的账户信息。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:182 Management/Interface
+#: c18e962596e24b90928508a02c04623e
+msgid "示例：使用litesdk查询拥有 `accountReader` 角色的账户，其代码如下::"
+msgstr ""
+
+#: ../../source/Chain 28f248f909c34729ac71d5881719f129 Authority
+#: Management.rst:210 Management/Interface
+msgid "查询所有角色"
+msgstr ""
+
+#: ../../source/Chain 1a83b6d93d854c69ae3617590ff0ed66 Authority
+#: Management.rst:212 Management/Interface
+msgid "通过auth_getAllRoles接口，可以查询所有的角色信息。"
+msgstr ""
+
+#: ../../source/Chain 0d850bd1c3ca4ecfb8eaaf5a03f2075c Authority
+#: Management.rst:214 Management/Interface
+msgid "示例：使用litesdk查询所有的角色信息，其代码如下::"
+msgstr ""
+
+#: ../../source/Chain 9c44a4ed456f4383af55ff5f0e29343b Authority
+#: Management.rst:242 Management/Interface
+msgid "规则管理"
+msgstr ""
+
+#: ../../source/Chain 41b47ae2b657410896f631df2e386646 Authority
+#: Management.rst:243 Management/Interface
+msgid "此处的规则管理描述的是对节点级接口权限管理规则进行管理。"
+msgstr ""
+
+#: ../../source/Chain 560f36e621a3403cbd3900b9cf238a50 Authority
+#: Management.rst:246 Management/Interface
+msgid "设置规则"
+msgstr ""
+
+#: ../../source/Chain 26f8202fdc3c4e2682a3a5bf3336c133 Authority
+#: Management.rst:248 Management/Interface
+msgid "通过auth_setRules接口，设置节点的接口权限管理规则。"
+msgstr ""
+
+#: ../../source/Chain 56f503139eb94d6d91093319fb488b8f Authority
+#: Management.rst:250 Management/Interface
+msgid "示例：通过litesdk设置规则，只有拥有 `accountReader` 角色的账户才能访问 `account` 类的接口，其代码如下::"
+msgstr ""
+
+#: ../../source/Chain 252065a6200b4b4fbd101cf5cce6669c Authority
+#: Management.rst:284 Management/Interface
+msgid "读取规则"
+msgstr ""
+
+#: ../../source/Chain 415e0b2b4e2746be8dd99f5459f65efc Authority
+#: Management.rst:286 Management/Interface
+msgid "通过auth_getRules接口，查询节点的接口权限管理规则。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:288 Management/Interface
+#: a2c4955d62f548afaf753a534486631c
+msgid "示例：通过litesdk设置规则，查询节点接口权限管理规则，其代码如下::"
+msgstr ""
+
+#: ../../source/Chain 189ab51fd9074ffca3b42ff998927bc4 Authority
+#: Management.rst:317 Management/Interface
+msgid "操作实例"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:320 Management/Interface
+#: d100fd6c840e454badc2858fa186aa7e
+msgid "场景介绍"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:321 Management/Interface
+#: ec689012702b486288c8a8e9114b6908
+msgid "限制特定的账户才能访问特定的接口，具体步骤如下："
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:323 Management/Interface
+#: f817296f8958407c86698c362ce6734c
+msgid "为账户 `bfa5bd992e3eb123c8b86ebe892099d4e9efb783` 设置角色 `accountReader` ;"
+msgstr ""
+
+#: ../../source/Chain 5268b8cec59f47b1ac79e9a58e682d92 Authority
+#: Management.rst:324 Management/Interface
+msgid "设置规则，拥有 `accountReader`  或者 `accountManager` 角色的用户可以访问 `account` 相关的查询接口;"
+msgstr ""
+
+#: ../../source/Chain 64c030244b3a4e18aed6b70b70ea4a97 Authority
+#: Management.rst:325 Management/Interface
+msgid "开启接口权限管理（开启后也可以管理角色和规则）;"
+msgstr ""
+
+#: ../../source/Chain 7b3c399a9a6d4f3a807d089fa63f2844 Authority
+#: Management.rst:326 Management/Interface
+msgid ""
+"使用账户 `bfa5bd992e3eb123c8b86ebe892099d4e9efb783` 访问 `account_getBalance` "
+"接口成功，其他没有相应角色的账户访问提示没有权限。"
+msgstr ""
+
+#: ../../source/Chain 73c8a36cb6a8457e8e61457e06e14112 Authority
+#: Management.rst:330 Management/Interface
+msgid "具体操作"
+msgstr ""
+

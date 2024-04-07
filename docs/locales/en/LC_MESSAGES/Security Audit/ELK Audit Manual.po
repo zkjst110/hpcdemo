@@ -1,0 +1,582 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Security 762b6cdbecef46129ddca89817b82700 Audit Audit/ELK
+#: Manual.rst:4
+msgid "ELK 审计使用手册"
+msgstr ""
+
+#: ../../source/Security 10391c8129c943e089db1aa4dfa8b3da Audit Audit/ELK
+#: Manual.rst:7
+msgid "1. 引言"
+msgstr ""
+
+#: ../../source/Security 815523266fb14364b17eb621dff0e894 Audit Audit/ELK
+#: Manual.rst:10
+msgid "1.1 编写目的"
+msgstr ""
+
+#: ../../source/Security 251b573bfa2b41bda9d1b91041b626fa Audit Audit/ELK
+#: Manual.rst:12
+msgid "本文档主要是说明Hyperchain用户如何使用elk作为审计后端。在Hyperchain配置文件开启审计后，以及配置好审计后端为elk即可使用elk作为审计后端。"
+msgstr ""
+
+#: ../../source/Security 14f1d4de282b41de89d0f7a63d4b31ad Audit Audit/ELK
+#: Manual.rst:14
+msgid "本文档将会详细的说明如何安装部署使用elk，以及一些可能遇到的注意事项。"
+msgstr ""
+
+#: ../../source/Security 41ea69329eeb4561901d6d917fa35a29 Audit Audit/ELK
+#: Manual.rst:17
+msgid "1.2背景"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:19
+#: db78124b9d944ec9bc43f5ae56e26f6a
+msgid ""
+"ELK是三个开源软件的缩写，分别表示：Elasticsearch , Logstash(本系统采用更加轻量的filebeat 替代), "
+"Kibana , "
+"它们都是开源软件。新增了一个FileBeat，它是一个轻量级的日志收集处理工具(Agent)，Filebeat占用资源少，适合于在各个服务器上搜集日志后传输给Logstash，官方也推荐此工具。"
+msgstr ""
+
+#: ../../source/Security 1a41bfc58bc147bd97b704c3109b2539 Audit Audit/ELK
+#: Manual.rst:22
+msgid "1.3术语"
+msgstr ""
+
+#: ../../source/Security 133093611af64dfd9b503b856cd145b9 Audit Audit/ELK
+#: Manual.rst:24
+msgid "**ELK Stack** :elasticsearch+filebeat+kibana"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:27
+#: d91f1a86f3a84e10b43250a4428c31cb
+msgid "1.4参考文献"
+msgstr ""
+
+#: ../../source/Security 6bf74d93f7d94695920798c3e582e45d Audit Audit/ELK
+#: Manual.rst:29
+msgid ""
+"[ELK介绍] `https://www.elastic.co/cn/what-is/elk-"
+"stack<https://www.elastic.co/cn/what-is/elk-stack>`_"
+msgstr ""
+
+#: ../../source/Security 9ad1aeefc829436baa88e834867876eb Audit Audit/ELK
+#: Manual.rst:31
+msgid ""
+"[elasticsearch 参考文档] "
+"`https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html"
+" "
+"<https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html>`_"
+msgstr ""
+
+#: ../../source/Security 74ee74f82c7844beb5e9741e00775fdb Audit Audit/ELK
+#: Manual.rst:33
+msgid ""
+"[kibana 参考文档] `https://www.elastic.co/guide/en/kibana/current/index.html "
+"<https://www.elastic.co/guide/en/kibana/current/index.html>`_"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:35
+#: b5aa940bfb854b8b804a5ef142415b58
+msgid ""
+"[filebeat参考文档] "
+"`https://www.elastic.co/guide/en/beats/filebeat/7.9/index.html "
+"<https://www.elastic.co/guide/en/beats/filebeat/7.9/index.html>`_"
+msgstr ""
+
+#: ../../source/Security 96051b1ed9fc4cc88bff4949d86d1dff Audit Audit/ELK
+#: Manual.rst:38
+msgid "2. 安装和初始化"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:40
+#: bbfff98313f0403eb6436c8454647a85
+msgid "elk 安装部署一般分为单机版部署和集群版部署。"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:42
+#: d4e5f4ec6ae047b5a89dc011b50f03b2
+msgid "单机版部署足以应对日常的审计使用，集群版部署主要是为了更好地发挥elasticsearch的性能，主要是适用于大数据分析，本文档不推荐使用集群部署elk"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:45
+#: b847fc5cc18044e295f299d0ffa27377
+msgid "2.1单机版部署"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:47
+#: c661d11072574f91867dd2bf476d2f26
+msgid "单机版部署将elasticsearch、filbeat、kibana都放在一台服务器进行设置和使用,推荐使用单机部署，节省服务器资源以及节约时间成本。"
+msgstr ""
+
+#: ../../source/Security 108d31dfb7454feeb30f73efec061714 Audit Audit/ELK
+#: Manual.rst:49
+msgid ""
+"默认情况下，用户无需从elastic.io官方网站下载ELK平台进行部署配置，我们提供已经配置好的elasticsearch、filbeat、kibana"
+" 压缩包供用户下载使用，这么做的目的是为了简化用户对于这三个组件的配置修改，方便快速使用审计功能。"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:52
+#: f475eed11111492cbccb7572aa87694c
+msgid "2.1.1 安装说明"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:54
+#: a56a5bbd83ee46d2a324cad3124e9f23
+msgid "(elasticsearch-filbeat-kibana.tar.gz.zip附件可联系平台运维人员获取)"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:56
+#: ba95b13fe0b74a1cb138f7d3af9e427d
+msgid ""
+"下载上述的附件，得到 elasticsearch-filbeat-kibana.tar.gz.zip "
+"压缩包(为了节省空间，使用了两次压缩)，然后使用下面命令进行解压得到 "
+"elasticsearch-7.7.0、filebeat-7.7.0-linux-x86_64、kibana-7.7.0-linux-x86_64"
+" 三个组件目录"
+msgstr ""
+
+#: ../../source/Security 47a995eec36140ed82e7a0bf2b366aa4 Audit Audit/ELK
+#: Manual.rst:63
+msgid ""
+"接下来分别进入三个组件的目录修改配置文件，首先修改elasticsearch的配置文件，进入elasticsearch-7.7.0目录，配置文件在config目录下,"
+" 进入config目录，可以看到如下的配置文件目录："
+msgstr ""
+
+#: ../../source/Security 8a9ebc723a2142fd936d2ef1df68e567 Audit Audit/ELK
+#: Manual.rst:65
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:234
+#: b988f150051d4773918b5d64b688b84d
+msgid "image0"
+msgstr ""
+
+#: ../../source/Security 1a58bca8ef394919a9c25b2fc93bca2b Audit Audit/ELK
+#: Manual.rst:67
+msgid ""
+"上述的配置文件大多数时候默认即可，不需要修改。但是为了更好的发挥机器性能，可以修改jvm.options，将jvm的最大堆内存和最小堆内存调整为合适大小（默认堆内存为1G大小。最大设置为机器物理内存的一半，不能超过32G）。"
+" 本文介绍使用的机器配置为16G内存，设置为堆内存为4g"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:69
+#: a6c03c34ed5d4437aa16b71cfa8c11dd
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/Security 6257218acabd47a09c449dd6608e6e34 Audit Audit/ELK
+#: Manual.rst:235
+msgid "image1"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:71
+#: ebf2a2c49cf446eba3cce523f88f15c3
+msgid "接下来进入filebeat-7.7.0-linux-x86_64目录，修改filebeat-7.7.0-linux-x86_64的配置文件。filebeat-7.7.0-linux-x86_64目录文件如下图所示："
+msgstr ""
+
+#: ../../source/Security 50b0074123ca4b868102f3a8eb7caf6d Audit Audit/ELK
+#: Manual.rst:73
+msgid "|image2|"
+msgstr ""
+
+#: ../../source/Security 428dc8c1f110433d92d5ac51a0f0649b Audit Audit/ELK
+#: Manual.rst:236
+msgid "image2"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:75
+#: c68f8458d22b4a8ea9073e010aa79d4a
+msgid "filebeat的配置文件为filebeat.yml文件，一般提供的压缩包已经配置好了，用户无需再次配置，如果要更改filebeat端口或者更改其他的配置可以编辑此文件。【请注意：如果修改了filebeat配置文件的端口和ip，那么hyperchain平台对应的发送审计的ip也要改】"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:77
+#: ba7ede8971ce41f98271d425670cb5af
+msgid ""
+"接下来进入kibana-7.7.0-linux-x86_64 目录，kibana "
+"的配置文件在config文件夹中，只有一个kibana.yml文件，如下图所示："
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:79
+#: dbdadf201b5c4e74a41f8a770c6b2c08
+msgid "|image3|"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:237
+#: c2f18425595145c2ae10cbcb6d3e6c3c
+msgid "image3"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:81
+#: bc6862243d554403ab333332ee8efd5a
+msgid ""
+"kibana.yml文件里面可以配置访问elasticsearch的用户名和密码以及elasticsearch的链接地址，因为我们是三个组件在同一台机器，所以无需修改该"
+" 配置。"
+msgstr ""
+
+#: ../../source/Security 8b992fb5325049fc87c3a82b6e932a5e Audit Audit/ELK
+#: Manual.rst:83
+msgid "用户名：elastic 密码：hyperchain"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:85
+#: b0af8f514ebf4f36b797e5deee0dbafc
+msgid "完成上述步骤后，就完成了ELK的基本配置，如果有更高级的配置需要，请参考ELK的配置介绍文档。"
+msgstr ""
+
+#: ../../source/Security 7bf74f5ef64e484f9a83217dc454dee4 Audit Audit/ELK
+#: Manual.rst:88
+msgid "2.1.2 启动说明"
+msgstr ""
+
+#: ../../source/Security 4ecbb7210f174dec86bf1e64e2e39b8e Audit Audit/ELK
+#: Manual.rst:90
+msgid "es因为安全问题拒绝使用root用户启动，所以需要添加一个非root用户来启动elasticsearch"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:92
+#: b5cf5595b8bb45a58f2a58cdf29bb6dc
+msgid "添加用户组:es，用户:es,she，设置密码"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:94
+#: ff1db559f43e4e4882f484144a459199
+msgid "添加目录拥有权限"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:102
+#: d32fc983af9f4668980d70c27c2e7009
+msgid ""
+"切换到es用户，启动elasticsearch，进入elasticsearch-7.7.0目录, 执行下面的命令。-d "
+"参数表示启动elasticsearch 使用后台启动的方式"
+msgstr ""
+
+#: ../../source/Security 96fee7187ca74dc1a02f8438d2a708b7 Audit Audit/ELK
+#: Manual.rst:109
+msgid ""
+"执行完成上述命令后， elasticsearch就会在后台启动了，可以使用下面的命令查看elasticsearch "
+"进程是否存在，如果存在说明启动成功，如果不存在说明启动失败，可以查看logs文件夹下的elasticsearch.log "
+"文件，通过日志判断错误类型然后根据下面的注意事项查找解决方案::"
+msgstr ""
+
+#: ../../source/Security 3ef55851f1204ef6a13bf55a04cfad9d Audit Audit/ELK
+#: Manual.rst:113
+msgid "接下来启动kibana, 进入kibana-7.7.0-linux-x86_64 目录， 执行下面的命令即可"
+msgstr ""
+
+#: ../../source/Security 8ac69ac30b35444d85a4998aee7b5c57 Audit Audit/ELK
+#: Manual.rst:117
+msgid "nohup ./bin/kibana >> kibana.log 2>&1 &"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:119
+#: f2d19ba1e56449cea5754e31bf26e93a
+msgid "执行完成上述命令后， elasticsearch就会在后台启动了"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:121
+#: d52092c1e669482d9fa6ecb6a9174679
+msgid "接下来启动filebeat, 进入filebeat-7.7.0-linux-x86_64， 执行下面的命令即可::"
+msgstr ""
+
+#: ../../source/Security 92628ce30af043d190b39de079d94e73 Audit Audit/ELK
+#: Manual.rst:123
+msgid "nohup ./filebeat -e >> filebeat.log 2>&1 &"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:125
+#: f6eaaa68c5604b1cb215b46e4a776f28
+msgid "做完上述操作后，ELK审计平台就已经启动完成了，接下来可以访问kibana页面进行查看审计数据。"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:128
+#: d6d14595c7fa4e06a74ba22c383c7996
+msgid "2.1.3 启动完成检查"
+msgstr ""
+
+#: ../../source/Security 23cf895a664a4a90aa8dcb2223b58a47 Audit Audit/ELK
+#: Manual.rst:130
+msgid ""
+"在网页上访问http://127.0.0.1:5601， "
+"ip地址是kibana平台所部署的服务器地址,端口是kibana默认端口为5601，可以看到如下界面，提示登录"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:132
+#: c931cd29baa940a9ac715a45e9b011a2
+msgid "|image4|"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:238
+#: f8c14ba052da445d8a8b5df7dbca29ad
+msgid "image4"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:134
+#: bc5cdcfab805472c92b1edc61c32e2bd
+msgid "输入用户名: elastic 和密码：hyperchain进行登录。"
+msgstr ""
+
+#: ../../source/Security 44c5612046a146b88968e6b6ba5d6517 Audit Audit/ELK
+#: Manual.rst:136
+msgid ""
+"登录后即可进入kibana界面查看审计数据。点击图标所示按钮，即可浏览实时的审计日志。关于kibana "
+"的详细使用说明，用户可以自行查看kibana介绍文档。"
+msgstr ""
+
+#: ../../source/Security 01caaf3564f44de68f6dd0b8e17d620d Audit Audit/ELK
+#: Manual.rst:138
+msgid "|image5|"
+msgstr ""
+
+#: ../../source/Security 4092d7b52e2545af8dd9e2ec757e5488 Audit Audit/ELK
+#: Manual.rst:239
+msgid "image5"
+msgstr ""
+
+#: ../../source/Security 8c179b04b329490ba049c53c1bc18d62 Audit Audit/ELK
+#: Manual.rst:140
+msgid "ELK单机部署和使用说明至此结束。"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:143
+#: faedfb66f3bf419fa05889b6f14f1552
+msgid "2.2 集群部署"
+msgstr ""
+
+#: ../../source/Security 2d1ab223f9e143c68dc2e50b097cd35f Audit Audit/ELK
+#: Manual.rst:145
+msgid ""
+"集群部署比较麻烦，而且没有固定的架构和服务器组合模式，一切都需要根据实际的资源情况以及业务量决定，这里为了简单说明起见，推荐使用3filebeat"
+" + 3节点elasticsearch + 3 kibana的架构模式。"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:147
+#: f7ed2c22a25c419caadf82661ac8f719
+msgid ""
+"假设我们部署的区块链平台为4个节点，那么我们就可以使用4个filebeat "
+"对接每个hyperchain节点，然后这些filebeat节点再配置elasticsearch集群其中的一台elasticsearch "
+"节点作为数据发送节点。"
+msgstr ""
+
+#: ../../source/Security 0c7387a7a9344316ab4ef9e8c5e14d73 Audit Audit/ELK
+#: Manual.rst:150
+msgid "2.2.1 安装说明"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:152
+#: f4458fb284bc4c96b3a0f5caaa98973d
+msgid ""
+"下载得到 elasticsearch-filbeat-kibana.tar "
+"压缩包，将该压缩包分别放入三台不同机器上。然后在每个机器上使用下面命令进行解压得到 "
+"elasticsearch-7.7.0、filebeat-7.7.0-linux-x86_64、kibana-7.7.0-linux-x86_64"
+" 三个组件目录。"
+msgstr ""
+
+#: ../../source/Security 56d9c1a1b9394289944d3a0d47a7f317 Audit Audit/ELK
+#: Manual.rst:154
+msgid "分别修改elasticsearch 的配置文件，需要修改的项如下::"
+msgstr ""
+
+#: ../../source/Security 335ae3731fe94ee7a9715e5e9a2966c7 Audit Audit/ELK
+#: Manual.rst:168
+msgid "需要注意的是ip地址需要修改为自己服务器对应的ip端口，确保所有的elasticsearch能够互联成功。"
+msgstr ""
+
+#: ../../source/Security 807286ee0f6b4ebe8497e6d4b7babd4d Audit Audit/ELK
+#: Manual.rst:170
+msgid "filebeat 无需做任何修改。"
+msgstr ""
+
+#: ../../source/Security 508ec07a57084f0f92085ce579ea8ccf Audit Audit/ELK
+#: Manual.rst:172
+msgid "kibana也无需做任何修改"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:175
+#: d9f737aaf0974e5894b7e89351916f9a
+msgid "2.2.2 启动说明"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:177
+#: ee9e30fb278a450c92be5e1d14781cb3
+msgid "配置修改完成后, 就可以启动了，首先启动elasticsearch， 启动方式跟启动单机版一致。"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:179
+#: ed364153ddbe424b8a9c444d6473d5af
+msgid "接下来启动kibana，启动方式跟单机版也是一致的"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:181
+#: ccdd4b405ca0475082dcf866b2546fec
+msgid "然后启动filebeat，启动方式跟单机版一致"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:183
+#: cd2b79192fef4bc490fe54b7f84a0c00
+msgid "做完上述操作后，ELK审计集群平台就已经启动完成了。接下来可以访问kibana页面进行查看审计数据，查看数据的方式跟单机版是一致的，这里不再赘述。"
+msgstr ""
+
+#: ../../source/Security 93f2db21170d4ac1a7cc734afdd58b1d Audit Audit/ELK
+#: Manual.rst:185
+msgid "需要注意的是，在elasticsearch集群的模式下，区块链平台的配置文件也要对应修改为filebeat的多节点配置"
+msgstr ""
+
+#: ../../source/Security 9a11684ad1c0442daa23c79b6c248192 Audit Audit/ELK
+#: Manual.rst:187
+msgid "|image6|"
+msgstr ""
+
+#: ../../source/Security 76b7a2968d3c4446be3f16d6c34874ec Audit Audit/ELK
+#: Manual.rst:240
+msgid "image6"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:190
+#: bc98a2468f644493b922d1f96f13d2f8
+msgid "3.注意事项"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:192
+#: b8ea2ab31a374d2994472fe07f587416
+msgid ""
+"启动elasticsearch "
+"的时候出现下面的提示，这说明我们配置的java8环境不符合elasticsearch7.7的要求，需要至少jdk11版本。有两种方式可以解决该问题，第一种是取消我们配置的JAVA_HOME"
+" 环境变量， "
+"因为elasticsearch默认自带了JDK，使用它的即可。另外一个方式就是配置JDK11以上的环境变量。(取消配置的JAVA_HOME "
+"环境变量之后，需要重新连接服务器，才不会出现该提示。）"
+msgstr ""
+
+#: ../../source/Security 404caf8773b54888b103e959164147dc Audit Audit/ELK
+#: Manual.rst:194
+msgid "|image7|"
+msgstr ""
+
+#: ../../source/Security 9dd6a30025ea41bfac628e7df3aaaeac Audit Audit/ELK
+#: Manual.rst:241
+msgid "image7"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:196
+#: bd45eab029744f2699f008d26a71fcf6
+msgid ""
+"启动elasticsearch "
+"出现下面的错误信息，这种情况一般是上一次elasticsearch没有停止，而我们又去启动elasticsearch,造成重复启动。"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:198
+#: e1e338faed3342888d5aa38b642bf874
+msgid "|image8|"
+msgstr ""
+
+#: ../../source/Security 3fd474c558184c3282df7c60159dc99f Audit Audit/ELK
+#: Manual.rst:242
+msgid "image8"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:200
+#: c789270f5807483ba5183671030394b6
+msgid "解决办法：结束进程重新启动elasticsearch即可。"
+msgstr ""
+
+#: ../../source/Security 910b4bb54f7d4b75bc3d3209578f84af Audit Audit/ELK
+#: Manual.rst:202
+msgid "使用kibana发现审计日志有些数据前面有感叹号。如下图所示："
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:204
+#: e1ee1aa16a8e403594a4b8f49a6c9f28
+msgid "|image9|"
+msgstr ""
+
+#: ../../source/Security 026372e279df4b209db2bcbebfc4038a Audit Audit/ELK
+#: Manual.rst:243
+msgid "image9"
+msgstr ""
+
+#: ../../source/Security 6690a6ae85e041df8100c2b142ceb0f8 Audit Audit/ELK
+#: Manual.rst:206
+msgid "解决方案："
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:208
+#: c735405c66194523be7f8eb99a1ce5c8
+msgid "点击左下角齿轮按钮，然后点击index Parrterns, 出现下图所示页面"
+msgstr ""
+
+#: ../../source/Security 55a7f5f3459743b39096c529d907b1f2 Audit Audit/ELK
+#: Manual.rst:210
+msgid "|image10|"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:244
+#: aa878f82fd054a6dbd22683181f2aefd
+msgid "image10"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:212
+#: e859b11fe3314dbdbb152c64a3cbae62
+msgid "点击filebeat-*索引，出现下图所示，点击刷新按钮即可"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:214
+#: ee5d2e9937ac45df9b77b270bbaa7b3b
+msgid "|image11|"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:245
+#: eb1c79a7dc924404bee4d85bc744cf5d
+msgid "image11"
+msgstr ""
+
+#: ../../source/Security 8cecf8b834ba4ba7922e0c6ade047024 Audit Audit/ELK
+#: Manual.rst:216
+msgid "4.vm.max_map_count is too low"
+msgstr ""
+
+#: ../../source/Security 0baa6b10106a4cf79af5036a4a82a885 Audit Audit/ELK
+#: Manual.rst:218
+msgid "|image12|"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:246
+#: b8b10833b75040b68c2c2e951a0d19e2
+msgid "image12"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:220
+#: a49cd051c73f4e1f8795abd8fb87c673
+msgid ""
+"出现这个错误的原因是因为linux系统的最大句柄数默认为65530， 而elasticsearch "
+"所需要的文件句柄数超过了该限制，所以需要修改linux系统的最大的句柄数，修改方法如下::"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:224
+#: b778e1d96e1544c3ad244017362037b9
+msgid "在最后一行添加一行::"
+msgstr ""
+
+#: ../../source/Security Audit Audit/ELK Manual.rst:228
+#: d7abdba2d1ee4002abcbc13c2b38d0fd
+msgid "然后执行 下面的命令重新载入配置文件"
+msgstr ""
+

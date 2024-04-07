@@ -1,0 +1,288 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Oracle.rst:2 6729d26da1fd4bfeaa4aef45827fb02d
+msgid "预言机"
+msgstr ""
+
+#: ../../source/Oracle.rst:5 2ddb3e212697492f8445588c814bbd48
+msgid "功能概述"
+msgstr ""
+
+#: ../../source/Oracle.rst:6 9015ab8608844feb99657a1ad80165cb
+msgid "为提供给区块链智能合约一个安全可靠的获取外部数据源的功能，我们引入Oracle预言机来帮助获取可信的外部数据，并将获取到的外部数据提供给合约进行使用。通过HVM智能合约发起获取外部数据的请求，由Oracle预言机将外部数据获取后，返回给HVM智能合约使用。本节将介绍如何通过HVM合约使用Oracle服务。"
+msgstr ""
+
+#: ../../source/Oracle.rst:8 752ccdfdf2b1436c86640daa0bb9b63e
+msgid "**一次完整的Oracle执行流程如下：**"
+msgstr ""
+
+#: ../../source/Oracle.rst:10 ea1657e6cc2d47989a0dafe35405fb55
+msgid "用户调用HVM合约请求Oracle服务；"
+msgstr ""
+
+#: ../../source/Oracle.rst:11 353e7cca0051423a8c5c04aae2ec43a2
+msgid "HVM执行合约以及Oracle服务，并返回uuid（uuid表示本次Oracle请求的唯一ID，绑定回调交易哈希）；"
+msgstr ""
+
+#: ../../source/Oracle.rst:12 57947445808244a8992ec01295757ae3
+msgid "Oracle服务执行成功，平台发起回调交易；"
+msgstr ""
+
+#: ../../source/Oracle.rst:13 db61fbeb7d9d470d96dc79ef7b90ae70
+msgid "在回调交易中执行用户编写的回调逻辑。"
+msgstr ""
+
+#: ../../source/Oracle.rst:15 a25f87677534455980fb0bda552ebc14
+msgid "**在这个流程当中，与用户发生交互的步骤包括以下两点：**"
+msgstr ""
+
+#: ../../source/Oracle.rst:17 2ed4a443b48a4034ac4b0d2e63698bd8
+msgid "调用HVM合约请求Oracle服务"
+msgstr ""
+
+#: ../../source/Oracle.rst:18 ../../source/Oracle.rst:138
+#: 1637e93927f9495c93dc906a2931a5b5 4e1ba7817f7f443299a60b5c2641272f
+msgid "编写回调函数逻辑"
+msgstr ""
+
+#: ../../source/Oracle.rst:22 57c160534aa540f18d569f48639cce1a
+msgid "使用说明"
+msgstr ""
+
+#: ../../source/Oracle.rst:25 44021a99624042c4adce471262eb1053
+msgid "调用合约请求Oracle服务"
+msgstr ""
+
+#: ../../source/Oracle.rst:27 33077d735c734ad0b433b1830a183499
+msgid "本小节将介绍如何编写HVM合约来调用Oracle服务。需要在maven或gradle导入 **1.1.0及以上** 版本的HVM-SDK。"
+msgstr ""
+
+#: ../../source/Oracle.rst:30 c7dab0628f4c4074b0ff59225dcaabb8
+msgid "Oracle服务接口"
+msgstr ""
+
+#: ../../source/Oracle.rst:32 ec4a237be6bb45148442cc05d7c4f36e
+msgid "在HVM-SDK里的BaseContract中，我们增加了新接口以提供用户通过调用合约的方式使用Oracle服务，接口如下::"
+msgstr ""
+
+#: ../../source/Oracle.rst:36 a099a78aeeba49068c195c2939f48d2b
+msgid "其中OracleRequest的结构如下::"
+msgstr ""
+
+#: ../../source/Oracle.rst:49 44a02c69452646b89e5d3248ed82d9fd
+msgid "其中各参数的意义如下："
+msgstr ""
+
+#: ../../source/Oracle.rst:51 bf742b8d048846e293e9ab1ae23e051c
+msgid "`url`：请求资源的web网址，必须是支持https的服务站点;"
+msgstr ""
+
+#: ../../source/Oracle.rst:52 cd5b550813994cc184faf4403e0442ec
+msgid "`method`：请求方法。RequestMethod是一个默认方法，包括GET、POST，默认为GET方法，其结构如下::"
+msgstr ""
+
+#: ../../source/Oracle.rst:58 b8cc037724dc4a2c91568de636c44dfc
+msgid "`header`：请求资源时想要带上的自定义http请求头;"
+msgstr ""
+
+#: ../../source/Oracle.rst:59 b74a0f1f67904bbc9425e8111f89f2a5
+msgid "`body`：请求资源时想要带上的请求体;"
+msgstr ""
+
+#: ../../source/Oracle.rst:60 12bf083863d44f1498752e65608250b2
+msgid "`bizID`：用户针对业务需求自定义的唯一标识ID;"
+msgstr ""
+
+#: ../../source/Oracle.rst:61 c36b0cf4866e4ea1b5c88685ad89781c
+msgid "`callBackAddress`：回调函数所在的合约地址;"
+msgstr ""
+
+#: ../../source/Oracle.rst:62 661243612d0947b29c4b0f99d79fafbe
+msgid ""
+"`callBackMethod`：回调函数名，回调函数声明格式为: `<return_type>  "
+"<method_name>(OracleResponse response);`"
+msgstr ""
+
+#: ../../source/Oracle.rst:65 8c912c6857e84a0c94f172f6cd4e3c6c
+msgid "合约中调用Oracle服务"
+msgstr ""
+
+#: ../../source/Oracle.rst:66 474988454bab46bdb893ef3ceaa36428
+msgid ""
+"我们可以在合约中调用 `callOracle` 接口来使用Oracle服务，下面的例子是向 `https://www.hyperchain.cn`"
+" 请求数据，并将 `callbackOracle` "
+"作为我们的回调函数，回调函数将在下一小节进行介绍。在调用Oracle服务接口后，返回uuid，uuid绑定回调交易的交易哈希::"
+msgstr ""
+
+#: ../../source/Oracle.rst:90 c9df38a11c054bbe9808ae1adc43c030
+msgid "回调函数"
+msgstr ""
+
+#: ../../source/Oracle.rst:92 c12ea6fc6bfe4208a86a3a7ffd7591ae
+msgid ""
+"在前面的章节中，我们在调用Oracle请求中传入了回调函数的名称，平台在成功执行预言机请求后 **自动发起回调交易，执行用户指定的回调函数** "
+"。回调函数由用户自己实现，本节我们将介绍如何编写回调函数。"
+msgstr ""
+
+#: ../../source/Oracle.rst:95 ae54c8dedca14550a3f29519799b1c97
+msgid "回调函数介绍"
+msgstr ""
+
+#: ../../source/Oracle.rst:97 e4f8dac9b6be4dc197020b92d0c1a0fd
+msgid "回调函数的 **参数有且仅有一个OracleResponse，而且在回调函数中不能再次发起Oracle请求调用**，回调函数的格式如下::"
+msgstr ""
+
+#: ../../source/Oracle.rst:101 0b4a610683bd448d8bc400d3a9072864
+msgid "其中OracleResponse的结构如下::"
+msgstr ""
+
+#: ../../source/Oracle.rst:113 d75e026bb1f14acab5c681d925ee972d
+msgid "各参数的意义如下："
+msgstr ""
+
+#: ../../source/Oracle.rst:115 0c5425f251154e458217129ed8dc174f
+msgid "`code`：预言机服务制定的状态码标准，具体的返回结果状态码如下表所示："
+msgstr ""
+
+#: ../../source/Oracle.rst:121 7780d4c15f474a30a6f869ce403a5332
+msgid "Oracle回调状态码"
+msgstr ""
+
+#: ../../source/Oracle.rst:122 c399470b4e4d45259d96aa755aa76736
+msgid "含义"
+msgstr ""
+
+#: ../../source/Oracle.rst:123 b112366d47e44fe49ae2002d5ef7acba
+msgid "200"
+msgstr ""
+
+#: ../../source/Oracle.rst:124 7b87ef153ce24c3eabfcaeb7d73a52a4
+msgid "请求成功"
+msgstr ""
+
+#: ../../source/Oracle.rst:125 a0e8d54435a246cfb703d2098ef6dce6
+msgid "404"
+msgstr ""
+
+#: ../../source/Oracle.rst:126 362d567bcfa64ced817c64e751f97087
+msgid "请求资源不存在"
+msgstr ""
+
+#: ../../source/Oracle.rst:127 0302e8f7eb8f465c92b7ea8ff7527280
+msgid "999"
+msgstr ""
+
+#: ../../source/Oracle.rst:128 11f7014f20b44e2dbb68f7c176961448
+msgid "请求超时"
+msgstr ""
+
+#: ../../source/Oracle.rst:129 89ca39b7f376427785b855dfe8b8a60d
+msgid "`message`：状态码表示的信息"
+msgstr ""
+
+#: ../../source/Oracle.rst:130 e463d9511bad4ee8b94b510d8a1870d3
+msgid "`repHeader`：响应请求头"
+msgstr ""
+
+#: ../../source/Oracle.rst:131 1840558d795f46e59e033fed800dd943
+msgid "`repBody`：响应请求体"
+msgstr ""
+
+#: ../../source/Oracle.rst:132 b1b7cae783ce4711bbadb40e8bf4fe13
+msgid "`uuid`：由平台计算出的每次Oracle请求的唯一标识"
+msgstr ""
+
+#: ../../source/Oracle.rst:133 a946f8ac0ad2441fb957e8434e5509d7
+msgid "`bizId`：用户针对业务需求自定义的唯一标识ID"
+msgstr ""
+
+#: ../../source/Oracle.rst:134 db3f36c53c584e01915dfc17b613154c
+msgid "`callerContract`：发起Oracle服务请求的合约地址"
+msgstr ""
+
+#: ../../source/Oracle.rst:139 3d3c3313bd9a4eeb8210a9ff31f4267c
+msgid "在介绍完回调函数逻辑后，我们给出一个简单的回调函数示例，通过回调函数打印一些响应信息。 ::"
+msgstr ""
+
+#: ../../source/Oracle.rst:162 93f85000fb2b4d748265fd9eccb41528
+msgid "获取回调交易哈希"
+msgstr ""
+
+#: ../../source/Oracle.rst:163 5c8bab32031b424c83284aa3ca0b7304
+msgid "前面提到过，Oracle服务执行成功，平台发起回调交易，在回调交易中执行用户编写的回调逻辑。如果用户想要获取这笔回调交易的交易哈希，可以在合约中执行`getCallbackTxHash`的逻辑，该接口由BaseContract提供，根据uuid返回回调交易的哈希。"
+msgstr ""
+
+#: ../../source/Oracle.rst:181 fa5d1978b2c4470abc1feafedea39a46
+msgid "操作流程图"
+msgstr ""
+
+#: ../../source/Oracle.rst:183 5654a07f519c4cfd880f898ea96130ba
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/Oracle.rst:266 ec08d0dc990f4d0598764773fa68047b
+msgid "image1"
+msgstr ""
+
+#: ../../source/Oracle.rst:186 1dc55fab729d42eabaa55a0444989421
+msgid "使用示例"
+msgstr ""
+
+#: ../../source/Oracle.rst:187 1e7858aa347d4c0f82ad0094097a3dd2
+msgid "本小节我们将基于前面给出的OracleContract合约，给出LiteSDK 的使用示例，示例包含两个部分："
+msgstr ""
+
+#: ../../source/Oracle.rst:189 79468ae26a484382979c6d643af748d9
+msgid "OracleContract合约部署，通过合约调用Oracle服务；"
+msgstr ""
+
+#: ../../source/Oracle.rst:190 d716741ec55d4467824496472e068f03
+msgid "调用合约获取回调交易哈希。"
+msgstr ""
+
+#: ../../source/Oracle.rst:193 f97134f3cc9b4fa285b2bbce136b976c
+msgid "调用Oracle服务"
+msgstr ""
+
+#: ../../source/Oracle.rst:194 438b334c11984680bc8bbcd17945de1f
+msgid "我们通过invokeBean的方式进行合约调用，首先给出InvokeBean的代码。"
+msgstr ""
+
+#: ../../source/Oracle.rst:196 b86bb72bba71418b882fa7f7528311f3
+msgid "**InvokeOracle代码**"
+msgstr ""
+
+#: ../../source/Oracle.rst:207 61a1c069f8db4e908f4364df07524fb0
+msgid "**InvokeCallback代码**"
+msgstr ""
+
+#: ../../source/Oracle.rst:227 78324e375a6d41a3b25b23ba38370b5a
+msgid "**测试代码**"
+msgstr ""
+
+#: ../../source/Oracle.rst:264 accd466dce774f71bab538180ce13993
+msgid ""
+"完整示例代码可以获取源码包\\ `oracleContractDemo "
+"<https://upload.filoop.com/oracleContractDemo.zip>`_\\ 直接运行体验。"
+msgstr ""
+

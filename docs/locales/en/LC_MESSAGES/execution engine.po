@@ -1,0 +1,345 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/execution 4f52afb438b1496ea5c267a50d3bcf72 engine.rst:2
+msgid "执行引擎"
+msgstr ""
+
+#: ../../source/execution 2bb487716255446e95731bd137639e30 engine.rst:4
+msgid ""
+"平台支持合约安全、执行高效、编程友好的合约执行沙盒环境，研发了三种合约执行引擎：HVM（HyperVM）、EVM（HyperEVM）、BVM等，分别支持"
+" Java、Solidity、Go等编程语言，提供完善的合约生命周期管理。"
+msgstr ""
+
+#: ../../source/execution 9234972efc574d2886d053e0c3ac11c3 engine.rst:8
+msgid "HVM"
+msgstr ""
+
+#: ../../source/execution d403966358e04b21b2b2a8e6c816ee30 engine.rst:11
+msgid "HVM概述"
+msgstr ""
+
+#: ../../source/execution 1d441efdb2d4496d9a7b42c21e369bd1 engine.rst:13
+msgid "由于当前Java语言的流行以及其强大的生态，使用Java语言编写合约无疑会让合约开发更加便捷且易于推广。HVM为趣链科技首创支持Java语言的智能合约执行引擎，支持符合Java编写规范多种数据结构，内置数据表结构，可以实现业务数据可视化，在保证智能合约执行的安全性、确定性、可终止性的前提下，提供了一系列灵活的应用模式和工具方法集，以满足复杂多样的业务场景需求，为广泛的区块链开发人员提供更便捷、灵活、安全的区块链应用开发模式。"
+msgstr ""
+
+#: ../../source/execution 34c034724c9748f0a0f9498209c60c78 engine.rst:17
+msgid "HVM使用"
+msgstr ""
+
+#: ../../source/execution 488e33f3d4a2489c9ac50d868d1ad750 engine.rst:19
+msgid "HVM执行机制从外部来看主要负责合约执行的操作。从SDK调用一笔HVM的合约，首先需要共识模块将通过共识的区块交易发送给执行模块，然后执行模块调用HVM暴露出来的合约接口，最后合约执行完成后会将结果返回，将执行结果写入账本中。在架构层面，HVM自上而下主要分为三个部分：合约操作层、库函数层以及虚拟机层。"
+msgstr ""
+
+#: ../../source/execution 742bc90f3cfb43b39dbaf6302bcd222f engine.rst:23
+msgid "**合约操作层**"
+msgstr ""
+
+#: ../../source/execution engine.rst:25 f3860129bb7a4737aa012cbc6162c3b4
+msgid "这一层与用户直接相关联，主要包括合约部署、调用等全生命周期管理，对于合约的操作通过会对链上的合约数据状态产生影响，所以平台采取了灵活的合约管理提案申请-阈值投票-提案执行的策略，通过合约管理员对合约操作进行控制，保证合约管理操作的公平与安全。"
+msgstr ""
+
+#: ../../source/execution 04421fa03bb84f88a187bb1c6ce4c03a engine.rst:27
+msgid "合约部署 ：编写Java智能合约，并通过SDK发交易的形式将其部署到区块链上；"
+msgstr ""
+
+#: ../../source/execution 8f106ba2abde479b83c75e0944cd7afa engine.rst:28
+msgid "合约调用 ： 根据合约地址，调用相应合约中的逻辑。"
+msgstr ""
+
+#: ../../source/execution 9d71a5e3b55b4d13820b296bd6434c76 engine.rst:29
+msgid ""
+"合约升级 ： "
+"因业务要求或者实现逻辑更新，需要对合约进行升级操作时，需要用新合约来替换掉旧合约，由于升级合约是一个链级操作（改变整个链上的状态），所以需要采用CAF联盟自治框架才可以进行合约升级，保证链上合约的安全控制。"
+msgstr ""
+
+#: ../../source/execution 1647cfe809b9440785fcec032f1c7b13 engine.rst:30
+msgid "合约冻结/解冻 ：将链上的合约冻结，在合约所有者解冻之前，禁止任何人调用，冻结不同于销毁，其具备一个可逆的过程，可以通过合约解冻的操作重新使用。"
+msgstr ""
+
+#: ../../source/execution 9c6e4c7bd25442259f371c8fd3600ac4 engine.rst:31
+msgid ""
+"合约销毁 "
+"：将链上原来部署的合约进行废止操作，不同于合约冻结，合约销毁是一个不可逆的操作，被销毁的合约不能够被访问，不可以恢复，不允许再进行任何操作，但合约销毁后的数据仍然会存在链的底层账本中，仅用于监管审计。"
+msgstr ""
+
+#: ../../source/execution e9ec4afeb5ba4168af513ee58b673864 engine.rst:33
+msgid "**库函数层**"
+msgstr ""
+
+#: ../../source/execution b4b4f3b56db7495fa615c8e826d7247e engine.rst:35
+msgid "库函数包括数据结构、账本操作、日志信息以及加解密等功能。"
+msgstr ""
+
+#: ../../source/execution 19d78060f5964af09872ce16ef0bce17 engine.rst:37
+msgid ""
+"**数据结构符合 Java 编写范式**：HyperList、HyperMap为平台独立研发，为了方便Java "
+"软件开发者习惯，使其无需感知区块链底层 KV 结构即可编写相应业务逻辑代码。HyperMap 和 HyperList 的使用类似于开发者所熟知的 "
+"HashMap 和 ArrayList，但做了原创性地优化，在减少内存使用的同时也提高了更新账本的插入效率。"
+msgstr ""
+
+#: ../../source/execution c6890c6d849f486497f79a3f3c602186 engine.rst:39
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/execution 30c63e9775294822ba4693ddebd67e69 engine.rst:146
+msgid "image1"
+msgstr ""
+
+#: ../../source/execution 5b0fc50e87a644a19708427e627dd890 engine.rst:41
+msgid "|image3|"
+msgstr ""
+
+#: ../../source/execution 61b1782bd8104e8b8b36c62d1878c007 engine.rst:148
+msgid "image3"
+msgstr ""
+
+#: ../../source/execution 33860198c63a462888f0aa32b02b24d2 engine.rst:43
+msgid ""
+"**内置数据表结构**：为了满足复杂业务场景下数据类型多样化、业务数据可视化与可分析的需求，智能合约需要支持复杂的表结构数据组织形式。HVM "
+"提供了内置数据结构 "
+"HyperTable，支持在合约内部按照表的形式组织业务数据，便于业务数据可视化以及后续的数据分析与价值挖掘。这种结构可以让原Solidity "
+"语言中复杂嵌套的数据操作简单化，同时在性能方面，能有效解决序列化、反序列化造成的性能瓶颈，整体维护成本更低、使用更高效。"
+msgstr ""
+
+#: ../../source/execution e6bc035662c84757a2df775dc13a6f0e engine.rst:45
+msgid "|image2|"
+msgstr ""
+
+#: ../../source/execution 31574aedcd924f43901fb5475347b488 engine.rst:147
+msgid "image2"
+msgstr ""
+
+#: ../../source/execution 0129c82e6cc64b34a7e7c178f73088bd engine.rst:47
+msgid "**内置嵌套Map数据结构**：HyperList、HyperMap数据结构都无法满足复杂数据组织结构的需求；HyperTable的表结构拥有严格的层级格式（表-行-列簇-列-值），缺乏在复杂结构下的灵活性（例如：不可只有列，没有列簇）。针对上述问题，HVM推出新型的数据结构——NestedMap，支持用户按需进行灵活的数据组织，并且实现对多层映射数据更高的读写性能。"
+msgstr ""
+
+#: ../../source/execution 8358589591904f699b507ad9493b828f engine.rst:49
+msgid "**虚拟机层**"
+msgstr ""
+
+#: ../../source/execution 7761d19b4e554830abd298d03532ed71 engine.rst:51
+msgid "虚拟机层主要是在合约执行过程中，对于合约解析执行的内部操作。为了提高整体的执行效率，HVM设计定制类加载器，类加载缓存提供合约地址到合约类加载器的映射，一个合约类加载器保存合约的字节码和合约类实例，采用最近最少使用淘汰策略（LRU）减少类重复加载带来的开销；指令解析从开始的每次对指令进行解析到将指令做成单例，并进行栈帧复用，大量节省指令执行时间，提高整体执行效率。"
+msgstr ""
+
+#: ../../source/execution 6aebf269e07f438ba8aa13a8298f6dd9 engine.rst:54
+msgid "HVM优势"
+msgstr ""
+
+#: ../../source/execution b6f3d1572f9848dca874938994d0624a engine.rst:56
+msgid "**支持多级日志**"
+msgstr ""
+
+#: ../../source/execution 68a604454cc841b296939d82e15a036a engine.rst:58
+msgid ""
+"日志在应用开发过程中的作用至关重要，能帮助开发者快速定位和发现问题。由于 EVM 未对出现的异常进行详细定位，给编译调试造成极大的难度。而 HVM"
+" "
+"通过内置日志工具类，支持六种日志级别：critical、error、warning、notice、info、debug。可以为每种常见的错误进行合理的提示，方便使用者"
+" 对合作操作过程中产生的异常进行debug，方便开发和运维快速定位问题。"
+msgstr ""
+
+#: ../../source/execution 45a1144791b04e9fa24a18495fba770d engine.rst:62
+msgid "**分层调用模式**"
+msgstr ""
+
+#: ../../source/execution b803dc1f9d294434a846de3776460d8d engine.rst:64
+msgid ""
+"HVM采取分层调用的模式，可以有效降低合约升级的成本。其实现方法主要通过InvokeBean的方式在业务调用层在不更新合约的情况下定义丰富的业务逻辑，"
+" "
+"合约层只实现最核心、最基本的原子操作。以转账场景为例，合约层只有增加余额和减少余额的方法，在InvokeBean调用层定义转账的逻辑：如余额是否充足、"
+" 减少转让方余额和增加接收方余额。"
+msgstr ""
+
+#: ../../source/execution a2568847160048468fc43f54b41b7622 engine.rst:68
+msgid "**支持加解密工具**"
+msgstr ""
+
+#: ../../source/execution e061cda0186b4fbcb064527686c5d5f3 engine.rst:70
+msgid ""
+"一些业务场景需要在智能合约中进行签名验签逻辑处理，从而进行身份认证，便于进行权限判断或者后续业务的开展。因此 HVM 设计了基于 "
+"TEE的加解密工具， 支持在合约中调用存储于 TEE 的公私钥完成签名、验签操作，并支持 ECDSA国标系列、SM "
+"国密系列等多种加解密算法，具有方便友好安全的特性。"
+msgstr ""
+
+#: ../../source/execution 1fca90396e6145fa92eb9ba86050e59a engine.rst:73
+msgid "**支持合约访问控制**"
+msgstr ""
+
+#: ../../source/execution engine.rst:75 f17c786b05e940288ed5a26f6bd2d66e
+msgid ""
+"合约编码者可以通过智能合约和访问控制策略来限制访问数据的角色和用户，在合约中针对节点、角色、用户定制不同的合约函数访问权限。合约编码者可以在 "
+"合约中为一些高权限的函数设置权限控制，使得该函数只能被固定地址的调用者调用，从而实现访问权限控制。"
+msgstr ""
+
+#: ../../source/execution 268e8a473010419cb1004104a5c10988 engine.rst:78
+msgid "**支持合约并行执行**"
+msgstr ""
+
+#: ../../source/execution 166719df3fec41bcaad65ae227ae52b8 engine.rst:80
+msgid "在区块链在并行执行HVM交易时，若采用创建多个HVM实例的方式实现HVM合约并行，将导致多个HVM实例占用大量的内存、每个HVM实例都维护一份合约类加载器缓存，造成资源浪费。对此，我们对HVM进行了优化设计，支持多个合约调用协程在单个HVM实例中并行执行。"
+msgstr ""
+
+#: ../../source/execution engine.rst:84 f45594fb82514bf2a0e8a44628e2c3a9
+msgid "EVM"
+msgstr ""
+
+#: ../../source/execution d195def97948409c9eed9034156bd778 engine.rst:87
+msgid "EVM概述"
+msgstr ""
+
+#: ../../source/execution 811513f6aec546438509cd1311713734 engine.rst:89
+msgid ""
+"Hyper "
+"EVM在合约执行方面，优化执行的内部细节，包括跳转表的初始化逻辑优化、EVM初始化上下文流程优化，减少了内存的频繁分配和对象的创建过程，加快 "
+"了EVM初始化速度。同时，HyperEVM会跟随以太坊EVM版本迭代更新，适配最新的以太坊EVM特性。"
+msgstr ""
+
+#: ../../source/execution c9245fb3460041fb86aae3dccee01a4f engine.rst:93
+msgid "BVM"
+msgstr ""
+
+#: ../../source/execution 4cbcee6f30a7461e8b4ff8d0f47f798a engine.rst:96
+msgid "BVM概述"
+msgstr ""
+
+#: ../../source/execution 9e015fff409a4df69574f2363b152ba8 engine.rst:98
+msgid ""
+"BVM全称是 **Built-in Virtual Machine** "
+"，是用于处理内置合约的虚拟机类型。BVM的出现让开发者自主定义一些内置合约（即是合约代码由开发人员预先写好，在平台启动时直接创建对象加载，无需用户手动部署），提供用户所需的专属功能。具有性能优良、无需（额外）部署、权限灵活等特性。"
+msgstr ""
+
+#: ../../source/execution 2084e48aff27468eb8be72b62e59aceb engine.rst:101
+msgid "BVM支持内置的合约"
+msgstr ""
+
+#: ../../source/execution 6dce2652d96d4ac5a9195af86ef89601 engine.rst:107
+msgid "存证类内置合约"
+msgstr ""
+
+#: ../../source/execution 21cd37c275134207b3736c5a7ff0d580 engine.rst:108
+msgid "描述"
+msgstr ""
+
+#: ../../source/execution engine.rst:109 f1dc4f3c34324fd5bc065dac63241207
+msgid "**存证类内置合约**"
+msgstr ""
+
+#: ../../source/execution ec96e3d8ad694ee6b0b7198036a148b4 engine.rst:110
+msgid "“SetHash”场景，表示存证场景下文件哈希的存储形式。HashContract中只有两个操作：存和取，对应Set方法和Get方法。"
+msgstr ""
+
+#: ../../source/execution 5a936d6e148a4df5a518c9cb6a2cb045 engine.rst:111
+msgid "**提案类内置合约**"
+msgstr ""
+
+#: ../../source/execution 36832b3bf49a4c82b3aa84b0034b47d4 engine.rst:112
+msgid ""
+"包括更改配置和权限管理等事件，如新增节点投票。提案合约提供创建提案、取消提案、提案投票以及执行提案的操作，分别对应Create、Cancel、Vote、Execute方法。"
+" 根据提案内容划分可分为配置类、权限类、节点类、合约命名类、合约生命周期管理类和ca模式管理类等。"
+msgstr ""
+
+#: ../../source/execution engine.rst:114 f3568e0a28c0443389a384afae96ce10
+msgid "**零知识证明内置合约**"
+msgstr ""
+
+#: ../../source/execution 53e2c621a77d410fa5f30077defab6e4 engine.rst:115
+msgid "用于演示零知识证明+同态隐藏机制下的隐私转账功能，提供的接口包括创建账户、查询余额、隐私转账等。该演示功能限于AMD64平台，请使用GOSDK提供的方法调用相关功能。"
+msgstr ""
+
+#: ../../source/execution 6148aeb112cc433fa1154fa568771a08 engine.rst:116
+msgid "**账户生命周期管理类内置合约**"
+msgstr ""
+
+#: ../../source/execution d0d563824ce0446b87dd996dde2214f7 engine.rst:117
+msgid "即证书账户生命周期管理，包含注册证书账户以及弃用证书账户。"
+msgstr ""
+
+#: ../../source/execution a5f1a491e38a410cbb3da4e939d1a54d engine.rst:118
+msgid "**证书管理类内置合约**"
+msgstr ""
+
+#: ../../source/execution 0bb8854c2fe74c48922b5367bd94b915 engine.rst:119
+msgid "用于保存和节点准入相关的证书和ca证书、以及证书吊销黑名单。对外接口主要提供查询证书是否吊销（CheckCert）、节点证书替换功能（VPCertReplace）、SDK证书冻结（CertFreeze）等。"
+msgstr ""
+
+#: ../../source/execution 2790a998a8304b088fb296526c7a1ea0 engine.rst:120
+msgid "**DID类内置合约**"
+msgstr ""
+
+#: ../../source/execution 6027743346494abab7212ffe676fba70 engine.rst:121
+msgid "可以设置链的ChainID，当需要使用DID功能之前需要由平台的admin账户对ChainID进行设置，注册的DID账户中的ChainID必须与平台的ChainID一致。"
+msgstr ""
+
+#: ../../source/execution 94b74a3e8d2d4159b942bbc13bcc5c09 engine.rst:122
+msgid "**Mpc类内置合约**"
+msgstr ""
+
+#: ../../source/execution 54e9a496a11842b499f538dd37ac4465 engine.rst:123
+msgid "该功能和可验证计算有关，用于通过MPC方法生成多方共同完成可信设置。"
+msgstr ""
+
+#: ../../source/execution da5bc15519544d6faef81a7579c84b85 engine.rst:124
+msgid "**NFT类内置合约**"
+msgstr ""
+
+#: ../../source/execution 2c5b48fb03cf4380aaae51ff6807eccd engine.rst:125
+msgid "可以派发账户余额，可以由平台的admin账户对任一账户进行账户余额的派发，当平台开启了gas扣费的情况下，每笔交易都需要从交易发起者账户中扣除交易执行所需要的手续费。"
+msgstr ""
+
+#: ../../source/execution b440dfd9ddcd4af8ac224064efe68c5f engine.rst:128
+msgid "BVM优势"
+msgstr ""
+
+#: ../../source/execution 351270c941af481c964ebf6afb451883 engine.rst:130
+msgid "性能优良：由于嵌入系统中，所以可以接近原生代码执行速度。"
+msgstr ""
+
+#: ../../source/execution 1b5d4442c3ba4991af8d234b4e184984 engine.rst:131
+msgid "无需部署：无需用户额外部署，可以理解为平台刚启动就被 “部署”在某个固定地址上。"
+msgstr ""
+
+#: ../../source/execution 15d090ff761143db94bb12450233380c engine.rst:132
+msgid "权限灵活：系统安全，不属于任何用户，任何用户都不可以对该合约进行升级或冻结、解冻的相关操作。"
+msgstr ""
+
+#: ../../source/execution da142031631749ec96f6f681d979f1a8 engine.rst:135
+msgid "Gas机制"
+msgstr ""
+
+#: ../../source/execution eac9115c0a3d47fea6ec2f3fc579c909 engine.rst:137
+msgid ""
+"gas主要作用是一种合约交易中用来度量执行合约逻辑复杂度的值，并通过限制复杂度大小来进行合约执行环境的停机和提供计费参考。每一笔交易都会包含两个与gas相关的关键信息，分别是gas上限和gas单价，gas上限决定了当前这笔交易所能消耗的gas数量，gas单价指定了当前这笔交易每消耗了一个单位的gas所需要支付的\"价格\"，即一笔交易所需要支付的交易gas价值"
+" = 交易消耗的gas数量 * gas单价。消耗的gas将被用于激励联盟链的组织者。"
+msgstr ""
+
+#: ../../source/execution 5824afecffb64cd39fd19a15d6d01faa engine.rst:139
+msgid "每一笔交易需要消耗的gas由智能合约执行时按照占用的CPU、内存和存储资源来动态计算得出。CPU资源体现在虚拟机执行每一个合约逻辑都需要进行指令调用，以操作数栈的形式对数据进行处理；内存资源体现在临时存储数据的局部变量表上的内存大小占用；存储资源则是对于合约状态数据存入账本的磁盘空间占用的消耗。当交易指定的gas上限低于交易执行所消耗的gas时，则将停止当前交易的执行，无论成功与否，交易发起者都需要为交易支付所消耗的gas费。"
+msgstr ""
+
+#: ../../source/execution 1494b1e614ec4af6be3863206042f95e engine.rst:141
+msgid "gas单价决定了当前这笔交易消耗的每一个单位的gas所需要支付的费用，由交易发起者来进行指定。当前区块链将有一个由CAF联盟投票决定的一个最低gas价格标准值，若交易中指定的gas价格低于这个标准值，则将拒绝执行交易。同时在交易打包时，将高gas价格的交易进行优先打包，优先打包的交易将有优先执行权。能力无法凭空产生，gas需由联盟链组织者为普通用户的区块链地址来进行增发，同时规定了对于gas转移的权限，只能由联盟链CAF组织成员来进行gas的增发，普通用户在购买gas后只能用于交易的手续费，无法进行流转。"
+msgstr ""
+
+#: ../../source/execution 7b3da297532844018e55fd74e488c118 engine.rst:143
+msgid "结合实际场景，如某应用方对接了平台的链服务，用户在该应用上使用了相关链服务（如上链存证、部署合约、NFT购买等），则需要向应用方支付对应的上链服务费（即gas），以完成交易的打包确权（任何一次链上的操作都可理解为一笔交易行为）。而支付的gas则会进入到gas池，应用方可根据相关的激励策略按一定周期分配给联盟节点，共享联盟生态价值，推动联盟更加正向健康发展。"
+msgstr ""
+

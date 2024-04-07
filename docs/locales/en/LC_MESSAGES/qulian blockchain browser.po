@@ -1,0 +1,1150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/qulian blockchain browser.rst:2
+#: c785d107660c4d9ab4ea9ef587eb9991
+msgid "趣链区块链浏览器"
+msgstr ""
+
+#: ../../source/qulian 0bdee8def6b54bc480e2b8fc17042d2c blockchain
+#: browser.rst:5
+msgid "1. 功能概述"
+msgstr ""
+
+#: ../../source/qulian b18e047d1ef64b6981ed95325b2528ec blockchain
+#: browser.rst:7
+msgid "趣链区块链浏览器是管理人员可视化管理hyperchain相关链上业务的可视化工具，支持查看区块链上信息、节点/合约实例可视化管理等核心操作。"
+msgstr ""
+
+#: ../../source/qulian 0eae41a759c4479baf9f382ba262e9fc blockchain
+#: browser.rst:9
+msgid "本使用手册将从启动趣链区块链浏览器、查看区块链浏览器、节点管理、合约实例管理等方面展开介绍。"
+msgstr ""
+
+#: ../../source/qulian a012afeaeb7a4d8e94e75716baa31d73 blockchain
+#: browser.rst:12
+msgid "2. 使用说明"
+msgstr ""
+
+#: ../../source/qulian 275c06ace6aa42b78d7738a6817860a8 blockchain
+#: browser.rst:15
+msgid "2.1 快速启动"
+msgstr ""
+
+#: ../../source/qulian 4aa46f0fa7e44d5b9fbf89fdee926006 blockchain
+#: browser.rst:18
+msgid "2.1.1 配置说明"
+msgstr ""
+
+#: ../../source/qulian 5510c60afad4457ebbca8065584a6085 blockchain
+#: browser.rst:20
+msgid "使用区块链浏览器功能需要在hyperchain启动之前进行相关配置。主要配置项如下::"
+msgstr ""
+
+#: ../../source/qulian 4dce1d86544f4656a7bfa0bc75890428 blockchain
+#: browser.rst:22
+msgid "**system.toml**"
+msgstr ""
+
+#: ../../source/qulian 68524e5210c041908f2968ad99cbc65e blockchain
+#: browser.rst:29
+msgid "在system.toml配置文件下，将bass.enable配置设置为true"
+msgstr ""
+
+#: ../../source/qulian 3cf83908ff0548d1a97aa2219d153cef blockchain
+#: browser.rst:31
+msgid "**dynamic.toml**"
+msgstr ""
+
+#: ../../source/qulian 523bc7a82b3b4d4f99540b07a390f899 blockchain
+#: browser.rst:39
+msgid ""
+"在dynamic.toml配置文件下，配置baas的访问端口，默认为12001。即在hyperchain启动成功后，可以在浏览器访问 "
+"**ip:12001** 来打开区块链浏览器。"
+msgstr ""
+
+#: ../../source/qulian ae1c8107b70746ebb2ead51f6a95a8e5 blockchain
+#: browser.rst:41
+msgid "**证书配置**"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:43
+#: e50860e9644a47558b8dc7200c9d8e02
+msgid "趣链区块链浏览器通过sdk访问节点，故需要在节点的baas/conf目录下配置相关证书。"
+msgstr ""
+
+#: ../../source/qulian bce393f83d824ef1946abd6f55ecfc45 blockchain
+#: browser.rst:45
+msgid "需要配置的证书及目录结构如下::"
+msgstr ""
+
+#: ../../source/qulian 16d47a3286d04989a9f7e2d1f9f414ab blockchain
+#: browser.rst:58
+msgid "注意，证书的配置取决于链上相关证书是否开启。"
+msgstr ""
+
+#: ../../source/qulian 115ae4b287394a1ab0f805f1843e6f3b blockchain
+#: browser.rst:61
+msgid "2.1.2 启动趣链区块链浏览器"
+msgstr ""
+
+#: ../../source/qulian 28ff98de490c454a9ca496aab5a29b91 blockchain
+#: browser.rst:63
+msgid "您在部署hyperchain后，可获取目标节点的IP和端口信息（具体方式参见hyperchain部署手册），在相同域下的电脑设备内打开网页浏览器，在地址栏中输入对应的IP和端口，即可进入对应节点的趣链区块链浏览器。"
+msgstr ""
+
+#: ../../source/qulian 0d3df09484524ee794036b0b5a4c59a3 blockchain
+#: browser.rst:65
+msgid "示例："
+msgstr ""
+
+#: ../../source/qulian 55f71ee899c245fc88454f6ca59f05c3 blockchain
+#: browser.rst:67
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/qulian b696d4bf751a4f65862a1a6b51d25e78 blockchain
+#: browser.rst:460
+msgid "image0"
+msgstr ""
+
+#: ../../source/qulian 7961f4488cf44a4b88a35e023b423f5a blockchain
+#: browser.rst:70
+msgid "2.2 区块链浏览器"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:72
+#: e8842689a17f4a078c0c69c01402eeb9
+msgid "区块链浏览器页面内，支持查看 **实时总览数据** 和 **网络拓扑图** ，更进一步地，您可以从“区块”、“交易”两个维度进一步查看区块链数据。"
+msgstr ""
+
+#: ../../source/qulian 4dd03106a09b485a9e023a7288cf3915 blockchain
+#: browser.rst:74
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/qulian bd40aa90c5cc4c0fb4c4906e6437a696 blockchain
+#: browser.rst:461
+msgid "image1"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:77
+#: cbee2693b5c34de1b9d5dbbb03dccc04
+msgid "2.2.1 查看区块"
+msgstr ""
+
+#: ../../source/qulian 2b6a9f565551474195deaf5d3a151254 blockchain
+#: browser.rst:79
+msgid "**步骤一：** 在搜索框中输入区块高度或区块哈希，或者点击【区块】tab下的【区块高度】，进入区块详情页。"
+msgstr ""
+
+#: ../../source/qulian a7aa624c6f794b6cae99b288fe909d4b blockchain
+#: browser.rst:81
+msgid "|image2|"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:462
+#: f9f99c9ebe014a97aebe29f923cc2677
+msgid "image2"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:83
+#: e16b60efd43b440d8292164ef6be8421
+msgid ""
+"**步骤二：** "
+"在区块详情页中，可以查看区块详情和该区块下进行的交易，还可以继续搜索想要查看的区块和交易。其中，父区块哈希和交易哈希可以点击跳转至对应详情页，区块哈希、父区块哈希、Merkle树的根哈希可复制。"
+msgstr ""
+
+#: ../../source/qulian bd9c6f742f714cf5800a25fa396a8b53 blockchain
+#: browser.rst:85
+msgid "|image3|"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:463
+#: e7ff7192e20845b28ca6c267650edcff
+msgid "image3"
+msgstr ""
+
+#: ../../source/qulian 1649460692314de9a35ae2e2942792fd blockchain
+#: browser.rst:88
+msgid "2.2.2 查看交易"
+msgstr ""
+
+#: ../../source/qulian 4572706bc436408383bc3955ec679d64 blockchain
+#: browser.rst:90
+msgid "**步骤一：** 在搜索框中输入交易哈希，或者点击【交易】tab下的【交易哈希】，进入交易详情页。"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:92
+#: f2293bb1a76b4f038ca3808c96d8e3ac
+msgid "|image4|"
+msgstr ""
+
+#: ../../source/qulian 3f5c477e007949e590d50b7feaffd3ef blockchain
+#: browser.rst:464
+msgid "image4"
+msgstr ""
+
+#: ../../source/qulian 4854f7a41b2d4f9ea879c8d9902a3bcd blockchain
+#: browser.rst:94
+msgid ""
+"**步骤二：** "
+"在交易详情页中，可以查看交易详情，还可以继续搜索想要查看的区块和交易。其中，区块哈希可以点击跳转至对应详情页，交易哈希、区块哈希、发起地址、接收地址可复制。"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:96
+#: e11cc8300bff4075af6f473d0438e51c
+msgid "|image5|"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:465
+#: d3757229f90c4e5db9299fc968bac6a6
+msgid "image5"
+msgstr ""
+
+#: ../../source/qulian 0967d8680a8c4281bbb997fa70c08338 blockchain
+#: browser.rst:99
+msgid "2.3 节点管理-节点信息"
+msgstr ""
+
+#: ../../source/qulian 7b5b7586a4b442b1938daeca46e50c60 blockchain
+#: browser.rst:101
+msgid "趣链区块链浏览器提供【节点信息】和【节点配置】两个可视化的节点管理页面。下文将介绍【节点信息】的使用说明，【节点配置】请参考2.4节内容。"
+msgstr ""
+
+#: ../../source/qulian 105483305ad84049bd3a12b914a7dd4d blockchain
+#: browser.rst:104
+msgid "2.3.1 查看节点信息"
+msgstr ""
+
+#: ../../source/qulian 132ddefab9e444079bfb04739d6978e6
+#: 18730777193e4878b488946b5e90f980 2348bece7bf94cf3870238c4b2803737
+#: 3a4e2b6e596f447b940b8a406620255c blockchain browser.rst:106 browser.rst:117
+#: browser.rst:137 browser.rst:149 browser.rst:161
+#: de04bdbfd55c42c4b16ff92eb1211d1a
+msgid "**步骤一：** 点击【节点管理】下【节点信息】，进入节点信息页面。"
+msgstr ""
+
+#: ../../source/qulian a18c3dbec77045d0b76c17936d7fc7bc blockchain
+#: browser.rst:108
+msgid "**步骤二：** 在节点信息页面中，可以查看该当前节点的具体信息，包括：节点类型、节点ID、节点端口。"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:110
+#: f496fc024d6d40b08eda690a1d4cc53a
+msgid "|image6|"
+msgstr ""
+
+#: ../../source/qulian a012bd907f5a4380bca14d0fed844fc6 blockchain
+#: browser.rst:466
+msgid "image6"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:113
+#: f7dad443374842beb55ee8af23f9c932
+msgid "2.3.2 节点连接状态管理"
+msgstr ""
+
+#: ../../source/qulian 18ebf7aa1ee84a5cb4c48c09f28114e6 blockchain
+#: browser.rst:115
+msgid "**建立节点连接**"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:119
+#: c8fd1e0e96204043adc310bdf2ddc9eb
+msgid "**步骤二：** 在节点信息页面中，可以看到节点关联列表，点击【建立节点连接】。"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:121
+#: de48f7534a3a4e76b8365da232c5f988
+msgid "|image7|"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:467
+#: ed6a9987ec484c88a0fe85a8e9ddb2bd
+msgid "image7"
+msgstr ""
+
+#: ../../source/qulian 0402277a268e4da6aa4e2da96cae3700 blockchain
+#: browser.rst:123
+msgid "**步骤三：** 在弹窗中填写待与当前节点关联的新节点参数，点击【确定】开始建立连接。"
+msgstr ""
+
+#: ../../source/qulian 2d6588ca93324b36b16c1a32870922ad blockchain
+#: browser.rst:125
+msgid "|image8|"
+msgstr ""
+
+#: ../../source/qulian b8b1eaf74bbd4aae85eca784deef3750 blockchain
+#: browser.rst:468
+msgid "image8"
+msgstr ""
+
+#: ../../source/qulian 8693794881944339b1671b1064363545 blockchain
+#: browser.rst:127
+msgid "参数说明如下："
+msgstr ""
+
+#: ../../source/qulian 245f7150111f4853bca7487556c0db08 blockchain
+#: browser.rst:129
+msgid "**节点名称** ：新节点的节点名称，不可与当前节点关联列表的节点名称相同；"
+msgstr ""
+
+#: ../../source/qulian 46efba9341804bf59dde8b2ba6b50a38 blockchain
+#: browser.rst:131
+msgid "**节点IP地址** ：新节点的端口信息，系统检验可连接后，即可建立新节点与当前节点的网络连接。"
+msgstr ""
+
+#: ../../source/qulian 955fe24c157e46b6afbde4a228f266dc blockchain
+#: browser.rst:133
+msgid "**步骤四：** 连接成功后，可在节点关联列表中查看。"
+msgstr ""
+
+#: ../../source/qulian be832220897b4062971f603616b6098c blockchain
+#: browser.rst:135
+msgid "**重新连接节点**"
+msgstr ""
+
+#: ../../source/qulian 20808150e9714468b11a4842a8ca9365 blockchain
+#: browser.rst:139
+msgid "**步骤二：** 在节点信息页面中，可以看到节点关联列表，选择与当前节点建立连接的其他节点，点击【…】操作列的【重新连接】。"
+msgstr ""
+
+#: ../../source/qulian 0880c7e6b59e46a6aaaea4bb10d0ee4c blockchain
+#: browser.rst:141
+msgid "|image9|"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:469
+#: cc6944854f96430581e5302acf4f3950
+msgid "image9"
+msgstr ""
+
+#: ../../source/qulian 39bb03fe72a14a8fb072ed2fdf5e982f blockchain
+#: browser.rst:143
+msgid "**步骤三：** 在弹窗内，点击“确定”，即可重新建立所选节点与当前节点之间的连接。"
+msgstr ""
+
+#: ../../source/qulian 84fe219a92bd4c81a76d8787ab410574 blockchain
+#: browser.rst:145
+msgid "|image10|"
+msgstr ""
+
+#: ../../source/qulian 18fb3b34bfcd48c0a50d44e0727193c1 blockchain
+#: browser.rst:470
+msgid "image10"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:147
+#: d1866e6b40dd4c6e9a25372344afbb81
+msgid "**断开节点连接**"
+msgstr ""
+
+#: ../../source/qulian 4f7ec2faea9f45489c671426152771c4 blockchain
+#: browser.rst:151
+msgid "**步骤二：** 在节点信息页面中，可以看到节点关联列表，选择与当前节点建立连接的其他节点，点击【…】操作列的【断开连接】。"
+msgstr ""
+
+#: ../../source/qulian 6b1410f0fcda420ea0b5b2691940f098 blockchain
+#: browser.rst:153
+msgid "|image11|"
+msgstr ""
+
+#: ../../source/qulian 6a6149aa2cb942a18fbe9e6fce8202bc blockchain
+#: browser.rst:471
+msgid "image11"
+msgstr ""
+
+#: ../../source/qulian 8106ac8b9f994fc09c6f2469bdaa226d blockchain
+#: browser.rst:155
+msgid "**步骤三：** 在弹窗内，点击“确定”，即可断开所选节点与当前节点之间的连接，断开连接后该所选的节点将会从关联节点列表中消失，请谨慎操作。"
+msgstr ""
+
+#: ../../source/qulian 35408d7a863142c9ba3f455abe84b0e9 blockchain
+#: browser.rst:157
+msgid "|image12|"
+msgstr ""
+
+#: ../../source/qulian 5e3d828b457d4cdcb7980b772b8ce1f7 blockchain
+#: browser.rst:472
+msgid "image12"
+msgstr ""
+
+#: ../../source/qulian 9600cdce47254c6f8fb6a41a4d6b18f0 blockchain
+#: browser.rst:159
+msgid "**节点链路检测**"
+msgstr ""
+
+#: ../../source/qulian 15714786aa1f4192a2ec8f2fb7c5b3bc blockchain
+#: browser.rst:163
+msgid "**步骤二：** 在节点信息页面中，可以看到节点关联列表，选择与当前节点建立连接的其他节点，点击【…】操作列的【链路检测】。"
+msgstr ""
+
+#: ../../source/qulian 43fba9ec09fd412e98976fb440d2adc7 blockchain
+#: browser.rst:165
+msgid "|image13|"
+msgstr ""
+
+#: ../../source/qulian 284e14f54cd644c19337aba8ddf065ef blockchain
+#: browser.rst:473
+msgid "image13"
+msgstr ""
+
+#: ../../source/qulian 528a2fe3c85c4ce78fccc5aff00561b4 blockchain
+#: browser.rst:167
+msgid "**步骤三：** 在弹窗内，您可以查看到链路检测结果。"
+msgstr ""
+
+#: ../../source/qulian af80b3adc61548febbb393602465698c blockchain
+#: browser.rst:169
+msgid "|image14|"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:474
+#: cdbfe53c9a974d818c43ef954cc38986
+msgid "image14"
+msgstr ""
+
+#: ../../source/qulian a27db5a3c7b449af946b9352c3f95fa7 blockchain
+#: browser.rst:172
+msgid "2.4 节点管理-节点配置"
+msgstr ""
+
+#: ../../source/qulian 5a82acc20e414dab9085e496631425ba blockchain
+#: browser.rst:175
+msgid "2.4.1 节点网络配置"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:177
+#: ecc5d2077eda4bb3a6bab47ee4037f87
+msgid "节点网络配置是针对节点Domain配置，支持新增Domain和修改Domain操作。"
+msgstr ""
+
+#: ../../source/qulian 2bb5f1971b2d4e0fbf1c1d701e7bcd06 blockchain
+#: browser.rst:179
+msgid "**新增Domain**"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:181
+#: f022fb7dd4ee4056b46b33ed12b053ee
+msgid "**步骤一：** 点击【节点配置】中【网络配置】，进入网络配置页面。"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:183
+#: fe58f570f1bc45eea61caf54bf8fa180
+msgid "|image15|"
+msgstr ""
+
+#: ../../source/qulian 223607be0a1640389a76e3893ba2020f blockchain
+#: browser.rst:475
+msgid "image15"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:185
+#: e348e38ddcfd4e73b8d3aa098efaace6
+msgid "**步骤二：** 点击【新增Domain】，在新增行中，填写Domain参数，点击【保存】。"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:187
+#: c73a52c75e9c436db1e8ce54cb09951a
+msgid "|image16|"
+msgstr ""
+
+#: ../../source/qulian b6990c487d204507a8ad0b903de543bc blockchain
+#: browser.rst:476
+msgid "image16"
+msgstr ""
+
+#: ../../source/qulian 3d5ab539236046eda4026480eae10446
+#: 74cbb1673e1a420e9300e48a878a8fb3 blockchain browser.rst:189 browser.rst:203
+msgid "**步骤三：** 保存后，点击【更新网络配置】，网络配置更新成功。"
+msgstr ""
+
+#: ../../source/qulian 6a4a7916a44549618aada61c3f229ee2 blockchain
+#: browser.rst:191
+msgid "|image17|"
+msgstr ""
+
+#: ../../source/qulian 65792c260c77404f8409f99d9f960a7d blockchain
+#: browser.rst:477
+msgid "image17"
+msgstr ""
+
+#: ../../source/qulian 1e15c96355b3484587822f969c838065 blockchain
+#: browser.rst:193
+msgid "**修改Domain**"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:195
+#: e8aa577e821c4f2893593204ed2e682e
+msgid "**步骤一：** 点击【节点配置】中【网络配置】tab，进入网络配置页面。"
+msgstr ""
+
+#: ../../source/qulian 3eece2e1be95425bbd2fe07053831479 blockchain
+#: browser.rst:197
+msgid "|image18|"
+msgstr ""
+
+#: ../../source/qulian 72fa2729eae344bfac9dfabf46b2aaa5 blockchain
+#: browser.rst:478
+msgid "image18"
+msgstr ""
+
+#: ../../source/qulian a0f2029d703e4a4ab0c3c1b0edc7cb3d blockchain
+#: browser.rst:199
+msgid "**步骤二：** 选择列表中某个Domain，点击【修改】。在修改框中，重新填写Domain参数，点击【保存】。"
+msgstr ""
+
+#: ../../source/qulian 94882489295e44838b59599567d87535 blockchain
+#: browser.rst:201
+msgid "|image19|"
+msgstr ""
+
+#: ../../source/qulian 713993ce3a774d5ab655888be46d7981 blockchain
+#: browser.rst:479
+msgid "image19"
+msgstr ""
+
+#: ../../source/qulian 779914c673f044b1928a22c1d384ecf6 blockchain
+#: browser.rst:206
+msgid "2.4.2 节点日志等级配置"
+msgstr ""
+
+#: ../../source/qulian 4c307355eba243419501220c5b9fc9f5 blockchain
+#: browser.rst:208
+msgid "**查看当前日志等级**"
+msgstr ""
+
+#: ../../source/qulian 0a394184ac044f08b30bd44d46ca4c30 blockchain
+#: browser.rst:210 browser.rst:220 d65cc8cb11954c3da76e92adb89c0134
+msgid "**步骤一：** 点击【节点配置】中，【日志等级】tab，进入日志等级配置页面。"
+msgstr ""
+
+#: ../../source/qulian 5a125ef916fa4e74abeeed01e73c2cf5 blockchain
+#: browser.rst:212
+msgid "|image20|"
+msgstr ""
+
+#: ../../source/qulian 482a52a5bc5d4b28a614cb5b741c4c20 blockchain
+#: browser.rst:480
+msgid "image20"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:214
+#: c221c38507ba49569ce5cb53ad8ee9cf
+msgid "**步骤二：** 在选择框中，选择系统级别或Namespace级别的日志等级，查看不同模块下日志等级配置。"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:216
+#: dbe60873dee542b9b4db769a453d86e1
+msgid "|image21|"
+msgstr ""
+
+#: ../../source/qulian 7c1bff7b42c2418abfefc30c559a25d5 blockchain
+#: browser.rst:481
+msgid "image21"
+msgstr ""
+
+#: ../../source/qulian b8a62b0c403b4537984d45eac7224536 blockchain
+#: browser.rst:218
+msgid "**修改日志等级配置**"
+msgstr ""
+
+#: ../../source/qulian 16dfcadeffde4a0cb70c6073b8d64c2d blockchain
+#: browser.rst:222
+msgid "|iamge22|"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:224
+#: c2b0f9562dbc42eea1189e52b2415678
+msgid "**步骤二：** 点击【修改日志等级】，在弹窗中填写修改参数，点击【确定】，可修改日志等级。"
+msgstr ""
+
+#: ../../source/qulian 3c67c3143d574612ad6baf67874a7175 blockchain
+#: browser.rst:226
+msgid "|image23|"
+msgstr ""
+
+#: ../../source/qulian 52054041af684593946af0a82d268a28 blockchain
+#: browser.rst:483
+msgid "image23"
+msgstr ""
+
+#: ../../source/qulian 99cc3a5982854d1cbdc4d62b0be6552d blockchain
+#: browser.rst:228
+msgid ""
+"每个分区模块的日志级别，日志级别由高到低为CRITICAL/ ERROR/WARNING/NOTICE "
+"INFO，级别越低日志内容越详细，对系统性能影响越大。"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:231
+#: c267042cd2c845d388192e5e16f9dd08
+msgid "2.4.3 节点命名空间配置"
+msgstr ""
+
+#: ../../source/qulian 272761713f754a6eb62255509e3cd266 blockchain
+#: browser.rst:233
+msgid "节点命名空间配置提供可视化的 **命名空间启动或停止** 操作。"
+msgstr ""
+
+#: ../../source/qulian a328d4ac8e1c48179447a39bf1caa031 blockchain
+#: browser.rst:235
+msgid "**步骤一：** 点击【节点配置】中，【命名空间】tab，进入命名空间配置页面。"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:237
+#: f97b66f8fc8048dba06a8d775f04fcf6
+msgid "|image24|"
+msgstr ""
+
+#: ../../source/qulian b14313b4363a48099ba854354397b77d blockchain
+#: browser.rst:484
+msgid "image24"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:239
+#: c37ba448c577458ea5461d6e6d024078
+msgid "**步骤二：** 选择某个命名空间，点击【启动】/【停止】按钮。"
+msgstr ""
+
+#: ../../source/qulian 58fd2ce9bc5b4c7ea8bc87dc707fbd70 blockchain
+#: browser.rst:241
+msgid "|image25|"
+msgstr ""
+
+#: ../../source/qulian 5e3f722cc42b4294921b2471b5479834 blockchain
+#: browser.rst:485
+msgid "image25"
+msgstr ""
+
+#: ../../source/qulian 44bb06cd9a6b4ce7961f2c0e380ed637 blockchain
+#: browser.rst:243
+msgid "**步骤三：** 该节点会启动/停止在命名空间中的运行。"
+msgstr ""
+
+#: ../../source/qulian b37b368380004ee4a6c85a06dd8037b4 blockchain
+#: browser.rst:246
+msgid "2.4.4 节点全量配置"
+msgstr ""
+
+#: ../../source/qulian 1a72d9d16c114e7e8a9321699590ee83 blockchain
+#: browser.rst:248
+msgid "**步骤一：** 点击【节点配置】中，【全量配置】tab，进入全量配置界面。"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:250
+#: fa9f0b002b4247abb6c80d21f1bbea71
+msgid "|image26|"
+msgstr ""
+
+#: ../../source/qulian 24386135c9364646b54c7d7bef9fa6be blockchain
+#: browser.rst:486
+msgid "image26"
+msgstr ""
+
+#: ../../source/qulian 489ffa57a3aa4e4e8fde352daf03a8ef blockchain
+#: browser.rst:252
+msgid "**步骤二：** 在左侧文件目录下，选择文件，进入编辑框修改配置。"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:254
+#: c2287d99308b4769bbb5f37232bbcb88
+msgid "|image27|"
+msgstr ""
+
+#: ../../source/qulian abbcf21f5b5f427f88d44e9b7cc7fbfd blockchain
+#: browser.rst:487
+msgid "image27"
+msgstr ""
+
+#: ../../source/qulian 059ffd55227441c189d9018aaa4a5ec8 blockchain
+#: browser.rst:256
+msgid "**步骤三：** 修改完成后，点击【更新高级配置】，链将重启并完成配置更新。"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:259
+#: dba60039bee149a098b66b62171de8cf
+msgid "2.5 合约实例"
+msgstr ""
+
+#: ../../source/qulian 361932df6bca494f823be1c87298773b blockchain
+#: browser.rst:261
+msgid "本模块提供对合约实例的管理操作。目前，支持Solidity合约实例和Java合约实例管理。"
+msgstr ""
+
+#: ../../source/qulian a0093442912a49398993acb970e9fcc5 blockchain
+#: browser.rst:264
+msgid "2.5.1 部署合约实例"
+msgstr ""
+
+#: ../../source/qulian 1df77a5cf3cd4a4799d426794456827d blockchain
+#: browser.rst:266 browser.rst:369 cf0130c2d46a49cca13e25ae324615f4
+msgid "**前置条件：**"
+msgstr ""
+
+#: ../../source/qulian 3ec9edd5c6da49878b8aaff390bcd89b blockchain
+#: browser.rst:268
+msgid "已编写完成的合约文件，并有编译文件；"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:270
+#: e4350d745401483a9c8aa120d57553c6
+msgid "准备私钥文件（用于当前账户部署的合约实例的操作授权）；"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:272
+#: e6dfba2be9b140a7b0f45e85678b89b6
+msgid "当前节点连接正常；"
+msgstr ""
+
+#: ../../source/qulian abc0cd34cf6e4826bb0d86f5ebf34ea7 blockchain
+#: browser.rst:274
+msgid "联盟链正常运行。"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:276
+#: d92325a6d19f454b901483c291e41e46
+msgid "**操作步骤：**"
+msgstr ""
+
+#: ../../source/qulian 0dcee6524ff342ba871dbebc4e8ba777
+#: 22c66d9763784aa1b8d12e4456741b3c 2326267da52c487084ee08337267e074
+#: 669ad6e4d8794135b69cfc0eb372b435 abda25c4fb864be5b47ff672ade5bc35 blockchain
+#: browser.rst:278 browser.rst:305 browser.rst:326 browser.rst:377
+#: browser.rst:416 browser.rst:437 d2f92c32ab0948068d6e01304f74bb6d
+msgid "点击【合约实例】tab，进入合约实例页面；"
+msgstr ""
+
+#: ../../source/qulian b4699069256943a7973d5dccfdee7845 blockchain
+#: browser.rst:280
+msgid "点击【上传私钥】，上传合约部署、升级等操作时需要使用的私钥，点击【确定】；"
+msgstr ""
+
+#: ../../source/qulian 726f2774c9c24f22bdcc08136a6abc11 blockchain
+#: browser.rst:282
+msgid "|image28|"
+msgstr ""
+
+#: ../../source/qulian 0cfbf01f3ee0486a91506e14cc0313c5 blockchain
+#: browser.rst:488
+msgid "image28"
+msgstr ""
+
+#: ../../source/qulian 2b7aeb0d33314b13b041ca0fc0e7b862 blockchain
+#: browser.rst:284
+msgid "私钥上传完成后，点击【部署合约实例】，在弹窗中填写部署参数，点击【确定】，开始部署合约；"
+msgstr ""
+
+#: ../../source/qulian 677dae52135e49b1ac4e2ed770b9e26a blockchain
+#: browser.rst:286
+msgid "|image29|"
+msgstr ""
+
+#: ../../source/qulian 98ae0afa0cfb4c1fb9710c9398699369 blockchain
+#: browser.rst:489
+msgid "image29"
+msgstr ""
+
+#: ../../source/qulian 3f0b384ebae44561a4cf3bf201fcc636 blockchain
+#: browser.rst:288
+msgid "参数说明："
+msgstr ""
+
+#: ../../source/qulian 313a92d84f3e4e0d9181e67544764e9b blockchain
+#: browser.rst:290
+msgid "**合约实例类型：** 支持Solidity和Java两种合约类型"
+msgstr ""
+
+#: ../../source/qulian 3093aca04c334342b32baf82ccca6692 blockchain
+#: browser.rst:292
+msgid "**可选入参：** 部署合约实例的初始化参数，如没有可不填"
+msgstr ""
+
+#: ../../source/qulian b57e8b5bcc06468fac40cbf51bac2f30 blockchain
+#: browser.rst:294
+msgid "**合约文件：** 对于Solidity合约需分别上传编译后的abi文件和bin文件；对于Java合约需分别上传编译后的abi文件和jar文件"
+msgstr ""
+
+#: ../../source/qulian 40372fe5a7434bb4bef73f9950051121 blockchain
+#: browser.rst:296
+msgid "部署成功后，合约实例列表中将自动更新该合约实例，其状态为【运行中】。"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:299
+#: e4904c60f8a345818a00911ffb472994
+msgid "2.5.2 查看合约实例"
+msgstr ""
+
+#: ../../source/qulian 30de2b58375d4a1ab6cfc63ebd8e3203 blockchain
+#: browser.rst:301
+msgid "**前置条件** ：合约已完成部署。"
+msgstr ""
+
+#: ../../source/qulian 8792e549222b4c2bb6a3fb19ccd627d3
+#: b4ccbedfb99946d29935962b56a959e8 blockchain browser.rst:303 browser.rst:324
+#: browser.rst:375 browser.rst:414 browser.rst:435
+#: c1cff784c5494468b0075c630e4d935b dfc9db1543b744c1a09c3f659d5c1e36
+#: e7399401db1847f4abee50dfb6e55807
+msgid "**操作步骤** ："
+msgstr ""
+
+#: ../../source/qulian 80afacf132b54d3dbf2ab6e51d281d3f blockchain
+#: browser.rst:307
+msgid "选择目标合约实例，点击【查看】，可进入合约实例详情页；"
+msgstr ""
+
+#: ../../source/qulian 97b7949e2a1f4d8aace470544a90630c blockchain
+#: browser.rst:309
+msgid "|image30|"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:490
+#: c77443ceb7504badbe39dccfed1ab734
+msgid "image30"
+msgstr ""
+
+#: ../../source/qulian 0deb650940824b7895258ef404bb1cfb blockchain
+#: browser.rst:311
+msgid "如下所示，在详情页可查看合约实例地址、合约类型、部署地址、合约调用记录等。"
+msgstr ""
+
+#: ../../source/qulian 5525b28864d24250813d451c2d1d07e0 blockchain
+#: browser.rst:313
+msgid "|image31|"
+msgstr ""
+
+#: ../../source/qulian 6dce296dbcaf4493bfee3cb66863d388 blockchain
+#: browser.rst:491
+msgid "image31"
+msgstr ""
+
+#: ../../source/qulian 00b333092ac2454c97aed58d33ca0293 blockchain
+#: browser.rst:316
+msgid "2.5.3 调用合约实例"
+msgstr ""
+
+#: ../../source/qulian 3fafbbcc1e3a48e1a068789825042e31
+#: 93a77ca94bc84e8b8f36fd3c7cf90f3f blockchain browser.rst:318 browser.rst:429
+msgid "**前置条件** ："
+msgstr ""
+
+#: ../../source/qulian 2b77692f8376405ba8aeaaabe4e67532
+#: 4a9596fd083943d8bc8c3f9850426dce 97e59f42b1154bdebebbe9ae9eb79132 blockchain
+#: browser.rst:320 browser.rst:371 browser.rst:410
+msgid "在合约实例列表中，已有合约实例，且状态为【运行中】；"
+msgstr ""
+
+#: ../../source/qulian a203749c82b64e54ba986ca282835d0a blockchain
+#: browser.rst:322 browser.rst:433 c191cc51a5174d0794ca2b084dfd777a
+msgid "联盟链处于正常运行状态。"
+msgstr ""
+
+#: ../../source/qulian 0703ea2bf42d4fe5815666231f6e32f4 blockchain
+#: browser.rst:328
+msgid "选择某个合约实例，点击【调用】；"
+msgstr ""
+
+#: ../../source/qulian 857670c9723e4d518f9723b6fdd54e92 blockchain
+#: browser.rst:330
+msgid "|image32|"
+msgstr ""
+
+#: ../../source/qulian 96b850b750964d09b3a222856413b3e3 blockchain
+#: browser.rst:492
+msgid "image32"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:332
+#: cfc32607687a4d66832a70a9c0bdd350
+msgid "弹窗中，填写调用参数，点击【确定】。"
+msgstr ""
+
+#: ../../source/qulian a1b7ba8d766a4ec99da5bf11fb895b27 blockchain
+#: browser.rst:334
+msgid "**Solidity合约调用参数说明**"
+msgstr ""
+
+#: ../../source/qulian 301724000ed04874b1a5b34136a5c48c
+#: 7fc86a16f1c14ed28de510a0d843e9d9 84192325c0654ba1bed3e58f40181acd
+#: 89a0eb37683843bcb9b36b6b1039eb57 blockchain browser.rst:337 browser.rst:351
+#: browser.rst:386 browser.rst:395
+msgid "参数名"
+msgstr ""
+
+#: ../../source/qulian 3792c9ed1e7a4759b9e2a7969678b7ba
+#: 7d8b4e0e225c428c98ce48079cfbff38 95bc61c5e4cd43caacdf9b81c951f177
+#: a20a54db09114b429286294b2c651a10 blockchain browser.rst:337 browser.rst:351
+#: browser.rst:386 browser.rst:395
+msgid "填写说明"
+msgstr ""
+
+#: ../../source/qulian 5ab360ee0d1342d9a973ba73664327ec blockchain
+#: browser.rst:339
+msgid "函数名"
+msgstr ""
+
+#: ../../source/qulian 6b6c003d81884e3ebb67818f0080729f blockchain
+#: browser.rst:339
+msgid "该合约实例的调用函数名"
+msgstr ""
+
+#: ../../source/qulian 3ca52f7e7dbc468dbf41da3afe0737f4
+#: 3ef6ee3add1148b1b76edda0a99acd84 683ed42631734fee9b1c6edc87d12698
+#: 95a66bb16f9a4cdfba8cd2bc14614557 blockchain browser.rst:340 browser.rst:354
+#: browser.rst:388 browser.rst:397
+msgid "可选入参"
+msgstr ""
+
+#: ../../source/qulian 0cc2f93b34574b8bb6b1cc0d1b742013
+#: 1592c2ef13394b5da27efee64be5bb02 a9ddb8e81fec45b1970c206c2c0e5bf8 blockchain
+#: browser.rst:340 browser.rst:354 browser.rst:388 browser.rst:397
+#: d9c1b8a9f6b14f1eb3e5d04d6cf762b8
+msgid "该合约的调用参数，如没有可不填"
+msgstr ""
+
+#: ../../source/qulian 106f6358ffd543ecbbd5c682e8b7e4e2
+#: 71775725d0df474087cd74e61f0e7935 b43eb30fd44141ef8f03ecb9021868d3 blockchain
+#: browser.rst:341 browser.rst:355 browser.rst:389 browser.rst:398
+#: fb89ed7d86c54eff97a58b30452b76f2
+msgid "合约文件"
+msgstr ""
+
+#: ../../source/qulian 3fb0022dfc844f6f8d5687825c8f48ed
+#: 55cfe05798e94f1e8b734b4bd47d6453 blockchain browser.rst:341 browser.rst:355
+msgid "该合约编译后的abi文件"
+msgstr ""
+
+#: ../../source/qulian 7467b93aee5641a69ae89d4249abb3b2 blockchain
+#: browser.rst:344
+msgid "**Solidity合约调用示例**"
+msgstr ""
+
+#: ../../source/qulian 3ecfd9362c204ff1a9afe0e8539e1eee blockchain
+#: browser.rst:346
+msgid "|image33|"
+msgstr ""
+
+#: ../../source/qulian 3eb9c3f1054d4771a6167855a1a98e3e blockchain
+#: browser.rst:493
+msgid "image33"
+msgstr ""
+
+#: ../../source/qulian a8f9d9f77e6c44b7bdbf82ea4fda8430 blockchain
+#: browser.rst:348
+msgid "**Java 合约调用参数说明**"
+msgstr ""
+
+#: ../../source/qulian 68feab1109e04de1bde1ff4c96782573 blockchain
+#: browser.rst:353
+msgid "BeanName"
+msgstr ""
+
+#: ../../source/qulian 1bcd7eb40bd04e46a4cde9d93d82ec09 blockchain
+#: browser.rst:353
+msgid "该合约实例的调用方法名"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:358
+#: ccfb9b9578324a7aa993b59760e47510
+msgid "**Java合约调用示例**"
+msgstr ""
+
+#: ../../source/qulian 2ef6800a1d7d48a6ad31a471c34a3a9e blockchain
+#: browser.rst:360
+msgid "|image34|"
+msgstr ""
+
+#: ../../source/qulian 20e3322fcb4346eda04806f4f81468b4 blockchain
+#: browser.rst:494
+msgid "image34"
+msgstr ""
+
+#: ../../source/qulian 30c308954c604240af7e126480c38202 blockchain
+#: browser.rst:362
+msgid "调用成功，会跳出调用结果的详情弹窗，可查看调用信息，点击蓝色字符串【交易哈希】，可进行跳转至对应的区块链浏览器交易详情页，或者您也可在合约详情中查看调用记录。"
+msgstr ""
+
+#: ../../source/qulian 4175de5942da47d895a25d7e157ee6dd blockchain
+#: browser.rst:364
+msgid "|image35|"
+msgstr ""
+
+#: ../../source/qulian 5028d3c4bbae4a8283405fc179800008 blockchain
+#: browser.rst:495
+msgid "image35"
+msgstr ""
+
+#: ../../source/qulian 567093df69a245a5bf62bd0332bac42c blockchain
+#: browser.rst:367
+msgid "2.5.4 升级合约实例"
+msgstr ""
+
+#: ../../source/qulian 6d32547141eb42ddb32b2bab45dcb8eb
+#: 9705d7a24c3643d98d1baddfda170dd7 blockchain browser.rst:373 browser.rst:412
+msgid "链处于正常运行状态。"
+msgstr ""
+
+#: ../../source/qulian 5c2435d08e7f4fd4a8b0f880834924b1 blockchain
+#: browser.rst:379
+msgid "选择目标合约实例，点击【升级】；"
+msgstr ""
+
+#: ../../source/qulian 79694a21de5b4f8ca9d23b43c1ff40f1 blockchain
+#: browser.rst:381
+msgid "弹窗中填写升级参数，点击【确定】，合约开始升级；"
+msgstr ""
+
+#: ../../source/qulian 5668deaa4543453daa01137e253b70a7 blockchain
+#: browser.rst:383
+msgid "**Solidity合约升级参数说明**"
+msgstr ""
+
+#: ../../source/qulian 906f7c21ca164158948a70c4004ec94c
+#: 9681ce2bf58f4db19fdc1152f840f7d2 blockchain browser.rst:389 browser.rst:398
+msgid "分别上传该合约编译后的abi文件与bin文件"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:392
+#: d3b3adb140184729b2f2dcc4f4023abb
+msgid "**Java 合约升级参数说明**"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:401
+#: c21785055b1b4f79a13f071fe6aab761
+msgid "升级成功后，列表将自动刷新，且在合约实例详情中将新增相应的升级记录信息。"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:404
+#: e928cb793d644971870b49c5e2a02a08
+msgid "2.5.5 冻结合约实例"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:406
+#: e2cd16734c9043fb9f44ef1464b3b799
+msgid "由于区块链网络中，数据一旦上链就不可篡改，那么对于合约也一样，一旦部署上链就不可以被删除。但是，会出现用户不需要使用合约或合约出现问题需要暂停使用的情况，针对这一问题，平台提供了合约冻结功能，可以暂停合约的使用。"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:408
+#: c2fba77358754ea4a29d96393bfc4233
+msgid "**前置条件** :"
+msgstr ""
+
+#: ../../source/qulian 9404af8fa09441379a561268fe96b74b blockchain
+#: browser.rst:418
+msgid "选择某个合约实例，点击【冻结】；"
+msgstr ""
+
+#: ../../source/qulian 7f03bac1c9b44831a5a38f7f570d7d9a blockchain
+#: browser.rst:420
+msgid "|image36|"
+msgstr ""
+
+#: ../../source/qulian 92b1ed0a4e1b4397b505a0145f8518c0 blockchain
+#: browser.rst:496
+msgid "image36"
+msgstr ""
+
+#: ../../source/qulian 57457ac87ba34a42a4beb87b5e6dce0a blockchain
+#: browser.rst:422
+msgid "冻结成功后，列表将自动刷新，合约状态更新为【已冻结】。"
+msgstr ""
+
+#: ../../source/qulian 0b111b6215924528b62731c2ddbaa756 blockchain
+#: browser.rst:424
+msgid "|image37|"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:497
+#: d0669bbf0f6d42a0b293c16f45e06a12
+msgid "image37"
+msgstr ""
+
+#: ../../source/qulian ba2b45c5c40641f1ae803efff1e0631d blockchain
+#: browser.rst:427
+msgid "2.5.6 解冻合约实例"
+msgstr ""
+
+#: ../../source/qulian a5f38fd20b894c12a0a4301089dec594 blockchain
+#: browser.rst:431
+msgid "在合约实例列表中，已有合约实例，且状态为【已冻结】；"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:439
+#: d4043f2c5a284afa9e731e1f8559483c
+msgid "选择某个【已冻结】的合约实例，点击【解冻】；"
+msgstr ""
+
+#: ../../source/qulian 0d2e4a34fba44c1f8d8cff3e147720c2 blockchain
+#: browser.rst:441
+msgid "|image38|"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:498
+#: e345d393358c4ecd9cf570d39376cca0
+msgid "image38"
+msgstr ""
+
+#: ../../source/qulian 32bec5e163b6437f82ab350eecb3114d blockchain
+#: browser.rst:443
+msgid "在弹窗中点击确定；"
+msgstr ""
+
+#: ../../source/qulian blockchain browser.rst:445
+#: d153d42011724ffcbbc828231196270c
+msgid "|image39|"
+msgstr ""
+
+#: ../../source/qulian 47d3b8f1bf3b49ac8770f707fa3024fc blockchain
+#: browser.rst:499
+msgid "image39"
+msgstr ""
+
+#: ../../source/qulian 746a8e730c4f4baa8e2083e51c031d3f blockchain
+#: browser.rst:447
+msgid "解冻成功后，列表将自动更新，合约状态更新为【运行中】。"
+msgstr ""
+
+#: ../../source/qulian 3cb4fe3ccd2049e0be1ae75ab886b129 blockchain
+#: browser.rst:450
+msgid "3. 注意事项"
+msgstr ""
+
+#: ../../source/qulian bc7380dedb3b4d108ba045ec75ed2d05 blockchain
+#: browser.rst:452
+msgid "区块链浏览器为节点级别功能，目前监控功能仅针对global分区，后续版本将完善"
+msgstr ""
+
+#: ../../source/qulian 55d3be0c96da44029f7c99dfa7501a07 blockchain
+#: browser.rst:454
+msgid "cvp节点暂不支持区块链浏览器开启"
+msgstr ""
+
+#: ../../source/qulian 0272861b51ae4c988d94cebe387cb49d blockchain
+#: browser.rst:456
+msgid "区块链浏览器相关日志保存在节点目录下的baas/logs"
+msgstr ""
+
+#: ../../source/qulian 74bb1f183ba847a0818f1cd856682213 blockchain
+#: browser.rst:458
+msgid "当前版本暂不支持部署java合约"
+msgstr ""
+

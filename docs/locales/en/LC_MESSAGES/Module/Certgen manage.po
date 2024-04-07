@@ -1,0 +1,577 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Module/Certgen c5345e0565574a1294671ad05d423873 manage.rst:4
+msgid "Certgen使用手册"
+msgstr ""
+
+#: ../../source/Module/Certgen 29851575e9b3485290bae4f004534b2e manage.rst:7
+msgid "一、安装包获取"
+msgstr ""
+
+#: ../../source/Module/Certgen 9301464610584fea82703a77179ce7eb manage.rst:10
+msgid "1.1下载"
+msgstr ""
+
+#: ../../source/Module/Certgen a542bced45614ade94fffe8382d72418 manage.rst:12
+msgid "可以通过OA系统或者飞洛下载"
+msgstr ""
+
+#: ../../source/Module/Certgen e8758d4cc1ce45a2a107987684bc1263 manage.rst:14
+msgid "目前提供多种操作系统版本下载"
+msgstr ""
+
+#: ../../source/Module/Certgen 3baad4d6ce814fef8d4977807bce7435 manage.rst:16
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/Module/Certgen 884ed1684ffa43bf8ab72aafae2e2c3b manage.rst:391
+msgid "image0"
+msgstr ""
+
+#: ../../source/Module/Certgen 20de749b92ca46988e5b5c304b6d7257 manage.rst:19
+msgid "1.2安装包结构"
+msgstr ""
+
+#: ../../source/Module/Certgen 0230709824994190b3bfd17d1f5ecb70 manage.rst:21
+msgid "安装包解压后包含certgen二进制文件、README.md文档、依赖库tools和两个脚本文件。两个脚本分别为install.sh和gencert.sh。前者可以完成安装功能，后者可以快速生成证书套件。"
+msgstr ""
+
+#: ../../source/Module/Certgen bb21af0d49764577b53a1448e2c80c70 manage.rst:24
+msgid "二、安装（可选步骤）"
+msgstr ""
+
+#: ../../source/Module/Certgen 72e2d3b8ea9d4322a28b82f89154e1d8 manage.rst:26
+msgid "certgen二进制文件本身是编译好的命令行工具，能够提供全部功能。gencert.sh脚本能够简化生成证书套件的操作，帮助快速生成可供flato使用的证书套件。"
+msgstr ""
+
+#: ../../source/Module/Certgen 074170331b524083ae3d03a72c7f9766 manage.rst:28
+msgid "我们提供开箱即用的使用体验，当下载解压并进入解压后的目录后，这两个可执行文件（certgen和gencert.sh）已经完成工作。例如:"
+msgstr ""
+
+#: ../../source/Module/Certgen 1d8ee511cc4c48a1b060a9a78bd51b58 manage.rst:30
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/Module/Certgen 82a5a7541c35443894b3dcf25dbbb7f3 manage.rst:392
+msgid "image1"
+msgstr ""
+
+#: ../../source/Module/Certgen 72a32756e6f74197a184e831d6607ad0 manage.rst:32
+msgid "但是此时仅能够在当前目录中使用该工具，我们建议此时执行安装脚本install.sh完成安装。您可以查看install.sh脚本的内容。"
+msgstr ""
+
+#: ../../source/Module/Certgen c727433bd87b4e91ac002f96ba4d142b manage.rst:35
+msgid "三、快速上手"
+msgstr ""
+
+#: ../../source/Module/Certgen 79b956abff604a8fbf04864dae89d7b5 manage.rst:37
+msgid "**certgen** 提供了证书和密钥的验证、签发、补发和相关套件的一系列功能。cergen有五个命令，主要功能可以分为三类："
+msgstr ""
+
+#: ../../source/Module/Certgen bd511bfb13044e5ab85287b5a1e29dd7 manage.rst:39
+msgid "**1. 生成证书、私钥等文件；**"
+msgstr ""
+
+#: ../../source/Module/Certgen 7f6e1f661d944b2cbe6e65951199ec5f manage.rst:41
+msgid "**2. 查看私钥、相关证书文件的具体内容；**"
+msgstr ""
+
+#: ../../source/Module/Certgen 71c44b32b5e74d66bfc1cdcf31639991 manage.rst:43
+msgid "**3. 验证证书的合法性和有效性。**"
+msgstr ""
+
+#: ../../source/Module/Certgen ec0d0ec6a9da4da384860227c4b98937 manage.rst:45
+msgid "建议您查看README.md的内容以便学习certgen的使用。但是也有一些快速上手的方式，下面我们逐一介绍。"
+msgstr ""
+
+#: ../../source/Module/Certgen 14869a62c16a474b83e3e66d653d8318 manage.rst:48
+msgid "3.1利用certgen的提示功能快速上手"
+msgstr ""
+
+#: ../../source/Module/Certgen ee7702342c094edc935208e4dcf64679 manage.rst:50
+msgid "为了提供完备功能，certgen有若干条命令，每条命令都有若干选项可以指定。我不建议您尝试记忆这些命令和选择，利用certgen的提示功能是快速上手的好办法。"
+msgstr ""
+
+#: ../../source/Module/Certgen aa7d5f177d9e4bd58b071be1969ad900 manage.rst:52
+msgid ""
+"例如直接在命令行键入certgen（如果没有安装则需要进入到certgen所在目录执行./certgen），则可以看到全部命令，您将了解到生成根证书的命令为gs。这时您还不知道gs需要哪些参数或者选项，没有关系，现在您可以键入certgen"
+" gs来查看帮助："
+msgstr ""
+
+#: ../../source/Module/Certgen 0e4a57c1caa746b7802b2167298562c0 manage.rst:54
+msgid "|image2|"
+msgstr ""
+
+#: ../../source/Module/Certgen 6b99a2285480483b8b5fdf5671e71f33 manage.rst:393
+msgid "image2"
+msgstr ""
+
+#: ../../source/Module/Certgen f0af504360c44d3099961d3ef9ea5adb manage.rst:56
+msgid "可以看到，Example中提供了最基础的用法实例，大部分情况下您直接按照example执行即可。而下方的flags是详细的选项说明。"
+msgstr ""
+
+#: ../../source/Module/Certgen e91ccb429fd143ea91b473f17efa4994 manage.rst:58
+msgid ""
+"***注意⚠️：可以使用flag直接指定相关内容，也可以留空通过交互式操作手动填充关键信息。*** 详情可分别通过根命令和子命令的 "
+"`--help` 自行查看相关用法。"
+msgstr ""
+
+#: ../../source/Module/Certgen 29adcf246528496e942aff59762311d6 manage.rst:61
+msgid "3.2通过查看gencert.sh脚本内容快速上手"
+msgstr ""
+
+#: ../../source/Module/Certgen 208f299d09c74776b5acdd2e3ce9deed manage.rst:63
+msgid "gencert.sh是bash脚本，可以用来自动化生成一整套的证书套件。如果您熟悉bash脚本的语法，那么阅读gencert.sh也可以快速了解到certgen的使用方法。"
+msgstr ""
+
+#: ../../source/Module/Certgen 490ec953ae6d4959bd261d56dc078970 manage.rst:66
+msgid "3.3使用gencert.sh脚本"
+msgstr ""
+
+#: ../../source/Module/Certgen 729bccb5ad8f40bcba912433889dab58 manage.rst:68
+msgid "gencert.sh是交互式的，只会询问必要的参数选项即可生成一套证书套件，例如执行国密算法和非分布式ca，并且输入一些选项即可生成证书目录。"
+msgstr ""
+
+#: ../../source/Module/Certgen bc84a5664f874c2f9533a2817594d21a manage.rst:70
+msgid "非分布式CA"
+msgstr ""
+
+#: ../../source/Module/Certgen 838ad1bcfcd742a6b758cbf7e99a0eeb manage.rst:72
+msgid "|image3|"
+msgstr ""
+
+#: ../../source/Module/Certgen db23cc3a7fec404eaad7f0d679b0a0ba manage.rst:394
+msgid "image3"
+msgstr ""
+
+#: ../../source/Module/Certgen 936c112c155b4eaab76cdb8dcfdf9870 manage.rst:74
+msgid "分布式CA："
+msgstr ""
+
+#: ../../source/Module/Certgen f9507979c8ae4e71b760d44ea55c6c67 manage.rst:76
+msgid "|image4|"
+msgstr ""
+
+#: ../../source/Module/Certgen e0caddfd50c74ce9a6ce875df0133518 manage.rst:395
+msgid "image4"
+msgstr ""
+
+#: ../../source/Module/Certgen 6e293a80653d468abab08a500eede9ff manage.rst:78
+msgid "tls证书："
+msgstr ""
+
+#: ../../source/Module/Certgen 75384dd1372043409ee9b8b59f3b9f2b manage.rst:80
+msgid "|image5|"
+msgstr ""
+
+#: ../../source/Module/Certgen 18983ce24b5743f693f9f34d0fd26003 manage.rst:396
+msgid "image5"
+msgstr ""
+
+#: ../../source/Module/Certgen 1e91a69b6d7d4d208088f1ccc193a563 manage.rst:82
+msgid "生成的证书目录certsDir结构如下："
+msgstr ""
+
+#: ../../source/Module/Certgen 2fc0f5a810904eb79c0c85df4c6d3ad0 manage.rst:84
+msgid "非分布式CA下有按照节点名称命名的目录，以node1为例，其目录结构如下图:"
+msgstr ""
+
+#: ../../source/Module/Certgen 10ace0ff718b42bca1b510e5d65249ab manage.rst:86
+msgid "|image6|"
+msgstr ""
+
+#: ../../source/Module/Certgen dc760e4200d947b0b758b00852500067 manage.rst:397
+msgid "image6"
+msgstr ""
+
+#: ../../source/Module/Certgen bfa17bcbcba84d64b29c688532c6ac99 manage.rst:88
+msgid "分布式CA下有按照节点名称命名的目录，以node1为例，其目录结构如下图："
+msgstr ""
+
+#: ../../source/Module/Certgen b6ad5fd18d5e495ab3ec1d448dd6958f manage.rst:90
+msgid "|image7|"
+msgstr ""
+
+#: ../../source/Module/Certgen 4526ec4392a2468b93c71ea4bf47aecd manage.rst:398
+msgid "image7"
+msgstr ""
+
+#: ../../source/Module/Certgen 59deeeb33af14f42b27bf06697aa65b7 manage.rst:92
+msgid "tls,生成的tls证书被放在当前路径的tlsCertsDir目录下，其内的结构如图："
+msgstr ""
+
+#: ../../source/Module/Certgen aafaa49d47a340ffaef652b96c983880 manage.rst:94
+msgid "|image8|"
+msgstr ""
+
+#: ../../source/Module/Certgen e666b680bcf747f4b45b9857e464703c manage.rst:399
+msgid "image8"
+msgstr ""
+
+#: ../../source/Module/Certgen 286487356c9c4034a887471216f9227c manage.rst:96
+msgid "以配置node1的global下证书为例，只需要将certsDir下的CA和certs目录拷贝到节点目录./namespaces/global/certs下即可。替换后的节点目录如下："
+msgstr ""
+
+#: ../../source/Module/Certgen f73944a1f84c443e9e3c9b254e50a916 manage.rst:98
+msgid "|image9|"
+msgstr ""
+
+#: ../../source/Module/Certgen 3f1b8aa9aa3f4debaff4ead326cd4a22 manage.rst:400
+msgid "image9"
+msgstr ""
+
+#: ../../source/Module/Certgen 0eb800c8ea024344b268090b7d380ff5 manage.rst:101
+msgid "四、命令详解"
+msgstr ""
+
+#: ../../source/Module/Certgen 9fad46f2c7704eadb7fe845ee269e164 manage.rst:104
+msgid "4.1. **生成**"
+msgstr ""
+
+#: ../../source/Module/Certgen f4e796a2984b48dc8e219e094746c991 manage.rst:106
+msgid "**1.1** `gc` 命令通过根CA签发子证书(请查阅附录所有的flag用法)"
+msgstr ""
+
+#: ../../source/Module/Certgen 1bca6e4f021a4598af5654e2ed96db69 manage.rst:108
+msgid "示例 1(全交互式)：假设需要一个子证书。"
+msgstr ""
+
+#: ../../source/Module/Certgen 9ed87a667af842d98b64a6f948d7cf44 manage.rst:110
+msgid "终端输入： `certgen gc ./root_ca.pem ./root_priv.pem ./sub.pem`"
+msgstr ""
+
+#: ../../source/Module/Certgen 1da5e6b97ae94c0c8ad6a327a07ed44d
+#: 504d01bf76bf4aa5a2b34593da1efef6 5fb94905ad4d47baadec1659de6dd612
+#: 8c129bf872b949d09db5020fe4f24954 97c61170cfe74dcba4d14c4f40612658
+#: d524f9997465457f94cc1acb348e8893 manage.rst:112 manage.rst:128
+#: manage.rst:142 manage.rst:160 manage.rst:174 manage.rst:196
+msgid "终端输出："
+msgstr ""
+
+#: ../../source/Module/Certgen 016f3095da3f4d699fb9f96d6d1cde21 manage.rst:114
+msgid "|image10|"
+msgstr ""
+
+#: ../../source/Module/Certgen 011516e8d4774aaab443afafa869a346 manage.rst:401
+msgid "image10"
+msgstr ""
+
+#: ../../source/Module/Certgen 0cef3ab936f74f839c8472f7b8aa75e0 manage.rst:116
+msgid "*删除光标处的内容后可以输入其他证书类型*"
+msgstr ""
+
+#: ../../source/Module/Certgen 1475ca9103004c528ba7d95cb04bdcb5 manage.rst:118
+msgid "|image11|"
+msgstr ""
+
+#: ../../source/Module/Certgen ac1d92548135414d89e896d5761d917e manage.rst:402
+msgid "image11"
+msgstr ""
+
+#: ../../source/Module/Certgen b6121eb2e1974f1c8554227d6bf35f70
+#: bcb121d890a249ba93ae8c0bfdb809cd eca6c8ac0ed4401eab2f2105ba292f2b
+#: f51e6096e8704f1db553e35b93023a29 manage.rst:120 manage.rst:132
+#: manage.rst:152 manage.rst:164
+msgid "*若成功，输出如上图所示*"
+msgstr ""
+
+#: ../../source/Module/Certgen 24b63cbc22c34adebbbe375e3d37c77a
+#: 611872e2312f461685b03570089f2549 6776c2499dfb499bab66d0acf9e23c63
+#: 7923c6bafca041cc9cc7cb76c47e6a72 7d1f87ebab604ebcace631931810b927
+#: 7ded6c03272e47a199534b07b4cd93c7 8cf005b2056444c78478b385ed02473d
+#: 9e2a42bb91814064a114c1eaadc3774b a76a70cc4d804c609db7e400b0adaf5e
+#: b9e48dc7268942a4a032889ce2336f3f e2994d9786ed4e4eac406d6b3e706151
+#: manage.rst:122 manage.rst:134 manage.rst:154 manage.rst:166 manage.rst:206
+#: manage.rst:212 manage.rst:226 manage.rst:253 manage.rst:310 manage.rst:329
+#: manage.rst:339
+msgid "***"
+msgstr ""
+
+#: ../../source/Module/Certgen 60b3049c3cab4cb68b91d7ee935a43e6 manage.rst:124
+msgid ""
+"示例 "
+"2(使用flag)：假设需要一个ecert类型的子证书(且为CA证书)，有P10请求文件。主机名为node2，组织为Hyperchain，曲线为p256类型。"
+msgstr ""
+
+#: ../../source/Module/Certgen cf03afac9dca426d836bbe6bc474bfee manage.rst:126
+msgid ""
+"终端输入： `certgen gc ./root_ca.pem ./root_priv.pem ./sub.pem --p10 ./p10.csr"
+" --cn node2 --org Hyperchain --c p256 --ct ecert --isca yroot_ca.pem: "
+"CA证书文件root_priv.pem: CA私钥文件sub.pem: 目标子证书文件P10.csr: P10请求文件路径`"
+msgstr ""
+
+#: ../../source/Module/Certgen 0129a902d3fe4cb5bc73a16dc26506b2 manage.rst:130
+msgid "|image12|"
+msgstr ""
+
+#: ../../source/Module/Certgen d66915305d8b44328b895f25065b40e2 manage.rst:403
+msgid "image12"
+msgstr ""
+
+#: ../../source/Module/Certgen 3741741a732943c784792f2b4ea5d1f1 manage.rst:136
+msgid "**1.2** `gs` 命令生成自签名证书类似于 `gc` 命令，flag减少为四个，分别为 `--c, --cn, --ct, --org`"
+msgstr ""
+
+#: ../../source/Module/Certgen ca5fbda03a86411c95aaa114f3e50917 manage.rst:138
+msgid "示例 1(全交互式)：假设需要一个自签名证书。"
+msgstr ""
+
+#: ../../source/Module/Certgen 6b75572dab9847638bce9a0c6ee4bed9 manage.rst:140
+msgid "终端输入： `certgen gs ./root_ca.pem ./root_priv.pem`"
+msgstr ""
+
+#: ../../source/Module/Certgen ac2e27794b174aa1839c0dd1d643284d manage.rst:144
+msgid "|image13|"
+msgstr ""
+
+#: ../../source/Module/Certgen f47f9022063c4d5dbc1d7f5aea8afff4 manage.rst:404
+msgid "image13"
+msgstr ""
+
+#: ../../source/Module/Certgen c58bf30ea1014c4998fc66a036efcfaf manage.rst:146
+msgid "*删除光标处内容后可以输入其他曲线类型*"
+msgstr ""
+
+#: ../../source/Module/Certgen 92a95fde00ca4d6faca8a54fb1969fad manage.rst:148
+msgid "同 `gc` 命令的交互式反馈"
+msgstr ""
+
+#: ../../source/Module/Certgen e5c724d3790c49ae831d05e23aa9fb3d manage.rst:150
+msgid "|image14|"
+msgstr ""
+
+#: ../../source/Module/Certgen 2738e5818c7540048d5299b1bd105bdc manage.rst:405
+msgid "image14"
+msgstr ""
+
+#: ../../source/Module/Certgen db8dd37ca2ff435397bbf01d5482e828 manage.rst:156
+msgid "示例 2(使用flag)：假设需要一个ecert类型的自签名子证书，主机名为node3，组织为HyperChain，曲线为p256类型。"
+msgstr ""
+
+#: ../../source/Module/Certgen 9ad3ef5a996047fbbcd3ed0be85a438d manage.rst:158
+msgid ""
+"终端输入： `certgen gs ./root_ca.pem ./root_priv.pem --ct ecert --cn node2 "
+"--org Hyperchain --c p256`"
+msgstr ""
+
+#: ../../source/Module/Certgen bc176c9f42444167b8007a0a0b3eca45 manage.rst:162
+msgid "|image15|"
+msgstr ""
+
+#: ../../source/Module/Certgen 99fd184ffaf24311a914b88e87d89b5b manage.rst:406
+msgid "image15"
+msgstr ""
+
+#: ../../source/Module/Certgen 39fb4639b3164c15ab28bf42623fd377 manage.rst:168
+msgid "**1.3**  `gk` 命令生成PEM格式的私钥"
+msgstr ""
+
+#: ../../source/Module/Certgen f5b87ce177184c5eb77dc077eca9c245 manage.rst:170
+msgid "示例 1(交互式)：生成一个密钥对，然后终端输入加密算法"
+msgstr ""
+
+#: ../../source/Module/Certgen cb708e41f15246a2a07da3fbfdeb4e0d manage.rst:172
+msgid "终端输入： `certgen gk ./PrivKey.pem ./PubKey.pem`"
+msgstr ""
+
+#: ../../source/Module/Certgen 7b8d65c050614fad873121a1222ada38 manage.rst:176
+msgid "|image16|"
+msgstr ""
+
+#: ../../source/Module/Certgen 0c280abf61ef48dfa9cd65f8645e89b0 manage.rst:407
+msgid "image16"
+msgstr ""
+
+#: ../../source/Module/Certgen 35f521d28e2a4cd6b62812e9908ac0d5 manage.rst:178
+msgid "*删除光标处内容后可以输入其他曲线，如p256, sm2*"
+msgstr ""
+
+#: ../../source/Module/Certgen 4ce160eb8a934f0eb0985ba1a1882b6a manage.rst:180
+msgid "|image17|"
+msgstr ""
+
+#: ../../source/Module/Certgen 7534ef0a47ac41de84823e3920887fbf manage.rst:408
+msgid "image17"
+msgstr ""
+
+#: ../../source/Module/Certgen f7a7d3413b214703a10322d8d46b03a9 manage.rst:182
+msgid "若成功，输出如上图所示"
+msgstr ""
+
+#: ../../source/Module/Certgen a289b12d048c4bcea58a41d6b390f29b manage.rst:184
+msgid "示例 2(使用flag)：生成一个使用secp256k1的密钥对"
+msgstr ""
+
+#: ../../source/Module/Certgen 1e01310abae743d18a00eb3b89fdcc78 manage.rst:186
+msgid "终端输入： `certgen gk ./PrivKey.pem ./PubKey.pem --c secp256k1`"
+msgstr ""
+
+#: ../../source/Module/Certgen 93783e9e7f3143bea2ecfd140a46d5cc manage.rst:188
+msgid "示例 3(使用flag)：生成一对使用p256的密钥对"
+msgstr ""
+
+#: ../../source/Module/Certgen aa7210b3eaac4d2aa2e89812d713c3c3 manage.rst:190
+msgid "终端输入： `certgen gk ./PrivKey.pem ./PubKey.pem --c p256`"
+msgstr ""
+
+#: ../../source/Module/Certgen 647a89e788794b2d8ad720ba2205df51 manage.rst:192
+msgid "示例 4(使用flag)：生成一个使用sm2的密钥对"
+msgstr ""
+
+#: ../../source/Module/Certgen a7b6dd83281f494fb3708be61899842b manage.rst:194
+msgid "终端输入： `certgen gk ./PrivKey.pem ./PubKey.pem --c sm2`"
+msgstr ""
+
+#: ../../source/Module/Certgen 58619ac5e7c2459280d473022c9fab8c manage.rst:198
+msgid "|image18|"
+msgstr ""
+
+#: ../../source/Module/Certgen c0f2b100151c472bbdf7168959feb4a3 manage.rst:409
+msgid "image18"
+msgstr ""
+
+#: ../../source/Module/Certgen cd0488e61d584576a3755adc0d50c20d manage.rst:200
+msgid "*若成功，示例2、3、4的输出如上图所示*"
+msgstr ""
+
+#: ../../source/Module/Certgen dfa4ade45a3f41e78d76591fae7c3265 manage.rst:202
+msgid "`PrivKey.pem: 目标私钥文件`"
+msgstr ""
+
+#: ../../source/Module/Certgen 4ce616412ad240649241b53de930102c manage.rst:204
+msgid "`PubKey.pem: 目标公钥文件`"
+msgstr ""
+
+#: ../../source/Module/Certgen 0aebe7dfcd3148c0b62b72e882205800 manage.rst:208
+msgid "**1.4**  `gp` 命令合并私钥和对应证书生成pfx证书"
+msgstr ""
+
+#: ../../source/Module/Certgen 9ca18366be4a487f8a2093451573ba3b manage.rst:210
+msgid "终端输入： `certgen gp ./cert.pem ./priv.pem ./tartget.pfx --pwd 12345`"
+msgstr ""
+
+#: ../../source/Module/Certgen 3b67c570da1f4bdbacb412c7e1b1ba0d manage.rst:214
+msgid "**1.5**  `env` 命令编码并输出输入的路径；解码并创建输入的编码后的路径"
+msgstr ""
+
+#: ../../source/Module/Certgen 40fe35cef0124884994710967014ea39 manage.rst:216
+msgid "示例 1："
+msgstr ""
+
+#: ../../source/Module/Certgen 6ca7f348305e4ac4bd9e4ed1991fb249 manage.rst:218
+msgid "终端输入： `certgen env /DirA/DirB/`"
+msgstr ""
+
+#: ../../source/Module/Certgen a73a844aaa744682be232fcfe418df4f manage.rst:220
+msgid "终端输出： `Base64编码后的路径名`"
+msgstr ""
+
+#: ../../source/Module/Certgen 0ae1394d3ebe454985bb7617efa8e4de manage.rst:222
+msgid "示例 2："
+msgstr ""
+
+#: ../../source/Module/Certgen 3905efd7df764989b7ef8c85d9919762 manage.rst:224
+msgid "终端输入： `certgen env base64路径名 --decode`"
+msgstr ""
+
+#: ../../source/Module/Certgen 8e467407c2b94c5a8a2abb0cfb189ba7 manage.rst:229
+msgid "4.2. **查看信息**"
+msgstr ""
+
+#: ../../source/Module/Certgen d6ae460e43484730b2c8fad837e59dc0 manage.rst:231
+msgid "`print` 命令打印相关信息,如密钥对(私钥/公钥)，证书"
+msgstr ""
+
+#: ../../source/Module/Certgen ce9e3c9dab3e47e79f807edafd607132
+#: e085ae3d55d647218e3c0fbb2201194f manage.rst:233 manage.rst:317
+msgid "终端输入："
+msgstr ""
+
+#: ../../source/Module/Certgen bc6e0c98d3e64c13a8482021028dee35 manage.rst:235
+msgid ""
+"`certgen print ./PrivKey.pem certgen print ./PubKey.pemPrivKey.pem: "
+"需要打印的私钥文件PubKey.pem: 需要打印的公钥文件`"
+msgstr ""
+
+#: ../../source/Module/Certgen 4801ae8910fd4271891d4b13df6974c1 manage.rst:237
+msgid "***注意⚠️：如果私钥创建时没有设置passphrase，则不需填写password(密码)。***"
+msgstr ""
+
+#: ../../source/Module/Certgen d2401e0e809641f999eee1f3eb5acf8f manage.rst:239
+msgid "假设输入一个无 *passphrase* 的P256曲线的PEM私钥，输出如下::"
+msgstr ""
+
+#: ../../source/Module/Certgen 04b0b3558a4a4e6ab97a8e266916048c manage.rst:255
+msgid "终端输入： `certgen print ./X509.pemX509.pem: 需要打印的证书文件`"
+msgstr ""
+
+#: ../../source/Module/Certgen b21422ffe18740308cfb84e3b74a387f manage.rst:257
+msgid "假设输入一个 *ecert* 类型证书文件，输出如下::"
+msgstr ""
+
+#: ../../source/Module/Certgen 30b60b1afc294151b8314ba1dfc40ed5 manage.rst:313
+msgid "4.3. **证书验证**"
+msgstr ""
+
+#: ../../source/Module/Certgen faa3fa81f81b4a79b14ff79047402510 manage.rst:315
+msgid "`cc` 命令负责验证目标证书是是否由CA签发"
+msgstr ""
+
+#: ../../source/Module/Certgen 3598a727b4a24ecf97fbeea4c9dce38f manage.rst:319
+msgid ""
+"`certgen cc ./root_ca.pem ./cert.pemroot_ca.pem: CA证书文件cert.pem: "
+"需要验证的证书文件`"
+msgstr ""
+
+#: ../../source/Module/Certgen 2b007b72ac244f258e9576bb5f650a3c manage.rst:321
+msgid "如果验证通过，输出::"
+msgstr ""
+
+#: ../../source/Module/Certgen 8417fdb630cf4da596e41fd9b9eb5b0f manage.rst:331
+msgid "如果验证失败，输出::"
+msgstr ""
+
+#: ../../source/Module/Certgen a993b6aebc874e59939a7cdcabb18f1d manage.rst:342
+msgid "4.4生成IDCert（账户证书）"
+msgstr ""
+
+#: ../../source/Module/Certgen 3f0362fa08184e388808875ea581d9ff manage.rst:344
+msgid "使用gc命令可以签发账户证书。其中账户证书中绑定的地址需要通过--cn指定"
+msgstr ""
+
+#: ../../source/Module/Certgen 958a4fd6d2374ef58358820f79e16513 manage.rst:352
+msgid "通过上述命令产生./idcert.cert文件，该文件为pen编码的x509格式，其中不包含私钥信息，不能直接用于在SDK中新建账户。通过openssl的pkcs12命令可以将格式转换为需要的pfx格式。需要两个输入为证书和私钥。"
+msgstr ""
+
+#: ../../source/Module/Certgen 3e46b411eab8416b9de6bd13b44425c6 manage.rst:364
+msgid "Appendix"
+msgstr ""
+
+#: ../../source/Module/Certgen e32db94c05b24f57ac2b2e9f1db1b2fc manage.rst:366
+msgid "相关参数::"
+msgstr ""
+
+#: ../../source/Module/Certgen f8dff121974c4ba8a6eea2627e8b4208 manage.rst:377
+msgid "flag说明::"
+msgstr ""
+

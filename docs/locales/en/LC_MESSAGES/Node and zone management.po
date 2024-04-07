@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Node 6846c1c3e06146a3a1eee1a7263e00ea and management.rst:4 zone
+msgid "节点及分区管理"
+msgstr ""
+
+#: ../../source/Node 954ad72b0bf04103bd18f6d877d74bc3 and management.rst:7 zone
+msgid "分区共识"
+msgstr ""
+
+#: ../../source/Node and c0158ea840554d9488fae178c625a6eb management.rst:8 zone
+msgid "此文档描述Hyperchain中多分区功能及其使用方式，使软件开发人员能清楚地了解Hyperchain的分区共识，便于Hyperchain的开发。"
+msgstr ""
+
+#: ../../source/Node and d207618a93494b078cf7260cd97c169c management.rst:10
+#: zone
+msgid "分区共识使用手册： :ref:`分区共识<Partition-Consensus>`"
+msgstr ""
+
+#: ../../source/Node 5a64ab3a8c2d4cd080b37b574baf9ca6 and management.rst:13
+#: zone
+msgid "灾备节点"
+msgstr ""
+
+#: ../../source/Node 045fcd7e83794b1ab3fc42851ff43fed and management.rst:14
+#: zone
+msgid "CVP是一个独立运行的节点，可以对线上节点（目前包括VP、NVP）进行实时的容灾备份，当线上节点发生了不可恢复的错误时，通过运维命令自动对灾备节点进行升级，替代原节点继续工作。实际使用过程中，CVP和线上节点仅支持一对一连接。"
+msgstr ""
+
+#: ../../source/Node 2789b0d5babc4c32b64f4640030e2642 and management.rst:16
+#: zone
+msgid "灾备节点使用手册： :ref:`灾备节点 <CVP-User-Manual>`"
+msgstr ""
+
+#: ../../source/Node and e10b0a775e9f4279a96de0e0dddf8754 management.rst:19
+#: zone
+msgid "非共识节点"
+msgstr ""
+
+#: ../../source/Node and b55fa9b271df47b7bd49fb16347d4f78 management.rst:20
+#: zone
+msgid "本文档用于向开发、运维人员介绍非共识节点功能和使用方式。"
+msgstr ""
+
+#: ../../source/Node 09fe9563d6f94314a249355e1f11a905 and management.rst:22
+#: zone
+msgid "非共识节点使用手册： :ref:`非共识节点<NVP-User-Manual>`"
+msgstr ""
+
+#: ../../source/Node 8bc1605a4c874ccda4ae40f2b32eb237 and management.rst:25
+#: zone
+msgid "轻节点"
+msgstr ""
+
+#: ../../source/Node and d47414c8a47a42bd8298562869720ff5 management.rst:26
+#: zone
+msgid ""
+"轻节点（Light "
+"Peer）不参与共识，仅通过信任的共识节点来同步区块头数据，并对外提供区块头数据查询、交易转发上链等服务。轻节点同一时刻只能连接一个共识节点，但可动态替换共识节点，共识节点可以连接多个轻节点。"
+msgstr ""
+
+#: ../../source/Node 5f00040e7bb242c096d55c55e4db5989 and management.rst:28
+#: zone
+msgid "轻节点使用手册： :ref:`轻节点<LP-User-Manual>`"
+msgstr ""
+

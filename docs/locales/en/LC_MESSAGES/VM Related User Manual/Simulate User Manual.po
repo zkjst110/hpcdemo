@@ -1,0 +1,327 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/VM 6c2d1b75cdf4430592cc8fa2c929fe93 Manual.rst:4
+#: Manual/Simulate Related User
+msgid "Simulate交易使用手册"
+msgstr ""
+
+#: ../../source/VM Manual.rst:7 Manual/Simulate Related User
+#: b7aa174d3bde4358b2e10d78314e77c5
+msgid "1. 引言"
+msgstr ""
+
+#: ../../source/VM 0a4b4830d04a472caab534aeac1b1176 Manual.rst:10
+#: Manual/Simulate Related User
+msgid "1.1 编写目的"
+msgstr ""
+
+#: ../../source/VM 77a3b583012f44b6bcd0e89ffa965b8d Manual.rst:12
+#: Manual/Simulate Related User
+msgid "提供Simulate交易的使用方式"
+msgstr ""
+
+#: ../../source/VM 90c6d50a5c114034ad9af9b235cdc3dc Manual.rst:15
+#: Manual/Simulate Related User
+msgid "1.2背景"
+msgstr ""
+
+#: ../../source/VM 21d6a35ca08d43149e5f78c690eae3d7 Manual.rst:17
+#: Manual/Simulate Related User
+msgid ""
+"在与区块链平台交互的业务场景中，区块链作为业务数据存储平台，常会接收到数据查询的用户请求， "
+"**但当前区块链平台对于用户的一些数据查询请求，会当作一笔“真实的业务数据”存在链上，这个是没有必要，会导致链上存储多余的无用信息，进而影响平台数据的读写效率**"
+" "
+"。为解决上述痛点问题，我们拟采取“模拟交易”的方式，提供一个与真实环境分离的镜像模拟环境给用户进行数据读写的模拟查询，其数据变更和行为记录不会存在真实的底层数据库，从而做到“"
+" **模拟数据不上链，提升数据查询效率** ”。"
+msgstr ""
+
+#: ../../source/VM 0c3b118a390a42e4aed5edaed5998422 Manual.rst:20
+#: Manual/Simulate Related User
+msgid "1.3术语"
+msgstr ""
+
+#: ../../source/VM Manual.rst:23 Manual/Simulate Related User
+#: cf4e3a14882a4d428fbc7f09436f99fd
+msgid "英文"
+msgstr ""
+
+#: ../../source/VM Manual.rst:23 Manual/Simulate Related User
+#: a5649f7bc5a0467885d59b7628b43f4f
+msgid "中文"
+msgstr ""
+
+#: ../../source/VM 8286302c99bd4616bcc99192dfbd2e18 Manual.rst:23
+#: Manual/Simulate Related User
+msgid "含义"
+msgstr ""
+
+#: ../../source/VM Manual.rst:25 Manual/Simulate Related User
+#: a950e6eacdd34a74935ef721eac1bd98
+msgid "Simulate Transaction"
+msgstr ""
+
+#: ../../source/VM 48579b01095144e78a568514f0f88c8c Manual.rst:25
+#: Manual/Simulate Related User
+msgid "模拟交易"
+msgstr ""
+
+#: ../../source/VM 8bcbcaac681e455db76715f9517c14b3 Manual.rst:25
+#: Manual/Simulate Related User
+msgid "只用于查询，不改变链上数据状态的交易。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:26 Manual/Simulate Related User
+#: ddace21134a44411b4df4ca081fdb663
+msgid "\\"
+msgstr ""
+
+#: ../../source/VM Manual.rst:30 Manual/Simulate Related User
+#: e914c39d5b6148438f151acb0dbda5e2
+msgid "1.4参考文献"
+msgstr ""
+
+#: ../../source/VM Manual.rst:33 Manual/Simulate Related User
+#: d0727704d50942d29da8c090e15ec7a8
+msgid "2. 安装和初始化"
+msgstr ""
+
+#: ../../source/VM 2691e35097764f028c96b08a59b8bcad Manual.rst:35
+#: Manual/Simulate Related User
+msgid "只需要运行Flato v1.0.4以上的版本即支持simulate交易。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:38 Manual/Simulate Related User
+#: b44a776b0a1a41deaa2e0e18212f5128
+msgid "3.操作说明"
+msgstr ""
+
+#: ../../source/VM 43855b1fd7d34169a20786acddf92fc5 Manual.rst:40
+#: Manual/Simulate Related User
+msgid "simulate交易是为了方便用户使用区块链平台模拟执行交易提供的接口，simulate交易遵循即用即销毁的原则，在执行完成simulate交易之后，节点上不会存在任何关于该笔交易的痕迹，包括交易修改的状态、交易的哈希值等等。具体的，simulate交易支持如下几种类型的调用："
+msgstr ""
+
+#: ../../source/VM 846cfd9c452f4840b3ab46c955785b9b Manual.rst:42
+#: Manual/Simulate Related User
+msgid "模拟部署合约；"
+msgstr ""
+
+#: ../../source/VM 097be83982ef4b298c3ccf65fe3c0eb3 Manual.rst:44
+#: Manual/Simulate Related User
+msgid "模拟调用合约；"
+msgstr ""
+
+#: ../../source/VM 74f987d5094c4a438cea40d3ec59bc9a Manual.rst:46
+#: Manual/Simulate Related User
+msgid "模拟维护合约（升级、冻结、解冻）。"
+msgstr ""
+
+#: ../../source/VM 71984d520a264e9a9bbd985ad8ea134f Manual.rst:48
+#: Manual/Simulate Related User
+msgid "需要注意的是，simulate交易 **不支持如下几种** 类型的调用："
+msgstr ""
+
+#: ../../source/VM 97f380607ff54812a3fc53e04a3f6b9d Manual.rst:50
+#: Manual/Simulate Related User
+msgid "普通转账交易/存证交易，因为simulate是模拟交易，因此不支持转账操作。其次，simulate执行完后即销毁，因此存证请求不会在链上留痕，也就失去了意义；"
+msgstr ""
+
+#: ../../source/VM 8b916f5eda444597852e4e03a3d99b2a Manual.rst:52
+#: Manual/Simulate Related User
+msgid "bvm合约调用，由于bvm合约大都涉及到的是管理员权限的合约操作，因此需要由管理员进行谨慎操作，simulate交易不支持此类调用"
+msgstr ""
+
+#: ../../source/VM 0fcf83bf12774b90a6739b7ca9226fda Manual.rst:54
+#: Manual/Simulate Related User
+msgid "大文件存储调用，同样的，大文件存储面向的存储请求，但是simulate交易不会在链上留痕，也就无需支持大文件存储调用了。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:56 Manual/Simulate Related User
+#: b45dd3578d204db89d3179d0cb25acf9
+msgid "simulate合约服务接口概览表"
+msgstr ""
+
+#: ../../source/VM 4b8ca76536a043d3a8278cfbfa845c45 Manual.rst:59
+#: Manual/Simulate Related User
+msgid "RPC方法"
+msgstr ""
+
+#: ../../source/VM 7adbad13bc0949da81e39fef982fd6bd Manual.rst:59
+#: Manual/Simulate Related User
+msgid "功能"
+msgstr ""
+
+#: ../../source/VM Manual.rst:61 Manual/Simulate Related User
+#: adc5706a878b460a95af454f5752eb20
+msgid "simulate_deployContract"
+msgstr ""
+
+#: ../../source/VM 179c99b2a238473bb46e8f2705cbbfa2 Manual.rst:61
+#: Manual/Simulate Related User
+msgid "部署合约"
+msgstr ""
+
+#: ../../source/VM 3f4c32dbf01c4a228da599f3df350fa5 Manual.rst:62
+#: Manual/Simulate Related User
+msgid "simulate \\_invokeContract"
+msgstr ""
+
+#: ../../source/VM 42dea8ba066e4ccbb25e92cd07acd630 Manual.rst:62
+#: Manual/Simulate Related User
+msgid "调用合约"
+msgstr ""
+
+#: ../../source/VM 20bd3d1d511848e199b9db380ec74f46 Manual.rst:63
+#: Manual/Simulate Related User
+msgid "simulate \\_maintainContract"
+msgstr ""
+
+#: ../../source/VM Manual.rst:63 Manual/Simulate Related User
+#: b5fb4ef9f6d94cd483f32b8614ec3ce4
+msgid "升级合约、冻结合约、解冻合约"
+msgstr ""
+
+#: ../../source/VM 15a4a114299d43b581fb0c370c7cde36 Manual.rst:66
+#: Manual/Simulate Related User
+msgid "由于simulate交易调用流程与普通交易类似，因此发送simulate交易请求是可以参照《GoSDK/LiteSDK使用文档》将普通交易设置为simulate交易类型即可。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:68 Manual/Simulate Related User
+#: ac6cb9fd29cc4fda9b090de90e7a2f0f
+msgid "例（GoSDK设置交易类型为simulate）："
+msgstr ""
+
+#: ../../source/VM Manual.rst:73 Manual/Simulate Related User
+#: c0631c9bc76e4398998a18c696ae0768
+msgid "方法签名::"
+msgstr ""
+
+#: ../../source/VM Manual.rst:77 Manual/Simulate Related User
+#: e12e19a909fa402285393161b01b743d
+msgid "例（LiteSDK设置交易类型为simulate）："
+msgstr ""
+
+#: ../../source/VM 94f81cdf99ab4f899c3ff349bd120b7b Manual.rst:79
+#: Manual/Simulate Related User
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/VM 739e2ef8d45e4d729edb4ccde7f49f25 Manual.rst:125
+#: Manual/Simulate Related User
+msgid "image0"
+msgstr ""
+
+#: ../../source/VM 8fc947e63e164a2da7bb8d841044a7e7 Manual.rst:82
+#: Manual/Simulate Related User
+msgid "3.1 模拟部署合约"
+msgstr ""
+
+#: ../../source/VM 5075e2ff2b5a4be081dad788609a8e7a Manual.rst:84
+#: Manual/Simulate Related User
+msgid "调用流程：模拟部署合约的流程可以参照GoSDK/LiteSDK的正常部署合约流程，并且将发起的交易设置为simulate交易类型即可（设置方式参照上述操作说明）。"
+msgstr ""
+
+#: ../../source/VM 657b1458b96d4b888406bddb4892422e Manual.rst:86
+#: Manual/Simulate Related User
+msgid "**模拟部署合约的调用操作结束后，该合约不会记录到链上。**"
+msgstr ""
+
+#: ../../source/VM Manual.rst:89 Manual/Simulate Related User
+#: d8e5be087973443f9eac85aec8466bf0
+msgid "3.2 模拟调用合约"
+msgstr ""
+
+#: ../../source/VM 1d38525ec0ce4b5abd1843d89cd030cf Manual.rst:91
+#: Manual/Simulate Related User
+msgid "说明：模拟调用合约之前，需要通过正常部署合约的方式先部署一个合约，随后才能通过模拟调用的方式调用该合约。即如果前序步骤是通过模拟部署合约的方式部署了一个合约的话，是不能通过模拟调用的方式调用该合约的，因为模拟部署合约的信息不会在链上留痕。"
+msgstr ""
+
+#: ../../source/VM 217c0fc4deb74d859cc9566f1094de83 Manual.rst:93
+#: Manual/Simulate Related User
+msgid "调用流程：模拟调用合约的流程可以参照GoSDK/LiteSDK的正常调用合约流程，并且将发起的交易设置为simulate交易类型即可（设置方式参照上述操作说明）。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:95 Manual/Simulate Related User
+#: ae598dbe3e7148b3b84363d0f7d7bb21
+msgid "**模拟调用合约的调用操作结束后，合约状态的修改不会记录到链上，即模拟调用不影响链上合约的状态。**"
+msgstr ""
+
+#: ../../source/VM Manual.rst:98 Manual/Simulate Related User
+#: c9d992d0322f448ab8bb53716c92c2a9
+msgid "3.3 模拟升级合约"
+msgstr ""
+
+#: ../../source/VM 2559c7c5ec5e4235991c62d04ad0fd38 Manual.rst:100
+#: Manual/Simulate Related User
+msgid "说明：只有合约的部署者才拥有模拟升级合约的权限。模拟升级合约之前，需要通过正常部署合约的方式先部署一个合约，随后才能通过模拟升级的方式升级该合约。即如果前序步骤是通过模拟部署合约的方式部署了一个合约的话，是不能通过模拟升级的方式升级该合约的。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:102 Manual/Simulate Related User
+#: dda5b9720c6b4daea6d8eb54be2f59b8
+msgid "调用流程：模拟升级合约的流程可以参照GoSDK/LiteSDK的正常升级合约流程，并且将发起的交易设置为simulate交易类型即可（设置方式参照上述操作说明）。"
+msgstr ""
+
+#: ../../source/VM 1181f1dc0cb94a048ebb85748a9b15d2 Manual.rst:104
+#: Manual/Simulate Related User
+msgid "**模拟升级合约的调用操作结束后，合约状态的修改不会记录到链上，即模拟升级不影响链上合约的状态。**"
+msgstr ""
+
+#: ../../source/VM 88a96931f63a42e381018b66e0e41dc5 Manual.rst:107
+#: Manual/Simulate Related User
+msgid "3.4 模拟冻结合约"
+msgstr ""
+
+#: ../../source/VM 338ee543612b4ac9b5825e2b7e8102f8 Manual.rst:109
+#: Manual/Simulate Related User
+msgid "说明：只有合约的部署者才拥有模拟冻结合约的权限。模拟冻结合约之前，需要通过正常部署合约的方式先部署一个合约，随后才能通过模拟冻结的方式冻结该合约。即如果前序步骤是通过模拟部署合约的方式部署了一个合约的话，是不能通过模拟冻结的方式冻结该合约的。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:111 Manual/Simulate Related User
+#: d1be48cc82cf492daf0ee7ccdc8fdbea
+msgid "调用流程：模拟冻结合约的流程可以参照GoSDK/LiteSDK的正常冻结合约流程，并且将发起的交易设置为simulate交易类型即可（设置方式参照上述操作说明）。"
+msgstr ""
+
+#: ../../source/VM 342ae028c0a44acfb9f7018fcc185641 Manual.rst:113
+#: Manual/Simulate Related User
+msgid "**模拟冻结合约的调用操作结束后，合约状态的修改不会记录到链上，即模拟冻结不影响链上合约的状态。**"
+msgstr ""
+
+#: ../../source/VM Manual.rst:116 Manual/Simulate Related User
+#: db1335783c4c4a00b4214126272ed31d
+msgid "3.5 模拟解冻合约"
+msgstr ""
+
+#: ../../source/VM 91c53cdc3ed8491591762c7d9ed935bd Manual.rst:118
+#: Manual/Simulate Related User
+msgid "说明：只有合约的部署者才拥有模拟解冻合约的权限。模拟解冻合约之前，需要通过正常部署合约的方式先部署一个合约，并通过正常冻结合约的方式将其冻结，随后才能通过模拟解冻的方式解冻该合约。即如果前序步骤是通过模拟部署合约的方式部署了一个合约的话，或者前序步骤是通过模拟冻结合约的方式冻结了该合约的话，是不能通过模拟解冻的方式解冻该合约的。"
+msgstr ""
+
+#: ../../source/VM 3bef2f1359e94ee4a7b9c1bcf4401117 Manual.rst:120
+#: Manual/Simulate Related User
+msgid "调用流程：模拟解冻合约的流程可以参照GoSDK/LiteSDK的正常解冻合约流程，并且将发起的交易设置为simulate交易类型即可（设置方式参照上述操作说明）。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:122 Manual/Simulate Related User
+#: bbb805e9879e43aba1750e25f191ef41
+msgid "**模拟解冻合约的调用操作结束后，合约状态的修改不会记录到链上，即模拟解冻不影响链上合约的状态。**"
+msgstr ""
+

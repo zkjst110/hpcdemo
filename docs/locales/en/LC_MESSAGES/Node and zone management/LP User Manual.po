@@ -1,0 +1,771 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Node 3d0b5ce1377641ef8f73aa001c048db9 Manual.rst:4 User and
+#: management/LP zone
+msgid "轻节点介绍"
+msgstr ""
+
+#: ../../source/Node Manual.rst:7 User and f34575e0bfac40b1863bdbc727bb93b3
+#: management/LP zone
+msgid "1. 引言"
+msgstr ""
+
+#: ../../source/Node Manual.rst:10 User a62dc32f49bd4d15a1509093638065ca and
+#: management/LP zone
+msgid "1.1 编写目的"
+msgstr ""
+
+#: ../../source/Node 2c51da5bf82e4edf853da05743ce0692 Manual.rst:12 User and
+#: management/LP zone
+msgid "本文档用于向开发人员介绍LP功能和使用方式。"
+msgstr ""
+
+#: ../../source/Node 2c49cc9b47d44daeb17107d4bec8cb24 Manual.rst:14 User and
+#: management/LP zone
+msgid ""
+"LP（Light "
+"Peer）不参与共识，仅通过信任的VP来同步区块头数据，并对外提供区块头数据查询、交易转发上链等服务。LP同一时刻只能连接一个VP，但可动态替换VP，VP可以连接多个LP。"
+msgstr ""
+
+#: ../../source/Node 24f2cde18db84d9283d0650e891964a5 Manual.rst:17 User and
+#: management/LP zone
+msgid "1.2 相关术语"
+msgstr ""
+
+#: ../../source/Node 7cf2ea8c067b44aba96e5141a7eb6267 Manual.rst:19 User and
+#: management/LP zone
+msgid "VP（Validate Peer）：验证节点"
+msgstr ""
+
+#: ../../source/Node 68ae10b91a12480d80ae2607aa80c0ae Manual.rst:21 User and
+#: management/LP zone
+msgid "LP（Light Peer）：轻节点"
+msgstr ""
+
+#: ../../source/Node 477efbdcf565440aa8833c47ac29269d Manual.rst:24 User and
+#: management/LP zone
+msgid "1.3 连接方式"
+msgstr ""
+
+#: ../../source/Node Manual.rst:26 User and edfaaf34c30a45dfa5a8f9d5d43ac782
+#: management/LP zone
+msgid "vp和lp节点互相连接一共四种方式，分别是："
+msgstr ""
+
+#: ../../source/Node 77a5ab0d043e40a5bb9cdb591f175c6c Manual.rst:28 User and
+#: management/LP zone
+msgid "在lp的配置文件里增加vp信息，启动后自动连接；"
+msgstr ""
+
+#: ../../source/Node 284f74ce978d4a15ba13f1e2315dc74d Manual.rst:29 User and
+#: management/LP zone
+msgid "在vp的配置文件里增加lp信息，启动后自动连接；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:30 User and e097bd0fb513450cb9a6d231f1ab87ea
+#: management/LP zone
+msgid "通过ipc命令，在vp上动态添加lp；"
+msgstr ""
+
+#: ../../source/Node 4d5eb496e8494c479304c275416d5a14 Manual.rst:31 User and
+#: management/LP zone
+msgid "通过ipc命令，在lp上动态添加vp；"
+msgstr ""
+
+#: ../../source/Node 00df74caca2343a9a9f441d6f79089ed Manual.rst:34 User and
+#: management/LP zone
+msgid "2. 启动节点&检查证书配置"
+msgstr ""
+
+#: ../../source/Node Manual.rst:37 User and d651260611ca4796bb97c6f9c53ae09e
+#: management/LP zone
+msgid "2.1 VP节点部署"
+msgstr ""
+
+#: ../../source/Node Manual.rst:39 User a45a51786e154d48ac6b842b1bbd08c6 and
+#: management/LP zone
+msgid "可以参照部署文档，启动vp节点。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:42 User and e533c5db4c204148b3b572f01b7613f0
+#: management/LP zone
+msgid "2.2 LP节点部署"
+msgstr ""
+
+#: ../../source/Node Manual.rst:44 User and e0332fe06adf42febfe33030f716a045
+#: management/LP zone
+msgid "LP与NVP共享一套证书体系，LP的证书配置以及生成方式与NVP一致，可以参照NVP使用手册的节点部署以及生成证书章节"
+msgstr ""
+
+#: ../../source/Node Manual.rst:47 User and ff8365f08f924eef9d531f646d45297c
+#: management/LP zone
+msgid "3. 节点连接"
+msgstr ""
+
+#: ../../source/Node 63ba48c8d92a489dbe42f5774226b140 Manual.rst:49 User and
+#: management/LP zone
+msgid "对于LP节点来说，若其未连接任何VP节点，也能正常工作，但不能转发交易，不能同步新数据。当要与VP节点连接时，LP节点需要提前准备和VP相连的证书文件，还需要进行相应的配置："
+msgstr ""
+
+#: ../../source/Node 8d4b68693cc24d6c9bb3160ea1dbf13a Manual.rst:51 User and
+#: management/LP zone
+msgid ""
+"LP作为独立节点启动，需要LP节点的 `configuration/dynamic.toml` 文件中 "
+"**修改self节点名称、port端口、域配置。**"
+msgstr ""
+
+#: ../../source/Node Manual.rst:53 User and b93890b6ea5144ba9abe148ca29ab06e
+#: management/LP zone
+msgid "注意： **LP的配置信息不能和VP节点以及NVP节点的配置信息重复**"
+msgstr ""
+
+#: ../../source/Node 8b846b839c4c4e8cb5b6fd9042aca24b Manual.rst:55 User and
+#: management/LP zone
+msgid ""
+"在LP节点的 `configuration/global/ns_dynamic.toml` 文件 **修改[self]信息** "
+"，具体的配置根据不同的连接方式略有不同，在下面详细介绍。"
+msgstr ""
+
+#: ../../source/Node 37495b36a1b04356a20c546e3686066c Manual.rst:57 User and
+#: management/LP zone
+msgid "配置完成之后，可以通过 `start.sh` 脚本来启动节点。由于VP和LP可以动态地建立连接，因此无须同时启动。"
+msgstr ""
+
+#: ../../source/Node 95e5a15315884bf6a222396ddca7c5d9 Manual.rst:59 User and
+#: management/LP zone
+msgid "VP和LP节点互相连接方式一共有四种，选择任一一种方式都可以完成LP和VP的连接，下文将详细介绍每种连接方式。"
+msgstr ""
+
+#: ../../source/Node 24a2da1a8e0641c6af6cbace113d4ad4 Manual.rst:62 User and
+#: management/LP zone
+msgid "3.1 在VP上配置LP"
+msgstr ""
+
+#: ../../source/Node 4f1b1e06d7014e3891874fec46437cc4 Manual.rst:64 User and
+#: management/LP zone
+msgid ""
+"如果要在VP启动时能够自动去连接指定的LP，需要在VP节点的 `configuration/global/ns_dynamic.toml` "
+"文件做相应修改。在四个VP节点启动并相互连接的场景下，增加两个与node1相连接的LP需要修改的配置项如下所示::"
+msgstr ""
+
+#: ../../source/Node Manual.rst:89 User and faf571ee4aae4d37a4ea84ae1166512a
+#: management/LP zone
+msgid "由于LP是namespace级别的节点，所以只需要增加lp列表字段："
+msgstr ""
+
+#: ../../source/Node Manual.rst:91 User and baf3bf4254cb450992aaec6887945af9
+#: management/LP zone
+msgid "[[lps]]表示lp数组，数组中记录有lp的信息。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:93 User a3f2d82204f849f6a43f266f3964b080 and
+#: management/LP zone
+msgid "[p2p]的hosts列表中，增加lp的名字和地址信息字段。"
+msgstr ""
+
+#: ../../source/Node 06d0b92013b241ed989a7a275d46437c Manual.rst:95 User and
+#: management/LP zone
+msgid "其他部分的内容无需修改，[self]中的n数量指的是连接的vp数量，无需变化。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:98 User and de30862a47ac4a86a565b4dc66938050
+#: management/LP zone
+msgid "3.2 在LP上配置VP"
+msgstr ""
+
+#: ../../source/Node 75a961af28fa4f1abc5edc6385d51679 Manual.rst:100 User and
+#: management/LP zone
+msgid ""
+"同理，在LP节点启动前需要指定连接的VP，先按照部署文档进行更改，然后在LP节点的 "
+"`configuration/global/ns_dynamic.toml` 文件做相应修改。 **LP只能连接一个VP** "
+"，需要修改的配置项如下::"
+msgstr ""
+
+#: ../../source/Node 6c9df94a6a1a4d21911930bf5659ef93 Manual.rst:120 User and
+#: management/LP zone
+msgid "[[nodes]]字段，添加与LP节点连接的VP节点信息；"
+msgstr ""
+
+#: ../../source/Node 246988bf61134455a25ac8745cb17b4a Manual.rst:122 User and
+#: management/LP zone
+msgid "[p2p]字段，同时配置VP的节点名称和ip地址；"
+msgstr ""
+
+#: ../../source/Node 5408592bb16347c5a7d45b52c067949b Manual.rst:124 User and
+#: management/LP zone
+msgid "[self]字段，修改对应的LP信息；"
+msgstr ""
+
+#: ../../source/Node 387ffc302a50438f820e3c9f355e370b Manual.rst:126 User and
+#: management/LP zone
+msgid "hostname为LP节点的名称；"
+msgstr ""
+
+#: ../../source/Node 7139e1729717431eb67b474a858874ab Manual.rst:128 User and
+#: management/LP zone
+msgid "n表示要连接的VP数量为1（LP上n的数值<=1)；"
+msgstr ""
+
+#: ../../source/Node 49a373cf26e046b9bffc0c1aa44f89f0 Manual.rst:130 User and
+#: management/LP zone
+msgid "type字段用来记录节点的类型为LP；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:133 User and d1d73963c9434e0da0b826a73d8d8ccd
+#: management/LP zone
+msgid "通过ipc命令新增LP"
+msgstr ""
+
+#: ../../source/Node Manual.rst:135 User and c4c6712aa20d404abfc7e4eda4ccaa1d
+#: management/LP zone
+msgid "上述通过配置的方式需要进行节点的启停从而使配置生效，实际上也可以通过ipc命令动态地进行LP的增删操作。"
+msgstr ""
+
+#: ../../source/Node 751623c512d240fbb6a8fe80f6fa19ff Manual.rst:137 User and
+#: management/LP zone
+msgid "命令格式： `lp add <namespace> <hostname> <address>` 具体操作可以查看 **4.2节内容** 。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:140 User and ba56395bf40c449aba0a1b1c5bf0f344
+#: management/LP zone
+msgid "3.4 通过ipc命令新增VP"
+msgstr ""
+
+#: ../../source/Node Manual.rst:142 User and c4ce3d2158ea43569feabedc0838a445
+#: management/LP zone
+msgid "在lp上也可以通过3.3节介绍的命令动态地增删VP，这里不再赘述。"
+msgstr ""
+
+#: ../../source/Node 3f055c95435544a9b9853e471014d524 Manual.rst:145 User and
+#: management/LP zone
+msgid "4.IPC命令"
+msgstr ""
+
+#: ../../source/Node Manual.rst:147 User a70bb7d817914f2e9b907bf505f10636 and
+#: management/LP zone
+msgid "平台提供查询LP状态、新增LP、删除LP三类IPC运维命令。"
+msgstr ""
+
+#: ../../source/Node 3fbb7f23155042c99eddd2809d4d7a31 Manual.rst:149 User and
+#: management/LP zone
+msgid "`lp status` ：查询LP的当前状态，在LP和VP执行返回信息不同；"
+msgstr ""
+
+#: ../../source/Node 3f0591181f4c48278e186f914e9fdefb Manual.rst:151 User and
+#: management/LP zone
+msgid "`lp add` ：在VP上执行为新增LP，在LP上执行为新增VP；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:153 User and d8cda786b4274c849491731ef7f75d5f
+#: management/LP zone
+msgid "`lp remove` ：在VP上执行为删除LP，在LP上执行为删除VP。"
+msgstr ""
+
+#: ../../source/Node 7f67a09a129746b0bd3008a8c74b6ff3 Manual.rst:155 User and
+#: management/LP zone
+msgid "IPC命令格式如下::"
+msgstr ""
+
+#: ../../source/Node Manual.rst:161 User and ec856a5231314acf95c07715b4ef69ac
+#: management/LP zone
+msgid "调用IPC命令前，需要先启动IPC交互式命令行::"
+msgstr ""
+
+#: ../../source/Node 0d7be9b3a83a4976a61ab00abfc234d3 Manual.rst:166 User and
+#: management/LP zone
+msgid "4.1 lp status"
+msgstr ""
+
+#: ../../source/Node 9baf5c920f624042b1d7f6e867baa543 Manual.rst:168 User and
+#: management/LP zone
+msgid "该命令可以用于查询LP和VP的连接状态。 **VP节点上可以同时得知连接的LP的状态和自己的状态；LP节点只能查询到自己的状态信息** 。"
+msgstr ""
+
+#: ../../source/Node 4e95eb2ed3544ec088b685fdb2a2da96 Manual.rst:170 User and
+#: management/LP zone
+msgid "命令： `lp status <namespace> [hostname]` （该条命令可在VP和LP上执行）"
+msgstr ""
+
+#: ../../source/Node 46ddbf2dca454ad4b22eb15f35767218 Manual.rst:172
+#: Manual.rst:231 User and d4638f275fdd474bbaa15e6dd2fd807c management/LP zone
+msgid "**上述命令格式的具体含义如下所示：**"
+msgstr ""
+
+#: ../../source/Node 9635fe904ccd432c83e63c6474f512d4
+#: 98a8b23608b04386a95b395b13722f50 Manual.rst:174 Manual.rst:233 User and
+#: management/LP zone
+msgid "`<namespace>` ：<>表示必要参数，由于LP是namespace级别的节点，因此需指定所在的namespace；"
+msgstr ""
+
+#: ../../source/Node 4ed6a5785f56444dbc6cfe3114ab2607 Manual.rst:176 User and
+#: management/LP zone
+msgid ""
+"`[hostname]` "
+"：[]表示可选参数，在VP上调用时，若不指定hostname，将以列表形式返回所有与VP相连的LP状态信息；在LP上调用时，由于LP只能和一个VP相连，是否指定hostname对返回结果没有影响。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:178 User and c985464a4da743c0bfb3de7cf85d2eee
+#: management/LP zone
+msgid "在LP上调用 `lp status` 命令，返回信息如下表所示："
+msgstr ""
+
+#: ../../source/Node 8e815e77ee3b42bcaf41ba7d22fc5fc1 Manual.rst:181
+#: Manual.rst:191 User and dbf9364f49c54769a754e7053ac4541e management/LP zone
+msgid "返回信息"
+msgstr ""
+
+#: ../../source/Node 1fd2dc4e8afa4c27a8281462e8fda9aa Manual.rst:181
+#: Manual.rst:191 User and df73c657b96f496ebbe462f42551f64c management/LP zone
+msgid "含义"
+msgstr ""
+
+#: ../../source/Node 554f173c7068493f848d53a63538f2f4 Manual.rst:183
+#: Manual.rst:193 User and b84fd326795c4db49282c52ec065a015 management/LP zone
+msgid "hostname"
+msgstr ""
+
+#: ../../source/Node Manual.rst:183 User and ed226cb5687043a5adc7341f6584cd48
+#: management/LP zone
+msgid "LP连接的VP名称"
+msgstr ""
+
+#: ../../source/Node 709abd10754e4ae380d6f44f9ff4ae2f Manual.rst:184
+#: Manual.rst:195 User and e1711f69c30842d888a612d24ab2e33e management/LP zone
+msgid "lp_status"
+msgstr ""
+
+#: ../../source/Node 26dfc9cc210b424291bd7c472865ee60 Manual.rst:184
+#: Manual.rst:195 User and d3325f724d4c4057b51e25580f6839f9 management/LP zone
+msgid "LP当前的状态"
+msgstr ""
+
+#: ../../source/Node 37c42501d2a840a7a492dfbcf0421cff Manual.rst:185
+#: Manual.rst:196 User and cbf5a14d3e1a433b91c34d8fee9d5fc6 management/LP zone
+msgid "height"
+msgstr ""
+
+#: ../../source/Node 0f9a5e85612e447788342c49b39762d7 Manual.rst:185
+#: Manual.rst:196 User and dba27aaf293b43059a3f7e23f835242f management/LP zone
+msgid "LP当前区块高度"
+msgstr ""
+
+#: ../../source/Node 60aeaf64038c4b5b8ce4eb4383b3bf41 Manual.rst:188 User and
+#: management/LP zone
+msgid "在VP上调用 `lp status` 命令，返回信息如下表所示："
+msgstr ""
+
+#: ../../source/Node Manual.rst:193 User and cd2a117b7d124165a8508221ea801ea7
+#: management/LP zone
+msgid "VP连接的LP名称"
+msgstr ""
+
+#: ../../source/Node 09ebf58fa88c405185c9137f0e638500 Manual.rst:194 User and
+#: management/LP zone
+msgid "vp_status"
+msgstr ""
+
+#: ../../source/Node 24975dee2f5a4fadbff2752c1726de24 Manual.rst:194 User and
+#: management/LP zone
+msgid "VP当前的状态"
+msgstr ""
+
+#: ../../source/Node Manual.rst:197 User and b7de9b91d460488cb4712d7fb93aed45
+#: management/LP zone
+msgid "msg"
+msgstr ""
+
+#: ../../source/Node Manual.rst:197 User and be779cba2bd348e9992514204175899f
+#: management/LP zone
+msgid "对当前LP的描述，这份描述内容是LP的握手或区块事件的回复信息"
+msgstr ""
+
+#: ../../source/Node 219d0c7cc7464595b3a859f0ec9efe83 Manual.rst:200 User and
+#: management/LP zone
+msgid "**以下是一些正常的状态指令实例：**"
+msgstr ""
+
+#: ../../source/Node Manual.rst:202 User and be93cdd1d0ae4d7396e54be0e5d80535
+#: management/LP zone
+msgid "LP节点查询状态::"
+msgstr ""
+
+#: ../../source/Node 0c13e1ecd69f445d86b90e31cbc9f283 Manual.rst:212 User and
+#: management/LP zone
+msgid "VP节点查询状态::"
+msgstr ""
+
+#: ../../source/Node Manual.rst:225 User and e45e76ecd44d481d9a53029d0a8b6b9b
+#: management/LP zone
+msgid "4.2 lp add"
+msgstr ""
+
+#: ../../source/Node 48003c2f0cf3459a82327b1dd851fed3 Manual.rst:227 User and
+#: management/LP zone
+msgid "该命令用于动态增加节点场景，VP和LP都可以使用该指令动态增加节点。"
+msgstr ""
+
+#: ../../source/Node 28b8b866cfae4c269f211dd40b7aa674 Manual.rst:229 User and
+#: management/LP zone
+msgid "命令： `lp add <namespace> <hostname> <address>`"
+msgstr ""
+
+#: ../../source/Node Manual.rst:235 Manual.rst:265 User and
+#: db079dfa2a89410e900877d58c89f3b5 f1e4d328d7da4f5595099f9c5584a3b1
+#: management/LP zone
+msgid "`<hostname>` ：<>表示必要参数，指定要连接节点的名称；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:237 User and f578fd09f2fc48d1ba81127087c12d03
+#: management/LP zone
+msgid "`<address>` ：<>表示必要参数，指定要连接节点的ip地址；"
+msgstr ""
+
+#: ../../source/Node 09f2f644ab294a66986d6bd886f82e24 Manual.rst:239 User and
+#: management/LP zone
+msgid ""
+"**注意：新增命令的成功返回并不意味着连接建立成功**，若在VP上执行新增命令，则可以通过4.1节介绍的 `lp status` "
+"命令查询LP状态，若查询结果显示 `lp_status=NORMAL` 则代表新增成功，而若一直处于 `ABNORMAL` "
+"状态，则需要根据日志进一步排查问题；而由于LP端无法查询VP状态，因此若在LP上执行新增命令，是否连接成功只能通过日志来进行确认。"
+msgstr ""
+
+#: ../../source/Node 9df16217efb5485c8dcce1e0bc6a3a42 Manual.rst:241 User and
+#: management/LP zone
+msgid "**LP连接VP示例** ::"
+msgstr ""
+
+#: ../../source/Node Manual.rst:257 User and ef6aa0de095440b3b7aba79def1ade73
+#: management/LP zone
+msgid "4.3 lp remove"
+msgstr ""
+
+#: ../../source/Node 4486b4d7c7614354ac2794960144f84d Manual.rst:259 User and
+#: management/LP zone
+msgid "该指令用于VP和LP之间断开连接，VP和LP都可以使用该指令动态删除节点。"
+msgstr ""
+
+#: ../../source/Node 7e4f7869b2564fdfa6a6cc3028e70500 Manual.rst:261 User and
+#: management/LP zone
+msgid "ipc命令格式： `lp remove <namespace> <hostname> `"
+msgstr ""
+
+#: ../../source/Node 0a6327f2b9b4453a8b19188dc2df0434 Manual.rst:263 User and
+#: management/LP zone
+msgid "`<namespace>` ：<>表示必要参数，由于LP是namespace级别的节点，因此需指定其所在的namespace；"
+msgstr ""
+
+#: ../../source/Node 41ada8de6dc34de9a7d74780e7817b04 Manual.rst:267 User and
+#: management/LP zone
+msgid "该命令的行为如下："
+msgstr ""
+
+#: ../../source/Node 51f18836c7bc4e19a9e3dc5675193026 Manual.rst:269 User and
+#: management/LP zone
+msgid "通知对端进行同样的删除操作；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:271 User a9fa973cfd2d4f39acd447d52a0d0ac3 and
+#: management/LP zone
+msgid "断开网络逻辑连接；"
+msgstr ""
+
+#: ../../source/Node 8ed851f56cbe4b3c9eb8f27e6561a349 Manual.rst:273 User and
+#: management/LP zone
+msgid "删除对端配置文件信息；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:275 User and f8bc81f0e21b474e8f6212f86cf6989c
+#: management/LP zone
+msgid "清空相应的缓存；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:277 User and d5e8ab9343ed4ee0864ae0a04bb53b8b
+#: management/LP zone
+msgid "进行证书吊销；"
+msgstr ""
+
+#: ../../source/Node 68ffd61fc0544ad3a223d15ee1f6b084 Manual.rst:279 User and
+#: management/LP zone
+msgid "一般情况下该命令有如下两种返回值："
+msgstr ""
+
+#: ../../source/Node Manual.rst:281 User and e270ab1f433d4511a6495a7673aa5129
+#: management/LP zone
+msgid "`remove [hostname] success:` 这意味着成功通知到对方，双方都会执行上面提到的删除流程；"
+msgstr ""
+
+#: ../../source/Node 0215e9d87b6948138eb0e4a85390f9ee Manual.rst:283 User and
+#: management/LP zone
+msgid ""
+"`inform [hostname] to delete failed, maybe need manual operation:` "
+"这意味着由于网络或其他节点异常问题，导致未能成功通知到对端进行删除，在这种情况下，本地仍然会执行上述删除流程， **可能带来的影响是** "
+"对端的配置文件或内存中仍然保留本节点的信息，因此仍然会尝试进行连接，但由于本节点已经进行了证书吊销，连接不会建立成功， "
+"**解决方法是在对端重新执行删除命令** 。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:285 User and c80a0e4bd97f4c41b7a1294ae28eb18c
+#: management/LP zone
+msgid "**VP删除LP示例** ::"
+msgstr ""
+
+#: ../../source/Node Manual.rst:309 User and c91889579a5749c6bd062d6d99937ef3
+#: management/LP zone
+msgid "5. 操作实例"
+msgstr ""
+
+#: ../../source/Node Manual.rst:311 User and e0b4d1e6f6924375a3a0803d0ea3ded8
+#: management/LP zone
+msgid "这章会列举一些实际操作场景。"
+msgstr ""
+
+#: ../../source/Node 20f1aeb37ae949318a94dee6ebe364e2 Manual.rst:314 User and
+#: management/LP zone
+msgid "5.1 LP动态切换VP"
+msgstr ""
+
+#: ../../source/Node Manual.rst:316 User and b86627dcccab47428ded57281a3f18a9
+#: management/LP zone
+msgid "场景：LP通过IPC命令动态的切换VP。"
+msgstr ""
+
+#: ../../source/Node 237eab083692469e8b782bb054648885 Manual.rst:318 User and
+#: management/LP zone
+msgid "IPC命令如下::"
+msgstr ""
+
+#: ../../source/Node Manual.rst:335 User and b614969d4afd4c158e4d3f02d124dbdb
+#: management/LP zone
+msgid "**使用过程介绍** ::"
+msgstr ""
+
+#: ../../source/Node Manual.rst:337 User and fb1db0d668ad44389cbd9c03b460f573
+#: management/LP zone
+msgid "LP目前已经有连接的VP，通过状态查询命令可以查询到当前连接的VP节点信息；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:338 User and cdfa021fbbe94e8e88270fe9e214a838
+#: management/LP zone
+msgid "LP执行指令删除自己所连接的VP节点： `lp remove global node1` ；"
+msgstr ""
+
+#: ../../source/Node 0e1151f756884d58914d2a579edb4fc2 Manual.rst:339 User and
+#: management/LP zone
+msgid "LP节点收到返回信息 `remove [node1] success` 表明成功删除；"
+msgstr ""
+
+#: ../../source/Node 1fdda7e5335e42cd82f2acafeca4aae9 Manual.rst:340 User and
+#: management/LP zone
+msgid "使用状态查询命令查询当前状态，验证已经删除成功，此时应该没有连接任何VP节点，结果应返回 `this lp connects no vp` ；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:341 User and fe1aadf19d6c43f9a208ca88df3d4110
+#: management/LP zone
+msgid "通过add指令，添加新的想要连接的VP节点；添加新的节点之前需要根据 **第二章节进行证书配置** ；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:342 User and e529f348827c44cca8ad93601f4eca06
+#: management/LP zone
+msgid "如果VP节点未启动，那么需要先启动该VP节点，节点配置 **参考部署文档** ；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:343 User and da8e3f8988b6436e8a1968ec295cd711
+#: management/LP zone
+msgid "在LP节点执行 `lp add global node2 127.0.0.1:50012` 命令；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:344 User and e2586b3bcc234f32ad4c5e0c740fb7d0
+#: management/LP zone
+msgid "等待返回 `add node2 success` ，说明和node2连接的准备工作完成，但此时还不证明已经连接成功；"
+msgstr ""
+
+#: ../../source/Node 1df665d6dcba4604a8e98f705af50ef6 Manual.rst:345 User and
+#: management/LP zone
+msgid ""
+"使用状态查询命令查询当前状态，验证已经添加成功，此时应该成功连接新的VP节点，结果应返回LP的状态信息： `{hostname: node2, "
+"lp_status: IDLE, height: 0}` ；"
+msgstr ""
+
+#: ../../source/Node 0cc3d13cb61f41dd87548f0b0c82b575 Manual.rst:348 User and
+#: management/LP zone
+msgid "6.异常处理"
+msgstr ""
+
+#: ../../source/Node 890d6d87d2214e0cb84551d57a24e92d Manual.rst:351 User and
+#: management/LP zone
+msgid "6.1 指令格式输入错误"
+msgstr ""
+
+#: ../../source/Node 2e692cbc452c437ab149c5d448ca4d1f Manual.rst:353 User and
+#: management/LP zone
+msgid "命令长度/类型出现问题::"
+msgstr ""
+
+#: ../../source/Node 2bef1edcb934489d914efc7de8fe0d62 Manual.rst:355 User and
+#: management/LP zone
+msgid "# 命令长度不够，小于3 >>> lp status Error: invalid command"
+msgstr ""
+
+#: ../../source/Node 698cc8243333406ea53600ef4d2c6fd0 Manual.rst:359 User and
+#: management/LP zone
+msgid "# 命令中的namespace不存在 >>> lp status g Error: namespace [g] not exists"
+msgstr ""
+
+#: ../../source/Node 0f48077716b64b1faf4d5e680bc25d50 Manual.rst:363 User and
+#: management/LP zone
+msgid ""
+"# 命令中长度正确但是指令类型不支持，目前仅支持add、remove、status三种 >>> lp type global Error: "
+"invald command"
+msgstr ""
+
+#: ../../source/Node Manual.rst:367 User and b84c43696e5d42a8b9793f593cf29788
+#: management/LP zone
+msgid "add指令格式有误::"
+msgstr ""
+
+#: ../../source/Node 2cff906b9e1b48edba8adf13c3c1ec8f Manual.rst:369 User and
+#: management/LP zone
+msgid ""
+"# 如namespace或者hostname的参数为空，或者输入的ip地址/端口号有问题 >>> lp add global   "
+"127.0.0.1:500231 Error: invalid command"
+msgstr ""
+
+#: ../../source/Node 2d15afe2a2ae460a922b9e34b4350006 Manual.rst:373 User and
+#: management/LP zone
+msgid ""
+"# 命令格式不正确，add命令长度必须为5，即lp add namespace hostname addr >>> lp add global "
+"Error: invalid command: expected length: 5"
+msgstr ""
+
+#: ../../source/Node 0d28ed8c5ffd452d82298d1c4a3fd7c7 Manual.rst:380 User and
+#: management/LP zone
+msgid "# 端口号异常 >>> lp add global node1 127.0.0.1：50011 Error: Uknown rune: 65306"
+msgstr ""
+
+#: ../../source/Node Manual.rst:385 User and fbe0ffa65d78462b827f44b0e5b12488
+#: management/LP zone
+msgid "**解决方案：** 参照 **第4章节** ，正确输入指令"
+msgstr ""
+
+#: ../../source/Node Manual.rst:388 User and f5dbcc842dd5462bb57cf8e1cfef9483
+#: management/LP zone
+msgid "6.2 查询状态时VP与LP并未互相连接"
+msgstr ""
+
+#: ../../source/Node 9ce0edde1f3a4301a3426462a07376d6 Manual.rst:390 User and
+#: management/LP zone
+msgid ""
+"在状态查询指令之中，输入 `lp status <namespace> [hostname]` 指令，如果查询询不到，根据节点类型返回 `this"
+" vp connects no nvp or lp/this lp connects no vp`"
+msgstr ""
+
+#: ../../source/Node 97f6316c452b4a3483cf6500b56bd3ce Manual.rst:392 User and
+#: management/LP zone
+msgid "**解决方案：** 使用添加连接命令，进行节点连接。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:395 User and de69614e387346be81cdf41b7f5d8357
+#: management/LP zone
+msgid "6.3 重复添加存在节点"
+msgstr ""
+
+#: ../../source/Node Manual.rst:404 User a22cff50da464eea81399d3c10a254b6 and
+#: management/LP zone
+msgid "**解决方案：** 检查LP，VP，CVP各个节点的配置文件，查看是否有重名现象，进行更改。"
+msgstr ""
+
+#: ../../source/Node 958e5ab83fbd446db980a0aed748180f Manual.rst:407 User and
+#: management/LP zone
+msgid "**6.4 删除并不存在的节点**"
+msgstr ""
+
+#: ../../source/Node 5172a31fa1d047ec85e28d005e960582 Manual.rst:415 User and
+#: management/LP zone
+msgid "**解决方案：** 该节点不存在或已经删除成功，无法再进行重复操作，可以进行下一步操作，无需处理。"
+msgstr ""
+
+#: ../../source/Node 9f4e9509f5494f55bc8260eef20b9959 Manual.rst:418 User and
+#: management/LP zone
+msgid "6.5 添加节点失败"
+msgstr ""
+
+#: ../../source/Node Manual.rst:420 User and bdca7410470046aba2c3bf7c6c2bb4ef
+#: management/LP zone
+msgid "在添加节点之后如果出现以下情况说明添加节点失败："
+msgstr ""
+
+#: ../../source/Node 3eea9544fb4d418bb36c8217758052ac Manual.rst:422 User and
+#: management/LP zone
+msgid "1）如果日志信息一直在显示反复连接，出现timeout等日志信息，此时表明建立连接失败；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:424 User and be8b06764a264ecfb8b6dcca5a49dbf8
+#: management/LP zone
+msgid "2）如果是vp节点使用状态查询的指令，如果连接的lp节点状态一直都是 `ABNORMAL` 状态，也表明建立连接出现问题。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:426 User and d0cfced554094f0ab4a6888731c8ecfa
+#: management/LP zone
+msgid "**解决方案：**"
+msgstr ""
+
+#: ../../source/Node 4cd087ea09a04a708f511ae55c2d8eb0 Manual.rst:428 User and
+#: management/LP zone
+msgid "此时不做处理也可以正常运行，但是后台会一直尝试连接该节点，反复打印timeout日志信息；"
+msgstr ""
+
+#: ../../source/Node 036b8c01a30b4a88a32f68b35182af9b Manual.rst:430 User and
+#: management/LP zone
+msgid "如果想要停止打印日志信息，用户可以调用remove指令撤回上一条连接add指令。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:438 User and bb802ad877d74703afacacd75df32d7a
+#: management/LP zone
+msgid ""
+"# vp节点和lp之间的连接存在问题，需要人工介入 >>> lp remove global lp1 inform [lp1] to delete"
+" failed, maybe need manual operation"
+msgstr ""
+
+#: ../../source/Node 5c8346428fcb4d3b9f162228f84379d1 Manual.rst:442 User and
+#: management/LP zone
+msgid "针对remove出错，没有成功返回success信息的场景"
+msgstr ""
+
+#: ../../source/Node 15104217851d4062a831e0004a370f83 Manual.rst:444 User and
+#: management/LP zone
+msgid "**解决方案：** 需要人工进行介入，lp和vp之间的连接状态不正常，需要根据日志信息进行人工介入。"
+msgstr ""
+
+#: ../../source/Node 5a85a4f8073042cdaf47c95349eae650 Manual.rst:447 User and
+#: management/LP zone
+msgid "6.6 查询到空区块"
+msgstr ""
+
+#: ../../source/Node Manual.rst:449 User and c3470b6a113149ab89fb0d2a52cca48d
+#: management/LP zone
+msgid "当调用查询区块接口后如果发现区块各值均为空或者零值，说明该区块为空区块，出现这种情况是因为vp在归档后再去连接lp，导致lp缺失了归档高度前的区块头数据::"
+msgstr ""
+
+#: ../../source/Node Manual.rst:454 User and dd867723ccc64add82bcb1eff0132f13
+#: management/LP zone
+msgid "解决方案：lp应尽可能连接有完整数据的vp，才可以同步尽可能多的区块头数据"
+msgstr ""
+

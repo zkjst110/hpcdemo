@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/VM 85a4357c6f444e0985831ec15d058a52 JDK.rst:4 Manual/HVM/HVM
+#: Related User
+msgid "HVM JDK支持列表"
+msgstr ""
+
+#: ../../source/VM JDK.rst:7 Manual/HVM/HVM Related User
+#: c3de28e0a0b747da9dfe2a16ed97abd0
+msgid "说明"
+msgstr ""
+
+#: ../../source/VM 6a662f61b21442c581aa7ddc8336820a JDK.rst:9 Manual/HVM/HVM
+#: Related User
+msgid "HVM是一款Java智能合约执行器，可以运行采用Java语言编写的符合合约规范的Java智能合约，原则上HVM的Java智能合约采用javac编译器编译即可，不需要经过特殊的编译，且使用上jdk接口同jdk6一致，接口行为理论上同OpenJDK一致，但在区块链特殊场景下，并非所有接口能够正常使用，部分功能的接口和功能被HVM所限制以保证智能合约执行的沙箱环境的安全。"
+msgstr ""
+
+#: ../../source/VM JDK.rst:11 Manual/HVM/HVM Related User
+#: f15433c3ee164761b6e3f5cdeb657340
+msgid "限制功能主要包括如下："
+msgstr ""
+
+#: ../../source/VM 04fd66a5d8da4e8a8e7743df03b221e8 JDK.rst:13 Manual/HVM/HVM
+#: Related User
+msgid "反射"
+msgstr ""
+
+#: ../../source/VM 6b768dc3d6664f90b0ee860e53d7ecfd JDK.rst:15 Manual/HVM/HVM
+#: Related User
+msgid "时间及处理相关"
+msgstr ""
+
+#: ../../source/VM JDK.rst:17 Manual/HVM/HVM Related User
+#: e28ab47cdd984ec1bb5092d20be9b6b8
+msgid "随机数"
+msgstr ""
+
+#: ../../source/VM 4a927ddb179b406d9c5becc6419b42d8 JDK.rst:19 Manual/HVM/HVM
+#: Related User
+msgid "网络访问、远程服务"
+msgstr ""
+
+#: ../../source/VM JDK.rst:21 Manual/HVM/HVM Related User
+#: a87aa6ef9b4c49929b63f58e8c268931
+msgid "io、nio文件流"
+msgstr ""
+
+#: ../../source/VM 073ce72fd98444a580dfccd7d43e2c08 JDK.rst:23 Manual/HVM/HVM
+#: Related User
+msgid "配置文件相关"
+msgstr ""
+
+#: ../../source/VM JDK.rst:25 Manual/HVM/HVM Related User
+#: ed9f8cee5bec460d87a79d037c9604f8
+msgid "java.lang.Math包中浮点数相关函数"
+msgstr ""
+
+#: ../../source/VM 9f179149dbb94641af4d26dfee148305 JDK.rst:27 Manual/HVM/HVM
+#: Related User
+msgid "其他不推荐使用的文字和数字的格式化工具，正则表达式匹配工具，该部分目前只支持简单的匹配。"
+msgstr ""
+
+#: ../../source/VM 7bb18b4be0c64e8faa114a3e57728635 JDK.rst:30 Manual/HVM/HVM
+#: Related User
+msgid "可使用JDK列表"
+msgstr ""
+
+#: ../../source/VM 7b84d018f04a467a872084863c9ec457 JDK.rst:434 Manual/HVM/HVM
+#: Related User
+msgid "java.math包"
+msgstr ""
+
+#: ../../source/VM 78bba6e6e46c4de581a5f5956f6c1a65 JDK.rst:546 Manual/HVM/HVM
+#: Related User
+msgid "java.util包"
+msgstr ""
+

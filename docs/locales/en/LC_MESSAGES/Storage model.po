@@ -1,0 +1,375 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Storage b70edcf3dc8b464b90165aec8f353f13 model.rst:2
+msgid "存储模型"
+msgstr ""
+
+#: ../../source/Storage 3eb189a3e62449f58c7ff13d4a5e0acb model.rst:5
+msgid "数据结构"
+msgstr ""
+
+#: ../../source/Storage dbc9e03fcbcb4b6db219bd5b74be8cb2 model.rst:7
+msgid "区块链数据通过多节点冗余存储实现账本可信，而且随着区块的不断追加，数据量会不断增长，整体读写性能也会受到明显影响，如何保证区块链存储的可拓展性是亟需解决的一大问题。"
+msgstr ""
+
+#: ../../source/Storage 6ad6c3f7f8824f6581b112c1fe591134 model.rst:9
+msgid "平台为适配多种特性，对数据类型进行了进一步的拆分和分类，主要分为连续型数据和K/V型（Key-Value键值对）数据。"
+msgstr ""
+
+#: ../../source/Storage 4d794f08707b4232a642c2ede4c31dba model.rst:12
+msgid "连续型数据"
+msgstr ""
+
+#: ../../source/Storage ff9df1b69695499b817f06b6116aabed model.rst:14
+msgid "连续型数据包括区块数据、交易回执以及修改集数据："
+msgstr ""
+
+#: ../../source/Storage 13708416313c48d8be836eab51d4687e model.rst:16
+msgid "**区块数据** ：区块数据即所有区块的集合，主包括区块头内的区块元数据（区块哈希、父区块哈希、时间戳等），以及交易列表信息，是最重要的数据；"
+msgstr ""
+
+#: ../../source/Storage b4ba82930abb444f83a2129e57fd8d4f model.rst:17
+msgid "**回执数据** ：回执数据以区块为单位组织，记录所有合法交易的回执；"
+msgstr ""
+
+#: ../../source/Storage 7bc592870b9f4fe7892431b02c7a67b2 model.rst:18
+msgid "**修改集数据** ：修改集数据以区块为单位组织，记录这一区块对账本数据的全量修改信息。"
+msgstr ""
+
+#: ../../source/Storage 037b9705eca14c9c89aaf66ea9117e1b model.rst:20
+msgid "其中，区块数据主要通过区块的形式进行串联，所有区块被从后向前有序地链接在一个链条里，每一个区块都指向其父区块，其主要存储内容如下表所示："
+msgstr ""
+
+#: ../../source/Storage e62007542a4f40478956a93070774c70 model.rst:22
+msgid "区块定义"
+msgstr ""
+
+#: ../../source/Storage 27178219a2b54147bc9258ffd49935ba
+#: a0ef74c7d12142f3b84a72998b5fc945 df3f9cb15c7a4ef5b254a90b2bab471b
+#: fce961c6660442698156054f9d820907 model.rst:28 model.rst:41 model.rst:68
+#: model.rst:108
+msgid "字段名"
+msgstr ""
+
+#: ../../source/Storage 302ec842fa6b4c408c414944f8c78769
+#: 6e64947b6d8845f4b31960c6988c16ee d98168252c36404ab598342e894c30d7
+#: dfeefbc602ff4ce0939adf833eecb39e model.rst:29 model.rst:42 model.rst:69
+#: model.rst:109
+msgid "描述"
+msgstr ""
+
+#: ../../source/Storage a42e3f58294a4528a793df2c2bc71c71 model.rst:30
+msgid "区块头"
+msgstr ""
+
+#: ../../source/Storage b5f1e39ff02c484e8bb1d96ffe3f1f6f model.rst:31
+msgid "区块元数据集"
+msgstr ""
+
+#: ../../source/Storage 908e2d423ed740009fdb858c61e12e24 model.rst:32
+msgid "交易列表"
+msgstr ""
+
+#: ../../source/Storage 9a5a1c1af7e844c8a83699944889dd7c model.rst:33
+msgid "收录在区块里的交易信息"
+msgstr ""
+
+#: ../../source/Storage eedabd0c61bb477ab396ce2b9bd4a4cc model.rst:35
+msgid "区块头定义"
+msgstr ""
+
+#: ../../source/Storage c844f474de204ae599249c6a7fc5d1d2
+#: dfe26e02f78541008107fc9709cfeed4 model.rst:43 model.rst:70
+msgid "版本信息"
+msgstr ""
+
+#: ../../source/Storage 0ea7d2a49a604099bdcf0075e116759e model.rst:44
+msgid "区块结构定义版本信息"
+msgstr ""
+
+#: ../../source/Storage 7acc7374578e4e4a858f93f190d00833 model.rst:45
+msgid "父区块哈希"
+msgstr ""
+
+#: ../../source/Storage 5ecf03469a904e4e8d765c5cb7b22b7d model.rst:46
+msgid "父区块哈希值"
+msgstr ""
+
+#: ../../source/Storage 9a57117e012a4710a92cbedb9afbcca8 model.rst:47
+msgid "区块哈希"
+msgstr ""
+
+#: ../../source/Storage 427ae2b846c0496dbcccbe06e823733a model.rst:48
+msgid "区块内容的哈希标识"
+msgstr ""
+
+#: ../../source/Storage 9dcd2347f9ee4ce096746a80c0e16504 model.rst:49
+msgid "区块号"
+msgstr ""
+
+#: ../../source/Storage 7418029bd5bb4a45bb40c8dfe31f2607 model.rst:50
+msgid "块高度"
+msgstr ""
+
+#: ../../source/Storage da12d42b61c446b5bc8bedac44eca7e6 model.rst:51
+msgid "区块时间戳"
+msgstr ""
+
+#: ../../source/Storage 2c0d1ce4e880403b87f9ee54535b7820 model.rst:52
+msgid "主节点构造区块的近似时间"
+msgstr ""
+
+#: ../../source/Storage 28268e10f0b54e47a65005affdeeebe2 model.rst:53
+msgid "合约状态哈希"
+msgstr ""
+
+#: ../../source/Storage 52bac28a4a2e4548b1760a51cdbfd051 model.rst:54
+msgid "所有合约账户状态的哈希标识"
+msgstr ""
+
+#: ../../source/Storage b67b3f7281a04220bbfec35f160065d7 model.rst:55
+msgid "交易集哈希"
+msgstr ""
+
+#: ../../source/Storage 1752c5a2c463498abd4770ec83e01776 model.rst:56
+msgid "区块中收录的交易列表哈希标识"
+msgstr ""
+
+#: ../../source/Storage 9e7d53f10b8b49379e5ac785661bb3da model.rst:57
+msgid "回执集哈希"
+msgstr ""
+
+#: ../../source/Storage 1b8075bd68d54dd7955a979eef1bcea8 model.rst:58
+msgid "执行交易产生的回执列表哈希标识"
+msgstr ""
+
+#: ../../source/Storage d76d4ae44f584f93b01eab1ce0a2be34 model.rst:59
+msgid "其他"
+msgstr ""
+
+#: ../../source/Storage 87ab55c92f8445708147e2b6fe59b2f4 model.rst:60
+msgid "区块执行时间戳，区块入链时间戳等"
+msgstr ""
+
+#: ../../source/Storage 74fd96dadd9447f583370f6509d9763c model.rst:62
+msgid "区块的交易列表中存储了被收录的交易数据，每条交易包含以下字段："
+msgstr ""
+
+#: ../../source/Storage 010da7fc854142b9810d5524f2e93d48 model.rst:71
+msgid "交易结构定义版本信息"
+msgstr ""
+
+#: ../../source/Storage ddc5d4d3fe594afe96e1c9d9859f7132 model.rst:72
+msgid "交易哈希值"
+msgstr ""
+
+#: ../../source/Storage 632d10dfd27a423599920f888c9948a0 model.rst:73
+msgid "根据交易内容生产的哈希标识"
+msgstr ""
+
+#: ../../source/Storage 44bcf4ea7e63446dbe933a287afccf12 model.rst:74
+msgid "交易发起者地址"
+msgstr ""
+
+#: ../../source/Storage 05d44825e72047e59512febfbf653671 model.rst:75
+msgid "用于标识发起者"
+msgstr ""
+
+#: ../../source/Storage b1c53759b5b946a892d83055e0edf111 model.rst:76
+msgid "交易接收者地址"
+msgstr ""
+
+#: ../../source/Storage 9c2500965ee84c79940ce796ca9d4522 model.rst:77
+msgid "用于标识接收者"
+msgstr ""
+
+#: ../../source/Storage b52fbdcb8d9f486484dc0918a8fa5af1 model.rst:78
+msgid "合约调用信息"
+msgstr ""
+
+#: ../../source/Storage d1c6cc2025694f9ab81bccf466cc4c70 model.rst:79
+msgid "调用合约函数标志及调用参数编码后内容"
+msgstr ""
+
+#: ../../source/Storage 1c5d7d16efff43fbac37bc8f8a3f785c model.rst:80
+msgid "交易时间戳"
+msgstr ""
+
+#: ../../source/Storage 7bae3b123731424ab6910598d060958e model.rst:81
+msgid "节点收到交易的近似时间"
+msgstr ""
+
+#: ../../source/Storage d09d251a57bf48d8a23d1aaa36b72e96 model.rst:82
+msgid "交易保留字段"
+msgstr ""
+
+#: ../../source/Storage 4fb40d179eca47a3a47b5d2d892c9616 model.rst:83
+msgid "用于存储业务相关数据"
+msgstr ""
+
+#: ../../source/Storage 0a103dd95bef4b84a6f2062f77d37b94 model.rst:84
+msgid "随机数"
+msgstr ""
+
+#: ../../source/Storage 9fac1b3f3c9d42faabb4bf599ce00bb4 model.rst:85
+msgid "随机产生的64位整数"
+msgstr ""
+
+#: ../../source/Storage 4a9d4fbcf3b64887b5f461ddbad17914 model.rst:86
+msgid "用户签名"
+msgstr ""
+
+#: ../../source/Storage 1812bfb9cd864fb6a467fbc63e4883c9 model.rst:87
+msgid "用户对交易内容签名生成的签名信息"
+msgstr ""
+
+#: ../../source/Storage 518f00f59cd44355a975738dcc175594 model.rst:90
+msgid "K/V型数据"
+msgstr ""
+
+#: ../../source/Storage 61935627de5046078466c970e184881b model.rst:92
+msgid "K/V型数据主要包括区块链元数据、账户数据以及合约数据："
+msgstr ""
+
+#: ../../source/Storage b520917154714bee8f3e672137129f4f model.rst:94
+msgid "**区块链元数据** ：区块链元数据存储当前链高度、交易数量、索引信息等辅助信息；"
+msgstr ""
+
+#: ../../source/Storage eba39c11233e4a5e9c8311abf3764773 model.rst:95
+msgid "**账户数据** ：账户数据包含所有账户信息，包括普通账户和合约账户；"
+msgstr ""
+
+#: ../../source/Storage eb1e7dad5e094b2cb6bcc8da41d44b50 model.rst:96
+msgid "**合约数据** ：合约数据存储了合约的具体信息，包括合约源码与所有合约内部数据，存储于合约数据库中。"
+msgstr ""
+
+#: ../../source/Storage 37c1028f1fcf4be49a35f9d4e1145dc1 model.rst:98
+msgid "与比特币系统采用UTXO模型不同，平台采用账户模型来表示系统状态。当一笔执行交易结束后，会更改相应账户的状态，例如某用户A发起一笔合约调用交易，使得某合约中的变量a的值由0变为1，并持久化到合约账户数据库中存储。"
+msgstr ""
+
+#: ../../source/Storage 6f5389dc039b4429a2e015228d642dc9 model.rst:100
+msgid "因此，每一笔交易的执行，即意味着账户状态的一次转移，也代表着区块链系统账本的一次状态转移。相对于创世状态，最新的区块链账本状态被称为世界状态。"
+msgstr ""
+
+#: ../../source/Storage 7ab3c43e64b140d9b29345805b530b20 model.rst:102
+msgid "合约账户定义"
+msgstr ""
+
+#: ../../source/Storage c152d497a5314b0f920ac1ffaac02a7a model.rst:110
+msgid "合约地址"
+msgstr ""
+
+#: ../../source/Storage 875735562cd44bab91909e76a0ac4033 model.rst:111
+msgid "用于标识合约账户的唯一标识"
+msgstr ""
+
+#: ../../source/Storage f339e67312a84e7bb2ca2304d51159e7 model.rst:112
+msgid "合约存储空间哈希"
+msgstr ""
+
+#: ../../source/Storage 7652985588724f258bd3a46bbf7115f0 model.rst:113
+msgid "利用Merkle树计算合约存储空间所得的标识"
+msgstr ""
+
+#: ../../source/Storage ab2d9e1a839644caa052482c42c72da1 model.rst:114
+msgid "合约代码哈希"
+msgstr ""
+
+#: ../../source/Storage d15d6f60a10c42aabe0618460f2dbabd model.rst:115
+msgid "合约可执行代码哈希产生的标识"
+msgstr ""
+
+#: ../../source/Storage 51bb7319aa0a4be4a0d096a80d7ce22c model.rst:116
+msgid "余额"
+msgstr ""
+
+#: ../../source/Storage 9c02cd13c78440fc8a2e69861d2ffd95 model.rst:117
+msgid "账户余额"
+msgstr ""
+
+#: ../../source/Storage 42a17caf142f42ae9fdba06b9897f33b model.rst:118
+msgid "创建者"
+msgstr ""
+
+#: ../../source/Storage 14f31b3b96ab43aea4ea90e71e2c6307 model.rst:119
+msgid "创建该合约的账户地址"
+msgstr ""
+
+#: ../../source/Storage 580781259d7141549c61a157b8fc61b9 model.rst:120
+msgid "创建区块高度"
+msgstr ""
+
+#: ../../source/Storage ccdf34c320584321b02a17db135539f5 model.rst:121
+msgid "合约被部署时的区块高度"
+msgstr ""
+
+#: ../../source/Storage 01c15dbf41284190918a607435d8fbcc model.rst:122
+msgid "合约状态"
+msgstr ""
+
+#: ../../source/Storage c785df5a7f9648078804ada6f32c9165 model.rst:123
+msgid "当前合约的可访问状态（正常或冻结）"
+msgstr ""
+
+#: ../../source/Storage 12cad78d8a8e426dbad0e9ee22d7a5ec model.rst:125
+msgid "除以上数据外，合约账户还有两个数据字段：合约源码以及变量存储空间。合约源码就是一段用字节数组编码的指令集，每一次合约的调用其实就是一次合约代码的运行。合约内部定义的变量则会被存储在合约所属的存储空间中。一个简化版的合约账户结构如下所示："
+msgstr ""
+
+#: ../../source/Storage d8d493eced0b466db7f5a82b6e85e267 model.rst:127
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/Storage 6c247dd3df0a43c2abc22a9f7412eee1 model.rst:142
+msgid "image0"
+msgstr ""
+
+#: ../../source/Storage d8fd4798639a4142978856e022791e2a model.rst:130
+msgid "存储模式"
+msgstr ""
+
+#: ../../source/Storage 5f89dc67a48e48a486a4a3537d2e1fa0 model.rst:132
+msgid "为了突破区块链系统的存储瓶颈，平台自研混合存储引擎，针对不同的数据类型设计相应存储模式。"
+msgstr ""
+
+#: ../../source/Storage 0070859946bb4c69a2690939473c7487 model.rst:134
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/Storage a5c9286b426f4107ac3bd432a5709f52 model.rst:143
+msgid "image1"
+msgstr ""
+
+#: ../../source/Storage ae77545ea7f14064bdb05b353ae375c6 model.rst:136
+msgid "针对顺序型的区块数据，设计区块链专用存储引擎Filelog；针对随机性较强的K/V型区块链状态数据，选用具备很高随机写顺序读性能的存储引擎LevelDB，并设计多级缓存机制Multicache，实现状态数据的高效存取，以此保证在数据量不断增大的情况下，系统读写性能不受影响。"
+msgstr ""
+
+#: ../../source/Storage b507d31e40de467199f654796036ac1c model.rst:138
+msgid ""
+"其中，平台自研的Filelog是一种Append-"
+"only形式的数据库，用来存储区块链场景中按照区块号严格递增的数据，因此Filelog的基本操作仅包括read/write两种。Filelog具有顺序写、随机读的特点，相比于LevelDB，Filelog对区块数据写入性能的提升高达90%。"
+msgstr ""
+
+#: ../../source/Storage 906dcd58930c4f2fa6cad90152615406 model.rst:140
+msgid "另外，针对不同的数据库类型设计并提供适宜的文件写入磁盘的数据条数可调节机制，保证了异常情况恢复的数据完整性，提供在服务器宕机重启的情况下的数据恢复和一致性保障。（可配置是否开启，默认为开启状态，性能降低较明显）"
+msgstr ""
+

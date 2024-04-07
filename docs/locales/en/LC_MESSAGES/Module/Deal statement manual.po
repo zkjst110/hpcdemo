@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Module/Deal 3fa252d4687542d0b5416ce6f126c3ba manual.rst:4
+#: statement
+msgid "交易证明使用手册"
+msgstr ""
+
+#: ../../source/Module/Deal 0f629e09d0d04edf94569878f89402c4 manual.rst:7
+#: statement
+msgid "1. 引言"
+msgstr ""
+
+#: ../../source/Module/Deal e20821787f3c457b84434f6b3d119772 manual.rst:10
+#: statement
+msgid "1.1 编写目的"
+msgstr ""
+
+#: ../../source/Module/Deal 5b97c91be96b439d83685bb3de02342f manual.rst:12
+#: statement
+msgid "提供交易证明的使用方式"
+msgstr ""
+
+#: ../../source/Module/Deal b679d50dd69f49c491632ac26747e748 manual.rst:15
+#: statement
+msgid "1.2 术语"
+msgstr ""
+
+#: ../../source/Module/Deal e262637594aa4b289f0559ccbc6898fc manual.rst:18
+#: statement
+msgid "英文"
+msgstr ""
+
+#: ../../source/Module/Deal 4b53258db6f64c16bfa39730bff36fd5 manual.rst:18
+#: statement
+msgid "中文"
+msgstr ""
+
+#: ../../source/Module/Deal acb48761d4844776ad594cd571893ace manual.rst:18
+#: statement
+msgid "含义"
+msgstr ""
+
+#: ../../source/Module/Deal 10135998989c4655a9b74c779c17089d manual.rst:20
+#: statement
+msgid "TxProof"
+msgstr ""
+
+#: ../../source/Module/Deal 3c8f1f3a724d4dd39cb6e51296c65070
+#: cb9026b21aa94fdc882e7303cd2c1d74 manual.rst:20 manual.rst:32 statement
+msgid "交易证明"
+msgstr ""
+
+#: ../../source/Module/Deal 7eb6af65e66b451a96e37323c50324f9 manual.rst:20
+#: statement
+msgid "对应交易的证明路径，可用于验证交易在对应区块的存在性"
+msgstr ""
+
+#: ../../source/Module/Deal 2fd94d3f947e44a8abdc36b6b2845450 manual.rst:24
+#: statement
+msgid "2. 操作说明"
+msgstr ""
+
+#: ../../source/Module/Deal efc3e6bec1134d0dbae992f08a3e861d manual.rst:27
+#: statement
+msgid "2.1 生成交易证明"
+msgstr ""
+
+#: ../../source/Module/Deal 1731b434327b4d16bfd96a07b1cd4484
+#: 9ed9f2dfb3dc41d0865ecd5994825b45 manual.rst:30 manual.rst:65 statement
+msgid "RPC方法"
+msgstr ""
+
+#: ../../source/Module/Deal 5006a1cad8bc4d4bb3ffb34d72897926
+#: d832d6e6c8554e94904cfdfed3b0030e manual.rst:30 manual.rst:65 statement
+msgid "参数"
+msgstr ""
+
+#: ../../source/Module/Deal 2a6e6b95e6504049afd58ec1432c1d31
+#: 962d67cde41c40deb209f4d7b314fd29 manual.rst:30 manual.rst:65 statement
+msgid "返回值"
+msgstr ""
+
+#: ../../source/Module/Deal c20d40ed07cc4204b43b4300f742505b manual.rst:32
+#: statement
+msgid "proof_getTxProof"
+msgstr ""
+
+#: ../../source/Module/Deal bd15719b57454c6ca898ec5d010cbd29 manual.rst:32
+#: statement
+msgid "hash: 交易哈希"
+msgstr ""
+
+#: ../../source/Module/Deal ec218daa80684fca81e6db036eba6e42 manual.rst:36
+#: statement
+msgid "TxProof结构体"
+msgstr ""
+
+#: ../../source/Module/Deal 32b571441fc846719b1d4f8ab47172bc manual.rst:55
+#: statement
+msgid "TxProof结构体是一个MerkleProofNode的列表，MerkleProofNode有两个元素："
+msgstr ""
+
+#: ../../source/Module/Deal 95e7e2f517e84ee2ba217e3425a7cf62 manual.rst:57
+#: statement
+msgid "hash：表示该节点的hash值"
+msgstr ""
+
+#: ../../source/Module/Deal eeffb66a545f4c349ed523b6380ffa55 manual.rst:59
+#: statement
+msgid "index：表示该节点处于多叉树的位置"
+msgstr ""
+
+#: ../../source/Module/Deal 04b6d587b31c431488537273262a7a53 manual.rst:62
+#: statement
+msgid "2.2 验证证明"
+msgstr ""
+
+#: ../../source/Module/Deal b2cb0c6e585744a0864b1326a058615e manual.rst:67
+#: statement
+msgid "p roof_valid ateTxProof"
+msgstr ""
+
+#: ../../source/Module/Deal f3ea540619184c6aa4dd5e4ffe3447f1 manual.rst:67
+#: statement
+msgid "{proof：交易证明;hash: 交易哈希;txRoot：交易所在区块的txroot;}"
+msgstr ""
+
+#: ../../source/Module/Deal a7e1332bba724d86a15bae3812ae599c manual.rst:67
+#: statement
+msgid "是否验 证成功"
+msgstr ""
+
+#: ../../source/Module/Deal 4cd3f86576f54c0bbabf64be3c8752ae manual.rst:73
+#: statement
+msgid "3.补充"
+msgstr ""
+
+#: ../../source/Module/Deal a43256c614ff4eb29a4bb50f984ce39f manual.rst:75
+#: statement
+msgid "从hyperchain2.7.0的数据开始支持交易证明，之前版本不支持交易证明"
+msgstr ""
+

@@ -1,0 +1,1486 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Data 32f9257c3b184feb99cd98a0383d3e28 Monitor.rst:2
+msgid "数据监控"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:5 ab553d78e1c0472b8fdc93d81b203fc9
+msgid "功能概述"
+msgstr ""
+
+#: ../../source/Data 794e8bc2d184419cae98daf1a8a38201 Monitor.rst:6
+msgid "Metrics数据监控平台提供一站式的数据可视化监控服务，实现数据的自动化采集及展示，帮助用户轻松了解底层平台运行情况，及时识别并处理异常。"
+msgstr ""
+
+#: ../../source/Data 755c232446d3489eb3a7ff390f1554e4 Monitor.rst:8
+msgid "数据监控平台由数据生成层Hyperchain、数据监控层Prometheus以及数据展示层Grafana三部组成。Hyperchain负责生成需要监控的数据并推送到Prometheus服务器中；Prometheus负责存储Hyperchian推送出来的数据，并对外提供读取接口；Grafana：负责从Prometheus服务器中读取数据，并在web上进行展示。"
+msgstr ""
+
+#: ../../source/Data 2d26b2375b054ad3997c745dfa4555f0 Monitor.rst:10
+msgid "平台现已支持100+业务及系统层面的监控指标，指标开关灵活可配，具体可参考附录中的数据监控指标清单。"
+msgstr ""
+
+#: ../../source/Data 2d7ca111b25243a3aa59e854757c595c Monitor.rst:13
+msgid "安装及初始化"
+msgstr ""
+
+#: ../../source/Data 95e5238d27e842c4adb3b8acb6a39ce5 Monitor.rst:14
+msgid "为了能够完整的使用并展示数据监控的数据，除了需要应用层（即趣链区块链平台）适配并暴露一些监控数据之外，还需要下载并使用额外的两个组件：Prometheus（用于记录监控数据）以及Grafana（用于展示监控数据）。"
+msgstr ""
+
+#: ../../source/Data 46ca5f20bba24a4688938676c55f2458 Monitor.rst:17
+msgid "安装Prometheus"
+msgstr ""
+
+#: ../../source/Data 375cb4d7d11b4b6c861fb245b34747e2 Monitor.rst:19
+msgid "**Prometheus**"
+msgstr ""
+
+#: ../../source/Data 2d68dafb6b85420987f632cd0c5236f1 Monitor.rst:21
+msgid "Prometheus是一种时序数据库（TSDB, time-series database），用于记录平台推送出去的监控数据。"
+msgstr ""
+
+#: ../../source/Data 6d11225e5a0742ea9d81f08ae4d797f9 Monitor.rst:23
+msgid "详细介绍请参考：https://prometheus.io/docs/introduction/overview/"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:25 bb4bdd29818b490e8f635135fad6d594
+msgid "安装下载请参考：https://prometheus.io/download/（建议安装最新版本）"
+msgstr ""
+
+#: ../../source/Data 016fd9bae8244304a80e68793ce27720 Monitor.rst:27
+msgid "Prometheus安装完成之后，需要配置好需要监听的区块链节点的地址与端口号，其配置文件默认为： ``prometheus.yml``"
+msgstr ""
+
+#: ../../source/Data 41e6edd622374659aa0e0f608d2d04a6 Monitor.rst:29
+msgid "**node_exporter**"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:31 aca44a6963b343f8bebc9fcac36ef93d
+msgid "如果用户希望监控系统资源的使用情况（例如CPU、磁盘、网络等），我们推荐使用Prometheus官方的工具node_exporter进行监控。"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:33 e34ea0b04f5e43478506c86f6ecfc503
+msgid "安装使用教程请参考：https://prometheus.io/docs/guides/node-exporter/"
+msgstr ""
+
+#: ../../source/Data 8452ab1d30dc4d1e8ffd1cfe8912df14 Monitor.rst:37
+msgid "安装Grafana"
+msgstr ""
+
+#: ../../source/Data 27dd0abf754945b8b1afbe7275678abb Monitor.rst:38
+msgid "Grafana是我们推荐使用的数据监控展示工具。"
+msgstr ""
+
+#: ../../source/Data 15a0814532ea43d28df0b8b626f1a66f Monitor.rst:40
+msgid "安装使用教程请参考：https://prometheus.io/docs/visualization/grafana/"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:43 e6361ac4b77d4b8f839462861c369470
+msgid "相关配置"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:44 dcec001d21644a308e4effd16b721be7
+msgid "数据监控功能是可选的，即可以通过节点开关配置来决定节点是否启用数据监控，相关配置位于configuration/debug.toml中。"
+msgstr ""
+
+#: ../../source/Data 6fea30b0023f4485b0cf664f21e289d7 Monitor.rst:46
+msgid "平台默认不开启数据监控功能， **如果您想启用该功能，请将下述配置复制到debug.toml中，并做好相应配置**。"
+msgstr ""
+
+#: ../../source/Data 697ac1163a3146b6b2091bfa2b8ccf1a Monitor.rst:48
+msgid "``metrics.enable``：是否开启监控服务(true, false)；"
+msgstr ""
+
+#: ../../source/Data 5f34b814913b4de29b7e334e59d37fcf Monitor.rst:49
+msgid "``metrics.enable_expensive``：是否开启资源消耗较大的监控服务，**实际不建议开启，需谨慎选择**；"
+msgstr ""
+
+#: ../../source/Data 45c30ae3e54444728afef17b33cfeeb8 Monitor.rst:50
+msgid "``metrics.port``：监控服务端口。"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:62 efa7239724e7476da0aac6e7f7dff2e7
+msgid "参考教程"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:64 d1e2b9be93004ae9b990cd27c4cda251
+msgid ""
+"搭建简单的Linux服务监控：\\ `参考教程 "
+"<https://blog.csdn.net/xuqide77/article/details/107850386?utm_medium=distribute.pc_relevant"
+".none-task-blog-"
+"BlogCommendFromBaidu-6.control&depth_1-utm_source=distribute.pc_relevant"
+".none-task-blog-BlogCommendFromBaidu-6.control>`_\\"
+msgstr ""
+
+#: ../../source/Data 9b3fe4e45e6f43b6ada17d434cb6821d Monitor.rst:68
+msgid "数据指标"
+msgstr ""
+
+#: ../../source/Data 333ab16f99f04f5280692734d45e5e54 Monitor.rst:71
+msgid "指标说明"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:73 b5729ff478974bc1a1b3a09303bf2cc3
+msgid ""
+"数据指标按用途不同分为外部指标和内部指标；按对平台性能影响程度又分为normal级别与expensive级别。其中，normal级别的指标不影响平台的运行，"
+" **expensive级别的指标打开后会降低平台整体的性能，因此需要用户谨慎选择开启。**"
+msgstr ""
+
+#: ../../source/Data 1176079f083040adb1845ddad31b7b08 Monitor.rst:75
+msgid "**有关于系统资源的使用情况，建议使用Prometheus官方推荐的node_exporter工具进行监控**。"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:79 e07c6cbf50da476e9eb09fb0c7e1297f
+msgid "系统相关指标"
+msgstr ""
+
+#: ../../source/Data 1d50ffb2f6cc4ca2b78af2dd8df78cf3 Monitor.rst:81
+msgid "所有指标以\"flato_namespace\"（“flato”为趣链区块链平台新版英文简称）为前缀，例如在global这namespace下所有下述指标都要加上前缀\"flato_global\"（“flato”为趣链区块链平台新版英文简称）。"
+msgstr ""
+
+#: ../../source/Data 23eb78ad5f5449e7a9c4068f6c89a995
+#: 35215f0f8ade43e18b38cab2317307b0 4320bd5261564cb093a9538500c659ec
+#: 61198dcef6dc491aaad091968e54728b 8ffc3fddcad042bd96e500d108df6376
+#: Monitor.rst:87 Monitor.rst:129 Monitor.rst:311 Monitor.rst:356
+#: Monitor.rst:464 Monitor.rst:541 Monitor.rst:629 Monitor.rst:662
+#: Monitor.rst:698 Monitor.rst:746 c44178b3f5bc4eafab5ffd0a6e0bdf03
+#: c966ccb12b2e4d82bf5c11a6b19bac54 e47abe8c7e804f4d95014ad3e3f0bb29
+#: e735250b430f4a029887ce66947d8afc f35910bc9a46406ca753a2dd535c77a9
+msgid "名称"
+msgstr ""
+
+#: ../../source/Data 0dcb415f3258484792666f404d219009
+#: 5a940eb8ecb64d56bfe27427f4592a51 6bc7a2dd75184305896bf6e71290b121
+#: 6c69a8f1c17b47cb8d23d64a61f77494 983174b11bec4858a1f8998e3977414a
+#: Monitor.rst:88 Monitor.rst:130 Monitor.rst:312 Monitor.rst:357
+#: Monitor.rst:465 Monitor.rst:542 Monitor.rst:630 Monitor.rst:663
+#: Monitor.rst:699 Monitor.rst:747 a77f8d4c2f9947c3b3a54f187a736002
+#: e7d728eeac694ab188883fc786651d4d f1eae8d593904b1085975416e75b6622
+#: f8d1924d29db4784b020eeeb4452b23d ff004f8072c04392ba8bf0ac54c0ee58
+msgid "类型"
+msgstr ""
+
+#: ../../source/Data 00da27f986174722a1f2d105d8c0cfd9
+#: 020e08d009e545de9f16d3f606f46007 08b543a18cbd48ca860c262c2491fa09
+#: 7397dd0e12cb4f3d8139b32b8a4abfb7 7feceaf1b8d1407ea3607a4d3b2596d6
+#: 810109e18d05420eb1ea8c90474f24d0 98ae1289c0b44f96af9e6a3ca8075ac6
+#: 9ac504ffa9b94bdbbaa1b587843297cc 9b9603a16d6c442584df94bdc3105688
+#: Monitor.rst:89 Monitor.rst:131 Monitor.rst:313 Monitor.rst:358
+#: Monitor.rst:466 Monitor.rst:543 Monitor.rst:631 Monitor.rst:664
+#: Monitor.rst:700 Monitor.rst:748 a55c6cedff464ece8c2c6f9c4e0d6499
+msgid "级别"
+msgstr ""
+
+#: ../../source/Data 32daf1bc31d54b669630f7f205a753ec
+#: 3c673c637a1248a5a3a74aefbbe8cfc3 3d3e2a22ff8d47c8b08e4c08e6b497ea
+#: 4d4eacf47117495dbf56ae8a7adcaa80 88fcc0401e314d40bbee76e2a19e3286
+#: 9a46c4c120c3444f9d223f99fec01326 9b5752f8b87d43b09317510a5a402d3b
+#: Monitor.rst:90 Monitor.rst:132 Monitor.rst:314 Monitor.rst:359
+#: Monitor.rst:467 Monitor.rst:544 Monitor.rst:632 Monitor.rst:665
+#: Monitor.rst:701 Monitor.rst:749 a5e84b3b43da4ded9dae43d392b95c87
+#: cc4e1f9d58204b2eb3e1a73eafd1f24e e841c231b20344ce9fcd8d3c3c7bba8c
+msgid "描述"
+msgstr ""
+
+#: ../../source/Data 3a06885c0ff94459b786e224851ad629
+#: 544bdd29daa744ac8ff38011108a3f21 57c8dd3666ea4402b8f82dcbb57f4ff8
+#: 86a55cfcbb9c4c1da483fab935c29b67 Monitor.rst:91 Monitor.rst:133
+#: Monitor.rst:315 Monitor.rst:360 Monitor.rst:468 Monitor.rst:545
+#: Monitor.rst:633 Monitor.rst:702 Monitor.rst:750
+#: ce9540f1ae644d978aa36d79525e108d d3709df0bfda44e59570464732ec48d5
+#: d729b4eac4c44ef5b8343491e17082c3 de1837fff6f346b5b0af971ac25e77aa
+#: ff0d65ab6fce4e5183d9d41442be084f
+msgid "备注"
+msgstr ""
+
+#: ../../source/Data 27e9bae3162f419e91ad701227a24bce Monitor.rst:92
+#: Monitor.rst:514 d1239f75d1eb4129a105e88d1a39de6c
+msgid "execMgr_commit_txs"
+msgstr ""
+
+#: ../../source/Data 03c295390081411ca4f130478d3140ea
+#: 0a27a182ceb0476bb601af813e8c8921 24beb94af0204a57b652da4f970125eb
+#: 2c6c39ea22404711a72f754860ae2352 2dcf2d6a626f4018a4c0736220f278ac
+#: 3347873c9660461ca282cc2af3e86533 340c7434eca44a42a4349bde3d8487b2
+#: 39520524607f4c28a7aefdda8e3d9674 3cad17c1899b440daa912482d06bfa95
+#: 436de4203c764eca97b0408abdeceb4a 4dd84f562f9e4ec4bd34d941b0a84be2
+#: 5d1a327a0bb24aef97cc45a30b0fe4ac 6250cc7e92274cc79e12814d03c135c9
+#: 63381d6fca4844cd9a5755649bdd516a 64821bb3e7174112b358cdd2e18391c9
+#: 66fa013ddd484ceb9a11e26816b98834 6fd1e251d6b2465a9b0831a6f061cc79
+#: 7641a6fe6728450abf641e689597b01d 764f99a488354974bcc7ae000b04ff0a
+#: 7787e48977fe49eaa1fb8f535179d1aa 80e0e9f3ee6f4d15b746201814bdefcd
+#: 82f9e2ec008a477eb83f8cec8e90614a 8910ad44164b490d8bbdfaf64bd665f9
+#: 9271f30982e347ce94635a0e6d85b2dc 96490709590a41e08f7768bea1441566
+#: 96f56274b562484ab5143245926a8bb8 97d8cfe7480b4f6db91a58070b97e472
+#: 999ce77ef44e446d906ca4dce2ed482b 9ac5ea40faa245468769ed1899f957f4
+#: Monitor.rst:93 Monitor.rst:200 Monitor.rst:205 Monitor.rst:210
+#: Monitor.rst:215 Monitor.rst:240 Monitor.rst:250 Monitor.rst:255
+#: Monitor.rst:260 Monitor.rst:265 Monitor.rst:270 Monitor.rst:275
+#: Monitor.rst:280 Monitor.rst:285 Monitor.rst:290 Monitor.rst:295
+#: Monitor.rst:317 Monitor.rst:322 Monitor.rst:475 Monitor.rst:480
+#: Monitor.rst:515 Monitor.rst:547 Monitor.rst:552 Monitor.rst:557
+#: Monitor.rst:562 Monitor.rst:567 Monitor.rst:572 Monitor.rst:577
+#: Monitor.rst:582 Monitor.rst:587 Monitor.rst:592 Monitor.rst:602
+#: Monitor.rst:607 Monitor.rst:612 Monitor.rst:617 Monitor.rst:667
+#: Monitor.rst:671 Monitor.rst:675 Monitor.rst:679 Monitor.rst:683
+#: Monitor.rst:687 Monitor.rst:704 Monitor.rst:709 Monitor.rst:777
+#: Monitor.rst:787 Monitor.rst:792 Monitor.rst:797
+#: a6d3ba6bab7c4abcb517599f2f2f269f a7bbe19e780c4bdd97dffa0a7ed4be29
+#: bcf112e1c46a4f329af1526046559877 bfa04893a2054a6ba5d23c1be6beed01
+#: bfca82ad653e48d9bafad98693d7479e c22299599b8a438eafa9e1b006932fc7
+#: c35b23918c444fb79e31eefca136a67a c5afa4ff5a564de1897511c039caf99c
+#: c97951df1166411d933448bb86ff05d9 cf65928d7fea4977ac1f0eec368e50ab
+#: d5cf693166094bf391e71a461495416f d684912662414b1fbd455900b06790e0
+#: dbb6ae0979e24ec49c2d7f81dc0ebd34 e36b10ce8da64c3a9eda441be1298230
+#: e44fc754108d4ece92f3b2d1d42b87ce ecfc43567e4c42129e29b89f5e6c206c
+#: f7a30c375d4c43c58f7ad7da534402c3 f8def4c29f7d48558f88d49b3a0a6af1
+msgid "counter"
+msgstr ""
+
+#: ../../source/Data 0118f9faabb04cf78e4d8d32c746f568
+#: 024d57f491f145bda7c82fc186a7822e 04913f9f27f54fb3afcedc4204aa5664
+#: 0582729379bc432aa85587f6fcb975f5 05d5717c6df24f2e98f81631e2da9d7d
+#: 06112c209373426eb7bea8fdca33c0a9 0629d97e40b5428180e13a1b9f308a08
+#: 068f8124fd19498db38f4a6e6fc33a37 07727dfb1dd74cfea40ce406a8681252
+#: 095bdc05a2f84a56bf68e31dae90cbc3 0b3fe02e63b7476d9077f4f7867105b1
+#: 0d3d8087a79f433890bb4f70dd34af14 10b8ed4916594e5a8c0afdae9857a4ad
+#: 140543d8fc264409aa0046a09aff89b7 17706cc9c50e40de93a5940b1d312215
+#: 1a0a10888ab1407781ce1d19e2bf3127 1a33448c1a64450290684e8a8c02613c
+#: 1f3e7295e50e43398e85f1aef54958ec 1fde17f8c4b34c919d53edf4663a29b2
+#: 21e76d7ff94d412096e46e9d8e2ada00 250e41e7c03b4fa79138d377b2a0dc74
+#: 252e3ca7cd384092aa5ac9c39eb4ccf2 254d4fc523244f858f4785495b864cc9
+#: 26941cecada34b0491072d8807a05e11 26e9781615294ef59d7e311dd0e8bffe
+#: 287db720643b4993b7d801f6eac5bfe8 28efb2fe178d435bbbce0625d2a91726
+#: 2b1eb9fd4ab843d0be8d37d7311c239c 2c0facba59d64884bae24bfe9ba7747f
+#: 2d6a0ca14c964dfa8e3e353d5f32bd35 2ec080c203434d27a15cbba1bd9902a8
+#: 2f4d43d0b5754c45aa2c6884714cf268 2fb41ca6800641c8a0bd35097ff9965d
+#: 31b898024abd48e0b863b37361960d4c 3292e605624142129e2cae78bd2b557c
+#: 348fc2321ce54db18c275f211fba3215 3644ad9c38304d488ff0efe12bc4ae0e
+#: 3b0a13de56e34cd7b31cb39f33cb246b 3d8195219a2c4dd487b5cfe38948307c
+#: 3f936a7dacf04350a7dbe93da4466756 3fe17d85623b463e8f4d3bfdf59356bc
+#: 416750fbd3184b0f99ff6f407f1bef62 43bf2c24c4944b5fa6df5272cfd0c8d3
+#: 4478c39dcc29406bb90ee8c587f548c7 46c4615068424169861439e178dbfd5a
+#: 48e922dee3a14cd7a669f31eb3e9dcd9 4a58e7c4c86740318bff729fc976c385
+#: 4ab877134f284293ad28bc06d1e6313b 4ac5ac2963f144e7935c9e3fc655782c
+#: 4b71d2bf45664351a8e7057a35ef15fa 4ebe1c70ee5541ac8a10a2aa61066b7d
+#: 4fc5977b7c7446d4a1cdc6f4be36934c 51416a0ad40c464bbe477505996cbc60
+#: 5181bdf5281d4e348a8f9e7eeaf96503 53a535ba80c54e76866ded5049e42776
+#: 540c4f9877884e73b4c84e238da7a89b 589ca5bb158146a9918641fe08183d7c
+#: 5ca2562fdb6f42ada4f176590d1e615b 5da67afe11a245cd9375e39a446628b3
+#: 5e4ea41d3e0542c982730e07e7c307fa 6079088e3da64ff6890c27a7e7d4524e
+#: 626576991ec342248043e2b9193b041e 631fce992cc74a7699e0dc583712adad
+#: 64c4048830d949d29cc5ef3b217545c0 64cb3c2d000c40a1a96fb0b382602ec3
+#: 64f69602b6d34e28b62e10095c81d87d 6774af94d93b456b968f0a356c0f8e17
+#: 687243a294574694a5ccbbe0f199d39f 6a2a0495d38e4e99aea149bb30bdf6f8
+#: 6c872f9069884d52aa23534887ac1620 7313f38de9784717aec4e9364a825a94
+#: 78980377ff9a4454a020518589229df3 78f420ca9efa4e34856ff602feafa23b
+#: 7988eccb5da242b29bfe3312a755df40 7e1fa26441c04750ad90e49b00e1b2b8
+#: 7fc79dcbcc8a4c9aa34ce6721667655e 7ff87b899dc0489395d019420b3653d3
+#: 801cb2f1639449dd9deb64eaaa3b7215 80d9be3e8872480b92ca0f9a1ff3d869
+#: 83b567c1d8c3401eba26ea7fcf6776cb 8945a820befb416380799f45566f2dc0
+#: 899129d1e40444d59d9acc73d5f3dcf8 8f88481d50c04dafa01dca73c677a524
+#: 90d4df73adea43258eab9b8c531f0c55 95e43a7c28154f55a752a2c1d6315d65
+#: 960818ccc56542c8a1461dc6bd1f678a 96daf359b0fd44ccb85ab71000690b77
+#: 9789ec5297a3453db433eaf98cc89703 9acb87868d154f4582f59e3d3a753d7b
+#: 9fd5b1c35836443b9c3b1a18243bf235 9fe1104f127642cfae0dd977ccb93aea
+#: Monitor.rst:94 Monitor.rst:99 Monitor.rst:104 Monitor.rst:114
+#: Monitor.rst:136 Monitor.rst:141 Monitor.rst:146 Monitor.rst:151
+#: Monitor.rst:156 Monitor.rst:161 Monitor.rst:166 Monitor.rst:171
+#: Monitor.rst:176 Monitor.rst:181 Monitor.rst:186 Monitor.rst:191
+#: Monitor.rst:196 Monitor.rst:201 Monitor.rst:206 Monitor.rst:211
+#: Monitor.rst:216 Monitor.rst:221 Monitor.rst:226 Monitor.rst:231
+#: Monitor.rst:236 Monitor.rst:241 Monitor.rst:246 Monitor.rst:251
+#: Monitor.rst:256 Monitor.rst:261 Monitor.rst:266 Monitor.rst:271
+#: Monitor.rst:276 Monitor.rst:281 Monitor.rst:286 Monitor.rst:291
+#: Monitor.rst:296 Monitor.rst:318 Monitor.rst:323 Monitor.rst:328
+#: Monitor.rst:333 Monitor.rst:338 Monitor.rst:363 Monitor.rst:368
+#: Monitor.rst:373 Monitor.rst:378 Monitor.rst:383 Monitor.rst:388
+#: Monitor.rst:393 Monitor.rst:398 Monitor.rst:403 Monitor.rst:408
+#: Monitor.rst:413 Monitor.rst:418 Monitor.rst:423 Monitor.rst:428
+#: Monitor.rst:433 Monitor.rst:438 Monitor.rst:443 Monitor.rst:453
+#: Monitor.rst:471 Monitor.rst:476 Monitor.rst:481 Monitor.rst:486
+#: Monitor.rst:491 Monitor.rst:501 Monitor.rst:506 Monitor.rst:511
+#: Monitor.rst:516 Monitor.rst:521 Monitor.rst:526 Monitor.rst:548
+#: Monitor.rst:553 Monitor.rst:558 Monitor.rst:563 Monitor.rst:568
+#: Monitor.rst:573 Monitor.rst:578 Monitor.rst:583 Monitor.rst:588
+#: Monitor.rst:593 Monitor.rst:603 Monitor.rst:608 Monitor.rst:613
+#: Monitor.rst:618 Monitor.rst:636 Monitor.rst:641 Monitor.rst:646
+#: Monitor.rst:651 Monitor.rst:668 Monitor.rst:672 Monitor.rst:676
+#: Monitor.rst:680 Monitor.rst:684 Monitor.rst:688 Monitor.rst:705
+#: Monitor.rst:710 Monitor.rst:715 Monitor.rst:720 Monitor.rst:725
+#: Monitor.rst:730 Monitor.rst:735 Monitor.rst:753 Monitor.rst:758
+#: Monitor.rst:763 Monitor.rst:768 Monitor.rst:773 Monitor.rst:778
+#: Monitor.rst:783 Monitor.rst:788 Monitor.rst:793 Monitor.rst:798
+#: Monitor.rst:803 Monitor.rst:808 Monitor.rst:813 Monitor.rst:818
+#: Monitor.rst:823 Monitor.rst:828 Monitor.rst:833 Monitor.rst:838
+#: Monitor.rst:843 Monitor.rst:848 Monitor.rst:853 Monitor.rst:858
+#: Monitor.rst:863 Monitor.rst:868 Monitor.rst:873 Monitor.rst:878
+#: Monitor.rst:883 Monitor.rst:888 a0adacd8f2894601bfac0ad7cfd9cc23
+#: a1788db53d5f4af98bde09cafa31db2c a44b169da75540148fe3926b731e56ac
+#: a7a5df073f8f44d4a35db5d13fa05087 a8d2687cc98c4ef780eb5c93cfebf0bc
+#: aa6952a30f734c7ca77b33beb9105688 abfc262002e44bbd8401b3f6cb86bd10
+#: ac714ccb60f9462b94a6770e070079bc afea9f7569424f91a651aa9aea5b4dd8
+#: b29784a3f6f74ac2ac5cae3b5a9e7b4f b72b1a58feaa475b8ada63d8d22a2db1
+#: b9cf67917e4f47028ccda1b42de94bc8 b9dfc0a5e5f5470c84e6a1c4d2191d27
+#: b9f1f119128a4e0cb1afadf1b613cc6b bd7f5be6228e4466b2b7ffb41bc3027e
+#: be2e41f94ed54532bb2862290a18fbcf c097b9ee82d64044bd2b43f275afe754
+#: c4aef2d905c24bcfaa2ac7bf2670129e c55ad31ba9ae404686821131ef7fcaec
+#: c925fcacfc3f49c2b8cb23ca12d1cee6 cac54e33dd574ee9adb6699d894f410e
+#: cada4ae714eb49ebaad9b6ad97121cf5 cbe8d640a9df49088df5c86edabb798c
+#: d89620e0f4514ed59248421ddfe6e98b de101520a57a4a09863ea57f2537a4c1
+#: df209905e43848f9bde3408939726d81 df2f85bc6ab04977ab3443d8c54a300a
+#: df4c2dee2f0e4ac2b5cd39cae3033208 e34b7f0ae83041c5a73944f499b2afe8
+#: e52fe5eea2d3494caef8ca65558f0fb5 e6300981ef8a4475a48110b996778eb8
+#: e6c8588f003b45aebec4310c40952f27 e8102dcb25da4306a02c053bbbf80ca1
+#: e97d14cc34624669b851b21f3921772d ed12474b46cd42deac316b9d1df454ab
+#: f16bdf193a204ab5ab4580b9af09dbd8 f7336f0d329a405996dd80fe01c32a7d
+#: fa48b9ca95a04b70bee685d74e798fe8 fbbc8876516a47d0b75ceb949821fa95
+msgid "normal"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:95 Monitor.rst:517
+#: bf7a4bed70b042dfbf2fe91991379e57 dba9a50c383e4c7ea8818d2e1d1df4bc
+msgid "此次启动后新增的交易数量"
+msgstr ""
+
+#: ../../source/Data 47b3d2c2e5354f2bb2a96ffc2f396914 Monitor.rst:96
+msgid "可以通过rate/irate命令计算出交易TPS"
+msgstr ""
+
+#: ../../source/Data 425153396f1e49b9b0e9cfaf33b1cd46 Monitor.rst:97
+#: Monitor.rst:499 c6cd8550dedd4587806429c8cfebacbd
+msgid "execMgr_total_blocks"
+msgstr ""
+
+#: ../../source/Data 00dc9a5f24ee4586882dcb57eef53823
+#: 038f89b2ed8248ea829e3210ce7ef9de 0692de0c9e3743f0b24e0fb0ae2b6800
+#: 0847b92c163445619b3222278a91c3ec 1fe4304e08014608b4ae9a28ce77f814
+#: 288aefbe6f3544b2b9c52972c955646f 2f557f285b8044319e000cecee64d4f6
+#: 37dce6dfb89d44e68546a8561b6ee050 3dc1228b8e5f4b7a9b03ea5ba0278637
+#: 3e3dbf5cb09f4aac92a3a0d2b206a2c1 43fcd8a265fb4baab88beb3fa32e29d5
+#: 455bfe0e148140b8872fb419cd677f91 51fa5c01facb4f8798e0ae73b8300b22
+#: 5534b9a3f3694e629fe6ca752c0ac2d9 59604dd3f5984f4f902f06ec45284b57
+#: 660d313d55754f1ca6b4888916c20a82 6bee5a1fd8da40bc9de8f28348672dcc
+#: 70a150f88b79448382ca9b73a58a7005 724a3d9b33d948d4b01606639bf9f4f8
+#: 78065f0bb60145f39f8be335e5eaff6e 7990d463335840ca8b78fa2cf2abcac6
+#: 7c30ed42d803438885b8ecc62e0bbad3 8a79720a84894fd985bb6f8d0590bda7
+#: 8ce52536b1e74afc98649c931dea25c9 8d601fe3f44e4639a259007d3b270850
+#: 90e22c2ff15943a78019b27878ce7143 91f3e3912c864367a7163a3d89c95cf6
+#: 92c1b8977e364faf8561167db58d3784 9af16cb3dff84585b047006956a311b4
+#: 9c540cfc96394994968b0af24b5ae146 9d0ad0eb57e4494b9d6d4d62b96c8693
+#: Monitor.rst:98 Monitor.rst:135 Monitor.rst:140 Monitor.rst:145
+#: Monitor.rst:150 Monitor.rst:155 Monitor.rst:160 Monitor.rst:165
+#: Monitor.rst:170 Monitor.rst:175 Monitor.rst:180 Monitor.rst:185
+#: Monitor.rst:190 Monitor.rst:195 Monitor.rst:230 Monitor.rst:235
+#: Monitor.rst:245 Monitor.rst:327 Monitor.rst:332 Monitor.rst:337
+#: Monitor.rst:402 Monitor.rst:417 Monitor.rst:422 Monitor.rst:427
+#: Monitor.rst:432 Monitor.rst:437 Monitor.rst:442 Monitor.rst:470
+#: Monitor.rst:500 Monitor.rst:505 Monitor.rst:510 Monitor.rst:635
+#: Monitor.rst:640 Monitor.rst:645 Monitor.rst:650 Monitor.rst:752
+#: Monitor.rst:757 Monitor.rst:767 Monitor.rst:772 Monitor.rst:782
+#: Monitor.rst:802 Monitor.rst:807 Monitor.rst:812 Monitor.rst:817
+#: Monitor.rst:822 Monitor.rst:827 Monitor.rst:832 Monitor.rst:837
+#: Monitor.rst:842 Monitor.rst:847 Monitor.rst:852 Monitor.rst:857
+#: Monitor.rst:862 Monitor.rst:867 Monitor.rst:872 Monitor.rst:877
+#: Monitor.rst:882 Monitor.rst:887 a0b93e4c14db4f3bb53a71d6f3bf6d70
+#: a1bad5227db9476c90bf56fa3dba1eab a43f4f17cb514a51a61c76cc60943baf
+#: a63d3059f62441a3901ef602b3d6b08c aa5d63aa39a44fbd802397abcde1ffbd
+#: aadcf7326ad54aeabcb4173bc2bdc2ad b26f2435cb714821971c30f6d2af0458
+#: bec8c555d1f7447d8ecce77a6031d045 c01a5e5722ea453b80390476a59e7f65
+#: c40f39afc54b44999fe38711c3818597 c596060d971f46048e82c1f166611971
+#: cbe062564f2845faadd26fd30473992e cce0a29e4bcf4dc7a59a31ef70c4b7ad
+#: cd979774b288481cb8ce6b788d428374 cdc65ce6f1254af2bf855f566680e0b0
+#: d6c444d93be54711af853dd0b1bdeecf d8c6d3e2de584b4fb178b8bca232fc24
+#: db5303fb3c1b491d9718991943a5adea db75b06a2a104efaa97dfe4910508f02
+#: ddc7418ca306476cb953c5d2177dd53c df343e953523465485235c603f5a2859
+#: ecd766b6836e4f90af59f0ca91e05faa f0a27a73056c45d89ff4adfc8c3741da
+#: f587f08859844280887f2db9cec24075 f690e72468084faf93dbc24790123d04
+#: f87aff781ead44d98824dd9ee85ecbc2 fb3f05f73a3642a28be19098507b8262
+msgid "gauge"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:100 Monitor.rst:502
+#: e18386f8d8f347888e7a92a3533f15da f4c2074c3da74d1ca2a63ee46e9ac7d4
+msgid "当前链高度"
+msgstr ""
+
+#: ../../source/Data 797c7f169bf64ffcaa8656583d6cd71a Monitor.rst:101
+msgid "可以通过rate/irate命令计算出区块BPS"
+msgstr ""
+
+#: ../../source/Data 7b86f533f7ef48a588d4551cb446df09 Monitor.rst:102
+msgid "rbft_batch_to_commit_duration"
+msgstr ""
+
+#: ../../source/Data 0b95a6c1f0064fb9813603ea35bcfd86
+#: 0be63a4779024179afe65f6e4443a6b2 0d1b5c1debbf4576a64d31bce8e442aa
+#: 0da632fe0ccb486aa0688abdccfdae76 1f2f0d735edd451da8c27fe481a2f290
+#: 25a5e9f0c67b48069bab49c7dbeacf90 2fefa994fea44ab79a722e5cfc3d71b6
+#: 3522b12431864f52ad2a85370256dc16 4a19bfba415c417fb8321bc709e58252
+#: 53f64a16eb1940daa50c4bd204e11309 57a78003dfed400b9ac1ca3048d92ae2
+#: 5a7f4b6b16fc44bab51a57d70c2c281b 82833d4c9af54ce9b82df1a306208059
+#: Monitor.rst:103 Monitor.rst:108 Monitor.rst:113 Monitor.rst:220
+#: Monitor.rst:225 Monitor.rst:362 Monitor.rst:367 Monitor.rst:372
+#: Monitor.rst:377 Monitor.rst:382 Monitor.rst:387 Monitor.rst:392
+#: Monitor.rst:397 Monitor.rst:407 Monitor.rst:412 Monitor.rst:447
+#: Monitor.rst:452 Monitor.rst:485 Monitor.rst:490 Monitor.rst:495
+#: Monitor.rst:520 Monitor.rst:525 Monitor.rst:597
+#: a62d9a65da02456d827f4c9081e262fb b1230686819d447b953dfa6258ca3a76
+#: b9c69ce4a572466584a5833aa9afc250 d0fa22280fb5434e87ebd54430e83184
+#: da9ec887c8344b74923554dcb2bcb760 dda79b52c0a84043971458dff09e2a2c
+#: e47569f61098471aac6a88b8a476acf1 e8c7c2efbb69413799f52f57991dd6b6
+#: ed14e42a839b4f50a862f4513ec022bf fe70596c3d0b4240ad663445483bdbf5
+msgid "histogram"
+msgstr ""
+
+#: ../../source/Data 578b9396079a46e39bc941278b0b2869 Monitor.rst:105
+msgid "共识区块处理时间（rbft从打包到提交的时间）"
+msgstr ""
+
+#: ../../source/Data 26361cd493da4fd994c032873300ba89 Monitor.rst:106
+msgid "由于主从节点间有时差，因此以主节点的数据为主"
+msgstr ""
+
+#: ../../source/Data 184e7e1899bc412eb0f2afa5702409d2 Monitor.rst:107
+#: Monitor.rst:494 bf12893c916141e9a8289f4c90682c18
+msgid "execMgr_validate_tx_time"
+msgstr ""
+
+#: ../../source/Data 452f5bd866634c829c8fabda33583b2a
+#: 5fad00b50a774643b4572c879fd4c8d6 8405974cd27c41978daed8b2805b70aa
+#: Monitor.rst:109 Monitor.rst:448 Monitor.rst:496 Monitor.rst:598
+#: fb2539a2f2a3426686f5003d4673c841
+msgid "expensive"
+msgstr ""
+
+#: ../../source/Data 2d1a797e6e0d4121a7c04a58ccb30fcd Monitor.rst:110
+#: Monitor.rst:497 ce5368b6e7564d0486cd10b8b4104451
+msgid "单笔交易执行时间"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:111 b7ffc557b29d4cc9ab4076cead8c0e3e
+msgid "交易级别的平均处理时间"
+msgstr ""
+
+#: ../../source/Data 5096e15ed5b5488b9a17a77e3543ba24 Monitor.rst:112
+#: Monitor.rst:519 d563d039f015474381db213fcba5b2cc
+msgid "execMgr_commit_time"
+msgstr ""
+
+#: ../../source/Data 414a4e9818134d50a863a9e56b069226 Monitor.rst:115
+msgid "写入区块处理时间（写块时间，包括区块组成、写入等等）"
+msgstr ""
+
+#: ../../source/Data 27cdbde05bff4329a042e3d8d4a5b380 Monitor.rst:116
+msgid "区块级别的平均写入时间"
+msgstr ""
+
+#: ../../source/Data 1f72ff2896594e40a1fa034b851ae60b Monitor.rst:119
+msgid "共识相关指标"
+msgstr ""
+
+#: ../../source/Data 4d497215f179439ebe070f7dd73bcaa4 Monitor.rst:120
+msgid "所有指标以\"flato_namespace\"（“flato”为趣链区块链平台新版英文简称）为前缀，例如在global这个Namespace下所有下述指标都要加上前缀\"flato_global\"（“flato”为趣链区块链平台新版英文简称）。"
+msgstr ""
+
+#: ../../source/Data 210a8f4b01cd40e596f29ad6be567455 Monitor.rst:123
+msgid "RBFT"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:134 a17ffdb481584aa1a41c737af8d7a57f
+msgid "rbft_ID"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:137 c8ffcbaf4cae4d72a918843dee466169
+msgid "rbft节点ID"
+msgstr ""
+
+#: ../../source/Data 632ae1d1fd814909a2737014875c2ba6 Monitor.rst:139
+msgid "rbft_version"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:142 dbd1075658a34b92a894dbe2628e8d69
+msgid "rbft共识协议版本号"
+msgstr ""
+
+#: ../../source/Data 1e2ffa72823c4bc79f49a04620d1ca3d Monitor.rst:144
+msgid "rbft_epoch"
+msgstr ""
+
+#: ../../source/Data 55639aeee89b4db8aac8b490473520a5 Monitor.rst:147
+msgid "rbft当前共识所处的epoch"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:149 c6fa12e712814c0fb5636864a780343b
+msgid "rbft_view"
+msgstr ""
+
+#: ../../source/Data 0cb5b851d1dc44f880a5e15a9d34fc69 Monitor.rst:152
+msgid "rbft当前共识所处的view"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:154 c8fe44811aea48ef8f547e70fddb9e7a
+msgid "rbft_cluster_size"
+msgstr ""
+
+#: ../../source/Data 67705135900a4c2990f1b1f006124ef4 Monitor.rst:157
+msgid "rbft当前共识节点的个数"
+msgstr ""
+
+#: ../../source/Data 067f6578bdaa4f778ee512008832e5f4 Monitor.rst:159
+msgid "rbft_quorum_size"
+msgstr ""
+
+#: ../../source/Data 37124bd8d6af4b76a0d59dba169c448f Monitor.rst:162
+msgid "rbft当前quorum大小"
+msgstr ""
+
+#: ../../source/Data 0a34f6cc435b4076bf3480f2e4223d03 Monitor.rst:164
+msgid "rbft_status_normal"
+msgstr ""
+
+#: ../../source/Data 3a17dd56be344dad9e05fae0ebdf73d0 Monitor.rst:167
+msgid "rbft是否处于normal状态on：1；off：0"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:169 b0564f8fa0f747d38f542cb8ea9ba471
+msgid "rbft_status_conf_change"
+msgstr ""
+
+#: ../../source/Data 9b994b115e2d406aae2ad625b7ad5fb9 Monitor.rst:172
+msgid "rbft是否处于配置区块状态on：2；off：0"
+msgstr ""
+
+#: ../../source/Data 78c9f4f996b841b5ae1c4626318f1a74 Monitor.rst:174
+msgid "rbft_status_viewchange"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:177 bd2681d47608438ea545837400d66ab2
+msgid "rbft是否处于vc状态on：3；off：0"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:179 fe6cdbab71a94da3b45d86fbd660acb5
+msgid "rbft_status_recovery"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:182 d451e06cd18a43feb507b19ef7ea7774
+msgid "rbft是否处于recovery状态on：4；off：0"
+msgstr ""
+
+#: ../../source/Data 35ff6b3ad6514da18c86f218954b8a4b Monitor.rst:184
+msgid "rbft_status_state_update"
+msgstr ""
+
+#: ../../source/Data 1308808378cd4bf39e1ae8bb98f4cd53 Monitor.rst:187
+msgid "rbft是否处于state update状态on：5；off：0"
+msgstr ""
+
+#: ../../source/Data 3a17441c96fa4e7180f6fd26f1e04af0 Monitor.rst:189
+msgid "rbft_status_pool_full"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:192 dbf46765ab4542f1a69b1ce6c8d6301c
+msgid "rbft是否处于pool full状态on：6；off：0"
+msgstr ""
+
+#: ../../source/Data 94a72868ad18410bb8007478657a80e9 Monitor.rst:194
+msgid "rbft_status_pending"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:197 efb4d368927b4eb79959b5752ac06a9c
+msgid "rbft是否处于pending状态on：7；off：0"
+msgstr ""
+
+#: ../../source/Data 0e57c177b4cd41d08784e1f33d0b14c4 Monitor.rst:199
+msgid "rbft_committed_block_number"
+msgstr ""
+
+#: ../../source/Data 04b9b14117234088a8d86a20cb45922f Monitor.rst:202
+msgid "rbft提交的区块数"
+msgstr ""
+
+#: ../../source/Data 5364f020f9864e38b0996f691dcff59a Monitor.rst:204
+msgid "rbft_committed_config_block_number"
+msgstr ""
+
+#: ../../source/Data 998a0981ee8246ee851f3f3d9f0984f8 Monitor.rst:207
+msgid "rbft提交的配置区块数"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:209 f6226ebdf8574bff9a3af38074b1228a
+msgid "rbft_committed_empty_block_number"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:212 a264023b9ff54f24b4f2ddffa42892c6
+msgid "rbft提交的空块数（由vc导致的）"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:214 cb4f19ddbbc04e088264f036e00e7b77
+msgid "rbft_committed_txs"
+msgstr ""
+
+#: ../../source/Data 2609b2878e444e2dbacc7da895422b3f Monitor.rst:217
+msgid "rbft提交的交易个数"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:219 c61607c584424ddd8ffe83b0c32ed6ee
+msgid "rbft_txs_per_block"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:222 efd4507cc51345e3bb91604d764bdc0d
+msgid "rbft提交的每个区块的交易个数"
+msgstr ""
+
+#: ../../source/Data 63cd46c570d8472f8d5c8dabbed500c6 Monitor.rst:224
+msgid "rbft_batch_persist_duration"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:227 d3249597db60405ba0a2be00fd54d514
+msgid "rbft从打包到提交的时间"
+msgstr ""
+
+#: ../../source/Data 63028ef0297148179f29c72013987fc1 Monitor.rst:229
+msgid "rbft_batche_number"
+msgstr ""
+
+#: ../../source/Data 859bbc4f834c42a2a3935447bad74496 Monitor.rst:232
+msgid "rbft当前缓存的batch个数"
+msgstr ""
+
+#: ../../source/Data 6f54443559f84a6b9c1b81d0a7b62bd3 Monitor.rst:234
+msgid "rbft_outstanding_batche_number"
+msgstr ""
+
+#: ../../source/Data 5c1a21565a5245a8a5eee1286d93b856 Monitor.rst:237
+msgid "rbft当前正在共识的batch个数，无负载时=0"
+msgstr ""
+
+#: ../../source/Data 2c1f00f2dbb245b6b1435c9d2d32b6cf Monitor.rst:239
+msgid "rbft_state_update_times"
+msgstr ""
+
+#: ../../source/Data 0deca16233c34f67a7923ef9a0027962 Monitor.rst:242
+msgid "rbft触发的StateUpdate的次数"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:244 a23bc39903f344a6ab91849f8cb89012
+msgid "rbft_cache_batch_number"
+msgstr ""
+
+#: ../../source/Data 3068752bc1db4eb98ae2f303d74f38e1 Monitor.rst:247
+msgid "rbft当前缓存的已打包但是不能共识的batch个数，仅主节点有该值无负载时=0"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:249 d84f774a68b3462b8b74ce7260907fd8
+msgid "rbft_fetch_missing_txs_times"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:252 a2fea55fc1f348e9afd76d8f8f59b4c2
+msgid "rbft向主节点索取缺失交易的次数"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:254 b158609ceaf64b5aa6021a8b91b5b251
+msgid "rbft_fetch_request_batch_times"
+msgstr ""
+
+#: ../../source/Data 556caf2fe8394bd3b2bb1878e7a4339a Monitor.rst:257
+msgid "rbft向其他节点索取batch的次数"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:259 aebc6f63a6494350ac894a59255618a3
+msgid "txset_incoming_txs"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:262 de584a549e2743f1bf47aa86f0354fa9
+msgid "txset模块接收到的来自API的交易（这里包括了NVP转发过来的）"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:264 a64408b6df924b84a67ca66c802ba1d5
+msgid "txset_pending_txs"
+msgstr ""
+
+#: ../../source/Data 0a4f0e4efda240ffbd208c3490debffc Monitor.rst:267
+msgid "txset模块等待共识的交易个数"
+msgstr ""
+
+#: ../../source/Data 6a7ea82923bd485a8df378e63192a0c0 Monitor.rst:269
+msgid "rbft_incoming_local_tx_sets"
+msgstr ""
+
+#: ../../source/Data 8d7fea855b91408789e1df0505f8322b Monitor.rst:272
+msgid "rbft接收到的本地生成的txSet的个数"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:274 a393293457484130911463fce6a59b97
+msgid "rbft_incoming_remote_tx_sets"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:277 f8dadeec23cb4989899d958bde13f5aa
+msgid "rbft接收到的其他VP节点转发过来的txSet的个数"
+msgstr ""
+
+#: ../../source/Data 8ed099d11ffc4fe3aa5cfebddf65a7c6 Monitor.rst:279
+msgid "rbft_incoming_local_txs"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:282 a953369b12474eb191db44b8bbc6c021
+msgid "rbft接收到的来自API的交易（这里包括了NVP转发过来的）"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:284 da6b7450783d4505a54b28d1063087af
+msgid "rbft_incoming_remote_txs"
+msgstr ""
+
+#: ../../source/Data 28b20f2ad7da474aad24b310f0d2ed37 Monitor.rst:287
+msgid "rbft接收到的其他VP节点转发过来的交易"
+msgstr ""
+
+#: ../../source/Data 908c6028d81b47128039990dc25f3ba6 Monitor.rst:289
+msgid "rbft_rejected_local_txs"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:292 f2199df5626546328c89c8408b0a10aa
+msgid "rbft拒收的来自API的交易"
+msgstr ""
+
+#: ../../source/Data 26173043e63e43ed9bd67e7daf9c10d2 Monitor.rst:294
+msgid "rbft_rejected_remote_txs"
+msgstr ""
+
+#: ../../source/Data 1135addef161492090f77dcb93f55bb5 Monitor.rst:297
+msgid "rbft拒收的其他VP节点转发过来的交易"
+msgstr ""
+
+#: ../../source/Data 6f54d23b48dd4bf7ad6e7a1fbb26bdca Monitor.rst:300
+msgid "注意："
+msgstr ""
+
+#: ../../source/Data 769aea7ab8174123b23ab4c4792ce6fb Monitor.rst:302
+msgid ""
+"由于交易进入consensus模块之后需要经由txSet模块打包成一个set才能进入rbft模块，因此有txset_incoming_txs >="
+" rbft_incoming_local_txs"
+msgstr ""
+
+#: ../../source/Data 640592dab44c4c08a82472eab510063e Monitor.rst:305
+msgid "txpool"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:316 fb1e77a2cfd945099a9c4af8f20d6d76
+msgid "txpool_incoming_txs"
+msgstr ""
+
+#: ../../source/Data 5faaa98ddffb41328f72733275eba5d9 Monitor.rst:319
+msgid "txpool接收到的交易总数"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:321 b4d91b7737994c7bb5f0d7dd96adfa09
+msgid "txpool_duplicate_txs"
+msgstr ""
+
+#: ../../source/Data 7f4ce8770e364a268af3dbf877960b2c Monitor.rst:324
+msgid "txpool中检测到的重复交易"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:326 fd38dfe3d1c646f398c17144a7ca4518
+msgid "txpool_nonBatched_txs"
+msgstr ""
+
+#: ../../source/Data 305b5c0bdb464e2eab57409041f5a0da Monitor.rst:329
+msgid "当前交易池中未打包的交易个数，无负载时=0"
+msgstr ""
+
+#: ../../source/Data 55f56da77ba4487b8f5d8936c02f71e4 Monitor.rst:331
+msgid "txpool_batched_txs"
+msgstr ""
+
+#: ../../source/Data 62947c35538e446380b9c3f84ba556bc Monitor.rst:334
+msgid "当前交易池中已打包的交易个数"
+msgstr ""
+
+#: ../../source/Data 645b36738f35427f84ac8f1af55cb654 Monitor.rst:336
+msgid "txpool_batches"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:339 f4372d9842bb4b2bb55256fe2d383287
+msgid "当前交易池中的batch个数，无负载时<20（共识缓存最多20个batch）有负载时从节点<50，主节点理论上无上限"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:342 b473beda6e064d30a01313acd8b45dad
+msgid "**注意：**"
+msgstr ""
+
+#: ../../source/Data 651c426d3a384ab884cf78989654a12d Monitor.rst:344
+msgid "txpool接收的交易是经由rbft模块传递下来的，因此有"
+msgstr ""
+
+#: ../../source/Data 98d5ed81602d4fc599525929e25fa528 Monitor.rst:346
+msgid ""
+"txpool_incoming_txs = rbft_incoming_local_txs + rbft_incoming_remote_txs "
+"- rbft_reject_txs"
+msgstr ""
+
+#: ../../source/Data 159d9b3d74994234bb502aa176b1a1e4 Monitor.rst:350
+msgid "存储相关指标"
+msgstr ""
+
+#: ../../source/Data 31aaf63935b54ec48000e0014f53e84a Monitor.rst:361
+msgid "db_accountdb_batchCommitTime"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:364 bf6c8dca5c6542c8899b9d8f4d72e5e9
+msgid "写入accountdb的返回时间"
+msgstr ""
+
+#: ../../source/Data 12e5df23df9b4ace86099f535e07e70f Monitor.rst:366
+msgid "db_statedb_batchCommitTime"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:369 bb734cfc44e947769b085d4799b1805e
+msgid "写入statedb的返回时间"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:371 e3b364656b5240ac99f1220ff1962647
+msgid "db_metadb_batchCommitTime"
+msgstr ""
+
+#: ../../source/Data 56134d8349e642e6ae79ce90c060d47e Monitor.rst:374
+msgid "写入metadb的返回时间"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:376 efea622aaaf04e9695f5c063d58679bb
+msgid "db_chaindb_batchCommitTime"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:379 b120cb13973f4e5b93468a7472f2331d
+msgid "写入chaindb的返回时间"
+msgstr ""
+
+#: ../../source/Data 01157d59f8b84d40b25975df8d8992bb Monitor.rst:381
+msgid "db_blockdb_batchCommitTime"
+msgstr ""
+
+#: ../../source/Data 77f4d0d03e844d34b5154ddbaed8bee6 Monitor.rst:384
+msgid "写入blockdb的返回时间"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:386 f0a753086558486398160864ef123ac0
+msgid "db_journaldb_batchCommitTime"
+msgstr ""
+
+#: ../../source/Data 417e19ba14a142d28eb91de7f123987f Monitor.rst:389
+msgid "写入journaldb的返回时间"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:391 d0b5653dbd474486a2e68790f7791fb2
+msgid "db_receiptdb_batchCommitTime"
+msgstr ""
+
+#: ../../source/Data 0c4954826c10408fb09f397433334a81 Monitor.rst:394
+msgid "写入receiptdb的返回时间"
+msgstr ""
+
+#: ../../source/Data 675c743ddf7c420e9e97b51443864ec3 Monitor.rst:396
+msgid "db_indexdb_batchCommitTime"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:399 a22f7e2a849d494f897f898e72497d8c
+msgid "写入indexdb的返回时间"
+msgstr ""
+
+#: ../../source/Data 7d46139efc17418f9bb5493859218e59 Monitor.rst:401
+msgid "db_dbtype_multicache_memSize"
+msgstr ""
+
+#: ../../source/Data 6c5afaa89c694d4ba0f1ff4151021974 Monitor.rst:404
+msgid "多级缓存内存占用大小"
+msgstr ""
+
+#: ../../source/Data 2e6b960438a94acc9ed0d2cac96a9c30 Monitor.rst:406
+msgid "db_dbtype_multicache_persist_time"
+msgstr ""
+
+#: ../../source/Data 748afacb92824259b4f2c2e9097a5872 Monitor.rst:409
+msgid "多级缓存持久化一个区块数据至底层数据库所需时间"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:411 cd044ad5f3fb4d27a51a1a84d581ced5
+msgid "db_dbtype_multicache_walPersist_time"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:414 e30b5bfb58bd4299821fb88c2a181a56
+msgid "多级缓存写一个seqNo对应的wal的耗时"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:416 f128ea1a0b2042d78c74d0e9b6110016
+msgid "db_dbtype_multicache_cache_get"
+msgstr ""
+
+#: ../../source/Data 96c988f7acd94c2485104a9f68e8c1e5 Monitor.rst:419
+msgid "multicache尝试从自身的读缓存中读取数据的次数"
+msgstr ""
+
+#: ../../source/Data 0f2e4b575f924971995fddbcd7ed8d6c Monitor.rst:421
+msgid "db_dbtype_multicache_cache_set"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:424 ac38a6e83b354aa6a1a22723ac6e8dee
+msgid "multicache向自身的读缓存中插入数据的次数"
+msgstr ""
+
+#: ../../source/Data 5995b88a41a34012a7b13a4bd92e7c75 Monitor.rst:426
+msgid "db_dbtype_multicache_cache_hit"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:429 e77b8b955b7d448291d193e1fcae6bd7
+msgid "multicache缓存命中的次数"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:431 cc99156de29f444fb2268edceb28531f
+msgid "db_dbtype_leveldb_compaction_occurrence"
+msgstr ""
+
+#: ../../source/Data 35bbfbd246794435a7191237e446dd45 Monitor.rst:434
+msgid "底层leveldb compaction的次数"
+msgstr ""
+
+#: ../../source/Data 1a7e61b8366340b18786a05183aea0de Monitor.rst:436
+msgid "db_dbtype_leveldb_size"
+msgstr ""
+
+#: ../../source/Data 5c4264a247a442faa58bd6a223e8dfcc Monitor.rst:439
+msgid "底层leveldb的数据量大小"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:441 da9fa35bd4874dd0b4cd7c8b67fd623a
+msgid "db_dbtype_filelog_fdNumber"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:444 b68770dd3f214f068c090f91e56979c7
+msgid "filelog中处于open状态的句柄数"
+msgstr ""
+
+#: ../../source/Data 1bc37c795cd14c43a7cbb5bcb6b78fb1 Monitor.rst:446
+msgid "db_dbtype_filelog_readTime"
+msgstr ""
+
+#: ../../source/Data 1f420e1d864a475d92c9eea5f8ee18b6 Monitor.rst:449
+msgid "filelog读取一个元素的耗时"
+msgstr ""
+
+#: ../../source/Data 3ba896addb30497eb33590247c78108c Monitor.rst:451
+msgid "db_dbtype_filelog_fsyncTime"
+msgstr ""
+
+#: ../../source/Data 71b7fabd50104d9dae5bd0e3bbb92c7b Monitor.rst:454
+msgid "filelog在一个log文件写完后，做一次fsync的耗时"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:458 f2a96e24d7074dff8b757725cacb9b1f
+msgid "执行相关指标"
+msgstr ""
+
+#: ../../source/Data 283cfcdf8c3a4c9eb1b37468cb4ca6f8 Monitor.rst:469
+msgid "bloomFilter_memSize"
+msgstr ""
+
+#: ../../source/Data 82c2be82a0e54ff4a21194732c1025c8 Monitor.rst:472
+msgid "布隆过滤器占用的内存大小"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:474 b0f4a36c82464538970f1ac0a0044968
+msgid "bloomFilter_lookCounter"
+msgstr ""
+
+#: ../../source/Data 5ff41ef3174a40d3a5e04ec149db7088 Monitor.rst:477
+msgid "布隆过滤器查询次数"
+msgstr ""
+
+#: ../../source/Data 87a5f7269c85491d833ae6a1d0488064 Monitor.rst:478
+#: Monitor.rst:483 efbf5f10f13c435883d896bf28165364
+msgid "有「source」标签说明调用查询的模块，分为“namespace表示共识去重”、“executor表示执行层去重”、“API表示接口层去重”"
+msgstr ""
+
+#: ../../source/Data 6e25b1c9105042e0b066c6b284523ebb Monitor.rst:479
+msgid "bloomFilter_lookExistCounter"
+msgstr ""
+
+#: ../../source/Data 57505374ffa446fda5172f9b608ddc6f Monitor.rst:482
+msgid "布隆过滤器中，查询到存在的交易数量，即会穿透布隆过滤器进行db查询的次数"
+msgstr ""
+
+#: ../../source/Data 01e233695d3843f589ed8126a6df5e02 Monitor.rst:484
+msgid "execMgr_validate_bloom_readValidDBTime"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:487 ba2281a7ce5642c9b62f0bc90c15aa25
+msgid "布隆过滤器发现交易可能重复后，查询合法交易的时间"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:489 ce4fafcf7d58426b97861f12603b7def
+msgid "execMgr_validate_bloom_readInvalidDBTime"
+msgstr ""
+
+#: ../../source/Data 7c0bb49d32af4c6392d737414bfe414d Monitor.rst:492
+msgid "布隆过滤器发现交易可能重复后，查询非法交易的时间（会先查询合法交易，再查询非法交易，查询次数可能比合法交易少一些）"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:504 ff160c9799cc43ec97d938d90464f78a
+msgid "execMgr_total_txs"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:507 d16701692d6e4c56b0221b6a9d24fdda
+msgid "区块链所有交易总量"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:509 d42d3d2c1ab64a81adf25e8da4087a8d
+msgid "execMgr_online_txs"
+msgstr ""
+
+#: ../../source/Data 7acced2c9274489eab3e99bbde1ac6ec Monitor.rst:512
+msgid "区块链归档点后所有交易总量"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:522 bb2b72f985644f0e808d9de9e8887028
+msgid "写块时间，包括区块组成、写入等等"
+msgstr ""
+
+#: ../../source/Data 81a98d9ba1c54d668a9907cc53fe97b6 Monitor.rst:524
+msgid "execMgr_commit_writeDB_time"
+msgstr ""
+
+#: ../../source/Data 0a1ecf029b114f33a92066d58354fbab Monitor.rst:527
+msgid "区块batch写入数据库的时间"
+msgstr ""
+
+#: ../../source/Data 2113147207eb47118de9728416851006 Monitor.rst:532
+msgid "网络相关指标"
+msgstr ""
+
+#: ../../source/Data 25d75cc877bf4def8ef2e90bd83956d2 Monitor.rst:535
+msgid "P2P"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:546 ed5a1ef7e27545cc8a9cd1887375fcd3
+msgid "grpc_stream_request_send_total"
+msgstr ""
+
+#: ../../source/Data 8075d9ae2e2643589bb509b714f588e4 Monitor.rst:549
+msgid "grpc发送的流请求数目"
+msgstr ""
+
+#: ../../source/Data 94e6e0dda6554a6381e4b504e872941d Monitor.rst:551
+msgid "grpc_stream_request_received_total"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:554 b0e7ff928a1b4dfc8f1590c105e9a3f0
+msgid "grpc收到的流请求数目"
+msgstr ""
+
+#: ../../source/Data 8e7fe777bc93423fb3d250071298fc5a Monitor.rst:556
+msgid "grpc_stream_request_completed_total"
+msgstr ""
+
+#: ../../source/Data 79a19093f4a74f7290224646f02532b1 Monitor.rst:559
+msgid "grpc完成的流请求的数目"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:561 ab86cf3b22d445fabea152c660fac3a8
+msgid "grpc_stream_message_send_total"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:564 fccc677ccd154943bc452f0c37a1a825
+msgid "grpc发送的流消息的数目"
+msgstr ""
+
+#: ../../source/Data 42b3c94d4302402bae1e4d63ae4b16fd Monitor.rst:566
+msgid "grpc_stream_message_recv_total"
+msgstr ""
+
+#: ../../source/Data 8b4e08b8fc7b486883069ec3b1680992 Monitor.rst:569
+msgid "grpc收到的流消息的数目"
+msgstr ""
+
+#: ../../source/Data 8cefaf939d4440a4a90bd84af0dc1be7 Monitor.rst:571
+msgid "grpc_conn_opened_total"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:574 cbdab6d7511444eaa904ee3025ae86fe
+msgid "grpc连接打开数目。打开数目减去关闭数目便是目前活跃的连接数。"
+msgstr ""
+
+#: ../../source/Data 4b207056f428480ab5cb87e58fbdc584 Monitor.rst:576
+msgid "grpc_conn_closed_total"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:579 a738ab56b6ed4df187ec112b53896006
+msgid "grpc连接关闭数目。打开数目减去关闭数目便是目前活跃的连接数。"
+msgstr ""
+
+#: ../../source/Data 0902f64c2e8a4ac99839798164fe19f5 Monitor.rst:581
+msgid "grpc_stream_opened_total"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:584 c872acab490147248661755eecdfcc1e
+msgid "grpc流打开数目。打开数目减去关闭数目便是目前活跃的流数。"
+msgstr ""
+
+#: ../../source/Data 6c9d0ecdb2b74901936f4703fb94b384 Monitor.rst:586
+msgid "grpc_stream_closed_total"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:589 e32d46a11f8c4fb4a4301203a48ac7ad
+msgid "grpc流关闭数目。打开数目减去关闭数目便是目前活跃的流数。"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:591 f5d54546d150485584d6675857c57b77
+msgid "msg_dropped_count_total"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:594 a659affcf90444b9bf2c7d9e9c545f26
+msgid "某个节点在某个message channel弃的消息的数目"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:596 a5f4cba2755c4118903e4bc3ea774342
+msgid "grpc_stream_message_send_time_microseconds"
+msgstr ""
+
+#: ../../source/Data 4db326fc5cfb4dd9b13eda9794166aed Monitor.rst:599
+msgid "grpc发送一条消息所需要的时间"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:601 a46f9bf669ca462eb3615e3be578fa4a
+msgid "logic_conn_opened_count_total"
+msgstr ""
+
+#: ../../source/Data 8a702230b9944734b91afde307681d0c Monitor.rst:604
+msgid "逻辑连接打开数目。打开数目减去关闭数目便是目前活跃的连接数。"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:606 eb379b91dfe942c69305fe98e9c7b956
+msgid "logic_conn_closed_count_total"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:609 f4501e6ba8c1468bb1138cb11633baa7
+msgid "逻辑连接关闭数目。打开数目减去关闭数目便是目前活跃的连接数。"
+msgstr ""
+
+#: ../../source/Data 683c3c85420a452fad713f164c7576a0 Monitor.rst:611
+msgid "grpc_network_receive_bytes_total"
+msgstr ""
+
+#: ../../source/Data 41b2c75b877743c08f95559909f85ffe Monitor.rst:614
+msgid "grpc网络接收到的消息大小总量"
+msgstr ""
+
+#: ../../source/Data 6413fc15dea74eeabf02c2ff00586a9e Monitor.rst:616
+msgid "grpc_network_send_bytes_total"
+msgstr ""
+
+#: ../../source/Data 1ab9b2504d4c412e984b9e7564a408fc Monitor.rst:619
+msgid "grpc网络发送的消息大小总量"
+msgstr ""
+
+#: ../../source/Data 03ae1b9bc5d443e19526c85bb02e452c Monitor.rst:623
+msgid "消息分发"
+msgstr ""
+
+#: ../../source/Data 88a46a20b5474aeb95381e5794c0ea65 Monitor.rst:634
+#, python-format
+msgid "dispatcher_%s_writeMsg_ch_size_usage"
+msgstr ""
+
+#: ../../source/Data 256f259616ca4e948e9ff3d656c7dc12 Monitor.rst:637
+msgid "消息分发器发送消息通道对应节点的模块消息数量"
+msgstr ""
+
+#: ../../source/Data 977cb032f8cd45a9b7ef8edb5c8c1f50 Monitor.rst:639
+#, python-format
+msgid "dispatcher_%s_writeMsg_ch_mem_usage"
+msgstr ""
+
+#: ../../source/Data 8df66ce1b7e7459d994d31e9fd994f53 Monitor.rst:642
+msgid "消息分发器发送消息通道对应节点的模块消息占用内存的大小"
+msgstr ""
+
+#: ../../source/Data 5c3d692c8e16410880193f96c9938f50 Monitor.rst:644
+#, python-format
+msgid "dispatcher_%s_readMsg_ch_size_usage"
+msgstr ""
+
+#: ../../source/Data 68a2d62641d1405c90de085abb183fd8 Monitor.rst:647
+msgid "消息分发器接收消息通道对应节点的模块消息数量"
+msgstr ""
+
+#: ../../source/Data 831cd3e772554bb2927ac7094daba2c8 Monitor.rst:649
+#, python-format
+msgid "dispatcher_%s_readMsg_ch_mem_usage"
+msgstr ""
+
+#: ../../source/Data 90c0d776f7cd41e9b7441671f4d3fce9 Monitor.rst:652
+msgid "消息分发器接收消息通道对应节点的模块消息占用内存的大小"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:656 f702519febed4ec1b1af189f06f4ccad
+msgid "API相关指标"
+msgstr ""
+
+#: ../../source/Data 65dcbbb94b92442b9ea15576c6bae6bc Monitor.rst:666
+msgid "jsonrpc_request_received_total"
+msgstr ""
+
+#: ../../source/Data 8dd2b2f699534739a34e46e555a9e4bd Monitor.rst:669
+msgid "接收的jsonrpc请求个数"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:670 f18a506230c24793b14a4d55c96ca67f
+msgid "jsonrpc_new_tx_request_success_total"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:673 fdf72f9be4264d6a9ff7da0027533d19
+msgid "成功处理的发送交易相关请求的个数"
+msgstr ""
+
+#: ../../source/Data 1fb9ffa4d689466c9cd53c5992bf5aab Monitor.rst:674
+msgid "jsonrpc_new_tx_request_error_total"
+msgstr ""
+
+#: ../../source/Data 183e333a08b6458b9d643f3c02b8b7db Monitor.rst:677
+msgid "发送交易相关请求处理失败，不同失败原因的请求个数"
+msgstr ""
+
+#: ../../source/Data 8e201cecab06443296a1ef7aacc58a43 Monitor.rst:678
+msgid "jsonrpc_received_request_bytes_total"
+msgstr ""
+
+#: ../../source/Data 70d14471d26242a492ee48095924dd6c Monitor.rst:681
+msgid "请求总流量统计单位byte"
+msgstr ""
+
+#: ../../source/Data 51194b725c5a405a941ec616b886bdf7 Monitor.rst:682
+msgid "jsonrpc_sent_response_bytes_total"
+msgstr ""
+
+#: ../../source/Data 2858a4e99c924388be46876a52ad82d5 Monitor.rst:685
+msgid "响应总流量统计单位byte"
+msgstr ""
+
+#: ../../source/Data 950510f2dee34ea48faa1ba73ee0de47 Monitor.rst:686
+msgid "jsonrpc_new_tx_request_consensus_abnormal_error_total"
+msgstr ""
+
+#: ../../source/Data 5cf2a23f5a9941bda760494ed3773851 Monitor.rst:689
+msgid "由于共识状态异常原因导致请求失败的个数"
+msgstr ""
+
+#: ../../source/Data 004261b8f49a42e1b35d370f25d92aac Monitor.rst:692
+msgid "密码相关指标"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:703 b63ad7572cd44b53b87c0810d74f5fd7
+msgid "verify_tube_signature_in_total"
+msgstr ""
+
+#: ../../source/Data 257375fba7404a7cb7d30f3441ba40c1 Monitor.rst:706
+msgid "输入验签管道的总签名数"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:708 d8d4a719959149b8ae5311a266601c99
+msgid "verify_tube_signature_out_total"
+msgstr ""
+
+#: ../../source/Data 5fed759195d7487fbfb7023516ff8090 Monitor.rst:711
+msgid "输出验签管道的总签名数"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:713 a2bf6c0a4f9e493c902c0bc0980cb86b
+msgid "vt_liner_duration_cycle"
+msgstr ""
+
+#: ../../source/Data 300a32bff922474fb5a19b0b2ff71e63
+#: 79d126d18a214f5bb43beece48fe8ffb 8eaffbab23764716bd0e58c6ec8d0d33
+#: Monitor.rst:714 Monitor.rst:719 Monitor.rst:724
+msgid "Histogram"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:716 c445ce3c415744c991054752b77ced5d
+msgid "完成批量验证两段子操作的时间"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:718 f747bea49d2e4f5ba492ff73fb166abf
+msgid "vt_logic_duration_cycle"
+msgstr ""
+
+#: ../../source/Data 907df21ce8ee40ccb66315d6b063ed70 Monitor.rst:721
+msgid "验签中每段操作的时间"
+msgstr ""
+
+#: ../../source/Data 75e0347abda44a1db2e508b9216656d8 Monitor.rst:723
+msgid "vt_hash_duration_cycle"
+msgstr ""
+
+#: ../../source/Data 18cf406abb34463ebe6703af9f7e49f9 Monitor.rst:726
+msgid "完成哈希的时间"
+msgstr ""
+
+#: ../../source/Data 3a85720cebc946a78224d6f6a9679dcb Monitor.rst:728
+msgid "verify_tube_batch_size"
+msgstr ""
+
+#: ../../source/Data 4ff6f96efa934aa3b3bc0035330074a1
+#: 83f9bcfde13d4adc8f5ae7c1ca086157 Monitor.rst:729 Monitor.rst:734
+msgid "Gauge"
+msgstr ""
+
+#: ../../source/Data 0cde35a83d2140789131dc532c8420e0 Monitor.rst:731
+msgid "每批次的签名数量"
+msgstr ""
+
+#: ../../source/Data 37f54546893f45a188aeb894a1a6f5d3 Monitor.rst:733
+msgid "crypto_verify_channel_length"
+msgstr ""
+
+#: ../../source/Data 09e2346682b545c3b0622f9df87c1e47 Monitor.rst:736
+msgid "每个阶段的缓冲池大小"
+msgstr ""
+
+#: ../../source/Data 6887ac18847348a7812abe4bb815e7b1 Monitor.rst:740
+msgid "Go相关指标"
+msgstr ""
+
+#: ../../source/Data 416c137072ac43bfa579fcf4470f5a72 Monitor.rst:751
+msgid "go_goroutines"
+msgstr ""
+
+#: ../../source/Data 8722433267b54d24afe55135ac3a58b3 Monitor.rst:756
+msgid "go_threads"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:761 f48d0ef596554dc4b7c3220542e4db5b
+msgid "go_gc_duration_seconds"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:762 aea8e29455e04155ababff448c8f8e89
+msgid "summary"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:766 a77b5de850e04b27b1a82ad47c12a13d
+msgid "go_info"
+msgstr ""
+
+#: ../../source/Data 52bcb1b5ff934e9f99145a4c961325a1 Monitor.rst:771
+msgid "alloc_bytes"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:776 a9a6a0d95c3e492ca989339f200f3e02
+msgid "alloc_bytes_total"
+msgstr ""
+
+#: ../../source/Data 91ac8464f6304742a747f6e85bd8a704 Monitor.rst:781
+msgid "sys_bytes"
+msgstr ""
+
+#: ../../source/Data 0e3e51dd2a80445c80a80e651ccf754b Monitor.rst:786
+msgid "lookups_total"
+msgstr ""
+
+#: ../../source/Data 3321697ac0304b66b808cbd4e7988602 Monitor.rst:791
+msgid "mallocs_total"
+msgstr ""
+
+#: ../../source/Data 4ee562409c394290a2a170e914a0146a Monitor.rst:796
+msgid "frees_total"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:801 f2ca627527ff4047bfc45d0ebd77b69f
+msgid "heap_alloc_bytes"
+msgstr ""
+
+#: ../../source/Data 5c9e84d69bb14293bc2651dc0b4c7566 Monitor.rst:806
+msgid "heap_sys_bytes"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:811 ea66c8d7205d47898c601434106fc260
+msgid "heap_idle_bytes"
+msgstr ""
+
+#: ../../source/Data 0dea3b7c940840dcbccbe9f325c01a4d Monitor.rst:816
+msgid "heap_inuse_bytes"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:821 bec0437d940e435ea2c3d5f62ea4ca30
+msgid "heap_released_bytes"
+msgstr ""
+
+#: ../../source/Data 7ac902dc695743abab8e5f8c35b74514 Monitor.rst:826
+msgid "heap_objects"
+msgstr ""
+
+#: ../../source/Data 0e0812cdf5df4496bf1a471627b51fad Monitor.rst:831
+msgid "stack_inuse_bytes"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:836 acc30d02754e4237848ce72f63916de3
+msgid "stack_sys_bytes"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:841 ee9abf9bd6c04cb68af52c21282b8921
+msgid "mspan_inuse_bytes"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:846 fb06b4e65bce48a1a7c49fccb6670340
+msgid "mspan_sys_bytes"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:851 f18e885b81a247c1b12ef983bebde44c
+msgid "mcache_inuse_bytes"
+msgstr ""
+
+#: ../../source/Data 553985b1bba845abb23b6c6d99e8b598 Monitor.rst:856
+msgid "mcache_sys_bytes"
+msgstr ""
+
+#: ../../source/Data 8ea848a560914e2f85b786f2ef10ab0a Monitor.rst:861
+msgid "buck_hash_sys_bytes"
+msgstr ""
+
+#: ../../source/Data 46904d5b0060402aabbc8be0553fb5b5 Monitor.rst:866
+msgid "gc_sys_bytes"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:871 fba9ea7047534ec99f2c7545247ccdbc
+msgid "other_sys_bytes"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:876 cf786265dcf14426a1a2286a4dc26e09
+msgid "next_gc_bytes"
+msgstr ""
+
+#: ../../source/Data 61eae56168ad4bc7be9753dfdd71ae5e Monitor.rst:881
+msgid "last_gc_time_seconds"
+msgstr ""
+
+#: ../../source/Data Monitor.rst:886 d8494855ccb44b88858f2bbd035daea5
+msgid "gc_cpu_fraction"
+msgstr ""
+

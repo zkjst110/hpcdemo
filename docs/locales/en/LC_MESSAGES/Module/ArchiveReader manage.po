@@ -1,0 +1,513 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Module/ArchiveReader 51f5058ed7734b5f8e4fc297fa7b4234
+#: manage.rst:4
+msgid "ArchiveReader使用手册"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader f16228409a7c4e3193e9622d4fa032b3
+#: manage.rst:7
+msgid "1. 功能描述"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 14a279a41f0d4dce8d83563583055934
+#: manage.rst:9
+msgid "ArchiveReader是一个独立的二进制，其主要功能包括两个方面："
+msgstr ""
+
+#: ../../source/Module/ArchiveReader afef0205daa74b7385cd92ead8f78b12
+#: manage.rst:11
+msgid "将hyperchain上归档的数据重新restore到线上"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader f083df3bf1284342a8fddd3bb8622c4d
+#: manage.rst:13
+msgid "提供状态证明功能"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader fbf947f7d10f4a5daff76c8bde59cccc
+#: manage.rst:16
+msgid "2. 使用方式"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader e6c64c97de9d471eb35795a3707a96cd
+#: manage.rst:19
+msgid "2.1 归档数据restore"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader fe70856cf1c941fa91121d97b5bfbc32
+#: manage.rst:21
+msgid ""
+"**在部署方面，** "
+"相比于hyperchain，ArchvieReader二进制只需要一份配置文件即可启动。而配置文件可以完全复用hyperchain的配置。"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader c678f6b91490406981cef410948fb1f8
+#: manage.rst:23
+msgid ""
+"**在使用方面，** "
+"ArchiveReader的核心功能为线下数据restore和通过api接口查询restore到线上的数据，因此使用ArchiveReader需要首先准备线下数据，线下数据的来源即为hyperchain上归档以后的线下目录下的内容，具体的，一份合法的线下数据内容如下图所示："
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 00738576bf894f5fbdbcd54e928052e5
+#: manage.rst:25
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 7e5a97d92a2b474581abfbe9cb11f1c9
+#: manage.rst:159
+msgid "image0"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader d461979b493e4b7f8bb5959cd403782c
+#: manage.rst:27
+msgid "上图为一个hyperchain-2.7.0归档过3次的节点的data/archive目录下的数据，其中的红色框圈起来的数据，是需要手动拷贝到ArchvieReader的namespaces/global/data/archive目录下的数据。即一个合法的ArchiveReader节点在启动前应该准备好如下的目录结构："
+msgstr ""
+
+#: ../../source/Module/ArchiveReader d591abc0a203476b825fcdecd5274f2f
+#: manage.rst:29
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 284243604250495fb36efb6b584cefda
+#: manage.rst:160
+msgid "image1"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader d4e084b13a3a4c839da161b38e584146
+#: manage.rst:31
+msgid ""
+"**至此，ArchiveReader的线下数据准备完成，下面可以进行restore操作：首先** "
+"启动ArchiveReader，然后可以看到其namespaces/global/data目录下的结构为："
+msgstr ""
+
+#: ../../source/Module/ArchiveReader de1288c6a47147dd8c497c55f8ee137d
+#: manage.rst:33
+msgid "|image2|"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader fbd6f4c67e404a48b87d36c598352f82
+#: manage.rst:161
+msgid "image2"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 0414837afcac4824aefe6447baff3fa9
+#: manage.rst:35
+msgid "archive目录下新增了archive.record文件和genesis.meta文件。public目录下的结构和普通的vp节点的public目录下结构相同。"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 201fbc145dcb4f39b786417f303d9e6b
+#: manage.rst:37
+msgid "接下来， **用户就可以通过命令进行restore操作了** ，ArchiveReader上提供了restore的API，curl命令为::"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 8ae28f11da9a41d8ac449c10520b0853
+#: manage.rst:41
+msgid "接口说明："
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 2c51da91ec524473b24b0b5a30724598
+#: 3e9318ea5be9408ca193ba6ef837f3c2 manage.rst:44 manage.rst:87
+msgid "接口名称"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 6e27a2d396e141adb012f5298f65a546
+#: manage.rst:44
+msgid "archive_restore"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader cd9adea35fed40dfa2d2cdf1fee7a179
+#: manage.rst:46
+msgid "参数说明"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 32bdac7be1f940c18b80df2c2ecbdb73
+#: manage.rst:46
+msgid "名称"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 4aa89fbfd87843a9988b9eb36c3f2bdc
+#: manage.rst:46
+msgid "类型"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 32ef182eaaa245158b3f8eabf7142528
+#: manage.rst:46
+msgid "含义"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 2e96751611974a9fab3eeb059c2723f8
+#: manage.rst:48
+msgid "filterID"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader b0ed0b2ffbd143969b059519b0efcea9
+#: manage.rst:48
+msgid "string"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 370934d5f03248d2bf894fd69f5c92f5
+#: manage.rst:48
+msgid "预期恢 复的区块范 围对应的sn apshot标识"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 640bded61d57472197ba308d8f824135
+#: manage.rst:53
+msgid "shouldSync"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader e29beaa692a54d768044c0a48024b81f
+#: manage.rst:53
+msgid "bool"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 0913423aa9ce44da93f045574d9f0b14
+#: manage.rst:53
+msgid "是否同 步的等待返 回（true为 同步等待）"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 97cc3389bb1c4271871ac71650cf2176
+#: manage.rst:58
+msgid "返回值"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 4db6494e7aea4b4e9dbf3f4c17f83349
+#: manage.rst:58
+msgid "如果第二个参数true， 则接口返回true即表示restore完成；"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 85c56db94f104868bc2717f2e04b4e85
+#: manage.rst:61
+msgid "如果为false，则需要通过archiv e_queryArchive接口获得结果；查询请 求为：如果成功，可以看到如下结果："
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 69becc4380be4b3a87cc54f81b5b9d83
+#: manage.rst:66
+msgid "当归档成功后，ArchiveReader的线上数据库中会有这一段数据，如图所示："
+msgstr ""
+
+#: ../../source/Module/ArchiveReader c1c46243e5e648848c0046044cf20a20
+#: manage.rst:68
+msgid "|image3|"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 95ac14d483554d649bc57e0f293c627b
+#: manage.rst:162
+msgid "image3"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader bcf452f1ecb54045b45b5f2996bcba43
+#: manage.rst:70
+msgid "此时用户可以使用ArchiveReader暴露的读取数据的接口进行数据访问。"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 37687ebce75e4b639d397717d2c416b9
+#: manage.rst:72
+msgid "**restore的使用限制条件！！！**"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 5112257e1fe4464d9a59c986ab25dce7
+#: manage.rst:74
+msgid ""
+"整体上，ArchiveReader要求按照区块号 **从小到大** 的顺序 **连续** "
+"进行restore，比如线下有多份归档数据（分别对应：0-15，15-20，20-40），那么用户需要按照先0-15，再15-20，最后20-40的顺序进行restore。过程中"
+" **不能出现** 区块号的断档。"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 5024dd3eaaba4b36bcde95281ba7bfd7
+#: manage.rst:76
+msgid ""
+"如果当前ArchiveReader没有任何数据，ArchiveReader并不要求一定要从0号开始restore，即上述的场景下，用户可以按照先15-20，再20-40的顺序进行restore，这样也是合法的。但是后续"
+" **不再允许** restore[0-15]了。"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 76e22c395616434a856be9989033bcf2
+#: manage.rst:79
+msgid "2.2 状态证明"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader d08e74338db3424c8833a35510ee6d03
+#: manage.rst:81
+msgid "参考《状态证明使用手册》"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader c2215354d4dd4cf4b894ccef1c27cee1
+#: manage.rst:84
+msgid "2.3 ArchiveReader支持接口"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 5b3c42f444da4911adaf648a0e57874a
+#: manage.rst:87
+msgid "接口类型"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 86ae2f0294724ee7ad768572d00e3204
+#: manage.rst:87
+msgid "接口描述"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 42db95e88adc43a4bdf8e5f7681fd032
+#: manage.rst:89
+msgid "交易接口"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 0421fb906fd844d99e9490d1f21cc953
+#: manage.rst:89
+msgid "tx_getTransactionByHash"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 5f19daa7941c456c98b4e0b5b86afed5
+#: manage.rst:89
+msgid "根据交 易哈希值查询交易详情"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 8cc5e85ac75e4031a42284899e33d116
+#: manage.rst:92
+msgid "tx_ getTransactionByBlockHashAndIndex"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader cd850b3ef5fd421b9d0f2af70fb4eb93
+#: manage.rst:92
+msgid "根据区块哈 希及索引查询交易详情"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader dec03bc8b82e4aa4ba4fa288422f0af6
+#: manage.rst:95
+msgid "tx_ge tTransactionByBlockNumberAndIndex"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 66738767b9ac40bc82206a9d7580a7ad
+#: 8ee8aa94596446eb849197e9062189d0 manage.rst:95 manage.rst:98
+msgid "根据区块号及 索引信息查询交易详情"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader e469580b4e404c8c8c25ffee21cd5f83
+#: manage.rst:98
+msgid "tx_getTransactionsCount"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 436098b28ab240998488fa9e7221f617
+#: manage.rst:101
+msgid "tx_getTxAvgTimeByBlockNumber"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 1bf4a1764ac248ccaee437b8d4017bc9
+#: manage.rst:101
+msgid "查询指定区 块中交易平均处理时间"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 094d65bd72b64c419a91a939eb7a0abd
+#: manage.rst:104
+msgid "tx_getTransactionReceipt"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 124dfb93ae1f453da06e13b9689fb4d4
+#: manage.rst:104
+msgid "查询指定交易回执信息"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 468c40f4475f40d9975e4f1a81ba83f5
+#: manage.rst:106
+msgid "tx_getBlockTransactionCountByHash"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 8e5142e4d5ac43e4aa5a21493105358a
+#: manage.rst:106
+msgid "根据区块 哈希查询区块交易数量"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 9ac0c3857cab4b96a3d9819fd1d0fd3f
+#: manage.rst:109
+msgid "tx _getBlockTransactionCountByNumber"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 857fee14e84b4edca661003220c65608
+#: manage.rst:109
+msgid "根据区 块号查询区块交易数量"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 3ef8097c0bbc4646abbdbae8dc4a12ff
+#: manage.rst:112
+msgid "tx_getTransactionsVersion"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 1fc4d676e2f34f45a910836deacc8235
+#: manage.rst:112
+msgid "查询 平台当前的交易版本号"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 068e2459edf44050a1657175e113f14c
+#: manage.rst:115
+msgid "tx_getTransactionsWithLimit"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader a5dc50b34900436d8f4c81dc5b9a1a04
+#: manage.rst:115
+msgid "查询指定区块区间 的交易（可用于分页）"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 6936dc2a3fdb4855b32775bc521d21d7
+#: manage.rst:118
+msgid "tx_getTransactionsByTimeWithLimit"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 3c1e5cbded694e3bbea8f90816a899c7
+#: manage.rst:118
+msgid "查询指定时间区间内 的交易（可用于分页）"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 97cb27f15d654394bf8b09873e1c0e3a
+#: manage.rst:121
+msgid "tx_getTransactionsByExtraID"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader f23fd737fa8247b69c6e43c4f534986f
+#: manage.rst:121
+msgid "查询 extraId为指定值的交易"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 92e71f30946f4d509920790ea636d170
+#: manage.rst:124
+msgid "tx_getTransactionsByFilter"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader ec7dae453eac41a99e9d565a73293ff2
+#: manage.rst:124
+msgid "查 询符合过滤条件的交易"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 1a7dcf44b25b4d949b9d904b2fdb4a00
+#: manage.rst:127
+msgid "t x_getInvalidTransactionsWithLimit"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 16b9e31c0a23487f89c55314abde76e3
+#: manage.rst:127
+msgid "查询指定区块区 间的非法交易(可分页)"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 6c8c8198ecfa4ee0abd0f525f3c711c5
+#: manage.rst:130
+msgid "tx _getInvalidTransactionByBlockHash"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 8c44dd6d99d04835a4a200ea847fb0b2
+#: manage.rst:130
+msgid "查询非法交易列表（by block hash）"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 03baaca9148149bdbd5d62e011991ab3
+#: manage.rst:133
+msgid "tx_g etInvalidTransactionByBlockNumber"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 051d541bb0884a6ab5dd66d0fe94b569
+#: manage.rst:133
+msgid "查询非法交易列表（by block number）"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 320113b42a714a28a6e6660d6c790ee4
+#: manage.rst:136
+msgid "tx_getInvalidTransactionsCount"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 2dfda69d9f4942d4b6ca9f3c76ffb34b
+#: manage.rst:136
+msgid "查 询链上所有非法交易量"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 7249a6ff12da48059591d3bd687de356
+#: manage.rst:139
+msgid "区块接口"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 2f07515feedf47538aaae2fb1085c330
+#: manage.rst:139
+msgid "block_latestBlock"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 4bc013acd1f74073b0255a16f0f55624
+#: manage.rst:139
+msgid "获取最新区块"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 0eac13b3d0f743b2ba6195bf89244d98
+#: manage.rst:141
+msgid "block_getBlockByHash"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader b5d79a18d7da426bac43bbd4f2027e9d
+#: manage.rst:141
+msgid "根据区块 的哈希值返回区块信息"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 820b1cb802b44bbd8587d5a1c93c1bfa
+#: manage.rst:144
+msgid "block_getBlockByNumber"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 26485806baa84a33b697d9fb6f1e0c46
+#: manage.rst:144
+msgid "根 据区块号返回区块信息"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 4c9a2fe182534fd683cb69b61e74f7de
+#: manage.rst:147
+msgid "bloc k_getAvgGenerateTimeByBlockNumber"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 65239f09d0ec4fbd8f0a96779785acc7
+#: manage.rst:147
+msgid "根据区块区间计算 出区块的平均生成时间"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 71cfbaf6c5644127a8fed5242034eb9b
+#: manage.rst:150
+msgid "block_getGenesisBlock"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 6337a9af31ee4e6aa31772f5bc8101a3
+#: manage.rst:150
+msgid "查询创世区块号"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader c932d4c2f8f449a9a4c0e04315cefa08
+#: manage.rst:152
+msgid "block_getChainHeight"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader d168e36ec9104f52b3e52baf3256f172
+#: manage.rst:152
+msgid "查询最新区块号"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader 25c0976c786a43dfb055ad9230e61c22
+#: manage.rst:154
+msgid "block_getBlocksWithLimit"
+msgstr ""
+
+#: ../../source/Module/ArchiveReader ba6257d9f7f64202bfae1b068d51c37f
+#: manage.rst:154
+msgid "查询指定区块区间的所 有区块（可用于分页）"
+msgstr ""
+

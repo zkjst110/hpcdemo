@@ -1,0 +1,243 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Chain 50ec42022fa5470fa39bdc4e84523f9d Authority
+#: Management.rst:4 Management/Chain Role
+msgid "链级角色管理"
+msgstr ""
+
+#: ../../source/Chain 896e691acc444ff3b6b516d8785f97ad Authority
+#: Management.rst:6 Management/Chain Role
+msgid "链级角色管理用于管理账户在整个链上的角色。"
+msgstr ""
+
+#: ../../source/Chain 03c8d0029d5849cbbe695561fc0266f9 Authority
+#: Management.rst:10 Management/Chain Role
+msgid "链级配置管理概述"
+msgstr ""
+
+#: ../../source/Chain 8016c5eccc714b5bab295a4593b8d9c6 Authority
+#: Management.rst:12 Management/Chain Role
+msgid "链级角色管理通过提案完成，提案的状态迁移如下："
+msgstr ""
+
+#: ../../source/Chain 7bca21e2465c4c068a8278ddec297e77 Authority
+#: Management.rst:14 Management/Chain Role
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/Chain 7363bc3de62a45f8b4d5044abb1da6ab Authority
+#: Management.rst:271 Management/Chain Role
+msgid "image1"
+msgstr ""
+
+#: ../../source/Chain 9071d98158e0452f937daee6da02c543 Authority
+#: Management.rst:16 Management/Chain Role
+msgid "通过提案管理链级角色的流程如下：（关于提案的总体介绍参考 :ref:`链级权限管理 <chain-auth-manage>`）"
+msgstr ""
+
+#: ../../source/Chain 36acb71ff95e4263b30363dae2d06462 Authority
+#: Management.rst:18 Management/Chain Role
+msgid "由链级管理员发送交易创建提案，提案中包含了链级角色的对应操作；"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:20 Management/Chain Role
+#: b1f06680df4346c7a7922fae9408fad7
+msgid "由其他的链级管理员发送交易对提案进行投票，交易中携带有投票的提案编号和是否赞同提案中携带的内容；"
+msgstr ""
+
+#: ../../source/Chain 7bc2a1beef6f4bbd94d736ac8cd7b718 Authority
+#: Management.rst:22 Management/Chain Role
+msgid "当提案投票通过后，由提案创建者发送交易执行提案，交易中携带由执行的提案编号。"
+msgstr ""
+
+#: ../../source/Chain 68f4f1b70dee40dbbb552fcd01e32b33 Authority
+#: Management.rst:24 Management/Chain Role
+msgid "链级角色管理的操作分为以下几种："
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:26 Management/Chain Role
+#: a0cd3d6da3b945efaa0bf06f51ac9755
+msgid ""
+"CreateRole，创建角色。其中 `admin、contractManager、nodeOfVP` 为内置角色，合约初始化时默认创建。其中 "
+"`admin` 为链级管理员， `contractManager` 为合约管理员， `nodeOfVP` 代表VP节点；"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:28 Management/Chain Role
+#: b327f12fbbd241058735c24ef5f13798
+msgid "DeleteRole，删除角色。其中 `admin、contractManager、nodeOfVP` 角色不能被删除；"
+msgstr ""
+
+#: ../../source/Chain 8e06b685c5a44ca6964f221fa2e718dd Authority
+#: Management.rst:30 Management/Chain Role
+msgid "Grant，授予账户某角色；"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:32 Management/Chain Role
+#: aea1134fceb447b786ea1ead74c971e4
+msgid "Revoke，回收账户的某角色。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:34 Management/Chain Role
+#: fc0a8bec8ffb4f1fbbddc5fb14093503
+msgid "在内置的提案合约初始化时（第一次发交易执行提案操作时），会将带有余额的账户(链启动时，如果没有使用genesis账户向其他账户转账，则是genesis账户，初始化完成后，只能通过提案管理链级角色，为其他账户授权或回收角色，其他账户有了余额也不会再被初始化为具有角色的账户)初始化为链级管理员和合约管理员。"
+msgstr ""
+
+#: ../../source/Chain 864258a22dcd4ebaadb1c9b896a3d5c0 Authority
+#: Management.rst:38 Management/Chain Role
+msgid "litesdk接口说明"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:41 Management/Chain Role
+#: a800ca92710c4df4a968b9c24b7b8ddf
+msgid "链级角色管理接口"
+msgstr ""
+
+#: ../../source/Chain 71d37f5f808042cf9fc72bdde5a69a43 Authority
+#: Management.rst:43 Management/Chain Role
+msgid ""
+"litesdk提供了 `ProposalBuilder` 构造器用于构造提案的操作，在 `ProposalBuilder` 中提供了 "
+"`createForPermission` 、 `vote` 、 `cancel` 和 `execute` "
+"方法分别用于创建权限类(即链级角色管理)提案、提案投票、取消提案和执行提案的提案操作，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:81 Management/Chain Role
+#: f342a9496c834fc395cb0714961dff96
+msgid ""
+"在创建权限类提案时，根据提案内容中需要对链级角色管理的操作，接收对应的权限类操作即可。litesdk为权限类操作 "
+"`PermissionOperation` 提供了构造器 `PermissionBuilder` ，构造器中提供了 `createRole` 、 "
+"`deleteRole` 、 `grant` 、 `revoke` 以及 `build` 方法，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:127 Management/Chain Role
+#: a01863ba895b4e76ad06e36ba6d30206
+msgid ""
+"链级角色管理的操作构造好后，用ProposalBuild构造器构造提案相关的操作，创建好之后，使用 `BVMBuilder` 提供的 "
+"`invoke` 方法构造bvm的交易体，使用 `build` 方法构造出交易 `transaction` ，并为交易设置 `txVersion`"
+" 并使用 `sign` 方法签名，得到最终可以发送执行的交易体。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:130 Management/Chain Role
+#: c5f298aa3cb0418da59f2ff1e3b670af
+msgid "链级角色查询接口"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:132 Management/Chain Role
+#: f5c38cd0c34b4237996aab67db34841f
+msgid ""
+"litesdk的configService中还提供了查询链级角色是否存在的接口 `isRileExist` 和查询所有链级角色的接口 "
+"`getAllRoles` ，另外AccountService中还提供了查询账户链级角色的接口 `getRoles` 和根据链级角色查询账户的接口"
+" `getAccountsByRole` 。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:134 Management/Chain Role
+#: d73f7e2e9d6c4e39934abbecbf900adf
+msgid "查询链级角色是否存在"
+msgstr ""
+
+#: ../../source/Chain 903256f7ad47436e9b62938a9bc6b2bf
+#: 907dff4122de499fa9907f6fb0c0c160 Authority Management.rst:136
+#: Management.rst:150 Management.rst:162 Management.rst:176 Management/Chain
+#: Role d4526f1dcb1e4de483999e922147397c e534edd4f12c480bbe3a7aa759cb3dc7
+msgid "参数："
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:138 Management/Chain Role
+#: fdab69440511479bb9be4fd80239fd81
+msgid "role 要查询的角色名称；"
+msgstr ""
+
+#: ../../source/Chain 2733fcb7af2d45f8b3c1987076888682
+#: 909e76a579f24e93bf5ccdefbf38f562 955fc09feea84dc0ba78cfa04a99c4c8 Authority
+#: Management.rst:140 Management.rst:152 Management.rst:166 Management.rst:180
+#: Management/Chain Role f2c8860c42724219a9f206c8456176b5
+msgid "nodeIds 请求向哪些节点发送。"
+msgstr ""
+
+#: ../../source/Chain 8a5dd4f330d84e10a960963e75dece30 Authority
+#: Management.rst:146 Management/Chain Role
+msgid ""
+"拿到 `RoleExistResponse` 后，通过 `isRoleExist` 方法拿到角色是否存在的结果。 `isRoleExist` "
+"方法返回的是一个布尔值， `true` 表示存在， `false`  表示不存在。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:148 Management/Chain Role
+#: ab0101b7c553482cbef720dc65b49b22
+msgid "查询所有链级角色"
+msgstr ""
+
+#: ../../source/Chain 5346741dfdc841d2ad6d21bbbe1c77c5 Authority
+#: Management.rst:158 Management/Chain Role
+msgid ""
+"拿到 `AllRolesResponse` 后，通过 `getAllRoles` 方法拿到所有的角色信息。 `getAllRoles` "
+"方法返回的是key为角色名称，value为角色权重的map。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:160 Management/Chain Role
+#: d414b3b24d354940a7d68d16deba8324
+msgid "查询账户链级角色"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:164 Management/Chain Role
+#: e367bebef9c84d9082cb87436823949d
+msgid "address 要查询的账户地址；"
+msgstr ""
+
+#: ../../source/Chain 3b26740ffb7144b189a18832584f48ef Authority
+#: Management.rst:172 Management/Chain Role
+msgid "拿到 `RolesResponse` 后，通过 `getRoles` 方法拿到所有的角色信息。 `getRoles` 方法返回的是账户的角色列表。"
+msgstr ""
+
+#: ../../source/Chain 156215e8a6a140f0a7d5640267df26f3 Authority
+#: Management.rst:174 Management/Chain Role
+msgid "根据链级角色查询账户"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:178 Management/Chain Role
+#: e1569eccb2284bbb9a33537ba8960a38
+msgid "role 要查询的链级角色；"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:186 Management/Chain Role
+#: c931dc65ae9c41909c103a03ceaf0393
+msgid ""
+"拿到 `AccountsByRoleResponse` 后，通过 `getAllRoles` 方法拿到所有的角色信息。 `getAccounts`"
+" 方法返回的是账户列表。"
+msgstr ""
+
+#: ../../source/Chain 76e459963e074e9a87e6dd173ab8e6cc Authority
+#: Management.rst:189 Management/Chain Role
+msgid "litesdk使用示例"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:191 Management/Chain Role
+#: dab4a3d90b65424f996699a321b4aa22
+msgid ""
+"具有链级管理员的账户，使用litesdk创建角色accountManager "
+"，为账户A授权角色accountManager和admin角色，回收账户A的accountManager角色，删除accountManager角色，其代码如下::"
+msgstr ""
+
+#: ../../source/Chain 4161ee867a4b4ad8b1001bba743fc311 Authority
+#: Management.rst:242 Management/Chain Role
+msgid "使用litesdk查询链级角色，其代码如下::"
+msgstr ""
+

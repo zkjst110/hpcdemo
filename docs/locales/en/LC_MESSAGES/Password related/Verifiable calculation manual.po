@@ -1,0 +1,35 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Password 7eb5fcc4fe6948fcaa2ef4a4040320f5 calculation
+#: manual.rst:4 related/Verifiable
+msgid "可验证计算使用手册"
+msgstr ""
+
+#: ../../source/Password 2769e5fb549444b7918d2cdd0f9d2d9b calculation
+#: manual.rst:6 related/Verifiable
+#, python-format
+msgid ""
+"`可验证计算使用手册 <https://upload.filoop.com/RTD-"
+"Hyperchain%2F%E5%8F%AF%E9%AA%8C%E8%AF%81%E8%AE%A1%E7%AE%97%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C.docx>`_"
+msgstr ""
+

@@ -1,0 +1,985 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Chain 6c929c4917474bf994814680cc5b3390 Authority
+#: Management.rst:4
+msgid "链级权限管理"
+msgstr ""
+
+#: ../../source/Chain 07bdb1bcb1b2401bb2952324259b0c10 Authority
+#: Management.rst:6
+msgid ""
+"平台基于 **联盟自治CAF** "
+"框架实现链级权限管理，具体包括链级配置变更、链级角色管理、节点增删管理、合约权限管理、合约生命周期管理、合约命名服务以及账户生命周期管理。"
+msgstr ""
+
+#: ../../source/Chain 17c9b8c0af7741309e1c3f8815f1c1c4 Authority
+#: Management.rst:8
+msgid "下文将介绍CAF框架下提案-投票流程的具体使用方式及相关接口说明，其他功能的使用说明请前往相应界面："
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:11
+#: b3f12dbe630b403a86c4a646897124ec
+msgid "其他功能使用说明"
+msgstr ""
+
+#: ../../source/Chain 41f58654058945cea9792cefdfd18650 Authority
+#: Management.rst:14
+msgid "链级配置管理"
+msgstr ""
+
+#: ../../source/Chain 8daca4e0c6224e919a6d11ed23f9be1b Authority
+#: Management.rst:16
+msgid ""
+"本文档提供Hyperchain中 **链级配置** 变更的操作指南，作为 :ref:`链级配置管理 <chain-conf-manage>` "
+"的使用说明。"
+msgstr ""
+
+#: ../../source/Chain 8aca85a868bd43be82e0c2352fcfc38a Authority
+#: Management.rst:19
+msgid "链级角色管理"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:21
+#: ae5f324a1fe042af8720a3c8c332554b
+msgid ""
+"本文档提供Hyperchain中 **链级角色管理** 的操作指南，作为 :ref:`链级角色管理 <chain-role-manage>` "
+"的使用说明。"
+msgstr ""
+
+#: ../../source/Chain 464d20054f5941ae8ea641677a5f5f60 Authority
+#: Management.rst:24
+msgid "节点增删管理"
+msgstr ""
+
+#: ../../source/Chain 8371560d4463496997bca598482d32ef Authority
+#: Management.rst:26
+msgid ""
+"本文档提供Hyperchain中 **节点管理（即增加节点、删除节点）** 的操作指南，作为 :ref:`节点增删管理 <node-"
+"manage>` 的使用说明。"
+msgstr ""
+
+#: ../../source/Chain 7d8d4da9b0d84fa1930de26ac64d9102 Authority
+#: Management.rst:29
+msgid "合约权限管理"
+msgstr ""
+
+#: ../../source/Chain 1504b911abe34623a2dffbb75a811c1a Authority
+#: Management.rst:31
+msgid ""
+"合约权限管理，是基于链级角色，对账户进行链上的 **合约（也可以是转账交易的to）访问权限** 进行 :ref:`合约权限管理 "
+"<contract-auth-manage>` 。"
+msgstr ""
+
+#: ../../source/Chain 739808225a154d078b4970331a95e57c Authority
+#: Management.rst:34
+msgid "接口权限管理"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:36
+#: b3c3ba48cd534e5b8df06495438a88fe
+msgid ""
+"描述接口权限管理如何使用，预期读者为需要使用 **接口权限管理** "
+"对节点的查询接口进行访问权限管理的用户（对于发交易类的接口，在本特性中不做管理）， :ref:`接口权限管理 <Interface-"
+"Authority-Management>` 文档。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:39
+#: b19b7bab48a84605baaf9b1a22458e42
+msgid "合约命名管理"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:41
+#: fefe65b86ffe444cbe1622d279e5c31c
+msgid ""
+"本文档提供hyperchain中 **合约命名服务** 的操作指南，做为 :ref:`合约命名服务CNS <contract-naming-"
+"service>` 的使用说明。"
+msgstr ""
+
+#: ../../source/Chain 55d7341610464ec7b542b7dc3226b1cd Authority
+#: Management.rst:44
+msgid "合约生命周期管理"
+msgstr ""
+
+#: ../../source/Chain 032f7723f71e4390a17b5b88d49056dd Authority
+#: Management.rst:46
+msgid ""
+"本文档提供hyperchain中 **合约生命周期管理** 的操作指南，做为 :ref:`合约生命周期管理 <contract-life-"
+"manage>` 的使用说明。"
+msgstr ""
+
+#: ../../source/Chain 66e2f2399d5648b7871fc9ecdbba4062 Authority
+#: Management.rst:49
+msgid "账户生命周期管理"
+msgstr ""
+
+#: ../../source/Chain 41cf55dfa55f4c2999d2cccb5ebcc851 Authority
+#: Management.rst:51
+msgid ""
+"本文档提供Hyperchain中 **账户生命周期管理** 的操作指南，作为 :ref:`账户生命周期管理 <account-life-"
+"manage>` 的使用说明。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:54
+#: f3aaf7282585421d92410969d4b2406b
+msgid "CA模式管理"
+msgstr ""
+
+#: ../../source/Chain 0c4970386677470896e747f6a5918a4c Authority
+#: Management.rst:56
+msgid ""
+"本文档提供Hyperchain中 **ca模式管理** 的操作指南，作为 :ref:`CA模式管理 <CA-Mode-Management>` "
+"与root ca管理的使用说明。"
+msgstr ""
+
+#: ../../source/Chain 5466160d1f194a809c62c1a308226d37 Authority
+#: Management.rst:60
+msgid "功能概述"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:61
+#: e4e6c162ec7a4831ad9ee1782f54b4ce
+msgid ""
+"联盟自治框架CAF（Consortium Autonomous Framework）由管理员共同形成 “联盟自治成员组织” "
+"，以联盟协商的形式管理联盟链。该框架适用于一切链级别的变更，如节点增删、合约管理等。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:63
+#: b50c40af3f344055b637cc84c10b16d3
+msgid ""
+"CAF的管理委员会包括 **系统管理委员会** 和 **合约管理委员会** "
+"。前者由系统管理员组成，负责链级配置变更、链级角色管理、节点增删等提案的商议与投票；后者由合约管理员组成，负责合约访问权限管理、合约生命周期管理、合约命名服务CNS等提案的商议与投票。"
+msgstr ""
+
+#: ../../source/Chain 2b5e312a7ac341448d2d6a95f249e5a5 Authority
+#: Management.rst:65
+msgid "提案的提出、表决、通过等核心逻辑都依托于 **内置智能合约（BVM）** 实现，具体流程如下："
+msgstr ""
+
+#: ../../source/Chain 1114fa985e8048c99e283fe84472199a Authority
+#: Management.rst:67
+msgid "系统管理或合约管理的行为，会被申请人以提案形式提交给相应的委员会；"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:68
+#: fe227093ccfa4bf08fe99a2266d84aa2
+msgid "所有组织成员根据自身制定的投票策略对每个提案作出判断；"
+msgstr ""
+
+#: ../../source/Chain 8fb2a95b7f124a5f966e31a281e61f7b Authority
+#: Management.rst:69
+msgid "当组织中同意该提案的成员数量达到预设阈值时，提案被通过；"
+msgstr ""
+
+#: ../../source/Chain 18adbafcf776456299047d6072dd86e8 Authority
+#: Management.rst:70
+msgid "所有链上节点根据通过提案的内容自动变更节点状态。"
+msgstr ""
+
+#: ../../source/Chain 1075a6fc6f5343dc828f5d5ae1e82ec9 Authority
+#: Management.rst:74
+msgid "安装及初始化"
+msgstr ""
+
+#: ../../source/Chain 89238fb8a52548db92da82078241ca34 Authority
+#: Management.rst:75
+msgid "使用litesdk与节点交互分为以下几步："
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:77
+#: c6617403684542de89a9b23421887558
+msgid "首先需要创建 `HttpProvider` 对象管理与节点的连接；"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:78
+#: c8d7a5101a9e47af8d7e634cf83b92f5
+msgid "然后创建 `ProviderManager` 对象负责集成、管理 `HttpProvider` ；"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:79
+#: b41a05c572df4df7b104d789987bcc61
+msgid "然后再根据实际的需要创建相应的服务 `Service` 的具体实现类；"
+msgstr ""
+
+#: ../../source/Chain 5139bf4c80914a73a6fb42baf4f472e7 Authority
+#: Management.rst:80
+msgid "最后将请求发送出去拿到响应结果。"
+msgstr ""
+
+#: ../../source/Chain 30bc2059dd5049948505f3f0b40db2c8 Authority
+#: Management.rst:82
+msgid ""
+"初始化的流程中litesdk的主文档中有详细介绍，此次不再赘述。此外，执行合约需要创建的是 `Service` 的实现类 "
+"`ContractService` 。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:86
+#: c966b329710e45399255c028db2800ac
+msgid "使用说明"
+msgstr ""
+
+#: ../../source/Chain 2618a312652749dfaff407b5e1f19fb1 Authority
+#: Management.rst:89
+msgid "BVM合约接口"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:91
+#: bc1c8ff7ce354c2f9ae14a518e186481
+msgid ""
+"BVM合约主要通过 `ContractService` 提供的 `invoke` 接口执行，对于特殊的通过bvm合约管理合约生命周期是通过 "
+"`ContractService` 提供的 `manageContractByVote` "
+"接口执行（主要是为了与默认的非bvm管理合约生命周期的方式区分开来）。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:93
+#: e446bfcef1f048ceace2b9ef021362b4
+msgid "ContractService 的中的接口声明如下::"
+msgstr ""
+
+#: ../../source/Chain 830e39d11e4b487db3d5f728cc642fff Authority
+#: Management.rst:104
+msgid "BVM交易体"
+msgstr ""
+
+#: ../../source/Chain 7d1eac1a358445b39eb7856b742d736a Authority
+#: Management.rst:106
+msgid ""
+"**LiteSDK** 使用 **Builder** 模式来负责对 `Transaction` 的创建，通过调用 `build()` 函数来获取到"
+" `Transaction` 实例。针对BVM有相应的 `BVMBuilder` ，集成自父类 `Builder` ， `BVMBuilder` "
+"提供了 `invoke` 接口用于构造参数，其接口声明如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:112
+#: e1adf880ec6b41aca76a2c834cb72633
+msgid ""
+"`BVMBuilder` 提供的 `invoke` 方法接收一个 `BuiltinOperation` 类型的对象，这个对象集成自统一的父类 "
+"`Operation` ， 在 `Operation` 中封装了这个操作要调用的合约方法以及需要的参数；其定义如下::"
+msgstr ""
+
+#: ../../source/Chain 673551328bde4c03baae33df1d102209 Authority
+#: Management.rst:121
+msgid "`BuiltinOpetation` 继承自 `Operation` ，增加了要调用的合约地址的封装，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:128
+#: e4580d9452d04a9794466912108411af
+msgid ""
+"由于bvm中有多种合约，一个合约中也有多个合约方法，为此提供了相应的 `Builder` 来构造相应的操作，封装了一个父类的 "
+"`BuilderOperationBuilder` 用于构造内置操作 `BuiltinOperation` ，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain 81b3c6ad731c4360974831113eaf17dc Authority
+#: Management.rst:139
+msgid ""
+"针对不同的合约地址中不同的合约方法调用有封装相应的实现类，目前bvm提供的合约有： `HashContract` 、 "
+"`ProposalContract` 两种，分别有 `BuiltinOperation` 的实现类 `HashOperation` 和 "
+"`ProposalOperation` ，相应的也提供了 `HashBuilder` 和 `ProposalBuilder` 用于创建相应的操作。"
+msgstr ""
+
+#: ../../source/Chain 64e62a4037bd482f8034d2b414c23f5f Authority
+#: Management.rst:142 Management.rst:650 aac00d9624394a1eb63febcfe113ad0a
+msgid "HashContract"
+msgstr ""
+
+#: ../../source/Chain 8670580eeadc4edfaf532336df83ff84 Authority
+#: Management.rst:144
+msgid "HashContract 中提供的合约方法如下："
+msgstr ""
+
+#: ../../source/Chain 09156b393f804c5d902f607f9d690a08 Authority
+#: Management.rst:146
+msgid "`Set` : Set方法接收两个参数，一个参数为key，一个参数为value，用于存储键值对。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:147
+#: af62e2ecc4e54b4d8e090d65cdf4e174
+msgid "`Get` : Get方法接收一个参数key，用于取出HashContract中与之对应的value值。"
+msgstr ""
+
+#: ../../source/Chain 41ecf2f86a3f497a90aa19e6fa70e108 Authority
+#: Management.rst:149
+msgid ""
+"构造 `HashContract` 操作的构造器 `HashBuilder` 提供了 `set` 和 `get` 方法，分别用于构造 "
+"`HashContract` 合约中的 `Set` 和 `Get` 方法，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain 2e648119c41f434a865ff133a8dbdc90 Authority
+#: Management.rst:171 Management.rst:681 ecb2d04271764def98cade19ef1bf1d0
+msgid "ProposalContract"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:173
+#: a835495f65684c63928658fceac0db09
+msgid "ProposalContract 中提供的合约方法如下："
+msgstr ""
+
+#: ../../source/Chain 4dd0a7cd4b3d4e18800e5d5870a38290 Authority
+#: Management.rst:175
+msgid "`Create` : Create方法接收两个参数，一个是提案内容，一个是提案类型，用于创建提案"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:176
+#: fe9425e81bee46a0973d7abcd37b9414
+msgid "`Vote` : Vote方法接收两个参数，一个是投票的提案id，一个是投赞同票还是反对票，用于对提案进行投票"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:177
+#: bed6919375e6494f81d71fccc4369f49
+msgid "`Cancel` : Cancel方法接收一个参数，要取消的提案id，用于取消提案"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:178
+#: f2de74cc207b4f18ac9eb227c0a3f4ea
+msgid "`Execute` : Execute方法接收一个参数，要执行的提案id，用于执行提案"
+msgstr ""
+
+#: ../../source/Chain 66b7ae3e04064b3f8ee773a96da0bc1a Authority
+#: Management.rst:180
+msgid "注意："
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:182
+#: ccbd10bc871f4cc0a6dc5741990c942e
+msgid "提案总共有六个状态：等待投票、驳回、等待执行、已完成、取消和超时。"
+msgstr ""
+
+#: ../../source/Chain 8aa3a35779d94fe9ba1f6b4682960a0e Authority
+#: Management.rst:183
+msgid "只有创建者有权取消提案"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:184
+#: b4e95a7354dd490f88f0e82869b00a4b
+msgid "提案创建后通过投票可进入等待执行、驳回状态"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:185
+#: b6829375dfb149b890dc8be74639b04c
+msgid "处于等待执行的提案可有发起者发起执行操作，执行完成进入已完成状态"
+msgstr ""
+
+#: ../../source/Chain 6630b59b67e742c49936033bb25e28ee Authority
+#: Management.rst:186
+msgid "提案处于等待投票、等待执行状态时无法创建新的提案"
+msgstr ""
+
+#: ../../source/Chain 6877187ef0104df8960baf968491b60c Authority
+#: Management.rst:187
+msgid "目前提案的默认阈值为链级管理员的总个数，即提案创建后，每个管理员都铜牌同意此提案则通过投票"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:188
+#: e2dcb8fd585a4cfd9458f73295d7b5f6
+msgid "目前提案的默认超时时间为5分钟（当设置当超时时间小于5分钟时，会设置为5分钟），即创建提案的交易打包时间+5分钟则为提案超时时间"
+msgstr ""
+
+#: ../../source/Chain 51a46fff8a1f49b38b1146ad53075a7b Authority
+#: Management.rst:189
+msgid "每次执行提案交易都会拿到当前系统中最新的提案，将当前执行的交易的打包时间与提案的超时时间进行对比，如果大于超时时间，则将提案状态置为超时。（不能单纯的认为提案创建后，过了超时时长就一定超时了，没过超时时长就一定没超时。交易的打包时间是主节点中打包交易时取的当前系统时间，主节点的系统时间可能不是正常的时间序列，例如：如果提案创建后发生了viewchange，viewchange之前的主节点在当前时刻的系统时间为1:00，viewchange之后的主节点中当前时刻的系统时间为1:30，这时即使提案创建之后没有超过超时时长，对提案进行投票，由于新的主节点的时间为1:30，打包的时间戳也为1:30对应的时间戳，在执行提案对比是否超时时，判断的结果就为超时。目前主节点时间变更除了viewchange之外，还有主节点主动作恶、或根据需要主动变更系统时间。）"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:191
+#: a708ca8903a947ab85c63ca338ca6c7b
+msgid "根据提案的状态以及对提案的操作，可得出一个提案的状态迁移如下图所示："
+msgstr ""
+
+#: ../../source/Chain 1ad793f5af6c4fc28b0a1641e2988d8f Authority
+#: Management.rst:193
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/Chain 0ab1d9df593a4abe97bfdfca92af0920 Authority
+#: Management.rst:988
+msgid "image1"
+msgstr ""
+
+#: ../../source/Chain 47e2bd4fd4344d1ba2a3f37960c2ceaa Authority
+#: Management.rst:195
+msgid "对于提案可根据提案内容划分为以下几类："
+msgstr ""
+
+#: ../../source/Chain 21288fb23da146d9bc783c052203a634 Authority
+#: Management.rst:197
+msgid "配置类， ptype为 `config` ，data则为配置项操作列表；"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:198
+#: fee80e198a804ed6a1c9a95d89858c5b
+msgid "权限类，ptype为 `permission` ，data为权限操作列表；"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:199
+#: fda3a6617c114b5b97619a719a3cc9fb
+msgid "节点类，ptype为 `node` ，data为节点操作列表；"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:200
+#: bde146518f1b47b5bed6fd7514e51a86
+msgid "合约命名类，ptype为 `cns` ，data为合约命名操作列表；"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:201
+#: e118cf74a01f473086259dcb76888cc5
+msgid "合约生命周期管理类，ptype为 `contract` ，data为合约生命周期管理操作列表。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:203
+#: ef436c03ed874d40ad1a202ea97be287
+msgid ""
+"构造 `ProposalContract` 操作的构造器 `ProposalBuilder` 提供了 `createForNode` 、 "
+"`createForCNS` 、 `createForPermission` 、 `createForContract` 、 "
+"`createForConfig` 、 `vote` 、 `cancel` 和 `execute` "
+"方法分别用于创建节点类提案、创建合约命名类提案、创建权限类提案、创建配置类提案、提案投票、取消提案和执行提案的提案操作，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain 7bc95261b4f54c018c68f85d76d0c960 Authority
+#: Management.rst:275
+msgid "配置类操作"
+msgstr ""
+
+#: ../../source/Chain 1bb18ffbfa9344f7b6583431274b18cf Authority
+#: Management.rst:277
+msgid "配置的操作分以下几种："
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:279
+#: f9a94f03ae234400a0093a02a73ff879
+msgid "SetFilterEnable，设置filter.enable的值，即是否开启交易拦截过滤器"
+msgstr ""
+
+#: ../../source/Chain 41bfcb7c53a0487da94da0adcd7252cf Authority
+#: Management.rst:280
+msgid "SetFilterRules，设置filter.rules的值，即交易拦截过滤规则"
+msgstr ""
+
+#: ../../source/Chain 583dee75f74b4275aaced6ff99b86257 Authority
+#: Management.rst:281
+msgid "SetConsensusAlgo，设置consensus.algo的值，即共识算法（目前只是修改了配置文件，还没有实现同步切换共识算法。对于整个系统而言，共识算法并没有切换过来，重启之后才会真正切换）"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:282
+#: c36ceeecf7734556a647c3e487bc7dbf
+msgid "SetConsensusSetSize，设置consensus.set.set_size的值，即一个节点一次广播的最大交易数（目前只是修改了配置文件，还没有实现同步切换共识配置参数。对于整个系统而言，并没有切换过来，重启之后才会真正切换）"
+msgstr ""
+
+#: ../../source/Chain 9ed0ffd43e9a4bee88099a5d009d5d23 Authority
+#: Management.rst:283
+msgid "SetConsensusBatchSize，设置consensus.pool.batch_size的值，即共识打包的最大交易数（目前只是修改了配置文件，还没有实现同步切换共识配置参数。对于整个系统而言，并没有切换过来，重启之后才会真正切换）"
+msgstr ""
+
+#: ../../source/Chain 4b83a227c1cf46b5be7c551e14fc9df8 Authority
+#: Management.rst:284
+msgid "SetConsensusPoolSize，设置consensus.pool.pool_size的值，即节点的交易池存储的最大交易数（目前只是修改了配置文件，还没有实现同步切换共识配置参数。对于整个系统而言，并没有切换过来，重启之后才会真正切换）"
+msgstr ""
+
+#: ../../source/Chain 5d17b058a46845a6add90b4cbfcaa737 Authority
+#: Management.rst:285
+msgid "SetProposalTimeout，设置proposal.timeout的值，即提案超时时间（默认超时时间为5分钟，即最短超时时间，当设置当超时时间小于最短超时时间时，会设置为最短超时时间）"
+msgstr ""
+
+#: ../../source/Chain 6bd3d6ca9c014c94896021a1ba93fecf Authority
+#: Management.rst:286
+msgid "SetProposalThreshold，设置proposal.threshold的值，即提案的投票阈值（默认值为链级管理员总个数）"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:287
+#: f1194f043e6145a6b572b87a3b37c44f
+msgid "SetContractVoteEnable，设置proposal.contract.vote.enable的值，即是否开启通过投票管理合约生命周期，默认关闭"
+msgstr ""
+
+#: ../../source/Chain 4ce80767af6a486db974633697544389 Authority
+#: Management.rst:288
+msgid "SetContractVoteThreshold，设置proposal.contract.vote.threshold的值，即合约生命周期管理提案的投票阈值（默认值为合约管理员总个数）"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:290
+#: f4b7b695c9424d0fb322ed5754ab1061
+msgid ""
+"构造配置类操作 `ConfigOperation` 的构造器 `ConfigBuilder` 提供了 `setFilterEnable` 、 "
+"`setFilterRules` 、 `setConsensusAlgo` 、 `setConsensusSetSize` 、 "
+"`setConsensusBatchSize` 、 `setConsensusPoolSize` 、 `setProposalTimeout` 、"
+" `setProposalThreshold` 、 `setContractVoteEnable` 、 "
+"`setContractVoteThreshold` 以及 `build` 方法，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain 0c86f808a2ad467c9374e434975556d6 Authority
+#: Management.rst:384
+msgid "权限类操作"
+msgstr ""
+
+#: ../../source/Chain 64ac7984c31d4ec6a56ee34bdbd13fd6 Authority
+#: Management.rst:386
+msgid "权限的操作分以下几种："
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:388
+#: de50b9e35c334fcbbd86c77e13cc4f8c
+msgid ""
+"CreateRole，创建角色。其中 `admin、contractManager、nodeOfVP` 为内置角色，合约初始化时默认创建。其中 "
+"`admin` 为链级管理员， `contractManager` 为合约管理员， `nodeOfVP` 代表VP节点"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:389
+#: c33ee12f633741ceaec2219e86972127
+msgid "DeleteRole，删除角色。其中 `admin、contractManager、nodeOfVP` 角色不能被删除。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:390
+#: eac9eb0bc60346449df965016f385f07
+msgid "Grant，授予账户某角色"
+msgstr ""
+
+#: ../../source/Chain 756385f83428420c9ed99a0f7ea83cab Authority
+#: Management.rst:391
+msgid "Revoke，回收账户的某角色"
+msgstr ""
+
+#: ../../source/Chain 76ec14e717cf44c89c6a5c04e3e6bee1 Authority
+#: Management.rst:393
+msgid ""
+"构造权限类操作 `PermissionOperation` 的构造器 `PermissionBuilder` 提供了 `createRole` 、"
+" `deleteRole` 、 `grant` 、 `revoke` 以及 `build` 方法，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain 14d0fd6fa9884a3982c183c7e426d9b9 Authority
+#: Management.rst:437
+msgid "节点管理类操作"
+msgstr ""
+
+#: ../../source/Chain 9b96a9dcb5e740049b019808a8da1132 Authority
+#: Management.rst:439
+msgid "节点的操作分为以下几种："
+msgstr ""
+
+#: ../../source/Chain 8f38f1b37da44c6ebff24ae52852adea Authority
+#: Management.rst:441
+msgid "AddNode，增加建立连接的节点，即将节点加到hosts中（此时没有加入共识）"
+msgstr ""
+
+#: ../../source/Chain 41853ee3628f4acba992bcd2685f4598 Authority
+#: Management.rst:442
+msgid "AddVP，增加VP节点，即将节点加入共识"
+msgstr ""
+
+#: ../../source/Chain 83449bb9ba914781a8bd0b1c54eedbe7 Authority
+#: Management.rst:443
+msgid "RemoveVP，删除共识VP节点，同时断开此节点在此namespace中与其他节点建立的连接，如果节点没有加入其他namespace，则将节点停掉"
+msgstr ""
+
+#: ../../source/Chain 0841c420641b4f65b537360470b44f7c Authority
+#: Management.rst:445
+msgid ""
+"构造节点管理类操作 `NodeOperation` 的构造器 `NodeBuilder` 提供了 `addNode` 、 `addVP` 、 "
+"`removeVP` 以及 `build` 方法，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain 7e7783554ad44124aeb306078ae061cd Authority
+#: Management.rst:485
+msgid "合约命名操作"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:487
+#: bd9bba87d98348ed84f2a6df82476c23
+msgid "合约命名的操作分以下几种："
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:489
+#: dd16a0ff3a6d4cb6bcd6ffc741100680
+msgid "SetCName，设置合约命名，即为某一合约地址设置合约命名"
+msgstr ""
+
+#: ../../source/Chain 901bc0cd493846dd9b4d9276462e1e1b Authority
+#: Management.rst:491
+msgid ""
+"构造合约命名类操作 `CNSOperation` 的构造器 `CNSBuilder` 提供了 `setCName` 和 `build` "
+"方法，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:512
+#: de0a8e4b840b4322bb0456e61afbabb3
+msgid "合约生命周期管理操作"
+msgstr ""
+
+#: ../../source/Chain 6f9e3d1cdb91471fb33b186fbe8c41d7 Authority
+#: Management.rst:514
+msgid "合约生命周期管理的操作分以下几种："
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:516
+#: e685b9f50e074cbc8f037f9bc7bd65ac
+msgid "DeployContract，部署合约，即将合约部署到区块链上以供使用。返回值为部署是否成功以及相应的合约地址。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:517
+#: b683157689f74eecb6079ee13d390fa6
+msgid "UpgradeContract，升级合约，即对已有的合约进行升级"
+msgstr ""
+
+#: ../../source/Chain 225934824d744bb6a0168ccd52dfab04 Authority
+#: Management.rst:518
+msgid "MaintainContract，维护合约，即对已有的合约进行冻结、解冻和销毁操作"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:520
+#: e5f36b9c796741f59dbb71f5758ba262
+msgid ""
+"构造合约生命周期管理类操作 `ContractOperation` 的构造器 `ContractBuilder` 提供了 `deploy` 、 "
+"`upgrade` 、 `upgradeByName` 、 `maintain` 、 `maintainByName` 以及 `build` "
+"方法，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain 6ce43602fb384016921baa1fed50780b Authority
+#: Management.rst:596
+msgid ""
+"bvm的合约操作创建好之后，使用 `BVMBuilder` 提供的 `invoke` 方法构造bvm的交易体，使用 `build` 方法构造出交易"
+" `transaction` ，并为交易设置 `txVersion` 并使用 `sign` 方法签名，得到最终可以发送执行的交易体。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:600
+#: f4431ec148cd40dfb5fc8effc390b600
+msgid "创建请求"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:602
+#: bee3136324f44c39aa7dd1100517a21b
+msgid "这个过程分为两步，先创建 `ContractService` 对象，再制定之前构造的交易体调用相应的服务接口。示例如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:609
+#: c8f5abfcc2104f2a96bb3ee876c664c9
+msgid "发送交易体"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:611
+#: ecb9018bab7541bc96e1e22552764933
+msgid ""
+"这个过程实际分为两步，调用 `send()` 部署合约拿到响应，再对响应解析拿到 `ReceiptResponse` "
+"（执行结果），这是合约相关接口独有的，其他接口一般只需要调用 `send()` 方法拿到响应就结束了。"
+msgstr ""
+
+#: ../../source/Chain 6b90b3151926444ba89a57afe286d15d Authority
+#: Management.rst:619
+msgid "解析回执"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:621
+#: d05170b1c253448cb10dad190634e83e
+msgid "在 `Decoder` 类中，提供了 `decodeBVM` 的方法用于解析bvm交易回执，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain 50ba56cd1f8240abb2616677758309f9 Authority
+#: Management.rst:631
+msgid ""
+"其中 `Result` 中含有三个字段， `success` "
+"表示是否成功（指的是对HashContract以及ProposalContract的操作是否成功，对于ProposalContract而言，提案内容中包含的每个操作在执行时是否成功，在"
+" `ret` 字段中展示，因为提案支持批量操作）， `err` 表示错误信息， `ret` 为返回的相应数据。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:633
+#: f833ca4f21d24fb991ad659189cecb1f
+msgid ""
+"当需要解析 `result.ret` 的值时（创建提案失败，或执行提案的时候）， `Decoder` 类中提供了 "
+"`decodeBVMResult` 的方法，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain 8c7123dd5d914f16b671fb6761a9c078 Authority
+#: Management.rst:643
+msgid ""
+"其中 `OperationResult` 中含有两个字段， `code` 表示执行结果（200为成功）， `msg` "
+"为相应的错误信息（code不为200时）或操作返回值（部署合约操作的合约地址）。列表中 `OperationResult` "
+"的顺序与创建提案时，提案中包含的操作顺序一致。"
+msgstr ""
+
+#: ../../source/Chain 29b918859d4e468ab8b095390718dcf8 Authority
+#: Management.rst:647
+msgid "使用示例"
+msgstr ""
+
+#: ../../source/Chain 423e8b39513240d38c98dbe81bde25af Authority
+#: Management.rst:651
+msgid "HashContract中有两个方法可供调用，Set和Get方法。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:653
+#: b3fd8f8231244de799aaa8bfbc4ec714
+msgid ""
+"SetSet方法接收两个参数，一个参数为key，一个参数为value，用于存储键值对。使用HashBuilder 提供的set "
+"方法构造一个BuiltinOperation ，然后使用BVMBuilder 提供的invoke 方法设置参数，使用build "
+"方法构造Transaction ，然后使用ContractService 提供的invoke "
+"方法构造请求，最后将请求发出拿到响应结果，其示例如下::"
+msgstr ""
+
+#: ../../source/Chain 61928d3337c34d55acca23cf2cc55511 Authority
+#: Management.rst:667
+msgid "GetGet方法接收一个参数key，用于取出HashContract中与之对应的value值。其示例如下::"
+msgstr ""
+
+#: ../../source/Chain 305fe7bd3f66410fa3aaff6a194540f7 Authority
+#: Management.rst:682
+msgid "ProposalContract提供创建提案、取消提案、提案投票以及执行提案的操作，分别对应Create、Cancel、Vote、Execute方法。"
+msgstr ""
+
+#: ../../source/Chain 6d991e224fbc49b9afaf95a3b7b62a54 Authority
+#: Management.rst:685
+msgid "创建提案"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:687
+#: d0312b0cfb5c4eb1bc9a5322c8bce168
+msgid "**配置类**"
+msgstr ""
+
+#: ../../source/Chain 2b64a21ddfae4ae7ab765f338a1a76a5 Authority
+#: Management.rst:689
+msgid ""
+"创建配置类提案时，先使用 `ConfigBuilder` 构造配置类的操作，然后使用 `ProposalBuilder` 提供的 "
+"`createForConfig` 构造创建提案的操作，再使用 `BVMBuilder` 提供的 `invoke` 封装操作到交易中，使用 "
+"`build` 方法构造交易，然后创建请求、发送请求、解析结果，其示例如下::"
+msgstr ""
+
+#: ../../source/Chain 075353902f6a47e7b411bb84214d1d91 Authority
+#: Management.rst:710
+msgid "**权限类**"
+msgstr ""
+
+#: ../../source/Chain 5a691eea95b64afa89b96330fa7b411b Authority
+#: Management.rst:712
+msgid ""
+"创建权限类提案时，先使用 `PermissionBuilder` 构造权限类的操作，然后使用 `ProposalBuilder` 提供的 "
+"`createForPermission` 构造创建提案的操作，再使用 `BVMBuilder` 提供的 `invoke` 封装操作到交易中，使用"
+" `build` 方法构造交易，然后创建请求、发送请求、解析结果，其示例如下::"
+msgstr ""
+
+#: ../../source/Chain 5bd6ede5fbd94fb29aa9735175412975 Authority
+#: Management.rst:727
+msgid "**节点类**"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:729
+#: df58ee7ff1144a0b88c754a23385b832
+msgid ""
+"创建节点类提案时，先使用 `NodeBuilder` 构造节点类的操作，然后使用 `ProposalBuilder` 提供的 "
+"`createForNode` 构造创建提案的操作，再使用 `BVMBuilder` 提供的 `invoke` 封装操作到交易中，使用 "
+"`build` 方法构造交易，然后创建请求、发送请求、解析结果，其示例如下::"
+msgstr ""
+
+#: ../../source/Chain 44e835452cd0408ebc4f9868ae9bbc90 Authority
+#: Management.rst:745
+msgid "**合约命名类**"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:747
+#: c3ecd712ee5e449a891227d66d8b0eb9
+msgid ""
+"创建合约命名类提案时，先使用 `CNSBuilder` 构造合约命名类的操作，然后使用 `ProposalBuilder` 提供的 "
+"`createForCNS` 构造创建提案的操作，再使用 `BVMBuilder` 提供的 `invoke` 封装操作到交易中，使用 "
+"`build` 方法构造交易，然后创建请求、发送请求、解析结果，其示例如下::"
+msgstr ""
+
+#: ../../source/Chain 9aada027ef0f42c0abe535969a76b4f3 Authority
+#: Management.rst:764
+msgid "**合约生命周期管理类**"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:766
+#: e12eebe754e844abb1f11851c7763d0f
+msgid ""
+"创建合约生命周期管理类提案时，先使用 `ContractBuilder` 构造合约生命周期管理类的操作，然后使用 "
+"`ProposalBuilder` 提供的 `createForContract` 构造创建提案的操作，再使用 `BVMBuilder` 提供的 "
+"`invoke` 封装操作到交易中，使用 `build` 方法构造交易，然后创建请求、发送请求、解析结果，其示例如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:791
+#: b203d0baa9a748598ac4d66f69bc6f64
+msgid "提案投票"
+msgstr ""
+
+#: ../../source/Chain 128c3ce7a212444b917577604e26ff59 Authority
+#: Management.rst:793
+msgid "提案创建后，具有相应权限的用户可以对提案进行投票（合约管理员可对合约生命周期管理类提案进行投票，链级管理员可对其他类型提案进行投票，目前默认genesis账户既是链级管理员又是合约管理员，后续可通过权限类提案进行变动），同意此提案内容则投赞同票，不同意为反对票，其示例如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:809
+#: e9b3b316a8eb4107bbe406430bb718ab
+msgid "取消提案"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:811
+#: a8547a36b91143cb90464a99e038a96c
+msgid "创建后的提案如果处于投票中 `Voting` 、等待执行 `Wating_Exe` 时，提案创建者可以发送交易取消提案，其示例如下::"
+msgstr ""
+
+#: ../../source/Chain 1f025e19723543429f2cda5e4f6fe9ea Authority
+#: Management.rst:826
+msgid "执行提案"
+msgstr ""
+
+#: ../../source/Chain 71121d2cb3514f95927d6ef735aa8068 Authority
+#: Management.rst:828
+msgid "提案创建者可对处于等待执行 `Wating_exe` 的提案发起执行操作，其示例如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:844
+#: c3256d55f72644e0aec196c7b7d95e48
+msgid "相关接口"
+msgstr ""
+
+#: ../../source/Chain 4b895c0cea75404582b3d923e797bb98 Authority
+#: Management.rst:847
+msgid "查询提案"
+msgstr ""
+
+#: ../../source/Chain 23f712098e9643b8887507061d79d50d
+#: 2d46e7cfa6fb4f1da7354e209ed45019 4acf8a8cbffd4bc2b1ce14fa4a9fd1d6
+#: 79be40f886fd4b5a86004a74efef82ca 83c76316da2a40a8847aed47a8a96096
+#: 869a36b081414eb5ace9605b7d769783 Authority Management.rst:848
+#: Management.rst:883 Management.rst:896 Management.rst:910 Management.rst:923
+#: Management.rst:935 Management.rst:949 Management.rst:963 Management.rst:977
+#: a0db15baaa6c4e379d7282d31c9fd23d cdfb7d543da54dc6a909345790237860
+#: f917d7cda9ee4200b743b389872b8227
+msgid "参数："
+msgstr ""
+
+#: ../../source/Chain 06227f967555440dba27201b01d20064
+#: 0ce3f4524af1489695ea0bdf015aa2b5 29d7bf2fb38f4e34bf32903d3bfb02d8
+#: 752fb6e032ff4c309d60f3f50ea7ab32 86a954c1044d4039a0970e81a932bd07 Authority
+#: Management.rst:850 Management.rst:885 Management.rst:899 Management.rst:912
+#: Management.rst:925 Management.rst:938 Management.rst:952 Management.rst:966
+#: Management.rst:979 c4009df415c9490ca15969e95d91eb39
+#: d49b6e7883924304bc3cd01ce5adf507 de83059a49334e8497fd40b0a8c80331
+#: e4079c5e5d794558804e0efe87a4446f
+msgid "nodeIds 请求向哪些节点发送"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:856
+#: d18f681dff9642e7a4bbe18c372d502b
+msgid "拿到 `ProposalResponse` 后，可通过 `getProposal` 方法拿到提案信息 `Proposal` ，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:882
+#: a7159f6898ef4c3ca03396854ff599b1
+msgid "查询配置"
+msgstr ""
+
+#: ../../source/Chain 33b3b22f0c3e4cf3bcec5405947586bf Authority
+#: Management.rst:891
+msgid "拿到 `ConfigProposal` 后，通过 `getConfig` 方法拿到配置信息，配置信息是 `toml` 格式的字符串。"
+msgstr ""
+
+#: ../../source/Chain 81afa81cd5ac44c28d390dea09243712 Authority
+#: Management.rst:895
+msgid "查询连接的节点信息"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:898
+#: b22bfb349cf24b1696d94fcaf710cccd
+msgid "role 节点角色（目前只支持查询vp节点）"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:905
+#: ff1a15db6fc74e41aff1acc78b1aab78
+msgid ""
+"拿到 `HostsResponse` 后，通过 `getHosts` 方法拿到节点信息。 `getHosts` "
+"方法返回的是key为节点名，value为节点公钥的map。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:909
+#: c101cb9c01a642b696a253615fa8bb0c
+msgid "查询参与共识的节点信息"
+msgstr ""
+
+#: ../../source/Chain 4de6ed2ade8947bf8496b2dbe0a4c27e Authority
+#: Management.rst:918
+msgid "拿到 `VSetResponse` 后，通过 `getVSet` 拿到共识的节点信息。 `getVSet` 方法返回的是所有参与共识的节点列表。"
+msgstr ""
+
+#: ../../source/Chain 52a07e5c878b48818abd8ce575189ae3 Authority
+#: Management.rst:922
+msgid "查询所有角色信息"
+msgstr ""
+
+#: ../../source/Chain 4ee14f42d3624869bec963e28ebb0d8b Authority
+#: Management.rst:931
+msgid ""
+"拿到 `AllRolesResponse` 后，通过 `getAllRoles` 方法拿到所有的角色信息。 `getAllRoles` "
+"方法返回的是key为角色名称，value为角色权重的map。"
+msgstr ""
+
+#: ../../source/Chain 77c30176bec24d66983faf515e07758b Authority
+#: Management.rst:934
+msgid "查询角色是否存在"
+msgstr ""
+
+#: ../../source/Chain 2e5334908ac64393b949bfb30ca1ef3a Authority
+#: Management.rst:937
+msgid "role 要查询的角色名称"
+msgstr ""
+
+#: ../../source/Chain 1de12d41f25345a7816cac4221dc79dd Authority
+#: Management.rst:944
+msgid ""
+"拿到 `RoleExistResponse` 后，通过 `isRoleExist` 方法拿到角色是否存在的结果。 `isRoleExist` "
+"方法返回的是一个布尔值， `true` 表示存在， `false`  表示不存在。"
+msgstr ""
+
+#: ../../source/Chain 1063ff0ab14247ceaf773fb7336509d8 Authority
+#: Management.rst:948
+msgid "根据合约地址查询合约命名"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:951
+#: cf5592e3838741e3b8777d688d2c8f8b
+msgid "address 合约地址"
+msgstr ""
+
+#: ../../source/Chain 5877ebf0fd77421c92e82a81c0756243 Authority
+#: Management.rst:958
+msgid "拿到 `NameResponse` 后，通过 `getName` 方法拿到合约命名。 `getName` 方法返回的是一个字符串。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:962
+#: ae4aa782be7045c28b52f9a6de39c5b3
+msgid "根据合约命名查询合约地址"
+msgstr ""
+
+#: ../../source/Chain 4d6511759dfb44a7a3438f2d88634034 Authority
+#: Management.rst:965
+msgid "name 合约命名"
+msgstr ""
+
+#: ../../source/Chain 01dc906ebf0a48f7a39a772268493f43 Authority
+#: Management.rst:972
+msgid "拿到 `AddressResponse` 后，通过 `getAddress` 方法拿到合约地址。 `getAddress` 方法返回的是一个字符串。"
+msgstr ""
+
+#: ../../source/Chain 17700fcc47174161bdb8618a4bd01c41 Authority
+#: Management.rst:976
+msgid "查询所有合约地址到合约名的映射"
+msgstr ""
+
+#: ../../source/Chain 08612485c280408895d33f99947bdadd Authority
+#: Management.rst:985
+msgid ""
+"拿到 `AllCNSResponse` 后，通过 `getAllCNS` 方法拿到所以的合约地址到合约命名的映射关系。 `getAllCNS` "
+"方法返回的是key为合约地址，value为合约命名的map。"
+msgstr ""
+

@@ -1,0 +1,215 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Password 935d006ac6af4bb2ab58aef8d9139056 certificate
+#: chain.rst:4 related/On the
+msgid "证书上链使用手册"
+msgstr ""
+
+#: ../../source/Password 3c9c6aa216934cae873eafb07c907849 certificate
+#: chain.rst:7 related/On the
+msgid "1. 引言"
+msgstr ""
+
+#: ../../source/Password 967bcdd223f7428498714e8631c6a0b8 certificate
+#: chain.rst:10 related/On the
+msgid "1.1 编写目的"
+msgstr ""
+
+#: ../../source/Password 179229b8d95a4eed9b670e7dc01d0339 certificate
+#: chain.rst:12 related/On the
+msgid "本文档提供hyperchain中证书链上状态修改的操作指南，作为证书上链的使用说明。以下所述证书均为平台管理的证书，crl外部证书仅适用于本使用手册部分内容（2.4）。"
+msgstr ""
+
+#: ../../source/Password b9f46071b1e54faa9bf9bc1843383765 certificate
+#: chain.rst:15 related/On the
+msgid "2. 证书上链管理概述"
+msgstr ""
+
+#: ../../source/Password 8ea0d8d5fded49be8b43c0cf86161d2b certificate
+#: chain.rst:17 related/On the
+msgid "证书上链管理用于节点间同步变更证书的使用状态。如下图所示，证书生命周期包括四个状态：可用，冻结，吊销和过期。"
+msgstr ""
+
+#: ../../source/Password 32e4036006c44e6c974f2da34a8ada2e certificate
+#: chain.rst:19 related/On the
+msgid "证书是否过期由证书字段在生成证书时预先设定，已过期的证书不可进行任何操作。当可用证书通过revoke操作转换为吊销态后状态将无法恢复，而冻结状态与可用态之间可以随意转换。不可用状态下的证书将无法通过安全验证，因此在配置证书时需确认该证书在链上的状态，对此提供了check操作来方便检查。"
+msgstr ""
+
+#: ../../source/Password bd4a44a0b0f441e4acfcd7da00520bac certificate
+#: chain.rst:21 related/On the
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/Password 83df9b8150284dd29ffde4c8a2455786 certificate
+#: chain.rst:276 related/On the
+msgid "image0"
+msgstr ""
+
+#: ../../source/Password certificate chain.rst:24
+#: e6ac069e243545af847eea2da426c3bc related/On the
+msgid "2.1 **证书吊销**"
+msgstr ""
+
+#: ../../source/Password certificate cf83004998424b6096bae10d067a0c0d
+#: chain.rst:26 related/On the
+msgid "节点证书的吊销：ecert/rcert"
+msgstr ""
+
+#: ../../source/Password certificate chain.rst:28
+#: e1da601f58d64d8d8f89c300f0d44d1b related/On the
+msgid ""
+"节点证书的吊销 **不提供单独的用户接口** "
+"，但将作为节点删除的附加操作，即当执行删除节点的操作时，被删节点的证书也将自动转为吊销状态。该被删节点如需重新启动，应更换节点目录下的相关证书。"
+msgstr ""
+
+#: ../../source/Password 5e566ab4888a4142a965309be37b3f31 certificate
+#: chain.rst:30 related/On the
+msgid "sdk证书的吊销"
+msgstr ""
+
+#: ../../source/Password certificate chain.rst:32
+#: d910f645170d4b919fc6d8c1f8063b65 related/On the
+msgid ""
+"使用sdk接口发起一笔 **调用bvm合约的普通交易** "
+"，完成证书的吊销操作。当发起操作的角色为管理员时，无需提供sdk证书私钥的签名；若为普通角色则需要通过验签证明自己为该证书私钥的所有者。"
+msgstr ""
+
+#: ../../source/Password 875ecd66262b4d6b9c3584088501840d certificate
+#: chain.rst:35 related/On the
+msgid "2.2 sdk证书冻结与恢复"
+msgstr ""
+
+#: ../../source/Password 18031ecd37494e34a9740ba64b475e24 certificate
+#: chain.rst:37 related/On the
+msgid "sdk证书冻结"
+msgstr ""
+
+#: ../../source/Password 4384b56320bd476aad90ec0bd29408d5 certificate
+#: chain.rst:39 related/On the
+msgid ""
+"只能将目前处于可用状态的证书修改为冻结状态。同样地，与sdk证书吊销类似，使用sdk接口发起一笔 **调用bvm合约的普通交易** "
+"，完成证书的吊销操作。当发起操作的角色为管理员时，无需提供sdk证书私钥的签名；若为普通角色则需要通过验签证明自己为该证书私钥的所有者。"
+msgstr ""
+
+#: ../../source/Password 023717f47ec1498db348cb7da2648b9b certificate
+#: chain.rst:41 related/On the
+msgid "sdk证书恢复"
+msgstr ""
+
+#: ../../source/Password 713bd46f938a421cb36cbb7e2023f23c certificate
+#: chain.rst:43 related/On the
+msgid "恢复冻结状态的证书同样需要发起一笔交易。具体步骤与sdk证书冻结类似，不再赘述。"
+msgstr ""
+
+#: ../../source/Password 55017fdc66794c0d9ec9b90c06503852 certificate
+#: chain.rst:46 related/On the
+msgid "2.3 证书替换"
+msgstr ""
+
+#: ../../source/Password 945f59bee73a46eb8ea2d91b4f9866fa certificate
+#: chain.rst:48 related/On the
+msgid "节点证书替换：ecert/rcert"
+msgstr ""
+
+#: ../../source/Password c669f4cc2b0f426e99804da46f89838d certificate
+#: chain.rst:50 related/On the
+msgid "实现节点证书的不停机替换包括以下两步。在正常执行本操作后，原证书将被注销，建议在执行成功后通过2.4的方式检查原证书状态来确保替换正常完成。"
+msgstr ""
+
+#: ../../source/Password a37d9a2b50884142b53e409a02d38eb3 certificate
+#: chain.rst:52 related/On the
+msgid "step1 **手动替换** 节点主机hyperchain目录( ./namespaces/global/certs/certs)下的全部文件"
+msgstr ""
+
+#: ../../source/Password cee4b6f3b44c405c814359cf0b1ce394 certificate
+#: chain.rst:54 related/On the
+msgid "step2 通过 **rpc命令** 使节点的证书修改生效"
+msgstr ""
+
+#: ../../source/Password cad6c68f058d42c8b2dc249645f17258 certificate
+#: chain.rst:56 related/On the
+msgid "**注：**"
+msgstr ""
+
+#: ../../source/Password 0b57b898e0da488b9f1024b537cfa443 certificate
+#: chain.rst:58 related/On the
+msgid "新文件可通过certgen工具手动生成"
+msgstr ""
+
+#: ../../source/Password 702f8a5226c74d77859ca2d867ad0f39 certificate
+#: chain.rst:60 related/On the
+msgid "若step1中替换后的证书存在问题，将在step2的rpc命令返回中体现。"
+msgstr ""
+
+#: ../../source/Password certificate chain.rst:62
+#: d63a86e435714ab9b3f534f2c63ea8bb related/On the
+msgid "当仅完成step1时对节点实际使用证书并未产生影响，但若在此时节点发生重启，节点将直接使用替换后的证书同时原证书并未被吊销。"
+msgstr ""
+
+#: ../../source/Password be60f60017514b9f83000a399eb00575 certificate
+#: chain.rst:64 related/On the
+msgid "sdk证书替换"
+msgstr ""
+
+#: ../../source/Password 17f3ae742ec449a7bcfd16e0d5502f0c certificate
+#: chain.rst:66 related/On the
+msgid "**手动替换** sdk证书并在sdk配置中修改指定的证书即可"
+msgstr ""
+
+#: ../../source/Password 8045a101d520493c82f481bc50f6c65d certificate
+#: chain.rst:69 related/On the
+msgid "2.4 证书状态检查"
+msgstr ""
+
+#: ../../source/Password 77ac2440132549708c431a2375b29840 certificate
+#: chain.rst:71 related/On the
+msgid ""
+"使用sdk接口发起一笔 **调用bvm合约的普通交易** "
+"，返回的回执包含指定证书的状态描述。发起交易时需将证书内容作为参数来指定待查询的证书。此功能可查询crl证书状态。"
+msgstr ""
+
+#: ../../source/Password 67679a71e4fd4d85a6dd29702aa48f84 certificate
+#: chain.rst:74 related/On the
+msgid "3. litesdk接口说明"
+msgstr ""
+
+#: ../../source/Password 27d53c9fc05941c1bf8ee38e78e7e5f5 certificate
+#: chain.rst:77 related/On the
+msgid "3.1 sdk证书吊销接口"
+msgstr ""
+
+#: ../../source/Password 8289c7c113e141dfbda009e4c5f6344b certificate
+#: chain.rst:128 related/On the
+msgid "3.2 sdk证书冻结与恢复接口"
+msgstr ""
+
+#: ../../source/Password c4de4bf94f334a2c80fac28024d4d5c2 certificate
+#: chain.rst:212 related/On the
+msgid "3.3 节点证书替换接口(仅gosdk开放)"
+msgstr ""
+
+#: ../../source/Password b978fb3ba4f64bd39316facc441481bd certificate
+#: chain.rst:231 related/On the
+msgid "3.4 证书状态检查接口"
+msgstr ""
+

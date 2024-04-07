@@ -1,0 +1,309 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/quickstart/Containerized 612dd51c385640aa86d2925c4bd8cae7
+#: deployment.rst:4
+msgid "容器化部署"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 85afc5e5b17a4019b3bd0299fa327042
+#: deployment.rst:7
+msgid "1. 引言"
+msgstr ""
+
+#: ../../source/quickstart/Containerized deployment.rst:9
+#: e55c9028a2954e12a000edb8bd084269
+msgid "本文档针对需要使用容器化来进行部署的项目使用，在一些部署环境中必须通过镜像+挂载空磁盘的部署情况，无法将配置文件和证书放置到容器环境中，可通过开启环境变量配置模式的方式，来启动平台，方便此类环境的节点部署，本文档将介绍如何进行环境变量部署。"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 4171b57cd5764d2e83d88b43cb5dfcde
+#: deployment.rst:12
+msgid "2.安装docker"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 78daf82ac3be47be81c906e8e37dbdfb
+#: deployment.rst:14
+msgid "【如客户方提供服务器已有docker服务则可以跳过此章节，直接阅读第2.2章节】"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 16bff8e51d374ca2a76e48434ba449cc
+#: deployment.rst:16
+msgid "Docker离线安装部署文档"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 0a449c542bad463dbd9c26a5e58802bf
+#: deployment.rst:18
+msgid "**文档基于centos 7.5; docker 19.03.5**"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 4118dc112fad4077b3d15a6f389a6937
+#: deployment.rst:20
+msgid "**1. 准备linux环境**"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 4302332225964e14938e2be26687ddaf
+#: deployment.rst:22
+msgid "**1.1 先关闭防火墙** `sudo systemctl stop firewalld`"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 5aa69778548a49cf8f1ea90481e6b26b
+#: deployment.rst:24
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/quickstart/Containerized bd98b3d69f0a4b678ec31337a81003fe
+#: deployment.rst:350
+msgid "image1"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 0aeff2d5fa95453abab52bb9e240ecc7
+#: deployment.rst:26
+msgid "**1.2 关闭selinux策略** `vi /etc/selinux/config` 修改完成后，重启一次系统；可以使用reboot"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 8092e616b991431ea89b3d6c02da805c
+#: deployment.rst:30
+msgid "|image2|"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 505c396e62474d13b8c26ab496485ebf
+#: deployment.rst:351
+msgid "image2"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 1b09b1db006b4e79a0cee8529440131f
+#: deployment.rst:32
+msgid ""
+"**1.3 检查文件** 检查是否存在/etc/timezone文件，如果没有，在后面执行 `docker run` "
+"命令的时候，需要删除命令中关于/etc/timezone 的映射，以免报错，只使用/etc/localtime 做时间同步。"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 5c1cc069d189400babee5af0100c3bdb
+#: deployment.rst:37
+msgid "|image3|"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 9f5c36e3c83942f0ae2217ee9c4d35ef
+#: deployment.rst:352
+msgid "image3"
+msgstr ""
+
+#: ../../source/quickstart/Containerized adb5e51025404f079b4afd85083df478
+#: deployment.rst:39
+msgid "准备工作完成。"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 48728f02108d4a3b9c1930fc61bd3437
+#: deployment.rst:41
+msgid "**2. 安装docker**"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 364d8d64401b47d4a3a955a17299821f
+#: deployment.rst:43
+#, python-format
+msgid ""
+"如果没有安装包，在官网下载二进制安装包,下载地址\\ "
+"`https://download.docker.com/linux/static/stable/x86_64/ "
+"<https://links.jianshu.com/go?to=https%3A%2F%2Fdownload.docker.com%2Flinux%2Fstatic%2Fstable%2Fx86_64%2F>`__"
+msgstr ""
+
+#: ../../source/quickstart/Containerized deployment.rst:45
+#: e7f1dd7b0b174415a0be41f9fae26baf
+msgid "|image4|"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 358473029244465585fdb36b94bec19e
+#: deployment.rst:353
+msgid "image4"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 5232317ba02a4e65bb66366ac3ef3f92
+#: deployment.rst:47
+#, python-format
+msgid ""
+"下面只需要安官网的步骤执行就可以了，官网安装网址\\ "
+"`https://docs.docker.com/engine/install/binaries/ "
+"<https://links.jianshu.com/go?to=https%3A%2F%2Fdocs.docker.com%2Fengine%2Finstall%2Fbinaries%2F>`__"
+msgstr ""
+
+#: ../../source/quickstart/Containerized deaecfd1abe8486bb0a16f86e94a6980
+#: deployment.rst:49
+msgid "就下面这三步："
+msgstr ""
+
+#: ../../source/quickstart/Containerized deedd2a2172744e7ba33bcfd8060f3e4
+#: deployment.rst:51
+msgid "**2.1** **解压**\\ ：tar xzvf docker-19.03.5.tgz"
+msgstr ""
+
+#: ../../source/quickstart/Containerized cf7618587bf34dd1b2d2a5608bad3857
+#: deployment.rst:53
+msgid "**2.2** **拷贝**\\ ： sudo cp docker/\\* /usr/bin/"
+msgstr ""
+
+#: ../../source/quickstart/Containerized cf5c01bb2f9d4859b69ec9d99be49520
+#: deployment.rst:55
+msgid "**2.3** **运行**\\ ： sudo dockerd &。"
+msgstr ""
+
+#: ../../source/quickstart/Containerized ccd02974a5bb46cea3972c6582d5f68b
+#: deployment.rst:57
+msgid "这一步可以不用后台执行，即直接执行sudo dockerd，命令行界面会直接打印执行结果，查看执行结果。"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 45b1aa0dfd81402fa1ed39cae11f492a
+#: deployment.rst:60
+msgid "|image5|"
+msgstr ""
+
+#: ../../source/quickstart/Containerized deployment.rst:354
+#: feb9e93285e34bf7b15713824261b9de
+msgid "image5"
+msgstr ""
+
+#: ../../source/quickstart/Containerized deployment.rst:62
+#: e3f02b80fd0c46d6af43e13c763a4ecb
+msgid "|image6|"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 031392d991a343979b4057fb576fea22
+#: deployment.rst:355
+msgid "image6"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 35fb501351804822aa1302a3aaddf0c2
+#: deployment.rst:64
+msgid "如果没有异常，按 ctrl + c 强制退出，Docker 其实已经安装好了，后面会配置开机启动。"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 73cf2ade707e481b859c6606a644e9f6
+#: deployment.rst:67
+msgid "**3. 配置docker开机启动**"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 7ec9c489e9434ca9a7569c89c95af280
+#: deployment.rst:69
+msgid "这里包括两个文件（强调一下必须先执行1.2步骤，即关闭selinux，并且重启了系统）"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 1be95e39b5d54cf386fb0668e0b5f81b
+#: deployment.rst:71
+msgid "|image7|"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 98070f20d0a34baab400b59ff77ef97c
+#: deployment.rst:356
+msgid "image7"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 0169ec4a4c734b028863700edcd045e0
+#: deployment.rst:73
+msgid "docker.service ::"
+msgstr ""
+
+#: ../../source/quickstart/Containerized ddb8eb50f51e41f4b08bed37a752aeb3
+#: deployment.rst:138
+msgid "docker.socket::"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 075c51a312b2452083d4facc4ea4c0fb
+#: deployment.rst:164
+msgid ""
+"执行下列命令，设置docker开机自启；在docker.service， "
+"docker.socket所在的文件夹中执行下命令，设置docker开机自启。"
+msgstr ""
+
+#: ../../source/quickstart/Containerized c237664fdbcd496d90f412307c8e8faf
+#: deployment.rst:179
+msgid "重启一下系统，检验docker是否开机自启"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 93f7516916a748c4a4a6c4455510dca1
+#: deployment.rst:185
+msgid "重启成功后，执行docker ps 检验docker是否启动成功。"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 5c79862ebff14af4af433ad44d0e81ec
+#: deployment.rst:187
+msgid "到这里docker已经安装完成，并且开机自启。"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 4b78205ea02f404285ab07c4e367b436
+#: deployment.rst:190
+msgid "2.1 安装docker-compose"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 9455673920994ce88909f6f962d7577e
+#: deployment.rst:207
+msgid "2.2 部署容器"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 85c06d260418428596d53165a2ea883f
+#: deployment.rst:209
+msgid "1.拉取镜像"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 059d1339e70d4dfe8bfb25e6980ebb64
+#: deployment.rst:211
+msgid "具体版本镜像请询问@汪剑锋或者@相关对接人员"
+msgstr ""
+
+#: ../../source/quickstart/Containerized a23ebb9ae6b844d29fa52963e3dc1bd3
+#: deployment.rst:217
+msgid "2.创建目录（所有节点在同一台服务器的话需要分别创建对应的节点目录）"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 3fc7b58322e8475c8b1ba36584129487
+#: deployment.rst:223
+msgid "3.写入部署包"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 83e16cdf18c9491bb35ba5218d4651da
+#: deployment.rst:230
+msgid "4.上传LICENSE文件"
+msgstr ""
+
+#: ../../source/quickstart/Containerized deployment.rst:238
+#: ebe1909bffec4e49abc401145fe220e4
+msgid "5.docker-compose.yml"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 801d17d6ec4843e59ad5862e4fff6b19
+#: deployment.rst:240
+msgid "vim docker- compose.yml"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 52d524443cde4d1985bc9b9cb477df87
+#: deployment.rst:331
+msgid "6.创建并启动容器"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 6ec7e65e997a44e19a3639176cceaaa7
+#: deployment.rst:341
+msgid "7.重启容器"
+msgstr ""
+
+#: ../../source/quickstart/Containerized 112adedacc7a4fb7be8eeccad4f28ad8
+#: deployment.rst:348
+msgid "注意：部分配置项在节点执行过程中会被程序改写，如果不清楚改写后的内容，建议在启动成功后，不在使用之前配置的环境变量内容，下次重启时只在环境变量中配置需要修改的配置内容。"
+msgstr ""
+

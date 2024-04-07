@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Deployedfile.rst:2 27c76b2ccb004767a7d69514553fbb07
+msgid "部署运维"
+msgstr ""
+
+#: ../../source/Deployedfile.rst:5 5ae40d1bd4234c93acd122bf7144c62d
+msgid "容器化部署"
+msgstr ""
+
+#: ../../source/Deployedfile.rst:8 4cdb0419438b42668d4b2c8bca83fd59
+msgid ":ref:`容器化部署 <Containerized_deployment>`"
+msgstr ""
+
+#: ../../source/Deployedfile.rst:9 8e24960114544fa29886258f2baa3e8b
+msgid "本文档将介绍如何进行环境变量部署"
+msgstr ""
+
+#: ../../source/Deployedfile.rst:12 0822fb7d58b64044b5dd4c9adb3fe95d
+msgid "部署文档"
+msgstr ""
+
+#: ../../source/Deployedfile.rst:15 fe30d4c896d145f6bfed58a609d6bb19
+msgid ":ref:`部署文档 <Deployment_docs>`"
+msgstr ""
+
+#: ../../source/Deployedfile.rst:16 ebd441dcb1a44f11b77c0ed729bc5672
+msgid "该文档将介绍如何部署一个拥有4个节点的Hyperchain集群，用户需要分别登录到4台服务器上进行操作"
+msgstr ""
+
+#: ../../source/Deployedfile.rst:19 8832fc91d6b74281876baf3eef3bf3ca
+msgid "运维手册"
+msgstr ""
+
+#: ../../source/Deployedfile.rst:22 a299eb865b1746f3aaf7231a5e85cc45
+msgid ":ref:`运维手册 <Operations_manual>`"
+msgstr ""
+
+#: ../../source/Deployedfile.rst:23 372b2b083dd44a2991c00946c4f0eb5a
+msgid "本文是v2.7.0的运维手册"
+msgstr ""
+
+#: ../../source/Deployedfile.rst:26 db7e470c1b784c07999a087b51e74ab7
+msgid "升级说明"
+msgstr ""
+
+#: ../../source/Deployedfile.rst:29 05e21a482e8d45dd88420820ec67bcd5
+msgid ":ref:`升级说明 <upgrade_instructions>`"
+msgstr ""
+
+#: ../../source/Deployedfile.rst:30 062bc62699b647b28754770473c6ed1d
+msgid "本文是v1.8.x 或2.1.0以前到 v2.7.0的版本升级说明文档"
+msgstr ""
+
+#: ../../source/Deployedfile.rst:33 de2407c27055414bbd37a9fd59f7f5b5
+msgid "配置变更"
+msgstr ""
+
+#: ../../source/Deployedfile.rst:36 adf39e35d5e742ac8470ccb0cb3c9575
+msgid ":ref:`配置变更 <Configuration_changes>`"
+msgstr ""
+
+#: ../../source/Deployedfile.rst:37 689eec1291ca4f2f8fe182e78e7a5fe1
+msgid "本文是v2.3.0-> v2.7.0的配置变更说明文档"
+msgstr ""
+

@@ -1,0 +1,849 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Node 8c34ecb3071a47558ed573fdb610dcdb Manual.rst:4 User and
+#: management/NVP zone
+msgid "非共识节点介绍"
+msgstr ""
+
+#: ../../source/Node Manual.rst:7 User a76048103f754e079e9a7e6cab332bea and
+#: management/NVP zone
+msgid "引言"
+msgstr ""
+
+#: ../../source/Node 44fc85eb067944c89e51b3e199ba7436 Manual.rst:10 User and
+#: management/NVP zone
+msgid "编写目的"
+msgstr ""
+
+#: ../../source/Node 34bab77f08ad4e4c93c23b5d8a42e0f3 Manual.rst:12 User and
+#: management/NVP zone
+msgid "本文档用于向开发、运维人员介绍NVP功能和使用方式。"
+msgstr ""
+
+#: ../../source/Node 7b8326d9f5074f3c84dbec37ded50be6 Manual.rst:14 User and
+#: management/NVP zone
+msgid ""
+"NVP（Non-Validate "
+"Peer）不参与共识，仅通过信任的VP来同步数据，并对外提供数据查询、交易转发上链等服务。NVP同一时刻只能连接一个VP，但可动态替换VP，VP可以连接多个NVP。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:17 User and dd3bc52fd05b4bd0b4a6c02b318993f6
+#: management/NVP zone
+msgid "连接方式"
+msgstr ""
+
+#: ../../source/Node Manual.rst:19 User aeeb9ab996ac4692ba7dc91f1fbddfee and
+#: management/NVP zone
+msgid "vp和nvp互相连接一共四种方式，分别是："
+msgstr ""
+
+#: ../../source/Node 2d2a8bab3c054a4095f25fc0af56d468 Manual.rst:21 User and
+#: management/NVP zone
+msgid "在vp的配置文件里增加nvp信息，启动后自动连接；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:22 User and b836f41639f142fdabb706a0fc52ebf0
+#: management/NVP zone
+msgid "在nvp的配置文件里增加vp信息，启动后自动连接；"
+msgstr ""
+
+#: ../../source/Node 16d95aeb67304dfe8825dbd93cf8b7f1 Manual.rst:23 User and
+#: management/NVP zone
+msgid "通过ipc命令，在vp上动态添加nvp；"
+msgstr ""
+
+#: ../../source/Node 042cf0eb1dcf42d5841f2d60d3e7032d Manual.rst:24 User and
+#: management/NVP zone
+msgid "通过ipc命令，在nvp上动态添加vp；"
+msgstr ""
+
+#: ../../source/Node 604c6cfa7f594da6a97dfa4aeaf5eb15 Manual.rst:27 User and
+#: management/NVP zone
+msgid "启动节点&检查证书配置"
+msgstr ""
+
+#: ../../source/Node Manual.rst:30 User and ebd5b5e470ef4d1bb66c4bf726010b8a
+#: management/NVP zone
+msgid "VP节点部署"
+msgstr ""
+
+#: ../../source/Node 26e532f9178a44b5a9370df58519fc42 Manual.rst:32 User and
+#: management/NVP zone
+msgid "可以参照部署文档，启动vp节点。"
+msgstr ""
+
+#: ../../source/Node 91b1fea328f144fc901871349ad69809 Manual.rst:35 User and
+#: management/NVP zone
+msgid "NVP节点部署"
+msgstr ""
+
+#: ../../source/Node 9fef4f654464441d865ee981c673c8e2 Manual.rst:37 User and
+#: management/NVP zone
+msgid "NVP与VP之间需要进行基于证书的身份认证：在双方进行网络连接时，VP需要验证NVP确实拥有自己为其签发的rcert证书，否则将无法正常通信。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:39 User and dab65da17e5c4c739509328d7bf9e3fd
+#: management/NVP zone
+msgid "基于VP网络CA模式选择的不同，证书的签发和部署也有两种不同的方式："
+msgstr ""
+
+#: ../../source/Node 5166fde9ecb04da183f29f6467740e7b Manual.rst:42 User and
+#: management/NVP zone
+msgid "非分布式CA下NVP节点部署"
+msgstr ""
+
+#: ../../source/Node 42ae02dfc782498c97d56d8688e8b95c Manual.rst:44 User and
+#: management/NVP zone
+msgid "在非分布式CA的场景下，需要配置nvp的 **节点证书和根证书** ："
+msgstr ""
+
+#: ../../source/Node Manual.rst:46 User and c13bcda12ff94c5a84c2794fa3400ecb
+#: management/NVP zone
+msgid "节点证书--NVP通过节点证书来指定要绑定的VP节点，节点证书由VP节点为其颁发。必须是NVP类型的节点证书（certgen生成）。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:48 User and e53ae0f75873482392f8e74183755ca0
+#: management/NVP zone
+msgid "根证书--和绑定VP节点的根证书保持一致。目录下可以有多个CA，与VP节点的CA目录保持一致即可。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:50 User and ef3132006db34a00aa49eab5b02c4a32
+#: management/NVP zone
+msgid "NVP节点证书配置后的证书目录如下图所示，其中CA目录下存放的文件与VP节点CA目录中的文件相同，certs目录下存放了NVP自己的私钥和VP节点为NVP颁发的节点证书："
+msgstr ""
+
+#: ../../source/Node Manual.rst:52 User and bd7aa6a41a9f4d5189aae71a00d2ef27
+#: management/NVP zone
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/Node 3bc9cb18fc40486c87e81d8814cf7684 Manual.rst:495 User and
+#: management/NVP zone
+msgid "image0"
+msgstr ""
+
+#: ../../source/Node 2fc9997708d043fb8efe80faa636ae0d Manual.rst:54 User and
+#: management/NVP zone
+msgid "**注：** 以上CA目录下包含了多个CA只是示例中的一种，主要体现为了与VP节点的CA目录保持一致，通常情况该目录下只包含一个CA。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:57 User and f2c4e0ff0c54489c9ed7bfd2023e9f9a
+#: management/NVP zone
+msgid "分布式CA下NVP节点部署"
+msgstr ""
+
+#: ../../source/Node 5ca2c5d4010a4224bf0f29377146928f Manual.rst:59 User and
+#: management/NVP zone
+msgid "在分布式CA的场景下，NVP需要配置节点证书和根证书要求如下："
+msgstr ""
+
+#: ../../source/Node 670756cfa1e64e869b55b9f048a69e71 Manual.rst:61 User and
+#: management/NVP zone
+msgid "节点证书--NVP通过节点证书来指定要绑定的VP节点，节点证书由VP节点为其颁发。必须是NVP类型的节点证书（由certgen生成）。"
+msgstr ""
+
+#: ../../source/Node 4193bbd4f8244fa6b1290495dacb5428 Manual.rst:63 User and
+#: management/NVP zone
+msgid "根证书--可以是独立的根证书，也可以与VP的根证书保持一致。目录下必须只能包含一个CA。"
+msgstr ""
+
+#: ../../source/Node 014e21a74ddd4218ada38811146ce9f4 Manual.rst:65 User and
+#: management/NVP zone
+msgid "节点证书配置目录如下图所示，这里CA目录下包含一个.ca文件（根证书），包含一个.priv文件（私钥文件）。certs目录下包含一个节点证书和一个私钥："
+msgstr ""
+
+#: ../../source/Node Manual.rst:67 User and cd1b007c681143c3b9ac8a0cf8514a85
+#: management/NVP zone
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/Node Manual.rst:496 User and d07e0f1102054ecb904e163751b2a114
+#: management/NVP zone
+msgid "image1"
+msgstr ""
+
+#: ../../source/Node 5e6e8c63dfd345f39d127128f6199d49 Manual.rst:69 User and
+#: management/NVP zone
+msgid "注：上图假设NVP节点配置了一个与其他VP节点不同的CA，因此叫做root5.ca，也可以与要绑定的VP节点其CA目录中的文件保持一致。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:72 User and b6426043c8874575a1f84d8934a7517c
+#: management/NVP zone
+msgid "NVP证书生成"
+msgstr ""
+
+#: ../../source/Node Manual.rst:74 User and d442b3f6c6864873869c214a98091cb2
+#: management/NVP zone
+msgid "对应生成证书的命令::"
+msgstr ""
+
+#: ../../source/Node 8c72c6f9e47a412f813f073e8c3084d1 Manual.rst:90 User and
+#: management/NVP zone
+msgid "节点连接"
+msgstr ""
+
+#: ../../source/Node Manual.rst:92 User a4b8496d928746a19deaf6ddba228df2 and
+#: management/NVP zone
+msgid "对于NVP节点来说，若其未连接任何VP节点，也能正常工作，但不能转发交易，不能同步新数据。当要与VP节点连接时，NVP节点需要提前准备和VP相连的证书文件，还需要进行相应的配置："
+msgstr ""
+
+#: ../../source/Node 9b462630cfcf4a34adcbe358814756bf Manual.rst:94 User and
+#: management/NVP zone
+msgid ""
+"NVP作为独立节点启动，需要在NVP节点的 `configuration/dynamic.toml` 文件中 "
+"**修改self节点名称、port端口、域配置。**"
+msgstr ""
+
+#: ../../source/Node 91629581ce0041f89b3af7961847be9f Manual.rst:96 User and
+#: management/NVP zone
+msgid "注意： **NVP的配置信息不能和VP节点的配置信息重复**"
+msgstr ""
+
+#: ../../source/Node 9d38270254a64958b5a221843c449c5d Manual.rst:98 User and
+#: management/NVP zone
+msgid ""
+"在NVP节点的 `configuration/global/ns_dynamic.toml` 文件 **修改[self]信息，** "
+"具体的配置根据不同的连接方式略有不同，在下面详细介绍。"
+msgstr ""
+
+#: ../../source/Node 5fc9a4b1951a40aab8d537ecac054251 Manual.rst:100 User and
+#: management/NVP zone
+msgid ""
+"配置完成之后，可以通过 `start.sh` 脚本或 `./hyperchain` "
+"来启动节点。由于VP和NVP可以动态地建立连接，因此无须同时启动。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:102 User and f92b18478c2c4ea2bcba5bb545d8201d
+#: management/NVP zone
+msgid "VP和NVP节点互相连接方式一共有四种，选择任意一种方式都可以完成NVP和VP的连接，下文将详细介绍每种连接方式。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:105 User and d12d050cc4374bcbaab58adbeb88571d
+#: management/NVP zone
+msgid "在VP上配置NVP"
+msgstr ""
+
+#: ../../source/Node 7254649fbfcc46ecbe7d28fac059622e Manual.rst:107 User and
+#: management/NVP zone
+msgid ""
+"如果要在VP启动时能够自动去连接指定的NVP，需要在VP节点的 `configuration/global/ns_dynamic.toml` "
+"文件做相应修改。在四个VP节点启动并相互连接的场景下，增加两个与node1相连接的NVP需要修改的配置项如下所示::"
+msgstr ""
+
+#: ../../source/Node 10d2aab7f2244a129eeafb721cd03714 Manual.rst:132 User and
+#: management/NVP zone
+msgid "由于NVP是namespace级别的节点，所以只需要增加nvp列表字段："
+msgstr ""
+
+#: ../../source/Node Manual.rst:134 User and d36c0ccaa6bc48d29b5c9e003c56e559
+#: management/NVP zone
+msgid "[[nvps]]表示nvp数组，数组中记录有nvp的信息。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:136 User and ec9b6701bf294f0788d5de57994b7041
+#: management/NVP zone
+msgid "[p2p]的hosts列表中，增加nvp的节点名和地址信息字段。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:138 User and cff0952fc53c4f1d8a4719caffdb6ba0
+#: management/NVP zone
+msgid "其他部分的内容无需修改，[self]中的n数量指的是连接的vp数量，无需变化。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:141 User a30d8d1cab3640b7bd6ba147a839275f and
+#: management/NVP zone
+msgid "在NVP上配置VP"
+msgstr ""
+
+#: ../../source/Node Manual.rst:143 User and b4cea80280354705831bfe74b2b2b222
+#: management/NVP zone
+msgid ""
+"同理，在NVP节点启动前需要指定连接的VP，先按照部署文档进行必要的地址端口修改，然后在NVP节点的 "
+"`configuration/global/ns_dynamic.toml` 文件做相应修改。 **NVP只能连接一个VP** "
+"，需要修改的配置项如下::"
+msgstr ""
+
+#: ../../source/Node Manual.rst:163 User a54ddfc4b4d244aa86ab13d0ded08127 and
+#: management/NVP zone
+msgid "[[nodes]]字段，只添加与NVP节点连接的VP节点信息；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:165 User and d87e2600636845b0883cab3653279ca1
+#: management/NVP zone
+msgid "[p2p]字段，同时配置VP的节点名称和ip地址；"
+msgstr ""
+
+#: ../../source/Node 1197b72bbb174a84805bb6492026184c Manual.rst:167 User and
+#: management/NVP zone
+msgid "[self]字段，修改对应的NVP信息；"
+msgstr ""
+
+#: ../../source/Node 18ca93f3c1764ddbb52fa9b6062b25be Manual.rst:169 User and
+#: management/NVP zone
+msgid "hostname为NVP节点的名称；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:171 User and d073499ba8034532b7f33324f59a1afe
+#: management/NVP zone
+msgid "n表示要连接的VP数量为1（NVP上n的数值<=1)；"
+msgstr ""
+
+#: ../../source/Node 67c4be32eaaa4435bf4f2d61b8cdef2a Manual.rst:173 User and
+#: management/NVP zone
+msgid "type字段用来记录节点的类型为NVP；"
+msgstr ""
+
+#: ../../source/Node 1e13d4661d49406cb6635446c859e8ee Manual.rst:176 User and
+#: management/NVP zone
+msgid "通过ipc命令新增"
+msgstr ""
+
+#: ../../source/Node 6a793bd56d7f4c81bf37a90a6c7c39b0 Manual.rst:178 User and
+#: management/NVP zone
+msgid "上述通过配置的方式需要进行节点的启停从而使配置生效，实际上也可以通过ipc命令动态地进行NVP的增删操作。"
+msgstr ""
+
+#: ../../source/Node 3a444c879ece47f084dd6a5731d9b3ba Manual.rst:180 User and
+#: management/NVP zone
+msgid "命令格式： `nvp add <namespace> <hostname> <address>` 。"
+msgstr ""
+
+#: ../../source/Node 1d83055defc448c8a98f8ba31f5b8d57 Manual.rst:183 User and
+#: management/NVP zone
+msgid "通过ipc命令新增VP"
+msgstr ""
+
+#: ../../source/Node 386b3752d9c5425b9c9803e86ed3e563 Manual.rst:185 User and
+#: management/NVP zone
+msgid "在nvp上也可以通过命令动态地增删VP，这里不再赘述。"
+msgstr ""
+
+#: ../../source/Node 1b83cfb128d94124b6fbafa1c8321970 Manual.rst:188 User and
+#: management/NVP zone
+msgid "IPC命令"
+msgstr ""
+
+#: ../../source/Node 55e2aae69d414ebba971781020901376 Manual.rst:190 User and
+#: management/NVP zone
+msgid "平台提供查询NVP状态、新增NVP、删除NVP三类IPC运维命令。"
+msgstr ""
+
+#: ../../source/Node 2763e269db21475db4023a62380e0851 Manual.rst:192 User and
+#: management/NVP zone
+msgid "`nvp status` ：查询NVP的当前状态，在NVP和VP执行返回信息不同；"
+msgstr ""
+
+#: ../../source/Node 9b8d51676ce443b7ad657ba15b12a5f1 Manual.rst:194 User and
+#: management/NVP zone
+msgid "`nvp add` ：在VP上执行为新增NVP，在NVP上执行为新增VP；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:196 User and fc2545941bb14f33b1469a7ed64cff4e
+#: management/NVP zone
+msgid "`nvp remove` ：在VP上执行为删除NVP，在NVP上执行为删除VP。"
+msgstr ""
+
+#: ../../source/Node 5eb77ddd4962457b99df9d08cba23f18 Manual.rst:198 User and
+#: management/NVP zone
+msgid "IPC命令格式如下::"
+msgstr ""
+
+#: ../../source/Node Manual.rst:204 User and de05cf3cc9af4e3fbcb8ae07c2916164
+#: management/NVP zone
+msgid "调用IPC命令前，需要先启动IPC交互式命令行::"
+msgstr ""
+
+#: ../../source/Node 65613ef6d66c4e3cace8291d75edd445 Manual.rst:208 User and
+#: management/NVP zone
+msgid "进入如下页面，命令行启动成功："
+msgstr ""
+
+#: ../../source/Node 92596144b14f4a56973b0dda1c25a6cd Manual.rst:210 User and
+#: management/NVP zone
+msgid "|image2|"
+msgstr ""
+
+#: ../../source/Node Manual.rst:497 User and d1768933ffbf4f3da0f3e6d610a54cf3
+#: management/NVP zone
+msgid "image2"
+msgstr ""
+
+#: ../../source/Node 915b9bd48e3444a7b7519386df2a9a4c Manual.rst:213 User and
+#: management/NVP zone
+msgid "nvp status"
+msgstr ""
+
+#: ../../source/Node Manual.rst:215 User and beedafaa011546bc9f7eaeeda25fb335
+#: management/NVP zone
+msgid "该命令可以用于查询NVP和VP的连接状态。 **VP节点上可以同时得知连接的NVP的状态和自己的状态；NVP节点只能查询到自己的状态信息** 。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:217 User and c7377e5ffbf54488a620c9ea736f04d6
+#: management/NVP zone
+msgid "命令： `nvp status <namespace> [hostname]` （该条命令可在VP和NVP上执行）"
+msgstr ""
+
+#: ../../source/Node 1132d9fb60fa421aa7b363610f014d80
+#: 709035d7c6e642b3bab3755a20c503e1 Manual.rst:219 Manual.rst:282 User and
+#: management/NVP zone
+msgid "**上述命令格式的具体含义如下所示：**"
+msgstr ""
+
+#: ../../source/Node 2e2dee4c57c4400f8d37f188550f1c3e Manual.rst:221
+#: Manual.rst:284 User and d5a9308eea90482785ac25014b7bf629 management/NVP zone
+msgid "`<namespace>` ：必要参数，由于NVP是namespace级别的节点，因此需指定所在的namespace；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:223 User and c2c31462c7014360809419e67ea30f08
+#: management/NVP zone
+msgid ""
+"`[hostname]` "
+"：可选参数，在VP上调用时，若不指定hostname，将以列表形式返回所有与VP相连的NVP状态信息；在NVP上调用时，由于NVP只能和一个VP相连，是否指定hostname对返回结果没有影响。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:225 User and f01008d6642f4680bf56333850a1aa48
+#: management/NVP zone
+msgid "在NVP上调用 `nvp status` 命令，返回信息如下表所示："
+msgstr ""
+
+#: ../../source/Node 73c966a62d11425bbe066fcd9653fbe1
+#: 772319be1e2446a8b5da27639db4b85f Manual.rst:228 Manual.rst:238 User and
+#: management/NVP zone
+msgid "返回信息"
+msgstr ""
+
+#: ../../source/Node 14a384fcf0f64816ba62364f50d16171 Manual.rst:228
+#: Manual.rst:238 User a7b68e51cd544eb3970c189f0ff7a669 and management/NVP zone
+msgid "含义"
+msgstr ""
+
+#: ../../source/Node 9ee1662e415842a0bcd6cb0409ad5605 Manual.rst:230
+#: Manual.rst:240 User and c8031cc4dabe47b6a0de42882e566e49 management/NVP zone
+msgid "hostname"
+msgstr ""
+
+#: ../../source/Node 2a77a64ed67d4600972e571b1e98b486 Manual.rst:230 User and
+#: management/NVP zone
+msgid "NVP连接的VP名称"
+msgstr ""
+
+#: ../../source/Node 861e358d9cd141fd9d634b73b337ae2a Manual.rst:231
+#: Manual.rst:242 User and ffc02e9bbd9943ae9fc3d0d78d812499 management/NVP zone
+msgid "nvp_status"
+msgstr ""
+
+#: ../../source/Node 24ce451718554d9c8b7a2a33f35310d9 Manual.rst:231
+#: Manual.rst:242 User and dcfaad6a0efa433c8902e5d19b6b444a management/NVP zone
+msgid "NVP当前的状态"
+msgstr ""
+
+#: ../../source/Node 3d7486fdfa924aff8ce440b08ba3516a Manual.rst:232
+#: Manual.rst:243 User and f7db9b6d3d3342079553906b966fa57d management/NVP zone
+msgid "height"
+msgstr ""
+
+#: ../../source/Node 4c0a7bea77ab4bdb9517234a58267811 Manual.rst:232
+#: Manual.rst:243 User and b9f06df6a24241d69e3e3020bb250a28 management/NVP zone
+msgid "NVP当前区块高度"
+msgstr ""
+
+#: ../../source/Node 34c3dfdc2546409281dd41c90b5d3b86 Manual.rst:235 User and
+#: management/NVP zone
+msgid "在VP上调用 `nvp status` 命令，返回信息如下表所示："
+msgstr ""
+
+#: ../../source/Node Manual.rst:240 User and d3cb97e2e5754dd5a1084688c57bcace
+#: management/NVP zone
+msgid "VP连接的NVP名称"
+msgstr ""
+
+#: ../../source/Node 8aab940ecb2d4b90b3e7b2f3ff5f75df Manual.rst:241 User and
+#: management/NVP zone
+msgid "vp_status"
+msgstr ""
+
+#: ../../source/Node Manual.rst:241 User aa399f7a5ff6412cba77f7d823869b41 and
+#: management/NVP zone
+msgid "VP当前的状态"
+msgstr ""
+
+#: ../../source/Node Manual.rst:244 User and d8554c5e296d4c96a83a0f126be589c3
+#: management/NVP zone
+msgid "msg"
+msgstr ""
+
+#: ../../source/Node Manual.rst:244 User and c8534b4b330544d3bb43c2b862e429b6
+#: management/NVP zone
+msgid "对当前NVP的描述，这份描述内容是NVP的握手或区块事件的回复信息"
+msgstr ""
+
+#: ../../source/Node Manual.rst:247 User and f7ffcc50b7e94fd889f9583d54f1804d
+#: management/NVP zone
+msgid "**以下是一些正常的状态指令实例：**"
+msgstr ""
+
+#: ../../source/Node Manual.rst:249 User and e5dc69016c5b4980875d67fae79db581
+#: management/NVP zone
+msgid "NVP节点查询状态::"
+msgstr ""
+
+#: ../../source/Node 1c63a007afe0489281a9a52eecaac795 Manual.rst:259 User and
+#: management/NVP zone
+msgid "VP节点查询状态::"
+msgstr ""
+
+#: ../../source/Node 235bd53bbf67482db81a96f1f083c649 Manual.rst:276 User and
+#: management/NVP zone
+msgid "nvp add"
+msgstr ""
+
+#: ../../source/Node Manual.rst:278 User and dba3b9be74f9483c8839c376589351d1
+#: management/NVP zone
+msgid "该命令用于动态增加节点场景，VP和NVP都可以使用该指令动态增加节点。"
+msgstr ""
+
+#: ../../source/Node 6f35554974654ce7ba6ed52e999051f4 Manual.rst:280 User and
+#: management/NVP zone
+msgid "命令： `nvp add <namespace> <hostname> <address>`"
+msgstr ""
+
+#: ../../source/Node 217c6594b0e44f6a8cc75856cd1d3b78
+#: 3adeb1a22ed947bda3331d135fdaf730 Manual.rst:286 Manual.rst:315 User and
+#: management/NVP zone
+msgid "`<hostname>` ：必要参数，指定要连接节点的名称；"
+msgstr ""
+
+#: ../../source/Node 20d384ba11d343c9af1d4e47e4beec9b Manual.rst:288 User and
+#: management/NVP zone
+msgid "`<address>` ：必要参数，指定要连接节点的ip地址；"
+msgstr ""
+
+#: ../../source/Node 86acb3ecf8a342509a13233878c936da Manual.rst:290 User and
+#: management/NVP zone
+msgid ""
+"**注意：新增命令的成功返回并不意味着连接建立成功**，若在VP上执行新增命令，则可以通过先前介绍的 `nvp status` "
+"命令查询NVP状态，若查询结果显示 `nvp_status=NORMAL` 则代表连接建立成功，而若一直处于 `ABNORMAL` "
+"状态，则需要根据日志进一步排查问题；而由于NVP端无法查询VP状态，因此若在NVP上执行新增命令，是否连接成功只能通过日志来进行确认。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:292 User and c9d007acc4154c3181719fddf2360fef
+#: management/NVP zone
+msgid "**NVP连接VP示例** ::"
+msgstr ""
+
+#: ../../source/Node Manual.rst:309 User and b9d38a81a3a54ee9abd74b09f0646bbd
+#: management/NVP zone
+msgid "该指令用于VP和NVP之间断开连接，VP和NVP都可以使用该指令动态删除节点。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:311 User a9ffcc2e2aa947ee8ba5b6542969f287 and
+#: management/NVP zone
+msgid "ipc命令格式： `nvp remove <namespace> <hostname>`"
+msgstr ""
+
+#: ../../source/Node 616d6ee72e564fdcae909fc61c7ebb77 Manual.rst:313 User and
+#: management/NVP zone
+msgid "`<namespace>` ：必要参数，由于NVP是namespace级别的节点，因此需指定其所在的namespace；"
+msgstr ""
+
+#: ../../source/Node 53003d33bc054e938f970067ee317168 Manual.rst:317 User and
+#: management/NVP zone
+msgid "该命令的行为如下："
+msgstr ""
+
+#: ../../source/Node 761da49433994a34951080511dacf66d Manual.rst:319 User and
+#: management/NVP zone
+msgid "通知对端进行同样的删除操作；"
+msgstr ""
+
+#: ../../source/Node 9bec24552cd040e49065460dce955dd5 Manual.rst:321 User and
+#: management/NVP zone
+msgid "断开网络逻辑连接；"
+msgstr ""
+
+#: ../../source/Node 89fd8d218cc246139b7517740c5a8ce5 Manual.rst:323 User and
+#: management/NVP zone
+msgid "删除对端配置文件信息；"
+msgstr ""
+
+#: ../../source/Node 9f762146c735467ba45efc6c810d78fb Manual.rst:325 User and
+#: management/NVP zone
+msgid "清空相应的缓存；"
+msgstr ""
+
+#: ../../source/Node 7981e12619214d059ff5967206cc8d10 Manual.rst:327 User and
+#: management/NVP zone
+msgid "进行证书吊销；"
+msgstr ""
+
+#: ../../source/Node 814394aa870d4b29992f9213098996c5 Manual.rst:329 User and
+#: management/NVP zone
+msgid "该命令有如下两种返回值："
+msgstr ""
+
+#: ../../source/Node 9f60a87fdbaa4f90b94b89509d504740 Manual.rst:331 User and
+#: management/NVP zone
+msgid "`remove [hostname] success:` 这意味着成功通知到对方，双方都会执行上述删除流程；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:333 User and eb3d8a89711f492bbfb83b3604d286bd
+#: management/NVP zone
+msgid ""
+"`inform [hostname] to delete failed, maybe need manual operation:` "
+"这意味着由于网络或其他节点异常问题，导致未能成功通知到对端进行删除，在这种情况下，本地仍然会执行上述删除流程， **可能带来的影响是** "
+"对端的配置文件或内存中仍然保留本节点的信息，因此仍然会尝试进行连接，但由于本节点已经进行了证书吊销，连接不会建立成功， "
+"**解决方法是在对端重新执行删除命令** 。"
+msgstr ""
+
+#: ../../source/Node 9763cf7520524c4e91e6c5bcdcae49e2 Manual.rst:335 User and
+#: management/NVP zone
+msgid "**VP删除NVP示例** ::"
+msgstr ""
+
+#: ../../source/Node 45a6378ffa5a4b15bbf453458c424865 Manual.rst:359 User and
+#: management/NVP zone
+msgid "操作实例"
+msgstr ""
+
+#: ../../source/Node 022cbc4dcfb347f197935c39904bc3c4 Manual.rst:361 User and
+#: management/NVP zone
+msgid "这章会列举一些实际操作场景。"
+msgstr ""
+
+#: ../../source/Node 660caf79092e48b4ba6bbcd2bb657911 Manual.rst:364 User and
+#: management/NVP zone
+msgid "NVP动态切换VP"
+msgstr ""
+
+#: ../../source/Node 77e3ea8a9da346bc9604ce31da31975b Manual.rst:366 User and
+#: management/NVP zone
+msgid "场景：NVP通过IPC命令动态的切换VP。"
+msgstr ""
+
+#: ../../source/Node 499982d42c3b4846a16671c6a3ea3063 Manual.rst:368 User and
+#: management/NVP zone
+msgid "IPC命令如下::"
+msgstr ""
+
+#: ../../source/Node 3590d0f31b7b43d78d073777e0e0f3fc Manual.rst:385 User and
+#: management/NVP zone
+msgid "**使用过程介绍：**"
+msgstr ""
+
+#: ../../source/Node Manual.rst:387 User and b4ca3d881af04f10b2648842d1bb50ad
+#: management/NVP zone
+msgid "NVP目前已经有连接的VP，通过状态查询命令可以查询到当前连接的VP节点信息；"
+msgstr ""
+
+#: ../../source/Node 7426e19213f947b2b65c359562d734c5 Manual.rst:388 User and
+#: management/NVP zone
+msgid "NVP执行指令删除自己所连接的VP节点： `nvp remove global node1` ；"
+msgstr ""
+
+#: ../../source/Node 0228687ea4cb4a4a99230dd6d3c945c5 Manual.rst:389 User and
+#: management/NVP zone
+msgid "NVP节点收到返回信息 `remove [node1] success` 表明成功删除；"
+msgstr ""
+
+#: ../../source/Node 26acb28b21c0412c86857c65779670c6 Manual.rst:390 User and
+#: management/NVP zone
+msgid "使用状态查询命令查询当前状态，验证已经删除成功，此时应该没有连接任何VP节点，结果应返回 `this nvp connects no vp` ；"
+msgstr ""
+
+#: ../../source/Node 6f811d6226fd418d8fe33918306779b2 Manual.rst:391 User and
+#: management/NVP zone
+msgid "通过add指令，添加新的想要连接的VP节点；添加新的节点之前需要根据 **第二章节进行证书配置；**"
+msgstr ""
+
+#: ../../source/Node 492354a91e994027bcaef80d2c3a70d8 Manual.rst:392 User and
+#: management/NVP zone
+msgid "如果VP节点未启动，那么需要先启动该VP节点，节点配置 **参考部署文档** ；"
+msgstr ""
+
+#: ../../source/Node 5436b7fbda144227ba5b6fd15eb7c0c5 Manual.rst:393 User and
+#: management/NVP zone
+msgid "在NVP节点执行 `nvp add global node2 127.0.0.1:50012` 命令；"
+msgstr ""
+
+#: ../../source/Node 9e88d63c53f84a388c0b474de2af7103 Manual.rst:394 User and
+#: management/NVP zone
+msgid "等待返回 `add node2 success` ，说明和node2连接的准备工作完成，但此时还不证明已经连接成功；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:395 User and ccdea5c6f68446cd8bb913902354bb8e
+#: management/NVP zone
+msgid ""
+"使用状态查询命令查询当前状态，验证已经添加成功，此时应该成功连接新的VP节点，结果应返回NVP的状态信息： `{hostname: node2, "
+"nvp_status: IDLE, height: 0}` ；"
+msgstr ""
+
+#: ../../source/Node 9958276de8c5415ebcbdb81bdcbfde5a Manual.rst:398 User and
+#: management/NVP zone
+msgid "异常处理"
+msgstr ""
+
+#: ../../source/Node 07604b1e6f6140b5b3e5a3122d5264bc Manual.rst:401 User and
+#: management/NVP zone
+msgid "指令格式输入错误"
+msgstr ""
+
+#: ../../source/Node 1d5b11cb50144919a51ae319b1a3e685 Manual.rst:403 User and
+#: management/NVP zone
+msgid "命令长度/类型出现问题::"
+msgstr ""
+
+#: ../../source/Node Manual.rst:405 User and f21bd4d0fea8418cae1b7935ba855113
+#: management/NVP zone
+msgid "# 命令长度不够，小于3 >>> nvp status Error: invalid command"
+msgstr ""
+
+#: ../../source/Node Manual.rst:409 User and c51e95739bba4695935496f325a65604
+#: management/NVP zone
+msgid "# 命令中的namespace不存在 >>> nvp status g Error: namespace [g] not exists"
+msgstr ""
+
+#: ../../source/Node 4441c4b970d24b89b48b8f5f66eb359b Manual.rst:413 User and
+#: management/NVP zone
+msgid ""
+"# 命令中长度正确但是指令类型不支持，目前仅支持add、remove、status三种 >>> nvp type global Error: "
+"invald command"
+msgstr ""
+
+#: ../../source/Node 8730090094854161bd1668ef77911e68 Manual.rst:417 User and
+#: management/NVP zone
+msgid "add指令格式有误::"
+msgstr ""
+
+#: ../../source/Node 3d36a1e9845d49aab040117dbb637075 Manual.rst:419 User and
+#: management/NVP zone
+msgid ""
+"# 如namespace或者hostname的参数为空，或者输入的ip地址/端口号有问题 >>> nvp add global   "
+"127.0.0.1:500231 Error: invalid command"
+msgstr ""
+
+#: ../../source/Node 0691ef788fd349218c90e23d74b22d77 Manual.rst:423 User and
+#: management/NVP zone
+msgid ""
+"# 命令格式不正确，add命令长度必须为5，即nvp add namespace hostname addr >>> nvp add global"
+" Error: invalid command: expected length: 5"
+msgstr ""
+
+#: ../../source/Node 0d4609812527451ca1fd27ccd7eb2436 Manual.rst:430 User and
+#: management/NVP zone
+msgid "# 端口号异常 >>> nvp add global node1 127.0.0.1：50011 Error: Uknown rune: 65306"
+msgstr ""
+
+#: ../../source/Node 1f9c31e38a3c47529f4870fbfe59d399 Manual.rst:435 User and
+#: management/NVP zone
+msgid "**解决方案：** 参照 **第4章节** ，正确输入指令"
+msgstr ""
+
+#: ../../source/Node Manual.rst:438 User and d166814ccfbe4db29eec463afd847c86
+#: management/NVP zone
+msgid "查询状态时VP与NVP并未互相连接"
+msgstr ""
+
+#: ../../source/Node Manual.rst:440 User and d5ace017956e4b999f4ac19a0354736e
+#: management/NVP zone
+msgid ""
+"在状态查询指令之中，输入 `nvp status <namespace> [hostname]` 指令，如果查询询不到，根据节点类型返回 "
+"`this vp connects no nvp/this nvp connects no vp`"
+msgstr ""
+
+#: ../../source/Node 8bda264fa8c945898ec47ce6e2aabd00 Manual.rst:442 User and
+#: management/NVP zone
+msgid "**解决方案：** 使用添加连接命令，进行节点连接。"
+msgstr ""
+
+#: ../../source/Node 411eddb5309e4d6c90862aff365659b3 Manual.rst:445 User and
+#: management/NVP zone
+msgid "重复添加存在节点"
+msgstr ""
+
+#: ../../source/Node 3ac831144db24b1c80892410e72bc8e5 Manual.rst:453 User and
+#: management/NVP zone
+msgid "**解决方案：** 检查NVP，VP，CVP各个节点的配置文件，查看是否有重名现象，进行更改。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:456 User and c92b5dd7f7ae4b5da1bb74243c5193df
+#: management/NVP zone
+msgid "**删除并不存在的节点**"
+msgstr ""
+
+#: ../../source/Node 6e6c453d849949238b66a06b965d1b37 Manual.rst:464 User and
+#: management/NVP zone
+msgid "**解决方案：** 该节点不存在或已经删除成功，无法再进行重复操作，可以进行下一步操作，无需处理。"
+msgstr ""
+
+#: ../../source/Node 6e5e8b914428424d91df42d3709c3398 Manual.rst:467 User and
+#: management/NVP zone
+msgid "添加节点失败"
+msgstr ""
+
+#: ../../source/Node 5ea3e503874749e8a5e7c1eb1e4fd153 Manual.rst:469 User and
+#: management/NVP zone
+msgid "在添加节点之后如果出现以下情况说明添加节点失败："
+msgstr ""
+
+#: ../../source/Node 74882be7d769417d8ba794769a531d3c Manual.rst:471 User and
+#: management/NVP zone
+msgid "1）如果日志信息一直在显示反复连接，出现timeout等日志信息，此时表明建立连接失败；"
+msgstr ""
+
+#: ../../source/Node 875ac03437954398931b5286e09ee202 Manual.rst:473 User and
+#: management/NVP zone
+msgid "2）如果是vp节点使用状态查询的指令，如果连接的nvp节点状态一直都是 `ABNORMAL` 状态，也表明建立连接出现问题。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:475 User and be5b4bd8e9aa4e69b534e769dda558f0
+#: management/NVP zone
+msgid "**解决方案：**"
+msgstr ""
+
+#: ../../source/Node Manual.rst:477 User and c0b17c00187340659ad84b012916cf82
+#: management/NVP zone
+msgid "此时不做处理也可以正常运行，但是后台会一直尝试连接该节点，反复打印timeout日志信息；"
+msgstr ""
+
+#: ../../source/Node 998cb19ae0ad43efa8a822552db37ce9 Manual.rst:479 User and
+#: management/NVP zone
+msgid "如果想要停止打印日志信息，用户可以调用remove指令撤回上一条连接add指令。"
+msgstr ""
+
+#: ../../source/Node 08b1030c7d364574a435227d8af5fe8e Manual.rst:487 User and
+#: management/NVP zone
+msgid ""
+"# vp节点和nvp之间的连接存在问题，需要人工介入 >>> nvp remove global nvp1 inform [nvp1] to "
+"delete failed, maybe need manual operation"
+msgstr ""
+
+#: ../../source/Node Manual.rst:491 User ae6132f6944b4ca7b87afc712dbd28c3 and
+#: management/NVP zone
+msgid "针对remove出错，没有成功返回success信息的场景"
+msgstr ""
+
+#: ../../source/Node Manual.rst:493 User and fdbd929394774d42b1459288a4348ffa
+#: management/NVP zone
+msgid "**解决方案：** nvp和vp之间的连接状态不正常，需要根据日志信息进行人工介入。"
+msgstr ""
+

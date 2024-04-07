@@ -1,0 +1,530 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/quickstart/Configuration 9191bbe249ae4a4ca11a8f63d845008f
+#: changes.rst:4
+msgid "配置变更"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 2478bde83f55420b95b254a3264a3aa2
+#: changes.rst:6
+msgid "本文是v2.3.0-> v2.7.0的配置变更说明文档"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 2fc86490fe2b473a86a52a1692d07fbb
+#: changes.rst:8
+msgid ""
+"**说明：**\\ 在2.0.8版本及以后的安装包中的配置文件只包含了最精简化的配置，\\ "
+"**安装包中的配置文件已经足够满足hyperchain的正常使用**\\ "
+"。若您是第一次使用hyperchain，且希望更深入地使用hyperchain时，可以查阅相关功能的使用手册从而知晓配置文件的修改方法；若您以前已经部署过hyperchain，那么仍可以沿用原先的全量配置文件，只不过需要参考《配置变更》对一些配置上的变化进行确认。"
+msgstr ""
+
+#: ../../source/quickstart/Configuration a93e0f2ac5a9442ea412e429c31cef2f
+#: changes.rst:11
+msgid "增删节点"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 0f775ee161a1452792c507fc0515c7b6
+#: 1f348a8cd49c423ab8bfa460d9385cca 3a69b8ade4154e418561921d52a9dcf5
+#: 3edd5d563d8f43428e3c6a6c1668cb1b changes.rst:13 changes.rst:51
+#: changes.rst:65 changes.rst:82 changes.rst:114
+#: ead77b5af38643129d44ff2883416fbd
+msgid "**新增配置**"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 3f35c5a4769a4d46acd0e25b217fa943
+#: changes.rst:15
+msgid "配置文件路径：configuration/config/global/ns_genesis.toml"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 42df553f47ee4230903b5eed8ba9f70e
+#: changes.rst:17
+msgid "变更所述模块：genesis"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 867ee2e668124da69ddfb4c81391bf4f
+#: changes.rst:19
+msgid "变更原因：将链的ca模式上链，且不可更改"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 2f47dd275cce4225885a6f88b4f4899c
+#: 3152414e30e24be1ac825383fa263fef 3a151e4e381a4e2da5c05cfd3071db7f
+#: 3b68a7fb0d5e475f93a1356cbbc4ed80 7d750c838666412faf3ec65eed5a9c36
+#: b3526e8390404b7c8233837b0b3cdf3a bf422d0a63fd4bfb8aa2c6982501d62f
+#: changes.rst:22 changes.rst:40 changes.rst:60 changes.rst:74 changes.rst:91
+#: changes.rst:123 changes.rst:145 changes.rst:183
+#: d2ee3903c01a43a2bb57ffdf55e7ff36
+msgid "配置项"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 1e663bcca49a4746898ca57889c755ca
+#: 2e7ecff30d614a7b90cd280aa125ac57 32288b1b2a534cec8cf5fbf548b8fa83
+#: 4780f4aacbb1440da66c7ba63f78b88c 8e03f23f3cb34f18a9d80edffb631ad5
+#: a870546db5374316be4dd3bc9f00d694 b6bac81dcfdb49a4b6c542fe7de42f52
+#: changes.rst:22 changes.rst:40 changes.rst:60 changes.rst:74 changes.rst:91
+#: changes.rst:123 changes.rst:145 changes.rst:183
+#: d7e5212ee3574737b386f5f2cdac9cab
+msgid "含义"
+msgstr ""
+
+#: ../../source/quickstart/Configuration beec4ee2c71642a28977b64408691202
+#: changes.rst:24
+msgid "genes is.ca_mode"
+msgstr ""
+
+#: ../../source/quickstart/Configuration changes.rst:24
+#: dd22a67b71da428bbee3a6bc15c137fa
+msgid "ca模式，配置后不支持修改。支持的ca模式有：中 心化ca，即Center；分布式ca，即Distributed；无ca，即none"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 037cfa14e71d4601884989627388cb38
+#: changes.rst:27
+msgid "genes is.root_ca"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 88170869038a48cca413555a65e45ed7
+#: changes.rst:27
+msgid "当ca模式为中心化ca，即Center时，配置信任的root ca"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 97c6b32a6bbe433daea66aded73ecf37
+#: changes.rst:31
+msgid "**删除配置**"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 5d379dbe61c844ce99d5007b519053ff
+#: 74bb344b4e4744eab9df7a6e8aa903a6 changes.rst:33 changes.rst:84
+#: changes.rst:116 f3d589a96c554867a6c76ae3807811ee
+msgid "配置文件路径：configuration/config/global/ns_static.toml"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 9253bd9b590048ecb4022ec60b83af69
+#: changes.rst:35
+msgid "变更所述模块：encryption, distributedCA"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 6273621ab2e149fb90ad1201dcfa6fc0
+#: changes.rst:37
+msgid "变更原因：删除是否开启分布式ca及是否启用Ecert的开关，通过ca_mode控制"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 702f6fca6e344e308f71ca9636a303b6
+#: changes.rst:42
+msgid "encryption.check.enable"
+msgstr ""
+
+#: ../../source/quickstart/Configuration changes.rst:42
+#: d46ea7f9f3f942eea31da9fca1ecabe2
+msgid "是否启用ecert"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 5953f8a7aa61489f8f84fe8394fcbf0a
+#: changes.rst:43
+msgid "distributedCA.enable"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 807dd17eddcd4bde96f6e663d6ea3a85
+#: changes.rst:43
+msgid "是否启用分布式ca"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 393e237199054d56ba7e702dd6224e01
+#: changes.rst:46
+msgid "**不再支持rockit**"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 64a2d6484a32439a85f584768c4dc3e1
+#: changes.rst:49
+msgid "嵌入式BaaS"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 7fbd6a1f7a07472c9945aaaf071d704a
+#: changes.rst:53
+msgid "配置文件路径：configuration/config/system.toml"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 320334b198a64abcbe393c3754b7a8ed
+#: changes.rst:55
+msgid "变更所述模块：baas"
+msgstr ""
+
+#: ../../source/quickstart/Configuration aa2c7007c48940678b9fdbd58dc13020
+#: changes.rst:57
+msgid "变更原因：新增内嵌版BaaS开关"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 6d55eb5b21ec4f4db2d6f7f1e4e03bc2
+#: changes.rst:62
+msgid "baas.enable"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 7ddbfcc11b624d0bba7209ce698ff511
+#: changes.rst:62
+msgid "是否开启内嵌版BaaS"
+msgstr ""
+
+#: ../../source/quickstart/Configuration changes.rst:67
+#: d7aba632f0e24364bf142555f6e5ab91
+msgid "配置文件路径：configuration/config/dynamic.toml"
+msgstr ""
+
+#: ../../source/quickstart/Configuration changes.rst:69
+#: df2f917696674097abe1310ed7f7ab91
+msgid "变更所述模块：port"
+msgstr ""
+
+#: ../../source/quickstart/Configuration cd41d6204e5842fa8801a2b445f771e9
+#: changes.rst:71
+msgid "变更原因：新增内嵌版BaaS访问接口"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 7d88226cec8249d7b58db737e33662c1
+#: changes.rst:76
+msgid "port.baas"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 25b6a65496cc4faeb71dbb21de082e8f
+#: changes.rst:76
+msgid "baas的访问端口"
+msgstr ""
+
+#: ../../source/quickstart/Configuration changes.rst:80
+#: dbafe8df459448fda9793aaa07c53017
+msgid "NoxBFT"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 7f7725bee23943b2a65f4aee5673e47d
+#: changes.rst:86
+msgid "变更所述模块：consensus.hotstuff"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 2a5c95295ff34b0dad55181c53ca07d6
+#: changes.rst:88
+msgid "变更原因：共识checkpoint协议重构以及稳定性优化"
+msgstr ""
+
+#: ../../source/quickstart/Configuration c7ea6601967745219e8558f4f8328a5a
+#: changes.rst:91 changes.rst:123 e2344b38f8074d3e8c655efc8dd46548
+msgid "默认值"
+msgstr ""
+
+#: ../../source/quickstart/Configuration changes.rst:93
+#: fef110e120bb4505bb54b043659e6d96
+msgid "consensus.hotstuf f.checkpoint_interval"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 0f751eef6c52467697857ebcdbf5bc9b
+#: changes.rst:93
+msgid "100"
+msgstr ""
+
+#: ../../source/quickstart/Configuration changes.rst:93
+#: f9c2e71845b74191bcecb0416d0f3fdb
+msgid "配置NoxBFT允许最大不生成检查点的 轮次数，超过此数量未生成检查点时， 会发起验证区块提案以强制生成检查点"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 573dbef208894aa08acec7a10c743fd1
+#: changes.rst:97
+msgid "co nsensus.hotstuff.chec kpoint_mem_cache_size"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 8803074e9201477495aa00b4f195088c
+#: changes.rst:97
+msgid "2"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 5c7f233a0d754ea08c521488edef7ec9
+#: changes.rst:97
+msgid "配置NoxBFT在blo cktree中允许缓存几个检查点中的区块"
+msgstr ""
+
+#: ../../source/quickstart/Configuration changes.rst:101
+#: dff293f9a03a4f0286595289a5c77d48
+msgid "consensus.hotstuff .backward_round_limit"
+msgstr ""
+
+#: ../../source/quickstart/Configuration changes.rst:101
+#: f95ad91264a6430398115ac797dfeaf6
+msgid "10"
+msgstr ""
+
+#: ../../source/quickstart/Configuration aebf3e37bb8f4f0db58e22b8f1f6dfa1
+#: changes.rst:101
+msgid "配置 NoxBFT落后多少轮后去调用syncchain 同步，落后的轮次低于此数量时，只会 采用fetch的方式拉取落后的共识区块"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 9d7ab257d4f14c539646818816fe84fa
+#: changes.rst:106
+msgid "co nsensus.hotstuff.memp ool.commit_cache_size"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 286b8ce9efc84a84bca1397623f50c51
+#: changes.rst:106
+msgid "3"
+msgstr ""
+
+#: ../../source/quickstart/Configuration a814975de8ee4db8a3d1100014f834d9
+#: changes.rst:106
+msgid "配置mempool 允许缓存多少个提交过的区块中的交易"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 06c6cbe8484947e1a2349597309e9cee
+#: changes.rst:112
+msgid "轻节点"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 5c60e38224ee4358b169960cee8af48f
+#: changes.rst:118
+msgid "变更所述模块：executor"
+msgstr ""
+
+#: ../../source/quickstart/Configuration bad947333bbb400c827ae04c1f315027
+#: changes.rst:120
+msgid "变更原因：新增lp节点类型"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 5f3d466673fb4c4db5e3038b67815fe7
+#: changes.rst:125
+msgid "executor.lp.send_limit"
+msgstr ""
+
+#: ../../source/quickstart/Configuration ba0f79ee551d4bc9962247dee3545da6
+#: changes.rst:125
+msgid "500"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 78a8156eb4fb4606b75de81922c06601
+#: changes.rst:125
+msgid "vp节点给lp节点 发送的一批区块的数量限制"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 89b63c7e74b243fe839f8b73a6825c6f
+#: changes.rst:128
+msgid "executor.lp.resend_interval"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 5ead2c7e0dd8431ba0e16f2339eda82f
+#: changes.rst:128
+msgid "5s"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 92860c3858254dc0b720fae1848a8bf4
+#: changes.rst:128
+msgid "p节点给lp节点、lp节点给 vp节点重发数据的时间间隔"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 99c43b0d012241819394db68409115f7
+#: changes.rst:133
+msgid "gas排序"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 35ac16b992924a2191693c29bc5343c0
+#: 753f408b136e46bab89a595db1d0d735 changes.rst:135 changes.rst:155
+msgid "**配置项变更**"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 1254be60e187445eb30f253a940047ca
+#: b636b3f651454361a2b81937bd7f8f43 changes.rst:137 changes.rst:157
+msgid "配置文件路径：configuration/global/ns_static.toml"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 4e0871545f1e4d84aad16fd4fd26a3b1
+#: changes.rst:139
+msgid "变更所述模块：consensus"
+msgstr ""
+
+#: ../../source/quickstart/Configuration befcd4a6984a490788b31d98cea04084
+#: changes.rst:141
+msgid "变更原因：新增了交易池类型”priced”用于NFT等需求中支持打包时根据交易的优先级（通常指gas price）进行排序。"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 7a2683a129214908b07660f3d4a55af7
+#: changes.rst:145
+msgid "变更类型"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 02f495a7afaf4de697757333ec4d7946
+#: changes.rst:147
+msgid "consensus.hotst uff.mempool.type"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 9beb3698d6d443948acb3a789ba330ef
+#: changes.rst:147
+msgid "启动ho tstuff算法时使 用的交易池类型"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 7b20441770c94498a4669f390c5e1157
+#: changes.rst:147
+msgid "新增交易池类型”pric ed”，用于支持hotstuff算法按照gas price进行打包排序"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 627b91c618084676a5821335f2229211
+#: changes.rst:153
+msgid "sync_chain模块"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 185a9fcd98e744568a99d48d7fea9729
+#: changes.rst:159
+msgid "变更所述模块：sync"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 0cb52f4e94364b00a924622ffd16c863
+#: changes.rst:161
+msgid ""
+"变更原因：sync_chain流程重构，使用一套新的配置项。目前，sync_chain相关的配置完全处于[sync]标签下，原\\ "
+"**[executor.sync_chain]下的配置均已弃用。**"
+msgstr ""
+
+#: ../../source/quickstart/Configuration changes.rst:183
+#: dc90c2b2be3343b7a5e55524fc7d35a0
+msgid "配置规则"
+msgstr ""
+
+#: ../../source/quickstart/Configuration changes.rst:185
+#: ecbc0b7055574aeaae960e48670bed9d
+msgid "sync.target.epoch"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 6520d6fdf39f48f69d954a1c0fb99121
+#: changes.rst:185
+msgid "节点启动时预期同步的epoch值"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 5376ee7230534432af6d6ce020bde23a
+#: changes.rst:187
+msgid "sync.target.height"
+msgstr ""
+
+#: ../../source/quickstart/Configuration ab15010bb9a14029859d5c05f665ab27
+#: changes.rst:187
+msgid "节点启动时预期同步的区块号"
+msgstr ""
+
+#: ../../source/quickstart/Configuration c06b6ef32f8d4fbb98d66e9f9fe615eb
+#: changes.rst:187
+msgid "要求该配置项 >= sync.targ et.epoch对应的ch eckpoint的区块号"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 45d46150dfde49d09bd6119a22e00ebf
+#: changes.rst:192
+msgid "sync.target.hash"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 58a5815c9ed44c9d8b9bcdf54fd09d8e
+#: changes.rst:192
+msgid "sync. target.height对应的区块hash"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 0d0e4544a2ee4f68828c1e1e1deefc19
+#: changes.rst:195
+msgid "sync.prov ider.available_mem"
+msgstr ""
+
+#: ../../source/quickstart/Configuration changes.rst:195
+#: d0d9407008364f4aa9f5f71ad79e29bd
+msgid "提供数据端每 一次提供的数据占用内存上限"
+msgstr ""
+
+#: ../../source/quickstart/Configuration cb4c0e25e9ec42a9b2d42fa784173887
+#: changes.rst:198
+msgid "syn c.fetcher.priority"
+msgstr ""
+
+#: ../../source/quickstart/Configuration c0f6e053a01e45cd9ead5342236af8bc
+#: changes.rst:198
+msgid "优先同步更 多的区块还是更高的snapshot"
+msgstr ""
+
+#: ../../source/quickstart/Configuration changes.rst:198
+#: d4cc87e44047433e80b40fc802aacb29
+msgid "合法可选值为："
+msgstr ""
+
+#: ../../source/quickstart/Configuration afaa944d310d4306a57e25820a6d4f6b
+#: changes.rst:201
+msgid "sync.fetcher.sy nc_journal_receipt"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 14775c6e015747d0a0697a0fcd5b1d34
+#: changes.rst:201
+msgid "拉取区块数据时 ，是否同时拉取journal和rece ipt（如果配置为true，则会执 行journal，否则会执行交易）"
+msgstr ""
+
+#: ../../source/quickstart/Configuration changes.rst:206
+#: f54140f135114d9cbfa7f4caee18e251
+msgid "sync.fetch er.sync_hpc_blocks"
+msgstr ""
+
+#: ../../source/quickstart/Configuration cc2a21e910c14f68a3673807544d3a67
+#: changes.rst:206
+msgid "是否要同步hype rchain1.8产生的历史数据（只 针对从1.8升级到2.X的场景）"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 96aa87c0b76c414194a5c0610aac9eca
+#: changes.rst:206
+msgid "该配置项如果为 true，则节点一定 采用“优先同步更 多区块”的模式， 即sync.fetcher. priority不再生效"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 30c3d69cb40a4275a170c06cdc740084
+#: changes.rst:213
+msgid "sync.fetch er.batch_block_num"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 48476ba3472d4eae849b291f44e14124
+#: changes.rst:213
+msgid "每一批拉取的数据 包数量（该配置通用于拉取数 据的各个流程中，表示一个请 求包含多少个数据包的拉取）"
+msgstr ""
+
+#: ../../source/quickstart/Configuration b8eb424485114e5f89ef9d1e68ca835e
+#: changes.rst:218
+msgid "sync.fetche r.ledger_part_size"
+msgstr ""
+
+#: ../../source/quickstart/Configuration changes.rst:218
+#: e3622b86508744788214e7888f9da424
+msgid ""
+"当需要同 步账本时，账本数据会被视为 一个文件，该配置项表示一个 账本文件数据包分片的大小（ 例如：账本数据大小为1M，该 "
+"配置项为50kb;那么一共需要21 [1024/50向上取整]个数据包）"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 7c75095fb6874175a4f54bee9f983451
+#: changes.rst:226
+msgid "sync.fe tcher.task.timeout"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 5b43a7658ff04c20b1ca2614532fb3f9
+#: changes.rst:226
+msgid ""
+"拉取 数据流程内部会将拉取一批ba tch_block_num个数据包的过程 视为一个task，该配置项表示 ：系统时间每经过多久回尝试 "
+"一次将未完成的task重新发送"
+msgstr ""
+
+#: ../../source/quickstart/Configuration 1eb0322c66924f2daea491591fa11bd3
+#: changes.rst:233
+msgid "sync. fetcher.task.limit"
+msgstr ""
+
+#: ../../source/quickstart/Configuration b2781d0c19a244ec81c0b3ef2a7846b4
+#: changes.rst:233
+msgid "该配置项表示同时可以有 多少个未完成的task并行执行"
+msgstr ""
+

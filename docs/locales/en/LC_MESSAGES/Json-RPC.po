@@ -1,0 +1,991 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Json-RPC.rst:2 e553e80617cc4a9c812a0cd976dc656e
+msgid "API文档"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:4 5e951bfea1cb4350b01152be74bf36c1
+msgid ""
+"JSON-"
+"RPC是一个无状态且轻量级的远程过程调用(RPC)协议。它允许运行在基于socket、http等诸多不同消息传输环境的同一进程中，使用JSON作为数据格式。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:6 e500b34ddcc646cbaca15fcdeabb4659
+msgid "发送一个请求对象至服务端代表一个RPC调用，一个请求对象包含下列成员:"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:9 ../../source/Json-RPC.rst:22
+#: ../../source/Json-RPC.rst:47 53da1cf858f140a59a732b1e7f4dadd1
+#: 61af1dfd2833492f95af0b92327a5cbd 61b98f1d7b8941039283d201c437302c
+msgid "jsonrpc"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:9 a6db99c0c33149f4ba9176c109f5b7f5
+msgid "指定JSON-RPC协议版本的字符，如果是2.0版本,则必须准确写为 “2.0”。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:12 ../../source/Json-RPC.rst:24
+#: ../../source/Json-RPC.rst:53 464a30f37f9346d0af1b4aba0d4491af
+#: 82fc0b2007654888a0aeedb5d9c740ad a2dff398aac848e9a6c262ea7c28f362
+msgid "method"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:12 b8d412b73d7c42778926bb586619b792
+msgid ""
+"表示所要调用方法名称的字符串，以RPC开头的方法名,用英文句号(U+002E or ASCII "
+"46)连接的为预留给RPC内部的方法名及扩展名,且不能在其他地方使用。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:15 ../../source/Json-RPC.rst:56
+#: 3311efb690144ad7af7e8894ffa1c19a 4ec83bc332db4f8db85c159680a1c29c
+msgid "params"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:15 ../../source/Json-RPC.rst:56
+#: 34c3501fe8764117a02e9e5f470d5de4 f1d58bf4cc524146b78e822abc31d527
+msgid "调用方法所需要的结构化参数值，该成员参数可以被省略。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:18 ../../source/Json-RPC.rst:29
+#: ../../source/Json-RPC.rst:59 9e3cdc7884044682ba3017458fee6ee0
+#: aa27e482b6304b6e89a6d21697a44278 b8911d1f1c8344648da5a711159f9c31
+msgid "id"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:18 785410efd5664c7e940c8f846e0a7170
+msgid "已建立客户端的唯一标识id，该值必须包含一个字符串、数值或NULL值。如果不包含该成员则被认定为是一次通知调用。该值一般不为NULL,若为数值则应为整数。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:20 d201e6da1fcf4710b8974c757506d367
+msgid "当发起一次rpc调用时，服务端都必须回复一个JSON对象作为响应，响应对象包含下列成员:"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:23 a32286f89f4e4a4daecd3691f9b923a4
+msgid "指定JSON-RPC协议版本的字符串，如果是2.0版本，则必须准确写为“2.0”。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:25 93d63003797b458e83b49c4e332256d0
+msgid "该成员在成功时必须包含，当调用方法失败时必须不包含该成员。服务端中的被调用方法决定了该成员的值。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:26 59f51eb6cb6540b3bbe31c2ae10f59f3
+msgid "error"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:27 44b3cd22c0274c29bf1ba4fa5acb83e0
+msgid "该成员在失败时必须包含，当没有错误引起时，不包含该成员，若引起错误,则该成员对象将包含code和message两个属性。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:29 9e1ecef091fe409b97e86e8836593ba3
+msgid "该成员必须包含，该成员值必须与请求对象中的id成员值一致。若在检查请求对象id时错误(例如参数错误或无效请求)，则该值必须为空值（NULL）。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:32 fef55cc58bec4a5caf20f69991d732a9
+msgid "API设计"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:35 4f3df0e0878345a2ae1c6ab6899a8339
+msgid "接口类别"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:37 d1e0aff1c6d147ebbf810c1058bf9dea
+msgid "平台接口按照提供的功能服务不同，主要分为："
+msgstr ""
+
+#: ../../source/Json-RPC.rst:39 7603e60cb296489991a49f3f3ea80d86
+msgid ""
+"区块服务(block)、节点服务(node) 、合约服务(contract) 、MQ服务(sub)、数据归档服务(archive) "
+"、文件共享服务(fm)、链级权限服务(config、account) 、接口权限服务(auth)、simulate合约服务(simulate)。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:42 c13dc592244a4bd5a8964cd1b8e9f7f3
+msgid "请求参数"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:44 4dfd071836a040baba1260e35e950a46
+msgid "接口设计遵循JSON-RPC 2.0规范，所有HTTP请求均为POST请求，请求参数包括："
+msgstr ""
+
+#: ../../source/Json-RPC.rst:47 dcac5e161264412aa4794ce187ab95d8
+msgid "指定JSON-RPC协议版本的字符串，如果是2.0版本,则必须准确写为 “2.0”。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:50 e8de1aee5c2548ad8984cc0e44b7d7ca
+msgid "namespace"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:50 61b6e9adfef64f59adfadec3138258d4
+msgid "表示该条请求发送给哪个分区去处理。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:53 690b06e488ef4531ae66ab74e8630ccc
+msgid "表示所要调用方法名称的字符串，格式为：(服务前缀)_(方法名)。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:59 ce1361e4054a48bd8a9cfdd2956b0b4e
+msgid "已建立客户端的唯一标识id，该值必须包含一个字符串、数值。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:74 aebce3d6cc8d4d2b827e99a09ef314ee
+msgid "返回参数"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:76 a31b53e48ab04420bc51629f4cd1f1a5
+msgid "返回参数包括:"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:78 8ecf82f600af4841bc9f277d1a66f8f8
+msgid "`jsonrpc`: 指定JSON-RPC协议版本的字符串,如果是2.0版本,则必须准确写为 “2.0”。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:80 98b33ed466da4fa2b82f528546d1c6d5
+msgid "`namespace`: 表示该条请求所属分区。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:82 b9cac86a7c6c4f2e99c58e3d92ef9ae5
+msgid "`code`: 状态码，若成功，则为0，其他状态码详见下表“code错误码”。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:84 2a2a00f3b7474159b8247fc788976881
+msgid "`message`: 错误信息，若成功，则为“SUCCESS”，否则为错误详细信息。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:86 eb15d02bbe244d4ca18dd4fe29a4a904
+msgid "`result`: 请求返回的结果，下文接口描述的表格中返回值即表示这个字段返回的值。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:88 e21d0401c34e496d99f9685a9f94d3ee
+msgid "`id`: 已建立客户端的唯一标识id,该值必须包含一个字符串、数值。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:127 19611ddd910a4ecab511e20623227adb
+msgid "例如，若接口调用成功，返回字段包括：jsonrpc、id、code、message、result，且code值为0，message值为“SUCCESS”，用户可通过这两个字段的值来判断接口调用是否成功；若调用失败，则code为非0值，message为错误信息。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:130 2ce4f7f18d9349619f2c8c1e55530c0f
+msgid "code错误码"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:133 adc8ee24d7284f79bd0f12768c7cb254
+msgid "-32700"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:133 f69f9930b51e465e907895a6bf6699cc
+msgid "服务端接收到无效的json。该错误发送于服务器尝试解析json文本"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:136 2696dcef53d84e0a8141737af37ac284
+msgid "-32600"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:136 390ba2f0678043de9a9c01bd17fbb5ad
+msgid "无效的请求（比如非法的JSON格式）"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:139 2aaf7281e8604bd5b074eaa82f313897
+msgid "-32601"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:139 787b7b58bdfb4498b9a0aba277ff0c26
+msgid "方法不存在或者无效"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:142 89dfb0c92062432da4b370a92659fd1a
+msgid "-32602"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:142 5d327711bd3242c49a89a2d5c31c0053
+msgid "无效的方法参数"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:145 205879361a0c4312a3da113b8f239da6
+msgid "-32603"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:145 78921db3378d45c29aaf0195de82b0dc
+msgid "JSON-RPC内部错误"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:148 b0a5f7e6efea459c937c453091078c38
+msgid "-32000"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:148 7579eae0e5da42d8a31c3ccd192c5e86
+msgid "Hyperchain内部错误或者空指针或者节点未安装solidity环境"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:151 15c96beb7e024b1185ff827417da1461
+msgid "-32001"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:151 88c34f11d8ca4c31bf296cdcb6d8fc28
+msgid "查询的数据不存在"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:154 e039448acf1543acaba5eb1c88f7665c
+msgid "-32002"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:154 1e4eba76dfb04c84a6a009076d467910
+msgid "余额不足"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:157 67530af8f7134c8987e8a80d829bc544
+msgid "-32003"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:157 722dc213dbba436a84d464af2f3cd181
+msgid "签名非法"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:160 e20371fe50b74357954b420120ed9184
+msgid "-32004"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:160 bd230001d7ea4a08946288cf263e0d0a
+msgid "合约部署出错"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:163 06f152f73c8440b9b2704b19c78a6d32
+msgid "-32005"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:163 39728dc008e44bae9b7c81947ccd8349
+msgid "合约调用出错"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:166 ffaf90e691114ec59e07e84e41f34a27
+msgid "-32006"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:166 09b2ec17f5714946aba3b61235e0cd10
+msgid "系统繁忙"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:169 d2dc2016c16c4e0ba89e000af17f522d
+msgid "-32007"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:169 6dc6711663314c7d9907b647dce4a0c0
+msgid "交易重复"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:172 3356fa2f92a143c7a9f77fb4ce23788e
+msgid "-32008"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:172 050a62a800cd4b6ca10c16364c41ad05
+msgid "合约操作权限不够"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:175 3d0fe9de631d453a9f79abe6fb232396
+msgid "-32009"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:175 5979940c32ac4e7e8078812ea75f93d6
+msgid "(合约)账户不存在"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:178 87142499e5424ea7a68106f04c93af58
+msgid "-32010"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:178 828947d53f4343f9b1a6896061b58f28
+msgid "namespace不存在"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:181 bd1261faf7cd4f0daac9ab794bae7b33
+msgid "-32011"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:181 ece48d54a48a490da98d2bd8175b62ff
+msgid "账本上无区块产生，查询最新区块的时候可能抛出该错误"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:184 ac795707e29c4825a1251383b1d67a00
+msgid "-32012"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:184 fa76409de3674d869d1695ff7e3dbc35
+msgid "订阅不存在"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:188 4081ea2897624b16904c3e17349a096c
+msgid "-32013"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:187 4cdb5dad395b411682e6165161562c88
+msgid "数据归档、快照相关错误"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:190 789030a092e04bdfbc277ebd07e773a6
+msgid "**下文将给出几个错误示例。**"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:192 94c5612f69874cbd955a569439d9b918
+msgid "**Example1: 请求无效**"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:205 91e56d05a8cc4e0a8af475b8aae44f9d
+msgid "**Example2: 交易重复**"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:232 c218b99db7d345f8b98f849c4d2da741
+msgid "**Example3: 方法不存在**"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:255 9e7d41bf1a1f40ac8b6577dd98b2962b
+msgid "交易服务"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:257 f942d3631ab84d99a58c7fc462c1e662
+msgid "tx_sendTransaction：发送交易"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:258 e8de09a63cc8431a929740c6fd70f0e5
+msgid "tx_getTransactionByHash：根据交易哈希值查询交易详情"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:259 527588338f02465ea2698149553c8bc2
+msgid "tx_getTransactionByBlockHashAndIndex：根据区块哈希值查询交易详情"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:260 52ef00f01334455aaa354b3a09513103
+msgid "tx_getTransactionByBlockNumberAndIndex：根据区块号查询交易详情"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:261 6e661570ece24acabfa5c30569039d65
+msgid "tx_getTransactionsCount：查询链上所有交易量"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:262 4c3c2a2593a54b2289c448bb4774e05d
+msgid "tx_getTxAvgTimeByBlockNumber：查询指定区块中交易平均处理时间"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:263 875c90f87adc47c5b12df9fd7ce3ff1d
+msgid "tx_getTransactionReceipt：查询指定交易回执信息"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:264 daf0181ba634420383b66363cba61225
+msgid "tx_getBlockTransactionCountByHash：根据区块哈希查询区块交易数量"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:265 6df0dfce451e4d6da285726cbfaba207
+msgid "tx_getBlockTransactionCountByNumber：根据区块号查询区块交易数量"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:266 bae39449133f40fb8c4e1d1952b64bfc
+msgid "tx_getTransactionsVersion：查询平台当前的交易版本号"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:267 e5e374ad055e4c82b6797a35b0ab18db
+msgid "tx_getTransactionsWithLimit：查询指定区块区间的交易（可用于分页）"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:268 67dfc5cf5e0e405880d48333041a289c
+msgid "tx_getTransactionsByTimeWithLimit：查询指定时间区间内的交易（可用于分页）"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:269 92be17c2f53e4a4c9553c40bb3396bb8
+msgid "tx_getTransactionsByExtraID：查询extraId为指定值的交易"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:270 aadb571494d04d89ace55f97da14fdca
+msgid "tx_getTransactionsByFilter：查询符合过滤条件的交易"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:273 17c9962fd5614947a8b8abb91ea2429b
+msgid "接口详情"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:276 1bdec1d4870a486aa3c425bc112aef6d
+msgid "1. tx_sendTransaction(发送交易接口)"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:278 ../../source/Json-RPC.rst:303
+#: ../../source/Json-RPC.rst:350 ../../source/Json-RPC.rst:370
+#: ../../source/Json-RPC.rst:390 ../../source/Json-RPC.rst:406
+#: ../../source/Json-RPC.rst:426 ../../source/Json-RPC.rst:474
+#: ../../source/Json-RPC.rst:489 ../../source/Json-RPC.rst:506
+#: ../../source/Json-RPC.rst:552 ../../source/Json-RPC.rst:604
+#: ../../source/Json-RPC.rst:669 1315c6cc3f2b437abf0ebea00037837a
+#: 175badeb6a394022834a00aaccd3bf04 20c13878c70f4a579ebb4423e5e46f0b
+#: 3b9dff8fcac94b7684be497a87bed592 468fc641ea734c8eb2429113fb842e95
+#: 583fba52611a43dbbc11857be69d94bb 740af478cd2a474a867858aa3e5c8182
+#: 7562a83bd6434ad291703d6293381469 90db621977de4d49a5dc9704821bed9c
+#: a906758e54df4b66b9ecd97fd105a369 aa4e58462fc04cb8ba91432fc713a61e
+#: acf3a334cdf74dd9a51462c36423621b f766811f8d5f43e989304fe93d0fdcaa
+msgid "**参数：**"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:280 8fcd9589a2e641179aec85d580df1eff
+msgid "from：<string> 账户地址"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:281 64dc1112bfd649a08d7deea332df4cc9
+msgid "to：<string> 账户地址"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:282 cb4fe6ab9a484bc9b6e90a1dce0b8eb7
+msgid "value：<number>转账值"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:283 6adbd12b1a4d4b9db358b85aed589018
+msgid "signature：<string> 交易签名"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:284 e8f52fedd128428eac35f90e2a8c64df
+msgid "timestamp：<number> 交易发生的unix时间戳(单位ns)"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:285 913cf3db0e9a4d0ab8a7f30a6e0d93d9
+msgid "simulate：<bool> [可选] true表示交易不走共识，false表示走共识，默认为false"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:286 0d05373fa72e45cfa99f795aea837c2e
+msgid "nonce：<number> 16位的随机数，该值必须为十进制整数"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:287 519f6cfe422240d981ec98bc88e2460b
+msgid "type：<string> [可选] 指定合约执行引擎，默认为evm，如果合约代码由java语言编写，则需要设置该值为hvm"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:288 b5c39ee0f0fb42f9a907a296b83772b6
+msgid "extra：<string> [可选] 额外信息"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:289 fb21c5459c0d402e9b87cdd50162af97
+msgid "extraIdInt64：<int64> [可选] int64类型的extraId数组"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:290 f55d8f172fc44b3fa663b446d77dd0bb
+msgid "extraIdString：<string> [可选] string类型的extraId数组"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:292 ../../source/Json-RPC.rst:307
+#: ../../source/Json-RPC.rst:355 ../../source/Json-RPC.rst:375
+#: ../../source/Json-RPC.rst:394 ../../source/Json-RPC.rst:411
+#: ../../source/Json-RPC.rst:430 ../../source/Json-RPC.rst:478
+#: ../../source/Json-RPC.rst:493 ../../source/Json-RPC.rst:512
+#: ../../source/Json-RPC.rst:676 0514022f4e1e4ac6b7833464bfb491fb
+#: 2ecb52b750d344b98c64debd465d9af8 49d508c7a3694e4a870751161b6dd551
+#: 5cc7bf5310704bfb864268f382ba6b4d 658b9b8ea34a40f4a1284b73413daf5a
+#: 6aa3204a6cfe4b809017b4449360b18c 81f4112fb4394dfa9f9e7dc6732fd39c
+#: d729b9f8b8be444183249c53ab602b2a f119e5d1e3fc4a9ca16f340331199848
+#: f23ed049a744401da22bde970d127fc9 f7a9e36b7fe2440fb8d3d5788584e7e6
+msgid "**返回值：**"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:294 6e8e2341de9246ddb0fa5fa797149daa
+msgid "transactionHash：<string> 交易的哈希值，32字节的十六进制字符串"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:296 ff4d13c47108429bb1eba76fea361ff7
+msgid "发送交易的时候用户可以自定义extraId字段的值，该值作为这笔交易的可索引信息，数组表示一笔交易可以有多个索引信息"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:298 f1ef695143bb436d9e92bac72b84901e
+msgid ""
+"由于平台交易结构的extraId的值支持int64数组、string数组或者包含int64和string的数组，因此本接口针对这两种类型分别定义了"
+" **extraIdInt64** 和 **extraIdString** "
+"两个参数，分别用来接收不同数据类型的索引值。允许接收到的发送交易请求参数里不包含这两个字段、只包含extraIdInt64字段、只包含extraIdString字段或者同时包含这两个字段。如果同时包含这两个字段，则最终生成的交易结构的ExtraId值为这两个数组的拼接，"
+" **数组拼接顺序为int64数组后面拼接string数组**。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:301 a89806c2d6a44e36a8614c3692656433
+msgid "2. tx_getTransactionsByHash(根据哈希查询交易接口)"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:305 0ef887947d4f4fb9a4f364fb14ef7949
+msgid "transactionHash：<string> 交易的哈希值,32字节的十六进制字符串"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:309 ../../source/Json-RPC.rst:357
+#: ../../source/Json-RPC.rst:377 054ea77cf97e43a4b2d3c87338d769d2
+#: 6893d282ad724864b1b5739340af6f14 73259e0408f345bf85288a1880e5ff14
+msgid "<TransactionResult> 交易详情"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:311 5f8208d0effb4e779d10ecdb958dae4e
+msgid "TransactionResult对象结构如下::"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:335 4914459911dd4a338e6941b2b0dfc5fe
+msgid "不合法的交易invalid值为true， invalidMsg可能为："
+msgstr ""
+
+#: ../../source/Json-RPC.rst:337 eca26f130c774a1392f05d558482159c
+msgid "合约部署失败DEPLOY_CONTRACT_FAILED"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:338 13591ee235374beb97d7cf50d528a846
+msgid "合约方法调用失败INVOKE_CONTRACT_FAILED"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:339 7c13b878676c48c2b54769438f70ae61
+msgid "签名非法SIGFAILED"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:340 8a4fe36058ec4481a3daf5778af23429
+msgid "余额不足OUTOFBALANCE"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:341 b6525324aa2145f89d100cdf9a12f0a5
+msgid "合约操作权限不够INVALID_PERMISSION"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:344 88fc0ae0801c47ee894ee62770e552b7
+msgid "3. tx_getTransactionsByBlockHash(根据区块哈希查询交易接口)"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:346 ../../source/Json-RPC.rst:366
+#: ../../source/Json-RPC.rst:386 ../../source/Json-RPC.rst:402
+#: ../../source/Json-RPC.rst:422 ../../source/Json-RPC.rst:470
+#: ../../source/Json-RPC.rst:485 ../../source/Json-RPC.rst:502
+#: ../../source/Json-RPC.rst:548 ../../source/Json-RPC.rst:600
+#: ../../source/Json-RPC.rst:665 13359bf09fff4ce2bb1ddf7bea518a5b
+#: 26bcd40a4c764c47ba9001280db1fdad 2caa9730f0634de586b98e5493c83a57
+#: 2d6460dbd2dc4f32ac2fdb62b2fa8a92 30e5dc7278744742bf2b15ad5df0a91a
+#: 6cf7952b8ce94d4ab228d10ec067bf00 bb2c4d03aea941ef8dd0bbef596aa65e
+#: cd4344af9b334ccab1944e862f706853 d16c7469fca644b399686a97835993d7
+#: dce8a52ace494f1da21082370478f301 e580a067100b42a1a2b82ff5f318b41d
+msgid "**RPC方法：**"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:348 108cf0d2372045418fdf281284cf36b7
+msgid "tx_getTransactionByBlockHashAndIndex"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:352 b5354c4e99ea4a8a842d167fa9e8f4fb
+msgid "blockHash: <string> 区块的哈希值，32字节的十六进制字符串"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:353 ../../source/Json-RPC.rst:373
+#: 802eeca6f6254799a67281e70ae32168 e78dcf68a89f48f8884d63484b53e3c6
+msgid "index: <number> 区块中的位置"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:359 473a59f28dfb4a9d92dba8243514be0f
+msgid "index可以是十进制整数或者进制字符串。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:361 ../../source/Json-RPC.rst:381
+#: 5baf318bfb8f4d1390f1531dd896833f bf76996c46384ed796654bc1c08085fc
+msgid "**TransactionResult** 对象结构请参见getTransactionsByHash接口。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:364 47b24aa4167f4bc0b9a393040eaf70b3
+msgid "4. tx_getTransactionsByBlockNumber(根据区块号查询交易接口)"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:368 381ee54e10e1482ba176f1e2a9c1e882
+msgid "tx_getTransactionByBlockNumberAndIndex"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:372 655877ae62454e798d0c2e7c48c9aa0f
+msgid "blockNumber: <blockNumber> 区块的高度"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:379 0b94b432d8404db5a62db2b87ca36999
+msgid "blockNumber可以是十进制整数或者进制字符串，可以是“latest”字符串表示最新的区块；index可以是十进制整数或者进制将字符串。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:384 906a9408392a477a89e2cb959c899afc
+msgid "5. tx_getTransactionsCount(查询链上所有交易量接口)"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:388 c2c45cd694344cbd8708fe7ac3834d2a
+msgid "tx_getTransactionsCount"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:392 d3c27db103124b82bf2c7e5e92df3695
+msgid "无"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:396 ../../source/Json-RPC.rst:480
+#: ../../source/Json-RPC.rst:495 5817a4427185472c896abb28c167500d
+#: 9462b2759609475e8d53fdc10a78694c b6a644f854154ab1b3425002f40828b7
+msgid "count: <number> 交易数量"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:397 386b301c3dcd44238f80239252d503d6
+msgid "timestamp: <number> 响应时间戳(单位ns)"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:400 2a51aee75d5c4856866a0c3502b7291e
+msgid "6. tx_getTxAvgTime(根据指定的区块区间计算出每笔交易的平均处理时间接口)"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:404 54eaf7e6e13f4494905a0d1c80a98bdb
+msgid "tx_getTxAvgTimeByBlockNumber"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:408 ../../source/Json-RPC.rst:508
+#: 64fc6672b92e4a3c9b7d4da610c08f5e 7c2a914ddd494a6f8835ea86cdf215c0
+msgid "from: <blockNumber> 起始区块号"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:409 ../../source/Json-RPC.rst:509
+#: 07e3c53b1350425aac43d256a2b3bf11 d5589ce395434c2cbfc60de60903a534
+msgid "to: <blockNumber> 终止区块号"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:413 e4745fff221c4dd187bcb5aa13c60d06
+msgid "time: <number> 交易的平均处理时间（单位ms）"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:415 480e6d84fd464de8ad2eef7222e638b7
+msgid "blockNumber可以是十进制整数或者进制字符串，可以是“latest”字符串表示最新的区块。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:417 38c1c591798e43b2a475b95a380a51e3
+msgid "from必须小于等于to，否则会返回error。如果 from 和 to 的值一样，则表示计算的是当前指定区块交易的平均处理时间。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:420 1ce3f17e8f5e41509ae11eb9623711ee
+msgid "7. tx_getTransactionReceipt(根据交易hash返回交易回执信息接口)"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:424 d74f603b25e2469fb67d212b44cfca31
+msgid "tx_getTransactionReceipt"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:428 a69928e39d134864b75796d43b7be0cb
+msgid "transactionHash: <string> 交易hash"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:432 b8e9651d1c0c454eac6c9ecc1b9b3d81
+msgid "<Receipt> 交易回执"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:434 8a55ec84602a4d489ea7935d6f3e629f
+msgid "Receipt对象结构如下::"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:446 e3e8c76079ce408f87033de79a8da0f6
+msgid "Log对象结构如下::"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:459 7f2c35f2f6f84da09286f38b488eb594
+msgid "若调用这个方法得到错误码-32001，则表明这笔交易还没被确认，若返回了error，则可能是："
+msgstr ""
+
+#: ../../source/Json-RPC.rst:461 7dbf4e16eecd4183a5644cf715fd2cf2
+msgid "余额不足OUTOFBALANCE，对应code是-32002;"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:462 8e99668273964263b083978362b7bc9c
+msgid "签名非法SIGFAILED，对应code是-32003；"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:463 7382bd01a4a3405fa6446e7b10b5465c
+msgid "合约部署失败DEPLOY_CONTRACT_FAILED，对应code是-32004；"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:464 aac0ea0f6b2a4f6395ee992990ae12d2
+msgid "合约方法调用失败INVOKE_CONTRACT_FAILED，对应code是-32005；"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:465 d51b3ba5a9294094b5c750886b876137
+msgid "合约操作权限不够INVALID_PERMISSION，对应code是-32008;"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:468 1ff55cad7b544914b8a244bd6798c3bd
+msgid "8. tx_getBlockTransactionCountByHash(根据区块hash返回区块交易数量接口)"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:472 5396b5deb19149aeab911d3181b0c591
+msgid "tx_getBlockTransactionCountByHash"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:476 4b90898ff5b24f699bb6acbadef3b23f
+msgid "blockHash: <string> 区块hash"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:483 d9431e8fb10642c588b04bf82d5489d4
+msgid "9. tx_getBlockTransactionCountByNumber(根据区块number返回区块交易数量接口)"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:487 99862dd253fa46c9be6e387dc62d58e3
+msgid "tx_getBlockTransactionCountByNumber"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:491 e8da539d4e6c49fbbea8c0b01aad275f
+msgid "blockNumber: <string> 区块号"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:498 83a13367433a4b58b92847727dd7e1db
+msgid "10. tx_getTransactionsWithLimit[查询指定区块区间的交易(可分页)]"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:500 ../../source/Json-RPC.rst:546
+#: 9d4ce8776e9841268dae2914ee81f4df cdd66e5dc27440b2b4d4a26796faffc5
+msgid "**注意：该接口最多返回5000条交易，返回值最大为8Mb。**"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:504 c930c61bab5040a99f41c01a90d9daa1
+msgid "tx_getTransactionsWithLimit"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:510 ../../source/Json-RPC.rst:556
+#: 075827ea08744f1b87853ca0fce0163b 34957ad9344b4fe0b5022f5ccf3d8cf9
+msgid "metadata: <Metadata> [可选] 指定本次查询请求的元信息，定义见下文"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:514 63835213a7cb400ebb874fc23a6dd220
+msgid "hasmore: <bool> 表示是否有更多符合查询条件[from, to]的交易未被返回"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:515 aa082a77d5a6458aa9023829ecf57a77
+msgid "data: [<TransactionResult>] 交易详情数组"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:517 cc8843e302134af1b1d6ea66fd10c337
+msgid "blockNumber可以是十进制整数或者进制字符串，可以是“latest”字符串表示最新的区块。from必须小于等于to，否则会返回error。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:519 ../../source/Json-RPC.rst:560
+#: ../../source/Json-RPC.rst:615 06510bca45b44d06ac2ab652e186d763
+#: 4f59adb52ef744c296a3265fc830ee2e 6b7500d586b747a2b25bac62447916b3
+msgid "Metadata 对象结构如下::"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:527 ../../source/Json-RPC.rst:568
+#: ../../source/Json-RPC.rst:623 ../../source/Json-RPC.rst:689
+#: 551ca9dd01cc41d0873af0253cefb9fe 6e44689d0caa470ca20735ff15c2f5b4
+#: d20440d9c06c479ca1cf9f428c42a191 d5b3d74d501e41958e621de4098f6127
+msgid "Bookmark对象结构如下::"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:534 ../../source/Json-RPC.rst:584
+#: ../../source/Json-RPC.rst:638 ../../source/Json-RPC.rst:708
+#: 42b1a1909d644e87958dc5ecdefa1d1d 44e71eb92b1d4192bc9b57d057cce860
+#: a9afdb72f8094b09a1d3b6d5f4118063 cdb698b9f95e4cf6ac0b31f3a47926a3
+msgid "客户端可以利用该接口实现区块链的“分页查询”，根据返回结果里的hasmore来判断是否要继续查询剩下的数据。下面对该接口的参数做进一步说明："
+msgstr ""
+
+#: ../../source/Json-RPC.rst:536 ../../source/Json-RPC.rst:586
+#: 268e0ea236fa47b6a529f1ed15becf3d a89f99a0fb89434691cf45a66a22090a
+msgid ""
+"如果查询条件未指定metadata，则 metadata.backward 默认为 "
+"false、书签位置默认为最新区块最后一条交易，从书签位置开始往前遍历，limit默认为5000条、8Mb。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:537 ../../source/Json-RPC.rst:587
+#: ../../source/Json-RPC.rst:641 ../../source/Json-RPC.rst:711
+#: 2cf375c119f1411aa4631b6218fb9b5e 40b751002fbd4f2ab51ff5d037e813f0
+#: 5bc7d9f1281b4dcf8c5907b60847a303 ba9fb3bb8d444d1a8908f8c7324564ed
+msgid ""
+"如果查询条件里未指定metadata.bookmark，若 metadata.backward 为 "
+"false，则默认书签位置为最新区块的最后一条交易，若metadata.backward 为 true，则默认书签位置为第一个区块的第一条交易。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:538 ../../source/Json-RPC.rst:588
+#: ../../source/Json-RPC.rst:712 4470be2dc7034ee7b73569b46de73dbf
+#: ab77e7a304d54b758cab2f4cec135709 d92cdb78fc6246cf8da54a87dabd4023
+msgid ""
+"如果查询条件里指定的书签位置metadata.bookmark 位于区块区间 [1, latest] "
+"里，则我们需要根据metadata.backward 的值来调整遍历的区块区间。如果 metadata.backward "
+"为false，则区块区间调整为[1, metadata.bookmark.blkNum]；如果 metadata.backward "
+"为true，则区块区间调整为[metadata.bookmark.blkNum, latest]。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:539 ../../source/Json-RPC.rst:589
+#: ../../source/Json-RPC.rst:643 ../../source/Json-RPC.rst:713
+#: 6ee3f532d0d84e9ea9769e3b5720e1da 91658485153f441aaef7d5c36a2016af
+#: f01bfe6c87214276a866719a569f4a1e f526fdb8561349e8ad7168c72a5d39ff
+msgid ""
+"当backward 为 false 的时候，如果指定的书签位置在区块1之前，则接口返回error。当backward为 true "
+"的时候，如果指定的书签位置在最新区块之后，则接口返回error。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:541 ../../source/Json-RPC.rst:591
+#: 640f66e950924846aaba326f4d5a378d cc06c0be8f9940cabd451e0362a15890
+msgid "TransactionResult对象结构请参见getTransactionsByHash接口"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:544 f2493563b6de47b09b47a32125184bde
+msgid "11. tx_getTransactionsByTimeWithLimit[查询指定时间区间内的所有交易（可用于分页）]"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:550 0618a89a97b9411a93da7770ac1b6bc1
+msgid "tx_getTransactionsByTimeWithLimit"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:554 b1b647c6fcaa448fb3d43fb46b93da1c
+msgid "startTime: <number> 起始unix时间戳(单位ns)"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:555 a900134d5fa547eeb83728843add528a
+msgid "endTime: <number> 结束unix时间戳(单位ns)"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:557 3fb25c42434048c2b590d6cdcc82a701
+msgid ""
+"filter: <Filter> [可选] "
+"指定本次查询过滤条件，包括交易发送方地址、交易接收方地址和交易extraId,用于筛选符合时间条件的交易里又符合过滤条件的交易 hasmore: "
+"<bool> 表示是否有更多符合查询条件[from, to]的交易未被返回"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:558 2b203c28235d4107ac81b35c7aac6e4c
+msgid "data: <TransactionResult> 交易详情数组"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:575 ../../source/Json-RPC.rst:630
+#: ../../source/Json-RPC.rst:696 2ed40f0dc19e40bda8964a2187b4df0b
+#: 74197892bc8446e6b89592e8476780de f2c1591d627d45e4bbf0a297329c0fee
+msgid "Filter对象结构如下::"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:594 3f43ddd7171c4b54aaa2afa59e502107
+msgid "12. tx_getTransactionsByExtraID[查询指定extraId为指定值的所有交易（可分页）]"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:596 f3da785113504278826ff2a059281b03
+msgid ""
+"根据extraId "
+"的值和交易接收方地址（可选）来查询符合条件的交易。该接口最多返回5000条交易。为了提供更加丰富的查询，该接口支持针对extraId的精确查询和模糊查询，详情见下表的mode入参。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:598 7285b1df280048069c11d4a120c5a348
+msgid "说明：只有当接收请求的节点开启数据索引（或者说开启索引数据库）功能时，该接口才可用。该接口必须要指定 extraId 的值，交易接收方地址为可选项。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:602 9c34c391b1b1488799b6f87f5115e380
+msgid "tx_getTransactionsByExtraID"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:606 16b5d27881404fc49e6426f3d383bfcc
+msgid ""
+"detail: <bool> [可选] "
+"表示是否返回交易详情，默认为false;若为true，则返回的结果为交易详情[<TransactionResult>]，否则为交易摘要[<TransactionSummary>]"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:607 9ca5d8f47fed47e09bf24186b3cd7da4
+msgid ""
+"mode: <int> [可选] 表示本次查询请求的查询模式，目前有0、1、2三个值可选，默认为0，0 表示按序精确查询模式，即筛选出的的交易 "
+"extraId 数组的数值和顺序都与查询条件完全一致；1 表示非按序精确查询模式，即筛选出的交易 extraId "
+"数组包含查询条件里指定的全部数值，顺序无要求；2 表示非按序匹配查询模式，即筛选出的交易 extraId "
+"数组包含部分或全部查询条件指定的值，且顺序无要求"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:608 d1a23b35162c48e086ceb723f38027c8
+msgid ""
+"metadata: <Metadata> [可选] "
+"指定本次查询的起始位置、查询方向以及返回的条数，若未指定，则默认从最新区块开始向前查询，默认返回条数上限是5000条"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:609 5832e83e11b8402aa0cba5fbbb5417b3
+msgid "filter: <Filter> [必选] 指定本次查询过滤条件，包括交易extraId和交易接收方地址"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:611 98872689529e4e438c3ebd06288ecb2d
+msgid ""
+"**返回值：** - hasmore: <bool> 表示是否有更多符合查询条件的交易未被返回 - data: "
+"[<TransactionResult>] 交易详情数组或[<TransactionSummary>] 交易摘要数组"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:640 ../../source/Json-RPC.rst:710
+#: 210ada4a49ba41a789a43fd6bba90df2 be3454ba80c342eaa1d00a5e76c96bc9
+msgid ""
+"如果查询条件未指定metadata，则 metadata.backward 默认为 "
+"false、书签位置默认为最新区块最后一条交易，从书签位置开始往前遍历，limit默认为5000条。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:642 7939a9ac65c244a085fc42266ba45aff
+msgid ""
+"如果查询条件里指定的书签位置metadata.bookmark 位于区块区间 [1, latest] "
+"里，则我们需要根据metadata.backward 的值来调整遍历的区块区间。如果 metadata.backward "
+"为false，则区块区间调整为[1, metadata.bookmark.blkNum]，如果 metadata.backward "
+"为true；则区块区间调整为[metadata.bookmark.blkNum, latest]。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:645 ../../source/Json-RPC.rst:715
+#: 5a88fd92c54e41ec8c2b0cf6fc2f0c6f cd9346061e3c4c6cbb18f0ba50149b44
+msgid "TransactionSummary对象结构如下::"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:656 ../../source/Json-RPC.rst:726
+#: 0671c85a94eb4cf8981e7dd54c6c96da e20699ceca5c46bb87c604f0983fd7d3
+msgid "TransactionResult对象结构请参见getTransactionsByHash接口。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:659 c6cb256be56c4eb6805d061f96774263
+msgid "13. tx_getTransactionsByFilter[查询符合过滤条件的所有交易（可分页）]"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:661 b543e3959bff4cc28d27fb72850fbe1f
+msgid "根据过滤条件来得到符合查询条件的交易。为了提供更加丰富的查询，该接口支持多条件与查询和多条件或查询，详情见下表的mode入参。"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:663 8e20e7e2ab49422fb8adbd79cae4ed8c
+msgid "**注意：只有当接收请求的节点开启数据索引（或者说开启索引数据库）功能时，该接口才可用。**"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:667 44a9809863984b5b80c0019a7c44e3f3
+msgid "tx_getTransactionsByFilter"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:671 8d6652157eab4fd1813267126affc5de
+msgid ""
+"detail: <bool> [可选] 表示是否返回交易详情，默认为false；若为true，则返回的结果为交易详情[ "
+"<TransactionResult>]，否则为交易摘要[<TransactionSummary>]"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:672 05a1cd7964bb40eca3902fcc6ffd8f22
+msgid ""
+"mode: <int> [可选] 表示本次查询请求的查询模式，目前有 0、1 两个值可选，默认为0，0 "
+"表示多条件与查询模式，即交易对应字段的值与查询条件里所有指定的字段值都完全一致；1 "
+"表示多条件或询模式，即交易对应字段的值至少有一个等于查询条件里指定的字段值"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:673 c5951da48848423bb71e2e76ae646c3f
+msgid ""
+"metadata: <Metadata> [可选] "
+"指定本次查询的起始位置、查询方向以及返回的条数。若未指定，则默认从最新区块开始向前查询，默认返回条数上限是5000条"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:674 85db9c6f4c854d1299002fd85b41631f
+msgid "filter: <Filter> [必选] 指定本次查询过滤条件"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:678 e27a4d9703bd4d00a0295cda2926a86a
+msgid "hasmore: <bool> 表示是否有更多符合查询条件的交易未被返回"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:679 80c3542e84c04310b1214663526ca06e
+msgid "data: [<TransactionResult>] 交易详情数组或者[<TransactionSummary>] 交易摘要数组"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:681 1bf7e44c9b2f42f785648eaa2244b69c
+msgid "Metadata对象结构如下::"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:729 3f2fb8f54de349f182c15c6a037e7d2f
+msgid "区块服务"
+msgstr ""
+
+#: ../../source/Json-RPC.rst:732 84091bcfc8fe434d8beca56f25e575ae
+msgid "接口概览"
+msgstr ""
+

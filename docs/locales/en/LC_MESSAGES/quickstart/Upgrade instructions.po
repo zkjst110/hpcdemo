@@ -1,0 +1,737 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/quickstart/Upgrade 3e113ebc06cf4ca1bd04ff5a6a10ed39
+#: instructions.rst:4
+msgid "升级说明"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade c0a1a740fee94ddfa9d31d3d58a488b7
+#: instructions.rst:6
+msgid "本文是v1.8.x 或2.1.0以前到 v2.7.0的版本升级说明文档"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 974a5f4b131c4dd8b532609947e5af33
+#: instructions.rst:8
+msgid "低版本升级至高版本需注意应用侧也需要升级对应的sdk版本"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 4c24b2efd3684231bb297aed138eb88d
+#: instructions.rst:10
+msgid "参照《SDK&版本对应关系》文档"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade d7a9a0ff699b449b8fb64dbe39d2d719
+#: instructions.rst:13
+msgid "1. v1.8.x到v2.7.0的版本升级"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 37117e9a83c945e5a7b8e58fbaa18c2d
+#: instructions.rst:16
+msgid "1.1 节点等信息上链"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade ee652426f15541dcbacf1f5e5418eaed
+#: instructions.rst:18
+msgid "在hyperchain还在运行的状态下，提前准备好配置中的genesis账户配置信息、当前所有节点的节点名及其对应的证书文件。"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade cf254592e6a3422795fdb20032461921
+#: instructions.rst:20
+msgid "通过sdk发送交易将上述信息上链，以litesdk为例："
+msgstr ""
+
+#: ../../source/quickstart/Upgrade a356229bf6064c7d998ab14835b5f79a
+#: instructions.rst:66
+msgid "1.2 进行数据备份"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 823014016c514d33952412c8615f1375
+#: instructions.rst:68
+msgid "升级之前先停止当前hyperchain进程，将旧版本数据备份，若升级失败可以及时恢复，并将数据打包，供迁移使用："
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 1e67c32dbf154994b8bb582d8aba67b9
+#: instructions.rst:84
+msgid "1.3. 部署Flato"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 597bcd58165f4a3987ccb08f28b3d358
+#: instructions.rst:91
+msgid "之后请参考《平台部署手册》对所有节点的网络配置进行修改。"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 1aa6e302bfc64a419af4e3415b8ca56b
+#: instructions.rst:94
+msgid "1.4. 使用flato-dbcli进行数据升级"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 53f49b19aa184fb89a16363853483869
+#: instructions.rst:96
+msgid "dbcli是升级数据、保证数据格式在大版本之间兼容的命令行工具。dbcli和flato的版本对应关系如下表所示："
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 0e408509eb294f128c7685d524bea7ef
+#: 8a40ea1619154d6fa336eab79661a4b9 ad483a7c123e4dba9d952b3e4d957de2
+#: instructions.rst:99 instructions.rst:102 instructions.rst:103
+msgid "\\"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade a33900122ff34a5e8af990efdd509ec9
+#: instructions.rst:99
+msgid "dbcli"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 81e196d5d26e4189b4827fb737c9fb63
+#: instructions.rst:99
+msgid "flato"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 468f9f7b771c4707acdfd64b961075a9
+#: instructions.rst:101
+msgid "版本"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 08dec4d6b39d479a8e96e11c264db31f
+#: instructions.rst:101
+msgid "1.1.1"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 9bbd238f77bd4d79a9e4073b60eb8fc1
+#: instructions.rst:101
+msgid "1.0.6"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 7a48814eed614cdba80feccfbc4a99fb
+#: instructions.rst:102
+msgid "1.1.3"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 8808cc0f93b643ffb6fe16c987f2f643
+#: instructions.rst:102
+msgid "1.0.8（包含）-1.1.0（包含）"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 2b146bf9172345aca4f034f95ed689f2
+#: instructions.rst:103
+msgid "1.2.0"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 4c9c30d426794e76a499569060a3fb74
+#: instructions.rst:103
+msgid "1.2.0及以上"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 5eda90235ebf4970b783c1ccd6a2769c
+#: instructions.rst:106
+msgid "**请通过** `./flato-dbcli --version` **确认版本，请勿使用上表以外的版本进行升级。**"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 0ab1bb1895134fce87cf9454742aef54
+#: instructions.rst:108
+msgid "dbcli是升级数据、保证数据格式在大版本之间兼容的命令行工具。dbcli的输入参数列表以及相应的说明如下："
+msgstr ""
+
+#: ../../source/quickstart/Upgrade f0c608520e2b491ea5830b46a247c459
+#: instructions.rst:111
+msgid "参数名 (逗号前后两者等效)"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade ceb477b41a404922901b23d5c1bfb901
+#: instructions.rst:111
+msgid "介绍"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade da90a4f3995549dcb36aecb85fe59c26
+#: instructions.rst:111
+msgid "Required / Optional"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 9c533740db45458eb65ad90aa8793a45
+#: instructions.rst:114
+msgid "hpcConfig,hc"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade d7cea55ac49a4c2287a64f8d3f168947
+#: instructions.rst:114
+msgid "hyperchain的配置文件路径，如 namespace.toml"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 0494532c3792469b9a5cdc067ac58683
+#: 1f9bcf4243c24732a9743c448397956a 43f71b6058a647b8a518e188e41163fb
+#: 480924619b8643968fc8907546cb8412 instructions.rst:114 instructions.rst:117
+#: instructions.rst:121 instructions.rst:124
+msgid "Required"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade e68fa77da96947628607306fba958e3d
+#: instructions.rst:117
+msgid "fl atoArchivePath,fap"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 0714c3c4c46846e4a9af33373f94e141
+#: instructions.rst:117
+msgid "清洗线下数据完 成后归档/快照数据的目标路径，如 “archive”"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 03ccbd81fa254515833f0be5bea02d54
+#: instructions.rst:121
+msgid "flatoConfig,fcp"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade fb9c6f4a63d8437ea83c70b6afa448e7
+#: instructions.rst:121
+msgid "flato的配置文件目录，即flato安 装包中的整个configuration目录；"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 54efba49a9b8498cb1d0b8a3ba2cd0ff
+#: instructions.rst:124
+msgid "namespace,ns"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 2b1d4b6a29fa4583a7ed3cdcfabd41d8
+#: instructions.rst:124
+msgid "hyperchain的分区名，如”global”"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 558aa9440f6d4a02a314d191053c380f
+#: instructions.rst:126
+msgid "flatoDBPath,fp"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 6c55a894c491458b963b495f4a029b39
+#: instructions.rst:126
+msgid "升级后flato的数据目录"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 06c860f0cd444a09ab3f4c466355eb41
+#: 24a8ce1c05a34b76bc7e4fd3bea9fdcf 2bc78ff1f5e64e1b8fa7ca7bd4645d61
+#: 44fb8d4a1fc94d86a8a716d26fd35b3f 811e605044fb4e66b9375c70e3f41d38
+#: 83ac2a3bb39b4fe2922152b055b26e0e 9a8ef0d874214988bf2f3b0166a7b34a
+#: b17ce1d4f27848c7a5b2d8cd430991f8 b1c264bfb8f449439f7e61f7c13cf81b
+#: bb9d10b80a784e2cb3880c24711a3473 bbde361f1b8b4e80a6a57cc8e2a91320
+#: c19415f42c524ba582af183f067fdfeb instructions.rst:126 instructions.rst:128
+#: instructions.rst:131 instructions.rst:134 instructions.rst:141
+#: instructions.rst:145 instructions.rst:147 instructions.rst:149
+#: instructions.rst:151 instructions.rst:154 instructions.rst:157
+#: instructions.rst:160
+msgid "Optional"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade ecb7df33de884eb9bfe1062dd59342dd
+#: instructions.rst:128
+msgid "onlineBlockDB,ob"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade c8cfa1129e6f463ea8fcb470fbfc5953
+#: instructions.rst:128
+msgid "hyperchain线上区块数 据目录，如”data/filelog/block”"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 3d585de24e13452b81e66fd79a01a039
+#: instructions.rst:131
+msgid "onlineJournalDB,oj"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 2d97c2ab15104a1db65ee5ec5acfb5b4
+#: instructions.rst:131
+msgid "hyperchain线上journal数据 目录，如”data/filelog/journal”"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 6c8871a144b54fc7b5b756879ba4dcbd
+#: instructions.rst:134
+msgid "onli neBlockChainDB,obc"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade d2b7bff783ec4268a61f62160ff8342b
+#: instructions.rst:134
+msgid "hyperchain线上blockchain目 录，如”data/leveldb/blockchain”"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 1f3fac60bdda484fa793f2ea33d30605
+#: instructions.rst:137
+msgid "mqPath,mq"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 275c19cdbc544d5c8bfaad090dcb621c
+#: instructions.rst:137
+msgid "hyperchain 线上MQ目录，如”data/leveldb/MQ”"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 353d3beffa024e4cab33d623dac8b609
+#: instructions.rst:137
+msgid "Option al,仅当使用过 MQ功能时需要"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 54caef829071441d8b6b51e8b825ce28
+#: instructions.rst:141
+msgid "snapshotDBDir,sd"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade dd023fa7d4164629a3b12c83c7fe9b94
+#: instructions.rst:141
+msgid "hyperchain的快照db目录，如”d ata/leveldb/snapshots/“注意此处 需要的不是单个snapshotdb的目录"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 6944598570ae4ed19465e028942cb2e6
+#: instructions.rst:145
+msgid "snapshotMeta,sm"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 60084dcb790b41b38e876b3813b0869f
+#: instructions.rst:145
+msgid "记录快照的snapshot.meta"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 104899afc5bc4a3da019d230fe8021e8
+#: instructions.rst:147
+msgid "filterID,fid"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade f65f1e6e35a3497aaae733010e63570a
+#: instructions.rst:147
+msgid "快照的filter id"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 00262132da18461eb78ead290352d133
+#: instructions.rst:149
+msgid "archiveMeta,am"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade cbe76ea69fdb4583a795bde5e552f85a
+#: instructions.rst:149
+msgid "记录归档的archive.meta"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 1b704b74da9f4130a3cd3fe377d72ac8
+#: instructions.rst:151
+msgid "offlineBlockDB,ofb"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 032a6a654b954eddbc7fe3588e948acc
+#: instructions.rst:151
+msgid "hyperchain线下区块数 据目录，如”data/filelog/backup”"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade f235240d0c104f1db2e8ddc8a74d16d0
+#: instructions.rst:154
+msgid "of flineJournalDB,ofj"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade cf2839783c184dec90238a4ec92687f4
+#: instructions.rst:154
+msgid "hyperchain线下journal数据目录， 如”data/filelog/journal_backup”"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 1252a602918946a0a00b83a281c2af9e
+#: instructions.rst:157
+msgid "of flineArchiveDB,ofa"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 7693e6ea5e214310b9bbed6946e1d6e9
+#: instructions.rst:157
+msgid "hyperchain线下archiv e目录，如”data/leveldb/archive”"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 2ab5d3badf7442c589595300ecd1ff57
+#: instructions.rst:160
+msgid "log"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 97ced6fdeb67462e914455cb182576d3
+#: instructions.rst:160
+msgid "日志级别，可选 deb ug,info,notice,warning,error,cr itical,默认notice，大小写不敏感"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 2f671e293c1545ba8a3121f44a05291c
+#: instructions.rst:166
+msgid "dbcli同时支持已归档的线下数据的升级与未归档的线上数据的升级，并且会根据输入的参数自动选择升级的模式。"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade adce87b8c2434b02bdd653801996e261
+#: instructions.rst:168
+msgid "需要注意flato-dbcli工具不支持断点续传，如数据升级中途退出则需要从头开始。"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 979c9cd085f64a869c3c2ea6b1b819cf
+#: instructions.rst:170
+msgid ""
+"为避免此问题 需要在工具命令前加上 nohup 命令锁定进程，在命令的最后加上 &>/dev/null & 使进程后台运行。\\ "
+"**（非常重要！！！）**"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 5ab40b8bac06478986ef16b13404ad2f
+#: instructions.rst:173
+msgid "示例："
+msgstr ""
+
+#: ../../source/quickstart/Upgrade ef52653a4547452e80e9cee1038af5e6
+#: instructions.rst:190
+msgid "1.4.1 未归档的线上数据"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 3c67a5dfcd214515b1fc083ca10d1f77
+#: instructions.rst:192
+msgid "在这种场景下，除了需要提供上述\\ **Required**\\ 的参数之外，还\\ **至少**\\ 需要提供以下参数："
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 5de2d35be3264f03b054738156a4a441
+#: instructions.rst:194
+msgid "-fp: 升级后flato数据的目标目录，在完成升级之后需要将该目录拷贝至flato节点下；"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 30db1726082c455d9216d309acc39688
+#: instructions.rst:197
+msgid "-ob: hyperchain中的区块数据目录，在默认配置下，这个路径为data/filelog/block；"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade b5bfeb787a134d1d9e17e6d6cc47681c
+#: instructions.rst:200
+msgid "-oj: hyperchain中的journal数据目录，在默认配置下，这个路径为data/filelog/journal；"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade e3256896bcef4edeb36fc0a9758e7c8b
+#: instructions.rst:203
+msgid "-obc: hyperchain中的账本数据目录，在默认配置下，这个路径为data/leveldb/blockchain；"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 7969438fbafc4870948f6e07cf0ecac0
+#: 96595ed57c25480eae57467681985646 instructions.rst:206 instructions.rst:296
+msgid "具体的使用示例如下："
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 5de33ad315604218ac2bead10a6a077f
+#: instructions.rst:222
+msgid "**若使用过MQ功能，则需要指定mq数据库路径，请参考参数列表。**"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 8fcbf3f3652f4e5eaeee3c3d6e7c35fd
+#: instructions.rst:224
+msgid "在执行为上述指令后，flato目标目录(即上例子的-fp路径)会呈现如下结构："
+msgstr ""
+
+#: ../../source/quickstart/Upgrade d10b0a9332b3400fbc384d11e4f46bb7
+#: instructions.rst:251
+msgid "**值得注意的是，若曾进行过归档操作，则必须提供archive.meta文件，并且确保归档点小于最近的检查点之前，即若Hyperchain中的区块高度为58，那么不能在[51,58]进行归档，示例：**"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 3665e6e473744b11ae044cdcc58203c3
+#: instructions.rst:268
+msgid "若未做过归档，那么请忽略该参数。"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade b172a073dfcc4b42b56d3c48ac6801a0
+#: instructions.rst:271
+msgid "1.4.2 已归档的线下数据"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 883098c09c8b4914973b429ca9d2d88f
+#: instructions.rst:273
+msgid "若要升级已归档的线下数据，除了要提供参数表格中\\ **Required**\\ 的参数，还需要提供以下参数："
+msgstr ""
+
+#: ../../source/quickstart/Upgrade c1176252ad2a44d787cf493edc4872fb
+#: instructions.rst:275
+msgid ""
+"-ofb: "
+"需要升级的归档区块数据库，默认配置下，路径为/hyperchain-1.8.6/namespaces/global/data/filelog/backup；"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade e3bae9b6fd3746c0a962ff7d41bcdd13
+#: instructions.rst:278
+msgid ""
+"-ofj: "
+"需要升级的归档journal数据库，默认配置下，路径为/hyperchain-1.8.6/namespaces/global/data/filelog/journal_backup；"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 648354d0399c42c4a07861d8b8f39f93
+#: instructions.rst:281
+msgid ""
+"-ofa: "
+"需要升级的归档账本数据库，默认配置下，路径为/hyperchain-1.8.6/namespaces/global/data/leveldb/archive；"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 8ca33e09b2fa421e8d51bca05a7df872
+#: instructions.rst:284
+msgid ""
+"-am: "
+"归档记录archive.meta,默认配置下，路径为/hyperchain-1.8.6/namespaces/global/data/archive.meta；"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade c0f4a399e88f48469fca95aa739dedfe
+#: instructions.rst:287
+msgid ""
+"-sm: "
+"归档产生的snapshot.meta文件路径，默认配置下，路径为/hyperchain-1.8.6/namespaces/global/data/snapshot.meta；"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 67a0ed627475471dab3cd4e051791e8a
+#: instructions.rst:290
+msgid ""
+"-sd: "
+"快照数据库目录，默认配置下，路径为/hyperchain-1.8.6/namespaces/global/data/leveldb/snapshots；"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 637d0c2ad8e74178866a2a67bec36853
+#: instructions.rst:293
+msgid "-fid: 归档快照对应的filter id，在调用归档接口之后可以从返回结果中查询到该值。"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 687c8c3514e349389285786c8c0520c0
+#: instructions.rst:315
+msgid "升级成功后的数据目录如下："
+msgstr ""
+
+#: ../../source/quickstart/Upgrade ce06297415bd4a4cbeec11bf5c7be095
+#: instructions.rst:332
+msgid "通过我们的archive-reader组件可以进行归档数据的查询。"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade ab4e88ae972f4bf89f707a1564ca30e3
+#: instructions.rst:335
+msgid "1.5. 启动Flato并验证状态"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 9c7b4ff8e45d47149da3e497bd271d65
+#: instructions.rst:337
+msgid "在升级完线上数据、完成数据的替换之后，就可以启动Flato进程了："
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 4642cbdf306b4dcb90d726fca78ff7f6
+#: instructions.rst:350
+msgid "若节点启动成功，则说明本次版本升级成功。"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade cf6f9574b9c5448b9327d5722c4e5ef5
+#: instructions.rst:352
+msgid "在进行下一步操作之前，请启动所有的区块链节点，并确保所有节点都输出如下日志，代表节点共识恢复成功："
+msgstr ""
+
+#: ../../source/quickstart/Upgrade ecba08fb9a82459a9439ce121b598c5d
+#: instructions.rst:363
+msgid "1.6. 失败恢复"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 27ba850a9b884f77939018c840328f60
+#: instructions.rst:365
+msgid "若数据升级过程发生失败，或flato节点启动失败，可通过备份的数据恢复hyperchain节点："
+msgstr ""
+
+#: ../../source/quickstart/Upgrade b38cf6edd95b41ceae7b3d8a06bdc275
+#: instructions.rst:387
+msgid "2. 从v2.0.0~v2.3.0版本升级到v2.7.0+"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade b104594a6d6948a48df7e6d760e084be
+#: instructions.rst:390
+msgid "2.1 节点初始化"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 8dff1d9aa4ff408b963625bcb3aeaad4
+#: instructions.rst:392
+msgid "在升级前，需要确保已经进行过节点初始化，若没有进行，需要先进行节点初始化。"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade ab98af344e554ddc8dc14e384497a8b1
+#: instructions.rst:394
+msgid "检查是否进行过节点初始化：(自行替换ip及端口)"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade aacd8dbfdc174138a93bf13b2c923959
+#: instructions.rst:400
+msgid "若返回的结果如下，则表示进行过初始化。"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 16fd613f06c84080bb7e359f4630603d
+#: instructions.rst:418
+msgid "若返回的结果如下，则表示没有进行过初始化，需要进行节点初始化。"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 751a820eabbc49f08d0882c8de49d692
+#: instructions.rst:430
+msgid "通过Litesdk进行节点初始化的示例如下："
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 00d841bc6726472f85411249950eeae2
+#: instructions.rst:502
+msgid "2.2 配置文件（2.1.0之后的版本需要新增\\ ``[gensis]``\\ 模块）"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 7dcc02d1d2bb4f9e872bb81d21616028
+#: instructions.rst:504
+msgid "新增配置文件ns_genesis.toml"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade d5dc66f2f42a4e2588e3fedaa201c95a
+#: instructions.rst:605
+msgid "由于在v2.7.0版本开始支持checkpoint上链，对于历史版本，需要指定额外配置来生成初始信任的检查点"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 2bb0846b4c6447a993ce338702c26def
+#: instructions.rst:608
+msgid "2.3 停止旧版本集群"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 74c9b0719d4944f380935a245448c972
+#: instructions.rst:610
+msgid "保证旧版本集群中的所有节点在\\ **同一高度**\\ 下停止"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 97379969e4634e389665bd8ee42b41fd
+#: instructions.rst:612
+msgid "例：在集群中所有节点高度都为19时停止节点"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade f3382396b3324541ba86e69ab3eb8cb5
+#: instructions.rst:675
+msgid "2.4 版本升级"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 246d6eaa1e77457597b9ac2341b77e4e
+#: instructions.rst:678
+msgid "2.4.1 二进制文件替换"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade b15b006fb3234921a72dd1cc4f57c435
+#: instructions.rst:680
+msgid "在hyperchain安装目录执行stop.sh脚本"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade a53a997ced284d26ac9cf19bcac99965
+#: instructions.rst:686
+msgid "将安装目录中老版本的hyperchain文件替换为要升级到的版本的hyperchain文件"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade c5e352b3636b4b25be22dc74c28477ab
+#: instructions.rst:689
+msgid "2.4.2 自动生成upgrade.toml"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 17af8fd55f274ed18b90f4fb4cbb342f
+#: instructions.rst:691
+msgid "在节点安装目录下，使用命令自动生成\\ ``upgrade.toml``"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade bbf1e73d7b4b4abb9ff37efff848483a
+#: instructions.rst:697
+msgid "查看\\ ``configuration/<分区名>/upgrade.toml``\\ 文件，确保配置文件已自动生成"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade fd26b207ac4f44328a9fb03c68961f7b
+#: instructions.rst:707
+msgid ""
+"在集群所有节点上查看\\ ``upgrade.toml``\\ 文件，确保\\ *genesis_checkpoint*\\ 配置项\\ "
+"**每个节点一致**"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade ffef8979e861456c8800b808ca96708f
+#: instructions.rst:710
+msgid "2.4.3 启动节点"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 7580e496aff945a79472981ac078caed
+#: instructions.rst:712
+msgid "使用新版本二进制启动节点。"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 1adb89b403e44c7a94fa52ebadc8ed54
+#: 3046b57e89c44ce4a5b7f0a6a3475728 instructions.rst:714 instructions.rst:834
+msgid "使用\\ ``start.sh``\\ 启动hyperchain进程:"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 79298f1b38c34b59a816eab1f1b182df
+#: instructions.rst:725
+msgid "2.4.4 ca模式管理"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade cb923a0b7c114481a1721fc43bdc24a1
+#: instructions.rst:727
+msgid ""
+"链完成升级后，需要通过提案设置ca模式，如果为中心ca，设置完ca模式后还需要通过新增root ca的方式将所有使用的root "
+"ca上链。具体设置ca模式以及通过新增root ca的方式将使用的root ca上链的流程详见《ca模式管理》"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 5f9a4a50e9f44134a736ed63319211ad
+#: instructions.rst:732
+msgid "2.5 版本升级后加入新节点"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade c5a6d279436f42f28447dfc2922dcc96
+#: instructions.rst:734
+msgid "历史版本区块链集群在通过此方式升级至v2.7.0版本后，加入新节点时需要进行的额外操作"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 6e6eeaf86f484b92a409711b326f486f
+#: instructions.rst:736
+msgid "（若集群是从v2.7.0才启动的，\\ **不带有历史版本的数据**\\ ，则新加入的节点无需以下操作）"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 49c8dcae066b4ae6b5b190be71a21f3c
+#: instructions.rst:739
+msgid "2.5.1 从集群现有节点获取upgrade.toml"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade b4e6c204d5574da892ce1627f775f3a9
+#: instructions.rst:741
+msgid ""
+"拷贝集群现有节点安装目录下的\\ ``configuration/<分区名>/upgrade.toml``\\ 到新节点安装目录下的分区目录\\ "
+"``configuration/<分区名>/``"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 6fb3a3d8be944d37a780da3cceb7a66c
+#: instructions.rst:744
+msgid "2.5.2 配置ns_static.toml"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 7eb07b88b6264e6897f77a655a31c976
+#: instructions.rst:746
+msgid "查询集群现有节点的区块与世代信息"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade b5821d6729a740018ac6c852d71fdb8b
+#: instructions.rst:753
+msgid ""
+"**例：**\\ 当前查询到区块高度\\ ``blockHeight``\\ 为\\ *13*\\ ，区块哈希\\ ``blockHash``\\"
+" 为\\ *000000000000000dafd619e625e629e4f79d2acf4782220aa030bf411e8aef21*\\"
+" ，世代\\ ``epoch``\\ 为\\ *2*"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 3a2467d28119488b9882d031faa36ce8
+#: instructions.rst:809
+msgid "修改\\ ``configuration/<分区名>/ns_static.toml``"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade c2a9c1f913d543b8bf50d5ac592999a0
+#: instructions.rst:811
+msgid "修改[**sync.target**]配置项："
+msgstr ""
+
+#: ../../source/quickstart/Upgrade d2ac046330274c389efecd42ece5bca0
+#: instructions.rst:830
+msgid "2.5.3 启动节点"
+msgstr ""
+
+#: ../../source/quickstart/Upgrade 3c2343aae0ff49678567e1eebf021b70
+#: instructions.rst:832
+msgid "使用新版本二进制启动节点"
+msgstr ""
+

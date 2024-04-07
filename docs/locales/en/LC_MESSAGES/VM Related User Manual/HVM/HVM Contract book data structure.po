@@ -1,0 +1,2110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: bccee099fcac4dcba3fdb7aecb203af6 book data structure.rst:3
+msgid "为方便合约中和账本的交互，以及提供多样化的合约功能，能让合约编写者像使用本地Java集合一样来操作区块链账本，目前hvm中提供了HyperTable，HyperMap、HyperList和NestedMap四种类型，当合约中需要保存持续增长的数据的时候，都应考虑使用提供的账本数据结构。"
+msgstr ""
+
+#: ../../source/VM 8d27bae14b844773bfa4142d96052865 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:6
+msgid "1. HyperList介绍"
+msgstr ""
+
+#: ../../source/VM 400c551c52744b5a9ddf7d4a9b34919d Contract Manual/HVM/HVM
+#: Related User book data structure.rst:8
+msgid "HyperList是HVM内部定义的一种与ArrayList类似的类型，它是一个有序的Java合约账本数据集合，实现了Java的List接口，数据以懒加载的形式，减少了内存的使用，提高了更新账本的插入效率。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a4eebbe7b8fc4409acd0cbad61b4354a book data structure.rst:10
+msgid "**注意：**"
+msgstr ""
+
+#: ../../source/VM 7c8a78c172d14ceb8a478faa99267b9a Contract Manual/HVM/HVM
+#: Related User book data structure.rst:12
+msgid "HyperList应定义在HVM合约的具体实现类中，且应为合约的成员变量，同时需加上@StoreField注解；"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: e750df17b6ce42bd8babb8bab8c83b30 structure.rst:14
+msgid "考虑到HyperList的持久化存储策略，不建议向HyperList插入大量数据；"
+msgstr ""
+
+#: ../../source/VM 01bf902f7d4c492ea7069e49af97798d Contract Manual/HVM/HVM
+#: Related User book data dd39809ba91b4444aa2f231d3fb9f986 structure.rst:16
+#: structure.rst:604
+msgid "Value类型\\ **不推荐**\\ 使用一些含有map或list这种会不断增长的保存数据的结构体；"
+msgstr ""
+
+#: ../../source/VM 941838c20fb943c1af68da7ec11ae379 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:18
+msgid "不建议根据对象去查询其在HyperList中的索引位置（如indexOf接口），同时应减少使用迭代器接口；"
+msgstr ""
+
+#: ../../source/VM 5c4cd645f2ac47a9b8fa6cc4ce264a93 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:20
+msgid "Value类型不能包括泛型。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: e2cdd709d9604129847311b327a5d63e structure.rst:23
+msgid "**HyperList使用示例**"
+msgstr ""
+
+#: ../../source/VM 2fc59ccf31d243bca979744aef0bad05 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:43
+msgid "**HyperList使用demo**"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: bd0f1aa09af24f3a9d48ce450099dbf8 book data structure.rst:45
+msgid "**【源码包可参考HVM使用手册 - HVM合约Demo附件源码 - hvm-manual-demo的hyperlist目录】**"
+msgstr ""
+
+#: ../../source/VM 988ac4bda375435eaf73d85197c2b424 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:47
+msgid "## HyperList接口"
+msgstr ""
+
+#: ../../source/VM 15baca1e9b86414293b3ba77e4d9917c Contract Manual/HVM/HVM
+#: Related User book data structure.rst:49
+msgid "### add"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: f724be1a48004868bc538ab87d6e8a5b structure.rst:51
+msgid "向HyperList的末尾位置添加元素::"
+msgstr ""
+
+#: ../../source/VM 0e78bd5184434d2daec6f6b65fa8855f
+#: 10fdcc20ca08407f973e70b86c73a59f 129ee1e8f6c242d0a6d7d045e33e15c7
+#: 149d2a4f91f14febb11912439a8b0778 166ad8a8f7b7444aac13fc9445e25f3c
+#: 19db0e615054404dac68d5c7aa7da02a 20cae9d461db4f2587cab5cb845fccbb
+#: 26f3f7cfd64e4e62bf3c992895cfa49b 281d34a0ddf64931b3ea4001dc6fec84
+#: 2ab6e33bff0b45fb8d2d864060f1c642 2b82d97a31c84e1d9496d336512d029b
+#: 2dc564004eb44e918d923b7701f26c85 3497db2c2809429698745115c11f93b5
+#: 3b604ce837284101a6c339c6f94cf378 3cb0385ce9e1448387d90da71c0097f5
+#: 3ecc1a4b0e924e97a02b5f2c0ba1dcaa 40b01595361646cea036ceafa60d6483
+#: 43fc822f27574d1ab1abbb65086e16c9 46720436425f42ffa6d7bbc16b897ca1
+#: 47275fa8d95f491ea476dad13596129a 49a81fef48ae4be3b839d48792930a34
+#: 4a6eaf5467fa4f92b27a795f9f84f962 4de464b5461d4c958083bd4b483e621a
+#: 50de0f6fa13d4e36b96b1e55f9c4dc53 5114eeee099d4fdea8b3a3d028ccd799
+#: 5a1ccc033128453eb2666b91c36c220c 5c39cc56462a4d9cad0ee181700e3b59
+#: 60f2c85e6c384ae6b4e71db29fe85e7f 68d4911991d04b75b98e7bd2222ae4d8
+#: 6f79a9e3fd534adc858676cd46d2189e 6fcf13ecb44240bea7679e5b5e824833
+#: 71b4b3ff3629435192da44fb9efb1fec 732af14aa7b34dc49abe7aff77f1e2be
+#: 7576333453714b7689283f1aa20b5d04 77194fb14a4d4afd90e2ac9bdf306f6b
+#: 79490f9c563240848f9c70008692886b 799e954edfd248f5b127d0047db266c1
+#: 79bcc7da25774d918efc17447a4d47bd 7bfb13b4d2b14a5bb6dad610fdd80078
+#: 7e3db92ed5cd4f16b2b00e0cec94aa02 7f74c0e30d2d4fa5a7348da626f45e26
+#: 7ff21f48aab44e0b9c65a271b8df9ea9 8ac7e1fef75a4a57833843850974a59a
+#: 8d5e4a39888f47eab8186f5013016adc 94b6e723490d4d8cba756a3b8e02c8a0
+#: 9555a07bb60d4aaf9b01aa0c7d2155ae 9896560aab614f94818fc1021f7003f7
+#: 9bfb264a026d4efea1acdcc9bfd159ec Contract Manual/HVM/HVM Related User
+#: a20ecf02f973483aaf251902933ebfdb a7ab15b86c65489b9fd41cb87e9736fd
+#: a8c98ce592144820a03097a65c3b4634 ab8aba24bf914270a06bd2df4b19c2c3
+#: adaea1b8225b47478179acd48bf51305 b1d0077fc10445b9a8d68ba304fbdb70
+#: b22a9871423348d19791c645ddbc38c7 b3e1f4e5892b4d3fbd276e8bde1190af
+#: ba38bed9d92140b8bfc6969fc360cc51 ba88f6dff55e4d25b97ae32ec9a8a4b0 book
+#: c2cd4a84125e44c3a3f0a61c13566f5c c55f5740c43943859768145d667f1071
+#: cca2d88cd9094d22ba50c8b77d328c8c cf049c809ec04dfda250d33a608a9411
+#: d062d5ffe979417b8719fe5296c4cf05 d1127d64c9e44bf2b5f58edf1f1a6f79
+#: d5e68e9c42c249e8b5ebb68d8c53bc25 d8955f2884714dd9b1f3f616f060f990 data
+#: dd18458a1f514b25b6c4dd54c4659d99 e021331b4e254c59a4e2930ca4047eb2
+#: e1b5c5f6ca4b48959731b5ae5136b517 e1f6f0c2d2724100a7e4d56128b9700f
+#: e2199eff7d95478bbdc2cf4754a5a6f0 e2738867fe0d4c7cbe5326dd0187369e
+#: e2ca230a0f45450fbc923b5ddc31fdcb e9c2f1a8ed204ad6bbabf06570538ce9
+#: eae8d586fc1c42f5aec24cedfde2f19e ebf7787993f243f390d4b72bac1c2dc2
+#: f4abde1b71c74254910b0faadf6287f7 fbe7a14cb4694f71816715eb23e8f241
+#: fc449a4ba6994b3f9188c1cce65af321 structure.rst:56 structure.rst:74
+#: structure.rst:95 structure.rst:116 structure.rst:139 structure.rst:160
+#: structure.rst:185 structure.rst:208 structure.rst:229 structure.rst:250
+#: structure.rst:271 structure.rst:295 structure.rst:313 structure.rst:340
+#: structure.rst:361 structure.rst:382 structure.rst:400 structure.rst:421
+#: structure.rst:445 structure.rst:470 structure.rst:491 structure.rst:512
+#: structure.rst:534 structure.rst:552 structure.rst:696 structure.rst:721
+#: structure.rst:745 structure.rst:768 structure.rst:791 structure.rst:812
+#: structure.rst:833 structure.rst:856 structure.rst:877 structure.rst:903
+#: structure.rst:924 structure.rst:954 structure.rst:984 structure.rst:1020
+#: structure.rst:1050 structure.rst:1080 structure.rst:1166 structure.rst:1216
+#: structure.rst:1238 structure.rst:1262 structure.rst:1287 structure.rst:1312
+#: structure.rst:1334 structure.rst:1365 structure.rst:1389 structure.rst:1414
+#: structure.rst:1438 structure.rst:1462 structure.rst:1484 structure.rst:1505
+#: structure.rst:1528 structure.rst:1559 structure.rst:1583 structure.rst:1608
+#: structure.rst:1632 structure.rst:1658 structure.rst:1679 structure.rst:1703
+#: structure.rst:1727 structure.rst:1775 structure.rst:1812 structure.rst:1852
+#: structure.rst:2149 structure.rst:2175 structure.rst:2199 structure.rst:2224
+#: structure.rst:2247 structure.rst:2270 structure.rst:2293 structure.rst:2319
+#: structure.rst:2351 structure.rst:2383 structure.rst:2419 structure.rst:2451
+#: structure.rst:2484
+msgid "方法"
+msgstr ""
+
+#: ../../source/VM 041fb0516ba14943a54125a3f18ebf66
+#: 0511bf6156ce468bb2d82e81dfc0ebe3 059e100e2b8e4734811d12ca1a476342
+#: 06d4e042d30e45c1a20544f11828a5d0 0a31fd491bb74da08757833be81143e5
+#: 0ada0b13a3da4ba8a8942c1d823467cf 0e9df084b51649749423878f884c31aa
+#: 1661e679d208427685610e00a5c69be9 19a14fdde01b432bbe5c1e22fa850913
+#: 1fde70307e174b3c882aeca80e72cb66 262f72ec622841959ec87b3c66232526
+#: 2b9401b862024bf1be239b156f642f1a 2e9e7e8c6ea84dc8b2697855dc1dfed9
+#: 2f8a705d986d4372af5cb4f31c6bc3f9 329fdbfaee4d4891a1e2fa33df42c33a
+#: 3af7c5ea8ffa4b7cbb42bc0c6f96eb19 3cefa81ef996482ea8a8a14e9e165904
+#: 46fd6e2b64a841f9b792a1f5e1bf3455 4742fdf5be36436b9a1a08ef8b030358
+#: 4872a2a96afd4e8e8c92b5839df20898 4b04363e52d54154b87d157cc25db50a
+#: 4c46b68313e74fec8b56a59e07bcd988 4d20d46e2140477496a492be1103d6d9
+#: 4ed7ae9e876544d2bab3e138cd562343 5452e9308453424a8db96223c2d3448b
+#: 546b16a7a6594df9a94053eb67d79763 58a97f066c0f404a816e91e444d925d6
+#: 6303793c064049298c93983ab8b296cb 7306a616abe745a3a4b84d020175d8e9
+#: 746ab7d7bd224ecb89c9439b1a7c0a52 74e1276157fc4a878c2fa22f9f2dd138
+#: 76112bcfce2445a09c05416debfaa953 7f713b79355d43b1a541464b37e0755b
+#: 8452cb4e0be9410fb2253e322ebc0e9e 852f01cb2ade476a9c5c98bdeb9d946c
+#: 854d22b341b844b48bc3ce31edcb9f18 8806971f67c64c87a966e079b763724b
+#: 88f78c144d50474680633aee944e34c2 90f02d3aad894365ad32f9a3313be24e
+#: 914bd3caafbf4b8285bcd39214770850 9b8dff803a8f489fb06fe02507f0273e Contract
+#: Manual/HVM/HVM Related User a0a433b9a3cc408687ab86ea1630ddf8
+#: a5f2da24cf9b4b2185e232b52eafd391 a7b0622c7bf94fb1994a50a32d36546d
+#: a8051c5f3a8745ef9798b49f325a58de aaa14085e1fd41efb5252115b94d6693
+#: b1b4cb86046e4c738be012ab8045f2e0 b22e50845d7b4f6ca4ebe021decae473
+#: b25750dc318c49959fbec63096d72643 b4a6419fc89a4bcab7c1a9245fcad097
+#: b591286bf027429f8c2da9907ce55db2 b60bb378cf804fbcba909bc91eac88df
+#: b9bbf5e502ce4e45ac668a5d1d6e3f20 b9c19387a09b42d29574544fd41366c5
+#: bd215622496c4239beeb20705ed75039 bf81b306732e4081be7dd731c5bb19c9 book
+#: c033cf1443ee457e8d7892b4eedca3cd c139ec890d064aa7800b2deacb7f92c7
+#: c3056949589b4b6ea9f4c0181243a63a c346f3d86141449aa5a27b3838f6b2e4
+#: c41ec1c5fc8e476b8fb3be641fdcc840 c56d5601adf24adaa35cdab40eb28600
+#: cc348f698258483a8cd1135bec298743 cd485de1e8ee48ee9e496a8eed0221eb
+#: cd6e2a8dc74b4f6eac2a15e6eb2a39f0 ce64cd55542e4f73ab73b15f65943147
+#: d477afb55a0848c4beb661d56ae9d1e9 d4a8bb4313424c5f8e725721652be092 data
+#: dd09a61f479c4bab8af3d3238b827f50 dddebacfc8a44bb49857025f19305808
+#: dde6071462c0463c92171438dffc3953 e0339d09c7f244a19eea4837f2634218
+#: e32d2d18a27a49eb9daa99e5951d88e8 e690099f7d2a40bbb0bed159bbef98c3
+#: e9ab3ca379ac46158204422dd1e455bd f20e864a087747668382d7417ea8da18
+#: f6c707b36c1a4d9e9902b89183db169f f913e032101c4a00b8ec5e4d97846ce0
+#: fd10e1b8686b48bd9d991b0cd3ad7276 fd826ab19d0c47e3a9c8619ca61a8f17
+#: structure.rst:56 structure.rst:74 structure.rst:95 structure.rst:116
+#: structure.rst:139 structure.rst:160 structure.rst:185 structure.rst:208
+#: structure.rst:229 structure.rst:250 structure.rst:271 structure.rst:295
+#: structure.rst:313 structure.rst:340 structure.rst:361 structure.rst:382
+#: structure.rst:400 structure.rst:421 structure.rst:445 structure.rst:470
+#: structure.rst:491 structure.rst:512 structure.rst:534 structure.rst:552
+#: structure.rst:696 structure.rst:721 structure.rst:745 structure.rst:768
+#: structure.rst:791 structure.rst:812 structure.rst:833 structure.rst:856
+#: structure.rst:877 structure.rst:903 structure.rst:924 structure.rst:954
+#: structure.rst:984 structure.rst:1020 structure.rst:1050 structure.rst:1080
+#: structure.rst:1166 structure.rst:1190 structure.rst:1216 structure.rst:1238
+#: structure.rst:1262 structure.rst:1287 structure.rst:1312 structure.rst:1334
+#: structure.rst:1365 structure.rst:1389 structure.rst:1414 structure.rst:1438
+#: structure.rst:1462 structure.rst:1484 structure.rst:1505 structure.rst:1528
+#: structure.rst:1559 structure.rst:1583 structure.rst:1608 structure.rst:1632
+#: structure.rst:1658 structure.rst:1679 structure.rst:1703 structure.rst:1727
+#: structure.rst:1775 structure.rst:1812 structure.rst:1852 structure.rst:2149
+#: structure.rst:2175 structure.rst:2199 structure.rst:2224 structure.rst:2247
+#: structure.rst:2270 structure.rst:2293 structure.rst:2319 structure.rst:2351
+#: structure.rst:2383 structure.rst:2419 structure.rst:2451 structure.rst:2484
+msgid "参数"
+msgstr ""
+
+#: ../../source/VM 028ac86109e144ab84ebeaa817121227
+#: 03e4c884ec254c098f796b52278fca6e 0616736b63e2451dbe96881626dd40e8
+#: 0698734520224fafb5e1b7b2ba7cf256 06cbf1939e8740d9bbdef853c553318a
+#: 080cc8cfeeda448db27617bcb753fca3 099dbdc51581445fa7c0b7685c2cc2e2
+#: 0a12ed8ab94f4aa3b68f3c9f78c97ceb 0b01053315fc4951a8f9b48e84d5e3ef
+#: 0c17940bf46c427bbe4cb6bbaad01ccc 0e9cc59839184ca2be01b76810cb76fd
+#: 10285efa55ee4a04b8ac6aa588907105 121d8d094afe4d21b4cb75566e80f815
+#: 15704e6584fb4760b0822abf05f091bd 1c4402c6211a474eabef62b57c3c2dd3
+#: 1d2b5dc3c13f42c793d7dcc010f497a1 1f4ca91009734a7f841e5fb3f76b1c5e
+#: 2aefefeade7942228704a0f71d0b7eaa 30cd7b66078a43868e903f9922d31c0c
+#: 344960db4a5d41bf9da3f3976c11604b 3681fec8ca8044ea831d1080acd3de76
+#: 36d92ae25c074e4b8065a8879521fef8 4235773fc5874a13ad531ea28d6dcf77
+#: 4371c34d846942d8ac9aa25708aa4966 45e655f6173348ec828613b25346ce15
+#: 45ef5510309246618ab7f4e9037c8b4f 4987641f54c643b195bcfcb810bac5ee
+#: 51d705aa93904845b662c171c937626a 520b67513b1f47a3b20b05ec96f55df4
+#: 522708f1c1a34f798bccde113a70da90 55a21633d34c4279b9f14ca2ad9f8b66
+#: 5b90b7a450a14e85b90956c1df02c76b 5c51ea69d4664604b28245217a292ca3
+#: 5dc7a37739e640319e081320653a8044 5faa78fb2d424e41b39afd4bb0f62ff7
+#: 66aafc74c3b6481f963dbd51d6dc7c3f 6751136e73b9433bbcaa1179e6689f88
+#: 6aaca81ec6994ea7866006e167b12329 6dbe772eba0e48eaa9d9a649a6b90739
+#: 6f99c6c47a9e4ba79c7b86a973b12049 773582e1f79b4e9d81b3be2887a1ffba
+#: 7826d5b9bbd149a2af241709134f094f 7a0aa41a9f414684aeca24a6dbda041e
+#: 7c75cef4c330445fbfcfff4fbbc05956 7e4cf9956ee9448c87517a4157a32ae1
+#: 83fab5187268415c9cfd2b753fed5831 872b6db3631646dc8cf1cf0de023618f
+#: 8b5eb919ca0b49f285dd0d5482872c70 8fa257f76abf4ffca3d80e9932ffe0b7
+#: 9410764e3b7e409da26d1cc4ebe5f4be 960979ebd6e743358e4443db098766a4
+#: 9bac1cecf1104061bef821dc59a51807 Contract Manual/HVM/HVM Related User
+#: a493f1c14902466cb63779f5c12893d1 a7ce7004df384ca4a6c2cf91f285d2f6
+#: a900a69b2ac446c2bd95d8c06e42e751 aaf18127ee404f54b4bffaf9a6b02027
+#: ab7219abb40740459b9e5aab63683e01 acb538c92870431a9df21c48652f7368
+#: b77dca113fed4df1bf0c5424289e7637 b9b09da746ac46daae5c71a944409c57
+#: bad62eb58bf34ffca1ce6f0f24f50707 be6e4a618f7f44e28404bd8010950a6b
+#: bfe96189a4484609a8efb62c0a01f331 book c0fca278f97942fb856ef8562479d8b6
+#: c2b172b0f79f4c5d911e6c2138239ca2 c369407860114e888bdbfd68bfaa6fe6
+#: ce7aea12ee98428fb1f2616a8998ddc9 d09600e60ae249f4a83f84d3b0172e90
+#: d1707715f93448cca908bcbec2142dd0 d1d911a8179f404aaa045482c7cbbc0e
+#: d42782bbaa454c3395041d6a7bdc0a8e d883f341209c40abb9e9bc97014282be data
+#: dc3104bdeab0409897bdcafa22256309 e6ace90563f5402396167f173605a6a8
+#: ebc4ae3501c94200842a63dccde71f37 ec83511605bc4fa6a1d121e190146141
+#: ef5dda3dfc2749c58f9f3c104aaf9d5f f66725022ed741e78cbbf2b9aaf6e837
+#: f78c2cfb3c9946b083e98205f9d2225b fcf388b06011428ead29009686f2b7f2
+#: structure.rst:56 structure.rst:74 structure.rst:95 structure.rst:116
+#: structure.rst:139 structure.rst:160 structure.rst:185 structure.rst:208
+#: structure.rst:229 structure.rst:250 structure.rst:271 structure.rst:295
+#: structure.rst:313 structure.rst:340 structure.rst:361 structure.rst:382
+#: structure.rst:400 structure.rst:421 structure.rst:445 structure.rst:470
+#: structure.rst:491 structure.rst:512 structure.rst:534 structure.rst:552
+#: structure.rst:696 structure.rst:721 structure.rst:745 structure.rst:768
+#: structure.rst:791 structure.rst:812 structure.rst:833 structure.rst:856
+#: structure.rst:877 structure.rst:903 structure.rst:924 structure.rst:954
+#: structure.rst:984 structure.rst:1020 structure.rst:1050 structure.rst:1080
+#: structure.rst:1166 structure.rst:1190 structure.rst:1216 structure.rst:1238
+#: structure.rst:1262 structure.rst:1287 structure.rst:1312 structure.rst:1334
+#: structure.rst:1365 structure.rst:1389 structure.rst:1414 structure.rst:1438
+#: structure.rst:1462 structure.rst:1484 structure.rst:1505 structure.rst:1528
+#: structure.rst:1559 structure.rst:1583 structure.rst:1608 structure.rst:1632
+#: structure.rst:1658 structure.rst:1679 structure.rst:1703 structure.rst:1727
+#: structure.rst:1775 structure.rst:1812 structure.rst:1852 structure.rst:2149
+#: structure.rst:2175 structure.rst:2199 structure.rst:2224 structure.rst:2247
+#: structure.rst:2270 structure.rst:2293 structure.rst:2319 structure.rst:2351
+#: structure.rst:2383 structure.rst:2419 structure.rst:2451 structure.rst:2484
+msgid "返回值"
+msgstr ""
+
+#: ../../source/VM 6515d14e6caa418da3065e14dc46e808
+#: 8de5aed05c8f4c5fa4575936a362864e Contract Manual/HVM/HVM Related User book
+#: data structure.rst:58 structure.rst:76
+msgid "add"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: e99091f0b4a8486a9aff5d59d5512efe structure.rst:58
+msgid "e：待添加的元素"
+msgstr ""
+
+#: ../../source/VM 956b4b8d3066469e879da92c07721579 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:58
+msgid "添加成功返回true，否则返回false"
+msgstr ""
+
+#: ../../source/VM 01e9077d84b04c069e56655b181434f9
+#: 0a0069ab03014d0b81ca25ca8b58dfba 0b0c1d14ffa545f895b85f705f3b8ca2
+#: 0dfbe7e879464f00b01972e5bec6a082 11ccda596ea5419d98a4712eac917524
+#: 139330ee8d4645199e348ead19c56033 1bd5d0436e1e44a3b9cfde04f93b7e65
+#: 2006f47a367341bb98ea71548ed0b746 2b17622c3aeb482ca34e90f000878846
+#: 2b4a4053364c4d9490fb3ed85d03d5cb 301c94b27ade47caa143292ffed441c4
+#: 3101a634d6974624845b04524b07e301 3a07c7839dcf4c14a8df40883857b2d8
+#: 3a809907bd9643b0972f9578ff6d0f95 3e1c8d50f1d84bf2a2af3883802d05eb
+#: 3e3f75b20dd8420d90a121ada44f8eab 4174eedef66e4abb8c38510c2aecf992
+#: 4a0b5a9498a14bff8babcf427c57f1f9 4c91161a43ba452ab47eb7ea5f7b2ca5
+#: 50c518af9d67458499653d11b5039e35 50e254ffab27472db90597ef9c09dbc3
+#: 5550762b0ff34bf3be5b26c1b6705550 56f6bddaa3b248b3b82dd9e697338305
+#: 5ee95d2e6304415fa26b452e87e85c04 5f20f9589f574acdb574c84dc5b76467
+#: 5f3aa9cfde7d481692d20b08f7892964 6380ae6326d64825aebc4447e6b86f24
+#: 679d028284384b55b70c67290ec03634 6a1995be670746ba8cf983783ec9f74b
+#: 6b98b28cd9f24d15b2bf247c0ca25d7c 6e05a63125674b93b1da65f11d641e73
+#: 6eadc5b3ab73453fb57903c12854cd31 6f2ff21e10ad47c8a897514f7d4bd639
+#: 71563d3ae126482c81a2a63216eaa6c7 7608cefec9e047d289e33d254a932f26
+#: 7647105c350e48ed984b71f719802e2f 768dd27fbdf94b698de0652c257f8a8c
+#: 7eb31068202e4c108d03aa41f8761b14 8005444608034336bf2835f82e8e9e13
+#: 83edc71afcf84b97b5a8963fb329247d 8e5e9b23d88a426db3ee7cf838a819ee
+#: 8f92a0eb237f48b78fd7717687b51714 9003d4dfb9a543d08177ba357a2e2476
+#: 924c6f4c100544f6ad1f91863f6ed837 931b7f169c934870b2cfa7c820f20cad
+#: 93c8aef5948e4e8488ecc4133faccbf4 94d14e1ba0c94feca97967b9a1f7dfc0
+#: 999f90c62efd4ac6aa18b6bba99af9cf 9df7768ceefe4e39a0ca4830dfb0d472
+#: 9e29beac36fa40ca8583d91419cfb5c2 9eed7ab9e9ca4a00b35886a5a4e77614 Contract
+#: Manual/HVM/HVM Related User a22f7106f24a49068575621181feb5ab
+#: aa16d20573f2432aa505c54e49c78a7e ad0fe746a32c41f1889c5235453c4eec
+#: ad3ce4fd2b1a4a779e5fafa636485b57 b1bf70e829b54dad93a8938cf713d4f7
+#: b763721e212c476f9922ce6813003577 b815147f155b4af4bc06866488c9d48a
+#: b92a5d3e8b8c48c6a78a73dbe2891484 book c26817391188446db6ded2e9964cb083
+#: c3dfbece0ec2411aa364c2bd7ab40401 d52095e8e29b41c7889e2a4b7e0ebbe0
+#: d90ed606828b446587e3130ee75c2c4a data de3c3fda794644f9a5b023b23bb3f560
+#: eccfc8dfaa2e4d1da023d2ff0eed63bd ed2ce20557a1462c939debe26b03b9fb
+#: f939e6566b404af0824e98197fa489a8 fb233dd553c646f59a6c71612a799e0c
+#: fc7a06e5ee484fcaa28b17a6864dc891 feb528680bcd461fa6a8ae9b51000d37
+#: structure.rst:61 structure.rst:79 structure.rst:101 structure.rst:122
+#: structure.rst:144 structure.rst:167 structure.rst:190 structure.rst:213
+#: structure.rst:234 structure.rst:255 structure.rst:276 structure.rst:300
+#: structure.rst:318 structure.rst:345 structure.rst:366 structure.rst:387
+#: structure.rst:405 structure.rst:428 structure.rst:452 structure.rst:475
+#: structure.rst:496 structure.rst:518 structure.rst:539 structure.rst:557
+#: structure.rst:703 structure.rst:727 structure.rst:750 structure.rst:773
+#: structure.rst:796 structure.rst:817 structure.rst:838 structure.rst:861
+#: structure.rst:882 structure.rst:908 structure.rst:929 structure.rst:959
+#: structure.rst:989 structure.rst:1171 structure.rst:1197 structure.rst:1221
+#: structure.rst:1243 structure.rst:1268 structure.rst:1293 structure.rst:1370
+#: structure.rst:1395 structure.rst:1419 structure.rst:1444 structure.rst:1468
+#: structure.rst:1489 structure.rst:1510 structure.rst:1564 structure.rst:1589
+#: structure.rst:1613 structure.rst:1638 structure.rst:1663 structure.rst:1684
+#: structure.rst:1734 structure.rst:1782 structure.rst:1819 structure.rst:1857
+#: structure.rst:2157 structure.rst:2181 structure.rst:2206 structure.rst:2229
+#: structure.rst:2252 structure.rst:2275 structure.rst:2298 structure.rst:2324
+#: structure.rst:2356 structure.rst:2388
+msgid "**示例：**"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: f378f879caca4f46945c9408bbaa5c5d structure.rst:67
+msgid "在HyperList的指定index位置，添加值"
+msgstr ""
+
+#: ../../source/VM 95445f6c636041ad844b45c56bd8535e Contract Manual/HVM/HVM
+#: Related User book data structure.rst:76
+msgid "index：HyperList中的位置element：待添加的值"
+msgstr ""
+
+#: ../../source/VM 0402384ed82e4200862fde429a254d3e
+#: 2ab358ccef1c406886afbf6f7bcb544a 4191b7512af8413f8658b29764338973
+#: 47b481cd98604362a4e3ffede285b2c5 53ead11cb47049f5a8e30b7d54418486
+#: 651f6e917c11489891fd585778ba25c7 6a1cd5e595fb4e468ba3d6ff44f6b99e
+#: 6b25ad7c08d24724ad2722cda01917b1 70623716ed034f9d87c1b8d426c7e9e4
+#: 7c396cf7c9fd4414a02d71a22907f297 87ec0a82410c4bea91316734845df5e9
+#: 91cd23194bfe4deda6888a0ac1c527db 94443cc9ae624912904d2b416b344f14
+#: 971b1f6fdd434d768adb8c7b8118a1d9 9bfe70698e21433db12efa148bd31444 Contract
+#: Manual/HVM/HVM Related User a3a0941473d84015ae28b2aa39feffc9
+#: af03544189e446c78b70fd762890e1ad bf08fcfb15374bd0931727b98f78504e book
+#: c539e525cc8c40228733ec047288d852 cf4592916dcf46a0b9e43a2ec165ab60
+#: d3a9011444f64f9c9749910b5dda1b58 d403edef13a84542a19b53d9bc775720 data
+#: e03b0ead94104954b52f7b6f71aca693 e0dbf013e8c248ecac9413104b21b711
+#: ec64732336654466bfa0ef700344eb50 fa49bb4c70f549a0804961ea3a2404fe
+#: fbfbfc6af73a4f6287da74869003029a fcc5366db87f4138927679ded25723d8
+#: ff0b6d603483408997683d850d1bd22a structure.rst:76 structure.rst:231
+#: structure.rst:252 structure.rst:273 structure.rst:297 structure.rst:472
+#: structure.rst:536 structure.rst:905 structure.rst:926 structure.rst:956
+#: structure.rst:986 structure.rst:1168 structure.rst:1218 structure.rst:1240
+#: structure.rst:1314 structure.rst:1336 structure.rst:1367 structure.rst:1416
+#: structure.rst:1486 structure.rst:1530 structure.rst:1561 structure.rst:1610
+#: structure.rst:1660 structure.rst:1681 structure.rst:1705 structure.rst:1729
+#: structure.rst:2321 structure.rst:2353 structure.rst:2385
+msgid "无"
+msgstr ""
+
+#: ../../source/VM 3f69ce11450f43eb95584a4726e7687d
+#: 791028fd406a48f5a60207d87c26a08c Contract Manual/HVM/HVM Related User book
+#: c9f38fe5db8f4196b22601dd9966060b data structure.rst:86 structure.rst:97
+#: structure.rst:118
+msgid "addAll"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: d827ea68ceea4726bbcc7e699e1ba395 data structure.rst:88
+msgid "在HyperList尾部添加参数中的所有元素"
+msgstr ""
+
+#: ../../source/VM 9c88d7e83cae4d54942e75f64f046983 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:97
+msgid "c：待添 加的元素集合"
+msgstr ""
+
+#: ../../source/VM 1c00027d6c604c76bfb609650dd24f33 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:97
+msgid "HyperList添加参 数中的所有元素，成功返回true，失败返回false"
+msgstr ""
+
+#: ../../source/VM 3004869976e44b559bbe49046d9b8bcc Contract Manual/HVM/HVM
+#: Related User book data structure.rst:109
+msgid "在HyperList指定位置添加参数中的所有元素"
+msgstr ""
+
+#: ../../source/VM 24336e7a245941ed85bce1306b2abd81 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:118
+msgid "index：指定添加位 置c：待添加的元素集合"
+msgstr ""
+
+#: ../../source/VM 1a6f5038a0b844efb59fa37dbc70867b Contract Manual/HVM/HVM
+#: Related User book data structure.rst:118
+msgid "HyperList添加集合中的所有 元素，成功返回true，失败返回false"
+msgstr ""
+
+#: ../../source/VM 0d9d1a63e0a6443381affb2a93e0e2af
+#: 184a3bb9971a49d3b992aaecaca91da4 Contract Manual/HVM/HVM Related User book
+#: data structure.rst:130 structure.rst:141
+msgid "contains"
+msgstr ""
+
+#: ../../source/VM 54f496a127194568871328dea62816f8 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:132
+msgid "判断HyperList是否包含该对象"
+msgstr ""
+
+#: ../../source/VM 61d8be90ad7f41f891db0ee6799a558b Contract Manual/HVM/HVM
+#: Related User book data structure.rst:141
+msgid "o：对象"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: f002a32a1ac24e058df3a5251cb2a6a4 structure.rst:141
+msgid "HyperList含有对象o返回true，否则返回false"
+msgstr ""
+
+#: ../../source/VM 0ad8763b4fc24276bf2ecbdac4cdb170 Contract Manual/HVM/HVM
+#: Related User book data e778dd20331b44ccb3e499f406fc9c50 structure.rst:151
+#: structure.rst:162
+msgid "containsAll"
+msgstr ""
+
+#: ../../source/VM 8c87d389319b4eeabf29a3bad83cb4a1 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:153
+msgid "判断HyperList是否包含参数中的所有元素"
+msgstr ""
+
+#: ../../source/VM 92e483c21028414eb81ab1a3b2cddefb Contract Manual/HVM/HVM
+#: Related User book c2359748579f42d0bd927473e039bf1d data structure.rst:162
+#: structure.rst:447
+msgid "c： 元素 集合"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: fd1f901108b444e5b55fee59a27fedab structure.rst:162
+msgid "HyperLi st包含参数中的所有元素返回true，否则返回false"
+msgstr ""
+
+#: ../../source/VM 05e742d1ff4e4b68ba8649ee7c025dfb
+#: 1fd9540fb2b74804b69b4fd85e6d0bb1 4f11e04d7aa94de7a5604e09c5c99d6f
+#: 9c33fe5b21994fbdb824fff95eb8e4e6 Contract Manual/HVM/HVM Related User book
+#: c997a61fd2da43999a31a072cc712d98 data eb9cd123675a436abe393570ad219c04
+#: structure.rst:176 structure.rst:187 structure.rst:847 structure.rst:858
+#: structure.rst:2261 structure.rst:2272
+msgid "equals"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: e2ab674cc0f1482c88499c3a7b33e672 structure.rst:178
+msgid "判断HyperList与对象o是否值相等"
+msgstr ""
+
+#: ../../source/VM 28cfebea48744abd864426d33c9624a8
+#: 5dc932a9a67043ed9b24e0b9c853ea77 Contract Manual/HVM/HVM Related User book
+#: d351c61478fa42f3bbed9c63fdaef9f5 data structure.rst:187 structure.rst:858
+#: structure.rst:2272
+msgid "o：Object对象"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: f2d8d25ef459491a85dac9b7ce9ea2b9 structure.rst:187
+msgid "HyperList对象与参数o值相等则返回true，否则返回false"
+msgstr ""
+
+#: ../../source/VM 0a0b522070c44ccaba0466a52b2ffc94
+#: 3d14b8c3ab3d42d3b274158e1dd67129 4648e541c0c144f185c08e28e89d70f2
+#: 473cb32c712140f1894f847579f5b19a 581559998e0b44c299c7f1a8e5b1f8f5
+#: 5e32b9e5653d4da68f5315b9d78b078f 884eb82c01ee459aba6e5ac2d620b58b
+#: 897e06484829494f870516a1e8a5855d Contract Manual/HVM/HVM Related User
+#: a40c41454c6d49f58701748537f3210e a43dc26d15484041a7a484b54659d39c
+#: b5a5acc557644f42b632bcf1ace08431 book cfd33a45e9df41cd84b3d4718b3fc21d data
+#: structure.rst:199 structure.rst:210 structure.rst:712 structure.rst:723
+#: structure.rst:1181 structure.rst:1193 structure.rst:1380 structure.rst:1391
+#: structure.rst:1574 structure.rst:1585 structure.rst:2166 structure.rst:2177
+msgid "get"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: b71e2434701c498cb0eafd84b57b7ac3 book data structure.rst:201
+msgid "获取HyperList在index位置的值"
+msgstr ""
+
+#: ../../source/VM 8a51186d0f5e4f2381afcaf34ba70221 Contract Manual/HVM/HVM
+#: Related User book data fba9d9b314e9460c877eb58f3a0e59fb structure.rst:210
+#: structure.rst:402
+msgid "index：HyperList中的位置"
+msgstr ""
+
+#: ../../source/VM 36cdacad3e9b499a80e85aefe6e663bd Contract Manual/HVM/HVM
+#: Related User book data structure.rst:210
+msgid "index位置的值"
+msgstr ""
+
+#: ../../source/VM 32e24bb7c895401bbc668e7c9d188b37
+#: 6ec5632f2190425096e437309baa27f1 79b5714ec9ef48169e24e312627ba119 Contract
+#: Manual/HVM/HVM Related User bd2f122bb6f54a7a8d49c578c1951881 book data
+#: structure.rst:220 structure.rst:231 structure.rst:894 structure.rst:905
+msgid "hashCode"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: f586830b38504216b51b0ca85ef3d53f structure.rst:222
+msgid "获取HyperList的hash值"
+msgstr ""
+
+#: ../../source/VM 6a091f09f21943a6b5db31c32567946e Contract Manual/HVM/HVM
+#: Related User book data structure.rst:231
+msgid "HyperList的哈希值"
+msgstr ""
+
+#: ../../source/VM 0a82543584b04a0590740c9d73c988c0
+#: 12e4e7546e1e4bcb81ecedacd3b16bdb 551be3ea20a04d96ac8cfe8e61361f34
+#: 68a76a6a87134783b68b056b726126cf Contract Manual/HVM/HVM Related User
+#: a059a070ae6c4d9eba5ec7f8e772553e book c8335cc3429e44639b47bcccd5a9d337 data
+#: structure.rst:241 structure.rst:252 structure.rst:782 structure.rst:793
+#: structure.rst:2215 structure.rst:2226
+msgid "isEmpty"
+msgstr ""
+
+#: ../../source/VM 478e162e7caf49f38b4d168035bdd0d5 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:243
+msgid "判断HyperList是否为空"
+msgstr ""
+
+#: ../../source/VM 86ba66f9a890452fa601b9c9abb4e0bc Contract Manual/HVM/HVM
+#: Related User book data structure.rst:252
+msgid "HyperList为空返回true，否则返回false"
+msgstr ""
+
+#: ../../source/VM 84ed5dd899b047a197c49bd0e6899bdc
+#: 91a3502ed7c44cf699e74a5186ced931 Contract Manual/HVM/HVM Related User book
+#: data structure.rst:262 structure.rst:273
+msgid "iterator"
+msgstr ""
+
+#: ../../source/VM 83bd84ba1572441e8bfbf710284f45bf Contract Manual/HVM/HVM
+#: Related User book data structure.rst:264
+msgid "获取HyperList的Iterator"
+msgstr ""
+
+#: ../../source/VM 9a3e6209c2924df7924db30e85dbb05e Contract Manual/HVM/HVM
+#: Related User book data structure.rst:273
+msgid "HyperList的Iterator"
+msgstr ""
+
+#: ../../source/VM 57f9bedaca7f486fb573056104fdecbe Contract Manual/HVM/HVM
+#: Related User book c0e4957ff5a54c98b8e844db5478b4f9 data
+#: fc4ffff339b04e44852fc3a13cc168ee structure.rst:286 structure.rst:297
+#: structure.rst:315
+msgid "listIterator"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: be7323db14a9450ea40c6420536aa9c2 book data structure.rst:288
+msgid "获取HyperList的ListIterator，默认位置为0"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: cb12693b0a4c4861b45e9e14bed3fc27 data structure.rst:297
+msgid "HyperList在位置0的ListIterator"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: f262811699a545eea16d7e710ce18398 structure.rst:306
+msgid "获取HyperList指定位置的ListIterator"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: cd29cbe40f264049b81ecc59dc98b133 data structure.rst:315
+msgid "index：指定位置"
+msgstr ""
+
+#: ../../source/VM 828f0bc00bcf40ac8751b1b9caf28743 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:315
+msgid "HyperList指定位置的ListIterator"
+msgstr ""
+
+#: ../../source/VM 0e9ca990205040bcb901b926778a767c Contract Manual/HVM/HVM
+#: Related User book c81860ca0c2b48b2b4897a2e02c0773d data structure.rst:331
+#: structure.rst:342
+msgid "indexOf"
+msgstr ""
+
+#: ../../source/VM 700f2ca7dacd4542a2b6540c86eb7ac0 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:333
+msgid "HyperList中按顺序第一次出现对象o的位置"
+msgstr ""
+
+#: ../../source/VM 4d0acfe8e3064eeba4f8cc7a21d9d57d Contract Manual/HVM/HVM
+#: Related User ab11e8d21c6d485a8000c1eb4bb1b820 book data structure.rst:342
+#: structure.rst:363
+msgid "o：对象o"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: f10a653486764ebdad0d46216e803eb9 structure.rst:342
+msgid "HyperList中第一次出现对象o的位置index"
+msgstr ""
+
+#: ../../source/VM 84fc96f63cb64b14aec4c2c57f1d1f33 Contract Manual/HVM/HVM
+#: Related User book d4fcf37f5d4242e890423583ffe74e90 data structure.rst:352
+#: structure.rst:363
+msgid "lastIndexOf"
+msgstr ""
+
+#: ../../source/VM 639bb1d7facc4f80be00274238ca4ee4 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:354
+msgid "HyperList中按顺序最后一次出现对象o的位置"
+msgstr ""
+
+#: ../../source/VM 8468dbffb2e046eaaefbb3179f0dd5eb Contract Manual/HVM/HVM
+#: Related User book data structure.rst:363
+msgid "HyperList中最后一次出现对象o的位置index"
+msgstr ""
+
+#: ../../source/VM 20642e821b004b088ea3d0583f3751a1
+#: 294212ca020a48e096a9845660fd6703 3730dc36478542208ec2933fac0a44eb
+#: 4ec9158caa804d728643b2a76e18b28f 50f9e04d42eb45ae9aec3d53b6ab947b
+#: 5b0750a615aa40a3b8611b34ce5be770 6d52a2547b404156a5b3c838c6039010 Contract
+#: Manual/HVM/HVM Related User bb67414d66594c98a33e2038d46eacce book
+#: c9fa4ec26ef24c11aa585c4c3607f872 cc98bb0802ac4f2182d4f7ac86f4af5c
+#: cfa774ecb9684a6ea57ebce3aa5e085a d4835261a3c24636bb9d0168eb6c6ca3 data
+#: f7378277a78c4779bb040755b4e5b95c structure.rst:373 structure.rst:384
+#: structure.rst:402 structure.rst:736 structure.rst:747 structure.rst:1207
+#: structure.rst:1218 structure.rst:1405 structure.rst:1416 structure.rst:1599
+#: structure.rst:1610 structure.rst:2190 structure.rst:2201
+msgid "remove"
+msgstr ""
+
+#: ../../source/VM 83052afd8c9e4a1ab6d0b7b07b6c35b0 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:375
+msgid "根据值删除HyperList中的元素"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: f7a1f504544d486d96c7a0963a5391f5 structure.rst:384
+msgid "o：待删除的对象"
+msgstr ""
+
+#: ../../source/VM 9ad9820f0cea4ec092b421fec651feed Contract Manual/HVM/HVM
+#: Related User book data structure.rst:384
+msgid "删除成功返回true，否则返回false"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: fd5f4c59452a4789b72f04fa97e2022c structure.rst:393
+msgid "删除HyperList指定index位置的元素，并返回该值"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: e32ad0123f7a410fbf7184b55fe1763c structure.rst:402
+msgid "删除的index位置的值"
+msgstr ""
+
+#: ../../source/VM 0308c4a14de64d0ab86d84cfaabf74fa Contract Manual/HVM/HVM
+#: Related User book data structure.rst:412
+msgid "removeAll"
+msgstr ""
+
+#: ../../source/VM 46b036064ff2454495038ed8a6cf0fe2 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:414
+msgid "HyperList批量删除与集合中元素相同的所有元素"
+msgstr ""
+
+#: ../../source/VM 9fdd7eed86e748b0a3750b5053ed9806 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:423
+msgid "re moveAll"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a64fdcd81df748479e7b2505f3c6a32c book data structure.rst:423
+msgid "c： 待删除的 元素集合"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: c022dfa2de244851b725499f54367be1 data structure.rst:423
+msgid "HyperList删除C集合 中存在的所有元素，成功返回true，失败返回false"
+msgstr ""
+
+#: ../../source/VM 23b05db5335847a1a096ae6d22202b90 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:436
+msgid "retainAll"
+msgstr ""
+
+#: ../../source/VM 6d6db1e45ccc41418abc78221cc2df0c Contract Manual/HVM/HVM
+#: Related User book data structure.rst:438
+msgid "HyperList批量删除参数集合中不存在的所有元素"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: b6ebd3b226044adeaea155b44d39c7b0 book data structure.rst:447
+msgid "re tainAll"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: d035da2fe1fc462b934fa9298c432b57 data structure.rst:447
+msgid "HyperList批量删除C集 合中不存在的所有元素，成功返回true，失败返回false"
+msgstr ""
+
+#: ../../source/VM 0d3ff75aeb344fc0aba7ce3d6742a0dc
+#: 5872cb2d53584693bf99be92728f1465 Contract Manual/HVM/HVM Related User
+#: a53d3ea50bcf4d2d8df5b9d279282d2e book c81186cf95d64c3086f02c39460a0509 data
+#: structure.rst:461 structure.rst:472 structure.rst:759 structure.rst:770
+msgid "size"
+msgstr ""
+
+#: ../../source/VM 2f95dc82d2064e979f0888ba9037437f Contract Manual/HVM/HVM
+#: Related User book data structure.rst:463
+msgid "获取HyperList的长度"
+msgstr ""
+
+#: ../../source/VM 4587a5a035a448b1ac2eaaac6d6ca94f Contract Manual/HVM/HVM
+#: Related User book data structure.rst:472
+msgid "HyperList的总长度"
+msgstr ""
+
+#: ../../source/VM 42d523ea6b2840eba4aa61e08d698b3b
+#: 8b956e3825c842ad9575f6dafca97e78 Contract Manual/HVM/HVM Related User book
+#: data structure.rst:482 structure.rst:493
+msgid "set"
+msgstr ""
+
+#: ../../source/VM 63b9794cce3e4eb4b8dde3b999f8a862 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:484
+msgid "HyperList的index位置的值设为新值，返回旧的值"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: db437dd417f14a7ba79f824b82060d4f structure.rst:493
+msgid "index：HyperList中的位置element：新的值"
+msgstr ""
+
+#: ../../source/VM 4590f216843248739f37ccaab5d9cbdf Contract Manual/HVM/HVM
+#: Related User book data structure.rst:493
+msgid "返回index位置的旧值"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: f656588e11c8419f9a5c36935eb02a75 structure.rst:503
+msgid "subList"
+msgstr ""
+
+#: ../../source/VM 46cd248ac9c344058e9b7e82d617c4f7 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:505
+msgid "HyperList从fromIndex到toIndex位置的元素作为List对象返回"
+msgstr ""
+
+#: ../../source/VM 58a1045e19d94cc9b614260de09955b1 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:514
+msgid "sub List"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: b898f03fc88e48daa60f89ee014b2b96 book data structure.rst:514
+msgid "fromIndex：起 始位置toIndex：末尾位置"
+msgstr ""
+
+#: ../../source/VM 8df4731710324b06a96197b2f870af24 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:514
+msgid "List对象，包含 HyperList从fromIndex到toIndex的元素"
+msgstr ""
+
+#: ../../source/VM 410508cd33b44326ba1c6e1264c651a0
+#: 4671220958a047d6991de5f5646198c3 8092fe9bf3eb4f0ca03aea42a7c39f92 Contract
+#: Manual/HVM/HVM Related User book data structure.rst:525 structure.rst:536
+#: structure.rst:554
+msgid "toArray"
+msgstr ""
+
+#: ../../source/VM 03ea7703cb94476dad314a6ceeda8dcb Contract Manual/HVM/HVM
+#: Related User book data structure.rst:527
+msgid "将HyperList转为数组并返回"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a390185a3af24aa098b2dea42aeeabd0 book data structure.rst:536
+msgid "HyperList转换的数组"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: d05744aae663466bba25f9f4484bb1ae data structure.rst:545
+msgid "将HyperList转为指定类型的数组并返回"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: bea8032839ee41b889c1f07d0574d2da book data structure.rst:554
+msgid "a：类型T的数组"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: db0014ce32d74d76997e9d3b1b980e47 structure.rst:554
+msgid "HyperList转换的T类型的数组"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a9762e54579b4f5baa79eaf84fe8bea9 book data structure.rst:564
+msgid "2. **HyperMap介绍**"
+msgstr ""
+
+#: ../../source/VM 4f273d5f96224973bce201bf3849f61b Contract Manual/HVM/HVM
+#: Related User book data structure.rst:566
+msgid "HyperMap是HVM内部定义的一种类型，与HashMap类似，都实现了Map接口。而与HashMap不同的是在账本的操作上，HashMap一直是以整个map对象为单位修改账本的，而HyperMap可以做到对于单个key，value的修改，只会涉及到单个key，value在账本中的操作，而不会涉及到整个map对象。"
+msgstr ""
+
+#: ../../source/VM 72d86a3d0ffe4e0bb03d26f98b1f8eeb Contract Manual/HVM/HVM
+#: Related User book data structure.rst:568
+msgid "因此HashMap适合小数据量，且变动不频繁的数据，HyperMap适合会持续增长的大数据量，一般情况下都使用HyperMap。"
+msgstr ""
+
+#: ../../source/VM 3589c39d8dc44716ac2989bd97c8e25e
+#: 85e666870d9640898dd5c0aed03e845a Contract Manual/HVM/HVM Related User
+#: b95ce6de7e8c42479e7ded8ae9034026 book data structure.rst:571
+#: structure.rst:1123 structure.rst:1957
+msgid "**提供功能**"
+msgstr ""
+
+#: ../../source/VM 5b449ce561ac4d9083af9480a7fffa4d Contract Manual/HVM/HVM
+#: Related User book data structure.rst:573
+msgid "因为HyperMap和HashMap一样，实现了Map接口，所以其提供的功能与HashMap基本一致。具体功能请查看支持接口章节。"
+msgstr ""
+
+#: ../../source/VM 32bdcc0330d64787964768dd1e00fe71
+#: 6687826b56eb4accb564ecd52ce183a0 Contract Manual/HVM/HVM Related User book
+#: data f5a98c17c1154c56a03dc1a43ea3a6a8 structure.rst:576 structure.rst:1139
+#: structure.rst:1961
+msgid "**注意事项**"
+msgstr ""
+
+#: ../../source/VM 20f33e2f0a094ebcb4c01b11a7eff36c Contract Manual/HVM/HVM
+#: Related User book data structure.rst:578
+msgid "HyperMap使用时要加上@StoreField注解；"
+msgstr ""
+
+#: ../../source/VM 2c4be70d4a6a4263838ee6ac8f3ad991 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:580
+msgid "HyperMap不支持clear功能，调用clear方法会抛出 UnsupportedOperationException异常。"
+msgstr ""
+
+#: ../../source/VM 96f29f1993ed492f9936a32f2da7ff9b Contract Manual/HVM/HVM
+#: Related User book data structure.rst:583
+msgid ""
+"HyperMap执行过程中会用到Value的hashcode()方法，Value类型如果是自定义类，则需要\\ "
+"**实现自定义类的hashcode()方法**\\ ，否则部分可能出现put数据无效的情况;"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a23a3940b9f24097a9f6312598a2c59d book data structure.rst:585
+msgid "示例如下："
+msgstr ""
+
+#: ../../source/VM 1c2d81940b15448898a123e51da797a8
+#: 69754dfef43d402193f6973c3b5763d4 878d1ffc321345fda7174073b8bec2a1 Contract
+#: Manual/HVM/HVM Related User book c28cfb94e7c24acabbc37abab3887c37 data
+#: e354f43ac5b04bfaa2f4220d5e1f41de structure.rst:606 structure.rst:619
+#: structure.rst:1975 structure.rst:2005 structure.rst:2018
+msgid "错误示例："
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: b0530fe53c5f470bb5064482cb6b32dd book data structure.rst:617
+msgid "HyperMap的Key和Value都不能是泛型，也不能是带有泛型的类型。"
+msgstr ""
+
+#: ../../source/VM 0eafe7c1ecf749b685fdeb56350caf42
+#: 9dcc115c86de4595a291b4b3a8d4e471 Contract Manual/HVM/HVM Related User book
+#: data e672fec2afea4f43a4cce2f39ce9a294 structure.rst:637 structure.rst:1897
+#: structure.rst:2046
+msgid "demo样例"
+msgstr ""
+
+#: ../../source/VM 5fbd00b6d1ba4396b10e3ff5dff037c7 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:640
+msgid "往HyperMap中插入数据"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: f51e446369b542e9a6632cbbb157a2ab structure.rst:655
+msgid "对HyperMap进行迭代"
+msgstr ""
+
+#: ../../source/VM 781943b9df8b478c826cff6fc2c57843
+#: 82825c572ad64e85a11c38dfe190c720 8530c7fc679a454ab3dd0acdc8f01834 Contract
+#: Manual/HVM/HVM Related User book data structure.rst:675 structure.rst:1939
+#: structure.rst:2124
+msgid "完整例子代码可获取源码包后直接运行体验，需在项目根目录下先运行mvn package。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: f5c88cf35737425495c827e5448ac9f6 structure.rst:678
+msgid "**【源码包可参考HVM使用手册 - HVM合约Demo附件源码 - hvm-manual-demo的hypermap目录】**"
+msgstr ""
+
+#: ../../source/VM 1bc71d7f56b543399f08c672816fdf7a Contract Manual/HVM/HVM
+#: Related User book c77c4359fdd2475d9147a0d1a134430f data structure.rst:682
+#: structure.rst:2133
+msgid "**支持接口**"
+msgstr ""
+
+#: ../../source/VM 45ca264eee6f466fa21ce0bae3dde80f Contract Manual/HVM/HVM
+#: Related User book data structure.rst:684
+msgid "和提供功能一样，HyperMap支持的接口与与HashMap基本一致。"
+msgstr ""
+
+#: ../../source/VM 0c0bfc435ba64c22b6af3c536fc86759
+#: 21738fc52f1745268559f4fa93891152 6142dca63bc349d4b823827010f8594f
+#: 63b4aa8cd1464975bc96d6c956604f63 6dc5578eec624e00be809531149b0ec8
+#: 8f28bf43d3ac46acb72df81c4bb57c87 91b8503ffa124eaf99057a5fd2f94021 Contract
+#: Manual/HVM/HVM Related User a8a35b46ccc647e0b3d9a685973d6273
+#: b41e6e65ab8c4f3fb6cd780ca323864e book data eb89462ed573450bbce7f50830440b91
+#: structure.rst:687 structure.rst:698 structure.rst:1157 structure.rst:1168
+#: structure.rst:1356 structure.rst:1367 structure.rst:1550 structure.rst:1561
+#: structure.rst:2140 structure.rst:2151
+msgid "put"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: b1ac19ff5e4f466fba535909568483b7 book data structure.rst:689
+msgid "向HyperMap添加键值对"
+msgstr ""
+
+#: ../../source/VM 5d02d8b16e6b409b814d925e6d539100
+#: 86fc8c74c3164a7a85cb3ef56481aa46 Contract Manual/HVM/HVM Related User book
+#: data structure.rst:698 structure.rst:2151
+msgid "key：键 value：值"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a6b9ff67d1b14038b955ead70a631953 book data structure.rst:698
+msgid "key不能为 空，若key为空，会抛出异常。如果HyperMap中已存在 该key，则返回原来的value，如果不存在，返回null"
+msgstr ""
+
+#: ../../source/VM 7ed811dec698440dae07282e53d5b7e4 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:714
+msgid "通过key得到HyperMap中对应的value"
+msgstr ""
+
+#: ../../source/VM 6731327e0152462f878e58c9633e202a Contract Manual/HVM/HVM
+#: Related User book data eb4efb9b16154812a926663ad78dc70d structure.rst:723
+#: structure.rst:2177
+msgid "key"
+msgstr ""
+
+#: ../../source/VM 5df9ecc5207e493991c3a7a285a45a4d Contract Manual/HVM/HVM
+#: Related User book data structure.rst:723
+msgid "若key为null返回null 。若map中存在key，返回对应的value。若不存在，返回null"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: c8ce21cc6e5d4b3d91a8890c7478e079 data structure.rst:738
+msgid "删除HyperMap中的键值对"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: f74e0d9b8e6d499fa564414387a07f99 structure.rst:747
+msgid "key：被删除的键"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: b7225492974947bfad557865027b34bd book data structure.rst:747
+msgid "返回key对应的value。若key不存在map中，返回null"
+msgstr ""
+
+#: ../../source/VM 5d0ea8cac63a4c33a3f1796326891097 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:761
+msgid "获得HyperMap的大小"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: e8fd06bd95b243c8a85ac71de5170f02 structure.rst:770
+msgid "HyperMap中键值对的数量"
+msgstr ""
+
+#: ../../source/VM 0265c7886d764d1f8974891abad943b6 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:784
+msgid "判断HyperMap是否为空"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: e0faaa041ecc46f6aaacb3eca8acf0b5 structure.rst:793
+msgid "如果HyperMap为空返回true，否则返回false"
+msgstr ""
+
+#: ../../source/VM 0838b24f64db4ac9b706fe241828e42c
+#: 180e92a1edae4af8b6996e0510118d3b 1e401ee8e6ed4d6b83218ff0b0f45b05
+#: 4c2406ff25a9413db285e5e10286752c Contract Manual/HVM/HVM Related User
+#: b08c17affe51412a8e95eaf6fcf19113 b2eaa1dffb0341288ca850b1a6b6ab5b
+#: bf021d1124b144dfa924245e8ba2b922 book ca0f40f2881743cbbf667031b9a105cd data
+#: f3ec635b70d9417d80c74b2c61cf1a8d structure.rst:803 structure.rst:814
+#: structure.rst:1253 structure.rst:1264 structure.rst:1429 structure.rst:1623
+#: structure.rst:1634 structure.rst:2238 structure.rst:2249
+msgid "containsKey"
+msgstr ""
+
+#: ../../source/VM 22f11cdfeb6547b7bf3c4fd9567c8078 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:805
+msgid "判断HyperMap是否包含key"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: bb81e6c9455c48259c3c2a512f2df44e book c1e14f908c53427abbdb1feeb3292fe1 data
+#: structure.rst:814 structure.rst:2249
+msgid "key：键"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a83ef853071d47d6b162031c2e069fe6 book data structure.rst:814
+msgid "如果HyperMap中包含该key返回true，否则返回false"
+msgstr ""
+
+#: ../../source/VM 3c7bf2b106e54065bc719f0ede41ae23
+#: 744ee89f92884928a17a77db7edf44f1 Contract Manual/HVM/HVM Related User book
+#: data structure.rst:824 structure.rst:835
+msgid "containsValue"
+msgstr ""
+
+#: ../../source/VM 06331e370d41452e91661d7c2493c614 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:826
+msgid "判断HyperMap是否包含value"
+msgstr ""
+
+#: ../../source/VM 9a5bb9e2d7304da980f3babc9a1f9a10 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:835
+msgid "value：值"
+msgstr ""
+
+#: ../../source/VM 84b33fe8b6584de9900604f879ecd6b6 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:835
+msgid "如果HyperMap中包含该value返回true，否则返回false"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: d0a59a176c8647bcbe22f64ae4cb194e data structure.rst:849
+msgid "判断HyperMap与对象o是否值相等"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: fd2da010d2fc4cd78243a0037c4a1399 structure.rst:858
+msgid "HyperMap对象与参数o值相等则返回true，否则返回false"
+msgstr ""
+
+#: ../../source/VM 39da2c15f45046478a4233d5d381f812
+#: 893a290d80544b9cb1422bf98e01bb23 Contract Manual/HVM/HVM Related User book
+#: data eedaf4297cba472f9538ecbc9cdab872 f6d8e5fc116c4290bbaae79f826759e6
+#: structure.rst:868 structure.rst:879 structure.rst:2284 structure.rst:2295
+msgid "putAll"
+msgstr ""
+
+#: ../../source/VM 63120fb290d44dfdaea58e01332e3fa1 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:870
+msgid "将一个map对象的全部键值对放入HyperMap中"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a3fee35a004e4ac0975f89ba0a3edf2c book data structure.rst:879
+msgid "m：需要存入HyperMap的map对象"
+msgstr ""
+
+#: ../../source/VM 408d96cd8d3e41eeada09036e2fdfe0a Contract Manual/HVM/HVM
+#: Related User book data structure.rst:896
+msgid "获取HyperMap的hash值"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: c643559ae3024b0c8048f02e14ceb1c9 data structure.rst:905
+msgid "HyperMap的哈希值"
+msgstr ""
+
+#: ../../source/VM 66804b3d46364ef1872c656332cf6496
+#: 92040337302940d18d370286dbd0988f Contract Manual/HVM/HVM Related User book
+#: da9bacfb5af245f581a321278b0f8b4c data de6240e541b443b28bcdf4c33b3bc9ef
+#: structure.rst:915 structure.rst:926 structure.rst:2310 structure.rst:2321
+msgid "keySet"
+msgstr ""
+
+#: ../../source/VM 4a598c9fa15f4e3384bd4edb2d058c59 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:917
+msgid "获取HyperMap的key的迭代器"
+msgstr ""
+
+#: ../../source/VM 2f56cff54ef84d128c55250621f19e28
+#: 3255a4a6bd4f413680f816c28cb4a523 61fd991012284a1b98e385d0d9af6c50 Contract
+#: Manual/HVM/HVM Related User b90f59da1677455d8c979b92f59cf0ac book data
+#: structure.rst:926 structure.rst:986 structure.rst:2321 structure.rst:2385
+msgid "Set对象"
+msgstr ""
+
+#: ../../source/VM 84a98f7a24014dea9b4fb56f0d889320
+#: 9680ef93c807487093f4449e25a1c33a 9d6c2d1e859a498291825eb34e5ed749 Contract
+#: Manual/HVM/HVM Related User book c3450c67ae3a4edf9dcafdf380f554e1 data
+#: structure.rst:945 structure.rst:956 structure.rst:2342 structure.rst:2353
+msgid "values"
+msgstr ""
+
+#: ../../source/VM 6b13e805e2fd47ca8cce3536f8958079 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:947
+msgid "获取HyperMap的value的迭代器"
+msgstr ""
+
+#: ../../source/VM 42adb5db12d247bc812a8f48e5d583d8 Contract Manual/HVM/HVM
+#: Related User b1cc449cb42c41e8a972f447b18c1bb9 book data structure.rst:956
+#: structure.rst:2353
+msgid "Collection对象"
+msgstr ""
+
+#: ../../source/VM 1b58fd07a1454c37b9a1797574550b72
+#: 4ffafa11beaf4b1ebe622e6486c44fb9 98a0bb06df2e4ee58ecfe286e8d5ae14 Contract
+#: Manual/HVM/HVM Related User book data dbe5625590094bafafc78c22385cf987
+#: structure.rst:975 structure.rst:986 structure.rst:2374 structure.rst:2385
+msgid "entrySet"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: c15bb29559614b88a7d7ec45e62f9311 data structure.rst:977
+msgid "获取HyperMap的键值对的迭代器"
+msgstr ""
+
+#: ../../source/VM 1d5cb875f4b9488a8b4c06089805fa6f
+#: 32d905f0ebdf45f39ff905f639ffe8a7 96f6f5a83abc4be5bd724c9d08303290 Contract
+#: Manual/HVM/HVM Related User b390529ab55f4053b452596e41aede3b book data
+#: structure.rst:1005 structure.rst:1022 structure.rst:2406 structure.rst:2421
+msgid "seekKeySet"
+msgstr ""
+
+#: ../../source/VM 50534f6f1548483fa59fde49c2b0ca3f Contract Manual/HVM/HVM
+#: Related User book data e91fbc95203841d9b0321116d58742d9 structure.rst:1007
+#: structure.rst:2408
+msgid "创建指定位置的Key迭代器，起始位置为参数key所对应的节点。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a5ee02b9320e410ab3842d59b105042c book d7b4bb034ce04218950f2ceefe74f59a data
+#: structure.rst:1009 structure.rst:2410
+msgid "不同与普通迭代器，指定位置迭代器的迭代顺序为key的json字串的字典序升序。"
+msgstr ""
+
+#: ../../source/VM 69b4b50eb487424ea799c99035951f74 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1011
+msgid "当传入的key为null时，该接口调用效果同keySet接口。"
+msgstr ""
+
+#: ../../source/VM 7e33eeae99314c58bfe96617807b6b5e Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1013
+msgid "当传入的key不存在于HyperMap中时，迭代器依旧能够创建成功，其起始位置为HyperMap中第一个比参数key大的节点的位置。"
+msgstr ""
+
+#: ../../source/VM 2a9b2298034a4be4b19d79bd6d76ac0b
+#: 394985de937a414f98564f8928df3bf4 54aa19426e1e451496bdb15982878bce
+#: 96febee803fd419c9aff25345a880e89 Contract Manual/HVM/HVM Related User book
+#: data e9baa17fb4124330a5f35c13b508ca92 structure.rst:1022 structure.rst:1052
+#: structure.rst:1082 structure.rst:2421 structure.rst:2486
+msgid "key：迭代器起始节点的key"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: bac529929ffa44c1993f58115ae12481 book data fb615ebff2944faeaace8775671c6ff6
+#: structure.rst:1022 structure.rst:1082
+msgid "返回类型：Set"
+msgstr ""
+
+#: ../../source/VM 07405b44be4b454f8149b830a7b248a1
+#: 60aa53c501fa42ad923242f15d328dc9 Contract Manual/HVM/HVM Related User
+#: adcc0753e4814fb49f42af3aa2e1f12c ae58a1428f0d4b6fb3d7493d39ef9a7b book data
+#: db56a1a96bda44b984351c52914b454b ea52f5f972bb445da38180794c070d3c
+#: structure.rst:1025 structure.rst:1055 structure.rst:1085 structure.rst:2424
+#: structure.rst:2457 structure.rst:2489
+msgid "示例："
+msgstr ""
+
+#: ../../source/VM 3c182d280e874ac4acda70c99edf256b
+#: 8bbc47a702b54ee1b6e2e8bd503766e0 97a3f4a5254449d49b9a0f5a34b0b1c6 Contract
+#: Manual/HVM/HVM Related User book d4f9ac79dcd945a489d640c1fa52fa00 data
+#: structure.rst:1041 structure.rst:1052 structure.rst:2442 structure.rst:2453
+msgid "seekValues"
+msgstr ""
+
+#: ../../source/VM 7ec8c1ad5e6340e4ba229ba57cd52626
+#: 86659f395d4047269d9ebb54be3b408e Contract Manual/HVM/HVM Related User book
+#: data structure.rst:1043 structure.rst:2444
+msgid "创建指定位置的Value迭代器"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a0b1c887069448238f10294712d96de2 book data structure.rst:1052
+msgid "返回类型：Collection"
+msgstr ""
+
+#: ../../source/VM 62aad28f0dc044e58125452657a42c80
+#: 679c37029cdd4de893e141e89cf490fb 7b7940560e8e437d9e1b90e32fcdadc8 Contract
+#: Manual/HVM/HVM Related User book data f9047f977af14b339020bb5f1af6c939
+#: structure.rst:1071 structure.rst:1082 structure.rst:2475 structure.rst:2486
+msgid "seekEntrySet"
+msgstr ""
+
+#: ../../source/VM 0a331d6843744bf8a74f986aa43e8e41
+#: 426e1aadf9834ae8bfec157c8cbf1c1e Contract Manual/HVM/HVM Related User book
+#: data structure.rst:1073 structure.rst:2477
+msgid "创建指定位置的Entry迭代器"
+msgstr ""
+
+#: ../../source/VM 3910c5332b0549da85c19c6cc11ce30c Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1101
+msgid "3. **HyperTable介绍**"
+msgstr ""
+
+#: ../../source/VM 146277e095b44d5ca48f8a9df0fc95dc Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1103
+msgid ""
+"HyperTable是HVM提出的第三种数据结构，具有\\ **表、行、列簇、列**\\ 四个概念。他们之间的关系如下：\\ "
+"**一个表可以包含多行，一行里有一或多个列簇，每个列簇里包含一或多列。**\\ 在一张表中，给定指定的\\ **行、列簇、列**\\ "
+"可以唯一确定一个值。"
+msgstr ""
+
+#: ../../source/VM 8107be2eeb91407ab3116f91e7bd23ff Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1105
+msgid "HyperTable表结构如下图所示："
+msgstr ""
+
+#: ../../source/VM 207e3be3b62b401bbcdcb591a9a5e8f6 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1107
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: e44c1e9b59e7491788aed0344d09e99f structure.rst:2504
+msgid "image0"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: d86a33ffc83b4b739d577a1a84b119b3 data structure.rst:1109
+msgid "与Hashmap相似，HyperTable也提供了put和get方法来进行插入和查询。与HashMap不同的是，HyperTable的key是由行、列簇、列共同组成。"
+msgstr ""
+
+#: ../../source/VM 31db83e831314f31aa9a9e6da8f101da Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1111
+msgid ""
+"一个HyperTable对象对应着一张表。除了表以外，我们还设计了数据结构 ``Row``\\ 、\\ ``ColumnFamily`` "
+"分别对应行和列簇，由于确定行和列簇后，对每个列都可以指定对应的唯一的值，这类似Map的作用，所以我们没有另外为列设计一个数据结构。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: b29e50b261a4410f93ba0880bacaf27d book data structure.rst:1115
+msgid "因此，HyperTable的数据结构包含关系也如下"
+msgstr ""
+
+#: ../../source/VM 7ad28986aee34c11b134da0db514450e Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1117
+msgid ""
+"**HyperTable ==> Row ==> ColumnFamily**\\ "
+"，其中Row、ColumnFamily都是HyperTable的内部类。"
+msgstr ""
+
+#: ../../source/VM 23e2c1003d4e44899f32448b23d02c08 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1125
+msgid ""
+"``HyperTable`` 不仅支持自己插入、更新值，也支持通过其包含的 ``Row`` 对象、 ``ColumnFamily`` "
+"对象插入、查询、更新值，为用户操作提供了相应的拓展性，假设一行包含多条数据（多个列簇或列），用户可以在拿到 ``Row`` "
+"对象后往里插入值，而不需要通过 ``HyperTable`` 每次提供相同的行名插入。"
+msgstr ""
+
+#: ../../source/VM 46f90dc146af40a8bc964ff1a34c004c Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1131
+msgid ""
+"此外，\\ ``HyperTable`` 提供了行的迭代器，即可以通过迭代得到每一行的行名信息，迭代器由 ``RowsSet`` "
+"实现，其实用方式与普通的Java集合迭代器一致，用户可以查看支持接口一章查看如何获取迭代器。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: c7e7c05f4be04e75a7f088beb31d3a0a data structure.rst:1141
+msgid ""
+"``HyperTable`` 对\\ **行名、列簇名、列名、以及值**\\ 的插入有限制，不允许插入任何 **null** 或 **““** "
+"字符串。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: c9389b2d387046daa56280e8188ec0b2 data structure.rst:1145
+msgid "``HyperTable`` 不允许\\ **行名、列簇名、列名**\\ 包含 \\*\\*@\\*\\* 符号。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: b40f3a52c28d4c39b2de08a3f4699d48 book data structure.rst:1147
+msgid "在使用 ``HyperTable`` 的行迭代器的时候。不支持添加、删除或更新数据的操作，类似 OpenJDK 的fast-fail机制。"
+msgstr ""
+
+#: ../../source/VM 942cda4ae8f348cb907a22f66a3d122c Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1152
+msgid "HyperTable支持接口"
+msgstr ""
+
+#: ../../source/VM 65af1804896a4e9ba43b5f8f73b7b611 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1159
+msgid "往表内插入值"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: d5abb4d8219649b99150b5a314ca8222 data structure.rst:1168
+msgid "rowName：行名colFamName：列簇名colName：列名value：插入值"
+msgstr ""
+
+#: ../../source/VM 119369e89aee4adea9aa35f4ff8c5c5e Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1183
+msgid "从表中查询值"
+msgstr ""
+
+#: ../../source/VM 9c73f5b5d2214a1a86e56a78b11d6489 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1190
+msgid "方 法"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: e479ac330d304ffc8f050a3bc59f7cb3 structure.rst:1193
+msgid "rowName：行名colFamN ame：列簇名colName：列名"
+msgstr ""
+
+#: ../../source/VM 40d9174166c6458894bf47033a75b50c Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1193
+msgid "返回类型：String返回查询结果 ，若值存在，返回值，否则返回null。"
+msgstr ""
+
+#: ../../source/VM 0770db554d334aa98156e9d49bd6affa Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1209
+msgid "通过指定的行、列簇、列删除值，可以删除不存在的值，不会报错。"
+msgstr ""
+
+#: ../../source/VM 1c609b6a9ef34454ab56dfea5b5cdbfe Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1218
+msgid "rowName：行名colFamName：列簇名colName：列名"
+msgstr ""
+
+#: ../../source/VM 8eda8cfa02574ffaa265b29acff3c502 Contract Manual/HVM/HVM
+#: Related User book data e1887199957b4d56ab20a56e8860026b structure.rst:1229
+#: structure.rst:1240
+msgid "removeRow"
+msgstr ""
+
+#: ../../source/VM 52180e3123524e659dc8ec19f7d8b001 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1231
+msgid "通过指定的行名删除行，该行名对应的行可以不存在，不会报错。该行下的所有列簇和列全部会被删除。"
+msgstr ""
+
+#: ../../source/VM 21bcd63950c24b4ba8de33dcb33968fe
+#: 3d5e6ffd4baf46db983fa21a3af50ef7 Contract Manual/HVM/HVM Related User book
+#: data dcc0d3a623a34e5e855c602e22ea37ea structure.rst:1240 structure.rst:1777
+#: structure.rst:1854
+msgid "rowName：行名"
+msgstr ""
+
+#: ../../source/VM 3bd86fac4604457d86de8e3943107206 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1255
+msgid "通过指定的行、列簇、列查询是否包含某列。"
+msgstr ""
+
+#: ../../source/VM 0c9648fb39274b65a07976cc1a80103c Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1264
+msgid "rowName：行名colFamNam e：列簇名colName：列名"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: b5efc210eedd484ba1c4cfa2adb0dc63 book data structure.rst:1264
+msgid "返回类型：boolean若表中存在 该列，返回true否则返回false"
+msgstr ""
+
+#: ../../source/VM 768e30687d014caea0f77b094f5639c1
+#: 9b25a167ded64d47bacc96003fa1df2f Contract Manual/HVM/HVM Related User book
+#: data structure.rst:1278 structure.rst:1289
+msgid "containsRow"
+msgstr ""
+
+#: ../../source/VM 5b313b9dad0147b393e8ec2478b52421
+#: 969ad6a759944dd5b16821f1ccd11708 Contract Manual/HVM/HVM Related User book
+#: data structure.rst:1280 structure.rst:1455
+msgid "通过指定行名查询是否包含某行。"
+msgstr ""
+
+#: ../../source/VM 5ac17f587612448e98e6795948e09ec2 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1289
+msgid "rowN ame：行名"
+msgstr ""
+
+#: ../../source/VM 5ff2b742c234457286cb30ea7acce1fd Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1289
+msgid "返回类型：bo olean若表中存在该行，返回true否则返回false"
+msgstr ""
+
+#: ../../source/VM 2e9ad97c957f4af993a388d06122c0cf
+#: 5b78f3c1a74949859e942d743511e7ad 79f465c725364040ba35cf4132fef33d Contract
+#: Manual/HVM/HVM Related User b719a6822e524c129809ff3a0277ddcb book data
+#: structure.rst:1303 structure.rst:1314 structure.rst:1649 structure.rst:1660
+msgid "getRow"
+msgstr ""
+
+#: ../../source/VM 7e990aa6859e4daf83a53f5969641b0b Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1305
+msgid "获取一行的引用，行名参数可以任意指定，不一定是表内已经存在的行。"
+msgstr ""
+
+#: ../../source/VM 26e1ab908141488db33c7f6a142c4189 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1314
+msgid "返回类型：Row即使r owName不存在，也会返回一个Row对象，但是操作时将报错"
+msgstr ""
+
+#: ../../source/VM 6e88b38ee80e4c6b9e3f873699449d17 Contract Manual/HVM/HVM
+#: Related User a352a287beab41609bd58ce8bd73883d
+#: a7cd3b4bd1514314a02158c492081a6a book data fa1b1b1f61b544ac90dfe2fff6e79996
+#: structure.rst:1318 structure.rst:1339 structure.rst:1533 structure.rst:1708
+msgid "**示例:**"
+msgstr ""
+
+#: ../../source/VM 0bea98ad572e4c7cb5010ed866006017
+#: 1c2d72e3da7b4794982e83408dea46d0 451048a6780c4507919b149129b3abc0
+#: 5606eb9209684242a73868802bef6fe4 932bc3db6cfe4f669f35a6a00122e239 Contract
+#: Manual/HVM/HVM Related User book daf7c9e4b1484894af5b35d4fb6f15fc data
+#: structure.rst:1325 structure.rst:1336 structure.rst:1519 structure.rst:1530
+#: structure.rst:1694 structure.rst:1705
+msgid "getName"
+msgstr ""
+
+#: ../../source/VM 0c5c250ee0524f8c8e50684f35e2cc05 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1327
+msgid "获取该表的表名"
+msgstr ""
+
+#: ../../source/VM 67fe37c1e52646bcbd81382c19c8bc39 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1336
+msgid "返回类型：String返回该表的表名"
+msgstr ""
+
+#: ../../source/VM 638d52cd23924c8e980e1761bf60ac78 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1346
+msgid "**HyperTable.Row支持接口**"
+msgstr ""
+
+#: ../../source/VM 8b97db2fe9954f8c8e8b135cdc18d3dd Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1348
+msgid ""
+"因为行本身需要依赖于表，所以我们规定只能由 HyperTable 的 getRow() 接口获得 HyperTable.Row "
+"对象，而不是简单地通过new构造方式构造。同样，HyperTable.Row 对象内会保存自己所属的 HyperTable 对象的一份引用。"
+msgstr ""
+
+#: ../../source/VM 42b7376870e94110b1bfb7b1d1f29f00
+#: 85282be220614c87b1d8120bbe606b8d Contract Manual/HVM/HVM Related User book
+#: data structure.rst:1358 structure.rst:1552
+msgid "往该行插入值，与HyperTable接口功能一致。"
+msgstr ""
+
+#: ../../source/VM 7142bb203ea842aabd9553965b4f0322 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1367
+msgid "colFamName：列簇名colName：列名value：插入值"
+msgstr ""
+
+#: ../../source/VM 0009ff93dccb4076b14fed9ad25e3275 Contract Manual/HVM/HVM
+#: Related User book c5cf621853b446a48c96d96e879ca571 data structure.rst:1382
+#: structure.rst:1576
+msgid "从行中查询值，与HyperTable接口功能一致。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: b6f17849a9a548fd847f940e83704f96 book cc4a906cbb754b6fa9b64d43b76150f3 data
+#: structure.rst:1391 structure.rst:1585
+msgid "colFamName：列 簇名colName：列名"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: c48645a01d954bb598c1521f76d12e28 data f704ab6625734074be5d13bf179c45b2
+#: structure.rst:1391 structure.rst:1585
+msgid "返回类型：String返回查询 结果，若值存在，返回值，否则返回null。"
+msgstr ""
+
+#: ../../source/VM 63eb7498ad134f14a5fcb9d62c86ead9 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1407
+msgid "通过指定的列簇、列删除值。与HyperTable接口功能一致。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: acc70c594cec4c24a2b303ea25786a83 book data structure.rst:1416
+msgid "colFamName：列簇名colName：列名"
+msgstr ""
+
+#: ../../source/VM 2d493b06bbce48169998d2a149fc72dd Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1431
+msgid "通过指定的列簇、列查询是否包含某列。与HyperTable接口功能一致。"
+msgstr ""
+
+#: ../../source/VM 342f2a4d72254d939ef4f12f52dd283e Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1440
+msgid "con tainsKey"
+msgstr ""
+
+#: ../../source/VM 99352e3b72fe42209d45c40cb5a05d75 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1440
+msgid "colFamName ：列簇名colName：列名"
+msgstr ""
+
+#: ../../source/VM 9c72a60687014c9d9c704b81148010f2 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1440
+msgid "返回类型：boolean若行 中存在该列，返回true否则返回false"
+msgstr ""
+
+#: ../../source/VM 606f5320c19c42aba6340bfb61f10b3f Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1453
+msgid "containsColFam"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: fe70f811a43f4913ac5be6426ce5f8a4 structure.rst:1464
+msgid "co ntainsColFam"
+msgstr ""
+
+#: ../../source/VM 34958f2638d0417f9fd9526ad546a6aa Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1464
+msgid "colFa mName：行名"
+msgstr ""
+
+#: ../../source/VM 6e4081c6570d4c0a8581f3dce66f3751 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1464
+msgid "返回类型：boolean若行 中存在该列簇，返回true，否则返回false"
+msgstr ""
+
+#: ../../source/VM 0a3d5dcbd5f84e21a014e70f6f50830d
+#: 76bdcc4223db452b8347d3e119220e47 Contract Manual/HVM/HVM Related User book
+#: data structure.rst:1475 structure.rst:1486
+msgid "getTable"
+msgstr ""
+
+#: ../../source/VM 56fb440076654e69a3707bb12641f271 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1477
+msgid "获取所属的表的引用"
+msgstr ""
+
+#: ../../source/VM 2355d97d24674a729966ebf0981bb733 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1486
+msgid "返回类型：HyperTable返回行所属的HyperTable对象"
+msgstr ""
+
+#: ../../source/VM 338c442e884349c1aeae0d12fc98aecb Contract Manual/HVM/HVM
+#: Related User book data fdcc8a1918b342f48e49e7a72cdaa473 structure.rst:1496
+#: structure.rst:1507
+msgid "getColFam"
+msgstr ""
+
+#: ../../source/VM 0de76f0d5803424abc527e95b35c577d Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1498
+msgid "获取一列簇的引用，列簇名参数可以任意指定，不一定是行内已经存在的列簇。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: dc090ca7168449c1b201849fa9452a12 structure.rst:1507
+msgid "colFamName：列簇名"
+msgstr ""
+
+#: ../../source/VM 119525ee566e46f3a9bd66a8d0a703b0 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1507
+msgid "返回类型：ColumnFamily返回ColumnFamily对象"
+msgstr ""
+
+#: ../../source/VM 02b54d5ebbed4db7b83dd02b8addf966 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1521
+msgid "获取该行名"
+msgstr ""
+
+#: ../../source/VM 50e718dd93f04ccba6c3f2886498d6b1
+#: 651b0247881441839c2a9fb4b77e7536 Contract Manual/HVM/HVM Related User book
+#: data structure.rst:1530 structure.rst:1705
+msgid "返回类型：String返回该行的行名"
+msgstr ""
+
+#: ../../source/VM 83cf1a5f0f744e558ecb04b0ae12ccd9 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1540
+msgid "**HyperTable.ColumnFamily支持接口**"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: f7d26beac6cc4aac8eeb1c8fbbf8ee8d structure.rst:1542
+msgid ""
+"与行同理，因为列簇本身需要依赖于行，所以我们规定只能由 HyperTable.Row 的 getColFam() 接口获得 "
+"HyperTable.ColumnFamily 对象，而不是通过 new 的构造方式构造。同样，HyperTable.ColFam "
+"对象内会保存自己所属的 HyperTable.Row 和 HyperTable 对象的各一份引用。"
+msgstr ""
+
+#: ../../source/VM 9bf1e6b96fc14fc490b47352c8faf3e8 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1561
+msgid "colName：列名value：插入值"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a20e6fb860eb496dae4d1660d4485f73 book data structure.rst:1601
+msgid "通过指定的列删除值。与HyperTable接口功能一致。"
+msgstr ""
+
+#: ../../source/VM 53f62b9e4266408ea430dcb0d5d13540 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1610
+msgid "colName：列名"
+msgstr ""
+
+#: ../../source/VM 6caf3c33d09f4c20a3fe1bd5a7e4cd02 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1625
+msgid "通过指定的列查询是否包含某列。与HyperTable接口功能一致。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: d601ccdbb3014cadb23d9a2cbce49402 data structure.rst:1634
+msgid "colN ame：列名"
+msgstr ""
+
+#: ../../source/VM 5c8a13abdfa24bd792ece08eb7b0a03f Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1634
+msgid "返回类型：bo olean若行中存在该列，返回true否则返回false"
+msgstr ""
+
+#: ../../source/VM 30b84d2da7144852bce90ab9bc826df3 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1651
+msgid "获取所属的行的引用"
+msgstr ""
+
+#: ../../source/VM 7c7db214bac842ae9cb9bef835a358be Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1660
+msgid "返回类型：Row返回列簇所属的Row对象"
+msgstr ""
+
+#: ../../source/VM 1484e24edd0543b19efffc7ae0e6c4d9
+#: 2d716e01715b47a2ab13a109663a5808 Contract Manual/HVM/HVM Related User book
+#: data structure.rst:1670 structure.rst:1681
+msgid "setRow"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: da717c9142934b33be7fefa31358dec1 data structure.rst:1672
+msgid "注意该新行所属的表必须与该列簇所属的表为同一张表，否则会抛出异常。"
+msgstr ""
+
+#: ../../source/VM 681a61c8589c48f397a61d9de4669da0 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1681
+msgid "row：行对象"
+msgstr ""
+
+#: ../../source/VM 46da258094234543a0ab26f2c179d491 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1696
+msgid "获取该列簇名"
+msgstr ""
+
+#: ../../source/VM 0beb3363364e4cb4912d13632a92bbc2 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1715
+msgid "迭代器接口"
+msgstr ""
+
+#: ../../source/VM 290a5f9e8c6746f9929e872002c36b10 Contract Manual/HVM/HVM
+#: Related User book data dfa448443cf847edb03dc0dad4fcb04d structure.rst:1718
+#: structure.rst:1729
+msgid "rows"
+msgstr ""
+
+#: ../../source/VM 40feea0b83b64bdc9a82ed9650d341c5 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1720
+msgid "rows为HyperTable遍历行的迭代器，在迭代过程中不能修改数据。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: b4bb23f6cdb54baa9a19e56492affa30 book data structure.rst:1729
+msgid "返回类型：RowSetRowSet为实现了I terable的内部类。其使用方法和普通集合的迭代器一样。"
+msgstr ""
+
+#: ../../source/VM 3f72138846a748da9d6e90554c577b4c Contract Manual/HVM/HVM
+#: Related User b38d6dd7520d480a9d1e7cb6c57ba130 book
+#: c11ffd97d3344c24b574908648f68912 data structure.rst:1752 structure.rst:1798
+#: structure.rst:1836
+msgid "**注意事项**\\ ："
+msgstr ""
+
+#: ../../source/VM 2332075ff6714df28d3dd0821779e22d
+#: 6167b25c82f749189237764d4384aba1 Contract Manual/HVM/HVM Related User book
+#: data structure.rst:1754 structure.rst:1883
+msgid "行迭代器的迭代顺序为行名加上@符号后的字典序升序。这意味着当表中的行名存在相同前缀，不同长度的情况下，行迭代器的迭代顺序不为严格的行名字典序升序。"
+msgstr ""
+
+#: ../../source/VM 803fe783b8b948a89dbec306f9bc756c
+#: 86bbecb6760e409ebf19cc783e3c8692 Contract Manual/HVM/HVM Related User book
+#: data structure.rst:1756 structure.rst:1885
+msgid "例如，表中存在如下四行时:``t, t1, t2, ta``\\ ，其迭代顺序如下表所示"
+msgstr ""
+
+#: ../../source/VM 1ceab46914d34c3aa0110576cba86b82 Contract Manual/HVM/HVM
+#: Related User book c734346eec2c4ae596eb9f51dc56ffae data structure.rst:1759
+#: structure.rst:1888
+msgid "表中行名的字典序"
+msgstr ""
+
+#: ../../source/VM 080aba67d1e74cd6bc3fd23e60d8aba2
+#: 36f4036b62894d6db0dbf50dd4669f4f 6a4601422e6d43afb8b6d31b865c715a Contract
+#: Manual/HVM/HVM Related User book data f9aea14188f24843a4a2c37a5b06a8c4
+#: structure.rst:1759 structure.rst:1762 structure.rst:1888 structure.rst:1891
+msgid "t"
+msgstr ""
+
+#: ../../source/VM 2909ed6015944641ab44885fa750236a
+#: 3b590dd5984747439036652782fd81b3 6a4b6cb00eae4080a854503ebd4d2318
+#: 8cd43f914c784b0590217ebcbf055732 Contract Manual/HVM/HVM Related User book
+#: data structure.rst:1759 structure.rst:1762 structure.rst:1888
+#: structure.rst:1891
+msgid "t1"
+msgstr ""
+
+#: ../../source/VM 5fbbddeb5a1f46bc988ba06839176953
+#: 610d1f3b75e74a4ba36a6c3a25998669 683d306230504b939510f1ecc20aeec8 Contract
+#: Manual/HVM/HVM Related User book data f566122fa0c04046b2e6fb7c57fd8021
+#: structure.rst:1759 structure.rst:1762 structure.rst:1888 structure.rst:1891
+msgid "t2"
+msgstr ""
+
+#: ../../source/VM 1e36b10f86c9411285b1876793178717
+#: 562d3739190b422bb496e8a16dfe87ea 673387ece0454019b002f14b7312794a Contract
+#: Manual/HVM/HVM Related User book d4bc1964d62e4e328dcb257ed606e8cb data
+#: structure.rst:1759 structure.rst:1762 structure.rst:1888 structure.rst:1891
+msgid "ta"
+msgstr ""
+
+#: ../../source/VM 1e1680f00e0444f7aba77a1c368dc9ab
+#: 3607faaa38e44d7d949fa8eb8fb48d3e Contract Manual/HVM/HVM Related User book
+#: data structure.rst:1761 structure.rst:1890
+msgid "加上@后的字典序"
+msgstr ""
+
+#: ../../source/VM 074de044a3904894a608fa4ad6bd6d0a
+#: 54c4f6e5a768488e8ecf4c0a7972ae42 Contract Manual/HVM/HVM Related User book
+#: data structure.rst:1761 structure.rst:1890
+msgid "t1@"
+msgstr ""
+
+#: ../../source/VM 65e1debeb5d2425b8dfd3b401bc23217 Contract Manual/HVM/HVM
+#: Related User book data de9081e729274f33b3e9ca6269fb4d3c structure.rst:1761
+#: structure.rst:1890
+msgid "t2@"
+msgstr ""
+
+#: ../../source/VM 2fba1c03b7c642ecb888b202be8a7abc
+#: 3909afc3f3e64358acba44276e02820a Contract Manual/HVM/HVM Related User book
+#: data structure.rst:1761 structure.rst:1890
+msgid "t@"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: c15951cd712444dd90c045341be5ce45 data e9cb69ab93db4b2caab2505fff74a183
+#: structure.rst:1761 structure.rst:1890
+msgid "ta@"
+msgstr ""
+
+#: ../../source/VM 7afed5c97994426d943f672d3cf5b672
+#: 8bae624dab3340e39fe1d6c039ac692d Contract Manual/HVM/HVM Related User book
+#: data structure.rst:1762 structure.rst:1891
+msgid "实际的迭代顺序"
+msgstr ""
+
+#: ../../source/VM 94b6fb6cd3d64a0f995c4da15fee7c13 Contract Manual/HVM/HVM
+#: Related User book d347d3d3b4b1400bb194e1540273d690 data structure.rst:1766
+#: structure.rst:1777
+msgid "colFams"
+msgstr ""
+
+#: ../../source/VM 7563d8985d484293b234e81769689276 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1768
+msgid "遍历列簇的迭代器，在迭代过程中不能修改数据。迭代器返回的是列簇的名称，当rowName对应行不存在时，返回一个空的迭代器。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a23bd61c288a40e4966d0e6f9da04f4f book data structure.rst:1777
+msgid "返回类型 ：ColFamSetColFamSet为实现了Iterable的内 部类。其使用方法和普通集合的迭代器一样。"
+msgstr ""
+
+#: ../../source/VM 36e23ff17f4b45d8ad35fba3921f759a Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1800
+msgid "与行迭代器相同，列簇迭代器的迭代顺序为列簇名加上@符号后的字典序升序。"
+msgstr ""
+
+#: ../../source/VM 0538a97f46ac494f974c6d20062174c7 Contract Manual/HVM/HVM
+#: Related User book ce5fa11379f642c99d7290d50534c23e data structure.rst:1803
+#: structure.rst:1814
+msgid "cols"
+msgstr ""
+
+#: ../../source/VM 47a88fe3ded940d7bccbd58551af3796 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1805
+msgid "遍历列的迭代器，在迭代过程中不能修改数据。迭代器返回的是列的名称，当rowName和colFamName对应列簇不存在时，返回一个空的迭代器。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: c10cd5f021d84b808f0f558ca4f6714e data structure.rst:1814
+msgid "rowName：行名 colFamName：列簇名"
+msgstr ""
+
+#: ../../source/VM 155670090e0e4fd29043482980390e00 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1814
+msgid "返回类 型：ColSetColSet为实现了Iterable的内部 类。其使用方法和普通集合的迭代器一样。"
+msgstr ""
+
+#: ../../source/VM 19fc308653ad40029e57b6917041c9bb Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1838
+msgid "与行迭代器和列簇迭代器不同，列迭代器的迭代顺序为列名的字典序升序。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: eb2c3a1e8ba644099d12a387e0cdb2c1 structure.rst:1840
+msgid "例如，列簇中存在列： c,c1,c2,ca其迭代顺序为c,c1,c2,ca。"
+msgstr ""
+
+#: ../../source/VM 647a80940d654e7a930c28e0d03e7010 Contract Manual/HVM/HVM
+#: Related User a19a3b50a2124ea2a3f30d2a63d67701 book data structure.rst:1843
+#: structure.rst:1854
+msgid "seekRows"
+msgstr ""
+
+#: ../../source/VM 444408b0439d4a7e8d017facadc8cb66 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1845
+msgid "通过行名创建行迭代器的Set，起始位置为行名对应的位置"
+msgstr ""
+
+#: ../../source/VM 0ddfca9646204ddbbb7107d9e9177d4b Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1854
+msgid "返回类型：RowSet"
+msgstr ""
+
+#: ../../source/VM 25e41a2f26664d53ba875679457a4130 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1873
+msgid "**注意事项：**"
+msgstr ""
+
+#: ../../source/VM 4df7912d6fe6421190e0f184b5fb2d2b Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1875
+msgid "当传入的行名为空或者包含分隔符时，会抛出Runtime异常"
+msgstr ""
+
+#: ../../source/VM 1ad38d3eda6648798d03c8b3d3ac8c7a Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1877
+msgid "当传入行名在table中不存在时，存在两种情况："
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: f5840af6a755496393ff06d6d6b26964 structure.rst:1879
+msgid "该行排在table中所有行后面（行的排列顺序规则请查看行迭代器注意事项），创造迭代器失败，抛出异常"
+msgstr ""
+
+#: ../../source/VM 618bdf76be3742d8b1237c4e0dbe3c43 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1881
+msgid "table中存在行排在该行后面，返回起始位置为排在该行后面第一行的行迭代器。"
+msgstr ""
+
+#: ../../source/VM 61bbbd719fc44f05b2b850b99a630d97 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1900
+msgid "往HyperTable中插入数据"
+msgstr ""
+
+#: ../../source/VM 5c296bb82ee74300a88be3bd3fc49281 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1921
+msgid "对行进行迭代"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: d591abc513304e74badeb86e018261d8 data structure.rst:1942
+msgid "【源码包可参考HVM使用手册 - **HVM合约Demo附件源码 - hvm-manual-demo的hypertable目录**\\ 】"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: f090d8e131924cffb49eb6f36183f34b structure.rst:1946
+msgid "4. **NestedMap介绍**"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a6db8321d0ad47efb19b92336ba6a7ff book data structure.rst:1948
+msgid "NestedMap是HVM内部定义的一种类型，它基于另一个HVM内部定义的类型HyperMap做了改进。主要体现在"
+msgstr ""
+
+#: ../../source/VM 90ddc0031d2740c8b46960e7e997f4be Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1950
+msgid "在功能上，HyperMap不支持嵌套使用，NestedMap支持嵌套使用。"
+msgstr ""
+
+#: ../../source/VM 355f3a59edcd4b998530714e75c6335c Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1952
+msgid "在性能上，NestedMap对于缓存做了优化，相同的场景中，NestedMap的使用效率要高于HyperMap"
+msgstr ""
+
+#: ../../source/VM 96768517e0354ba1a31a268a447efe43 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1959
+msgid "NestedMap和HashMap一样，实现了Map接口，所以其提供的功能与HashMap基本一致，不过在部分接口的使用上还是略有差别，具体请查看直接接口章节。"
+msgstr ""
+
+#: ../../source/VM 99f12c58808448a1843a06b7da16fb7c Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1963
+msgid "NestedMap定义为合约类的字段时使用时要加上@StoreField注解"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: eb4abff1591643a996710d7d6caf7f3a structure.rst:1965
+msgid "NestedMap的key的类型必须为八种基本类型或者是String类型"
+msgstr ""
+
+#: ../../source/VM 2e614acf21ff4bc38288e7b979faf60a Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1967
+msgid "NestedMap不支持clear功能，调用clear方法会抛出 UnsupportedOperationException异常。"
+msgstr ""
+
+#: ../../source/VM 22bdbeeb28374a9c9ed00a225e4a1266 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:1970
+msgid "NestedMap不支持size功能，调用size方法会抛出 UnsupportedOperationException异常。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a1acd2d3097f47ad83f86f77b38df1d3 book data structure.rst:1973
+msgid "与其他账本数据结构不同，NestedMap允许在合约方法中定义和初始化，不过在合约方法中定义的NestedMap对象，必须先被put进一个已经初始化过的NestedMap对象中，才能进一步的使用。"
+msgstr ""
+
+#: ../../source/VM 60eb1b69687a4cdaa74af6bd8ec6de58 Contract Manual/HVM/HVM
+#: Related User b061cbe0955f4e708a87bd020d47ef98 book data structure.rst:1989
+#: structure.rst:2030
+msgid "正确示例："
+msgstr ""
+
+#: ../../source/VM 18486165e568482da0a45a9f9ba1422a Contract Manual/HVM/HVM
+#: Related User book data structure.rst:2003
+msgid "NestedMap的value类型\\ **不推荐**\\ 使用一些含有map或list这种会不断增长的保存数据的结构体；"
+msgstr ""
+
+#: ../../source/VM 7f13f20351fa4fbc9bc9869b40aed473 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:2016
+msgid "NestedMap的Value不能是泛型，也不能是除了NestedMap以外的带有泛型的类型。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a67cd0bfc74e4ed2a5e08e604a70ce34 book data structure.rst:2049
+msgid "非嵌套使用，往NestedMap中插入数据"
+msgstr ""
+
+#: ../../source/VM 57966d220a0f4ae48e64c1a8fa3653af Contract Manual/HVM/HVM
+#: Related User book data structure.rst:2064
+msgid "非嵌套使用，对NestedMap进行迭代"
+msgstr ""
+
+#: ../../source/VM 1fc22b1e7e45400b9f9c86fc2ca73d89 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:2085
+msgid "嵌套使用，往一个两层的NestedMap中插入数据"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: d86d6b1179504719b90033bc76bb952e data structure.rst:2103
+msgid "嵌套使用，对一个两层的NestedMap进行迭代"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: f3932a5131d54c51adfc09574ce009d8 structure.rst:2127
+msgid "**【源码包可参考HVM使用手册 - HVM合约Demo附件源码 - hvm-manual-demo的nestedmap目录】**"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: c6bb1768e97a41b8bd9642985b74561f data structure.rst:2135
+msgid "和提供功能一样，NestedMap支持的接口与与HashMap基本一致。不过需要注意的是put和remove接口不会返回旧值而是直接返回空。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: e32a7e67193f47fcbaf13e7dc5f07955 structure.rst:2142
+msgid "向NestedMap添加键值对"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: f2870bc96c10498a8880bcaa896ba785 structure.rst:2151
+msgid ""
+"key和value都不能为空，若k为空， 会抛出异常。返回值固定为空NestedMap的value类型 "
+"为NestedMap的情况下，如果NestedMap中已存在该key ，会将原来的value所包含的所有数据在账本中删除。"
+msgstr ""
+
+#: ../../source/VM 83e202e5a6ff41669b12b65604e4f26e Contract Manual/HVM/HVM
+#: Related User book data structure.rst:2168
+msgid "通过key得到NestedMap中对应的value"
+msgstr ""
+
+#: ../../source/VM 50c2c441771e427aae544f54529b290b Contract Manual/HVM/HVM
+#: Related User book data structure.rst:2177
+msgid "若key为null返回null。 若map中存在key，返回对应的value。若不存在，返回null"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: b685543efbf34e339f28cd105b8be8ce book data structure.rst:2192
+msgid "删除NestedMap中的键值对"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: efc0e01336724b238967907aceb41d80 structure.rst:2201
+msgid "key：被 删除的键"
+msgstr ""
+
+#: ../../source/VM 099c9b8ab95f4a0fa4a578acffc3a87e Contract Manual/HVM/HVM
+#: Related User book data structure.rst:2201
+msgid ""
+"返回值固定为空NestedM ap的value类型为NestedMap的情况下若map中存在ke "
+"y，会删除key对应的NestedMap对象的所有键值对。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: c2dd74caa3a2454fba354c78c174c0c7 data structure.rst:2217
+msgid "判断NestedMap是否为空"
+msgstr ""
+
+#: ../../source/VM 3ca010cd137c40f999cb00a60fdfc9fd Contract Manual/HVM/HVM
+#: Related User book data structure.rst:2226
+msgid "如果NestedMap为空返回true，否则返回false"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a01e75e80db74da2a9a000f6553ab88a book data structure.rst:2240
+msgid "判断NestedMap是否包含key"
+msgstr ""
+
+#: ../../source/VM 2a4cf75eb162401fbfbe5bc2af9e8279 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:2249
+msgid "如果NestedMap中包含该key返回true，否则返回false"
+msgstr ""
+
+#: ../../source/VM 0947a6f171ed4e9f864bff884d9368b4 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:2263
+msgid "判断NestedMap与对象o是否值相等"
+msgstr ""
+
+#: ../../source/VM 57ee01d69a894920a8fe38548924434e Contract Manual/HVM/HVM
+#: Related User book data structure.rst:2272
+msgid "NestedMap对象与参数o值相等则返回true，否则返回false"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: e8fb937da0dd497f820eff0cad6bf298 structure.rst:2286
+msgid "将一个map对象的全部键值对放入NestedMap中"
+msgstr ""
+
+#: ../../source/VM 6c0ede3940b94f0dacd76ae5bd8c3bc2 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:2295
+msgid "m：需要存入NestedMap的map对象"
+msgstr ""
+
+#: ../../source/VM 681a6f5aa775423bb7f9a1d2f6102b03 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:2312
+msgid "获取NestedMap的key的迭代器"
+msgstr ""
+
+#: ../../source/VM 692212b29fc14424b469d9d5d6bc5508 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:2344
+msgid "获取NestedMap的value的迭代器"
+msgstr ""
+
+#: ../../source/VM 32c9590d98884daabf6f2f358d7d61d6 Contract Manual/HVM/HVM
+#: Related User book data structure.rst:2376
+msgid "获取NestedMap的键值对的迭代器"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a7fd5fc0f1f94284b693fcae16abc385 book data structure.rst:2412
+msgid "当传入的key不存在于NestedMap中时，迭代器依旧能够创建成功，其起始位置为NestedMap中第一个比参数key大的节点的位置。"
+msgstr ""
+
+#: ../../source/VM 097d32dfd02947afb647fa0cfa4d8979
+#: 2735a5d569b04caea50f244a8aa2d2af Contract Manual/HVM/HVM Related User book
+#: data structure.rst:2421 structure.rst:2486
+msgid "key为null时抛出异常返回类型：Set"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book data
+#: e12984f5dea4430da23aa337c1ae0a5f structure.rst:2453
+msgid "key：迭 代器起始节点的key"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User book
+#: c1674d284c0a4b71bf4227de3e9b255f data structure.rst:2453
+msgid "key为 null时抛出异常返回类型：Collection"
+msgstr ""
+

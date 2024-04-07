@@ -1,0 +1,384 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/VM 2c1e6ebb6d99435d9f169bac91516001 Manual.rst:4 Manual/Oracle
+#: Related User
+msgid "预言机"
+msgstr ""
+
+#: ../../source/VM 0af5345ac62441d9b44d22259d5ea4ed Manual.rst:7 Manual/Oracle
+#: Related User
+msgid "1. 引言"
+msgstr ""
+
+#: ../../source/VM 8842d997ac8747d7a0d53b0d030bc3fd Manual.rst:10 Manual/Oracle
+#: Related User
+msgid "1.1 编写目的"
+msgstr ""
+
+#: ../../source/VM Manual.rst:12 Manual/Oracle Related User
+#: ae7a24476dfd4cee8c6ece7f08bea9f6
+msgid "基于hvm的特点，提供外部数据源获取oracle的访问，将链上链下数据互通。了解预言机功能前需要先了解hvm的编写规范。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:15 Manual/Oracle Related User
+#: d1a97d7dea7a44a29cf521bdac1cd5ab
+msgid "1.2 核心特性"
+msgstr ""
+
+#: ../../source/VM 5b9c4147df074962b87b325bfdca754d Manual.rst:17 Manual/Oracle
+#: Related User
+msgid "为提供给区块链智能合约一个安全可靠的获取外部数据源的功能，我们引入Oracle预言机来帮助获取可信的外部数据，并将获取到的外部数据提供给合约进行使用。通过HVM智能合约发起获取外部数据的请求，由Oracle预言机将外部数据获取后，返回给HVM智能合约使用。本节将介绍如何通过HVM合约使用Oracle服务。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:19 Manual/Oracle Related User
+#: ec1b89535eac49e5959cd3b356c298e9
+msgid "一次完整的Oracle执行流程如下："
+msgstr ""
+
+#: ../../source/VM Manual.rst:21 Manual/Oracle Related User
+#: f7b8774390af440595d003e736d87393
+msgid "用户调用HVM合约请求Oracle服务；"
+msgstr ""
+
+#: ../../source/VM 600ce2f0e9734b3496e47c71f4317f26 Manual.rst:23 Manual/Oracle
+#: Related User
+msgid "HVM执行合约以及Oracle服务，并返回uuid（uuid表示本次Oracle请求的唯一ID，绑定回调交易哈希）；"
+msgstr ""
+
+#: ../../source/VM 399def58780a4ca0b541edc129a42bd3 Manual.rst:25 Manual/Oracle
+#: Related User
+msgid "Oracle服务执行成功，平台发起回调交易；"
+msgstr ""
+
+#: ../../source/VM Manual.rst:27 Manual/Oracle Related User
+#: eb654e33f8474d1bbf09c857a4dbf27e
+msgid "在回调交易中执行用户编写的回调逻辑；"
+msgstr ""
+
+#: ../../source/VM 9650b8cea734479e8c24cefd61b914b2 Manual.rst:29 Manual/Oracle
+#: Related User
+msgid "在这个流程当中，与用户发生交互的步骤包括以下两点："
+msgstr ""
+
+#: ../../source/VM 1777c304b3fd435f97e77f8d21ce7fdd Manual.rst:31 Manual/Oracle
+#: Related User
+msgid "调用HVM合约请求Oracle服务（1）"
+msgstr ""
+
+#: ../../source/VM Manual.rst:33 Manual/Oracle Related User
+#: aa11e89e8f4b472bb254e597b705559f
+msgid "编写回调函数逻辑（4）"
+msgstr ""
+
+#: ../../source/VM Manual.rst:36 Manual/Oracle Related User
+#: d53378bdbfee4a44b67ecd0237a0cda5
+msgid "2. 操作说明"
+msgstr ""
+
+#: ../../source/VM 9a5563cf5522463999a8048def931298 Manual.rst:39 Manual/Oracle
+#: Related User
+msgid "2.1 调用合约请求Oracle服务"
+msgstr ""
+
+#: ../../source/VM Manual.rst:41 Manual/Oracle Related User
+#: ecb4df0299f44bddbb832a194aefe573
+msgid "本小节将介绍如何编写HVM合约来调用Oracle服务。需要在maven或gradle导入 **1.1.0及以上** 版本的hvm-sdk。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:44 Manual/Oracle Related User
+#: b8b1bfbcedcf48ecb1e5a48e22e050af
+msgid "2.1.1 Oracle服务接口"
+msgstr ""
+
+#: ../../source/VM 8d904eed6f064d2c912e32491f79d5c0 Manual.rst:46 Manual/Oracle
+#: Related User
+msgid "在HVM-SDK里的BaseContract中，我们增加了新接口以提供用户通过调用合约的方式使用Oracle服务，接口如下::"
+msgstr ""
+
+#: ../../source/VM 67211634da474ce5adcc47cc5c0d89c8 Manual.rst:50 Manual/Oracle
+#: Related User
+msgid "其中OracleRequest的结构如下::"
+msgstr ""
+
+#: ../../source/VM Manual.rst:62 Manual/Oracle Related User
+#: b320ffd18fb6426fb3551e142ce7673d
+msgid "其中各参数的意义如下："
+msgstr ""
+
+#: ../../source/VM 4236bea305a44e7fa211d7b8faaa34e8 Manual.rst:64 Manual/Oracle
+#: Related User
+msgid "url：请求资源的web网址，必须是支持https的服务站点"
+msgstr ""
+
+#: ../../source/VM 6dc17baf510249489b37d6116e11b94d Manual.rst:66 Manual/Oracle
+#: Related User
+msgid "method：请求方法。RequestMethod是一个默认方法，包括GET、POST，默认为GET方法，其结构如下::"
+msgstr ""
+
+#: ../../source/VM 030628079fcb4368b04c96e57e8537fa Manual.rst:73 Manual/Oracle
+#: Related User
+msgid "header：请求资源时想要带上的自定义http请求头"
+msgstr ""
+
+#: ../../source/VM 50cac31cdd4141c5bd1d383cf4d3e591 Manual.rst:75 Manual/Oracle
+#: Related User
+msgid "body：请求资源时想要带上的请求体"
+msgstr ""
+
+#: ../../source/VM 00c4685e46de4b54b1a1a57bc2abdd6d Manual.rst:77 Manual/Oracle
+#: Related User
+msgid "bizID：用户针对业务需求自定义的唯一标识ID"
+msgstr ""
+
+#: ../../source/VM 0371cc752050404d95066e165bf3fe7b Manual.rst:79 Manual/Oracle
+#: Related User
+msgid "callBackAddress：回调函数所在的合约地址"
+msgstr ""
+
+#: ../../source/VM 561622f290f14155a549555d1bdaae26 Manual.rst:81 Manual/Oracle
+#: Related User
+msgid ""
+"callBackMethod：回调函数名，回调函数声明格式为: `<return_type>  "
+"<method_name>(OracleResponse response);`"
+msgstr ""
+
+#: ../../source/VM 26c7dafa264849ff89028b2d122b7811 Manual.rst:84 Manual/Oracle
+#: Related User
+msgid "2.1.2 合约中调用Oracle服务"
+msgstr ""
+
+#: ../../source/VM 15e9449d9ff746d9b1a2b3953dd03588 Manual.rst:86 Manual/Oracle
+#: Related User
+msgid ""
+"我们可以在合约中调用 `callOracle` 接口来使用Oracle服务，下面的例子是向 `https://www.hyperchain.cn`"
+" 请求数据，并将 `callbackOracle` "
+"作为我们的回调函数，回调函数将在下一小节进行介绍。在调用Oracle服务接口后，返回uuid，uuid绑定回调交易的交易哈希"
+msgstr ""
+
+#: ../../source/VM 34c0f4712a814d4ea2b6eeec97fba7ac Manual.rst:112
+#: Manual/Oracle Related User
+msgid "2.2 回调函数"
+msgstr ""
+
+#: ../../source/VM Manual.rst:114 Manual/Oracle Related User
+#: b257eed7c8a44d6eb42ed25e321e2219
+msgid ""
+"在前面的章节中，我们在调用Oracle请求中传入了回调函数的名称，平台在成功执行预言机请求后 **自动发起回调交易，执行用户指定的回调函数** "
+"。回调函数由用户自己实现，本节我们将介绍如何编写回调函数。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:117 Manual/Oracle Related User
+#: f86c0ac995db45cfa1c52fec2998df33
+msgid "2.2.1 回调函数介绍"
+msgstr ""
+
+#: ../../source/VM 48b15dd6c3e244c6bf2c37d4a56e866d Manual.rst:119
+#: Manual/Oracle Related User
+msgid "回调函数的 **参数有且仅有一个OracleResponse，而且在回调函数中不能再次发起Oracle请求调用** ，回调函数的格式如下："
+msgstr ""
+
+#: ../../source/VM 7a4fb403e1a244d0b1f7b13e288b02cb Manual.rst:121
+#: Manual/Oracle Related User
+msgid "`<return_type>  <method_name>(OracleResponse response);`"
+msgstr ""
+
+#: ../../source/VM Manual.rst:123 Manual/Oracle Related User
+#: f511ff21b3164fb2af7ce44165528240
+msgid "其中OracleResponse的结构如下::"
+msgstr ""
+
+#: ../../source/VM Manual.rst:135 Manual/Oracle Related User
+#: b782db758a554c39997efab9f00fbf6e
+msgid "各参数的意义如下："
+msgstr ""
+
+#: ../../source/VM 16a898c968a94237bf95458ff3f14ed3 Manual.rst:137
+#: Manual/Oracle Related User
+msgid "code：预言机服务制定的状态码标准，具体的返回结果状态码如下表所示："
+msgstr ""
+
+#: ../../source/VM 44e6577f1ad84008a2e49e91f10f9513 Manual.rst:140
+#: Manual/Oracle Related User
+msgid "Oracle回调状态码"
+msgstr ""
+
+#: ../../source/VM 271ad7197bec4009a5a87a540b00dcaa Manual.rst:140
+#: Manual/Oracle Related User
+msgid "含义"
+msgstr ""
+
+#: ../../source/VM Manual.rst:142 Manual/Oracle Related User
+#: b7fc4d5a94724456b8597427092cb407
+msgid "200"
+msgstr ""
+
+#: ../../source/VM Manual.rst:142 Manual/Oracle Related User
+#: b4d3a68001784c76aba1621708ff8b50
+msgid "请求成功"
+msgstr ""
+
+#: ../../source/VM Manual.rst:143 Manual/Oracle Related User
+#: cefa5d83d60e4660a491d00157abacbc
+msgid "404"
+msgstr ""
+
+#: ../../source/VM Manual.rst:143 Manual/Oracle Related User
+#: c86811ebe69b4493baf54e4ea3f10bb7
+msgid "请求资源不存在"
+msgstr ""
+
+#: ../../source/VM Manual.rst:144 Manual/Oracle Related User
+#: d050356b0a86429cbb2dd3a935a349a4
+msgid "999"
+msgstr ""
+
+#: ../../source/VM 90f9b2edff5744a5b928d02b790c403c Manual.rst:144
+#: Manual/Oracle Related User
+msgid "请求超时"
+msgstr ""
+
+#: ../../source/VM Manual.rst:147 Manual/Oracle Related User
+#: e8eb97331d4b4dd2a89b68b1d285f3fd
+msgid "message：状态码表示的信息"
+msgstr ""
+
+#: ../../source/VM 8fdb17fe4b6d44c6b2cff051da2e6a03 Manual.rst:149
+#: Manual/Oracle Related User
+msgid "repHeader：响应请求头"
+msgstr ""
+
+#: ../../source/VM 34481e1cf87b4fe2939f90a900f3a124 Manual.rst:151
+#: Manual/Oracle Related User
+msgid "repBody：响应请求体"
+msgstr ""
+
+#: ../../source/VM Manual.rst:153 Manual/Oracle Related User
+#: ec0b02b1546f45fa9f1df65fb366c0ce
+msgid "uuid：由平台计算出的每次Oracle请求的唯一标识"
+msgstr ""
+
+#: ../../source/VM Manual.rst:155 Manual/Oracle Related User
+#: b484d4aaa38b4293804b0a61f44967c9
+msgid "bizId：用户针对业务需求自定义的唯一标识ID"
+msgstr ""
+
+#: ../../source/VM 00353fb23e184684a628f73efad4fb8b Manual.rst:157
+#: Manual/Oracle Related User
+msgid "callerContract：发起Oracle服务请求的合约地址"
+msgstr ""
+
+#: ../../source/VM 68476581a3014ec29c26fe5d9d7ab2c2 Manual.rst:160
+#: Manual/Oracle Related User
+msgid "2.2.2 编写回调函数逻辑"
+msgstr ""
+
+#: ../../source/VM 26c5dac087e14d0fb47c727954920e54 Manual.rst:162
+#: Manual/Oracle Related User
+msgid "在介绍完回调函数逻辑后，我们给出一个简单的回调函数示例，通过回调函数打印一些响应信息。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:186 Manual/Oracle Related User
+#: b4b284673ed4415eb09577363243a27e
+msgid "2.2.3 获取回调交易哈希"
+msgstr ""
+
+#: ../../source/VM 1ee408bf696241a9be52295732ae6a8b Manual.rst:188
+#: Manual/Oracle Related User
+msgid ""
+"前面提到过，Oracle服务执行成功，平台发起回调交易，在回调交易中执行用户编写的回调逻辑。如果用户想要获取这笔回调交易的交易哈希，可以在合约中执行"
+" `getCallbackTxHash` 的逻辑，该接口由BaseContract提供，根据uuid返回回调交易的哈希。"
+msgstr ""
+
+#: ../../source/VM 8616afa8996046b3b2d4e3209f78bb49 Manual.rst:205
+#: Manual/Oracle Related User
+msgid "2.3 操作流程图"
+msgstr ""
+
+#: ../../source/VM Manual.rst:207 Manual/Oracle Related User
+#: cc52001ff721480cb12747fab31bff40
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/VM 8ff21de70f1c472ab8cdc51c7381710a Manual.rst:308
+#: Manual/Oracle Related User
+msgid "image0"
+msgstr ""
+
+#: ../../source/VM 572f5641a23d47b2a4308d0d076477e3 Manual.rst:210
+#: Manual/Oracle Related User
+msgid "3. Demo演示"
+msgstr ""
+
+#: ../../source/VM Manual.rst:212 Manual/Oracle Related User
+#: d086bd217f624bcd9e230911fc9f0d31
+msgid "本小节我们将基于前面给出的OracleContract合约，给出 `LiteSDK` **1.1.4版本** 下的使用示例，示例包含两个部分："
+msgstr ""
+
+#: ../../source/VM 97a7e0f4bdf140e3b34d439af45de26d Manual.rst:214
+#: Manual/Oracle Related User
+msgid "OracleContract合约部署，通过合约调用Oracle服务"
+msgstr ""
+
+#: ../../source/VM Manual.rst:216 Manual/Oracle Related User
+#: cf6a01bb6b964e4ab10398e246bf6641
+msgid "调用合约获取回调交易哈希"
+msgstr ""
+
+#: ../../source/VM 6296abf8821f4ac692108339d747182d Manual.rst:219
+#: Manual/Oracle Related User
+msgid "3.1 调用Oracle服务"
+msgstr ""
+
+#: ../../source/VM 0197a547c77640889bea658c0b6c4a56 Manual.rst:221
+#: Manual/Oracle Related User
+msgid "我们通过invokeBean的方式进行合约调用，首先给出InvokeBean的代码。"
+msgstr ""
+
+#: ../../source/VM 49355551cc6d4344be3e6b2952b7affa Manual.rst:223
+#: Manual/Oracle Related User
+msgid "**InvokeOracle代码**"
+msgstr ""
+
+#: ../../source/VM Manual.rst:234 Manual/Oracle Related User
+#: ff3a16628ce545bfa27cbb786b75ee1d
+msgid "**InvokeCallback代码**"
+msgstr ""
+
+#: ../../source/VM Manual.rst:254 Manual/Oracle Related User
+#: e731c2bf107d41a5bb74f4cd3d52e433
+msgid "**测试代码**"
+msgstr ""
+
+#: ../../source/VM 29b6597102914eb6a284fafbce92eb11 Manual.rst:304
+#: Manual/Oracle Related User
+msgid "完整例子代码可以获取源码包（oracleContractDemo）直接运行体验。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:306 Manual/Oracle Related User
+#: ed11335e7a5f4c18b717a2839fc6b72f
+#, python-format
+msgid ""
+"`oracleContractDemo <https://upload.filoop.com/RTD-"
+"Hyperchain%2ForacleContractDemo.zip>`_"
+msgstr ""
+

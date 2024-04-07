@@ -1,0 +1,449 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Introduction.rst:2 b1375e2502e24a86a3d499fa83bfd56a
+msgid "平台介绍"
+msgstr ""
+
+#: ../../source/Introduction.rst:5 86bf083108614a7484d525b46bbce8d5
+msgid "产品简介"
+msgstr ""
+
+#: ../../source/Introduction.rst:6 293a4897269540dbae02b9adf9273ee2
+msgid ""
+"趣链区块链平台是趣链科技自主研发的企业级联盟区块链平台，是实现多方可信协作、价值互联互通的分布式商业基础设施。 "
+"作为国内首个国产自主可控的联盟链，平台提供自适应共识算法、多语言智能合约引擎、全国密支持、多维隐私保护、软硬协同一体化等多项核心技术功能， "
+"可支撑十万级节点分层组网，千个共识节点组网，日均TB级数据上链，GB级图片、音频文件的存储，吞吐量可达10万TPS， "
+"扩展分区扁平化、读写分离、轻节点等架构级技术， 支持预言机、数据索引、文件保险箱、数据归档、链上SQL等数据管理功能， "
+"提供零知识证明、TEE账本加密等安全隐私保护技术， "
+"完成了与麒麟、鲲鹏、统信、龙芯、海光等多家产品的兼容性认证，实现国产化深度适配，构建国产软硬件新生态， "
+"是全球单链峰值速度最快、支持节点最多、存储容量最大的联盟链基础设施之一，满足企业级应用在高安全、高性能、可扩展、易运维、规范监管等方面的需求， "
+"是目前行业内落地应用最多、节点分布最广、承载业务规模最大的区块链平台。"
+msgstr ""
+
+#: ../../source/Introduction.rst:16 9814d83db44246b9845251dd4e7f19b8
+msgid ""
+"2017-2022年，趣链区块链底层平台Hyperchain先后参加工信部信通院组织的“可信区块链技术平台”的功能测评、性能测评、密码测评、安全测评、Baas测评和政务测评，"
+" 均100%通过所有测评项，综合能力遥遥领先。 "
+"且多次参与人民银行、国家金融科技测评中心、银联、建行、农行等多家权威机构技术测评，各项指标名列第一。"
+msgstr ""
+
+#: ../../source/Introduction.rst:21 32c7cfc90e1a49dc936113b959dab8f0
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/Introduction.rst:163 14bb99e51458490188ff945708e4ef53
+msgid "image0"
+msgstr ""
+
+#: ../../source/Introduction.rst:24 3cc9ec5214ef4829b168cbf3d227804a
+msgid "整体架构"
+msgstr ""
+
+#: ../../source/Introduction.rst:26 389f3dffd4034b8dba10089616634dc1
+msgid "平台具有万级TPS吞吐量和毫秒级系统延迟，支持交易级别的隐私数据保护、混合型数据存储、可信执行环境、联盟自治、预言机以及可视化运维等特性。其技术架构图如下："
+msgstr ""
+
+#: ../../source/Introduction.rst:28 431045d9b8a44cd094b6d04b53425962
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/Introduction.rst:164 596e2d70fcce4a69ba7e5df72d26ed5c
+msgid "image1"
+msgstr ""
+
+#: ../../source/Introduction.rst:30 8b31a625427240c0a46e8947402743b5
+msgid ""
+"**基础物理层** "
+"：包括物理机云平台等基础资源，并配以硬件加密机、密码卡等安全设配，物联网硬件设备，使平台可在云服务、软硬件结合、物联网等多种场景下安全稳定运行；"
+msgstr ""
+
+#: ../../source/Introduction.rst:31 a675f80cba3343cdb5b5b0a2c9ced92d
+msgid ""
+"**核心协议层** "
+"：区块链的核心组成部分，主要包括共识算法、P2P网络、智能合约引擎、存储引擎、加密机制等，为整个区块链网络提供安全可信的支撑环境；"
+msgstr ""
+
+#: ../../source/Introduction.rst:32 c3113a4a53a34bab86716a5eca1ee6c9
+msgid ""
+"**扩展协议层** "
+"：构建于核心协议层之上，基于区块链网络从数据管理、架构扩展、运维管理、治理审计、隐私保护、数字服务六个方面为应用扩展提供安全、高效、友好、易用的功能特性，适应多样化应用场景，打造最佳用户体验；"
+msgstr ""
+
+#: ../../source/Introduction.rst:33 8363d8236d5342cfa6ae9e31da9e420e
+msgid "**接口管理层** ：面向区块链用户，支持多种协议的 RPC/API 接口以及SDK软件开发工具，提供应用与区块链交互的桥梁。"
+msgstr ""
+
+#: ../../source/Introduction.rst:36 9207a4b428d74213b738dff690ac51c1
+msgid "核心核心功能"
+msgstr ""
+
+#: ../../source/Introduction.rst:38 515e2f85fb25451cabf0db47673f7a15
+msgid "**自适应共识算法**"
+msgstr ""
+
+#: ../../source/Introduction.rst:40 8dd683d18a2642b2907cd519b5386f27
+msgid "平台支持RBFT、NoxBFT、RAFT等多种共识算法，用户可以根据区块链中不同的网络环境和业务场景采用最优的共识算法。"
+msgstr ""
+
+#: ../../source/Introduction.rst:42 7f67e997342444f5851f008bd451ce4e
+msgid ""
+"**RBFT** "
+"：一种高鲁棒性拜占庭共识算法。可以在节点数据强一致性的情况下支持万级TPS和毫秒级延迟。并且通过内部Recovery机制支持节点动态管理和失效数据恢复，很好的满足区块链商业应用中高性能、高鲁棒性、高可用的需求。"
+msgstr ""
+
+#: ../../source/Introduction.rst:43 d475c479f410450cb5f613cece64d62d
+msgid ""
+"**NoxBFT** "
+"：一种支持大规模组网的新型共识算法。可支持上千节点规模共识组网。通过聚合签名、活性机制等方法将网络复杂度由O(n2)降低至O(n)，有效解决大规模节点组网场景下共识效率低下、可扩展性不强的问题。"
+msgstr ""
+
+#: ../../source/Introduction.rst:44 68e82b828156412c99d85923eedf420c
+msgid ""
+"**RAFT** "
+"：一种高可信分布式共识算法，相比RBFT可以容忍更多的错误节点，整体性能优于RBFT，但在其共识网络环境下不能容忍拜占庭错误（节点作恶，发送错误消息等），适用于高可信的联盟链网络环境或者企业内部私有化部署。"
+msgstr ""
+
+#: ../../source/Introduction.rst:46 03755adfae8742e59d0819b7ac65289c
+msgid "**P2P网络**"
+msgstr ""
+
+#: ../../source/Introduction.rst:48 308b054fb42a4d50a7ad41c95b4fec20
+msgid "平台平台支持gRPC网络协议，通过自适应路由进行网络节点自发现，支持跨域转发机制，降低网络连接数。"
+msgstr ""
+
+#: ../../source/Introduction.rst:50 06dcacd00930405cad6d8a633572071c
+msgid "**加密机制**"
+msgstr ""
+
+#: ../../source/Introduction.rst:52 5f26d720f27c4b36a324120c9e9e796a
+msgid "平台采用可插拔多级加密机制，从不同层级保证平台安全。消息摘要（SHA3/SHA-256/SM3）保证数字安全，数字签名（ECDSA/ED25519/SM2）保证身份安全，密钥协商（ECDH/SM2）、密文传输（AES/SM4）与TLS保证通信安全，并实现基于GPU/FPGA加速的验签算法,以及基于ED25519的批量验签，满足大规模并发计算的需求。同时集成硬件密码卡，提供密钥存储和随机数生成等功能。"
+msgstr ""
+
+#: ../../source/Introduction.rst:54 2709f86b07d241a982e35e1b462695f6
+msgid "**存储模型**"
+msgstr ""
+
+#: ../../source/Introduction.rst:56 a1c9df06639a43f29fa7de51bd7f34d7
+msgid "平台自研区块数据专用存储引擎FileLog，支状态数据存储引擎LevelDB、并设计状态数据多级缓存机制Multicache，现已支持日均TB级数据量链上存储。"
+msgstr ""
+
+#: ../../source/Introduction.rst:58 3d9acb856f664e799d05613137dca6a0
+msgid "**执行引擎**"
+msgstr ""
+
+#: ../../source/Introduction.rst:60 c7913daa14964078a3708e11bed1ed0c
+msgid "平台支持Java、Go等多种主流合约语言，并配以HVM、EVM、BVM等多种合约执行引擎，提供完善的合约全生命周期管理，具有编程友好、合约安全、执行高效的特性。其中自主研发的HVM支持Java语言合约编写、分层调用模式、合约访问控制和丰富的工具方法集等特性。"
+msgstr ""
+
+#: ../../source/Introduction.rst:62 b51952017edd4395935bdad764cb8069
+msgid "**拓展架构**"
+msgstr ""
+
+#: ../../source/Introduction.rst:64 2bb5ce1574ac4f44aa91f7f43e143e0d
+msgid ""
+"**大规模组网** "
+"：大规模组网模型支持多类型节点的分层部署，以共识节点层为中心，凭借非共识节点层实现区块链数据网络扩展，依靠轻节点层实现区块链验证网络扩展，最后通过轻客户端层将数以万计的物联网终端设备接入区块链，实现数十万不同类型网络节点的大规模部署。"
+msgstr ""
+
+#: ../../source/Introduction.rst:65 cda1899043f942b685903b2ad362fcca
+msgid ""
+"**读写分离** "
+"：平台提供非验证节点NVP，不参与共识，仅同步账本数据，通过提供交易转发、查询等服务，实现读写分离，减轻VP节点及共识网络压力，保证区块链系统的高效运行。"
+msgstr ""
+
+#: ../../source/Introduction.rst:66 a1e0c9b8ef3b43e2ad67036bd0fcf865
+msgid "**轻节点** ：平台提供轻节点LP，用于分担网络的压力，作为未来的主力节点，只存储网络的少量数据，通过证明来实现功能。"
+msgstr ""
+
+#: ../../source/Introduction.rst:67 69c9f9a48aad42638cb8fda6c6feeeb2
+msgid ""
+"**分区扁平化** "
+"：分区完全扁平化，四个节点及以上可以组成一个分区，网络中不一定需要global分区的存在，分区内的节点建立物理和逻辑连接。分区间业务隔离，实现了交易数据对其他分区不可见，同时，由于交易并行执行，分区性能也不会随分区数量增加而显著下降。"
+msgstr ""
+
+#: ../../source/Introduction.rst:68 da8dfca7e0c54622b19d5f4e260bbbde
+msgid "**交易并行** ：平台充分利用多核CPU的特点，支持多个合约调用协程在单个HVM实例中并行执行，实现HVM合约并行调用。"
+msgstr ""
+
+#: ../../source/Introduction.rst:70 4370e8e01b0f4865b25fc2c214d400f7
+msgid "**数字服务**"
+msgstr ""
+
+#: ../../source/Introduction.rst:72 934f435585464667a4e564d26b30a789
+msgid "**数字藏品** ：平台原生支持数字资产账户，满足数字藏品场景的需求功能，提供内置与数字藏品相关的功能接口。"
+msgstr ""
+
+#: ../../source/Introduction.rst:74 1c41101f639e4cd5a0012e81b90a1dae
+msgid "**隐私保护**"
+msgstr ""
+
+#: ../../source/Introduction.rst:76 3c0cb9b13a734b09b1b71bfa13bfdcba
+msgid "**可验证计算** ：平台支持基于零知识证明或者TEE的可验证计算节点进行计算证明上链。"
+msgstr ""
+
+#: ../../source/Introduction.rst:77 40df1dc98190458586d6695e7f4d136e
+msgid "**账本加密** ：账本加密通过TEE可信执行环境将用户的账户信息和业务数据进行按需加密，在保证安全性的同时做到可查验可审计。"
+msgstr ""
+
+#: ../../source/Introduction.rst:79 db9ec4d5569b43409006fe10faa46adc
+msgid "**治理审计**"
+msgstr ""
+
+#: ../../source/Introduction.rst:81 e1fa31a9d3ea492da0ebb4ff4b34c784
+msgid ""
+"**身份认证/准入机制** "
+"：平台采取集中式认证体系、分布式认证体系两种方式实现准入控制。集中式认证体系包括自建CA和CFCA两种证书体系，其中CFCA满足对于证书系统安全性与权威性有较高要求的银行或金融机构的需求。分布式认证体系将证书管理权限由中心机构转移到联盟链各参与方，具有去中心、自动化、高效等优点。"
+msgstr ""
+
+#: ../../source/Introduction.rst:82 80e01a2b06a94efbb50237e40856bdb5
+msgid ""
+"**用户账户体系** "
+"：不同的应用场景对账户的使用需求和管理需求各不相同，针对不同的账户体系需求，趣链区块链平台提供两类账户标识（普通账户标识、DID账户标识）以及三类用户账户（普通账户、证书账户、DID账户）。"
+msgstr ""
+
+#: ../../source/Introduction.rst:83 d1de97cfc45d46deb44a64a522a3897d
+msgid ""
+"**多级权限管理** "
+"：将链上账户角色划分为链级管理员、节点管理员、合约管理员以及普通用户，通过链级联盟自治管理CAF、节点级访问控制等方式，实现多层级管理和限制，为系统及账本数据管理提供全方位安全性保障。"
+msgstr ""
+
+#: ../../source/Introduction.rst:84 d587e7f2f17443378aef782d0f6decd3
+msgid "**接口权限管理** :接口权限管理用于对节点查询接口的权限进行管理，是节点级的接口权限管理。"
+msgstr ""
+
+#: ../../source/Introduction.rst:85 03a0d083cb5e4c48b58f7b7a201de2fa
+msgid "**CA模式管理** ：CA模式管理用于对系统的CA体系进行管理，支持CA模式切换，即从中心化转向分布式的单向切换。"
+msgstr ""
+
+#: ../../source/Introduction.rst:86 38a8c0c1e3fd4499a21f0820c12df974
+msgid ""
+"**联盟自治CAF** "
+"：采取在联盟链网络中创建联盟链自治成员组织，通过提案和投票的形式在组织内部表决联盟中的状态行为（节点管理、成员管理、合约管理）的方式，提供区块链原生的联盟规则协商管理机制。"
+msgstr ""
+
+#: ../../source/Introduction.rst:87 5e083c597cbf4bf8bed7a5d594ed5b8e
+msgid ""
+"**系统安全审计** "
+"：提供实时全面的区块链系统一站式安全审计服务，允许审计方对账本数据访问/变更/同步、共识历史、系统异常等全量系统事件开展精确有效的审计工作，符合金融级审计要求。"
+msgstr ""
+
+#: ../../source/Introduction.rst:88 54ee039cb7cb4f8e83bf511a2aeaf388
+msgid ""
+"**合约命名** "
+"：CNS通过简单合约地址命名与合约地址&abi等合约信息进行映射。当用户调用合约接口时,传入合约映射的name、接口名称等信息。用户仅需简单使用命名后的合约名称即可调用合约。"
+msgstr ""
+
+#: ../../source/Introduction.rst:89 f449b77ee4ae4356ada199b16e8f87f0
+msgid "**证书链上吊销** ：平台设计了证书链上吊销功能，证书吊销操作以交易的形式在链上被执行，将证书生效后的管理能力与区块链交易结合，实现链上证书管理。"
+msgstr ""
+
+#: ../../source/Introduction.rst:91 011def1704734d8eb5986ce48b39984e
+msgid "**数据管理**"
+msgstr ""
+
+#: ../../source/Introduction.rst:93 0e81dc96714c4edebadf7c7d79383722
+msgid "**数据归档** ：支持将区块数据归档到线下转存，同时提供Archive Reader用于归档数据浏览。"
+msgstr ""
+
+#: ../../source/Introduction.rst:94 a618dc5acb7745b7bda1e97dd30fc59e
+msgid ""
+"**数据索引** "
+"：提供高效安全的业务数据自定义条件检索功能，支持精准、匹配（模糊）、多条件查询等多种检索模式，极大简化了上层业务系统开发和维护复杂度。"
+msgstr ""
+
+#: ../../source/Introduction.rst:95 1ce87f582b654d00bb74ba102a585984
+msgid "**文件保险箱** ：支持GB级的文件可信存储、安全共享与高效查询，同时支持用户按需存取文件，并提供多级文件存取权限管理能力。"
+msgstr ""
+
+#: ../../source/Introduction.rst:96 965b1063c42f49869b5d7c9e8ae6cde9
+msgid "**预言机** ：通过提供Oracle预言机服务，完成区块链与链外信息互通。"
+msgstr ""
+
+#: ../../source/Introduction.rst:97 b9be25061876425fa561c523e35f55f2
+msgid "**链上SQL** ：支持使用符合MySQL语法规则的SQL语句进行链上数据的增删改查。"
+msgstr ""
+
+#: ../../source/Introduction.rst:98 8027f8e0deee4eba835c5b25419b9cf7
+msgid ""
+"**分区共识** "
+"：将业务场景中互不相关的敏感交易通过分区进行数据存储和执行空间的隔离，数据存储和执行过程在不同分区之间不可见，通过分区隔离实现隐私保护。"
+msgstr ""
+
+#: ../../source/Introduction.rst:99 9230e789b25d4b7db5873b6a3d242457
+msgid "**数据同步** ：平台支持包括数据访问、数据变更以及校验失败后的数据同步。"
+msgstr ""
+
+#: ../../source/Introduction.rst:100 cebd316e7f214c70a3c20d0662c73e13
+msgid "**数据完整性校验** ：提供在服务器宕机重启情况下的数据恢复和一致性保障，保证异常情况恢复的数据完整性。"
+msgstr ""
+
+#: ../../source/Introduction.rst:102 3517008c5b8545ba9b7097830369bb0f
+msgid "**运维管理**"
+msgstr ""
+
+#: ../../source/Introduction.rst:104 65517592c257492a875132f5fc1c5462
+msgid "**网络流控** ：平台提供交易拦截、消息分发、带宽限流等多维度网络流量控制服务，在请求激增场景下保证系统的稳定运行，提高系统可用性。"
+msgstr ""
+
+#: ../../source/Introduction.rst:105 e5d86b03d74546b5b069f12d236d203a
+msgid "**数据监控** ：平台提供一站式数据可视化监控服务，满足业务数据大屏展示需求，同时帮助运维人员轻松了解底层平台运行情况，快速定位问题。"
+msgstr ""
+
+#: ../../source/Introduction.rst:106 8ad353fd6a6e4821b77bcac1591994c7
+msgid "**灾备切换** ：平台提供灾备节点CVP，在必要时可快速升级为共识节点VP，有效降低运维门槛，保障系统高可用。"
+msgstr ""
+
+#: ../../source/Introduction.rst:107 79d0dcb173bf458892d117e70a3b4fd9
+msgid "**内嵌版Baas** :平台提供简易版BaaS，支持查看区块/交易信息、可视化管理节点/合约实例等内容。"
+msgstr ""
+
+#: ../../source/Introduction.rst:109 08635638183343fbb82900498ac8e923
+msgid "**完备生态组件**"
+msgstr ""
+
+#: ../../source/Introduction.rst:111 9a577c1ac66a44bcb84b736d6a640b10
+msgid ""
+"**Hyperbench测试框架** "
+"：平台自研通用区块链测试框架Hyperbench，支持针对趣链区块链平台、Fabric等主流联盟链平台的性能测试。"
+msgstr ""
+
+#: ../../source/Introduction.rst:112 6019ac8b1e7e4f79a7c4761db5f9630b
+msgid ""
+"**Archive-reader浏览器** ：平台提供了Archive-reader浏览器用于查阅归档数据。该浏览器无需与区块链部署在同一服务器上"
+"，用户可在独立的服务器上运行Archive-reader浏览器，并导入相关归档数据即可开始查阅。"
+msgstr ""
+
+#: ../../source/Introduction.rst:113 a278224d921f4c33afdc96bafe0f8c32
+msgid "**消息订阅** ：支持rabbit MQ和KafKa双模式，以便外部系统捕获、监听区块链平台的状态变化，实现链上链下的消息互通。"
+msgstr ""
+
+#: ../../source/Introduction.rst:115 4ab128f4fda341b5aa34dabe2b7a8873
+msgid "**外部接口**"
+msgstr ""
+
+#: ../../source/Introduction.rst:117 5843f0fdeb404a22bd6c5adb4a52af72
+msgid ""
+"**多语言SDK** "
+"：平台提供LiteSDK/JavaSDK、GoSDK、JSSDK、CSSDK以及LuaSDk等多语言SDK工具集，支持不同语言的开发工程师更方便快速地开发区块链应用。"
+msgstr ""
+
+#: ../../source/Introduction.rst:118 79e069c74b5544dc9e088ce75f9e508f
+msgid ""
+"**JSON-RPC** "
+"：一个无状态且轻量级的远程过程调用(RPC)协议。它允许运行在基于socket、http等诸多不同消息传输环境的同一进程中,其使用JSON作为数据格式。"
+msgstr ""
+
+#: ../../source/Introduction.rst:119 1678318c20004150ab29bea3e5da3dd4
+msgid ""
+"**gRPC** "
+"：gPRC消息推送主要替代依赖于第三方mq进行消息推送的问题，消息推送主要包含grpc层、mq模块层及sdk端的调用，调用方式主要支持普通调用模式、服务端单向流调用模式、客户端单向流调用模式及双向流调用模式。"
+msgstr ""
+
+#: ../../source/Introduction.rst:123 7815bfb58d27443faf66110029a10dec
+msgid "国产自主可控说明"
+msgstr ""
+
+#: ../../source/Introduction.rst:131 64f7e85db3fe4e8b974ad93171fabb17
+msgid ""
+"平台集成国产自主可控的服务器硬件，打造符合国家信创标准的区块链软硬件一体机设备，为开发者提供强隐私、高性能、高安全、即用即上链的区块链技术服务； "
+"针对政务、军事等对安全性有严格要求的场景，进一步集成区块链密码卡、网络共识加速器、可信执行环境等硬件设备与技术； "
+"针对国产操作系统、平台适配了华为鲲鹏云、龙芯中科3B4000、银河麒麟高级服务器操作系统（飞腾、鲲鹏）及统信服务器操作系统； "
+"针对硬件服务器的安全性要求，构建区块链领域专用安全自主可控设备包括：申泰 RM5000-F服务器、申泰 RM5020-L服务器、华为TaiShan"
+" 200系列服务器、中科可控、中科曙光系列、海光系列等。"
+msgstr ""
+
+#: ../../source/Introduction.rst:138 73a00d3492494489a567057768cad103
+msgid "节点类型"
+msgstr ""
+
+#: ../../source/Introduction.rst:140 e8e39922e94e4769a8695fd272e7f6e9
+msgid ""
+"平台节点分为验证节点（VP，Validate Peer）、非验证节点（NVP，Non-Validate Peer）、轻节点（LP,Light "
+"Peer）、热备节点（CVP，Candidate VP）三类："
+msgstr ""
+
+#: ../../source/Introduction.rst:142 40ac63c3e15b412b95ad39a57c490c00
+msgid "VP指区块链网络中参与共识验证的节点；"
+msgstr ""
+
+#: ../../source/Introduction.rst:143 9b861149e0ac4296a3fa74b5b8ecc667
+msgid "NVP指区块链网络中不参与共识验证，仅同步账本数据的节点；"
+msgstr ""
+
+#: ../../source/Introduction.rst:144 81d89ad3bf5d4125ac3784715785db18
+msgid "LP指区块链网络重分担网络压力的节点，只存储网络的少量数据，通过证明来实现功能；"
+msgstr ""
+
+#: ../../source/Introduction.rst:145 79d61b58b56e49c4b36bfa23e61736e2
+msgid "CVP指区块链网络中提供灾备服务的节点，在必要时可升级为VP。"
+msgstr ""
+
+#: ../../source/Introduction.rst:147 43ff73adcb0347cdb10204e2cab35cd1
+msgid "|image2|"
+msgstr ""
+
+#: ../../source/Introduction.rst:165 6ac72c6fe0b64e5f8edba346a84f3e9e
+msgid "image2"
+msgstr ""
+
+#: ../../source/Introduction.rst:150 8d17a14acbc241588279102e96318350
+msgid "交易流程"
+msgstr ""
+
+#: ../../source/Introduction.rst:152 a306c4beabc44544a4a6ee82d6fc621a
+msgid "平台在进行数据操作时，通常以一笔交易的形式在区块链网络中进行流转，用户存储的数据和合约都存储在交易结构当中，其具体的运转流程如下图所示："
+msgstr ""
+
+#: ../../source/Introduction.rst:154 b5d02ebe56e042b3aaae934b41768a23
+msgid "|image5|"
+msgstr ""
+
+#: ../../source/Introduction.rst:168 2378be5a6a3c43ffbe98457515c66d64
+msgid "image5"
+msgstr ""
+
+#: ../../source/Introduction.rst:156 b24d3b17963241b7a213b1f012179bff
+msgid ""
+"**交易发起** "
+"：在客户端发起一笔交易之前，需要拿到证书管理中心（CA）颁发的准入证书，并且所需智能合约已经部署在区块链节点上。联盟机构通过部署在机构内部的后台应用服务进行交易，然后通过调用SDK发交易的API接口生成一条交易，SDK会用客户端指定的用户私钥对交易进行签名"
+"，再对交易进行JSON-RPC协议封装。"
+msgstr ""
+
+#: ../../source/Introduction.rst:157 ec1b634c430a4e698ceeeb96bae3dc56
+msgid ""
+"**交易共识** "
+"：当节点接收到客户端的交易时，首先会对交易进行验签操作，验签通过后，交易请求会汇集到统一的消息分发事件总线，事件总线收到消息后会转发给共识模块，执行共识流程，如RBFT算法共识即为三阶段流程共识。"
+msgstr ""
+
+#: ../../source/Introduction.rst:158 5d3969e79b95425386887f7794d1fb86
+msgid ""
+"**交易执行** "
+"：交易共识完成后，证明多方已经确认该笔交易顺序及内容的正确性，在此之后会将打包的交易提交给虚拟机执行引擎，进行执行操作，交易执行会将交易体结构进行解析，解析的主要内容为交易的主体信息（交易数据）以及交易中的合约信息（合约数据），执行引擎会根据交易的内容和合约的业务逻辑进行相关业务操作。"
+msgstr ""
+
+#: ../../source/Introduction.rst:159 7f3cd57a15c741b2b0b05fc5845fe5c6
+msgid ""
+"**交易存储** "
+"：交易执行之后，会对交易信息（区块数据）和合约信息（状态数据）进行持久化操作，同步写入区块和账本，最终持久化到FileLog和LevelDB中，至此完成整个交易流程。"
+msgstr ""
+

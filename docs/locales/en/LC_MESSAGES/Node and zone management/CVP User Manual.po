@@ -1,0 +1,623 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Node 3470299ba0a04e21b74852f52f1a6b3f Manual.rst:4 User and
+#: management/CVP zone
+msgid "灾备节点介绍"
+msgstr ""
+
+#: ../../source/Node 6a5f5516f3d8453b83006479a502bd0d Manual.rst:7 User and
+#: management/CVP zone
+msgid "功能说明"
+msgstr ""
+
+#: ../../source/Node 3b46a413854a465b9737c2bc98008ed5 Manual.rst:9 User and
+#: management/CVP zone
+msgid ""
+"CVP是一个独立运行的节点，可以对 "
+"**线上节点（目前包括VP、NVP）进行实时的容灾备份，当线上节点发生了不可恢复的错误时，通过运维命令自动对CVP进行升级，替代原节点继续工作**"
+" 。实际使用过程中，CVP和线上节点仅支持一对一连接。"
+msgstr ""
+
+#: ../../source/Node 48e860ac621c405fa57ee9880ee15643 Manual.rst:11 User and
+#: management/CVP zone
+msgid ""
+"Hyperchain中支持 **分区共识** "
+"功能，即一个节点上可以同时运行多个完全隔离的分区，节点在不同分区内可以是不同的角色，如VP或者NVP。CVP提供节点级别的热备服务，可以对目标 "
+"**节点** 进行完全的备份，即不论目标节点上有多少分区、不同分区内的节点角色（VP或NVP）是否一致，均可以实现备份。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:14 User and dca4f0e1842547a9b627cd55aa280ff3
+#: management/CVP zone
+msgid "数据同步"
+msgstr ""
+
+#: ../../source/Node Manual.rst:16 User and ba11662b7a6e40a18783f7b2a52cdbd6
+#: management/CVP zone
+msgid "CVP上的备份数据主要包括："
+msgstr ""
+
+#: ../../source/Node 670adb055b6c46b7b9a2c2df86f9c8a0 Manual.rst:18 User and
+#: management/CVP zone
+msgid "相连节点的配置文件；"
+msgstr ""
+
+#: ../../source/Node 895c8b5ab2c7407b835a48db057af86c Manual.rst:20 User and
+#: management/CVP zone
+msgid "相连节点上所有分区的MQ注册队列；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:22 User and c5b5c88852704ec3b504678f3b312ceb
+#: management/CVP zone
+msgid "相连节点上所有分区的链上数据（包括区块及账本数据）。"
+msgstr ""
+
+#: ../../source/Node 62d5564c600546d980bb5836d5581d69 Manual.rst:24 User and
+#: management/CVP zone
+msgid "**本节将对CVP的工作方式进行简单介绍，具体操作请参考第二到第四章节内容。**"
+msgstr ""
+
+#: ../../source/Node 4003494ae2ce4518a8a545fa9edcd82d Manual.rst:27
+#: Manual.rst:53 User and ca3b5426506e47fcadd350233dee96b0 management/CVP zone
+msgid "配置文件"
+msgstr ""
+
+#: ../../source/Node Manual.rst:29 User ae7dd703ef934fff8f6c6bd386ddf4dc and
+#: management/CVP zone
+msgid "为了使CVP能够替代线上节点工作，CVP节点的二进制所在目录中需要保存两份配置文件："
+msgstr ""
+
+#: ../../source/Node 0962606a42254c08af268698dea43644 Manual.rst:31 User and
+#: management/CVP zone
+msgid ""
+"`configuration` "
+"目录下保存CVP节点自己运行时所需的配置文件，如数据库路径、证书路径、网络等配置，可以参考《运维手册》对CVP进行必要的配置；"
+msgstr ""
+
+#: ../../source/Node 7c5cf010598b4f1bb200f2164eeb6c67 Manual.rst:33 User and
+#: management/CVP zone
+msgid ""
+"`system/cvp/configuration_vp` 目录下保存了CVP节点所连接的线上节点的全量配置文件， "
+"**这份配置文件由CVP自动同步并保持更新，无须用户手动准备** 。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:35 User and c91e4fcece1c4d5885873114b1739776
+#: management/CVP zone
+msgid ""
+"CVP会对目标节点上的配置文件进行全量的同步，当CVP连接到目标节点，并且完成一次握手后，会触发一次同步，而后续若发生网络断连恢复或节点重启等事件时也会触发一次同步；我们提供了IPC命令以及RPC命令对一些配置项进行在线的修改（不宕机），那么对于有一些比较重要的配置项的在线修改，也会以"
+" **强同步** 的方式同步至CVP上。这里的强同步指的是一次配置文件的修改，需要在目标节点和CVP节点都完成修改后，才正常返回。"
+msgstr ""
+
+#: ../../source/Node 744bf49b001c48c08a4afbb21a4dd495 Manual.rst:38 User and
+#: management/CVP zone
+msgid "MQ队列"
+msgstr ""
+
+#: ../../source/Node 03e3416179bc4b8cac9bc18e946ad9a5 Manual.rst:40 User and
+#: management/CVP zone
+msgid ""
+"CVP会在进行握手的时机进行 **全量MQ队列的同步** ；在线上节点上进行的MQ队列的 **注册/解注册事件也** "
+"将会被自动同步至CVP节点，无须用户手动在CVP节点上重复注册。同样的，事件同步方式为强一致，即完成队列注册操作意味着两个节点都注册完成了该队列，保证CVP升级后能继续提供完整的MQ服务。"
+msgstr ""
+
+#: ../../source/Node 7a2fb55c75c74a58b7cbdec3406c46f5 Manual.rst:42 User and
+#: management/CVP zone
+msgid "**需要注意的是，CVP只同步队列，不同步MQ消息。**"
+msgstr ""
+
+#: ../../source/Node Manual.rst:45 User and cb18764e3079437da812f85e9e555c69
+#: management/CVP zone
+msgid "链上数据"
+msgstr ""
+
+#: ../../source/Node Manual.rst:47 User and ce7b04b7aa7b4fcd91654dbab92f174a
+#: management/CVP zone
+msgid ""
+"**CVP将自动同步线上节点所有分区的区块及账本数据。** 与前述同步方式不同，链上数据的同步是 **弱一致** "
+"的，这种方式可以尽可能地保证线上节点的性能不受太大影响。"
+msgstr ""
+
+#: ../../source/Node 500e1e36cf24448793370693e75fc7dd Manual.rst:50 User and
+#: management/CVP zone
+msgid "节点准备"
+msgstr ""
+
+#: ../../source/Node 3c28f511b95942d6a173c663dbce767c Manual.rst:55 User and
+#: management/CVP zone
+msgid "为了启用CVP功能，需要对以下配置文件进行修改："
+msgstr ""
+
+#: ../../source/Node Manual.rst:58 User and f7be46a8e4a1404a94e80282683c920a
+#: management/CVP zone
+msgid "修改系统级别dynamic.toml"
+msgstr ""
+
+#: ../../source/Node Manual.rst:60 User and b803e8a96066415091938d7ce64919fb
+#: management/CVP zone
+msgid "`configuration/dynamic.toml` 中需要修改的配置项如下所示::"
+msgstr ""
+
+#: ../../source/Node Manual.rst:63 User and ced49f60c2c34bc2a39440e961980ed3
+#: management/CVP zone
+msgid "enable    = false node_type = \"provider\" remote     = [\"\"]"
+msgstr ""
+
+#: ../../source/Node Manual.rst:67 User and ceba40625b664114bc30a94e5797ea3f
+#: management/CVP zone
+msgid "上述配置项的具体含义如下所示："
+msgstr ""
+
+#: ../../source/Node Manual.rst:69 User and cc0586392bd241b2843b3913964a621c
+#: management/CVP zone
+msgid "`enable` ：是否开启CVP功能，CVP要与目标节点建立连接，双方必须开启该字段，可通过IPC命令动态开启该开关；"
+msgstr ""
+
+#: ../../source/Node 431c1b60cc364c9c83a15f4c89cafaa0 Manual.rst:71 User and
+#: management/CVP zone
+msgid "`node_type` ：节点类型，可选项为provider或receiver，CVP配置为receiver，线上节点配置为provider；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:73 User a63e283ae3764e1b8521f382098821dd and
+#: management/CVP zone
+msgid "`remote` ：对端节点的hostname以及地址。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:75 User and b723d432bcd94c23a03265b6cea49ff9
+#: management/CVP zone
+msgid "**举例来说，一份正确的新增配置如下所示**::"
+msgstr ""
+
+#: ../../source/Node 93be6cdefb1049c1be60a04387df83fc Manual.rst:90 User and
+#: management/CVP zone
+msgid "修改Namespace级别ns_dynamic.toml"
+msgstr ""
+
+#: ../../source/Node Manual.rst:92 User and c21f7e9ff4754eed972eabed4ff59451
+#: management/CVP zone
+msgid ""
+"仅CVP节点需要修改ns_dynamic.toml配置文件，沿用前一节中的例子，CVP节点的 "
+"`configuration/global/ns_dynamic.toml` 的正确修改如下所示::"
+msgstr ""
+
+#: ../../source/Node Manual.rst:105 User and b8bb7cd71ef54919984d01c13d478e05
+#: management/CVP zone
+msgid "即对于CVP节点来说，其只连接一个节点，因此nodes字段只保留一个节点的信息；self字段中，将n修改为1，且节点自身类型配置为 “cvp” 。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:108 User and cd76393017fa4df99d421437a01320b9
+#: management/CVP zone
+msgid "私钥准备"
+msgstr ""
+
+#: ../../source/Node 681a87eb85ec468fbc6ed887d9f11d57 Manual.rst:110 User and
+#: management/CVP zone
+msgid "作为一个灾备节点，CVP需要随时顶替线上继续工作，因此CVP需要在启动之前为每个分区配备相应的节点私钥，从而在其升级后与其他节点建立连接。"
+msgstr ""
+
+#: ../../source/Node 6726013ba493490591b5b5903e10317f Manual.rst:112 User and
+#: management/CVP zone
+msgid "由于私钥性质特殊，用户需要在CVP启动前进行 **手动备份** ，即将目标的节点私钥放置于CVP每个分区的 `certs/certs` 目录下。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:115 User aad31549c46b4e73b37fd7c94e8d1fff and
+#: management/CVP zone
+msgid "TLS准备"
+msgstr ""
+
+#: ../../source/Node 658e3656784446e0b6cce8ea222f3a62 Manual.rst:117 User and
+#: management/CVP zone
+msgid ""
+"若要开启目标节点与CVP节点之间的安全连接，则需要为CVP节点配置TLS。具体来说，在CVP节点的 **根目录** 下创建一个 `tls目录` "
+"，目录中配备合法的TLS证书、TLS私钥与CA、CA私钥，如下图所示："
+msgstr ""
+
+#: ../../source/Node 6f4cb20c0a974fd2aa288ed14db3f7c5 Manual.rst:119 User and
+#: management/CVP zone
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/Node 0d9e5a0b78464766863943c2c4851cb8 Manual.rst:287 User and
+#: management/CVP zone
+msgid "image0"
+msgstr ""
+
+#: ../../source/Node 8a4d3c6f7b5e4f81930939ed175a76f4 Manual.rst:121 User and
+#: management/CVP zone
+msgid "随后进入 `system.toml` 配置文件，对如下字段进行配置::"
+msgstr ""
+
+#: ../../source/Node 592640ed800c4610a8d55d2a4709aa95 Manual.rst:126 User and
+#: management/CVP zone
+msgid "**CVP和目标可以共用同一份TLS数据，且要求两者同时开启或关闭上述配置开关。**"
+msgstr ""
+
+#: ../../source/Node Manual.rst:129 User and d6544f4fbd564cf6a77f27c74f3cea89
+#: management/CVP zone
+msgid "启动节点"
+msgstr ""
+
+#: ../../source/Node 578d0d3968b04b02b7a4566b30ede0d3 Manual.rst:131 User and
+#: management/CVP zone
+msgid ""
+"在完成上述准备后，可以通过 `start.sh` 脚本或 `./hyperchain` "
+"来启动节点。由于节点之间可以动态地建立连接，因此无须同时启动。"
+msgstr ""
+
+#: ../../source/Node 1f698d4105cf450589dec2a82a4923a7 Manual.rst:133 User and
+#: management/CVP zone
+msgid "对于线上节点来说，当其开启了CVP功能却未连接任何CVP节点时，节点仍然可用（共识打包、交易执行、数据查询等），但不会向任何CVP节点备份数据。此时若有CVP节点主动连接该节点，则这两个节点可以成功建立连接并开始数据备份。"
+msgstr ""
+
+#: ../../source/Node 3e9008116ba04ccfa3cddb44bb1f7fbe Manual.rst:135 User and
+#: management/CVP zone
+msgid "对于CVP节点来说，若其未连接任何线上节点，则除了有限的查询接口外（见附录），不提供任何服务。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:137 User and e61dcdba2d9c4a1d9dd2595586cc52d1
+#: management/CVP zone
+msgid ""
+"可以通过在 **线上节点** 上执行IPC命令 `cvp status` 来查询与CVP的连接状态，若展示结果为 **normal** "
+"，说明CVP正常工作。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:139 User and b35bb4394b5a44da825214d56fc16655
+#: management/CVP zone
+msgid ""
+"启动成功后，hyperchain二进制所在根目录会创建一个 `system/cvp` "
+"目录，其中记录了CVP功能相关的元数据，除此之外，完成一次握手之后CVP会在根目录生成一个 "
+"`system/cvp/configuration_vp` 目录，其中存储了CVP所备份的线上节点的配置文件， "
+"**在正常情况下绝对不能删除上述两个目录。**"
+msgstr ""
+
+#: ../../source/Node 3199ac39d3ba4fdd8a088c02f5c8edfd Manual.rst:142 User and
+#: management/CVP zone
+msgid "CVP升级"
+msgstr ""
+
+#: ../../source/Node 2eff8ec452fa41d7a0f481d75cc151f0 Manual.rst:144 User and
+#: management/CVP zone
+msgid "**在确认目标节点宕机离线后** ， **运维人员可对CVP节点进行升级。**"
+msgstr ""
+
+#: ../../source/Node 8f7196cdcf0c4f119ccb74c8ca882582 Manual.rst:146 User and
+#: management/CVP zone
+msgid "通过IPC命令 `cvp upgrade` 完成CVP的在线升级，有如下事项需要注意："
+msgstr ""
+
+#: ../../source/Node Manual.rst:148 User and fd75f03cd0d44ce48aa7042c5ca38a7e
+#: management/CVP zone
+msgid "确保CVP升级之前，目标节点已经宕机；"
+msgstr ""
+
+#: ../../source/Node 295024c2d7ee481689cfb6c4fab0e483 Manual.rst:150 User and
+#: management/CVP zone
+msgid "确保CVP升级之前，其根目录下存在 `configuration_vp` 目录，该目录在两个节点第一次建立连接并握手之后会同步至CVP节点；"
+msgstr ""
+
+#: ../../source/Node 774cec3f367c473bb89e5d23fc33f79b Manual.rst:152 User and
+#: management/CVP zone
+msgid "CVP升级之后会以原VP的身份（hostname, 证书等)尝试与其他节点建立连接，因此需要确保CVP与线上其他节点网络的连通性；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:154 User aca18788e5ea46e8a4990b6db0d06098 and
+#: management/CVP zone
+msgid "由于链上数据的同步是弱一致的，CVP升级之后的区块高度可能是落后的，可自动通过数据同步恢复；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:157 User and e36d89dff4d84bb58716d079c1f70368
+#: management/CVP zone
+msgid "运维命令"
+msgstr ""
+
+#: ../../source/Node 89b992e3abe042efac66933dc8ae4fec Manual.rst:159 User and
+#: management/CVP zone
+msgid "平台提供CVP连接状态查询、CVP动态启停、CVP升级三类IPC运维命令。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:162 User and ef0326b26d9d461ba0e27a900497dd5e
+#: management/CVP zone
+msgid "连接状态查询"
+msgstr ""
+
+#: ../../source/Node Manual.rst:164 User a93bf43202444d7d83bd21f1357f239f and
+#: management/CVP zone
+msgid "命令： `cvp status` （ **该条命令只能在线上节点上执行** ）"
+msgstr ""
+
+#: ../../source/Node 08f31a9a0b1743d5a99542ae0c34f303 Manual.rst:166 User and
+#: management/CVP zone
+msgid "查询CVP和VP的连接状态，包含两种返回信息："
+msgstr ""
+
+#: ../../source/Node Manual.rst:168 User and d669426ac60c478d831aaddc880707f7
+#: management/CVP zone
+msgid "cvp is normal：连接正常；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:170 User and c80d0e31337b4dd293a085fa1932b60a
+#: management/CVP zone
+msgid "cvp is abnormal：连接异常；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:173 User and f69d0d07c06e4249869e7e3ee40a931a
+#: management/CVP zone
+msgid "动态开启CVP功能"
+msgstr ""
+
+#: ../../source/Node 7e285c86530c45a79d23a3e41b536ba9 Manual.rst:175 User and
+#: management/CVP zone
+msgid "命令： `cvp enable` （ **该条命令只能在线上节点上执行** ）"
+msgstr ""
+
+#: ../../source/Node Manual.rst:177 User and b04bab83ca5e44c0bba73fc6c877e99b
+#: management/CVP zone
+msgid ""
+"开启CVP功能，节点将被动和CVP建立连接。当 `cvp enable` 命令执行成功后，配置文件 `dynamic.toml` 中的 "
+"`cvp.enable` 字段变为true，若在已开启CVP功能的情况下使用此命令将会出错，但不会影响系统状态。"
+msgstr ""
+
+#: ../../source/Node 0ddb9e37bc3341b28165beb908afc30c
+#: 45883c958e374f6c8194ad7afdd42db5 Manual.rst:179 Manual.rst:196 User and
+#: management/CVP zone
+msgid "**使用场景示例：**"
+msgstr ""
+
+#: ../../source/Node Manual.rst:181 User and c7ad9e28907a4e18a5c71db95bdabfae
+#: management/CVP zone
+msgid "线上节点处在未开启CVP功能且正常运行中的状态，此时若希望**在不停节点的情况下添加一个CVP节点**，则需要："
+msgstr ""
+
+#: ../../source/Node Manual.rst:183 User and ce81de357bd54bc8b73efef437e1edb1
+#: management/CVP zone
+msgid "在线上节点上执行 `cvp enable` 命令；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:185 User and c0b545f4b3134eecba31c84c967dcc99
+#: management/CVP zone
+msgid "准备并启动CVP节点，该CVP节点配置了线上节点的地址等信息，线上节点**不需要**进行任何配置修改；"
+msgstr ""
+
+#: ../../source/Node 40181466ed5e41559454129297ec3af5 Manual.rst:187 User and
+#: management/CVP zone
+msgid "启动CVP之后若能通过 `cvp status` 命令查询正常状态，说明节点间连接建立成功，CVP开始正常工作。"
+msgstr ""
+
+#: ../../source/Node 87331de7108440e0a445bc34c02a4061 Manual.rst:190 User and
+#: management/CVP zone
+msgid "动态关闭CVP功能"
+msgstr ""
+
+#: ../../source/Node 1e9c69b61f174256b9a90d2b200dbbf5 Manual.rst:192 User and
+#: management/CVP zone
+msgid "命令： `cvp disable` （ **该条命令只能在线上节点上执行** ）"
+msgstr ""
+
+#: ../../source/Node 086549ba6e9443d6a64898edc7671b94 Manual.rst:194 User and
+#: management/CVP zone
+msgid ""
+"关闭CVP功能，此时线上节点将主动断开与CVP的物理连接，并不再接收来自其他CVP的连接请求。当 `cvp disable` "
+"命令执行成功后，配置文件 `dynamic.toml` 中的 `cvp.enable` 字段将变为false。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:198 User and d5454c8179ee4a8bb5298799247ab523
+#: management/CVP zone
+msgid "线上节点与对应的CVP节点正常工作中，此时若希望停止CVP的备份服务，则可以通过直接在线上节点上执行 `cvp disable` 命令完成。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:201 User and f029abf4cd1e44b580f908051fe41f13
+#: management/CVP zone
+msgid "动态升级CVP"
+msgstr ""
+
+#: ../../source/Node 8729634491f54c95954e53384960c785 Manual.rst:203 User and
+#: management/CVP zone
+msgid "命令： `cvp upgrade` （**该条命令只能在CVP上执行**）"
+msgstr ""
+
+#: ../../source/Node Manual.rst:205 User and e6d801a88a44495a8af2e861a49ba3e5
+#: management/CVP zone
+msgid "升级CVP，具体可参考 **第三章《CVP升级》** 。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:208 User and c15228cd588041dcb8d87f990b1048e5
+#: management/CVP zone
+msgid "注意事项"
+msgstr ""
+
+#: ../../source/Node 41c3fc276b3b40f483c653498177abbc Manual.rst:211 User and
+#: management/CVP zone
+msgid "连接/工作模式"
+msgstr ""
+
+#: ../../source/Node 89c8f7b20d8146ca90f10654476084bc Manual.rst:213 User and
+#: management/CVP zone
+msgid "在当前版本中仅支持CVP和线上节点的一对一连接；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:215 User and b1bf489c774c4dffa12b2c99917aac90
+#: management/CVP zone
+msgid "不支持一个CVP节点在不清除旧数据的情况下，更换所连接的线上节点；"
+msgstr ""
+
+#: ../../source/Node 7c12eb23657f41ca98f0926d6ceda046 Manual.rst:217 User and
+#: management/CVP zone
+msgid "网络波动、CVP节点宕机等异常事件并不会对线上节点服务造成影响；"
+msgstr ""
+
+#: ../../source/Node Manual.rst:219 User and eb7f355e90db4d079054fa0e1b4a0807
+#: management/CVP zone
+msgid "CVP对线上节点造成的性能影响非常有限；"
+msgstr ""
+
+#: ../../source/Node 467ab2f2611d4cc7b3ba3a0f95937670 Manual.rst:221 User and
+#: management/CVP zone
+msgid "CVP宕机后线上节点将继续工作，但数据同步会停止，当CVP重启后将自动备份所缺数据。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:224 User and f44f8ff4ef6245659596123d7322bd36
+#: management/CVP zone
+msgid "分区管理"
+msgstr ""
+
+#: ../../source/Node 625ac34a4b654327a75df7ac4fd3967f Manual.rst:226 User and
+#: management/CVP zone
+msgid "一般来说，有两种新增分区的方式："
+msgstr ""
+
+#: ../../source/Node Manual.rst:228 User and edc5056972a74b58bbdb96e2fb9d89e3
+#: management/CVP zone
+msgid "修改配置文件后重启节点"
+msgstr ""
+
+#: ../../source/Node 3705621c227e429298f272aa11aab204 Manual.rst:230 User and
+#: management/CVP zone
+msgid "通过IPC命令动态新增"
+msgstr ""
+
+#: ../../source/Node 71e544a3cb93467ab94e61c88c793e26 Manual.rst:232 User and
+#: management/CVP zone
+msgid ""
+"两种方式都需要提前在特定目录中准备好待新增的配置文件、证书等数据。 **这些数据同样也需要在CVP上提前准备好** "
+"，若未在CVP上提前准备，将直接以目标节点的配置文件启动CVP上的新分区，因此 "
+"**若两者的节点环境（路径、开放端口等）完全一致，则可以不用为CVP准备配置文件和证书。**"
+msgstr ""
+
+#: ../../source/Node Manual.rst:234 User and cc0f9a08810d4fb1841acfdab95f7a55
+#: management/CVP zone
+msgid "原则上，目标节点和CVP上启动的分区必须完全匹配，因此在握手中过程中会进行分区状态的检查，若发现不一致，则会自动恢复至匹配的状态，如目标节点运行了ns1，ns2两个分区，而CVP连接时只有ns3一个分区，那么在完成握手后，CVP节点会自动停止ns3分区，并以目标节点的相关配置运行ns1，ns2两个分区。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:237 User and bf3e61141ec44a88a241b1241885f2e0
+#: management/CVP zone
+msgid "数据索引"
+msgstr ""
+
+#: ../../source/Node Manual.rst:239 User and c6b2f6cd611e4cdda05a29cf4c3a01b8
+#: management/CVP zone
+msgid "数据索引功能需要外接MongoDB数据库，用于存储区块数据的索引信息，详情可参考《数据索引使用手册》。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:241 User and e4743b4e5bd94928a1a905e42ad4517c
+#: management/CVP zone
+msgid "**CVP和目标节点的数据索引开关应保持一致** ，即同时开启或同时关闭，否则CVP将无法与目标节点成功建立连接。"
+msgstr ""
+
+#: ../../source/Node 75ca57ba735a4afb9f56bc31537d51f9 Manual.rst:243 User and
+#: management/CVP zone
+msgid "除了索引开关，CVP上的其他配置项可按照《数据索引使用手册》的内容进行独立配置。注意，若配置错误导致索引数据库没有正常启动，CVP将无法完成索引数据的灾备，待CVP升级后需要重新生成这部分数据，在区块数量很多的情况下，这一过程将花费很长时间，从而影响正常业务运行。因此，为了规避上述风险，**在目标节点开启数据索引功能的情况下，请务必检查CVP上的索引数据库是否正常启动**。"
+msgstr ""
+
+#: ../../source/Node 512c723a0386463bb82254d97084f4d8 Manual.rst:245 User and
+#: management/CVP zone
+msgid "此外，由于二层索引可在不停机的情况下进行动态创建且耗时较短，因此CVP未进行二层索引的一致性检查和同步，用户可在CVP上手动调用IPC命令创建相应的二层索引。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:248 User and e058d14c9ba341779e7523832e6057a9
+#: management/CVP zone
+msgid "可信文件共享"
+msgstr ""
+
+#: ../../source/Node Manual.rst:250 User a9557e81e28c4ddd9be3c5ac865d553c and
+#: management/CVP zone
+msgid "可信文件共享功能需要外接文件系统，用于存储原文件数据，详情可参考《可信文件共享使用手册》。"
+msgstr ""
+
+#: ../../source/Node 21987e850de447719524649697edb9aa Manual.rst:252 User and
+#: management/CVP zone
+msgid "CVP节点不支持可信文件共享功能。"
+msgstr ""
+
+#: ../../source/Node 5134e4424c68421ebe0f709288d5fec0 Manual.rst:254 User and
+#: management/CVP zone
+msgid "**CVP节点不会备份上传至VP的文件，若有需要请自行对文件进行备份。**"
+msgstr ""
+
+#: ../../source/Node Manual.rst:257 User and ed5d6b2c53f1423292f95b1f4d0bc148
+#: management/CVP zone
+msgid "安全审计"
+msgstr ""
+
+#: ../../source/Node 098a657be1334a1f9a8a109dc69fc321 Manual.rst:259 User and
+#: management/CVP zone
+msgid "安全审计功能需要配置审计后端，用于存储审计日志数据，详情可参考《安全审计使用手册》。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:261 User and eca249b1dd134be69842b8ade83c7f80
+#: management/CVP zone
+msgid "CVP节点不支持安全审计功能。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:263 User a0173e50337d48f2b71f09a76d6a8fa3 and
+#: management/CVP zone
+msgid "**CVP节点不会备份审计数据，因此推荐采用ELK或Graylog审计后端，CVP升级之后可以直接使用这部分审计数据。**"
+msgstr ""
+
+#: ../../source/Node 8c1a1c4ee1ce4ac1bb210a7cd633b63c Manual.rst:266 User and
+#: management/CVP zone
+msgid "CVP节点开放功能"
+msgstr ""
+
+#: ../../source/Node 104034616c22484d87f67d2f8038a3fc Manual.rst:268 User and
+#: management/CVP zone
+msgid "CVP节点的核心功能是备份，因此只保留有限的开放接口，如下："
+msgstr ""
+
+#: ../../source/Node 28664ea0a2a248559a062b029218d03e Manual.rst:270 User and
+#: management/CVP zone
+msgid "禁用所有的IPC接口，只保留 `cvp upgrade` 命令；"
+msgstr ""
+
+#: ../../source/Node 90faa04c14d247f5a509b3c866a73e7a Manual.rst:272 User and
+#: management/CVP zone
+msgid "禁用大部分RPC请求，开放接口见附录。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:275 User and edb2f09702d24a8d95ba0fd49e4fc9f2
+#: management/CVP zone
+msgid "证书"
+msgstr ""
+
+#: ../../source/Node 424411dce01b4a79b1b93870cd6186b0 Manual.rst:277 User and
+#: management/CVP zone
+msgid ""
+"CVP不需要线上节点为其颁发的证书，而只需要一份合法的TLS的证书即可与线上节点进行通信。在连接初始的握手阶段，CVP会同步线上节点所有分区的证书信息，以供升级后继续使用，而对于线下手动替换的证书，若不重启节点或网络则无法让CVP同步到更新后的证书，此时也需要手动将证书放到CVP节点的对应目录下，或在CVP升级后进行证书替换。CVP证书放置目录为"
+" `namespaces/global/system/cvp` 。"
+msgstr ""
+
+#: ../../source/Node Manual.rst:280 User a983ebd3fc214fb8ae5687e1735ebeab and
+#: management/CVP zone
+msgid "附录"
+msgstr ""
+
+#: ../../source/Node Manual.rst:283 User and e157d996540b4ad8a3b620a71ce6d92f
+#: management/CVP zone
+msgid "CVP接口开放清单"
+msgstr ""
+
+#: ../../source/Node Manual.rst:285 User and b7463fb14920419cb80574cfc71234e1
+#: management/CVP zone
+#, python-format
+msgid ""
+"`CVP接口开放清单列表 <https://upload.filoop.com/RTD-"
+"Hyperchain%2FCVP%20JSONRPC%E6%8E%A5%E5%8F%A3%E5%BC%80%E6%94%BE%E6%B8%85%E5%8D%95.xlsx>`_"
+msgstr ""
+

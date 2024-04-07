@@ -1,0 +1,3268 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/GoSDK.rst:4 5412ffcce1ca41f5bb1bb54c24e8a874
+msgid "gosdk 使用手册"
+msgstr ""
+
+#: ../../source/GoSDK.rst:7 342c806df06448819507d73e544c7de5
+msgid "第一章 前言"
+msgstr ""
+
+#: ../../source/GoSDK.rst:9 f404b68434544ee7be7692b8e9a140f1
+msgid "此SDK文档面向Hyperchain和flato的区块链平台的应用开发者，提供Hyperchain和flato GoSDK的使用指南。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:12 03f1031c5b5147d9b0455af4f1a914c2
+#, python-format
+msgid ""
+"`Gosdk rpc 接口文档 <https://upload.filoop.com/RTD-"
+"Hyperchain%2FGosdk%20rpc%20%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.pdf>`_"
+msgstr ""
+
+#: ../../source/GoSDK.rst:14 d92b945d997b4d008e45b43a6f4d4187
+#, python-format
+msgid ""
+"`Gosdk grpc 接口文档 <https://upload.filoop.com/RTD-"
+"Hyperchain%2FGosdk%20grpc%20%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.pdf>`_"
+msgstr ""
+
+#: ../../source/GoSDK.rst:17 515240e5872c4ba5bf81587e9f18a424
+msgid "1.1 配置"
+msgstr ""
+
+#: ../../source/GoSDK.rst:20 53628d58e6e446c3bc92fe797cff1a95
+msgid "1.1.1 目录结构"
+msgstr ""
+
+#: ../../source/GoSDK.rst:22 99e7bd18f4f341a488ddd34b8f0365f9
+msgid ""
+"所有配置文件、证书都应放在一个文件夹下，默认配置文件夹名为 `conf` ，`hpc.toml` "
+"在配置文件夹下根目录，所有配置为文件路径都应相对于配置文件夹存放，例如我们以默认文件夹名 `conf` 为例::"
+msgstr ""
+
+#: ../../source/GoSDK.rst:38 58db98025e434c40b29e922dcc657994
+msgid ""
+"certs目录下的证书需要对应于Flato或Hyperchain节点，在Flato或Hyperchain部署文档的 **证书配置** "
+"一章节中，我们可以获得 **证书套件** "
+"，证书套件目录图如下图所示（以flato为例）。其中sdkcerts中的四个文件对应于上述conf/certs目录下的四个文件，需要向几号节点发送交易，则选用几号节点的证书进行替换。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:-1 6fdf0af42c4d4c88875cd9908ea48467
+msgid "证书套件目录"
+msgstr ""
+
+#: ../../source/GoSDK.rst:46 f12e0a166a70412abc23c001b62c2ed2
+msgid "1.1.2 配置文件"
+msgstr ""
+
+#: ../../source/GoSDK.rst:48 faf993bf6f5e42f68836ed94650601a0
+msgid "我们通过读取hpc.toml文件来加载配置::"
+msgstr ""
+
+#: ../../source/GoSDK.rst:144 4ff1db2722e94f9fafecd27a71ec1c46
+msgid "1.1.3 配置项释义"
+msgstr ""
+
+#: ../../source/GoSDK.rst:151 584d29cfabcd4df39e1efebb070f51cd
+msgid "一级"
+msgstr ""
+
+#: ../../source/GoSDK.rst:152 25add4ae4edc4f1c819c23eb652e566d
+msgid "二级"
+msgstr ""
+
+#: ../../source/GoSDK.rst:153 ../../source/GoSDK.rst:380
+#: ../../source/GoSDK.rst:414 de0ae9b5743c43a582334168ef4ec81e
+#: ea3ab2f6bc1247ebb537b92c479c4a45 edfd99e8b3ee411fbb3cef6fcf1e7a58
+msgid "释义"
+msgstr ""
+
+#: ../../source/GoSDK.rst:154 853735f8d1fb44d68e16892c253d9506
+msgid "默认值"
+msgstr ""
+
+#: ../../source/GoSDK.rst:155 1ba4d82eb28f4e79a9d0507d20054c9a
+msgid "namespace"
+msgstr ""
+
+#: ../../source/GoSDK.rst:157 3acfbbb8bef34ac3bf34aff045305553
+msgid "为初始化时传入的namespace"
+msgstr ""
+
+#: ../../source/GoSDK.rst:158 33b32520af4349cb9773a95d06ff4556
+msgid "“global”"
+msgstr ""
+
+#: ../../source/GoSDK.rst:159 ../../source/GoSDK.rst:163
+#: 5eb14979b177430f9b9d2e8af71dd369 b0ad1457917c4133a4d572815bbe9499
+msgid "jsonRP"
+msgstr ""
+
+#: ../../source/GoSDK.rst:160 02357669a1cb40a1a09f0ee13b36fca1
+msgid "nodes"
+msgstr ""
+
+#: ../../source/GoSDK.rst:161 d91411e43e1546d59a52793c1d8d9d8b
+msgid "表示平台各节点的IP"
+msgstr ""
+
+#: ../../source/GoSDK.rst:162 31f74b4425fa42aaaecedd2635b532aa
+msgid "[\"localhost\",\"localhost\",\"localhost\",\"localhost\"]"
+msgstr ""
+
+#: ../../source/GoSDK.rst:164 ../../source/GoSDK.rst:168
+#: ../../source/GoSDK.rst:172 1e9c60b4461f4c4ea0142419c978960d
+#: 302d28abc175471dbf4e6ec4d6dcd67a 777e3ab055a64ebc92895a845b1509b2
+msgid "ports"
+msgstr ""
+
+#: ../../source/GoSDK.rst:165 4fbc0a62b4144533901ff3eae433ddcb
+msgid "各节点rpc服务的端口"
+msgstr ""
+
+#: ../../source/GoSDK.rst:166 669b1fc2574b406481741c167157337e
+msgid "[\"8081\", \"8082\", \"8083\", \"8084\"]"
+msgstr ""
+
+#: ../../source/GoSDK.rst:167 53adbce9a7e54029bd3a9218b3f36adb
+msgid "webSocket"
+msgstr ""
+
+#: ../../source/GoSDK.rst:169 f4670666e34f4773ae88acd2495ea1ce
+msgid "为事件订阅服务的端口"
+msgstr ""
+
+#: ../../source/GoSDK.rst:170 f3155943650746a28aa3e2b5f36f5ff8
+msgid "[\"10001\", \"10002\", \"10003\", \"10004\"]"
+msgstr ""
+
+#: ../../source/GoSDK.rst:171 494c4cc83c994e73bf4e3bcecb2dc2b3
+msgid "grpc"
+msgstr ""
+
+#: ../../source/GoSDK.rst:173 90ebf13c111740b78b7e817e07f2fea1
+msgid "各节点grpc服务端口"
+msgstr ""
+
+#: ../../source/GoSDK.rst:174 40c730a872cf469b9c5aed49f2101fdc
+msgid "[\"11001\", \"11002\", \"11003\", \"11004\"]"
+msgstr ""
+
+#: ../../source/GoSDK.rst:175 ../../source/GoSDK.rst:179
+#: ../../source/GoSDK.rst:183 ../../source/GoSDK.rst:187
+#: ../../source/GoSDK.rst:191 24923808f84a49e1b9ce171f429bd41e
+#: 7c3e3f7f53c04ecdbe90020428591ddb 953777891ef1491e8354efe62dd86aca
+#: 9d959425652f42fd80cf5ef05f2f85d9 e365ee08b5a540bca5674f63458b6877
+msgid "polling"
+msgstr ""
+
+#: ../../source/GoSDK.rst:176 07243409e670411e97dff8d6ce7178eb
+msgid "resendTime"
+msgstr ""
+
+#: ../../source/GoSDK.rst:177 f07d2c4dad71499199e1d9cb0f7d0d17
+msgid "重发次数"
+msgstr ""
+
+#: ../../source/GoSDK.rst:178 ../../source/GoSDK.rst:186
+#: ../../source/GoSDK.rst:194 ../../source/GoSDK.rst:234
+#: 0910dfe09d30432cbc0752de8c74450c 2223583f31274fe79b85613aa71c6182
+#: 9389f9c343154b55bc8459e5e26b39a8 deaf9298c7cb405f8a24e83f3bef52a9
+msgid "10"
+msgstr ""
+
+#: ../../source/GoSDK.rst:180 9a5e9d87de404fe28371858fdf49e154
+msgid "firstPollingInterval"
+msgstr ""
+
+#: ../../source/GoSDK.rst:181 941aa1a945184a66a5219be9d5c6937f
+msgid "第一次轮询的间隔，单位 ms"
+msgstr ""
+
+#: ../../source/GoSDK.rst:182 af575b8895834fc6881c73513a218587
+msgid "100"
+msgstr ""
+
+#: ../../source/GoSDK.rst:184 e7c57e2e434247f9a5550d599e03ed53
+msgid "firstPollingTimes"
+msgstr ""
+
+#: ../../source/GoSDK.rst:185 b9c8219f5cbc4339a5b4f1232d86f32e
+msgid "第一次轮询的次数"
+msgstr ""
+
+#: ../../source/GoSDK.rst:188 7ca2af5c417c4096a114b7875006e94b
+msgid "secondPollingInterval"
+msgstr ""
+
+#: ../../source/GoSDK.rst:189 798f222f29524bdb9fdb932cbef93dbd
+msgid "第二次轮询的间隔，单位 ms"
+msgstr ""
+
+#: ../../source/GoSDK.rst:190 579bb8effbb443d2a428239e071d55f2
+msgid "1000"
+msgstr ""
+
+#: ../../source/GoSDK.rst:192 8a1c023aa5b140ae934cb336c8e93d2b
+msgid "secondPollingTimes"
+msgstr ""
+
+#: ../../source/GoSDK.rst:193 c7742f42ea274d3d9af8e6ea22ce78be
+msgid "第二次轮询的次数"
+msgstr ""
+
+#: ../../source/GoSDK.rst:195 ../../source/GoSDK.rst:199
+#: ../../source/GoSDK.rst:203 ../../source/GoSDK.rst:207
+#: ../../source/GoSDK.rst:211 ../../source/GoSDK.rst:215
+#: 158261e8642648b3a6c0cc70872ca3e1 82beb61405654406b225b06c0b65aaad
+#: 89a18fce3d32402d9317e3d86fe5b545 8ebed876c1f343f88fc234e26eaf3209
+#: bb1b06bada6b474ba7867d32c9c430ef e84a5e5e46744b69876495051afd4b6d
+msgid "privacy"
+msgstr ""
+
+#: ../../source/GoSDK.rst:196 3c2ff5f0b7f440859d877f6de39faf6c
+msgid "sendTcert"
+msgstr ""
+
+#: ../../source/GoSDK.rst:197 d56b0b7de1ec40eb92013764c7aeff4d
+msgid "是否开启Tcert认证， 布尔值"
+msgstr ""
+
+#: ../../source/GoSDK.rst:198 29a2afc504b04c67be437bc6b52e02e8
+msgid "true                            |"
+msgstr ""
+
+#: ../../source/GoSDK.rst:200 eb7075e4676a4f0b8f5072912fd3b94d
+msgid "sdkcertPath"
+msgstr ""
+
+#: ../../source/GoSDK.rst:201 9a209b2d66454b2687494e8871a971bd
+msgid "开启Tcert认证时签名用的公钥路径"
+msgstr ""
+
+#: ../../source/GoSDK.rst:202 94f613599ceb4b93aff8619c753b7035
+msgid "\"certs/sdkcert.cert\""
+msgstr ""
+
+#: ../../source/GoSDK.rst:204 9b907de24eb343518a1c04cc84d47c3b
+msgid "sdkcertPrivPath"
+msgstr ""
+
+#: ../../source/GoSDK.rst:205 bded278dce6946c287f2ba244df2602b
+msgid "开启Tcert认证时签名用的私钥路径"
+msgstr ""
+
+#: ../../source/GoSDK.rst:206 b5e532f98fda4bb8b77ea87de9d250df
+msgid "\"certs/sdkcert.priv\""
+msgstr ""
+
+#: ../../source/GoSDK.rst:208 758e9246a5f3481c9b54d4e8a9129a90
+msgid "uniquePubPath"
+msgstr ""
+
+#: ../../source/GoSDK.rst:209 5077e6b67b4a421aa2ca3986cd65b4f4
+msgid "表示请求tcert时所使用的请求体公钥路径"
+msgstr ""
+
+#: ../../source/GoSDK.rst:210 93d865e67ab746c4bb36324ee8d646e3
+msgid "\"certs/unique.pub\""
+msgstr ""
+
+#: ../../source/GoSDK.rst:212 18029bc94b204e17af14d28d595b7712
+msgid "uniquePrivPath"
+msgstr ""
+
+#: ../../source/GoSDK.rst:213 a149b86f19f34583a29987192eab675c
+msgid "表示请求tcert时所使用的请求体私钥路径"
+msgstr ""
+
+#: ../../source/GoSDK.rst:214 c9f6f0ff4d0a4c0390539070c17248c0
+msgid "\"certs/unique.priv\""
+msgstr ""
+
+#: ../../source/GoSDK.rst:216 1f1f9e7d294341b5b3a7741304996380
+msgid "cfca"
+msgstr ""
+
+#: ../../source/GoSDK.rst:217 0c769f08bdcb45a9932a87bbc892dc59
+msgid "是否开启ca证书， 布尔值"
+msgstr ""
+
+#: ../../source/GoSDK.rst:218 b75e42229d514d0d9edb24ad20e291af
+msgid "true"
+msgstr ""
+
+#: ../../source/GoSDK.rst:219 ../../source/GoSDK.rst:223
+#: 7b13aba3e5b8410eb50286f78313db1b d241027edc014595a4e478e38512a8d9
+msgid "log"
+msgstr ""
+
+#: ../../source/GoSDK.rst:220 b81db17b6a714a7f998ccd4a997f5a10
+msgid "log_level"
+msgstr ""
+
+#: ../../source/GoSDK.rst:221 653098fa47a24935b3399b06504c5fbb
+msgid "日志等级， 分为\"CRITICAL\",\"ERROR\",\"WARNING\",\"NOTICE\",\"INFO\",\"DEBUG\""
+msgstr ""
+
+#: ../../source/GoSDK.rst:222 61d4da5ba216486593eb1e69613fdc0d
+msgid "\"INFO\""
+msgstr ""
+
+#: ../../source/GoSDK.rst:224 9467fb2d8986495a85cf7d33a7d8001e
+msgid "log_dir"
+msgstr ""
+
+#: ../../source/GoSDK.rst:225 159e687de5b444a28ff87d81c8070dba
+msgid "存放日志文件的目录"
+msgstr ""
+
+#: ../../source/GoSDK.rst:226 5ce782c4625846e0a20a7df5386d13a7
+msgid "\"../logs\""
+msgstr ""
+
+#: ../../source/GoSDK.rst:227 ../../source/GoSDK.rst:231
+#: ../../source/GoSDK.rst:235 ../../source/GoSDK.rst:239
+#: ../../source/GoSDK.rst:243 ../../source/GoSDK.rst:247
+#: ../../source/GoSDK.rst:251 059240d328714d2aa72155dc1dcc86fd
+#: 2ebe9ded1a16417ab29cd7805bbd914e 355b944143f84c39867213f81ad23c36
+#: 3fdb3346fe7b4a1cb4a19fe40331942f 855634102a9f4316b3248fc44be2c217
+#: bd25b8d5d522412faaea88bf1e4509c8 edb00ab0ec12444c95e05a75599ed488
+msgid "transport"
+msgstr ""
+
+#: ../../source/GoSDK.rst:228 d35d15467ce34507b0469246cad0c02b
+msgid "maxIdleConns"
+msgstr ""
+
+#: ../../source/GoSDK.rst:229 fb3018579cfa41fc8afab40f36bfbd21
+msgid "所有节点一共最大空闲活跃rpc连接数，如果为0，表示不设限制"
+msgstr ""
+
+#: ../../source/GoSDK.rst:230 ../../source/GoSDK.rst:250
+#: 30fb27733e884de9895450e04a48e758 800abaf8c4ac41dbab4fc44586f98ddb
+msgid "0"
+msgstr ""
+
+#: ../../source/GoSDK.rst:232 e7395994db364a66acf60fbd3544278c
+msgid "maxIdleConnsPerHost"
+msgstr ""
+
+#: ../../source/GoSDK.rst:233 49b3850a52e94d9eb0497c4ed6fdd0b9
+msgid "每个节点最大空闲活跃rpc连接数， 如果为0，表示使用系统默认配置"
+msgstr ""
+
+#: ../../source/GoSDK.rst:236 4adbdb008e764c2e8345b649836683b1
+msgid "maxRecvMsgSize"
+msgstr ""
+
+#: ../../source/GoSDK.rst:237 38276b1d6bbf4e9894412b32c7dfe6f4
+msgid "grpc双向流从节点接受的信息最大size，此处配置必须小于等于节点配置的值，单位是比特"
+msgstr ""
+
+#: ../../source/GoSDK.rst:238 ../../source/GoSDK.rst:242
+#: 6c1b40505c564528b9239f03c745abcf 74f48d22bb5e42d6a2f5b36c0db4a1ac
+msgid "51200"
+msgstr ""
+
+#: ../../source/GoSDK.rst:240 a3ee7860721e4e6f802bf7452f0a3ebe
+msgid "maxSendMsgSize"
+msgstr ""
+
+#: ../../source/GoSDK.rst:241 18816bea56764ac4b811ee260a33f891
+msgid "通过grpc双向流发送到节点的信息最大size，此处配置必须小于等于节点配置的值，单位是比特"
+msgstr ""
+
+#: ../../source/GoSDK.rst:244 75e93502514349fbb275a511fde6dcb1
+msgid "dailTimeout"
+msgstr ""
+
+#: ../../source/GoSDK.rst:245 3caf0ce2144d47c4aa4e05263b5ce645
+msgid "建立grpc连接的超时时间，单位s"
+msgstr ""
+
+#: ../../source/GoSDK.rst:246 ../../source/GoSDK.rst:254
+#: e0c384eb0e884b11b72c4102e63bbbd0 e58a5f08afb94b229926daa8c4656ef6
+msgid "5"
+msgstr ""
+
+#: ../../source/GoSDK.rst:248 476162229fba4c7695faae3ffa76ca80
+msgid "maxLifetime"
+msgstr ""
+
+#: ../../source/GoSDK.rst:249 bc41265053d44dc4bbc2f8e20643b85d
+msgid "判定接收不到grpc心跳多久后表示连接已失效，单位s， 如果为0，表示使用默认值"
+msgstr ""
+
+#: ../../source/GoSDK.rst:252 ab68f6771662461ab4ef60954d7d5623
+msgid "maxStreamLifeTime"
+msgstr ""
+
+#: ../../source/GoSDK.rst:253 ce646b7f80734518b02229a6f02d2dbe
+msgid "grpc双向流的存活时间，此处配置必须小于等于节点配置的值，0表示默认（即依靠节点配置的时间），单位秒"
+msgstr ""
+
+#: ../../source/GoSDK.rst:255 95d5eb69a46645f4aef3987c0d635140
+msgid "tx"
+msgstr ""
+
+#: ../../source/GoSDK.rst:256 31dca249529c4aa79f5375139a7f7be4
+msgid "version"
+msgstr ""
+
+#: ../../source/GoSDK.rst:257 de4f1ca4030646dd80c4b38e6f4d0798
+msgid "sdk所对应的平台版本号"
+msgstr ""
+
+#: ../../source/GoSDK.rst:258 4da302f1457c4ac1b25a53e3ad8485fc
+msgid "2.5"
+msgstr ""
+
+#: ../../source/GoSDK.rst:262 f905f14e948847d591d5983a8556245a
+msgid "`namespace` 为初始化时传入的namespace；"
+msgstr ""
+
+#: ../../source/GoSDK.rst:264 2b4d5f440b814b8c8850c4335b499753
+msgid "[jspnRPC]模块：`nodes` 表示平台各节点的IP；`ports` 也就是平台发送消息的端口。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:266 f6586d75d986407785da308f605e997a
+msgid "webSocket模块：`ports` 为事件订阅连接的端口，他们分别对应着node中配置的IP。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:268 94d77de915384a19847433f075e9d63a
+msgid "grpc 模块: `ports` 为grpc连接的端口"
+msgstr ""
+
+#: ../../source/GoSDK.rst:270 87bff96b22574ccf960e270174e591fb
+msgid ""
+"polling模块：`resendTime` 参数表示重发次数； `pollingInterval` "
+"表示轮训去获取交易的时间间隔（分为第一次和第二次），单位为毫秒； `pollingTimes` 表示发送一次交易的轮训次数（分为第一次和第二次）。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:272 5950c01da40d4c3dae5655c2198ea1c1
+msgid ""
+"privacy模块： `sendTcert` 表示开启Tcert，请配合平台一起使用； `sdkcertPath` 和 "
+"`sdkcertPrivPath` 表示请求tcert时需要用来签名的公私钥对； `uniquePubPath` 和 "
+"`uniquePrivPath` 表示请求tcert时所使用的请求体公私钥对； `cfca` 表示开启cfca证书。 "
+"**需要注意证书路径均相对于** `hpc.toml` **文件** 。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:274 673cbf4ceed34647b6837b79fb5dfe47
+msgid ""
+"security模块： `https` 开启后则请求都会使用https来发送，`tlsca` "
+"表示客户端需要验证的服务器ca，`tlspeerCert` 表示服务器需要验证的SDK的ca的公钥， `tlspeerPriv` "
+"则为对应的ca公钥的私钥。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:276 8a6ae7811af44468a8c68b292a65c045
+msgid "log模块： `log_level` 表示输出的日志级别。 `log_dir` 表示存放日志的文件夹路径。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:278 22e9dcb6fc31470aabc476adc4439bb1
+msgid ""
+"【transport】模块： `maxRecvMsgSize` ： "
+"通过grpc双向流从节点接受的信息最大size，此处配置必须小于等于节点配置的值，单位是比特"
+msgstr ""
+
+#: ../../source/GoSDK.rst:280 c59734df88cf4fbebb9306185dae359a
+msgid "txVersion 需要和平台版本对应"
+msgstr ""
+
+#: ../../source/GoSDK.rst:282 66e224fec82c4c83a0b4f6d71667d892
+msgid "maxRecvMsgSize： 通过grpc双向流从节点接受的信息最大size，此处配置必须小于等于节点配置的值，单位是比特"
+msgstr ""
+
+#: ../../source/GoSDK.rst:284 5ff5e838f02648a99172afa781cc3c1a
+msgid "maxSendMsgSize： 通过grpc双向流发送到节点的信息最大size，此处配置必须小于等于节点配置的值，单位是比特"
+msgstr ""
+
+#: ../../source/GoSDK.rst:286 304fea0077974bdcb19ee49a69250f32
+msgid "dailTimeout： grpc连接创建超时时间"
+msgstr ""
+
+#: ../../source/GoSDK.rst:288 9bd220c3eff0423a9eb2c09c28439bc9
+msgid "maxStreamLifeTime： grpc双向流的存活时间，此处配置必须小于等于节点配置的值，0表示默认（即依靠节点配置的时间），单位秒"
+msgstr ""
+
+#: ../../source/GoSDK.rst:292 c6cc8c87f5ba47d19cfb5e105ac4224a
+msgid "第二章 账户"
+msgstr ""
+
+#: ../../source/GoSDK.rst:296 ba9a147dd660409d938fd2910a806dd2
+msgid "账户分为普通账户和DID账户，而根据加密方式可分为国密和非国密类型。目前根据加密方式不同一共有19种类型账户"
+msgstr ""
+
+#: ../../source/GoSDK.rst:298 47da99c74e494f0f8d0fae5161516ee7
+msgid "非国密账户有："
+msgstr ""
+
+#: ../../source/GoSDK.rst:305 ../../source/GoSDK.rst:345
+#: 0783521695c247ebb618fce127622e8c 80e52e9ac94a41efa787a3c97b49c7d2
+msgid "参数名"
+msgstr ""
+
+#: ../../source/GoSDK.rst:306 ../../source/GoSDK.rst:346
+#: 7beedea8dde54d008d27526335a18c82 f6c378ccc42c4b7dafc121d8013b1b46
+msgid "编码"
+msgstr ""
+
+#: ../../source/GoSDK.rst:307 3d781b6b1fd642ffb6d488b7471f802a
+msgid "ECKDF2"
+msgstr ""
+
+#: ../../source/GoSDK.rst:308 5bc4c9a4d089490ba1b82596b36e34fb
+msgid "0x01(暂不支持)"
+msgstr ""
+
+#: ../../source/GoSDK.rst:309 2f17a44f09734487895f74c7144f48a2
+msgid "ECDES"
+msgstr ""
+
+#: ../../source/GoSDK.rst:310 1d6b0cabdeaf474189493f864ac13a27
+msgid "0x02"
+msgstr ""
+
+#: ../../source/GoSDK.rst:311 1ab6f94464be4d66820038294f860369
+msgid "ECRAW"
+msgstr ""
+
+#: ../../source/GoSDK.rst:312 47f1722660754416a93eaf62ea08682f
+msgid "0x03"
+msgstr ""
+
+#: ../../source/GoSDK.rst:313 957b29fb79294addac46c2fb49f15585
+msgid "ECAES"
+msgstr ""
+
+#: ../../source/GoSDK.rst:314 9ada238776914a3baac307310b17cc51
+msgid "0x04"
+msgstr ""
+
+#: ../../source/GoSDK.rst:315 73f4fb0b9fc1454eb9d8256e2a9725b5
+msgid "EC3DES"
+msgstr ""
+
+#: ../../source/GoSDK.rst:316 e5344bf485e140dbadf1529e6c988b91
+msgid "0x05"
+msgstr ""
+
+#: ../../source/GoSDK.rst:317 feb24edad27440369d496a9def1dc306
+msgid "ED25519DES"
+msgstr ""
+
+#: ../../source/GoSDK.rst:318 f63dd26a733245f792b9b550fbae19df
+msgid "0x21"
+msgstr ""
+
+#: ../../source/GoSDK.rst:319 c5baed8cdb14410194221ee9a755d6c5
+msgid "ED25519RAW"
+msgstr ""
+
+#: ../../source/GoSDK.rst:320 8a22170102b84570a76e308fc99fcacb
+msgid "0x22"
+msgstr ""
+
+#: ../../source/GoSDK.rst:321 d906c1022d174b378c3af77c416ef56c
+msgid "ED25519AES"
+msgstr ""
+
+#: ../../source/GoSDK.rst:322 65e91dd1074743ab9d2d679df6b6469a
+msgid "0x23"
+msgstr ""
+
+#: ../../source/GoSDK.rst:323 f36a49e455d54627ad4dc0b05d6217da
+msgid "ED255193DES"
+msgstr ""
+
+#: ../../source/GoSDK.rst:324 89fa7adbb5654ccc864ca4549e463294
+msgid "0x24"
+msgstr ""
+
+#: ../../source/GoSDK.rst:325 2eef9ec57f894dbca54948d3e94d6a96
+msgid "ECKDF2R1"
+msgstr ""
+
+#: ../../source/GoSDK.rst:326 63139205f7b941af9fa1d99d96a59fb5
+msgid "0x011(暂不支持)"
+msgstr ""
+
+#: ../../source/GoSDK.rst:327 cb364dc8c2434722a3a43a40f5de0f23
+msgid "ECDESR1"
+msgstr ""
+
+#: ../../source/GoSDK.rst:328 1b784e77c8154d17bcceafe3864b7fa5
+msgid "0x021"
+msgstr ""
+
+#: ../../source/GoSDK.rst:329 9451db675cc745bd96622d14f7f0bacd
+msgid "ECRAWR1"
+msgstr ""
+
+#: ../../source/GoSDK.rst:330 a7bfd79b917d42d1877f5103b7b3a1a1
+msgid "0x031"
+msgstr ""
+
+#: ../../source/GoSDK.rst:331 c0d02e58346146028734c21c7b544924
+msgid "ECAESR1"
+msgstr ""
+
+#: ../../source/GoSDK.rst:332 29af469093ac4dedbb4d9bcc04c54958
+msgid "0x041"
+msgstr ""
+
+#: ../../source/GoSDK.rst:333 780c0986451f45389d48584e9f232d52
+msgid "EC3DESR1"
+msgstr ""
+
+#: ../../source/GoSDK.rst:334 d943bec41f4847d3b503531036c58a82
+msgid "0x051"
+msgstr ""
+
+#: ../../source/GoSDK.rst:338 17bff356011d402f8e185969fa8b7787
+msgid "国密账户有："
+msgstr ""
+
+#: ../../source/GoSDK.rst:347 3982c04650984a818ad11d44e1d07e88
+msgid "SMSM4"
+msgstr ""
+
+#: ../../source/GoSDK.rst:348 c08b4420aa07488497b1d3bd50fa53b8
+msgid "0x11"
+msgstr ""
+
+#: ../../source/GoSDK.rst:349 ed372a7b03204186b1f411531ba860d2
+msgid "SMDES"
+msgstr ""
+
+#: ../../source/GoSDK.rst:350 a687af413ded4bd98d9ec4d830995c57
+msgid "0x12"
+msgstr ""
+
+#: ../../source/GoSDK.rst:351 0e7f33935f4d4bfeb6b4d293d4a72d66
+msgid "SMRAW"
+msgstr ""
+
+#: ../../source/GoSDK.rst:352 797accaeaf4046558f617d9e5d12f321
+msgid "0x13"
+msgstr ""
+
+#: ../../source/GoSDK.rst:353 7a8be9cd6d774c6cb824ab28b4ca446c
+msgid "SMAES"
+msgstr ""
+
+#: ../../source/GoSDK.rst:354 4f11d719646b4a33bedc08da9e9488c4
+msgid "0x14"
+msgstr ""
+
+#: ../../source/GoSDK.rst:355 f49ec5b0b5884b458530c849b6524221
+msgid "SM3DES"
+msgstr ""
+
+#: ../../source/GoSDK.rst:356 284bb18bcafb480daf7bc1b256c6d0bc
+msgid "0x15"
+msgstr ""
+
+#: ../../source/GoSDK.rst:360 24b919d2e9474ef2892b1fd16736a786
+msgid "2.1 普通账户"
+msgstr ""
+
+#: ../../source/GoSDK.rst:363 bb4d533908d34b4595d3bfcdc5520a49
+msgid "2.1.1 创建账户"
+msgstr ""
+
+#: ../../source/GoSDK.rst:365 a3eab7c7ba9a4523aed3a35e0465291f
+msgid "**2.1.1.1 通过账户类型创建账户**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:367 ../../source/GoSDK.rst:400
+#: ../../source/GoSDK.rst:462 ../../source/GoSDK.rst:484
+#: ../../source/GoSDK.rst:507 ../../source/GoSDK.rst:527
+#: ../../source/GoSDK.rst:573 ../../source/GoSDK.rst:591
+#: ../../source/GoSDK.rst:618 ../../source/GoSDK.rst:741
+#: ../../source/GoSDK.rst:780 ../../source/GoSDK.rst:815
+#: ../../source/GoSDK.rst:1382 ../../source/GoSDK.rst:1641
+#: ../../source/GoSDK.rst:1873 04bc873adeee456f83901fd82e3d26ff
+#: 1d2dd6f567e947c693db565da7ed5aa7 26afe44f7922403192bb5e12ff371acc
+#: 6593bafd28e84c979fc853e6384e3e50 6d85bce3d58f4f23a4ed3b5134be7e2a
+#: 7c549080f2754bee8adb9999710a220b 844ba278bc834fc69a6f8adebd3f6ca4
+#: 87d8d97cf2b94e1d9b64275c69ce03c1 8937f461a93a4b3bb2793ad7cf2308c8
+#: 8d3ca9c844f94887947bfebbfcdb7074 935e1f2fbdf74654bb5b4241af07dbd5
+#: a9f4ee9043284a71800ea1c9b0948015 bb78c6a7e22f42d09d8f203b7f8d0471
+#: c1224c5084c8461e990ac9c724964a18 c3705a539ca849de9d315ceecfce01f8
+msgid "方法签名："
+msgstr ""
+
+#: ../../source/GoSDK.rst:379 ../../source/GoSDK.rst:413
+#: 511470d37259449cbc2ddaca0552dc97 b2890eecbda045d7bb6a8e0c52f755ef
+msgid "参数"
+msgstr ""
+
+#: ../../source/GoSDK.rst:381 f92ae0faf8c94047848c2b008a11b800
+msgid "参数1 （acType）"
+msgstr ""
+
+#: ../../source/GoSDK.rst:382 a995c1e086c84431a7fc04d2d1f49ab1
+msgid "加密方式"
+msgstr ""
+
+#: ../../source/GoSDK.rst:383 4b884c229f9f4fc795b39c424afc3973
+msgid "参数2 （password）"
+msgstr ""
+
+#: ../../source/GoSDK.rst:384 1676ee8de4c8470aa1841b1d065a9b40
+msgid "账户密码"
+msgstr ""
+
+#: ../../source/GoSDK.rst:385 ../../source/GoSDK.rst:417
+#: 457d58e90c474e6eaa111d44a6160c68 9dd4982bf38f4eb196d1fc44a5418e8c
+msgid "返回值1"
+msgstr ""
+
+#: ../../source/GoSDK.rst:386 ../../source/GoSDK.rst:418
+#: 04447fdef68944d7b9b5d0b0a36a3fe6 65a694d9bd7349b295f98cb040cab610
+msgid "账户JSON串"
+msgstr ""
+
+#: ../../source/GoSDK.rst:387 ../../source/GoSDK.rst:419
+#: 46dcf8ac53274249bd1dd6cfbf1ad771 dacbe580c07c45b1967099eecf8395e0
+msgid "返回值2"
+msgstr ""
+
+#: ../../source/GoSDK.rst:388 ../../source/GoSDK.rst:420
+#: 19f159e362fb423d8fc45f74b991c19f 7fe9b18671b14418869bd2c1fb0f17fd
+msgid "error， 详情见第七章"
+msgstr ""
+
+#: ../../source/GoSDK.rst:391 ../../source/GoSDK.rst:424
+#: ../../source/GoSDK.rst:444 ../../source/GoSDK.rst:473
+#: ../../source/GoSDK.rst:496 7afc52899e6f4149a7183b097b97e328
+#: 8f7c414d75f641519ac5d780b79f501a b14f3188527e4331b8064efc01c9dc9e
+#: faabccfffaef4e1cad020d2738091d36 fe24796a072d4745b3f5be1f7ac264b3
+msgid "应用实例:"
+msgstr ""
+
+#: ../../source/GoSDK.rst:398 64ad040f585342049358c4cf4dd417c7
+msgid "**2.1.1.2 创建国密账户**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:406 f3a496e150c44483b1000b51c35d790c
+msgid "说明： 创建sm2国密算法的accountJSON"
+msgstr ""
+
+#: ../../source/GoSDK.rst:415 12e7fa87b1554ed7bba20bbe4d956b16
+msgid "参数 password"
+msgstr ""
+
+#: ../../source/GoSDK.rst:416 b3702bb55b8540189ea5041e8a4ddd28
+msgid "账户密码，不为空则采用SMDES方式加密，为空则采用SMRAW方式加密（即不加密）"
+msgstr ""
+
+#: ../../source/GoSDK.rst:431 0c3214fd7c1749b59d08fdbc27555843
+msgid "**2.1.1.3  通过pfx格式的证书创建账户**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:433 f323e5bbf8b8466486a7d05d5a09224c
+msgid "方法签名: ::"
+msgstr ""
+
+#: ../../source/GoSDK.rst:439 c59badae50a34c9f868239a5f5a391ac
+msgid "参数1 : 账户密码"
+msgstr ""
+
+#: ../../source/GoSDK.rst:440 522f1b78a0484b7795c49d5397ab75aa
+msgid "参数2 : pfx格式证书"
+msgstr ""
+
+#: ../../source/GoSDK.rst:441 74457e2d2fd2489bbff4de97dd54e821
+msgid "返回值1 : 账户JSON串"
+msgstr ""
+
+#: ../../source/GoSDK.rst:442 ec46aba68c9040ed99b43bb2999bc56f
+msgid "返回值2 : error， 详情见第七章"
+msgstr ""
+
+#: ../../source/GoSDK.rst:460 c028d05b06d54127858cd0d666ac823a
+msgid "**2.1.1.4 创建ed25519类型账户**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:469 a9ee28dc4d4f4991ae62e21ec2693775
+msgid "参数1 （password） : 账户密码，若为空，则采用ED25519RAW方式加密, 否则采用ED25519DES方式加密"
+msgstr ""
+
+#: ../../source/GoSDK.rst:470 2b7adfc5abd5460c8f331962e97aba4d
+msgid "返回值1     : 账户JSON串"
+msgstr ""
+
+#: ../../source/GoSDK.rst:471 9efff45b930c41c28228201d896c6ba9
+msgid "返回值2     : error， 详情见第七章"
+msgstr ""
+
+#: ../../source/GoSDK.rst:482 84f95ca96827420b9ba21ea85a4ac795
+msgid "**2.1.1.5 创建ecdsa账户**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:491 ../../source/GoSDK.rst:562
+#: 66ee1431ae53430493ab5a2751c91801 69f276d493604ce2be4a91cb2ffd5d94
+msgid "参数1 （password） : 账户密码，若为空，则采用ECRAW方式加密, 否则采用ECDES方式加密"
+msgstr ""
+
+#: ../../source/GoSDK.rst:492 c07fce152846495cbe9719d8f6127249
+msgid "返回值           :"
+msgstr ""
+
+#: ../../source/GoSDK.rst:493 17903947e44e48619f36e53723984ac4
+msgid "返回值1          : 账户JSON串"
+msgstr ""
+
+#: ../../source/GoSDK.rst:494 74586dee194f48d6be9bf10732179118
+msgid "返回值2          :| error， 详情见第七章"
+msgstr ""
+
+#: ../../source/GoSDK.rst:505 04894dddccb84f0aa6a527dec5d5dae9
+msgid "**2.1.1.6 创建R1账户**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:514 6465e32976ec4200a123e00d8171b421
+msgid "参数1 （password） : 账户密码，若为空，则采用ECRAWR1方式加密, 否则采用ECDESR1方式加密"
+msgstr ""
+
+#: ../../source/GoSDK.rst:515 ../../source/GoSDK.rst:564
+#: ../../source/GoSDK.rst:582 2a12409fc5114daca11e86025352fa1d
+#: 865c8e013d3d45ecbc97d328218a300e b367948e68e8485cb4204b0c896735d1
+msgid "返回值1           : 账户JSON串"
+msgstr ""
+
+#: ../../source/GoSDK.rst:516 ../../source/GoSDK.rst:565
+#: ../../source/GoSDK.rst:583 9bbb59a1034f428caa4a77cbb3faf698
+#: ab4e8ae881824f6699b92d6b4f9b2036 f4344f53df994710919e4db3b857177c
+msgid "返回值2           : error， 详情见第七章"
+msgstr ""
+
+#: ../../source/GoSDK.rst:518 ../../source/GoSDK.rst:539
+#: ../../source/GoSDK.rst:567 ../../source/GoSDK.rst:585
+#: ../../source/GoSDK.rst:603 14251831fd5e433abe554dd2bbb08f65
+#: 1f3cd78683f14db2983280b2b0b59b15 3a1b785203f64357910d703354afb9a3
+#: 4027ed6caffb4462afd5234f7e09c09f e96b990260424cbca67150db2b19cc43
+msgid "应用实例::"
+msgstr ""
+
+#: ../../source/GoSDK.rst:525 6d50edc913c846d08f26aff825568156
+msgid "### 2.1.2 生成key"
+msgstr ""
+
+#: ../../source/GoSDK.rst:533 ../../source/GoSDK.rst:622
+#: 3852f3633651418e815c06e0196fc867 4d0fb008b7ca4b889e90202f7049e3f0
+msgid "参数1 （accountJson） : 账户json串"
+msgstr ""
+
+#: ../../source/GoSDK.rst:534 ../../source/GoSDK.rst:623
+#: 48456bddcc024da9bb56185666416652 d2bc8fd4d56340758a12c13dcb4f033d
+msgid "参数2 （password）    : 账户密码"
+msgstr ""
+
+#: ../../source/GoSDK.rst:535 c9a19a43dbd745eba5591e6472604194
+msgid "返回值               :"
+msgstr ""
+
+#: ../../source/GoSDK.rst:536 ../../source/GoSDK.rst:624
+#: adb1e7c87f364bfea926c22e9802458f cbf0cc4c7f3149acb51544eb8d694ba1
+msgid "返回值1              : 账户key"
+msgstr ""
+
+#: ../../source/GoSDK.rst:537 82ffd50a12c745af912d4eb562450478
+msgid "返回值2              :| error， 详情见第七章"
+msgstr ""
+
+#: ../../source/GoSDK.rst:547 c1f7c467f0604affa7e3be07874b6a71
+msgid "2.2 did账户"
+msgstr ""
+
+#: ../../source/GoSDK.rst:549 44c17d5fc3b84675bde8193f0f6a2c15
+msgid "did账户与普通账户在国密场景一致，仅需要对非国密情况进行区分，由此带来的变化如下"
+msgstr ""
+
+#: ../../source/GoSDK.rst:552 9a863dfc53014d20b28205f6d4937a14
+msgid "2.2.1 创建账户"
+msgstr ""
+
+#: ../../source/GoSDK.rst:554 7f4eccbd2125410b91f3e43cbf1543e3
+msgid "**2.2.1.1 通过ecdsa创建账户**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:556 3bb8ec0c1add439583b365a91211d353
+msgid "方法签名:"
+msgstr ""
+
+#: ../../source/GoSDK.rst:563 ../../source/GoSDK.rst:581
+#: 516859d93e1c44fb9352484f54f2f234 d06847fe610546b2bf82c6a939785ca1
+msgid "返回值            :"
+msgstr ""
+
+#: ../../source/GoSDK.rst:571 196c7ed359fb4d0c83bb012c7a44bd11
+msgid "**2.2.1.2 通过加密类型创建账户**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:579 da6e617e8d6b417ba2c290eb15c00850
+msgid "参数1 （acType）   : 加密方式"
+msgstr ""
+
+#: ../../source/GoSDK.rst:580 1a6aef14da4e45a391676c5e83b132cc
+msgid "参数2 （password） : 账户密码"
+msgstr ""
+
+#: ../../source/GoSDK.rst:589 16dcb013fc59418081779c5ba9abd646
+msgid "**2.2.1.2 通过key生成DID账户**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:598 b4abbb254a3746aab7e7cc878fc6b261
+msgid "参数1  : 账户key"
+msgstr ""
+
+#: ../../source/GoSDK.rst:599 9ee00a71bd62474aaad3f27fcf72ee5e
+msgid "参数2  : 链唯一的chainId"
+msgstr ""
+
+#: ../../source/GoSDK.rst:600 74bfeabd59d4454eac6dc26f25b21b53
+msgid "参数3  : DID账户的后缀，用于构成did账户的地址"
+msgstr ""
+
+#: ../../source/GoSDK.rst:601 611249ab10bc48f6bdaf4032628482f5
+msgid "返回值1 : DID账户"
+msgstr ""
+
+#: ../../source/GoSDK.rst:614 66f741fbf1754d37b74043f3ddc64890
+msgid "2.2.2 生成key"
+msgstr ""
+
+#: ../../source/GoSDK.rst:616 ed73998cd6054a13aaf1f83c1589de7c
+msgid "**2.2.2.1 通过账户json生成key**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:620 098a52785c324836a12365b7ec351458
+msgid ""
+"`func GenDIDKeyFromAccountJson(accountJson, password string) (key "
+"interface{}, err error)`"
+msgstr ""
+
+#: ../../source/GoSDK.rst:625 d91b66825e3541279a282d4d0751660f
+msgid "返回值2              : error， 详情见第七章"
+msgstr ""
+
+#: ../../source/GoSDK.rst:627 ../../source/GoSDK.rst:750
+#: ../../source/GoSDK.rst:768 ../../source/GoSDK.rst:787
+#: ../../source/GoSDK.rst:805 ../../source/GoSDK.rst:825
+#: ../../source/GoSDK.rst:848 ../../source/GoSDK.rst:872
+#: ../../source/GoSDK.rst:895 ../../source/GoSDK.rst:977
+#: ../../source/GoSDK.rst:1000 ../../source/GoSDK.rst:1067
+#: ../../source/GoSDK.rst:1133 ../../source/GoSDK.rst:1160
+#: ../../source/GoSDK.rst:1184 ../../source/GoSDK.rst:1208
+#: ../../source/GoSDK.rst:1228 ../../source/GoSDK.rst:1252
+#: ../../source/GoSDK.rst:1271 ../../source/GoSDK.rst:1288
+#: ../../source/GoSDK.rst:1310 ../../source/GoSDK.rst:1332
+#: ../../source/GoSDK.rst:1363 ../../source/GoSDK.rst:1393
+#: ../../source/GoSDK.rst:1418 ../../source/GoSDK.rst:1445
+#: ../../source/GoSDK.rst:1471 ../../source/GoSDK.rst:1494
+#: ../../source/GoSDK.rst:1515 ../../source/GoSDK.rst:1537
+#: ../../source/GoSDK.rst:1594 ../../source/GoSDK.rst:1622
+#: ../../source/GoSDK.rst:1650 ../../source/GoSDK.rst:1671
+#: ../../source/GoSDK.rst:1884 ../../source/GoSDK.rst:1928
+#: ../../source/GoSDK.rst:2113 ../../source/GoSDK.rst:2143
+#: ../../source/GoSDK.rst:2184 ../../source/GoSDK.rst:2247
+#: ../../source/GoSDK.rst:2266 ../../source/GoSDK.rst:2287
+#: ../../source/GoSDK.rst:2309 ../../source/GoSDK.rst:2333
+#: ../../source/GoSDK.rst:2378 ../../source/GoSDK.rst:2397
+#: ../../source/GoSDK.rst:2415 ../../source/GoSDK.rst:2433
+#: ../../source/GoSDK.rst:2451 ../../source/GoSDK.rst:2470
+#: ../../source/GoSDK.rst:2490 ../../source/GoSDK.rst:2515
+#: ../../source/GoSDK.rst:2542 ../../source/GoSDK.rst:2562
+#: ../../source/GoSDK.rst:2582 ../../source/GoSDK.rst:2600
+#: ../../source/GoSDK.rst:2626 ../../source/GoSDK.rst:2650
+#: ../../source/GoSDK.rst:2675 ../../source/GoSDK.rst:2698
+#: ../../source/GoSDK.rst:2718 ../../source/GoSDK.rst:2740
+#: ../../source/GoSDK.rst:2762 ../../source/GoSDK.rst:2789
+#: ../../source/GoSDK.rst:2819 ../../source/GoSDK.rst:2840
+#: ../../source/GoSDK.rst:2869 ../../source/GoSDK.rst:2973
+#: ../../source/GoSDK.rst:3057 ../../source/GoSDK.rst:3078
+#: ../../source/GoSDK.rst:3100 ../../source/GoSDK.rst:3119
+#: ../../source/GoSDK.rst:3139 ../../source/GoSDK.rst:3167
+#: ../../source/GoSDK.rst:3192 ../../source/GoSDK.rst:3215
+#: ../../source/GoSDK.rst:3248 ../../source/GoSDK.rst:3290
+#: ../../source/GoSDK.rst:3645 ../../source/GoSDK.rst:3682
+#: ../../source/GoSDK.rst:3719 ../../source/GoSDK.rst:3790
+#: ../../source/GoSDK.rst:3815 ../../source/GoSDK.rst:3838
+#: ../../source/GoSDK.rst:3864 ../../source/GoSDK.rst:3896
+#: ../../source/GoSDK.rst:3919 ../../source/GoSDK.rst:3959
+#: 026530df18194f56b2d815b9430845f6 03bba941bbc541d8a4208cbfa9b8b55d
+#: 03d7ae6284044f82a927ec8c1223cb42 073a8b04179544cab2514936feba0382
+#: 0744b29bd7f14e198922bdc7e6fc25cd 07c90217251145ffaf5d85a1110822e3
+#: 07dd3bdad4ca470fbd79cfd9bc2bb273 0a0b55db1aef40dabc770a1823ed09e6
+#: 0e27ee0200cd4505a51bc27dc95af2dc 10894dde7ac1403293ffcbfe144628c0
+#: 1271e516c2f44de9b6b978526d6ae07a 1279525701d8489e869ffe5a95528ed8
+#: 13b7a20ee61b47d5a150d8dd9f5eb12b 143828c618624fc19485a2bcc3fe8314
+#: 149ff2e4069e4df889b77375de86c433 1530d51abae04702b16554bd684b21bd
+#: 1600acbcd63d4261b2e571f3a0e6f9ff 19903cc939754ac9a41094765f01871d
+#: 1f7245e1e2cc4aa3be372bd65d7675c3 286fc1b4af044c7a8a9943a89a282a23
+#: 2bf3910bd1f8430194d0be3918015ab8 2c9610b8ee0d475b9d5f143195736a44
+#: 32d6ea97faa6467a802d12f35da0298a 356d1bd1a13940c3b78f36fdb57f5967
+#: 37a793d2ed9f4da0af8ede0426c48751 471bea6700fb42d080ebb339e3890e3e
+#: 54a577cdd36d42bbacb2359d0b5dab0a 56e670e26a4b43b3a21601ccd273c8c9
+#: 5eb954916c2d47fbaaeee86b48d594cc 61dde42070e64ee1bf219b5f221eca43
+#: 64dd951e52a040908497a405148d2295 65da4ea62c934ff1939ebe29bcf1235c
+#: 66b3ff327b5945aeb436a8102b7a8c57 69e0a732124147f1a2dca2b19f281fa6
+#: 6bc67da9243842958734313bc4171b63 6bd309d7d4724ab39f076b88dd16cbf6
+#: 6d8c9a21d2494651850606ee7690abf0 70369fb922de4fd8bd12d386fc916596
+#: 709009582a8341b48a86134048c1fdf7 72de6148fd4942b99e5e19499f327954
+#: 7507ad0331eb4cd28b8cbae2ea1d93b2 7bf470ab0e954c669a2ca2958e0e56f1
+#: 8225849ab29b4e2bae9843d787a7365a 824ec43f932c45f19891582776792104
+#: 866acca88432456d967dd77e8ca870a7 8673520b94cc456690562ec9a66d7258
+#: 8a3cbe27449e467296caa72b7d3094fe 8c9ada089adb482aa369047b5d7c836d
+#: 8d4a87ff79524ab1a61782fdff63a430 8f5ac7eab4a148bbabcb3c71036e9f30
+#: 8f824775990947b983df6483be4668fc 91e12972af6b4525bc2060325b2daadc
+#: 955bb6659a7e4bc89c0ad8580775c185 95ebccbbfa424396b121e38c5bc7d82c
+#: 966058d74fb648b9919f05e2629fc7fc 9981efb189a846718dc08f63ea8bc9e2
+#: 9bb48610074b455698f8572bed9dfe02 9c02c400cbd546af89ca5437eaaacb27
+#: 9cd4caa9a3e04464a030eff3ea485fa8 a092a965354a4e2daf0297f55c66b7f9
+#: a5b7dbc7ed044060aec6e7651fbc078b a75347085def42ab95fce6582cdac097
+#: a7fe35a30443406dae02b6a32a4455ca b2e91cba87234ba895ee7854c7494471
+#: b2ffa85f8d8e41cdab985bdaf7eeb125 b4a26a5a0f5b488f9bafcee45f110bdf
+#: b5d1a49f12fc45ecbeb596664cc32c3e b94a946005ab49f4acb7ba0a448d4c1d
+#: b9ca425409794bb8947731cc096e547a c3f142fdd5d349dc9c851b961e841a26
+#: c42dc4d5cc12484aa0fa27730ef5eb44 c53caf959e354966b3e7d0a71854f522
+#: c8464c73c4374ff794e00c6b49488fb0 c8ee7528738240179686a8dc3c60242f
+#: ca448aab75474019a76f28c98b1b27b3 ca71317efe71462b87678eaf71b54c4e
+#: ccf153be69b5462582bac4b2f277e268 ced7703b2e7c4687aa0afad3fc489982
+#: cee070c31d8c44c28871aabe9fe5aa7f cf9ca9df256840b18184d5665cc26ae9
+#: d3ee237b73d44c2ab4fbf7ddd2122de4 d52af31dc14f45dc8929d80ad6382a37
+#: d6678add444a47b98e994745ce25d49a d9b50748919e4eab8aa44fefe63a633d
+#: dc3ee779610c4a9d91367fbda53cfcf4 e8bef921cc2d4d6783509b3ba8081f2c
+#: f1e310ba65f24eecacbac989f68828dd f8d74f1240394ef69586a3986e2c1d51
+msgid "应用实例"
+msgstr ""
+
+#: ../../source/GoSDK.rst:641 6ed70ee5fe18453883503d4c84460496
+msgid "第三章 交易体"
+msgstr ""
+
+#: ../../source/GoSDK.rst:644 4041f5bb565d440ca3da93cd8397e720
+msgid "3.1 交易体结构"
+msgstr ""
+
+#: ../../source/GoSDK.rst:646 be622f6cd4cb4a459b2e31e7b708ba38
+msgid ""
+"交易是与hyperchain交互的重要形式，在GoSDK中，交易由 **Transaction** "
+"结构体代表。GoSDK中交易体用户可配置参数共有如下（以下字段名首字母大写即为该字段的设值函数）："
+msgstr ""
+
+#: ../../source/GoSDK.rst:648 9a382246c5a04158bde730150f654c4a
+msgid "【from】：交易发起方账户地址。 **必填** 。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:650 f2398f3e4dc34e698e3cb37e20a77963
+msgid "【to】：交易接收方地址，合约调用时为合约地址。默认 **0x0** 。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:652 e5f1da77adf2498fbd933a0b278905bb
+msgid "【value】：转账金额。默认为**0**。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:654 0798fa24d83b4fdbb5eb7ef5fe89faed
+msgid "【payload】：交易荷载，在部署、调用、更新合约时使用。默认为 **空字符串** 。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:656 fa9eedda4ed34259b0437a746814b948
+msgid ""
+"【opcode】：操作码，在合约管理时使用， **1** 代表 *更新合约* ， **2** 代表 *冻结合约* ， **3** 代表 "
+"*解冻合约* 。默认为 **0** 。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:658 f6383d08cd8c46529947d7f97db57947
+msgid "【extra】：存证信息，可以在交易中附带一些信息。默认为 **空字符串** 。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:660 5c781202b29342b297e3ca74d6e41d86
+msgid "【simulate】：配置当前交易是否为模拟交易。若为true，则交易数据不会存入链上数据库。默认为 **false** 。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:662 bb2df9e262d24f48944598e1b9a4df97
+msgid "【vmType】：当前交易针对的虚拟机，目前支持配置EVM、HVM、KVSQL、BVM、TRANSFER、FVM六种。默认为 **EVM** 。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:664 31fa6efb9d65454b8a4bf8aea8ccd1e6
+msgid "【GasPrice】： gasPrice 默认为0，初始化 **rpc** 会从节点获取"
+msgstr ""
+
+#: ../../source/GoSDK.rst:666 cbd95ea2602741d5940b0c63570a8a27
+msgid "【GasLimit】： gasLimit 默认 **1000000000**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:668 7266e460734348ee8166d5acdb459c75
+msgid "【Participant】: participant 聚合签名相关"
+msgstr ""
+
+#: ../../source/GoSDK.rst:739 585307cd9e1f4b509b6122be8dfc2f44
+msgid "3.2 交易体构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:747 ef30feadca5b4b97ad4260ceb5bb8437
+msgid "参数1  : 交易发起方地址"
+msgstr ""
+
+#: ../../source/GoSDK.rst:748 ../../source/GoSDK.rst:1535
+#: ../../source/GoSDK.rst:1592 4b5c097229224792842b12da8fc1cda6
+#: ad5be44caf96489d9f5c6a47571ca9c7 e04a2586e5b0459e93c5014cf6addcd0
+msgid "返回值1 : 交易体"
+msgstr ""
+
+#: ../../source/GoSDK.rst:758 0278cfa1ca3347ccbc4322ddcae24453
+msgid "3.2.1 设置nonce"
+msgstr ""
+
+#: ../../source/GoSDK.rst:760 ../../source/GoSDK.rst:798
+#: ../../source/GoSDK.rst:837 ../../source/GoSDK.rst:860
+#: ../../source/GoSDK.rst:883 ../../source/GoSDK.rst:967
+#: ../../source/GoSDK.rst:989 ../../source/GoSDK.rst:1056
+#: ../../source/GoSDK.rst:1122 ../../source/GoSDK.rst:1149
+#: ../../source/GoSDK.rst:1173 ../../source/GoSDK.rst:1201
+#: ../../source/GoSDK.rst:1218 ../../source/GoSDK.rst:1245
+#: ../../source/GoSDK.rst:1264 ../../source/GoSDK.rst:1281
+#: ../../source/GoSDK.rst:1300 ../../source/GoSDK.rst:1322
+#: ../../source/GoSDK.rst:1353 ../../source/GoSDK.rst:1407
+#: ../../source/GoSDK.rst:1435 ../../source/GoSDK.rst:1461
+#: ../../source/GoSDK.rst:1484 ../../source/GoSDK.rst:1611
+#: ../../source/GoSDK.rst:1662 ../../source/GoSDK.rst:1964
+#: ../../source/GoSDK.rst:2103 ../../source/GoSDK.rst:2125
+#: ../../source/GoSDK.rst:2177 07d466e791c042a495014ac8d700b399
+#: 11dd401ff1d4435289ae38966d63cd74 16a39f29da2b497a9db294b27add1ca5
+#: 1df9cfbd166245e8879c7b0cb45ec1fb 25042aa4aa6b44e4b6bb92fb7bfa23a1
+#: 2cf0474b7e254003a52f49f67e3fe0ef 2e6d746c4ee940309d95ea74e5884749
+#: 31a4740f56c244bc9d85d89bb466852a 399902c3b0d942dc978baec25b2f59be
+#: 3e5e9cf0ff0244718fecc9d35eb0255d 407a3bfa41264db99a71eb4bb30eb221
+#: 5144819bcb9546818ff2f4b9cae7b544 602c88210f754015ba424275f743bb29
+#: 6a3036fd3aa64c158b9b59c51165b0fb 753c0226bff04d3385e76a825dad78b3
+#: 7d6e8e2b98214786a72c43a77e4906bc 85eecaf35a6b4ddaa50ebf3f55f87515
+#: 8e640010392b442ca0d066d74ef99271 a1b021e5c9024ef4beb48183ee605f73
+#: a33fc17986404b48a452b77ab6bd8584 b39088b06a0e4c529b359de6135617c5
+#: bc81515f991e4c9e8cee39ddc8fc4470 c47280d4259c4a8eb9e722effb2e139e
+#: e06c3f7dbab0482f91b1c667b341a921 e2b12b0ccffd4808990712584c9b8a6e
+#: e2d5403327f94cbab851040472bc5cf8 e7e80581c51f4e7cb326618a84c744af
+#: f3c2a2bd33b64469ae41edb2bb7fd1af ff6bccd44cd4465f9812e1140d38915c
+msgid "方法签名"
+msgstr ""
+
+#: ../../source/GoSDK.rst:778 cff1c3e7646b49cebd8110e613e47d6b
+msgid "3.2.2 设置交易体时间戳"
+msgstr ""
+
+#: ../../source/GoSDK.rst:796 95be5d2ddeea40a6b0ff9c5262b281f2
+msgid "3.2.3 设置是否为Simulate交易"
+msgstr ""
+
+#: ../../source/GoSDK.rst:813 a03906ceba954e3a9ed45fce5c9a0021
+msgid "3.2.4  设置交易对应虚拟机类型"
+msgstr ""
+
+#: ../../source/GoSDK.rst:822 4ff443e785194223b3d328625a3c9abd
+msgid "参数1（vmType） : 虚拟机类型，EVM, HVM, BVM, TRANSFER, KVSQL"
+msgstr ""
+
+#: ../../source/GoSDK.rst:823 ../../source/GoSDK.rst:846
+#: 23d99b9945f9438b8c0ef1f3ceb15e0d 36eb8105292f4acebe9f2a3e88d9bbfa
+msgid "返回值1        : 交易体实例"
+msgstr ""
+
+#: ../../source/GoSDK.rst:835 d9c3e4da049641428f2b5a04b1669df7
+msgid "3.2.5 转账交易构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:844 9a2c8c1c954a4d27a8b668197190faf0
+msgid "参数1（to）     : 收款方地址"
+msgstr ""
+
+#: ../../source/GoSDK.rst:845 67d787abbff346e38c62d906dc970561
+msgid "参数2 （value） : 转账数"
+msgstr ""
+
+#: ../../source/GoSDK.rst:858 e467e65d0046437ca5915b0d10518a6c
+msgid "3.2.6 合约管理交易构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:867 4dd24bb7f3924c6980eeb00f28b2c8fe
+msgid "参数1（op）       : 操作码， 1 合约升级， 2 冻结合约， 3 解冻合约"
+msgstr ""
+
+#: ../../source/GoSDK.rst:868 123e547814d347519ec964b31e2aa516
+msgid "参数2 （to）      : 操作的合约地址"
+msgstr ""
+
+#: ../../source/GoSDK.rst:869 ../../source/GoSDK.rst:892
+#: 09cd8e3400db48b7b356b0ea27b2c30e 32ffbd91506a446eb899a7c85269701f
+msgid "参数3 （payload） : 合约bin， 可为空字符串"
+msgstr ""
+
+#: ../../source/GoSDK.rst:870 ../../source/GoSDK.rst:893
+#: ../../source/GoSDK.rst:1131 7905ec2a0eb249df9d71c8a9c67466bc
+#: ae41791b47ec40f89156d32b3987fa29 c5f5811f74bf4c1db9bb145ee85e85cc
+msgid "返回值1          : 交易体实例"
+msgstr ""
+
+#: ../../source/GoSDK.rst:881 197cfb97449845b4b971c08ffe98fa0b
+msgid "3.2.7 通过合约名管理合约的交易构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:890 6fd15293711c42e088d1f658b7a54bba
+msgid "参数1 （op）      : 操作码， 1 合约升级， 2 冻结合约， 3 解冻合约"
+msgstr ""
+
+#: ../../source/GoSDK.rst:891 05823b9b69014984b74c755000b07da9
+msgid "参数2 （name）    : 合约名"
+msgstr ""
+
+#: ../../source/GoSDK.rst:965 ebf28d525b6b495d9dad50d48d6a5763
+msgid "3.2.8 部署合约交易构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:974 568ceac49bae4cc4ae2eb8f3cc62f4bf
+msgid ""
+"参数1 （payload） : "
+"编码后的合约。根据合约类型不同，传不同的值，具体参照第四章部分。（例如：若为solidity合约，该字段为合约编译后的bin，参照4.1部分；若为hvm合约，该字段为jar包处理后的值，参照4.3部分）"
+"                                                                                             "
+"|"
+msgstr ""
+
+#: ../../source/GoSDK.rst:975 d2b834a454f54793aefb23097858a775
+msgid ""
+"返回值1          : 交易体实例"
+"                                                                                                 "
+"|"
+msgstr ""
+
+#: ../../source/GoSDK.rst:987 7d5b09ca3197424fa42d54de41af3e50
+msgid "3.2.9 带初始化参数的部署合约交易体构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:996 ../../source/GoSDK.rst:1063
+#: 6e3a52e2e50d4d41a25b936c2fbb01d5 c15ee108a1064bb7a822cb43baf90ac7
+msgid "参数1 （abiString） : 合约abi对应构造函数的字符串"
+msgstr ""
+
+#: ../../source/GoSDK.rst:997 de3e1930d1e141959f51f91b845291d8
+msgid "参数2 （args）      : 合约初始化参数"
+msgstr ""
+
+#: ../../source/GoSDK.rst:998 ../../source/GoSDK.rst:1065
+#: 4b6d0d733b7f4645be66e7fb3896a47c c6f4715d5f0b46e39f6a7ef201718dd0
+msgid "返回值1            : 交易体实例"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1054 b36fa434fd9241a89ddb8f4289e15779
+msgid "3.2.10 带字符串初始化参数的部署合约交易体构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1064 b1d137073bd64a2fa6f1d6f88a4b02bb
+msgid "参数2 （args）      : 参数列表"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1120 06226bf9e7e44d69a3a82b6c86b98774
+msgid "3.2.11 调用合约交易体构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1129 49f0061979c54581b0dccba39d33df85
+msgid "参数 1 （to）     : 合约地址"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1130 5c9bed02fa94463d88b4c980a2828e40
+msgid ""
+"参数2 （payload） : 合约负载，根据合约类型不同传入的值不同，具体参照第4章节（例如： "
+"若为solidity合约，则为abi.Pack编码后的值；若为hvm合约则为hvm.GenPayload编码之后的值）"
+"                                                                                  "
+"|"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1147 758f1530d79c4fd1a6ef8823d4b99b83
+msgid "3.2.12 调用kvsql合约交易体构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1156 ../../source/GoSDK.rst:1618
+#: 69924aacdd8f4f32b80d66ea6a621d2a ecf39389b7a04a60a06c0bbe960906ca
+msgid "参数1  : 合约地址"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1157 4c9431d10b9a46c6a426b01b170babde
+msgid "参数2  : sql语句的byte数组"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1158 ../../source/GoSDK.rst:1182
+#: ../../source/GoSDK.rst:1226 ../../source/GoSDK.rst:1308
+#: ../../source/GoSDK.rst:1330 ../../source/GoSDK.rst:1391
+#: ../../source/GoSDK.rst:1416 ../../source/GoSDK.rst:1443
+#: ../../source/GoSDK.rst:1469 ../../source/GoSDK.rst:1492
+#: ../../source/GoSDK.rst:1620 027b191d68554af4803f0e95fbfc0475
+#: 03b798fd7e1a49bbbfd1717b91d3e680 25e53b4a41a942dabec74c048492edd9
+#: 2ea58634a61344eda961a556f6ef8e73 3783beaf0ab644269e1cd69d17c8e0a8
+#: 4fb5fcb60a3d4bbaa611aa80a4b88394 66a8105bee384f7c84c71797a8c61091
+#: 9f7d4fe5d09f4028a19ee56321d1e24b a21b806ee9bd4e8692ce2031d5f8f44a
+#: d3c173276ca94d9ab40958a5b38eb639 f84bd6d634f547249f4ad1874d325dc8
+msgid "返回值1 : 交易体实例"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1171 77508bd619cc4686a93fd770221684f4
+msgid "3.2.13 通过合约名字调用合约交易体构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1180 2af84f26a27e46ee9e52bda5faf8d58f
+msgid "参数1  : 合约名字"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1181 93e4c79ebac04316910bac2f6643b8f9
+msgid "参数2  : 合约负载，设定规则与3.2.11部分相同"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1199 46762895789a4ed68f8535e227c918c4
+msgid "3.2.14 设置extra"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1216 613c124a5c584407bb28b956bc91392b
+msgid "3.2.15 设置kvextra"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1225 4328d89d6bb14971930bef99db719a3a
+msgid "参数1  : KVExtra， kv类型的extra"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1243 da7115ca5acb4c95bc6eab4b587e1cb4
+msgid "3.2.16 设置to"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1262 1d763780903342339237c69874756cf3
+msgid "3.2.17 设置payload"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1279 8196428631fe484a97b29e3f4933e778
+msgid "3.2.18 设置value"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1298 d7fe34a9cde84f35af84fdcc0f1643f7
+msgid "3.2.19 设置opcode"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1307 8fa6639a1ec74487bdb09135f89cdb78
+msgid "参数1  : 设定交易体的操作码，目前的操作码如下"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1320 dad9345170fb4c2f98b570d3d6dccedf
+msgid "3.2.20 注册DID账户的交易体构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1329 781ae318a17948e6af37b11223b574c1
+msgid "参数1  : did账户结构"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1351 8adafc089b8a4b58bed81202f23bf537
+msgid "3.2.21 管理DID账户生命周期的交易体构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1360 b098c05637e74fff822dca5d975b95c1
+msgid "参数1 : did账户地址"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1361 7cb738f18ab04425963e776033b9e2ca
+msgid "参数2 : 操作码"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1379 f507f74d914e409fb7daba6d53720ba7
+msgid "3.2.22 更新DID账户publickey的交易体构造 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>."
+msgstr ""
+
+#: ../../source/GoSDK.rst:1389 ../../source/GoSDK.rst:1414
+#: ../../source/GoSDK.rst:1532 ../../source/GoSDK.rst:1590
+#: 179bf1764b7f4649be5bd384d7acb68c 256cb3dad2e441679fa95789f80e79ab
+#: c9738b94cb314e4081943d323664bc3d f48ce8cc5ec440949b06b6eda8238e4f
+msgid "参数1  : did账户地址"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1390 86f23da889e7428a9bbd908e99097312
+msgid "参数   : did账户公钥"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1405 987c3e4266cb4d5f8b84a25d5d803435
+msgid "3.2.23 更新DID账户的管理员账户交易体构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1415 fb414c85837c475a87ef9d23895cbe98
+msgid "参数2  : 管理员地址列表"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1433 35dc8e7748e9410ea86a3982ffbab2e5
+msgid "3.2.24 上传DID账户凭证交易体构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1442 068127a565534f86a151c01f141be358
+msgid "参数1  : 签名后的凭证结构体"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1459 a7abce9246e74e77bd17ddb77b5b353e
+msgid "3.2.25 下载DID账户凭证交易体构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1468 ../../source/GoSDK.rst:1491
+#: 29c2d4098712419494bdf4381c40399b a81763cdcb7d438989bea26929e65a6a
+msgid "参数1  : 凭证id"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1482 bab15a4c788e4eba8d6541e3727d9299
+msgid "3.2.26 销毁DID账户凭证交易体构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1503 afaf9d9dc8d04daf82a84be8f42191c9
+msgid "3.2.27 本地计算交易体hash"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1512 dae0fc52767542198199b54fb905157d
+msgid "参数1  : gas消耗上限"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1513 779c116304874488b1614f7cd62b4895
+msgid "返回值1 : 交易体hash"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1525 1658de46d8fa4771b61caba019af1958
+msgid "3.2.28 设置DID账户的Extra交易体构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1533 ../../source/GoSDK.rst:1591
+#: 449ca9f435f7474b8372eaa565bc8e65 bd0ca4257dbc4cf7a62947ab24aa82bf
+msgid "参数2  : extra信息的key"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1534 f360d088a6534e308e7aa348bfae52e9
+msgid "参数3  : extra信息value"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1583 ccb2dd00e3574eb2b067df125b61b16a
+msgid "3.2.29 获取DID账户的Extra交易体构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1609 c4b2b4c60745447582fdbfad30062c7d
+msgid "3.2.30 调用bvm合约交易体构造"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1619 fc4098c62b1d46e5856b3e32636aac41
+msgid "参数2  : 内置合约操作BuiltinOperation"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1636 3ca6df977982410a8ff60155756f43b5
+msgid "3.3 交易体签名"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1639 92fdb20b7adc4eb8bcd321c35b5a6fb0
+msgid "3.3.1 签名"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1648 2f02edcb94f0455b9e679650f24e81d8
+msgid "参数1 : 账户key"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1660 b344b6e3952f459aa80f313ee5182c7c
+msgid "3.3.2 批量签名"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1669 3869bd5fbf6d46a0ba35ebf2269c0cfb
+msgid "参数1 : 原始账户"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1682 5e5903e3882b449ab2be1ce589df726c
+msgid "3.3.3 聚合签名"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1684 b73da3223d2c4a6594474cbac05b8661
+msgid "**3.3.3.1 通过普通账户生成聚合账户**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1691 ../../source/GoSDK.rst:1717
+#: 129f5d055bea4d7b9cd9f096f0e5ef2b a807bd335baf49e6b6794cbc0c962d4b
+msgid "参数1  : 原始账户"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1692 ../../source/GoSDK.rst:1718
+#: cc3973bb993742caa2f95ea2d8c7a1f1 d947ccb770524badbc5e3b05bf1df85b
+msgid "参数2  : 参与聚合签名的用户的公钥列表"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1693 d20e7310d77049bb8c56fd719fff8ae3
+msgid "返回值1 : 聚合账户"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1694 ../../source/GoSDK.rst:3894
+#: 3ea483ed9a1c4f4191242eba7f158d49 6d684f74e0cb45b0a65ab50c62f37c69
+msgid "返回值2 : error"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1710 fd7f45ceb5cf41809d8366d4ce1ff8fd
+msgid "**3.3.3.2 通过DID账户生成聚合账户**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1719 bf0ec75c121646c8863969d612c90701
+msgid "返回值1 ： 聚合账户"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1720 ../../source/GoSDK.rst:1745
+#: ../../source/GoSDK.rst:1762 ../../source/GoSDK.rst:1782
+#: ../../source/GoSDK.rst:3049 ../../source/GoSDK.rst:3076
+#: ../../source/GoSDK.rst:3098 ../../source/GoSDK.rst:3813
+#: ../../source/GoSDK.rst:3836 ../../source/GoSDK.rst:3860
+#: ../../source/GoSDK.rst:3917 27005768430a41ecadcfba5efd810cdb
+#: 3730aa550a7547aa8b6646e2820316ed 3e679e41fdac4f1b84425ffbb09443b1
+#: 5d33c571918d498aacd2e688e96c669b 67071e5c234d4f2c8f35bbe5a201cdb3
+#: 7106fb5826ad4b6fb4f897c862483b12 9a138abb7aa94019896f6c713e5185cf
+#: c7f1f6d3040f400ebb4c72ca7dd83fb6 c86ec6867a5443b693ebd9a1a5d1cd3f
+#: cacb5571a22141c5b475631bab17ef38 faf64e9ce87145bf99f72ed766ed16a7
+msgid "返回值2 ： error"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1736 db569a7dcaa04e4a87c40c63f62289e9
+msgid "**3.3.3.3 聚合随机承诺**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1743 32b0a5b18fa943c19162c69610578889
+msgid "参数   ： 参与聚合签名的所有用户的承诺"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1744 c45a09152d574a8da06dec30ff0c6e61
+msgid "返回值1 ： 聚合承诺"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1752 5248f959ae60444aa98e068029a5fbf5
+msgid "**3.3.3.4 部分签名**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1759 6610ac4f4b214116928f07576d559bd2
+msgid "参数1  ： message"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1760 7f05dec3cbe94d4890dffa908cf1aa5c
+msgid "参数2  ： 聚合承诺"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1761 6c64a43a826040b482c426ea9de37d31
+msgid "返回值1 ： 部分签名"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1773 189b761ef651454a83f8ccc79746cea7
+msgid "**3.3.3.5 聚合签名**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1780 0d524295f2dd47998ddb02d0afabbfd6
+msgid "参数1  ： 参与聚合签名用户的部分签名"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1781 671b5da5509b4cf2b4606450b585ac4f
+msgid "返回值1 ： 聚合签名签名"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1791 2c109880638d43ada495c19091d71c07
+msgid "**3.3.3.6 完整实例**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1793 82300a7dc1fa4d28b3dd8f573b7cf8eb
+msgid "***** 注意 ******"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1795 d892950e0aae4c6ebb6517c279eea75d
+msgid "**如果最后调用AggSign的用户是DID账户，那么transaction的Participant的第一个属性initiator的值可以为以下两种**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1797 bfe18d27752c44d9a501eb23ed6cb5b4
+msgid "**initiator为DID账户的address**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1799 56701833893446c398c193213b06e261
+msgid "**initiator为DID账户的publickey，那这样调用AggSign前必须先调用SetHasDID将hasDID设置为false**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1801 3a81ead77772458880894d43c0257c85
+msgid "**如果最后调用AggSign的用户是非DID账户，那么transaction的Participant的第一个属性initiator的值为账户的publicKey**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1850 39953019337248d5bfc8053da51a12cc
+msgid "第四章 虚拟机"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1853 407474c6173947c5b914581a85acbd84
+msgid "4.1 EVM"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1856 01df1d1f39e1466a86ec5ebb1f0b6ea4
+msgid "4.1.1 abi解析"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1858 a8e200ec3ea6439fa9e7a316a68dbf57
+msgid "EVM对应的合约为solidity，解析合约abi为如下struct"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1880 365aa4088db04c4fba672810323a8f46
+msgid "参数1  ： 合约的io流"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1881 ec32e9f567fe4bc3a4e2a4d8cd76324d
+msgid "返回值1 ： ABI结构体"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1882 7bf3efeeef6249cfaf3b7f7031ddbcf0
+msgid "返回值2 ： error，详见第七章"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1894 ddce349a1a34406a8fdecdfdc23a811a
+msgid "**4.1.1.1 合约方法获取**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1903 af666f4f1cbf4051ade12f7c8f64273f
+msgid "**4.1.1.2 合约event获取**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1912 e64bcf69197340c58556d4e434319316
+msgid "**4.1.1.3 将方法以及参数转为binary**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1921 7199f4f817d746f391d117f0f8048fb2
+msgid "**4.1.1.4 编码调用的方法和参数**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1938 ../../source/GoSDK.rst:3051
+#: 16ba1d1c304943f8adeeb6ece7a98211 ec69d5c092c04415a5ad12764ba3d527
+msgid "说明："
+msgstr ""
+
+#: ../../source/GoSDK.rst:1940 a2edc75cd2244b1bacc71f15637e8da4
+msgid "若调用时仅仅使用方法名称，则默认调用无参同名方法，若未找到无参同名方法，则调用最后一个匹配到的方法，即最后声明的同名方法；"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1942 932e4c723ca64dafa6fa128f88c4d337
+msgid "方法签名的构造方式为："
+msgstr ""
+
+#: ../../source/GoSDK.rst:1949 b982dfd53360495e859d05f78f475b69
+msgid "即在方法名称之后使用括号将传参类型统一包括，类型之间以逗号分隔。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1951 1d5c28014e144774bae6b0bfc36c95f6
+msgid "方法签名括号中规定了方法传参类型，传参类型之间必须使用“,”分隔，传参类型必须与abi中inputs里对应的type一致，且数量和顺序必须保持一致。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1953 40cedd256c484afca6a6c2fb2a6d2cd3
+msgid "事件签名构造同理："
+msgstr ""
+
+#: ../../source/GoSDK.rst:1962 6b45d5b2e91543f3b168b5b5a5b21c0a
+msgid "**4.1.1.5 返回值解析**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1971 a576489a06a64a9283838b9d676f0263
+msgid "得到返回值结果后，获得状态码可以判断是否调用成功，若调用成功，解析返回值可看到调用之后的结果。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1987 5bb25c34b3a543d4ab347872465aa36d
+msgid "**4.1.1.6 反序列化**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1991 c6326ef4e9fd4f1f92a89320299c4ae1
+msgid "func (abi *ABI) UnmarshalJSON(data []byte) error"
+msgstr ""
+
+#: ../../source/GoSDK.rst:1996 63143d1bbdd84e56951c779f1153e300
+msgid "**4.1.1.7 通过方法的id获取方法**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2000 02a35a82f00946f3bc84526705c880eb
+msgid "func (abi *ABI) MethodById(sigdata []byte) (*Method, error)"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2006 ae33507b923e4d9e83415816cdc8609c
+msgid "4.1.2 abi v2"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2008 c2ecefbc54eb43ccaef53416a7984e30
+msgid "abiv2 与 abi 在abi的结构上有了较大的变化，如下以结构ABI为例"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2019 14232b6ac87b412d8bfef736d3d04a62
+msgid "type ABI struct {"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2014 ../../source/GoSDK.rst:2025
+#: 241ae9e5b36d4555a2025b3309592ba3 e4dbeec153b84b228683e1d7d23fbcba
+msgid ""
+"Constructor Method Methods     map[string]Method Events      "
+"map[string]Event"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2018 2c976826fc7b48a28d61176de3bb79f9
+msgid ""
+"// Fields that record overloaded methods and events allMethods "
+"map[string]Method allEvents  map[string]Event"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2021 ../../source/GoSDK.rst:2034
+#: 461b9d806c044b6d8e8877ef083ab2e3 6a47f2b9dfe84b689297d78297ceeb56
+msgid "}"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2023 371cae96b45441dfacd5f5a33b74ff84
+msgid "// abiv2 type ABI struct {"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2029 e9cc8dc2b9134449bca85411f5a8d3ff
+msgid ""
+"// Additional \"special\" functions introduced in solidity v0.6.0. // "
+"It's separated from the original default fallback. Each contract // can "
+"only define one fallback and receive function. Fallback Method // Note "
+"it's also used to represent legacy fallback before v0.6.0 Receive  Method"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2037 baf9202547454f27a8c601933dd5fd5e
+msgid "因此，abiv2 独立于原先的abi目录，新增abi2目录。下面列出常用的方法"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2039 752fde1c273d4ee7bd926103081843e5
+msgid "**4.1.2.1 编码**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2043 e6966d4b1ab6403e892de052902d000a
+msgid "func (abi ABI) Pack(name string, args ...interface{}) ([]byte, error)"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2048 b0328599d64242c6b280906e3808c309
+msgid "**4.1.2.2 解码**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2058 8ee5b441a3d944da9034c85ff0307e85
+msgid "4.2 BVM"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2060 8ef1e785065e48d3b9114c89f97a03c2
+msgid ""
+"BVM全称是 **built-in virtual machine** "
+"，是用于处理内置合约的虚拟机类型。BVM的出现使得开发者可以自定义一些内置合约，提供一些固定的功能。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2062 94b73d02a69a406fbc2a9661f6471624
+msgid ""
+"**内置合约**，即是合约代码由开发人员预先写好，在平台启动时就直接创建对象加载，不需要用户手动部署的合约。由于合约随着平台预先创建加载， "
+"所以合约地址固定不变，且相比普通合约有以下特性："
+msgstr ""
+
+#: ../../source/GoSDK.rst:2064 b0e34ec731964636bad6d4a091cba3e0
+msgid "**不需部署** （也可以理解为平台刚启动就被 **”部署“** 在某个固定地址上）。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2066 b7dc7339db5141789233d1f4e3994b6d
+msgid "**目前功能单一** （只支持两份），但之后可以不断地进行扩展。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2068 e64f96d15cff4e8dad39006d191d9699
+msgid "做合约修改或增加新的内置合约需要 **平台兼容** 做调整。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2070 9757a10b8f0a46e4a437e5aaae21f0a6
+msgid "**不属于任何人** ，及任何用户都不可以对该合约进行升级或冻结、解冻的相关操作。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2072 3a818143a2294aaeac95089be0c0bf2d
+msgid "目前支持以下几种种内置合约"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2074 08ee68f8b28945a1b7f4df2bab73fdae
+msgid ""
+"**提案相关** ,ProposalContract 合约地址为 "
+"`0x0000000000000000000000000000000000ffff02`"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2076 18a8cd6f4c6742be9fcf7a3f28746b28
+msgid ""
+"**hash相关** ,HashContract合约地址为  "
+"`0x0000000000000000000000000000000000ffff01`"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2078 15e85f75480f46299fdbe440979b9639
+msgid "**did相关** ，合约地址为 `0x0000000000000000000000000000000000ffff06`"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2080 61dd6eae5a2e419ca0325234c1818f94
+msgid "**证书相关** ，合约地址为 `0x0000000000000000000000000000000000ffff05`"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2082 cc11d976098148b0893aeda82ea9fdfc
+msgid "**账户相关** ，合约地址为 `0x0000000000000000000000000000000000ffff04`"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2084 9f143129c1f84a35b4709f3dae097f96
+msgid "**mpc(多方安全计算)合约相关** 合约地址为 `0x0000000000000000000000000000000000ffff09`"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2086 da29f93f3a2e4d9e9d2dea7ea5ad704e
+msgid "**Root CA相关** ，合约地址为 `0x0000000000000000000000000000000000ffff0b`"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2088 3e47a5818189481a87119efed49805af
+msgid "**跨分区相关** ,合约地址为 `0x0000000000000000000000000000000000ffff0a`"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2090 202415ff7e7f48d4a042e46e7acba9c1
+msgid "**hash类型查询** ，合约地址为 `0x0000000000000000000000000000000000ffff0d`"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2092 42171f806ff847bf84554d6a4e8b1ff9
+msgid "**balanceManager相关** ，合约地址为 `0x0000000000000000000000000000000000ffff0e`"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2099 b1d9bdb856cc466fa033e89bf7d91e2a
+msgid "4.2.1 编解码"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2101 e114157133434876bba684428c8e85cd
+msgid "**4.2.1.1 将操作编码成payload**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2110 719b3d96a0ac45feac03a892c999d289
+msgid "参数1  ： 操作"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2111 487171c8d2e342b791ccb5fc5ec18298
+msgid "返回值1 ： 对应交易体的payload"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2123 eeffd359f6414923b2aee7e162c6516c
+msgid "**4.2.1.2 返回值解码**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2140 1f9448a62c20496d9a699f6717dce398
+msgid "参数1  ： 交易回执里面的Ret"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2141 72a442bf0d124229913b7d1035d2cb01
+msgid "返回值1 ： Result结构体"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2153 dbb52cfdf12c457fbf576a4bd7ecc1e6
+msgid "**4.2.1.3 提案code解码**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2175 bccfeb25d475450c8b2afe89d5fee588
+msgid "解码提案数据的code字段"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2198 cda1084d49df46bb9f5ba9ff9a2bda44
+msgid "4.2.2 提案的使用"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2200 e0c673bbf83a4703a348ee991ef24ef8
+msgid "提案总共有六个状态：等待投票、驳回、等待执行、已完成、取消和超时。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2202 169fb1ee57974659a16a30db9b0950c6
+msgid "只有创建者有权取消提案"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2204 24a3ed922498452698b02cde83799104
+msgid "提案创建后通过投票可进入等待执行、驳回状态"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2206 2356ebd166be47adbfdb93ad9c1fa0b6
+msgid "处于等待执行的提案可有发起者发起执行操作，执行完成进入已完成状态"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2208 e03e8951f6da4697970d4f79223cd6d3
+msgid "提案处于等待投票、等待执行状态时无法创建新的提案"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2210 52b30c434a5a4674944846fe2fa5d942
+msgid "目前提案的默认阈值为链级管理员的总个数，每个链级管理员均可以对此提案进行投票，若此提案获得的票数大于等于阈值则通过投票"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2212 eef3a026cb004c539ff8adbd94cd7465
+msgid "目前提案的默认超时时间为5分钟（当设置当超时时间小于5分钟时，会设置为5分钟），即创建提案的交易打包时间+5分钟则为提案超时时间"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2214 f65bc4b731474cd8bc936ada615b79e0
+msgid "每次执行提案交易都会拿到当前系统中最新的提案，将当前执行的交易的打包时间与提案的超时时间进行对比，如果大于超时时间，则将提案状态置为超时。（不能单纯的认为提案创建后，过了超时时长就一定超时了，没过超时时长就一定没超时。交易的打包时间是主节点中打包交易时取的当前系统时间，主节点的系统时间可能不是正常的时间序列，例如：如果提案创建后发生了viewchange，viewchange之前的主节点在当前时刻的系统时间为1:00，viewchange之后的主节点中当前时刻的系统时间为1:30，这时即使提案创建之后没有超过超时时长，对提案进行投票，由于新的主节点的时间为1:30，打包的时间戳也为1:30对应的时间戳，在执行提案对比是否超时时，判断的结果就为超时。目前主节点时间变更除了viewchange之外，还有主节点主动作恶、或根据需要主动变更系统时间。）"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2216 3402e30727994085b179e82cae055c8b
+msgid "根据提案的状态以及对提案的操作，可得出一个提案的状态迁移如下图所示："
+msgstr ""
+
+#: ../../source/GoSDK.rst:-1 d55e28d2ee2549cebb42e6108daf44c9
+msgid "提案状态迁移示意图"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2222 b1cdcd5571294f789b5d25289058c94d
+msgid "对于提案可根据提案内容划分为以下几类："
+msgstr ""
+
+#: ../../source/GoSDK.rst:2224 31b8eb450b8342a08c0d34466b78a2f4
+msgid "配置类， ptype为 `config` ，data则为配置项操作列表；"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2226 c64e3d47d6a948388f6f202c1f35dcc0
+msgid "权限类，ptype为 `permission` ，data为权限操作列表；"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2228 6d8a5287cd2743c1a5f5d9b0342e28b1
+msgid "节点类，ptype为 `node` ，data为节点操作列表；"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2230 809a41a08d694258a095ae658a15c7bc
+msgid "合约命名类，ptype为 `cns` ，data为合约命名操作列表；"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2232 297ded220ada4fcba03fdc9b78a40dde
+msgid "合约生命周期管理类，ptype为 `contract` ，data为合约生命周期管理操作列表；"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2234 a35441871e2a4d9cbb906e00cfe4640b
+msgid "ca模式类，ptype为 `ca` ，data为ca操作列表；"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2238 59de457926a14859b6c20486302d1b1b
+msgid "**4.2.2.1 合约提案创建**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2245 1411cc7578d342f9b6f644709dc67d5a
+msgid "参数1 （opts） ： 一组合约类型的操作"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2257 8524689af135428488f8e6a66fe3169d
+msgid "**4.2.2.2 命名提案创建**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2264 82b08407a64b46a99f83d9e9f0b21d71
+msgid "参数1 （opts） ： 一组合约命名类型的操作"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2278 86be4a01c7bc4039ac85f4013d9e74bf
+msgid "**4.2.2.3 节点类型的提案创建**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2285 8d8230fb3b0a4acd98f9e7eb7e18bfba
+msgid "参数1 （opts） ： 一组节点类型的操作"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2300 b4353365eb4147c881373c8e16c3ad1e
+msgid "**4.2.2.4 权限类型的提案创建**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2307 383c434cb6cb40d28a19aba0fe0a1023
+msgid "参数1 （opts） ： 一组权限类型的操作"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2324 45e6671b61c74a339f89b3a0572146c2
+msgid "**4.2.2.5 通过配置内容创建配置提案**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2331 a56a52229a38425b9e8e2a5e32bdce72
+msgid "参数1 ： 配置内容"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2369 a6aec12390fa4396a7162bfcce443f2d
+msgid "**4.2.2.6 通过配置类型操作创建配置提案**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2376 236d1680a5984ede9c6ca9cb42f423f1
+msgid "参数1 ： 一组配置类型的操作"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2387 17d9ed1520e145d898e6614d34bdf7fe
+msgid "**4.2.2.7 提案投票**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2394 ../../source/GoSDK.rst:2413
+#: ../../source/GoSDK.rst:2431 108c483cef1a4ab58fe46aca511a33ba
+#: 1279d5a8e7474b90b048ded29410c615 d4971dcf052b4a85bc6939e75987d196
+msgid "参数1 ： 提案id"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2395 54fb4b56af6f4a4f8ba1db15832f2144
+msgid "参数2 ： 是否开启投票"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2406 35cc7011711346eead566ab726174626
+msgid "**4.2.2.8 提案取消**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2424 60ddcaa944774269bb6b259f1233932d
+msgid "**4.2.2.9 提案执行**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2442 93d46cc6a87341b9bc0bd6cee10f46b1
+msgid "**4.2.2.10  权限类型的操作----创建角色**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2449 ../../source/GoSDK.rst:2468
+#: ../../source/GoSDK.rst:2487 ../../source/GoSDK.rst:2512
+#: 46ac7ecf262b4900a288395ab98a7a59 5c4089aa7eae4a949c5a2df5d2c8c117
+#: 6cff3764f4e14781b28862a7a4feb055 7d51b8df987440ffbc0dd32b018876b4
+msgid "参数1 ： 角色名"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2461 27d0aaf594cc449fb2c915a1a3d021db
+msgid "**4.2.2.11 权限类型的操作----删除角色**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2480 1493b9a99c16402f970c2de7b342150c
+msgid "**4.2.2.12  权限类型的操作----权限授予**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2488 ../../source/GoSDK.rst:2513
+#: 2274b1ecf3a1443688b4e56cac5bd5ae 2eefe6db8fe042cf9e2220c9f468a512
+msgid "参数2 ： 账户地址"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2505 52126fb3e8e143fe934ea11361502040
+msgid "**4.2.2.13 权限类型的操作----删除权限**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2530 ab96d7fb73694bd2b3f96e9b143e1af1
+msgid "**4.2.2.14 节点类型的操作----添加节点**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2537 097cf316c0274d88aedddcb7e1e7b7d9
+msgid "参数1 ： 对应节点公钥或者证书的byte数组"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2538 d56558dcd6d9460f969c748c8b537a50
+msgid "参数2 ： 节点名"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2539 6f902172d0bd4aa6921a14697a719fae
+msgid "参数3 ： 节点角色"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2540 253281b3e85c44d0b79121540d099f88
+msgid "参数4 ： 节点namespace"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2551 03db3d4fa9bd4d84be0c2ae2675d0446
+msgid "**4.2.2.15  节点类型的操作----启动vp**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2559 1e79ee42a48e4256bf1698467a7b6104
+msgid "参数1 : 节点名"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2560 fd5f64e048aa43b7802022dacf97ff1e
+msgid "参数2 : 节点namespace"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2571 a6df064d5918429dbb39cc8920cdf475
+msgid "**4.2.2.16 节点类型的操作----删除vp**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2579 db86dfe192bb4b63b0cf33ebedc5ac4d
+msgid "参数1 - 节点名"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2580 2e1f91dc366a4e609d0cdfaf6ed20e8c
+msgid "参数2 - 节点namespace"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2589 5b33d825d5fc435ba519a6045446037d
+msgid "**4.2.2.17 合约命名类型的操作----设定合约名**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2597 ../../source/GoSDK.rst:2694
+#: ../../source/GoSDK.rst:2970 ../../source/GoSDK.rst:3007
+#: 0cec614a6e604a269b95c486bdac8382 3b8ed56f6c0142e6980857dddc16b338
+#: 95362614a15543ad883a7755008717bd d085b488aaa842a09817f428557a8f2c
+msgid "参数1 ： 合约地址"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2598 d39ea3d974db43c3bc73bf1927783fb9
+msgid "参数2 ： 合约名"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2613 5a96af9f9cbd42c7ad4d6adc340aeb7c
+msgid "**4.2.2.18 合约类型的操作----部署合约**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2621 ../../source/GoSDK.rst:2669
+#: 75373c2442e54f01a0f2c8195498dbf3 bb4195834a304750845be211300b5302
+msgid "参数1 ： 合约源文件"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2622 ../../source/GoSDK.rst:2670
+#: 47d48affa02c4bf3b6477321918cd73f 9dbe19b31995448ba26156fd297574f6
+msgid "参数2 ： 合约编译后bin"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2623 ../../source/GoSDK.rst:2671
+#: 40257d9635e14e1295a04010e9d9b836 580af944702b415f90804c5a9df11eec
+msgid "参数3 ： 虚拟机类型"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2624 935098ce8f674814b29c91cd9080bda3
+msgid "参数4 ： 编译选项"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2636 5d38af32ca4e4bfbb1713055f925b6f9
+msgid "**4.2.2.19 合约类型的操作----升级合约**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2644 46181507a59c4cdc94ead0ba512b07bc
+msgid "参数1 - 合约源文件"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2645 2f94f0941f744405b0ff637d0feab76f
+msgid "参数2 - 合约编译后bin"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2646 4b1671f3643a48479d3c6472f9b88a74
+msgid "参数3 - 虚拟机类型"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2647 d82abb78ac6049c1a467847372d345eb
+msgid "参数4 - 已部署的合约地址"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2648 f3f0d13f612b4e6392db60c6021ae85d
+msgid "参数5 - 编译选项"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2661 d3c63eaa993f4e44ae68efec47746b9b
+msgid "**4.2.2.20 合约类型的操作----通过合约名升级合约**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2672 9baa8205b54c4c83acf6604377ba1e30
+msgid "参数4 ： 已部署的合约名"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2673 ee154e5bc48248a6a6e9bd3bcb5cf87a
+msgid "参数5 ： 编译选项"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2686 11203ca2392f49708977f1e37b638af8
+msgid "**4.2.2.21 合约类型的操作----管理合约**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2695 e7c82f8dc465496dbf625de15e654dc5
+msgid "参数2 ： 虚拟机类型"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2696 67098970daa8454e9d7f08deb700bab0
+msgid "参数3 ： 操作码， 1 合约升级， 2 冻结合约， 3 解冻合约"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2706 3bcc9529aa7f44f79dfe973047d131c2
+msgid "**4.2.2.22 合约类型的操作----通过合约名管理合约**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2714 ee90c48bfe0147adad94b1c586d8560c
+msgid "参数1 : 合约名"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2715 c6910da841c14b4085dc9fe4c0ee5c32
+msgid "参数2 : 虚拟机类型"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2716 b4886dcb79f44ed2b88031a58853315b
+msgid "参数3 : 操作码， 1 合约升级， 2 冻结合约， 3 解冻合约"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2728 2a806881da16483198de6b3d4bd8d5cc
+msgid "**4.2.2.23 ca模式类型的提案创建**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2730 4030e79ae1084b9898e97dd27e9bd5df
+msgid "当没有设置链上的ca模式时，可以通过提案设置ca模式，如果设置的ca模式与当前运行的ca模式不一致，则会停止当前链的运行。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2738 ../../source/GoSDK.rst:2760
+#: 30787a639e444eac88815d8b3c3dbeac b86f0df2d3d149ac93cf347959c639da
+msgid "参数1 （opts） : 一组ca模式类型的操作"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2750 630487356eec48818971b7bae53efabf
+msgid "**4.2.2.24 直接执行ca模式类型的操作**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2752 35c0d9b77e1e46af93322621b644a3c0
+msgid "查询ca模式操作可以直接执行。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2773 10c84bac66594232811ac335bbb4b304
+msgid "**4.2.2.25 直接执行节点类型的操作**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2775 e6e4d9a2b18748c4beaa65a58abb3104
+msgid "当ca模式为`center` 或`none` 时，可以直接执行节点类型的操作。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2777 b5754e4527284323a7ccc4c0b986475e
+msgid "新增节点时，节点类型的操作无需用户手动进行，即新增节点时，配置好了启动节点新增的相应操作会自动完成。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2779 39b2dcf9f21d4554b0c92ca6425506df
+msgid "当ca模式为`center` 时，只有链级管理员可以直接执行节点类型的操作。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2787 62e0daebba3247269df638cbb417718d
+msgid "参数1 （opts） : 一组节点类型的操作"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2805 7fafdb2202b140daa535292bb48f2369
+msgid "4.2.3 hash的使用"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2807 801714f94966460c8c7e82558e578c30
+msgid "**4.2.3.1 set**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2815 bb0a1348c0474a509a089308d49280ec
+msgid "参数1  ： 存储的键"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2816 a7226dd6417149349f4e8dfb3b01c32f
+msgid "参数2  ： 存储的值"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2817 64b37093f38f44d0bac2b2b8c1a2f2d8
+msgid "返回值1 ： BuiltinOperation"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2829 e41e371afe6344a9829bb8c04f7d2a36
+msgid "**4.2.3.2 get**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2837 6fd9cb4b5750450faecda343b9c70dba
+msgid "参数1  : 存储的键"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2838 762d59fb88b34269bbeb4f6454042079
+msgid "返回值1 : BuiltinOperation"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2848 b44f3aa9281c4e9c947eb7a4e065bfcb
+msgid "**4.2.3.3** **GenesisInfo**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2866 5e8756b2897242ef8bd74f2f69759c5b
+msgid "参数1  - genesisInfo"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2867 2e41c7b953a54cc38bc66b18a823dcd3
+msgid "返回值1 - BuiltinOperation"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2960 3dd2ebf12c0d4a6ba35622a5adb337ff
+msgid "4.2.4 账户的使用"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2962 63697b09f2fe40fe8aa66d5d3118eba6
+msgid "**4.2.4.1 账户注册**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2971 ../../source/GoSDK.rst:3008
+#: 5a6bc93b0f6b42448c9d8c1cf320a849 9e1c022c552f41758de7b174e392574e
+msgid "参数2 ： 证书byte数组"
+msgstr ""
+
+#: ../../source/GoSDK.rst:2999 b944d29b6f724949be6f09a5cbf0313a
+msgid "**4.2.4.2 删除账户**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3036 4ac6b3f0388846f2b0a5b03732d32d6a
+msgid "4.2.5 证书的使用"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3038 93cc2ee09f31480cac3e3ebbcc1a6609
+msgid "**4.2.5.1 证书吊销**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3046 ../../source/GoSDK.rst:3073
+#: ../../source/GoSDK.rst:3095 ../../source/GoSDK.rst:3116
+#: 43167fbfed7546e5aac8a59cfb044751 6971aa28b4f64c79aedd25b05b9a15af
+#: 7c80fe8e986e4b2e92d14b692e0da8b2 991bfc48c2ce41aa953227f9a148aea5
+msgid "参数1  ： 证书byte数组"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3047 ../../source/GoSDK.rst:3074
+#: ../../source/GoSDK.rst:3096 5a19165f5c354b5e9925ed6c903ecd5e
+#: b9f6c2cceb9e4cc4a8a623bc86988beb ec65ffbfca474ef0946ebffa3067d733
+msgid "参数2  ： 证书私钥byte数组"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3048 ../../source/GoSDK.rst:3075
+#: ../../source/GoSDK.rst:3097 ../../source/GoSDK.rst:3117
+#: ../../source/GoSDK.rst:3190 ../../source/GoSDK.rst:3213
+#: ../../source/GoSDK.rst:3246 ../../source/GoSDK.rst:3288
+#: ../../source/GoSDK.rst:3643 ../../source/GoSDK.rst:3680
+#: ../../source/GoSDK.rst:3717 00afe7acde5f47728f666762fc6d0313
+#: 0af452fa065640a1bb8d86b860fd5a43 189efeaf84c34c1ab5186b42695a9640
+#: 2172d35215be4328ad84051ea4452fcc 4133251df6c6416ca48c2896b6890851
+#: 66c96525c97942c9a84d9ecce6a6e952 6aad1093360845a081c33788fc3d3d52
+#: 8fc3601218104ed0affdd81346014f76 aefe06a99eeb4a64b419f13a695a52cb
+#: e3e560bf38a0412892295cd7180ba1f3 fa26e2e6048e4826871911cddffa5e1a
+msgid "返回值1 ： 内置合约操作BuiltinOperation"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3053 bc51fe28292644c888f51085f983dd03
+msgid "当ca模式为`center` 时，删除节点后需要链级管理员手动吊销节点的证书，此时证书私钥可传`nil` 。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3055 0108bd0b1a924d718cdca10efb7e55d8
+msgid "当ca模式为`none` 时，不可进行证书吊销操作。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3066 73f84ae077af4ea7880a36ff65489888
+msgid "**4.2.5.2 证书冻结**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3068 7d39417056d542c680695b17a28f51ff
+msgid ""
+"text func NewCertFreezeOperation(cert, priv []byte) (BuiltinOperation, "
+"error)"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3087 14c18834185e43fbbd73fe395f085759
+msgid "**4.2.5.3 证书解冻**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3109 8544beae1ece4b7282ccf2ce69ede5fb
+msgid "**4.2.5.4 证书检查**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3128 1ce1ec293bb54674b4b72b61a0b23793
+msgid "4.2.6 DID的使用"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3130 3a22334768af4c0b8b948b0d55a0876d
+msgid "**4.2.6.1 设置chainId**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3137 2b25b45be33d475495dc1d8b126e2187
+msgid "说明：通过创世账户来设置链的chainId，来激活DID服务"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3155 7682606a841e4b2ba4801516b47fa259
+msgid "4.2.7 MPC的使用"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3157 7f99194133704e54ae340811a93a8a5e
+msgid "**4.2.7.1 获取mpc历史记录**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3164 a5bf7692dc594916ada62d9dd532b3c2
+msgid "： 参数1  ： mcp使用的曲线类型 ： 返回值1 ： 内置合约操作BuiltinOperation"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3180 b172407425044985a94577cca6479460
+msgid "**4.2.7.2 获取mpc某一记录具体信息**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3188 9b02de1521734dcb8e60c75e71bf0a9d
+msgid "参数1  ： 该记录指定tag，填空值\"\"默认获取最新记录信息"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3189 57e2e8d015af49448486687fb3dc8a93
+msgid "参数2  ： mcp使用的曲线类型"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3205 dca3231849e94647aa109fb2f0a37795
+msgid "**4.2.7.3 新增mpc记录**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3212 2d63894b11104ea599d809b5be02cc21
+msgid "参数1  ： 使用zkp工具生成的contribution内容"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3234 c305fa0696fe4cd69f98683351c0540e
+msgid "4.2.8 Root CA的使用"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3236 fb7e1c7ac1fc4ece9311800fa9f578bd
+msgid "**4.2.8.1 新增root ca**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3238 89c358bcf31d454ea33dc61cf2b2060f
+msgid "当ca模式为`center` 时，链级管理员可以新增root ca。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3245 4f1fd8cc9cd54955ada09ff92dc91081
+msgid "参数1  ： 新增加的root ca内容"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3278 74b4b8e3659c48dc8e143cb4ba327d0c
+msgid "**4.2.8.2 查询root ca**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3280 f97163c2e2bd43e8ac2733db3efb4ac3
+msgid "当ca模式为`center` 时，可以查询root ca。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3303 c0d3d00868ce42fe9149fe1ee9d010a9
+msgid "4.2.9 跨分区交易"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3305 b23c7480f7624f479ce7ba7db2ce38fb
+msgid "（暂不开放）"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3617 7bb0a1d8ef3e4297bc0f3be58b8144cb
+msgid "4.2.10 hash类型查询"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3619 1ce8ed162a6644758064450a159dd002
+msgid "**4.2.10.1 获取目前支持的算法类型**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3621 ../../source/GoSDK.rst:3658
+#: ../../source/GoSDK.rst:3695 a4bc169310b046f786eeb7dbfcc26952
+#: a6a0b231df3d445e9e63a9b6bc054eb1 bdeb4de9e44c40e39f0c177c28d91db8
+msgid "vm类型：BVM"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3623 ../../source/GoSDK.rst:3660
+#: ../../source/GoSDK.rst:3697 6668ff2af3c546a7865484745d1d9c97
+#: 83c915aae73b461a8d63aa8d7778ce23 ea64e00e52c84bc9b61fe853d7ebcb65
+msgid "合约地址：“0x0000000000000000000000000000000000ffff0d”"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3625 ../../source/GoSDK.rst:3662
+#: ../../source/GoSDK.rst:3699 16fe0cff173a4959a140c93597a69bfd
+#: 5204e0ec7fa14e90969d47a30c83580c 587dcd1e4613426e9decff9b0bd6b239
+msgid "API接口：contract_invokeContract"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3627 ../../source/GoSDK.rst:3664
+#: ../../source/GoSDK.rst:3701 14c685f0ce1847c0b42103353accf8c3
+#: 283e92af801940f48115816080f0cf9c f27ad20bb057486191d3d969c17b3df5
+msgid "目标分区：global"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3629 ../../source/GoSDK.rst:3666
+#: ../../source/GoSDK.rst:3703 2c4935745fb5419280bb00e81633ec42
+#: 38e9aa1e605f40f0a015f9da6b66d8e1 450822cb9c504a4593bb1bba80109210
+msgid "合约内容构造函数："
+msgstr ""
+
+#: ../../source/GoSDK.rst:3636 ../../source/GoSDK.rst:3673
+#: ../../source/GoSDK.rst:3710 75cbb1f826d94b65a18809620e31a6e3
+#: 8c378f7fb8ef41a6a6173fbd8892bdb1 abb54f5d42354b92ac401fcfdf1ee361
+msgid "当前功能合约调用具体参数："
+msgstr ""
+
+#: ../../source/GoSDK.rst:3656 1adfd663f8144186b2ff045aded812d7
+msgid "**4.2.10.2 获取已变更的算法记录**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3693 d6e3cbaf170c4dc299a42ddd23e7e9a2
+msgid "**4.2.10.3 变更算法**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3735 46f514c547794855b5da2fcbc9bfaba9
+msgid "4.2.11 Balance管理"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3737 f41fb3c4699e47d5bf627a4ccbd3b9a9
+msgid "**4.2.11.1 设置balance**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3745 18b17545d27148028ac20e0182a2f727
+msgid "addr  ： 用户地址"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3746 6320b58080cd4b8dbeffed48c7a9460d
+msgid "value ： 用户balance"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3747 66efdaf407474b0484ce2fed9b2f81c9
+msgid "返回值1  ： 内置合约操作BuiltinOperation"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3748 c064c0ccf44a4a0e90c0d9b043c63a99
+msgid "返回值2  ： error"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3753 2fb413b858de4b8191a49b9c001f1b1f
+msgid "4.3 HVM"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3758 00e4925fadc6493da268fd8a6c1d0d0d
+msgid "4.3.1 abi解析"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3760 c325b8f2e32b4cc8a050acfbd75f915a
+msgid "abi解析后的结构如下"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3783 f13b2b0b44654809b5017419de1193ef
+msgid "**4.3.1.1 通过abiJson字符串解析合约**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3801 10cc32345d3a4df0b98f97baba929241
+msgid "**4.3.1.2 获取待调用的方法**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3811 2884f43e0bed49a5ad7e4b1457e29d2e
+msgid "参数1  ： 方法在abi中的名字"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3812 ../../source/GoSDK.rst:3835
+#: 0570c48c31a244bda594b4f5c7459e53 2f5752319ace4043b70f6e33a206f485
+msgid "返回值1 ： beanAbi结构体"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3826 7f7988300225436081d5c264445adcf2
+msgid "***"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3834 ecdb4296b4b240739d93754007a172dd
+msgid "参数1  ： 合约方法签名"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3850 8cac76d9969e4db485bdb04bcbafbe36
+msgid "**4.3.1.3 编码beanAbi**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3857 a1cf68d5db054fc3bab7f4813a3debd1
+msgid "参数1  ： beanAbi的实例"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3858 4030d7d069b84662a70365170f8da766
+msgid "参数2  ： beanAbi对应的合约方法的参数"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3859 794b9bb838b1463f8adac11122ff8c4e
+msgid "返回值1 ： 编码后的beanAbi"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3878 ced6370f8ae744f0a48aa0bf2d81055c
+msgid "**4.3.1.4 payload解码**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3892 f60b61293e8148fc97c469318b36c01b
+msgid "参数1  : payload的十六进制字符串"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3893 46e220dd300647289e5ee68d48586f03
+msgid "返回值1 : PayLoad结构体"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3906 ded3bcda09aa41629bd4deadacc04837
+msgid "4.3.2 jar包部署"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3908 c4d5dae77a324c1daa35dc39226ee3c8
+msgid "jar包部署合约需要对jar包进行编码"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3915 87d76af2cc834949a8dd7fef2dd61fd1
+msgid "参数1  : jar包文件路径"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3916 6ff5a020f8c74f099610c4a039a0862b
+msgid "返回值1 ： 编码后的byte数组"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3931 88270d9937c7428c9d20659a50d3ca76
+msgid "4.4 KVSQL"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3934 6a854eb9ccbd45d3acb0aa7b549e050a
+msgid "4.4.1 回执解码"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3949 7182e051a6ff4e43a6c525aa46fc2d2a
+msgid "**4.4.1.1 解回执为ResultSet**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3956 e43e175887f345a5a239367a6f581d05
+msgid "参数1  : 交易回执的ret字段解码成byte数组"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3957 00aff9947c2a499fa0516f5dd1b50b65
+msgid "返回值1 : sql执行结果的结构体实例"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3967 2780cb5543314f47875c07c355ed1824
+msgid "**4.4.1.2 获取列数**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3981 3b9c5efb235541b48d2071c233fb4ee8
+msgid "**4.4.1.3 获取lastInsertId**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:3995 ad2a26e175a84f94a5b9d27faeaa4241
+msgid "**4.4.1.4 获取修改的行数**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4009 7be2c8d6b744473cb400ef8d1dd1a0be
+msgid "**4.4.1.5 获取列**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4023 5eaf396394604446a97d2a49f759afde
+msgid "**4.4.1.6 获取行数**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4039 a13471a8e59545fda7fd22510e02cc35
+msgid "**4.4.1.7 获取指定行数据**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4057 f70dc15b8659487c9b6a990957492902
+msgid "**4.4.1.8 解具体的列(字段)的值**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4059 97d13afb0d4f435fa9cfd103292fe6e7
+msgid "解具体字段的值，需要弄清楚自己定义的**表字段类型**以及希望获取的字段**下标，**并调用以下方法与之**一一对应**。比如字符串类型字段调用GetString(index)来解。若类型对应错误会导致解出来的值不对，更严重的会导致panic。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4062 e458e83f9bcc429395043025bc280fc2
+msgid "tinyint                   : GetInt8"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4063 c44b256f86934968a83039c68106ea90
+msgid "tinyint unsigned          : GetUint8"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4064 fe2a5a97eadd4dc79970775f9ffb0724
+msgid "smallint                  : GetInt16"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4065 c6ed7fae2f504f79a2de3afcd021f839
+msgid "smallint unsigned         : GetUint16"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4066 c5dc0d5bed714565b9080ec88e9a308b
+msgid "int                       : GetInt32"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4067 44675d892b2444deaefeea976de6f640
+msgid "unsigned int              : GetUint32"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4068 9c78298767984541aa72db75f3e5efd7
+msgid "bigint                    : GetInt64"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4069 55ccd4c0a0e1424789a69607a2b7aae0
+msgid "unsigned bigint           : GetUint64"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4070 dbc17cb6bf8f4e2ead291956c2444426
+msgid "float                     : GetFloat32"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4071 eb1c5a99e96f4ed89c4b35d42a2a0b19
+msgid "dobule                    : GetFloat64"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4072 d4c668e4d560479fa3cd4d9dca9d60cb
+msgid "decimal                   : GetDecimal"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4073 03f462dc24894787b52392da7fc17af0
+msgid "varchar                   : GetString"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4074 819eca6f5347486bac3ddd0a902e69df
+msgid "bit, blob(字节类型)        : GetBytes"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4075 ea32100e815e41c7a12b6ae6cdc41778
+msgid "DateTime, timestamp, date : GetTime"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4076 0329c32a716a4b38850ad8090c44760b
+msgid "time                      : GetDuration"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4077 3baf5b2e5f074604ae368121488a9e47
+msgid "enum                      : GetEnum"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4078 a7a9933726fe4d97bd8f7447f77d89cd
+msgid "set                       : GetSet"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4102 7dbf6aeabce1418482eb97d439a3d639
+msgid "示例："
+msgstr ""
+
+#: ../../source/GoSDK.rst:4116 e7b31e5aa1af4be6bfe9e54a0d78588e
+msgid "4.5 FVM"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4119 d054d72dadaa4edb92fa01f7f0954416
+msgid "4.5.1 abi编解码"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4121 7fafc60d609347fab6895ac06dab61b7
+msgid "**规约**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4123 dff537069d7a4f65b817e4665a2833df
+msgid "虚拟机内部所有的abi类型均实现接口Compact"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4136 677f38170a2b460da02eeca28ecbf378
+msgid "目前FVM针对rust合约，类型映射关系如下"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4138 84619a7db67a4484b52b29753f875ffb
+msgid "FixI8         : i8"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4139 ac495f0e54384a259c93c84c84d73435
+msgid "FixU8         : u8"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4140 526e16c8428f429d97249dbbb90d0294
+msgid "FixI16        : i16"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4141 58947241e55a44dea61920818a7194c3
+msgid "FixU16        : u16"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4142 6edd97e5b8df4c95a81b790bc08cb613
+msgid "FixI32        : i32"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4143 9b7fcc008c924a179ee0f4ed9bc3610f
+msgid "FixU32        : u32"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4144 4b0790cc2de6483d8fb37743fc3f1fc7
+msgid "FixI64        : i64"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4145 4c3ff5afad8e48649ffd7ff76cedac60
+msgid "FixU64        : u64"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4146 216840118c7a43c8a0ca2e850db399fa
+msgid "FixI128       : i128"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4147 18a3a1e4898442d594c964378dfd2c19
+msgid "FixU128       : u128"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4148 f9a42d8f52f84ad8ac7266898a9167f2
+msgid "CompactU8     : Compact<u8>(暂不支持)"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4149 60d7bf0a650b45b4b05ec9ef0d961ff4
+msgid "CompactU16    : Compact<u16>(暂不支持)"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4150 4b0d356183354928a7600381db8a9e44
+msgid "CompactU32    : Compact<u32>(暂不支持)"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4151 914965303e8e4d798b9f8d4f3728dac8
+msgid "CompactU64    : Compact<u64>(暂不支持)"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4152 d002d89be5804a2089fe3a79df476d50
+msgid "CompactU128   : Compact<u128>(暂不支持)"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4153 18304338124f4563a8f51fc4b0970104
+msgid "CompactString : str"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4154 ee5422cc8ccb4db1ac73d1e2d05c4847
+msgid "CompactVec    : vec"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4155 cd7eb209348b4fd5a7bc000474a3c411
+msgid "CompactArray  : array([; 3])"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4156 b18dae8c77bd45ea9b8768f041ee97a5
+msgid "CompactStruct : struct"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4157 2c388cefb73b47258f3673ed188fb61d
+msgid "CompactBool   : bool"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4161 24b50f9eaf344fb39c19f2b97eb0aa18
+msgid "**需要特殊说明的是:**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4163 2272818f8d4f449895a4656fddecb69c
+msgid "**128位的整数由于go原生不支持，这里利用big.Int(16位byte)来表示与编解码**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4165 ca919d0db00347bcaba6f0858d2d3b48
+msgid ""
+"**CompactVec, CompactArray， 由于存在可能的嵌套，我们必须要指定NextTypeList, "
+"表明其嵌套的深度，例如vec<vec<string>>, 他的NextTypeList为[]TypeString{VecName, "
+"String}**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4167 19063b9bca9b4f6e8dbf481966fe0590
+msgid "**不要出现循环引用的结构**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4171 7f77579daf99410c8a0b23e809ae2f22
+msgid "****规约部分仅作了解，我们的真实使用使用请使用以下方法****"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4173 701fca1746a74177b382a435fc9b5232
+msgid "示例结构体"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4190 370d35c3a4de44c681cffe92b47816a7
+msgid "示例abi"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4316 30364776e9a94f40a99f1d4fa88fec25
+msgid "**4.5.1.1 解析abi文件**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4332 32d37cfa29e54ae8882735ca9660d42b
+msgid "**4.5.1.2 获取payload**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4339 e9e14cfe7f3c475fb14b71c1279471da
+msgid "**特别注意：**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4341 3660524f157440cb9ecc853236139d81
+msgid "**1.对于params的值严格按照abi文件对应的参数顺序，以及各个参数的格式进行传参**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4343 c8a7f520c332452ea4ebd361dff8d91f
+msgid "**2.对于结构体类型，按照其每个属性的值以及顺序组成一个[]interface{}进行传输**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4345 20c063ef70ec418092594720e0fbfbdc
+msgid "**3.对于数组按照顺序组成一个[]interface{}进行传输**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4347 64bf95409a2a4598b7e08dbb283da1b1
+msgid ""
+"**4.对于整数，可以方便的传int或者字符串（我们依据abi文件对其正确性做了校验），但如果开发者自己指定类型，例如uint16(1), "
+"这个时候我们会对该数字做严格的类型校验(开发者应该明白，uint16(1)与uint8(1)是不同的)**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4392 95b349c2a1974de9b4eb84fb11632649
+msgid "**4.5.1.3 解析返回值**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4406 c7124abd71834c408ae2399938225cc3
+msgid "***** 开发者应当自己在应用中定义对应的结构来映射放回值, 对于复杂的嵌套类型，开发者应当自己清楚的知道自己在做什么**"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4440 d60f522c57624be084dc54097224790f
+msgid "第五章 RPC 接口"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4447 db159decd5aa40cb9bc5154a41247030
+msgid "第六章 GRPC 接口"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4452 39f0ef359bba4a579f1da7f7abb2a894
+msgid "第七章 报错说明"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4454 8f35cf0d1b604c2bbc86a23cfaf7b2f9
+msgid "GoSDK中和网络相关的RPC、grpc调用均返回StdError类型的错误。StdError为一个接口。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4465 7bc68ed4cd9c49b09f4fd6875c6f6f97
+msgid "所以，该结构提供三种方法："
+msgstr ""
+
+#: ../../source/GoSDK.rst:4467 3f35ca6b9a7640189c370fec9fdc6870
+msgid "`func (re *RetError) Error() string`"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4469 dc7602923fbf4af295e94d4487b6bc02
+msgid "说明：实现了error接口。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4471 5316d245dd5443ec882de5e577a32b74
+msgid "返回【返回值1】：返回错误描述。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4473 db467ef6f54342dda6788ac6963a541f
+msgid "`func (re *RetError) String() string`"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4475 195a7bb8e83c4555ba158dd2d8ad3992
+msgid "说明：实现了fmt.Stringer接口。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4477 8c42a55889824772b10d75464c19fde2
+#, python-format
+msgid ""
+"返回【返回值1】：将会返回以下格式字符串\"error code: %d, error reason: %s\", re.Code(), "
+"re.Error()，即错误码加错误描述。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4479 7a5db1b79e514807b3ed1408b11e5936
+msgid "`func (re *RetError) Code() int {`"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4481 85ab6f8a4feb424fb443da65bc648207
+msgid "说明：返回错误码。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4483 cb66500f63c74e648f67cfcd0a51f67f
+msgid "返回【返回值1】：错误码。错误码表如下。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4486 c354f6f8929e4191916fa7f50e9998de
+msgid "0      : 请求成功"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4487 468a12e8a8944a15b8784e8eaee83c72
+msgid "-32700 : 服务端接收到无效的json。该错误发送于服务器尝试解析json文本"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4488 454d5a3d2c4c4b3da23c16ae664cb84a
+msgid "-32600 : 无效的请求（比如非法的JSON格式）"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4489 9cb677ec49e9432ea270e7bd4e907d0c
+msgid "-32601 : 方法不存在或者无效"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4490 3ba20a3b72f04c8a9d258361d9f58b99
+msgid "-32602 : 无效的方法参数"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4491 ddeae0564254419688aff3dcb0a444ab
+msgid "-32603 : JSON-RPC内部错误"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4492 c240d8f252c24921831e774e0f2d0c99
+msgid "-32605 : cvp在报错前的拦截器"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4493 a981936c81894fa9b7efd3e9ccc70929
+msgid "-32606 : cvp在报错后的拦截器"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4494 1746937777354eca9e28ab98dacb4ef8
+msgid "-32000 : Hyperchain内部错误或者空指针或者节点未安装solidity环境"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4495 573c1bb5458f47adb37ef08501774497
+msgid "-32001 : 请求的数据不存在"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4496 18f3b3cdaacb40488230471882984d50
+msgid "-32002 : 余额不足"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4497 d1988f7837b643c3b67efe6ae5768bb1
+msgid "-32003 : 签名非法"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4498 aca6354e06a84b688b18f446624f009b
+msgid "-32004 : 合约部署出错"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4499 1c4da70fce7444b193f97eaf51503e1a
+msgid "-32005 : 合约调用出错"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4500 c3539dea4ccf40f5895a30b930bea40b
+msgid "-32006 : 系统繁忙"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4501 bcf077e6628c4164974815503f80d584
+msgid "-32007 : 交易重复"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4502 12894202ddb24ebaa09b6713f4586afe
+msgid "-32008 : 合约操作权限不够"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4503 382fd2ccd8a24976af18641a0651ea5a
+msgid "-32009 : (合约)账户不存在"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4504 b8c4e63b66f348f094ec1f3a492d4910
+msgid "-32010 : namespace不存在"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4505 4cf5fb6d13794b368309e32780254680
+msgid "-32011 : 账本上无区块产生，查询最新区块的时候可能抛出该错误"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4506 577494c531254b71ac2f3697fc7505b5
+msgid "-32012 : 订阅不存在"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4507 630f13428bc448c48cc499863ffaefa6
+msgid "-32013 : 数据归档、快照相关错误"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4508 c6a3234208d041b1800bdc4fbe918469
+msgid "-32014 : 未能解锁本地节点帐户"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4509 330800e1c87e4a84a9c81e46dc785a94
+msgid "-32015 : 调用原生合约失败"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4510 f2d646ebd63e402e9e0b3131f714a8f5
+msgid "-32016 : 无效的参与者节点哈希"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4511 fefc84be84244682b712c19be8c8b8af
+msgid "-32017 : 不可用的peer"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4512 ad9f080770cc4891ab66a1e5cc9385d9
+msgid "-32018 : 不一致的peer"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4513 33129ecc97f2416da464b6006bcaceea
+msgid "-32019 : 没有collection信息的非法的私有交易"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4514 4f57eda7a620492c8f64cc28986737c5
+msgid "-32020 : ACO服务不可用"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4515 2b7e242018be42f19ca4a9a67380dc18
+msgid "-32021 : 废弃的接口"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4516 152247305dcf4c228d7ca139a8565aac
+msgid "-32022 : did调用失败"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4517 fe24235d77e74cb89815574b2c303053
+msgid "-32023 : cvp不支持此方法"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4518 260ea168317c40bab086678322d8f7f0
+msgid "-32024 : 共识状态非正常"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4519 69e4a64ea5d1415e85653508d4c15c06
+msgid "-32025 : 进程已满"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4520 359e05d1772e46ae9788c71dbd9e58f7
+msgid "-32026 : QPS 受限"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4521 161e8993eba3455a8954c90ee1c504eb
+msgid "-32027 : simulate受限"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4522 03ef6caf13df4c989bd313659ddb81b8
+msgid "-32028 : sql执行出错"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4523 5c0ca66215d044b2902190ac311e705c
+msgid "-32096 : http请求处理超时"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4524 8297d39a2f1a4a689859d0481f4b053c
+msgid "-32097 : Hypercli用户令牌无效"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4525 fb958d6285904369b2b14266ddab2c37
+msgid "-32098 : 请求未带cert或者错误cert导致认证失败"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4526 c2e76c1cf11b45428e711367a9a6ddcd
+msgid "-32099 : 请求tcert失败"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4527 c43057b06030428f8957fd178a6d42b6
+msgid "-9995  : 请求失败(通常是请求体过长)"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4528 5dea2fa6c2c946c18e41bc4a50bc25f3
+msgid "-9996  : 请求失败(通常是请求消息错误)"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4529 61036cd3dfd94cdab77fad067bc7235d
+msgid "-9997  : 异步请求失败"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4530 293ae8bd304e4393b9f7766f346849e4
+msgid "-9998  : 请求超时"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4531 5ca5c4fb873f497f809ff16e942265b6
+msgid "-9999  : 获取平台响应失败"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4540 9aeef7aa444d46c184d24f40f16ddc92
+msgid "第八章 示例"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4543 31266c1532844f0f973fdb4d7c43afb1
+msgid "8.1 EVM"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4546 2eeb9488fdf74d63b43bd65536b5202e
+msgid "8.1.1 编写合约代码"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4568 d8f48cd7287d445ebd92a4e55a178396
+msgid "8.1.2 编译合约"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4618 bc74c6bd36bd4814b619adaef8b43938
+msgid "8.1.3 使用gosdk"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4739 52ac1c7c43704b52b39163156cb050bc
+msgid "8.2 HVM"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4741 6f759151c27149389d8966b59fe01fc8
+msgid ""
+"本节展示了使用GoSDK操作HVM合约的完整例子。在使用gosdk之前，请到 "
+"http://hvm.internal.hyperchain.cn/](http://hvm.internal.hyperchain.cn/ "
+"上学习如何编写HVM合约"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4743 fa074308d0614e74860e47420cd1f268
+msgid "通过一个SetHash 合约来展示如果通过gosdk 发送hvm合约交易。更多的HVM合约Demo 可参考下面链接中的示例"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4745 b5ef09b0f0d34a36ad4fce50598e34be
+msgid "http://thoughts.hyperchain.cn:8099/workspaces/5b6c3babbe825b41b446a307/docs/5ed787cac98cc900016b726e,"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4747 53498d550a6344f5a5ed2f1d26a12455
+msgid "http://thoughts.hyperchain.cn:8099/workspaces/5b6c3babbe825b41b446a307/docs/5ed787cac98cc900016b726e"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4752 63d120b4e8ef47e48ca8b22c02cdd47b
+msgid "8.2.1 HVM合约invokeBean 如下所示"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4788 e7e6b0a7c2da4ecd96b5e4d20de5f7e3
+msgid "8.2.2 HVM 合约接口定义以及合约实现如下所示："
+msgstr ""
+
+#: ../../source/GoSDK.rst:4840 b548da7787b64f4aae0ed0d0d2aa61ac
+msgid "8.2.3 合约编译以及ABI生成"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4842 3e13d1b8322f4402a914d0a1271040d0
+msgid "合约编译方式可以参考HVM上述HVM合约使用链接，这里只介绍HVM合约ABI 生成方式。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4844 c9a87a7614fb415eb28f299d24768667
+msgid "利用我们提供的HVM ABI 生成maven 插件即可编译生成HVM合约的ABI , 需要在合约项目pom 文件中加入下面的依赖"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4864 eb703f0db97d49ffbd5b279a8915a61c
+msgid "其中"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4866 063080e788744d1e818ba01798423e53
+msgid "<jarFile> 中是hvm合约的jar包"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4868 65e02c2e9a46429797d68843f5b76039
+msgid "<invokeBeanPath> 是hvm合约的class字节码文件夹"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4870 8d232e6ee82f4deb865e5f779f699b10
+msgid "<invokeBeanPackages>中包含很多<param>标签，每个<param>标签中都是一个实现*BaseInvoke*接口的类的全路径。"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4872 96af9619252b42eeb58d671ab353b453
+msgid "<outputFile>中存放的是生成的.abi的存放目录"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4874 91940be6575c4e7881262a3afc5679dc
+msgid "在合约编译完成后，执行下面的命令，即可生成HVM合约的ABI"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4881 1a9f4e1e97834c83ad7af88aafa36088
+msgid "在生成的hvm.abi中"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4883 f2aff2a0bb0e42efa165f7ead69905b2
+msgid "version代表hvm.abi的版本"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4885 f88c96fffe944471ab125f5144de3e4e
+msgid "beanName代表实现*BaseInvoke*接口的类的名称"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4887 3e6542c4565c42aaa6ef9cf2adaad8d8
+msgid "inputs代表invoke方法的参数  其中"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4889 e3b0d1cab46040d69c16f800905d1769
+msgid "name 代表变量名称"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4891 56f6b6ddc7d44cceb48cd04a4c733497
+msgid "type代表变量类型"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4893 a6ccd640a7b14e429ffd493fe3fe2a36
+msgid "如果是结构体则structname代表结构体类的名称"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4895 f4ad720fb5864bd6aa824235b85dc41e
+msgid "output代表invoke方法的返回值"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4897 4369c487d39644e18eebf07b71610ea0
+msgid "structs里面包含HVM合约中的结构体"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4899 53044c63d83d47528e399441d7210196
+msgid "示例hvm.abi如下"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4908 48279352052b4be9b541cc8278c93ef2
+msgid "8.2.4 调用上述合约的 gosdk代码如下所示"
+msgstr ""
+
+#: ../../source/GoSDK.rst:4974 08925d3708eb437c951c71c9d8a49091
+msgid "8.3 KVSQL"
+msgstr ""
+
+#: ../../source/GoSDK.rst:5011 b1700337fc2546e295f7e4eac2bb8df2
+msgid "8.4 BVM"
+msgstr ""
+
+#: ../../source/GoSDK.rst:5026 21754db06fe041c6a5b75e5431941ec2
+msgid "8.5 TRANSFER"
+msgstr ""
+
+#: ../../source/GoSDK.rst:5040 77d65a9335be440da2fa610ddfe28e44
+msgid "8.6 FVM"
+msgstr ""
+

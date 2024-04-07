@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/VM 2e2e42268aec4b739a395453d9cf6172 Interface.rst:4 Manual/NFT
+#: Related User
+msgid "数字藏品相关接口"
+msgstr ""
+
+#: ../../source/VM Interface.rst:7 Manual/NFT Related User
+#: ee8130ac091b493ea680d94782f1edae
+msgid "说明"
+msgstr ""
+
+#: ../../source/VM 11e5477ca23943febcc76718b1cf32be Interface.rst:9 Manual/NFT
+#: Related User
+msgid "从Hyperchain2.2.0版本开始，数字藏品可映射为平台底层账户，由区块链原生提供数字藏品操作功能，因此在合约层面，也提供了能够操作底层数字藏品账户的接口。"
+msgstr ""
+
+#: ../../source/VM 6ade973856c94455875601489b5a6f59 Interface.rst:12 Manual/NFT
+#: Related User
+msgid "接口"
+msgstr ""
+
+#: ../../source/VM 6f9f15d6ad9d474daca3b1e880e586f5 Interface.rst:14 Manual/NFT
+#: Related User
+msgid ""
+"从hvm-"
+"sdk1.1.4版本开始，内置了类ERC721的接口定义，用于协定发布的数字藏品的合约的管理行为，接口为约定内容，并非数字合约必须实现的，可按自己实际业务进行实现。"
+msgstr ""
+
+#: ../../source/VM 2dd1b95cd3194047b9c0024d5445d36e Interface.rst:17 Manual/NFT
+#: Related User
+msgid "HPC721接口"
+msgstr ""
+
+#: ../../source/VM Interface.rst:19 Manual/NFT Related User
+#: de9131fc4ca34376a8b0203b66351eb1
+msgid "hvm智能合约提供类ERC721的HPC721标准，在合约灵活方便的基础上，提供标准化接口的实现。配合底层数字藏品账户，即可灵活定制数字玩法，也可高效完成数字交易::"
+msgstr ""
+
+#: ../../source/VM 78aec84ab2d24ae08f336442291c5245 Interface.rst:79 Manual/NFT
+#: Related User
+msgid "HPC721Metadata接口"
+msgstr ""
+
+#: ../../source/VM Interface.rst:81 Manual/NFT Related User
+#: f4d0c199d6304edda7c9b60bbf0d35e1
+msgid "HPC721Metadata作为HPC721的补充接口，增加了数字藏品项目的扩展指定内容，本身改接口继承自HPC721接口::"
+msgstr ""
+
+#: ../../source/VM 84ce09a639af450a9833a0b6f113be75 Interface.rst:102
+#: Manual/NFT Related User
+msgid "数字藏品操作接口"
+msgstr ""
+
+#: ../../source/VM Interface.rst:104 Manual/NFT Related User
+#: b5d5fc4558584664a05013f92ca2a9a4
+msgid "所有数字藏品的操作都是基于一个智能合约的，因此对于操作数字藏品的接口均基于智能合约的内置方法，具体介绍可参考《HVM合约内置方法使用手册》，这里描述与数字藏品相关的接口。"
+msgstr ""
+
+#: ../../source/VM Interface.rst:107 Manual/NFT Related User
+#: fb748a029f45431cb96fe45bb2c468d1
+msgid "发布数字藏品"
+msgstr ""
+
+#: ../../source/VM Interface.rst:109 Manual/NFT Related User
+#: eaffac985b3e4cfeacf3f1b0d2447cee
+msgid "**emit0**"
+msgstr ""
+
+#: ../../source/VM 27dce2cb02f748ab84bb7115ce36124c Interface.rst:111
+#: Manual/NFT Related User
+msgid "铸造数字藏品账户，默认会为创建的数字藏品账户设置的平台地址为当前合约地址，默认初始状态为0::"
+msgstr ""
+
+#: ../../source/VM 787289710b1d498d801cc7c321de835e Interface.rst:116
+#: Interface.rst:139 Manual/NFT Related User e5bde166d6064cc783f16f9e9c70eb47
+msgid "方法"
+msgstr ""
+
+#: ../../source/VM 6bfbce648b724782b4a44b095b31ce4c Interface.rst:116
+#: Interface.rst:139 Manual/NFT Related User b2de1aa1f097417185ac444ba4f1ab73
+msgid "参数"
+msgstr ""
+
+#: ../../source/VM 213af35d43df4009b4c4d5c5a833a5c1 Interface.rst:116
+#: Interface.rst:139 Manual/NFT Related User dcabe3b9440b4015a551d551504d82e9
+msgid "返回值"
+msgstr ""
+
+#: ../../source/VM Interface.rst:118 Manual/NFT Related User
+#: e4c6ee56463f42c2b5b7540be1d31998
+msgid "emit0"
+msgstr ""
+
+#: ../../source/VM Interface.rst:118 Manual/NFT Related User
+#: a3a0699a39ad45db8d83e534928bf7e0
+msgid "藏品的底层账户地址"
+msgstr ""
+
+#: ../../source/VM 087b6822d5024d2c800c2e2402d28c68 Interface.rst:121
+#: Interface.rst:144 Manual/NFT Related User e5e4c1cfc3b24506a5a58b14c57fc0b5
+msgid "**示例**::"
+msgstr ""
+
+#: ../../source/VM 597928977d344cb6a84f87bcee06af8e Interface.rst:126
+#: Manual/NFT Related User
+msgid "获取数字藏品"
+msgstr ""
+
+#: ../../source/VM Interface.rst:128 Manual/NFT Related User
+#: b84daa131fee480dbcd7201a062fe0e2
+msgid "**getProperty0**"
+msgstr ""
+
+#: ../../source/VM 0d0338b08e4e40609a263f14fd0a8905 Interface.rst:130
+#: Manual/NFT Related User
+msgid "通过数字藏品唯一标识获取到当前合约下发布的数字藏品账户"
+msgstr ""
+
+#: ../../source/VM 7f7b02a0d00843f184a54e6c220a18c3 Interface.rst:132
+#: Manual/NFT Related User
+msgid ""
+"该只能获取到当前合约地址先发布的数字藏品，若藏品不存在，则会返回null。 "
+"**需要注意的是取出来的藏品为账本中藏品账户的映射，对应的setXXX方法将会对账本进行修改，需要注意好访问权限问题。**"
+msgstr ""
+
+#: ../../source/VM 314880ecf626478796ab23911bdd923d Interface.rst:141
+#: Manual/NFT Related User
+msgid "getProperty0"
+msgstr ""
+
+#: ../../source/VM 2ba57d8e34114cf9b56b44457ede1c51 Interface.rst:141
+#: Manual/NFT Related User
+msgid "藏品账户结构"
+msgstr ""
+
+#: ../../source/VM 9496d263bc7b401c86b45c9c811f7c90 Interface.rst:149
+#: Manual/NFT Related User
+msgid "藏品结构"
+msgstr ""
+
+#: ../../source/VM 480b0e4454ba4ea1b71aead9ca215cd4 Interface.rst:186
+#: Manual/NFT Related User
+msgid "PropertyV1可通过合约内置方法获取得到，其属性的含义如下："
+msgstr ""
+
+#: ../../source/VM 1867a80083da42379d606de9931f77ef Interface.rst:188
+#: Manual/NFT Related User
+msgid "entityID：合约内藏品唯一标识"
+msgstr ""
+
+#: ../../source/VM Interface.rst:190 Manual/NFT Related User
+#: ade1b72bd911470ea174f0e61e3cd7f3
+msgid "metaData：藏品的自定义meta信息"
+msgstr ""
+
+#: ../../source/VM 3a4f47769c3f45b5a9e6e57911f7cb16 Interface.rst:192
+#: Manual/NFT Related User
+msgid "status：藏品状态，数字表示，每个数字对应的含义由合约决定，默认为0"
+msgstr ""
+
+#: ../../source/VM Interface.rst:194 Manual/NFT Related User
+#: ba9312ab04034e72a44fb16e73b5bc87
+msgid "owner：藏品拥有者地址"
+msgstr ""
+
+#: ../../source/VM 5b4ee2f8367a4b44a2de1bfce69d3470 Interface.rst:196
+#: Manual/NFT Related User
+msgid "updateFrom：是否从某个藏品更新而来，暂未开放更新地址修改功能"
+msgstr ""
+
+#: ../../source/VM 081d2ee285fb4ef2b8686fee7df22357 Interface.rst:198
+#: Manual/NFT Related User
+msgid ""
+"同时PropertyV1提供了 `getEntityID` ， `getMetaData` ， `getStatus` ， `getOwner` "
+"接口来获取上述的属性。"
+msgstr ""
+
+#: ../../source/VM 7bb9a6f5033f46c2a31677e2d06aac43 Interface.rst:200
+#: Manual/NFT Related User
+msgid ""
+"PropertyV1接口同时还提供了 `setMetaData` ， `setStatus` ， `setOwner` "
+"方法，直接从合约内置方法中获取到的PropertyV1对象的set方法的修改将直接对账本中的藏品账户结构产生影响，因此需要注意权限问题，合约内对外返回的Property对象需要经过拷贝。"
+msgstr ""
+
+#: ../../source/VM 3826216fb73847e180cb3f4f555166d5 Interface.rst:203
+#: Manual/NFT Related User
+msgid "demo"
+msgstr ""
+
+#: ../../source/VM Interface.rst:205 Manual/NFT Related User
+#: b2a8f2c1363e4a41a4c1a97320f819c5
+#, python-format
+msgid ""
+"`property.zip <https://upload.filoop.com/RTD-"
+"Hyperchain%2Fproperty%20(1).zip>`_"
+msgstr ""
+

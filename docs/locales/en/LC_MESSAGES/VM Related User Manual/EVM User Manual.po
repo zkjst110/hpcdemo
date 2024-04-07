@@ -1,0 +1,512 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/VM 560d93595ca44f7994a17067a99d76ea Manual.rst:4 Manual/EVM
+#: Related User
+msgid "EVM使用手册"
+msgstr ""
+
+#: ../../source/VM 707bd30c54e049c78072648f6c819e3b Manual.rst:7 Manual/EVM
+#: Related User
+msgid "1.使用方式"
+msgstr ""
+
+#: ../../source/VM 01217f6917e34a9d8c31536fe8517b62 Manual.rst:9 Manual/EVM
+#: Related User
+msgid "evm的基本使用方式大致与以太坊相同, 基本语法参见solidity官方文档"
+msgstr ""
+
+#: ../../source/VM 0f0e9a36c63c4d23a0f11c7a05760c13 Manual.rst:11 Manual/EVM
+#: Related User
+msgid ""
+"`https://docs.soliditylang.org/en/v0.8.15/ "
+"<https://docs.soliditylang.org/en/v0.8.15/>`_"
+msgstr ""
+
+#: ../../source/VM 6c1820a5cc5645f58722abeefdc6c1bf Manual.rst:14 Manual/EVM
+#: Related User
+msgid "2.与以太坊差异"
+msgstr ""
+
+#: ../../source/VM 0f824d77c738413a9f3b5122374de7d8 Manual.rst:17 Manual/EVM
+#: Related User
+msgid "2.1 blockhash"
+msgstr ""
+
+#: ../../source/VM 8b545ad13d2544848ba2b81219a4a700 Manual.rst:19 Manual/EVM
+#: Related User
+msgid ""
+"以太坊中获取指定区块的区块哈希可以使用 `blockhash(uint blockNumber) returns (bytes32)` "
+"方法来获取前256个区块号中任意区块号的hash，但是由于flato平台存在区块归档功能，与此功能冲突，因此不提供此功能。"
+msgstr ""
+
+#: ../../source/VM 0648e50d1735493586231200d1f81610 Manual.rst:22 Manual/EVM
+#: Related User
+msgid "2.2 跨合约调用"
+msgstr ""
+
+#: ../../source/VM 6d1344ffb73d4f4b96920d0fedcff856 Manual.rst:24 Manual/EVM
+#: Related User
+msgid ""
+"在以太坊evm中，跨合约调用时如果跨合约调用的方法失败，跨合约调用的方法会返回false，并不会导致当前调用的直接失败， 而在flato-"
+"evm中交易的执行会失败。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:26 Manual/EVM Related User
+#: d840b80318a84f6e93ae4944ba6610d1
+msgid "跨合约调用demo::"
+msgstr ""
+
+#: ../../source/VM 37b4b5e8c29947ca972c9e36700fc409 Manual.rst:38 Manual/EVM
+#: Related User
+msgid "假若base合约部署后的地址为 `0xca35b7d915458ef540ade6068dfe2f44e8fa733c`"
+msgstr ""
+
+#: ../../source/VM Manual.rst:51 Manual/EVM Related User
+#: fd41e5e4ff1140c0b287935d2538028f
+msgid "说明：evm的使用同样支持create2的方式部署发合约，此操作失败时的行为与上文描述一致。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:54 Manual/EVM Related User
+#: d2c16131ff6644d78b3517a01d7f97aa
+msgid "2.3 Gas问题"
+msgstr ""
+
+#: ../../source/VM 6ce624610cd44dfaa4902b1d04a80efb Manual.rst:56 Manual/EVM
+#: Related User
+msgid "为保证兼容性，evm升级时，对应gas计费方式一般不会升级的，因此会与以太坊标准的Gas消耗有所差异"
+msgstr ""
+
+#: ../../source/VM 6060344dd9e54826b76f134738bc78c9 Manual.rst:59 Manual/EVM
+#: Related User
+msgid "2.4 调用预编译合约"
+msgstr ""
+
+#: ../../source/VM 51f0820b0de74563960d588d06484555 Manual.rst:62 Manual/EVM
+#: Related User
+msgid "**2.4.1 调用方式**"
+msgstr ""
+
+#: ../../source/VM Manual.rst:64 Manual/EVM Related User
+#: be7d7b2dd0444849bd46f65d1dbbed58
+msgid "我们有两种调用方式"
+msgstr ""
+
+#: ../../source/VM Manual.rst:66 Manual/EVM Related User
+#: ebc7c1ac204140bb863678635695cb43
+msgid "通过抽象合约调用"
+msgstr ""
+
+#: ../../source/VM 1ab03eecc5884d968082dd1066ad6135 Manual.rst:78 Manual/EVM
+#: Related User
+msgid "通过call指令调用"
+msgstr ""
+
+#: ../../source/VM 138e325a14344bb8b5f5e113bf595258 Manual.rst:87 Manual/EVM
+#: Related User
+msgid "**2.4.2 新增预编译合约**"
+msgstr ""
+
+#: ../../source/VM 4ff51a52d310498fbf60222d3547f45b Manual.rst:89 Manual/EVM
+#: Related User
+msgid "当前在兼容以太坊预编译合约的前提下新增了一个预编译合约，如下："
+msgstr ""
+
+#: ../../source/VM Manual.rst:92 Manual/EVM Related User
+#: c87fca4b75bf426c9a4bc078d5309d2a
+msgid "合约名称"
+msgstr ""
+
+#: ../../source/VM 68c24bea085249fa98c908dd69ea49ea Manual.rst:92 Manual/EVM
+#: Related User
+msgid "合约功能"
+msgstr ""
+
+#: ../../source/VM 75c2ccd0b7a348b7952fbcc8b90d24dc Manual.rst:92 Manual/EVM
+#: Related User
+msgid "合约 地址"
+msgstr ""
+
+#: ../../source/VM Manual.rst:95 Manual/EVM Related User
+#: a92461b89182431aa171c25f1eaf6ce6
+msgid "ecrecover"
+msgstr ""
+
+#: ../../source/VM 4bb61ca3d3af44ada74f426bfc4ca06a Manual.rst:95 Manual/EVM
+#: Related User
+msgid "与以太 坊一致，请查阅solidity官方文档"
+msgstr ""
+
+#: ../../source/VM Manual.rst:95 Manual/EVM Related User
+#: eda4d4cd1bf743cdb99204e8b7e7686a
+msgid "0x1"
+msgstr ""
+
+#: ../../source/VM 4d05a678f4504b9291ae4a484d2fd1fd Manual.rst:98 Manual/EVM
+#: Related User
+msgid "sha256hash"
+msgstr ""
+
+#: ../../source/VM 797c03cba52c4f1b94e894ad83ada65e Manual.rst:98 Manual/EVM
+#: Related User
+msgid "0x2"
+msgstr ""
+
+#: ../../source/VM 47177b9c1b604a1e9372952fd4e8ff1a Manual.rst:100 Manual/EVM
+#: Related User
+msgid "ripemd160hash"
+msgstr ""
+
+#: ../../source/VM 4de33ce1a3624065a77295a37821b694 Manual.rst:100 Manual/EVM
+#: Related User
+msgid "0x3"
+msgstr ""
+
+#: ../../source/VM Manual.rst:102 Manual/EVM Related User
+#: e6fafdada64b48ddb8a059e2f75a146c
+msgid "memCpy"
+msgstr ""
+
+#: ../../source/VM 98174df307104b32ae70b4ba0ac294d3 Manual.rst:102 Manual/EVM
+#: Related User
+msgid "0x4"
+msgstr ""
+
+#: ../../source/VM 6b81870375364778be680cb4b33552f4 Manual.rst:104 Manual/EVM
+#: Related User
+msgid "bigModExp"
+msgstr ""
+
+#: ../../source/VM 6a394797b34a44b3b28e90583e036c64 Manual.rst:104 Manual/EVM
+#: Related User
+msgid "0x5"
+msgstr ""
+
+#: ../../source/VM 37a06d2aec91454292c55337e94bbd4f Manual.rst:106 Manual/EVM
+#: Related User
+msgid "bn256Add"
+msgstr ""
+
+#: ../../source/VM 9b3cdfb5da3e4fe0b7c82f53cdb3f27a Manual.rst:106 Manual/EVM
+#: Related User
+msgid "0x6"
+msgstr ""
+
+#: ../../source/VM 60807957657d47d09cb4972c1f53cd40 Manual.rst:108 Manual/EVM
+#: Related User
+msgid "bn256ScalarMul"
+msgstr ""
+
+#: ../../source/VM 9575db5d80fa4944a7246fcdc0e6969d Manual.rst:108 Manual/EVM
+#: Related User
+msgid "0x7"
+msgstr ""
+
+#: ../../source/VM Manual.rst:110 Manual/EVM Related User
+#: c3aa3125e943401da934e21a5e349ef8
+msgid "bn256Pairing"
+msgstr ""
+
+#: ../../source/VM 54afe3b13a834866a466dbff0b481225 Manual.rst:110 Manual/EVM
+#: Related User
+msgid "0x8"
+msgstr ""
+
+#: ../../source/VM 0eba6ffc214b422e91a5ec4b9dbc470a Manual.rst:112 Manual/EVM
+#: Related User
+msgid "getTransactionHash （新增合约）"
+msgstr ""
+
+#: ../../source/VM Manual.rst:112 Manual/EVM Related User
+#: e6a84cb1baa441208c6cb7a89736d483
+msgid "获取当前交易的txHash"
+msgstr ""
+
+#: ../../source/VM Manual.rst:112 Manual/EVM Related User
+#: aa56a3e5153649c38b7c7005998a3e82
+msgid "0xfa"
+msgstr ""
+
+#: ../../source/VM Manual.rst:116 Manual/EVM Related User
+#: b3a59650e31847fe9aad3e6cdc275fa9
+msgid "使用方式参考2.4.1"
+msgstr ""
+
+#: ../../source/VM 1c12165e17b1432eb7f890e5945b1386 Manual.rst:119 Manual/EVM
+#: Related User
+msgid "3. 合约升级规范"
+msgstr ""
+
+#: ../../source/VM 72618382f38d43579a6c2d1b42b45b05 Manual.rst:121 Manual/EVM
+#: Related User
+msgid "对于已部署到区块链上的智能合约做版本升级需要用到合约升级的功能。合约编码者要注意一个正确的新版合约需要满足以下所有的升级规范，若不符合以下规范而进行合约代码升级的话，在之后的合约调用过程中，会出现**变量内容读取失败、变量内容读取异常、虚拟机执行失败**等情况，造成合约中存储的数据与变量名无法对应的情况。出现这种情况，可能会造成合约中某些**数据永久无法恢复**。因此合约编码者若需要做合约升级，请务必阅读以下升级规范。"
+msgstr ""
+
+#: ../../source/VM 1416e44be299458696f9530a821e0f5e Manual.rst:123 Manual/EVM
+#: Related User
+msgid "注意，不规范的新版合约在升级过程中是不会报错的，即使在造成了数据混乱的情况下，在之后的调用过程中，虚拟机也有可能是不会报错的，即调用者感知错误比较困难。"
+msgstr ""
+
+#: ../../source/VM 731527ee6d7147d8b0b542dd95a66ff0 Manual.rst:126 Manual/EVM
+#: Related User
+msgid "3.1 变量定义"
+msgstr ""
+
+#: ../../source/VM 38a1c406ee814bf7b5cc4a91151d2ef2 Manual.rst:129 Manual/EVM
+#: Related User
+msgid "3.1.1 新增变量定义"
+msgstr ""
+
+#: ../../source/VM 1e8ad7cdff2c463ca547c2bc12ddc8d9 Manual.rst:131 Manual/EVM
+#: Related User
+msgid "新版合约若需要新增变量定义，注意一定要在旧版合约变量定义的基础上，在尾部追加新定义。示例::"
+msgstr ""
+
+#: ../../source/VM 4fb7b9b5321844b4a6db21bb899fd2b0 Manual.rst:140 Manual/EVM
+#: Related User
+msgid ""
+"若旧版合约源码如上所示，在合约中定义了两个类型为uint和string的变量，若新版合约想要新增类型为bytes32类型的变量var3, "
+"正确的定义方式为::"
+msgstr ""
+
+#: ../../source/VM 95be0053a68f4434ba970b845575a438 Manual.rst:150 Manual/EVM
+#: Related User
+msgid "而以下这种新增变量定义的行为均是错误的::"
+msgstr ""
+
+#: ../../source/VM 558f34e391f84221849e3fd3be9216a9 Manual.rst:161 Manual/EVM
+#: Related User
+msgid "3.1.2 删除变量定义"
+msgstr ""
+
+#: ../../source/VM Manual.rst:163 Manual/EVM Related User
+#: d419067a639b426fa11b94b7ca168b21
+msgid "新版合约若需要删除部分在旧合约中定义的变量，需要注意的是只能删除在尾部定义的变量。示例::"
+msgstr ""
+
+#: ../../source/VM Manual.rst:172 Manual/EVM Related User
+#: d801b9ead02e4efd851c1abde5c0126a
+msgid "若旧版合约源码如上所示，在合约中定义了两个类型为uint和string的变量，若新版合版合约试图删除变量var2的定义，这种行为是容许的。正确示例::"
+msgstr ""
+
+#: ../../source/VM Manual.rst:181 Manual/EVM Related User
+#: de6c71a79e4f43438cb971bf1226bd98
+msgid "若新版合约试图删除变量var1的定义，这种行为是错误的。错误示例::"
+msgstr ""
+
+#: ../../source/VM 835a721557214d519c8a9240f0553ed8 Manual.rst:190 Manual/EVM
+#: Related User
+msgid "即合约编码者想要在新版合约中删除部分旧变量的定义，当且仅当删除的这些旧变量全部是定义在尾部的才是合法的。"
+msgstr ""
+
+#: ../../source/VM 80fa21f958eb41f2bf54d7da0123037c Manual.rst:193 Manual/EVM
+#: Related User
+msgid "3.1.3 修改变量定义"
+msgstr ""
+
+#: ../../source/VM Manual.rst:195 Manual/EVM Related User
+#: ef1e4804f8d7454b9e04da895950a641
+msgid "更改变量定义的变量名是允许的，更改变量的类型是不被允许的。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:206 Manual/EVM Related User
+#: f5d92af708584647afe09b75372bd348
+msgid "修改变量名的示例如下，这种行为是合法的::"
+msgstr ""
+
+#: ../../source/VM Manual.rst:215 Manual/EVM Related User
+#: c104f7b4ee2c4764b95294bba967f8df
+msgid "修改变量的类型的示例如下，这种行为是错误的::"
+msgstr ""
+
+#: ../../source/VM Manual.rst:225 Manual/EVM Related User
+#: bbd19a84f93f44d79fcfdbc3ef0ff10a
+msgid "3.1.4 更改变量定义顺序"
+msgstr ""
+
+#: ../../source/VM 33dfd63f3d494041b4136d1e32d457c3 Manual.rst:227 Manual/EVM
+#: Related User
+msgid "修改变量定义的顺序是不被允许的。"
+msgstr ""
+
+#: ../../source/VM 55c490c877854284b9c6fbc434252674 Manual.rst:229 Manual/EVM
+#: Related User
+msgid "以下有个错误示例，合约编码者在新版合约中将旧版合约定义的var1,var2调换了定义顺序::"
+msgstr ""
+
+#: ../../source/VM 031f862edc104399bcc96ed7c585e62d Manual.rst:246 Manual/EVM
+#: Related User
+msgid "3.2 变量声明"
+msgstr ""
+
+#: ../../source/VM Manual.rst:249 Manual/EVM Related User
+#: d6c57a12bf5f4626b868af9f1ec5e645
+msgid "3.2.1 新增变量声明"
+msgstr ""
+
+#: ../../source/VM Manual.rst:251 Manual/EVM Related User
+#: dafe63b20081446bb35c9e2feaaadde3
+msgid "变量声明包括例如结构体的声明，枚举类型的声明等。新增变量声明是允许的，且允许声明在合约的任意位置。示例如下::"
+msgstr ""
+
+#: ../../source/VM 9b52567981ee4c12848971236bc621a9 Manual.rst:260 Manual/EVM
+#: Related User
+msgid "以下几种新增定义方式都是合法的。"
+msgstr ""
+
+#: ../../source/VM 5adc60a4adea4f56b7499c13c3059c27 Manual.rst:279 Manual/EVM
+#: Related User
+msgid "3.2.2 删除变量声明"
+msgstr ""
+
+#: ../../source/VM Manual.rst:281 Manual/EVM Related User
+#: d6bd96c0342e4c66a7e39309ac0ac634
+msgid "若在新版合约中删除旧版合约中未使用的变量声明，这种行为是合法的；若在新版合约中删除旧版合约正在使用的变量声明，这种行为是错误的。"
+msgstr ""
+
+#: ../../source/VM 5e9abb0007ec4fc59df7cb95aca16daf Manual.rst:296 Manual/EVM
+#: Related User
+msgid "若在新版合约中删除未使用的变量声明ClassType, 这种行为是合法的"
+msgstr ""
+
+#: ../../source/VM Manual.rst:311 Manual/EVM Related User
+#: a7aac9369eb7478ca61fc95314e5ae59
+msgid "若在新版合约中删除正在使用的变量声明UserType, 这种行为是错误的::"
+msgstr ""
+
+#: ../../source/VM 19d8e069d85c4fa482a34c55fc8e5769 Manual.rst:326 Manual/EVM
+#: Related User
+msgid "3.2.3 修改变量声明"
+msgstr ""
+
+#: ../../source/VM 00526757959f457a8b176d9a1bc1de99 Manual.rst:328 Manual/EVM
+#: Related User
+msgid "修改已有的变量声明是错误的::"
+msgstr ""
+
+#: ../../source/VM 5b1e96a1dcd54392a41d07cc034c3c6c Manual.rst:341 Manual/EVM
+#: Related User
+msgid "错误示例::"
+msgstr ""
+
+#: ../../source/VM Manual.rst:356 Manual/EVM Related User
+#: d28f07edf9b54a918d6575cb435a9411
+msgid "3.2.4 更改变量声明顺序"
+msgstr ""
+
+#: ../../source/VM Manual.rst:358 Manual/EVM Related User
+#: ff031c8d39714afb98bae63efa7ab76e
+msgid "更改变量声明的顺序是合法的示例如下"
+msgstr ""
+
+#: ../../source/VM 0783f235cb6642cdb3c015d43a230bb5 Manual.rst:386 Manual/EVM
+#: Related User
+msgid "3.3 函数定义"
+msgstr ""
+
+#: ../../source/VM 5508ccd9e6534ebb89d4fafeeeff910f Manual.rst:389 Manual/EVM
+#: Related User
+msgid "3.3.1 新增函数定义"
+msgstr ""
+
+#: ../../source/VM 7fb7a3b9b13a4389ac08cd0458e8b2d2 Manual.rst:391 Manual/EVM
+#: Related User
+msgid "所有新增函数定义的行为都是合法的。"
+msgstr ""
+
+#: ../../source/VM 3adb27afec2b4b1c9183b715fc479be6 Manual.rst:393
+#: Manual.rst:432 Manual.rst:470 Manual.rst:511 Manual/EVM Related User
+#: bc536e4c89c94097939fca5a4d3026f4 ca57f74c12ea4283a75ad573c96b6940
+#: fda9313adde8443ba425c834b35f3418
+msgid "示例::"
+msgstr ""
+
+#: ../../source/VM 6271cc9adc4a4f089f7365fe361e3503 Manual.rst:428 Manual/EVM
+#: Related User
+msgid "3.3.2 删除函数定义"
+msgstr ""
+
+#: ../../source/VM 84c7bd5f93ed41039c5d9fc4120fba97 Manual.rst:430 Manual/EVM
+#: Related User
+msgid "所有删除函数定义的行为都是合法的。"
+msgstr ""
+
+#: ../../source/VM Manual.rst:466 Manual/EVM Related User
+#: bad31d18bde84342a9418938b1063435
+msgid "3.3.3 修改函数定义"
+msgstr ""
+
+#: ../../source/VM 068c09dd49504ca3af51bf4cfc5458c8 Manual.rst:468 Manual/EVM
+#: Related User
+msgid "所有修改函数定义的行为都是合法的"
+msgstr ""
+
+#: ../../source/VM 8425906237c6408b8b38d0e9abdddd64 Manual.rst:486 Manual/EVM
+#: Related User
+msgid "修改了AddStudent函数的定义，合法"
+msgstr ""
+
+#: ../../source/VM 4ae51cf7cddb442cb7c4c323409ec4fb Manual.rst:507 Manual/EVM
+#: Related User
+msgid "3.3.4 更改函数定义顺序"
+msgstr ""
+
+#: ../../source/VM Manual.rst:509 Manual/EVM Related User
+#: fa491cc9d72641bc9dff0bbb1d74c741
+msgid "所有更改函数定义顺序的行为都是合法的"
+msgstr ""
+
+#: ../../source/VM Manual.rst:551 Manual/EVM Related User
+#: d6ca698256504eab902e62bb1f5112d3
+msgid "4. 编译器最高版本对应"
+msgstr ""
+
+#: ../../source/VM 988fc8a8a1224f0e86d9580fc29c0f1b Manual.rst:554 Manual/EVM
+#: Related User
+msgid "flato"
+msgstr ""
+
+#: ../../source/VM Manual.rst:554 Manual/EVM Related User
+#: b333d37c4101408e85be8cf087033463
+msgid "solidity"
+msgstr ""
+
+#: ../../source/VM 9a9d23c451694a7982cf0ac1e7aa4fdd Manual.rst:556 Manual/EVM
+#: Related User
+msgid "1.0.0~1.0.5"
+msgstr ""
+
+#: ../../source/VM 5254e32681334ae0a14f38ff6f374ffb Manual.rst:556 Manual/EVM
+#: Related User
+msgid "0.5.x"
+msgstr ""
+
+#: ../../source/VM 00973bf768014f77ab5e044cab81bb75 Manual.rst:557 Manual/EVM
+#: Related User
+msgid "1.0.6+"
+msgstr ""
+
+#: ../../source/VM 2e679861505441489f70bcf722beb1f1 Manual.rst:557 Manual/EVM
+#: Related User
+msgid "0.8.x"
+msgstr ""
+

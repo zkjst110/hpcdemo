@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Community_Resources.rst:2 d097f22fa16c4948a79df0fa22565750
+msgid "社区与资源"
+msgstr ""
+
+#: ../../source/Community_Resources.rst:5 47e35920e7924e66bac3b50525a21830
+msgid "开源资源"
+msgstr ""
+
+#: ../../source/Community_Resources.rst:7 2199a9f567d2470c8eda8e5b151d7b98
+msgid "hyperbench开源链接：https://github.com/meshplus/hyperbench"
+msgstr ""
+
+#: ../../source/Community_Resources.rst:11 132384e4b76c48079d3887285b9bc7dc
+msgid "加入我们"
+msgstr ""
+
+#: ../../source/Community_Resources.rst:14 c0df4289e1144bdfadd7bf0ea97dfd2e
+msgid "趣链技术交流群"
+msgstr ""
+
+#: ../../source/Community_Resources.rst:16 085677cf13a9400da7e252c3e1f94112
+msgid "如果您想更深入地学习使用趣链区块链平台，了解更多区块链领域的前沿技术研究，欢迎您加入 **趣链技术交流群** 。"
+msgstr ""
+
+#: ../../source/Community_Resources.rst:18 f5cb3766b05b4eebbe7310a30bf10d28
+msgid "在这里您可以获得："
+msgstr ""
+
+#: ../../source/Community_Resources.rst:20 b61abcb5e9cb4719a3e7798945e67ec1
+msgid "任何您在使用平台时遇到的问题，有专门的技术人员为您 **答疑解惑** ；"
+msgstr ""
+
+#: ../../source/Community_Resources.rst:21 d5eb25f4e8e24c80b0532fd7aa8dc054
+msgid "技术大佬不定期出没，紧贴热点，带来区块链技术及应用 **专题分享** ；"
+msgstr ""
+
+#: ../../source/Community_Resources.rst:22 b3de9e30c6c54311b48cbcae82eb6fcc
+msgid "更多技术 **干货文章** 、Qtech **活动讯息** 第一时间掌握。"
+msgstr ""
+
+#: ../../source/Community_Resources.rst:24 0287e348c876402eaeb96d5adb5a6ebd
+msgid "**入群请先加团宠桔子微信** （扫描二维码或添加微信号18458407117），申请通过后即可入群。"
+msgstr ""
+
+#: ../../source/Community_Resources.rst:30 c42b09f7b1a44e84afa2ed9bc69b256f
+msgid "趣链官方推文公众号"
+msgstr ""
+
+#: ../../source/Community_Resources.rst:32 1a68aeb4e5ee4b20bf01d45d4a2abef8
+msgid "更多高质量区块链相关前沿技术研发、管理以及创新等资讯可关注 **趣链官方推文公众号** 。"
+msgstr ""
+
+#: ../../source/Community_Resources.rst:38 4d566a43ba514e5591cd0d49678636b7
+msgid "趣链科技官网"
+msgstr ""
+
+#: ../../source/Community_Resources.rst:40 dff70adbc97c409cb9627c7aa271ac0a
+msgid "想了解更多趣链产品信息，可进入 `趣链科技官网 <https://www.hyperchain.cn/>`_"
+msgstr ""
+

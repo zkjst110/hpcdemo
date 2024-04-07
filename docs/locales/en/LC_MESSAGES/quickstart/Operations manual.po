@@ -1,0 +1,2142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/quickstart/Operations 58bd6e397fd644b49975e5e346b6e10e
+#: manual.rst:4
+msgid "运维手册"
+msgstr ""
+
+#: ../../source/quickstart/Operations 762632e730be4ed698da5bac3e7304f1
+#: manual.rst:7
+msgid "第一章 前言"
+msgstr ""
+
+#: ../../source/quickstart/Operations 9dba480a49ed42cdbfbf01f8fe77c08a
+#: manual.rst:10
+msgid "1.1 版本声明"
+msgstr ""
+
+#: ../../source/quickstart/Operations d4064af0f6a9496d8a237b2c2ff770d0
+#: manual.rst:12
+msgid "本文档著作权归趣链科技单独所有，未经趣链科技事先书面许可，任何主体不得以任何形式复制、修改、抄袭、传播全部或部分本文档内容。"
+msgstr ""
+
+#: ../../source/quickstart/Operations e1079c6381fa47cda2d03e89198b921a
+#: manual.rst:15
+msgid "1.2 服务声明"
+msgstr ""
+
+#: ../../source/quickstart/Operations beb84588e1cb47aaa551c8ace94485bc
+#: manual.rst:17
+msgid "本文档意在向客户介绍趣链科技区块链底层平台的运维说明。您所购买的趣链科技的产品、服务的种类、服务标准等应由您与趣链科技之间的商业合同约定，除非双方另有约定，否则，趣链科技对本文档内容不做任何明示或默示的承诺或保证。"
+msgstr ""
+
+#: ../../source/quickstart/Operations d37d5ec213da4e1eb0d6c50f4e9e77cc
+#: manual.rst:20
+msgid "第二章 平台部署"
+msgstr ""
+
+#: ../../source/quickstart/Operations 2bdc4ed4fd3d430d82e12fb247028c39
+#: manual.rst:22
+msgid "参照《v2.7.0 部署文档》"
+msgstr ""
+
+#: ../../source/quickstart/Operations 2cc075806bcf465682f8e1ab12c8e3ff
+#: manual.rst:25
+msgid "第三章 配置管理"
+msgstr ""
+
+#: ../../source/quickstart/Operations cde4c0b66e61482fb6fd14e3d95d14d1
+#: manual.rst:27
+msgid ""
+"在2.0.8版本及以后的安装包中的配置文件只包含了最精简化的配置， **安装包中的配置文件已经足够满足hyperchain的正常使用** "
+"。若您是第一次使用\\ **hyperchain**\\ ，且希望更深入地使用\\ **hyperchain**\\ "
+"时，可以查阅相关功能的使用手册从而知晓配置文件的修改方法；若您以前已经部署过\\ **hyperchain**\\ "
+"，那么仍可以沿用原先的全量配置文件，只不过需要参考《配置变更》对一些配置上的变化进行确认。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 6c5781293003440893dc00b507a202a3
+#: manual.rst:30
+msgid "3.1 配置文件说明"
+msgstr ""
+
+#: ../../source/quickstart/Operations 461bcd6492414520bcff98dff6ccff4c
+#: manual.rst:32
+msgid "以下是2.7.0中全量的配置文件，\\ **各配置项的含义及默认值请参考附录**\\ 。"
+msgstr ""
+
+#: ../../source/quickstart/Operations f4162ab8805543f18513cf2e205a7f51
+#: manual.rst:35
+msgid "3.1.1 system.toml"
+msgstr ""
+
+#: ../../source/quickstart/Operations 157290ede4cf4c168f4bedebadb28d3e
+#: manual.rst:37
+msgid ""
+"在该配置文件中记录了一些\\ **系统级别的、无法动态修改的**\\ "
+"配置项，包括输出日志等级、输出日志文件的路径、JSONRPC配置、流量控制参数等："
+msgstr ""
+
+#: ../../source/quickstart/Operations a4dc144a3631474d8664cc12a8d394dc
+#: manual.rst:39
+#, python-format
+msgid "`system.toml <https://upload.filoop.com/RTD-Hyperchain%2Fsystem.toml>`_"
+msgstr ""
+
+#: ../../source/quickstart/Operations a5e13767b35d4b21a0064cc48f738eef
+#: manual.rst:42
+msgid "3.1.2 dynamic.toml"
+msgstr ""
+
+#: ../../source/quickstart/Operations 143870f8c55349c5bbd57ad7ef2242f3
+#: manual.rst:44
+msgid "该配置文件包含了一些\\ **全局的，可运行时动态修改的配置项：**"
+msgstr ""
+
+#: ../../source/quickstart/Operations 762ec13d8d8840d083dbf149912cd8ff
+#: manual.rst:46
+#, python-format
+msgid "`dynamic.toml <https://upload.filoop.com/RTD-Hyperchain%2Fdynamic.toml>`_"
+msgstr ""
+
+#: ../../source/quickstart/Operations 536747b242f5450f8841b5e8e6b6d8fe
+#: manual.rst:49
+msgid "3.1.3 ns_dynamic.toml"
+msgstr ""
+
+#: ../../source/quickstart/Operations d582fdad62a14dbb9133ad017b1c3be6
+#: manual.rst:51
+msgid ""
+"该配置文件中记录了\\ **namespace级别的可动态修改的配置项**\\ "
+"，包括当前节点的启动方式、启动身份、区块链网络节点数目以及每个节点的网络配置信息："
+msgstr ""
+
+#: ../../source/quickstart/Operations 0c4bc19d8dec4898a41b2025f4d1eec6
+#: manual.rst:53
+#, python-format
+msgid ""
+"`ns_dynamic.toml <https://upload.filoop.com/RTD-"
+"Hyperchain%2Fns_dynamic.toml>`_"
+msgstr ""
+
+#: ../../source/quickstart/Operations 0342d9f36c9b4bcbb5ff5d7bbceb0557
+#: manual.rst:56
+msgid "3.1.4 ns_static.toml"
+msgstr ""
+
+#: ../../source/quickstart/Operations e762fa638434462f922dc04c1b610b61
+#: manual.rst:58
+msgid ""
+"该配置文件中记录了所有namespace级别的配置项，包括\\ **共识算法详细配置、加密证书的配置、数据库相关配置、日志等级配置**\\ "
+"等等，这些配置都是\\ **无法在运行中修改**\\ 的，各个配置项的释义在注释以及文末的附录中给出："
+msgstr ""
+
+#: ../../source/quickstart/Operations d49138db7a8d4c789f4c712b4cf5a283
+#: manual.rst:61
+msgid "3.1.5 ns_genesis.toml"
+msgstr ""
+
+#: ../../source/quickstart/Operations 347f7d8db4844b598c090b4478eba423
+#: manual.rst:63
+msgid ""
+"该配置文件中记录了所有创世状态相关的配置项，包括\\ **ca模式、创世root ca、创世账户配置、创世节点配置**\\ 等等，这些配置都是\\"
+" **无法在运行中修改**\\ 的，各个配置项的释义在注释以及文末的附录中给出："
+msgstr ""
+
+#: ../../source/quickstart/Operations 54ce727837674b55a450e304c1dc9738
+#: manual.rst:67
+msgid "3.2 节点流控配置（投产推荐）"
+msgstr ""
+
+#: ../../source/quickstart/Operations 49175a8b3989433b85bf252d39c114c9
+#: manual.rst:69
+msgid "节点流控主要分为节点所在服务器的流控配置以及平台级别的流控配置。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 751fc16d8782461cb43cb23d349831cf
+#: manual.rst:72
+msgid "**3.2.1 服务器流控配置**"
+msgstr ""
+
+#: ../../source/quickstart/Operations c9b2586e6f534505b5bb3fcb29251fd2
+#: manual.rst:74
+msgid "一般来说，由于平台的tps比较稳定，流量根据tps也处于稳定状态，但是例如节点宕机落后和新增节点等特殊情况下的recovery行为会向其他节点拉取区块，为了避免公网共享带宽环境下不影响其他应用程序的带宽占用情况，可根据需要限制节点带宽。推荐以下三种服务器流控方法："
+msgstr ""
+
+#: ../../source/quickstart/Operations ed270809fae849e299eb9da2cee10f3f
+#: manual.rst:76
+msgid "**3.2.1.1 网络中心统一调控**"
+msgstr ""
+
+#: ../../source/quickstart/Operations 6cf236b3a3f6450e8bf80a4510760a59
+#: manual.rst:78
+msgid "可由各机构的网络中心进行调控配置，由于各家机构策略不一，不做详述，可咨询各家机构的网络运维工作人员。"
+msgstr ""
+
+#: ../../source/quickstart/Operations d7686fc6fc4d4088b1135c2611e42967
+#: manual.rst:80
+msgid "**3.2.1.2 TC（Traffic Control）服务器端限流配置**"
+msgstr ""
+
+#: ../../source/quickstart/Operations 14a4116f83fd48fca33171d51e09293b
+#: manual.rst:82
+msgid "对于应用服务器来说，报文分组从输入网卡（入口）接收进来，经过路由的查找，以确定是发给本机的，还是需要转发的，如果是转发的，则会从输出网卡（出口）发出，网络流量的控制通常发生在输出网卡处。一般说来，由于我们无法控制自己网络之外的设备，入口处的流量控制相对较难，因此我们这里处理的流量控制一般指出口处的流量控制。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 3b06712da2b744b3aa775d117166a5d8
+#: manual.rst:84
+msgid "tc.sh配置文件详解："
+msgstr ""
+
+#: ../../source/quickstart/Operations e06ac4b970bc4aa692a61a0ced830f6b
+#: manual.rst:103
+msgid "需要注意的是，tc.sh的相关命令都需要root权限。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 1150327d3bc94e0aada80f2d92a5bad7
+#: manual.rst:105
+msgid "**3.2.1.3 Nginx转发限流配置**"
+msgstr ""
+
+#: ../../source/quickstart/Operations a20578f43109495a90bf0a058ad2b1d7
+#: manual.rst:107
+msgid "由于各家机构对节点服务器带宽要求不尽相同，可能需要nginx做统一的转发限流。我们目前提供nginx安装包及三个脚本：start.sh、stop.sh、reload.sh，可通过这三个脚本满足基本nginx配置需求。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 4733aad011f94a43bb5df2c512db2121
+#: manual.rst:109
+msgid "假设A机构需要使用nginx做限流转发的话则为如下情况："
+msgstr ""
+
+#: ../../source/quickstart/Operations afadb2e9e68e4edbafe6d8b53d0ae6cf
+#: manual.rst:121
+msgid "则可编辑nginx/conf/nginx.conf如下："
+msgstr ""
+
+#: ../../source/quickstart/Operations 40eee35159954087b910346952f8f97d
+#: manual.rst:162
+msgid "需要注意的是，如果通过nginx节点间已经建立好长连接，这时如果修改poxy_upload_rate将不能通过reload.sh生效。所以，务必配置好nginx启动后，再启动hyperchain平台。"
+msgstr ""
+
+#: ../../source/quickstart/Operations d4b454c2d5454704b6edbf4ea93b4a15
+#: manual.rst:165
+msgid "3.2.2 平台流控配置"
+msgstr ""
+
+#: ../../source/quickstart/Operations 0d382165937c493ab909660a9633f3ae
+#: manual.rst:167
+msgid ""
+"平台级别的流控主要有外部请求限流和平台带宽限流两部分，前者表示该节点可处理的来自客户端的突发的最大HTTP请求数，限制的是来自客户端的压力，一定程度上可防止系统遭受DDoS攻击。后者表示节点间通信的网络出口带宽限流，与《3.2.1"
+" "
+"服务器流控配置》一样可以实现网络出口带宽限流，但区别在于，本节所述的网络出口带宽限流会根据配置文件里配的最大网络带宽来计算hyperchain协议消息最大大小，从而达到带宽限流目的。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 73cbefaa0ca747fdbfe1534b15c0f73d
+#: manual.rst:170
+msgid "**3.2.2.1 外部请求限流**"
+msgstr ""
+
+#: ../../source/quickstart/Operations 99180d4b34c249049ee718555f9776e2
+#: manual.rst:172
+msgid ""
+"外部请求限流表示节点可处理的突发HTTP请求数是多少，该配置项可在配置文件\\ "
+"``configuration/<分区名>/ns_static.toml``\\ 中进行配置："
+msgstr ""
+
+#: ../../source/quickstart/Operations 3d819b44d8ad45ebb24c0691b96831c0
+#: manual.rst:181
+msgid ""
+"说明：\\ ``rpc.qps.flowCtrl.limit`` "
+"代表节点稳定状态下的最大qps，如上文配置，2000即表示令牌桶每0.5ms恢复一个令牌。\\ "
+"``rpc.qps.flowCtrl.capacity`` 代表令牌桶容量，capacity+limit "
+"可以认为是节点允许的突发流量最大值。如前文配置，在该配置下，节点同一时间内可处理的突发HTTP请求数为 2000 + 100 = "
+"2100。一般来说，设置节点最大突发流量数只需要配置 ``rpc.qps.flowCtrl.limit``\\ 即可。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 2a21428716d544afa76cadf41175e968
+#: manual.rst:188
+msgid "**3.2.2.2 节点带宽限流**"
+msgstr ""
+
+#: ../../source/quickstart/Operations 706af5134cca410fba45b9b414f36ae9
+#: manual.rst:190
+msgid ""
+"节点带宽限流限制的是节点出口带宽的最大大小，该配置项可在配置文件 ``configuration/system.toml``\\ "
+"中进行配置，该配置默认关闭。需要说明的是，节点实际出口带宽与交易大小和并发处理交易数（TPS）有强关联，开启该配置可能导致当节点实际出口带宽值超过配置设置的最大出口带宽时容易进入viewchange状态拒收新交易，但节点最终总能恢复到正常状态并接受处理新交易："
+msgstr ""
+
+#: ../../source/quickstart/Operations 69f361b577f446389c52f046cba91106
+#: manual.rst:200
+msgid "3.3 性能相关配置"
+msgstr ""
+
+#: ../../source/quickstart/Operations 75610e21d59543fcb21cd3cb43cd93cd
+#: manual.rst:202
+msgid "下文列出了影响系统性能的若干配置项，若您期望达到最佳性能效果或遇到性能下降的情况，请参考以下配置说明："
+msgstr ""
+
+#: ../../source/quickstart/Operations b412bd2e71f942848b83b84bf2a3677a
+#: manual.rst:205
+msgid "3.3.1 共识模块"
+msgstr ""
+
+#: ../../source/quickstart/Operations 906d52fadd2f4bb284eea110056a36fa
+#: manual.rst:207
+msgid "配置所在文件：ns_dynamic.toml"
+msgstr ""
+
+#: ../../source/quickstart/Operations 31c9760cf12d4ff989bdb9426dadbdea
+#: manual.rst:209
+msgid "``consensus.set.set_size``"
+msgstr ""
+
+#: ../../source/quickstart/Operations bd2ebcd26ac54cf18f0284f1b0ceb11b
+#: manual.rst:211
+msgid "节点单次广播的交易数量，默认值为25，建议区间【10,500】，极端情况set_size=1时, 性能下降20%左右。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 9b7e0dca21e14539bd898c77cdf0e13f
+#: manual.rst:214
+msgid "``consensus.set.batch_size``"
+msgstr ""
+
+#: ../../source/quickstart/Operations 7571865c754c43a0961fc57e04a6c808
+#: manual.rst:216
+msgid "主节点单次打包的交易数量上限，默认值为500，建议区间【250,8000】，且宜大不宜小，极端情况batch_size=[1-16]时，性能下降95%左右。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 6db34a32b0904710875757aa48c37622
+#: manual.rst:218
+msgid "``consensus.rbft.k``"
+msgstr ""
+
+#: ../../source/quickstart/Operations 5335aa696888473c95f0a6269d2a95aa
+#: manual.rst:220
+msgid "RBFT共识算法的checkpoint间隔（以区块为单位），默认值为10，建议区间【8,32】。"
+msgstr ""
+
+#: ../../source/quickstart/Operations a0d383cbfd78494bbb3f9ec7937a850c
+#: manual.rst:222
+msgid "**在不同场景下的最佳性能配置：**"
+msgstr ""
+
+#: ../../source/quickstart/Operations 9eec0a8d38584216bbb1d65833bdbbdf
+#: manual.rst:224
+msgid "在普通转账场景下，当batch_size=【6000,8000】，set_size=【200,500】，可获得最佳性能，该配置比默认配置下的最高TPS提升10%左右；"
+msgstr ""
+
+#: ../../source/quickstart/Operations e851fc73be4b4d5faedf96cdd6da8745
+#: manual.rst:226
+msgid "在合约存证场景下，当batch_size=【200,300】，set_size=【32,64】，可获得最佳性能，该配置比默认配置下的最高TPS提升10%左右。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 4b33cd68f0bd487d8792a02a7dfe605e
+#: manual.rst:229
+msgid "3.3.2 网络模块"
+msgstr ""
+
+#: ../../source/quickstart/Operations 14d110deb3694e7cbb25705420948e8d
+#: manual.rst:231
+msgid "配置所在文件：system.toml"
+msgstr ""
+
+#: ../../source/quickstart/Operations b5ae81e56b474998bb7e87e21c413064
+#: manual.rst:233
+msgid "``flow.control.bandwidth``"
+msgstr ""
+
+#: ../../source/quickstart/Operations 795fae70a55f422a974942c57b568f90
+#: manual.rst:235
+msgid ""
+"限制带宽上限，flow.control.bandwidth.enable "
+"默认为false，flow.control.bandwidth.outgoingBandwidth "
+"默认值为500Mb/s。如果实际所需带宽小于outgoingBandwidthh配置，则性能无影响；如果实际所需带宽大于outgoingBandwidth配置，实际TPS等于outgoingBandwidth配置值除以实际所需带宽"
+" ，再乘以理论TPS。因此\\ ``flow.control.bandwidth``\\ 需要根据实际所需带宽进行配置。"
+msgstr ""
+
+#: ../../source/quickstart/Operations efc893f2be474da0be7a8c097ee786ee
+#: manual.rst:241
+msgid "3.3.3 执行与存储模块"
+msgstr ""
+
+#: ../../source/quickstart/Operations 6f3ea7a001154ac2b8a01622f664b9c4
+#: manual.rst:243
+msgid "配置所在文件：ns_static.toml"
+msgstr ""
+
+#: ../../source/quickstart/Operations c3e79d03c1ec4496b3eef2722d6b9723
+#: manual.rst:245
+msgid "``database.indexdb.layer1.enable``"
+msgstr ""
+
+#: ../../source/quickstart/Operations caee40735fbb415290875831bf1fc798
+#: manual.rst:247
+msgid "是否开启索引数据库，默认关闭。对于普通转账/extra存证场景，开启索引数据库后是否对系统性能产生影响，由磁盘性能决定，ssd几乎不会有性能影响，本地独享hdd会有30%左右的性能下降，共享存储hdd可能会有80%的性能下降；对于合约存证场景，由于实际业务场景的TPS都在1000以内，到不了磁盘瓶颈，故暂无影响。"
+msgstr ""
+
+#: ../../source/quickstart/Operations f509da08936245b6adc95c60b2b30fce
+#: manual.rst:249
+msgid "``duplicate.tx_drift_time``"
+msgstr ""
+
+#: ../../source/quickstart/Operations 2b0dcd42db3548c89cd7b5e6602a2bb0
+#: manual.rst:251
+msgid "SDK端和平台端服务器之间的时间差值，用以保证平台对交易是否过期判断的准确性，默认值为5min。在默认配置进行持续时间为5分钟的压测，性能会下降20%左右，所以如果要进行短时间高TPS压测，务必同步服务器时间，并将tx_drift_time改为1s~5s。注意，不能设0s，因为即使同步了时间，服务器间始终会有时差，导致交易拒收。"
+msgstr ""
+
+#: ../../source/quickstart/Operations f4b95153fd3b4c098fb92114080561f9
+#: manual.rst:253
+msgid "``sync.fetcher.sync_journal_receipt``"
+msgstr ""
+
+#: ../../source/quickstart/Operations e70bf56a9f264654b7ba5f66732d4806
+#: manual.rst:255
+msgid "拉取区块时，是否同时间拉取journal和receipt。对于NFT等存在一笔交易修改大量账本数据的场景，该值可以选择配置为false。否则会导致一个区块的相关数据过大，从而触发网络层的带宽流控等限制。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 5647c1b9ecce49458349330ecd6cbfe5
+#: manual.rst:257
+msgid "``sync.fetcher.batch_block_num``"
+msgstr ""
+
+#: ../../source/quickstart/Operations a0e8296a54ce488abd535c0540a46454
+#: manual.rst:259
+msgid "一次拉取多少个数据分片，该配置适用于拉取任何数据的过程，可以根据区块、journal和receipt的大小，决定该值。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 76df6b7c51ba46b3baf3bd74f1306127
+#: manual.rst:261
+msgid "``sync.fetcher.task.timeout``"
+msgstr ""
+
+#: ../../source/quickstart/Operations ffd998fc0aaf48c3a2237270198725f0
+#: manual.rst:263
+msgid "一个拉取任务的超时时间，对于网络环境较差的情况，可以适当的调大这个参数。"
+msgstr ""
+
+#: ../../source/quickstart/Operations c47765b98b8b43c4b3dff2b13b7760a3
+#: manual.rst:265
+msgid "``sync.fetcher.task.limit``"
+msgstr ""
+
+#: ../../source/quickstart/Operations d46c6c3f508a4a1c9a2bc524ccb27213
+#: manual.rst:267
+msgid "内存中可以同时存在的未完成的任务数量，数据拉取方可以根据自身的内存大小，选择配置该值。"
+msgstr ""
+
+#: ../../source/quickstart/Operations deed3e3b33674a93bff0c7dfe8359529
+#: manual.rst:269
+msgid "``sync.provider.available_mem``"
+msgstr ""
+
+#: ../../source/quickstart/Operations 9b38a773fa54410b97c3cd1a9fbe4708
+#: manual.rst:271
+msgid "sync chain过程中，提供方允许一起提供的数据的最大内存限制，如果有大区块或者大的journal的场景，提供方需要修改该配置为一个合理的值。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 29cc9594377a43398b95cd3d1c6ac985
+#: manual.rst:274
+msgid "``multicache底层的leveldb配置``"
+msgstr ""
+
+#: ../../source/quickstart/Operations c286f5eec94c4043bb59a2c8e6871f77
+#: manual.rst:276
+msgid "每一个multicache数据库底层都有一个leveldb相关的配置，这个配置需要根据具体的数据情况，进行leveldb的性能调优。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 3d524b2202984321adcc0aa2b65ebae9
+#: manual.rst:279
+msgid "第四章 节点管理"
+msgstr ""
+
+#: ../../source/quickstart/Operations ad43c7deeaa747a6b48e2b9fdf6b5b8a
+#: manual.rst:281
+msgid "请查阅 权限管理目录下的《节点增删管理》"
+msgstr ""
+
+#: ../../source/quickstart/Operations 099868692c5340f7957ea9d8ce78003c
+#: manual.rst:284
+msgid "第五章 证书管理"
+msgstr ""
+
+#: ../../source/quickstart/Operations 139a85c04c1242e58c4c14fbc597efce
+#: manual.rst:287
+msgid "5.1 证书体系"
+msgstr ""
+
+#: ../../source/quickstart/Operations cd70908e8bda4727b2e99532b88a72b4
+#: manual.rst:290
+msgid "5.1.1 证书体系介绍"
+msgstr ""
+
+#: ../../source/quickstart/Operations 629afe5830d544cea045b2286058be03
+#: manual.rst:292
+msgid "按照PKI系统的规范，证书按照在证书链中的位置，可以被分为最终实体证书、中间证书、根证书（我们简称为rootCA）三种。中间证书和根证书都可以签发证书，而最终实体证书不能继续签发证书。在证书链中，相邻的两个证书是签发和被签发的关系，因此可以相对地称二者为父证书和子证书。验证子证书的有效性时需要用到对应的父证书。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 17fe531f2eff44c0bff1248908fd4047
+#: manual.rst:294
+msgid ""
+"验证一个子证书的有效性可以粗略的认为分成以下步骤：\\ **验证证书内容、验证证书签名、查询是否被吊销**\\ "
+"。验证证书签名是一个验签的过程，\\ **hyperchain**\\ "
+"使用父证书的公钥验证该证书的签名是否有效，查询是否被吊销则是通过查询吊销列表（一个黑名单）完成。我们更需要重点强调的是对证书内容的验证。该验证证书内容的步骤中，\\"
+" **hyperchain**\\ 除了验证基本的过期时间、签发结构和被签发主体的身份等内容，还会验证和区块链有关的相应信息，这属于\\ "
+"**hyperchain**\\ 对证书的特有要求："
+msgstr ""
+
+#: ../../source/quickstart/Operations 9cce3daf31784fd8800e15533c633aa5
+#: manual.rst:296
+msgid ""
+"**证书用途**\\ "
+"。证书中会有相应字段规定证书的用处，根据证书的功能可划分为节点证书和SDK证书。顾名思义，节点证书配置在节点上用于节点身份的验证，而SDK证书(**sdkcert**)则配置在平台SDK上以确定SDK合法身份。节点证书包括：\\"
+" **ecert**\\ 和\\ **rcert**\\ ，其中VP节点将配置ecert，而NVP节点和LP节点则配置rcert。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 5f34879d7196417fab0e2f6a0a9b763b
+#: manual.rst:298
+msgid ""
+"**该证书所属节点的hostname**\\ "
+"。证书是和节点绑定的，因为证书中写入了hostname的信息，因此node1的证书拷贝到node2是不能正常工作的。"
+msgstr ""
+
+#: ../../source/quickstart/Operations d5e29302845645009ef0849be6530808
+#: manual.rst:300
+msgid "证书能够被验证通过有个关键的前提条件，即节点能获取到其父证书并且承认该父证书的有效性。如果不能获取到父证书，那么内容验证或者签名验证都无从说起。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 36c76be41cac4d6e82f2d94ed7df431d
+#: manual.rst:302
+msgid ""
+"部署和运维人员应该在相应的目录中放置必需的CA证书，在\\ **hyperchain**\\ 中我们称该目录为\\ **可信CA列表**\\ "
+"，也就是说部署人员应该将所有认可的、有效的、必需的CA证书加入到可信CA列表中。启动后，当有外来证书需要被验证时，\\ "
+"**hyperchain**\\ "
+"会从可信CA列表中搜索证书并尝试构建证书链，如果构建成功则能够进一步完成上述的三部验证，否则验证失败。可信CA列表的路径配置在ns_static.toml的encryption.root.ca中。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 0a1ef666f80047d7a8d79d7f92563d7a
+#: manual.rst:304
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/quickstart/Operations 5fd9b15783364afa80881206f3af964a
+#: manual.rst:1260
+msgid "image1"
+msgstr ""
+
+#: ../../source/quickstart/Operations a3f668155bd34f7587b4780e4fc49ac5
+#: manual.rst:306
+msgid "encryption.ecert.ecert配置了节点的证书目录。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 0f492f0fb69e4e4c8c903cdd5e2982bc
+#: manual.rst:308
+msgid ""
+"需要注意的是，在使用证书功能时需要配置文件ns_genesis.toml配置的ca模式为中心化ca（非分布式ca）Center或分布式ca "
+"Distributed。"
+msgstr ""
+
+#: ../../source/quickstart/Operations cdf22ad5544e4c6a8aeffdb6e9258f61
+#: manual.rst:312
+msgid "5.1.2 概念及用途"
+msgstr ""
+
+#: ../../source/quickstart/Operations c83534ce6c934a85a80ba25bfc476f32
+#: manual.rst:314
+msgid "**1 namespace级别**"
+msgstr ""
+
+#: ../../source/quickstart/Operations 7f70d2c415e94fdfb843a439e41b1e67
+#: manual.rst:316
+msgid "每个节点都有配置命名空间，不同的命名空间之间是物理隔离的，但可以处于同一个区块链网络内。所有在一个命名空间中的节点都处于同一条业务链上，不同的命名空间处于不同的业务链上，就比如不同的数据库一样。以下介绍namespace级别的相关证书，它们主要实现节点的准入控制并放置在cert目录下："
+msgstr ""
+
+#: ../../source/quickstart/Operations caf81a33af4e48d3a6a262cc31942957
+#: manual.rst:318
+msgid "ROOTCA（节点根目录/namespaces/global/certs/CA）根部证书，用于节点证书的分发"
+msgstr ""
+
+#: ../../source/quickstart/Operations 856d07b632bb418ba601998d654c183f
+#: manual.rst:320
+msgid "ROOTCA参与以下几类具体节点证书的生成、验证及吊销，是所有证书的根证书。区块链中可能存在多个ROOTCA，一个ROOTCA只能验证由自己颁发的证书的合法性。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 88c9d92a7f054522bc0d171aac2ff1cd
+#: manual.rst:322
+msgid "ECERT（节点根目录/namespaces/global/certs/certs） 节点准入证书，用于证明该节点为VP节点，可参与共识验证"
+msgstr ""
+
+#: ../../source/quickstart/Operations d00548c338b64f1b975ced9dfa858b7f
+#: manual.rst:325
+msgid ""
+"RCERT（节点根目录/namespaces/global/certs/certs） "
+"节点角色证书，用于证明该节点为NVP节点和LP节点，不参与共识验证，仅参与记账"
+msgstr ""
+
+#: ../../source/quickstart/Operations 4c7e8d1ac1fd4899b942e270c8356578
+#: manual.rst:328
+msgid "持有ECERT或RCERT的节点和SDK才能访问区块链网络。运行中的节点会定期检查其他节点的证书合法性。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 457122ad58ec45da880d2c2dbcd09231
+#: manual.rst:330
+msgid "SDKCERT（sdk目录/certs，不同sdk会有不同） 客户端准入证书，用于证明SDK的合法性"
+msgstr ""
+
+#: ../../source/quickstart/Operations ba08092d2d414f20aeec2d74fefd161b
+#: manual.rst:333
+msgid "非法的SDK将无法向节点发出请求。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 684c7dfc7c1346b5a35be02d46b03c10
+#: manual.rst:335
+msgid "**2 链级别**"
+msgstr ""
+
+#: ../../source/quickstart/Operations 6e6a2852eb524a2eabf9e775f17bd26b
+#: manual.rst:337
+msgid "除上述证书外，\\ **hyperchain**\\ 还设置了跨namespace的节点级证书，主要用于节点间ssl通信，放置在tls目录下。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 4e1690b136a342be9f554414918fde43
+#: manual.rst:339
+msgid "TLSCA（certs/tls） 安全传输层协议CA证书，用于TLSCERT的分发"
+msgstr ""
+
+#: ../../source/quickstart/Operations b4b7a4a8a4cb4852aa3360799ff15078
+#: manual.rst:341
+msgid "TLSCERT（certs/tls）节点安全传输层协议证书，用于传输层"
+msgstr ""
+
+#: ../../source/quickstart/Operations 3dd2fd110a1a4aa7975982ab7a7743c1
+#: manual.rst:343
+msgid "在传输网络传输过程中需要验证传输层安全协议证书的安全性，验证通过即可以进行正常网络通信，反之则无法进行网络通信。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 087652a3a68c4f07841a1d9731235ac3
+#: manual.rst:346
+msgid "5.2 certgen使用说明"
+msgstr ""
+
+#: ../../source/quickstart/Operations 1cc4b779254242eea417286d2752a28f
+#: manual.rst:348
+msgid ""
+"certgen作为\\ **hyperchain**\\ "
+"证书管理的配套工具，用来生成和管理相关的CA证书和数字证书。certgen主要包括证书签发，公私钥生成，证书检查等功能。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 5949d67d075d4daab5000e5d34457728
+#: manual.rst:351
+msgid "5.2.1 下载"
+msgstr ""
+
+#: ../../source/quickstart/Operations 870b78ed8ef54e939f3077ad3baa3503
+#: manual.rst:353
+msgid "可以通过OA系统或者飞洛下载"
+msgstr ""
+
+#: ../../source/quickstart/Operations c25a971499c746bcbccefa5393d0666b
+#: manual.rst:355
+msgid "目前提供多种操作系统版本下载"
+msgstr ""
+
+#: ../../source/quickstart/Operations c858f61db65445ff956bb78b99d22350
+#: manual.rst:357
+msgid "|image2|"
+msgstr ""
+
+#: ../../source/quickstart/Operations 5a2b167d18e54d318b557af91b6693c2
+#: manual.rst:1261
+msgid "image2"
+msgstr ""
+
+#: ../../source/quickstart/Operations adcf826c36644fd49fb6794c6ca73d24
+#: manual.rst:359
+msgid "安装包解压后包含certgen二进制文件、README.md文档、依赖库tools和两个脚本文件。两个脚本分别为install.sh和gencert.sh。前者可以完成安装功能，后者可以快速生成证书套件。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 479bb313322647cdae3f960489bee900
+#: manual.rst:362
+msgid "5.2.2 生成证书"
+msgstr ""
+
+#: ../../source/quickstart/Operations 81391d87b99d4ec48bc38837bf8bfd14
+#: manual.rst:364
+msgid "**1** **根证书签发**"
+msgstr ""
+
+#: ../../source/quickstart/Operations e0a5ed2e399a44a48d7aa917513553e2
+#: manual.rst:366
+msgid "签发根证书(自签证书)，命令如下："
+msgstr ""
+
+#: ../../source/quickstart/Operations 99685d86612b4cc6a543a587104d54bb
+#: manual.rst:372
+msgid ""
+"运行上述命令，会在指定路径生成root.ca、root.priv两个文件，即根证书文件。需要通过\\ ``--cn`` 指定根证书的name，\\"
+" ``--org`` 指定根证书的组织。"
+msgstr ""
+
+#: ../../source/quickstart/Operations c346c6a967484bf9b5c8f6af318fe22b
+#: manual.rst:375
+msgid ""
+"默认情况下生成的是secp156k1曲线的证书，可以通过\\ ``--c`` "
+"flag来指定曲线类型，可选的类型有p256、secp256k1、sm2这三种。p256又可以叫做secp256r1等，但在该flag中统一使用p256代表这类椭圆曲线。另外\\"
+" ``--from``\\ 和\\ ``--to``\\ flag用于指定证书的有效期限。下同。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 26b26ebe70de454f80dbd0c5df5c8575
+#: manual.rst:378
+msgid "例如签发国密根证书（自签），命令如下："
+msgstr ""
+
+#: ../../source/quickstart/Operations 4f5e61b19e954f449e9f1565a7f4aa82
+#: manual.rst:384
+msgid "运行上述命令，在指定路径产生root_gm.ca、root_gm.priv两个文件，即国密根证书和对应私钥。"
+msgstr ""
+
+#: ../../source/quickstart/Operations c645bbe35b1a46fd8bef9ef803877d44
+#: manual.rst:386
+msgid "**2 子证书签发（子密钥不存在）**"
+msgstr ""
+
+#: ../../source/quickstart/Operations 4eff5258a92e4e26802ddd9948d3f133
+#: manual.rst:388
+msgid ""
+"**hyperchain**\\ 平台使用的子证书根据用途不同分为两种类型，分别是ECert和SDKCert。通过\\ ``-ct`` "
+"可以指定子证书的类型为上述两种之一（类型名称不区分大小写）。子证书也可以不拥有类型，只需要不指定\\ ``-ct`` 即可。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 9a0a2ea99adb40cb9dc3f9e17bcbc5aa
+#: e7194662abd047478ea3650da440d270 manual.rst:392 manual.rst:437
+msgid "ECERT："
+msgstr ""
+
+#: ../../source/quickstart/Operations 8286e66908fc45c3a8a6395d61a4d9c7
+#: manual.rst:398
+msgid "需要通过\\ ``--cn`` 指定子证书的name，\\ ``--o`` 指定子证书的组织，\\ ``--isca=y`` 表示是ca证书。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 30791ac1b0f747338e273ab0d5de6b9e
+#: manual.rst:401
+msgid "第一个参数为根证书存储路径，第二个参数为根证书的私钥存储路径，第三个参数为节点的证书存储路径，第四个参数为节点的私钥存储路径。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 55ab315054cc4168b4aa1a2a961b2be5
+#: 7ef322ba94b14828bab7fb5fd593df31 manual.rst:403 manual.rst:450
+msgid "SDKCERT："
+msgstr ""
+
+#: ../../source/quickstart/Operations bbeacbdaf81d478abb2674c3e02fb70e
+#: manual.rst:409
+msgid "需要通过\\ ``--n`` 指定子证书的name，\\ ``--org`` 指定子证书的组织，\\ ``--isca=n`` 表示是非ca证书。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 4761c64a8ce84b2984c4bcaa40078575
+#: manual.rst:412
+msgid "同时可以使用 ``--c`` flag来指定椭圆曲线，\\ ``--c`` 可选的曲线类型有 p256、secp256k1、sm2共三种。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 3641b107a06b401eb633dc938d4c2266
+#: manual.rst:415
+msgid "注意：国密子证书只能由国密父证书生成，密钥是p256或者secp256k1的父证书，可以生成secp256k1或者p256类型的子证书。同样适用于下面的子证书签发命令（gc）。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 406d671699f745a2a36da0b667fea235
+#: manual.rst:417
+msgid "**2 生成公私钥对**"
+msgstr ""
+
+#: ../../source/quickstart/Operations 9ecbcdf711ec48fb9161fa3fc60d0898
+#: manual.rst:419
+msgid "生成一对公私钥，该指令需两个参数:"
+msgstr ""
+
+#: ../../source/quickstart/Operations ac7b0d04c4014b1a90266bb645c752a7
+#: manual.rst:425
+msgid "第一个参数表示要生成的密钥对的私钥存储路径，第二个参数表示要生成的密钥对的公钥存储路径。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 0c03efbb63ae403a8357b3a73e2dbfaf
+#: manual.rst:427
+msgid "使用flag ``--c`` 可以指定生成公私钥对的用到的椭圆曲线类型。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 82addbf9561f4729a6920adcfee733d5
+#: manual.rst:429
+msgid "3*\\* 子证书签发(子密钥已存在)*\\*"
+msgstr ""
+
+#: ../../source/quickstart/Operations 4eda8b2a7cea44d896932048f95effdd
+#: manual.rst:431
+msgid "此方式需要各个节点的公钥，通过公钥生成子证书时不需要特别指明曲线类型。"
+msgstr ""
+
+#: ../../source/quickstart/Operations d9197ffa44ed48f4b7ff686b03c6426d
+#: manual.rst:433
+msgid ""
+"**hyperchain**\\ 平台使用的子证书根据用途不同分为两种类型，分别是ECert和SDKCert。通过\\ ``-t`` "
+"可以指定子证书的类型为上述两种之一（类型名称不区分大小写）。子证书也可以不拥有类型，只需要不指定\\ ``-t`` 即可。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 33e9f307ee234d878d43adf75c3e4481
+#: manual.rst:443
+msgid "需要通过\\ ``--cn`` 指定子证书的name，\\ ``--org`` 指定子证书的组织，\\ ``--isca=y`` 表示是ca证书。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 309e671e27b74a7ba54b5ee00d93bec3
+#: manual.rst:446
+msgid "第一个参数为根证书存储路径，第二个参数为根证书的私钥存储路径，第三个参数为节点的公钥存储路径，第四个参数为节点的证书存储路径。"
+msgstr ""
+
+#: ../../source/quickstart/Operations be5659020c8d4daf9aa905ad23ff326e
+#: manual.rst:448
+msgid "使用\\ ``--from``\\ 和\\ ``--to``\\ 指定子证书的有效期。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 701f2bdda9414056b82f048fd21c54be
+#: manual.rst:456
+msgid "需要通过\\ ``--cn`` 指定子证书的name，\\ ``--org`` 指定子证书的组织，\\ ``--isca=n`` 表示是非ca证书。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 6babbe2c477d4f8382975df51d198772
+#: manual.rst:459
+msgid "**3 Tls证书签发**"
+msgstr ""
+
+#: ../../source/quickstart/Operations d32f6832f4184cefa16aabcbe8f21af0
+#: manual.rst:461
+msgid "生成根CA:"
+msgstr ""
+
+#: ../../source/quickstart/Operations 89c387f044244292942d10ef37cb6c60
+#: manual.rst:467
+msgid "需要通过\\ ``--cn``\\ 指定根证书的name，\\ ``--org``\\ 指定根证书所属的组织。"
+msgstr ""
+
+#: ../../source/quickstart/Operations deddb05b69c44959bd9929678fc65cf6
+#: manual.rst:469
+msgid "通过\\ ``--c``\\ 指定该自签名证书的曲线类型，\\ ``--from``\\ 和\\ ``--to``\\ 指定了证书的有效日期和时间。"
+msgstr ""
+
+#: ../../source/quickstart/Operations fe680ed87d3540949367b9fabee2a5a1
+#: manual.rst:471
+msgid "生成tls证书:"
+msgstr ""
+
+#: ../../source/quickstart/Operations 50afaeafdb144e79904bc86253e14666
+#: manual.rst:477
+msgid ""
+"通过\\ ``--isca=n``\\ 表示该tls子证书为非ca证书，\\ ``--cn``\\ 指定该证书的name，\\ "
+"``--org``\\ 指定该子证书所属的组织。"
+msgstr ""
+
+#: ../../source/quickstart/Operations a3488e2858374ebb89702a835a524a16
+#: manual.rst:479
+msgid "通过\\ ``--c``\\ 指定该tls证书的曲线类型，\\ ``--from``\\ 和\\ ``--to``\\ 指定了证书的有效日期和时间。"
+msgstr ""
+
+#: ../../source/quickstart/Operations c1c9098904f5458197ec7d1842513c3f
+#: manual.rst:482
+msgid "5.2.3 检查证书"
+msgstr ""
+
+#: ../../source/quickstart/Operations 38b020b7459c46caa12d30b514f5770c
+#: manual.rst:484
+msgid "检查子证书是否由该CA证书签发："
+msgstr ""
+
+#: ../../source/quickstart/Operations afe9bf04e59d492ab2481fe5ed0d548f
+#: manual.rst:493
+msgid "5.2.4生成IDCert（账户证书）"
+msgstr ""
+
+#: ../../source/quickstart/Operations 84371c98cd584e62bcd25a510d0caaf4
+#: manual.rst:495
+msgid "使用gc命令可以签发账户证书。其中账户证书中绑定的地址需要通过–cn指定"
+msgstr ""
+
+#: ../../source/quickstart/Operations 6c7288f5055c4b6c9c97b828dfe595bc
+#: manual.rst:503
+msgid "通过上述命令产生./idcert.cert文件，该文件为pen编码的x509格式，其中不包含私钥信息，不能直接用于在SDK中新建账户。通过openssl的pkcs12命令可以将格式转换为需要的pfx格式。需要两个输入为证书和私钥。"
+msgstr ""
+
+#: ../../source/quickstart/Operations fa24ccb6b9244c87abdcc50f703e5f80
+#: manual.rst:510
+msgid "注意，pfx是有加密保护的格式，因此在生成pfx证书时需要输入密码。此后SDK调用NewAccount时需要传入此密码。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 44c624949149401e9fa0e01b8edc6a39
+#: manual.rst:513
+msgid "5.3 CA证书签发管理方案"
+msgstr ""
+
+#: ../../source/quickstart/Operations 697a4b503fb9490590db985f121dd2ba
+#: manual.rst:516
+msgid "5.3.\\ **1 CA生成及保管（certgen）**"
+msgstr ""
+
+#: ../../source/quickstart/Operations 080e87f1093c4a2cb37aa8915903fe9f
+#: a9ace37b4ace4a199c75f22357993ad9 c1654c1c1a4b4cf196504eb50cde7c80
+#: manual.rst:518 manual.rst:534 manual.rst:601
+msgid "**非分布式CA**"
+msgstr ""
+
+#: ../../source/quickstart/Operations 9b1bb5d26f41465c9897e8668331f488
+#: manual.rst:520
+msgid "该模式下仅需要维护一套CA和对应的证书。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 504d5a796a524c8fbf905e1fe5a3bfce
+#: c27ea0a68904499db4e556d0c44880c3 c4ac85caccbb478a807f2f1f23991a9a
+#: manual.rst:527 manual.rst:562 manual.rst:613
+msgid "**分布式CA**"
+msgstr ""
+
+#: ../../source/quickstart/Operations 9bf875c3d1144f0fa1d52e7361c059ed
+#: manual.rst:529
+msgid "该模式下可维护任意多套CA、Cert、私钥。所以需要为每个CA签发ROOTCA。"
+msgstr ""
+
+#: ../../source/quickstart/Operations de30fa16d91c4ab3b63648fc6fb65a2e
+#: manual.rst:532
+msgid "5.\\ **3.2 节点cert签发（certgen）**"
+msgstr ""
+
+#: ../../source/quickstart/Operations f9192c7fdd9c4c29bafd712b9a70fbef
+#: manual.rst:536
+msgid "创世的四个VP节点需要使用以上CA通过certgen的如下命令生成各自节点的一套证书："
+msgstr ""
+
+#: ../../source/quickstart/Operations 28212a95b29441d39297a74d7a5f888c
+#: manual.rst:547
+msgid ""
+"需要通过\\ ``--cn`` 指定子证书的name，\\ ``--org`` 指定子证书的组织，\\ ``--isca`` "
+"表示是否是ca证书。同时可以使用 ``--c`` flag来指定椭圆曲线。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 062f74fccf5c495984e6ffe4fe8189f2
+#: manual.rst:551
+msgid "新增证书签发命令：(根据自定义公钥进行子证书签发)"
+msgstr ""
+
+#: ../../source/quickstart/Operations 7df8381b93e94be180097263b1460d44
+#: e5402d1ee6464c939091c46963ca7507 manual.rst:560 manual.rst:596
+msgid "注：subcert.pub必须事前生成。"
+msgstr ""
+
+#: ../../source/quickstart/Operations f65d5870be21449ebc1be1a294c328e1
+#: manual.rst:564
+msgid "对分布式CA来说，每个CA都需要向节点颁发证书。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 52a7a83ebb1445ea91a3fe025fb81047
+#: manual.rst:566
+msgid ""
+"假设有四个节点为node1、node2、node3、node4, "
+"那么node1的certs目录应当含有一个私钥和node2、node3、node4为其颁发证书，证书中的信息为node1节点的信息。node2给node1颁发证书，意为root2.ca对node1的公钥进行签发的证书。"
+msgstr ""
+
+#: ../../source/quickstart/Operations c6f530004eb74a16b1de447b10f4017b
+#: manual.rst:569
+msgid "这里假设为node1生成由node2颁发的证书："
+msgstr ""
+
+#: ../../source/quickstart/Operations c0ffdadd5d2e4d4c94fe1e680ac9ff70
+#: manual.rst:576
+msgid ""
+"那么此时\\ ``--cn`` "
+"需要指定为node1的CommonName，第一个参数为node2的根证书，第二个参数为node2的私钥存储路径，第三个参数为node1的公钥存储路径，第四个参数为node2给node1颁发的证书存储路径。"
+msgstr ""
+
+#: ../../source/quickstart/Operations a31d3ea74b90439da416b4c58d82d8b7
+#: manual.rst:579
+msgid "分布式CA下，需要生成的相应子证书如下："
+msgstr ""
+
+#: ../../source/quickstart/Operations b4ac6bc2f9134b2e87699288bfab8f60
+#: manual.rst:581
+msgid "node1需要为node2、node3、node4颁发子证书；"
+msgstr ""
+
+#: ../../source/quickstart/Operations 4b24e21594b24274b3bf0e3143e55e26
+#: manual.rst:583
+msgid "node2需要为node1、node3、node4颁发子证书；"
+msgstr ""
+
+#: ../../source/quickstart/Operations 6b406b7a05654d8db437175b3f254505
+#: manual.rst:585
+msgid "node3需要为node1、node2、node4颁发子证书；"
+msgstr ""
+
+#: ../../source/quickstart/Operations 200cb42b166945fe938787a55ecdad64
+#: manual.rst:587
+msgid "node4需要为node1、node2、node3颁发子证书。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 59c82ea858214b83a8af68cfcd1e9ddb
+#: manual.rst:589
+msgid "生成sdkcert:"
+msgstr ""
+
+#: ../../source/quickstart/Operations d68fd4c41312444781afb03ddb47a561
+#: manual.rst:599
+msgid "5.3.3 VP节点的cert文件配置"
+msgstr ""
+
+#: ../../source/quickstart/Operations f8bd475228e04dc8874218303775001b
+#: manual.rst:603
+msgid "非分布式CA即原有的中心化CA，在该模式下仅需要维护一套CA和对应的证书。采用的策略是启动时从配置项读入，内存维护相应证书和CA，没有运行中持久化的需要。对于一个VP节点主要包括两个子目录：CA、certs。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 69bcef205d38423f9fcbcd8153aaa036
+#: manual.rst:605
+msgid "CA目录：保存CA证书和CA私钥（root.ca和root.priv）。所有节点的CA目录下内容应该完全一致，使用同一个CA进行认证"
+msgstr ""
+
+#: ../../source/quickstart/Operations bc7775b37f3745a490c4bce8d37afd66
+#: manual.rst:607
+msgid "certs目录：保存由节点保存CA所颁发的一套证书，至少包含三个文件，节点私钥（key.priv）、节点ECERT证书（node1.cert）、节点SDKCERT（sdkcert.cert）"
+msgstr ""
+
+#: ../../source/quickstart/Operations 94eaf0c0bdd04157906446caea391cd4
+#: manual.rst:609
+msgid "tls目录：保存安全传输层协议证书，包含tlsCA（tlsca.ca、tlsca.priv）及其生成的tls子证书（tls_peer.cert、tls_peer.priv）"
+msgstr ""
+
+#: ../../source/quickstart/Operations fab3e9901ed04f6287a46432bfe9dbda
+#: manual.rst:611
+msgid "|image3|"
+msgstr ""
+
+#: ../../source/quickstart/Operations 4ed77868e08040e6b2e645bef2260d26
+#: manual.rst:1262
+msgid "image3"
+msgstr ""
+
+#: ../../source/quickstart/Operations 629a755310044198b08023226873e59f
+#: manual.rst:615
+msgid ""
+"分布式CA可维护任意多套CA、Cert、私钥。与非分布式的目录结构相同，包括CA目录和certs目录。根据节点为\\ "
+"**hyperchain**\\ 启动节点和后续加入节点两种类型，证书的配置有所区别："
+msgstr ""
+
+#: ../../source/quickstart/Operations bb99df86a32444fcb901cdd91d1fe8b1
+#: manual.rst:617
+msgid "启动节点"
+msgstr ""
+
+#: ../../source/quickstart/Operations 26807a1663084d57a0ff38220a0540b5
+#: manual.rst:619
+msgid "在规范化部署的四节点启动时，节点1的目录内容如下所示（其余三个节点配置类似）："
+msgstr ""
+
+#: ../../source/quickstart/Operations 76bc9f6ac376417fbf5353358a5c9d9b
+#: manual.rst:627
+msgid "|image4|"
+msgstr ""
+
+#: ../../source/quickstart/Operations 475cf765dc6449f28a2774cbfd8782c8
+#: manual.rst:1263
+msgid "image4"
+msgstr ""
+
+#: ../../source/quickstart/Operations a629d4e2831e43d9b269dda84e0936ef
+#: manual.rst:629
+msgid "新加入节点"
+msgstr ""
+
+#: ../../source/quickstart/Operations 769004428f9a4f57ac31c34427b5dd45
+#: manual.rst:631
+msgid "如果有新节点要加入\\ **hyperchain**\\ ，无需再配置证书，但需要保证节点目录下有CA和certs目录（空目录）。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 5908224b5e3346b4b0adcdbc0b966ce1
+#: manual.rst:634
+msgid "5.3.4 ns_static.toml文件相关配置"
+msgstr ""
+
+#: ../../source/quickstart/Operations 1afc281b56764d7abd5fede2334fde4a
+#: manual.rst:636
+msgid "**证书目录配置项**"
+msgstr ""
+
+#: ../../source/quickstart/Operations b82a0085b82c4c3f933564c977f1bf21
+#: manual.rst:638
+msgid "[encryption.root]配置项，修改为 ``ca = \"certs/CA\"``"
+msgstr ""
+
+#: ../../source/quickstart/Operations 20d4141c5fdf41b1ae7315ea95207911
+#: manual.rst:640
+msgid "[encryption.ecert]配置项，修改为 ``ecert = \"certs/certs\"``"
+msgstr ""
+
+#: ../../source/quickstart/Operations f6e9bffc91e64cb2acecb0da9bce7cb0
+#: manual.rst:643
+msgid "5.3.5 sdk文件相关配置"
+msgstr ""
+
+#: ../../source/quickstart/Operations ce423ee5750540b696c6299ac3549271
+#: manual.rst:645
+msgid "在GOSDK中："
+msgstr ""
+
+#: ../../source/quickstart/Operations 00eb1d9ee07b4b98bc794f4879d0e142
+#: manual.rst:647
+msgid "gosdk/conf/hpc.toml文件配置"
+msgstr ""
+
+#: ../../source/quickstart/Operations 1de104f8002f4b6eb927dcfa1632b7a3
+#: manual.rst:649
+msgid "如需使用sdkcert进行交互验证： ``sendTcert = true``\\ ，否则置为\\ ``false``"
+msgstr ""
+
+#: ../../source/quickstart/Operations 6bf5edea561547e7a0b629683830c0a3
+#: manual.rst:652
+msgid "同时将配置项privacy.sdkcertPath和privacy.sdkcertPrivPath配置指向SDK证书和私钥文件即可，如下："
+msgstr ""
+
+#: ../../source/quickstart/Operations bdb23f91b5874cbbbf3fb9f9241176b1
+#: manual.rst:659
+msgid "在LiteSDK中："
+msgstr ""
+
+#: ../../source/quickstart/Operations 2e20efac54f048d784bf63b8b23ca437
+#: manual.rst:661
+msgid "liteSDK没有配置文件，配置项目都通过参数传入。当使用SDKcert功能时，需要读入证书和私钥文件并将内容传入相应方法。具体内容可以参考LiteSDK使用手册。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 97b2157115d346ce84b888709c58d6c0
+#: manual.rst:664
+msgid "第六章 IPC命令"
+msgstr ""
+
+#: ../../source/quickstart/Operations a24aabeb38ae4094b2dd03338c5f936a
+#: manual.rst:666
+msgid "在hyperchain 的运行目录下，有一个\\ ``hpc_1.ipc``\\ （取决于配置文件中的配置）文件。使用如下命令进入交互式命令模式："
+msgstr ""
+
+#: ../../source/quickstart/Operations 847967b8cf9442ea8e6526b8c6d0b801
+#: manual.rst:673
+msgid "将会进入交互式命令行模式。关于IPC命令使用说明可以详见help。本章将主要介绍IPC命令常用的几个命令。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 2bf478400b2f42568a7aad54db8be58b
+#: manual.rst:676
+msgid "6.1 网络连接管理"
+msgstr ""
+
+#: ../../source/quickstart/Operations ced21ba1acb240c280c6ca742ceeb9ec
+#: manual.rst:678
+msgid "你可以使用\\ ``network``\\ IPC命令进行物理网络连接的管理。详细使用可参考\\ **IPC使用手册**\\ 。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 05128f8994284dfab93c94447e983926
+#: manual.rst:681
+msgid "6.1.1 列出连接主机"
+msgstr ""
+
+#: ../../source/quickstart/Operations 7710c5ce83e54d2cbe474a3b0d473153
+#: manual.rst:683
+msgid "可以查询得到当前节点的主机名（Self），已连接节点数（Connected Node Count），以及对应的连接的各个节点的主机名和相应网络地址。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 273e79e1627046f6bf0ed735522d4b08
+#: manual.rst:686
+msgid "|image5|"
+msgstr ""
+
+#: ../../source/quickstart/Operations 9fb1e833b6b54beb947474dc83aa90fc
+#: manual.rst:1264
+msgid "image5"
+msgstr ""
+
+#: ../../source/quickstart/Operations 2b97f5f6d7f4436386e6bd5386699c4e
+#: manual.rst:689
+msgid "6.1.2 更新连接主机IP"
+msgstr ""
+
+#: ../../source/quickstart/Operations cc6cf997fc1842c8831877793287b50b
+#: manual.rst:691
+msgid ""
+"当节点配置文件里配错了对端节点的IP地址，可以在本地节点不停机重启的情况下通过IPC命令更新所要连的节点IP。步骤主要分为两步，首先，通过 "
+"close 子命令断开连接，然后，再通过 connect 子命令指定新IP进行连接。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 237ce5db58714799a48cc40223e56220
+#: manual.rst:694
+msgid "network close ：关闭到某个节点的连接。"
+msgstr ""
+
+#: ../../source/quickstart/Operations c6adaf40fce947bf98f0ddfbe614fff3
+#: manual.rst:696
+msgid "network connect -f：向某个指定节点建立连接。"
+msgstr ""
+
+#: ../../source/quickstart/Operations e41e6c099e4f44edaa710bd83b35146b
+#: manual.rst:698
+msgid "|image6|"
+msgstr ""
+
+#: ../../source/quickstart/Operations a975012c8acf40199289513bf12ffd4b
+#: manual.rst:1265
+msgid "image6"
+msgstr ""
+
+#: ../../source/quickstart/Operations 96435c0ad48940b7b6c7eae857bf6137
+#: manual.rst:701
+msgid "6.1.3 检测通信延迟"
+msgstr ""
+
+#: ../../source/quickstart/Operations 8fd86f695f8444ff890b4622b4a23b7d
+#: manual.rst:703
+msgid "network ping ：测试本地节点到某个已经建立网络连接的对端节点的通信延迟。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 4732ad542e68461fbc7bbf0c8433d764
+#: manual.rst:705
+msgid "|image7|"
+msgstr ""
+
+#: ../../source/quickstart/Operations 2e43d757895f424692197945085c94b2
+#: manual.rst:1266
+msgid "image7"
+msgstr ""
+
+#: ../../source/quickstart/Operations 674afdb8a2864828bef3c3e2bc08925f
+#: manual.rst:707
+msgid ""
+"network ping -a "
+"：测试某个开启gRPC服务的ip:port，是否可通，这里的延迟时间等于建立一次gRPC连接以及一次RPC调用的时间。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 66a04244bd1242f89462416578513ee2
+#: manual.rst:710
+msgid "|image8|"
+msgstr ""
+
+#: ../../source/quickstart/Operations cd5affc446d341ebbe27f40968eb27c3
+#: manual.rst:1267
+msgid "image8"
+msgstr ""
+
+#: ../../source/quickstart/Operations 4b64ce2f3b164ee996c0b5fad796c4e4
+#: manual.rst:713
+msgid "6.2 日志级别修改"
+msgstr ""
+
+#: ../../source/quickstart/Operations 9dd0dc4fedc84e28837ce387d1be6fe4
+#: manual.rst:715
+msgid "ipc命令也支持日志级别修改，修改的日志级别立即生效："
+msgstr ""
+
+#: ../../source/quickstart/Operations 7368dc6c86fb4e2e9e993e5a6369d975
+#: manual.rst:717
+msgid "logger setlevel ：修改namespace级别模块的日志级别"
+msgstr ""
+
+#: ../../source/quickstart/Operations 0268ff3b7afe4d72bc27faf3d6c0f125
+#: manual.rst:719
+msgid "|image9|"
+msgstr ""
+
+#: ../../source/quickstart/Operations ba2764e757c14bc88daf67387a2ae92b
+#: manual.rst:1268
+msgid "image9"
+msgstr ""
+
+#: ../../source/quickstart/Operations 2131867099794d16a0b00c378ce96c2b
+#: manual.rst:721
+msgid "logger setlevel system ：修改系统级别模块的日志级别"
+msgstr ""
+
+#: ../../source/quickstart/Operations 4aa1e7a5fdb44ff6a41b781080b69922
+#: manual.rst:723
+msgid "|image10|"
+msgstr ""
+
+#: ../../source/quickstart/Operations 297ff45a06d348b09af4d2b5175a8fb0
+#: manual.rst:1269
+msgid "image10"
+msgstr ""
+
+#: ../../source/quickstart/Operations d7d5493fc86f41ec81a414a259b0db5b
+#: manual.rst:726
+msgid "6.3 LICENSE信息查询"
+msgstr ""
+
+#: ../../source/quickstart/Operations 1922ea622d244886b20b91c472c5c922
+#: manual.rst:728
+msgid "使用 `./hyperchain -L`"
+msgstr ""
+
+#: ../../source/quickstart/Operations d2bcf5fbdb654ebf8c9ff781b033c2a1
+#: manual.rst:730
+msgid "|image11|"
+msgstr ""
+
+#: ../../source/quickstart/Operations 18f192eade274de4b24a1e51e92b451f
+#: manual.rst:1270
+msgid "image11"
+msgstr ""
+
+#: ../../source/quickstart/Operations 61e4f46545824946b89a673d70425fbc
+#: manual.rst:733
+msgid "6.4 对外服务管理"
+msgstr ""
+
+#: ../../source/quickstart/Operations c10b91d25b634a7fbb60f11a7eb56086
+#: manual.rst:735
+msgid ""
+"通过ipc命令可以启动、关闭或者重启hyperchain的对外HTTP JSON-RPC服务，比较实用的一个功能是在节点不重启的情况下，通过\\ "
+"``service``\\ 命令修改该服务监听的端口号。"
+msgstr ""
+
+#: ../../source/quickstart/Operations a25a2af853664683a0ef1699873965b4
+#: manual.rst:738
+msgid "启动JSON-RPC服务：service http start"
+msgstr ""
+
+#: ../../source/quickstart/Operations 6c6b7a350828499c9decc97d2f33f139
+#: manual.rst:740
+msgid "关闭JSON-RPC服务：service http stop"
+msgstr ""
+
+#: ../../source/quickstart/Operations b42a7301d16044f193810beb78bdb066
+#: manual.rst:742
+msgid "重启JSON-RPC服务：service http restart"
+msgstr ""
+
+#: ../../source/quickstart/Operations a760b0becc6748c291c0f4a5c17eb948
+#: manual.rst:744
+msgid "|image12|"
+msgstr ""
+
+#: ../../source/quickstart/Operations cc7f0bc4430b4f2281ca9071dd165bb2
+#: manual.rst:1271
+msgid "image12"
+msgstr ""
+
+#: ../../source/quickstart/Operations c7f88a093c594378b62c944f8c58b273
+#: manual.rst:747
+msgid "6.5 非交互式命令"
+msgstr ""
+
+#: ../../source/quickstart/Operations ea66d208ca2d4ecf8f27e94bbabf10e0
+#: manual.rst:749
+msgid "上述命令也支持非交互方式进行，请使用如下命令进行："
+msgstr ""
+
+#: ../../source/quickstart/Operations 0acf737a92e34c0d8d4db606729e79a7
+#: manual.rst:756
+msgid "第七章 日志说明"
+msgstr ""
+
+#: ../../source/quickstart/Operations 196a3d6fd0b04eebaabac05dbc294e38
+#: manual.rst:759
+msgid "7.1 日志配置"
+msgstr ""
+
+#: ../../source/quickstart/Operations 4d049ec0eb34465aa0f392301ec04885
+#: manual.rst:761
+msgid "Hyperchain日志主要分为系统日志和NS（NameSpace）日志，这两者相互独立，互不影响。"
+msgstr ""
+
+#: ../../source/quickstart/Operations c0c8ca9f4eb048379e6602140df530b4
+#: manual.rst:763
+msgid ""
+"系统日志：相关配置位于\\ ``configuration/dynamic.toml``\\ "
+"文件中，主要包括系统级别的main、metrics、jsonrpc、nsmgr、audit、txgen、hypernet、config等模块；"
+msgstr ""
+
+#: ../../source/quickstart/Operations 49fcbb9ef65b475e95329560dd0a77b8
+#: manual.rst:765
+msgid ""
+"NS日志：相关配置位于\\ ``configuration/<分区名>/ns_dynamic.toml``\\ "
+"文件中，主要包括每个namespace下的config、p2p、consensus、db、execmgr、eventhub等模块。"
+msgstr ""
+
+#: ../../source/quickstart/Operations c59d1053b8744bfbbec6ae3eae3dcf4b
+#: manual.rst:767
+msgid ""
+"系统日志和NS日志的配置内容相同，位于各自配置文件的\\ ``[log]``\\ 和\\ ``[log.module]``\\ 配置项中。其中\\"
+" ``[log]``\\ 是日志通用配置，\\ ``[log.module]``\\ 配置各模块的日志级别。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 0b4b70344afa4dd1885f0ae5d5c5f84f
+#: manual.rst:769
+msgid "通用的动态日志配置项如下："
+msgstr ""
+
+#: ../../source/quickstart/Operations e3290a91396a455897deb9ab3b886229
+#: manual.rst:771
+msgid "``dump_interval``\\ ：日志文件生成时间间隔，避免单个日志文件过大，默认为24h；"
+msgstr ""
+
+#: ../../source/quickstart/Operations 68892dc8dbd24f88b21ba0ea8df938ef
+#: manual.rst:773
+msgid "``max_log_size``\\ ：日志文件的最大大小，默认为200MB；"
+msgstr ""
+
+#: ../../source/quickstart/Operations 9521c8c707074dab9e378169bfc727f8
+#: manual.rst:775
+msgid "通用的静态日志配置项如下（一般不需要用户去修改）："
+msgstr ""
+
+#: ../../source/quickstart/Operations 7735e7ae2e8b46ab8c36d323e916e895
+#: manual.rst:777
+msgid "``dump_file``\\ ：是否输出日志文件，推荐开启，默认为true；"
+msgstr ""
+
+#: ../../source/quickstart/Operations 2a9aed80056d46beac6f4774a4358bf8
+#: manual.rst:779
+msgid "``log_dir``\\ ：日志文件输出的目标目录路径；"
+msgstr ""
+
+#: ../../source/quickstart/Operations bc9a0881ab75478ea0ee1741a0fa737b
+#: manual.rst:781
+msgid ""
+"``log_level``\\ ：默认的日志级别，可被module下的模块设置覆盖，目前主要包括\\ ``DEBUG``\\ 、\\ "
+"``INFO``\\ 、\\ ``NOTICE``\\ 、\\ ``WARNING``\\ 、\\ ``ERROR``\\ 、\\ "
+"``CRITICAL``"
+msgstr ""
+
+#: ../../source/quickstart/Operations a3303e5b6f7c46cab0b55e605c61556a
+#: manual.rst:783
+msgid "``check_size_interval``\\ ：检查系统级别日志文件大小的时间间隔"
+msgstr ""
+
+#: ../../source/quickstart/Operations e57a6bccd6414b869e0452b34780b581
+#: manual.rst:785
+msgid ""
+"NS日志和系统日志静态配置分别位于\\ ``configuration/<分区名>/ns_static.toml``\\ 和\\ "
+"``configuration/dynamic.toml``\\ 示例如下："
+msgstr ""
+
+#: ../../source/quickstart/Operations 9e766cc1b1b743c289a27db98c5e3db0
+#: manual.rst:797
+msgid "NS日志动态配置\\ ``configuration/<分区名>/ns_dynamic.toml``\\ 示例如下："
+msgstr ""
+
+#: ../../source/quickstart/Operations b7778cd3d26440bbb1d03f948637ac43
+#: manual.rst:826
+msgid "系统日志动态配置\\ ``configuration/dynamic.toml``\\ 示例如下："
+msgstr ""
+
+#: ../../source/quickstart/Operations 5f449d0b92354d068ad3ad9a15cbf087
+#: manual.rst:849
+msgid "7.2 日志格式"
+msgstr ""
+
+#: ../../source/quickstart/Operations 43c8497f66f04e4980f315138ed614a3
+#: manual.rst:851
+msgid "hyperchain的所有模块都制定了统一的日志格式，方便用户通过日志查看系统状态。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 214533f0659a497fb968f3d5b189812b
+#: manual.rst:853
+msgid "日志记录格式如下："
+msgstr ""
+
+#: ../../source/quickstart/Operations 035e137f13554a19b0bdd9c2e0e77cd8
+#: manual.rst:863
+msgid "各字段含义如下："
+msgstr ""
+
+#: ../../source/quickstart/Operations f6e5b1796a6d4308bed8ca714ae09866
+#: manual.rst:865
+msgid ""
+"``log_level``: 日志级别，目前主要包括\\ ``DEBUG``\\ 、\\ ``INFO``\\ 、\\ ``NOTICE``\\ "
+"、\\ ``WARNING``\\ 、\\ ``ERROR``\\ 、\\ ``CRITICAL``\\ ，其中在发生极严重错误时会输出\\ "
+"``CRITICAL``"
+msgstr ""
+
+#: ../../source/quickstart/Operations 2bf456efda44404f8be485ffc24f5506
+#: manual.rst:868
+msgid "``time``: 日志输出时间，精确到毫秒"
+msgstr ""
+
+#: ../../source/quickstart/Operations 723029d37252470da15bf9453e6756ee
+#: manual.rst:870
+msgid ""
+"``module_name``\\ ：模块名称，如共识模块为\\ ``consensus``\\ 、网络模块为\\ ``P2P``\\ "
+"（逻辑连接层）和\\ ``hypernet``\\ （物理连接层）"
+msgstr ""
+
+#: ../../source/quickstart/Operations db7cf2afbed9498db4248bed98782d46
+#: manual.rst:872
+msgid "``file_name``\\ ：文件名称"
+msgstr ""
+
+#: ../../source/quickstart/Operations e2db4d88cc514270bd919625a3103ae8
+#: manual.rst:874
+msgid "``line_number``\\ ：所在行数"
+msgstr ""
+
+#: ../../source/quickstart/Operations b7dce7c92d0741759253c489024b2808
+#: manual.rst:876
+msgid "``content``\\ ：日志记录内容"
+msgstr ""
+
+#: ../../source/quickstart/Operations 0450338312e84b4d85390138cba1a7a6
+#: manual.rst:879
+msgid "7.3 常见日志说明"
+msgstr ""
+
+#: ../../source/quickstart/Operations 4f4117137a184200a1d0d11de0edd52f
+#: manual.rst:882
+msgid "7.3.1 Hyperchain版本号"
+msgstr ""
+
+#: ../../source/quickstart/Operations 7f06c8db0457436092c2e9d1b93d40bd
+#: manual.rst:884
+msgid "Hyperchain节点启动时，系统级别日志里会打印出当前运行二进制的版本号信息："
+msgstr ""
+
+#: ../../source/quickstart/Operations cfedaef53ac1448cb5012ae45ba9c6ac
+#: manual.rst:891
+msgid "该日志表示当前Hyperchain的版本是release-2.7.0版本，打包二进制时间是2022年06月22日，二进制的提交号是a8054147b"
+msgstr ""
+
+#: ../../source/quickstart/Operations 4a0c459f67bb47d3b43909d05f835122
+#: manual.rst:894
+msgid "7.3.2 License信息"
+msgstr ""
+
+#: ../../source/quickstart/Operations 3db885cb0a0f4e7b8a626ec2ae05dfb7
+#: manual.rst:896
+msgid "Hyperchain节点启动时，系统级别日志里会打印License过期时间："
+msgstr ""
+
+#: ../../source/quickstart/Operations 121d9c98438b40189d0577e46b95c475
+#: manual.rst:917
+msgid "该日志标志着License检查成功，同时打印出了License的过期时间为2022年12月31日"
+msgstr ""
+
+#: ../../source/quickstart/Operations cf1622e1f9454bf884bf46d158f53ea9
+#: manual.rst:920
+msgid "7.3.3 Hyperchain服务启动日志"
+msgstr ""
+
+#: ../../source/quickstart/Operations 859a322189ec4ed598e6f73814c52f74
+#: manual.rst:926
+msgid "该日志标识着Hyperchain服务开始启动"
+msgstr ""
+
+#: ../../source/quickstart/Operations a763645b67bf431db8f174de5ab27c3b
+#: manual.rst:929
+msgid "7.3.4 分区启动日志"
+msgstr ""
+
+#: ../../source/quickstart/Operations 139ffc7fa5cb479e8c33b227e60ea156
+#: manual.rst:931
+msgid "hyperchain运行过程中一个节点可能参与到多个分区之中，其中启动一个分区的相关日志如下："
+msgstr ""
+
+#: ../../source/quickstart/Operations 591c3ef2d4454bc9946e7fc35b9eac69
+#: manual.rst:937
+msgid "该日志标志着开始启动global分区"
+msgstr ""
+
+#: ../../source/quickstart/Operations 04fff59bb6944167b1c500c745a2e94e
+#: manual.rst:943
+msgid "该日志标志着global分区启动成功"
+msgstr ""
+
+#: ../../source/quickstart/Operations 452d3705928a49b98eb67477e252c343
+#: manual.rst:946
+msgid "**7.3.5 网络连接成功日志**"
+msgstr ""
+
+#: ../../source/quickstart/Operations 7ab433ee0cd741a6af4d7f7c86157c81
+#: manual.rst:948
+msgid "namespace级别日志出现以下日志，则表示这两个节点的网络已成功连上，可以开始相互收发网络消息："
+msgstr ""
+
+#: ../../source/quickstart/Operations 3d1f0ad052e3487a98f72b7d4d5a2eb2
+#: manual.rst:954
+msgid "该日志标志着global分区成功连接到了hotstname为node2的节点"
+msgstr ""
+
+#: ../../source/quickstart/Operations f56b6325b89340659f2a6e71562de874
+#: manual.rst:957
+msgid "**7.3.6 共识世代检查日志**"
+msgstr ""
+
+#: ../../source/quickstart/Operations 5d39f1d9858e43828936146f786ffe75
+#: manual.rst:959
+msgid "hyperchain共识节点运行过程中，每发生一次节点增删，都会进行一次世代变更（epoch change），相关日志如下："
+msgstr ""
+
+#: ../../source/quickstart/Operations 734450abb1ee44b78a493322ad18b4e0
+#: manual.rst:973
+msgid "该日志标志着世代切换成功，当前共识节点总数N为4个，世代号epoch为1，视图值view为0，区块高度height为0。"
+msgstr ""
+
+#: ../../source/quickstart/Operations e7f0ff4b67b440b89633169a7af94358
+#: manual.rst:976
+msgid "7.3.7 数据恢复成功日志"
+msgstr ""
+
+#: ../../source/quickstart/Operations 3bd41ce11497438daedaf2b58cfbe193
+#: manual.rst:978
+msgid "hyperchain共识节点启动或者发生异常后，都会进行数据恢复流程。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 3da86031e5a146aab05f54531a2bc6c8
+#: manual.rst:991
+msgid "该日志标志着数据恢复完成，当前世代值为1，视图值view为1，区块高度height为0"
+msgstr ""
+
+#: ../../source/quickstart/Operations 7377e603b7a54a5aa9915b476bf3d1ab
+#: manual.rst:994
+msgid "7.3.8 区块共识完成日志"
+msgstr ""
+
+#: ../../source/quickstart/Operations 61f01f161fa3484d8a41d88ea0d0d408
+#: manual.rst:1000
+msgid "该日志标志着共识模块完成了1号区块的共识，开始执行1号区块，区块中包含500比交易，区块的摘要为XXX。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 2dcc7cd3f4024e13be4806e77aa026e3
+#: manual.rst:1003
+msgid "7.3.9 区块执行完成日志"
+msgstr ""
+
+#: ../../source/quickstart/Operations 81a7329dd2d64a15836b180239441be3
+#: manual.rst:1009
+msgid "该日志标志着1号区块执行完成"
+msgstr ""
+
+#: ../../source/quickstart/Operations 8496c39147ec46e78e23ef5412b3774f
+#: manual.rst:1012
+msgid "7.3.10 区块提交完成日志"
+msgstr ""
+
+#: ../../source/quickstart/Operations 55d194412544476085ba1052977687e5
+#: manual.rst:1019
+msgid "该日志标志着1号区块提交写块完成，并且打印出了1号区块的哈希值"
+msgstr ""
+
+#: ../../source/quickstart/Operations 70d7fdbed8964ba3a5d6a5c98222c3ad
+#: manual.rst:1022
+msgid "7.3.11 sync chain执行相关日志"
+msgstr ""
+
+#: ../../source/quickstart/Operations 66fc007b30da4d709d01d8b7e6227b85
+#: manual.rst:1024
+msgid "开始sync chain："
+msgstr ""
+
+#: ../../source/quickstart/Operations 12ea84a9202c40d5ae9e823fee7fe5d8
+#: manual.rst:1030
+msgid "sync chain成功："
+msgstr ""
+
+#: ../../source/quickstart/Operations 9d8ae315c8dd46bd837c37f0abb85bca
+#: manual.rst:1037
+msgid "第八章 异常处理"
+msgstr ""
+
+#: ../../source/quickstart/Operations b71a93a72ded463e8694d77b591127bc
+#: manual.rst:1040
+msgid "8.1 网络异常"
+msgstr ""
+
+#: ../../source/quickstart/Operations 86658f4b2dc949e19e954df4efe5d28c
+#: manual.rst:1043
+msgid "8.1.1 端口占用"
+msgstr ""
+
+#: ../../source/quickstart/Operations 9e52045805d14b508b957a33c680c5c2
+#: manual.rst:1045
+msgid "当grpc端口、jsonrpc端口、grpcApi端口任意一个端口被占用时，节点无法启动。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 96d75c3802894aeb9005079282a4b3b8
+#: manual.rst:1047
+msgid ""
+"在容器里部署节点1后，其默认的jsonrpc端口8081被宿主机抢占，这时向节点1发送jsonrpc请求，结果在命令行显示Recv "
+"failure：Connection reset by peer的报错"
+msgstr ""
+
+#: ../../source/quickstart/Operations cae03761d0444e489da8d3cca4f91b05
+#: manual.rst:1050
+msgid "**处理方式：**\\ lsof -i：8081查看端口号占用情况，kill掉占用端口的进程，重启节点"
+msgstr ""
+
+#: ../../source/quickstart/Operations 3b60a456ad4241f5ac5a499b950ad74e
+#: manual.rst:1053
+msgid "|image13|"
+msgstr ""
+
+#: ../../source/quickstart/Operations 62c4087ea480496da5b8b3c1fa386bc9
+#: manual.rst:1272
+msgid "image13"
+msgstr ""
+
+#: ../../source/quickstart/Operations 5285dc6e49594c6ea4fe58ad4181ee94
+#: manual.rst:1056
+msgid "8.1.2节点网络异常"
+msgstr ""
+
+#: ../../source/quickstart/Operations aaeabe4137334223ac1312be64634f9a
+#: manual.rst:1058
+msgid "集群中节点网络断开或开启防火墙，会导致节点间连接失败，查询节点状态，返回状态为timeout，表明本节点与该节点之间的网络连接断开。"
+msgstr ""
+
+#: ../../source/quickstart/Operations e9ab93bd8da640e399a9b3abd08f8e48
+#: manual.rst:1060
+msgid "**处理方式**\\ ：恢复网络或关闭防火墙后重启该节点。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 01e73a69cfee4788b70e4ab635ad1976
+#: manual.rst:1062
+msgid "``注意``\\ ：出现该情况有可能是该节点未开放相应端口，请务必确认所有节点之间的网络通信正常，防止因为防火墙等问题导致节点间不能通信。"
+msgstr ""
+
+#: ../../source/quickstart/Operations f1998c7852b34981a80bf240777a97ee
+#: manual.rst:1065
+msgid "8.2 共识异常"
+msgstr ""
+
+#: ../../source/quickstart/Operations 269f212e2dc84d95984ddac73006f8f8
+#: manual.rst:1068
+msgid "8.2.1 重启后相同区块高度的节点数不超过规定数目"
+msgstr ""
+
+#: ../../source/quickstart/Operations c2dfe6d081f44285a6c381f8c302dc18
+#: manual.rst:1070
+msgid "所有节点重新启动后，拥有相同区块高度的节点数不超过算法规定的数值。当N为4，F为1时，该值为3。"
+msgstr ""
+
+#: ../../source/quickstart/Operations a476b37aba87439f8bf1139cee20b486
+#: manual.rst:1076
+msgid "出现这种情况，即区块链网络中拜占庭节点的数量已经超过了算法容错的数目。"
+msgstr ""
+
+#: ../../source/quickstart/Operations cef95299c8114ea4a52ad7584fdcfb3c
+#: manual.rst:1078
+msgid "**处理方式**\\ ：等待超过quorum个节点正常启动后再发送交易进行共识写块。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 28d19b351bbf40f09fc6c023e4caeda4
+#: manual.rst:1081
+msgid "8.2.2 Viewchange异常"
+msgstr ""
+
+#: ../../source/quickstart/Operations 1db9bd2f6a15447cbcce813e7192fa83
+#: manual.rst:1083
+msgid "**报错信息：**\\ Replica 2 received viewChange from replica 3"
+msgstr ""
+
+#: ../../source/quickstart/Operations 4342b382d1784ac19aafc62debeb3b9d
+#: manual.rst:1085
+msgid ""
+"当在所有节点上看到这条消息，且消息都是来自相同的节点例如3号节点时， "
+"说明节点3发生了异常情况触发了ViewChange，无需理会3号节点的行为，当节点ViewChange超时后会自动触发recovery，最终达成一致。"
+msgstr ""
+
+#: ../../source/quickstart/Operations f2aa653139f94483af6803e7b7b86b8e
+#: manual.rst:1088
+msgid "**处理方式**\\ ：自动恢复"
+msgstr ""
+
+#: ../../source/quickstart/Operations 98bbcfe5a0b94a92987b54ddeac1a217
+#: manual.rst:1090
+msgid "如果在在所有节点都看到类似消息而且不断出现时"
+msgstr ""
+
+#: ../../source/quickstart/Operations b97e54dffaaf402c896f0f262e72874f
+#: manual.rst:1092
+msgid "**处理方式**\\ ：重启所有节点"
+msgstr ""
+
+#: ../../source/quickstart/Operations 7f46ee59889041d98dbd6ac839a37e6c
+#: manual.rst:1095
+msgid "8.2.3 Duplicate transaction异常"
+msgstr ""
+
+#: ../../source/quickstart/Operations f8c1c92e58c94e0e95d280feea278541
+#: manual.rst:1097
+msgid "**报错信息：**\\ Duplicate transaction in addTxs with hash XXX"
+msgstr ""
+
+#: ../../source/quickstart/Operations 1a4e72439a8b45b0aa275283eb3e8c61
+#: manual.rst:1099
+msgid "如果偶尔出现以上信息，是正常情况，可能是客户端在长时间未收到交易回执后重发交易导致的。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 3cfc42d2b9a6462bab543e5f7306c8e8
+#: manual.rst:1101
+msgid "**处理方式**\\ ：自动恢复。"
+msgstr ""
+
+#: ../../source/quickstart/Operations ab5e1c2d0dcd4b01ad5359800c739239
+#: manual.rst:1104
+msgid "8.2.4 system is too busy异常"
+msgstr ""
+
+#: ../../source/quickstart/Operations 28177f06e0d947f3989216aa139985cc
+#: manual.rst:1106
+msgid "**报错信息：**\\ system is too busy"
+msgstr ""
+
+#: ../../source/quickstart/Operations 8a89e7d0bc604b26951401bed88dec23
+#: manual.rst:1108
+msgid "如果在SDK客户端出现这种报错，则说明客户端发送交易的频率过高，导致平台不能及时处理，交易缓存池达到了上限。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 0787d652538f4ec69c1c9654082c2561
+#: manual.rst:1110
+msgid "**处理方式**\\ ：SDK停止发送交易，等待平台处理一段时间后再发送交易。"
+msgstr ""
+
+#: ../../source/quickstart/Operations ddb74ee6f7c04de3bef3e8652d10be3c
+#: manual.rst:1113
+msgid "8.3 数据异常"
+msgstr ""
+
+#: ../../source/quickstart/Operations 468954d940874d9fa67e85e626895530
+#: manual.rst:1116
+msgid "8.3.1 第一个区块merkle root不一致"
+msgstr ""
+
+#: ../../source/quickstart/Operations 8a7c9243173f4809b3cae21c82fb3f99
+#: manual.rst:1118
+msgid "**报错信息：**\\ mappedMerkleRoot and calculated root not match"
+msgstr ""
+
+#: ../../source/quickstart/Operations 155582d29e7745c488d3520edec051b8
+#: manual.rst:1120
+msgid "首次启动集群，若集群中的节点的genesis账户不一致，则在产生第一个区块时，报错merkle root不一致；"
+msgstr ""
+
+#: ../../source/quickstart/Operations 3f9e4fcf95fc4edd83d3665af9632d75
+#: manual.rst:1123
+msgid "新增节点到集群中，若新增节点的genesis账户和集群中节点不一致，则新节点同步数据产生第一个区块时，报错merkle root不一致；"
+msgstr ""
+
+#: ../../source/quickstart/Operations 3ade2b7bc2f64ae093ab03e6d69c0489
+#: manual.rst:1126
+msgid "**处理方式：**\\ 保持集群节点间的genesis账户一模一样后，重启节点"
+msgstr ""
+
+#: ../../source/quickstart/Operations 3a8fc9cffcdf4bada540c165cf5d0778
+#: manual.rst:1129
+msgid "8.3.2 数据同步失败"
+msgstr ""
+
+#: ../../source/quickstart/Operations 2dc4a6a9675d493e900b23cdb503108d
+#: manual.rst:1131
+msgid "**报错信息**\\ ：syncchain failed"
+msgstr ""
+
+#: ../../source/quickstart/Operations c7ef1ce44f664c558c57e4b9c7cf1ed9
+#: manual.rst:1133
+msgid "当节点发现自身数据落后时，就会主动向其他节点请求数据，这个过程叫syncchain；syncchain同步过程由于节点网络问题或对方节点处于归档状态，会导致本次syncchain失败，失败后会尝试向其他节点重试，直到syncchain成功。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 1e4560eb1b4e4fa5af3a36ce6c91984a
+#: 4719eea6af3f44febb571968f65f2b74 manual.rst:1135 manual.rst:1146
+msgid "**处理方式：**\\ 自动恢复"
+msgstr ""
+
+#: ../../source/quickstart/Operations 9a088dcba77f4af99b5df44d18255791
+#: manual.rst:1138
+msgid "8.3.3 同一高度，重复commit"
+msgstr ""
+
+#: ../../source/quickstart/Operations 370c9a75a6204ead8c3a8f1dd1589403
+#: d6e89a4596ee4ef3bce36874c0c6d668 manual.rst:1140 manual.rst:1151
+msgid "**报错信息：**"
+msgstr ""
+
+#: ../../source/quickstart/Operations a6fb0f9aaa3d45a8b9e0028f4cc80496
+#: manual.rst:1142
+msgid "|image14|"
+msgstr ""
+
+#: ../../source/quickstart/Operations b08caf5c6ffb445da81ee63a014e4cca
+#: manual.rst:1273
+msgid "image14"
+msgstr ""
+
+#: ../../source/quickstart/Operations 853732929fab47f49ee2658cdd199a6a
+#: manual.rst:1144
+msgid "节点到达checkpoint高度或发生一笔配置交易时，就会自动进行commit操作，但是由于某些外部原因删除共识数据库，并且重启节点，重启后的节点会对最近checkpoint高度或最后一笔配置交易进行commit，就会出现上述报错。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 5bf33bc3999e46d1a7d14deead0ecaca
+#: manual.rst:1149
+msgid "8.3.4 链上预期高度与已存在的epoch不对应"
+msgstr ""
+
+#: ../../source/quickstart/Operations 780514230d6a40b9a7c6f57d01a415ce
+#: manual.rst:1157
+msgid ""
+"2.7.0 版本新增拉取epoch的过程，当执行模块发现epoch信息自身携带的区块高度，高于本次sync "
+"chain请求预期的高度时，本次sync chain请求其实是非法的，这种场景系统无法自动恢复数据，请联系运维人员确认问题情况，采取后续措施。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 086ccc385f6c46c08ff1afd1583e8163
+#: manual.rst:1163
+msgid "8.4 句柄值异常"
+msgstr ""
+
+#: ../../source/quickstart/Operations 8d596b9f89f142eb9c06537e862d9be6
+#: manual.rst:1166
+msgid "8.4.1 系统句柄配置过低"
+msgstr ""
+
+#: ../../source/quickstart/Operations 71704ef4c4294273a1106cce0dd425ca
+#: manual.rst:1168
+msgid "**报错信息**\\ ：to many open files"
+msgstr ""
+
+#: ../../source/quickstart/Operations c9d45e978cc2441bab3719a3600f6028
+#: manual.rst:1170
+msgid ""
+"在节点运行过程中，写数据，特别是进行归档操作时，节点异常，节点日志报错to many open "
+"files，原因是归档过程中leveldb的句柄打开数量会急剧增多，hyperchain上层限制总的系统文件句柄数不能小于16384。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 2bba4deb55f04e73a3ee8fc13f2dddfd
+#: manual.rst:1174
+msgid "**处理方式：**\\ 修改服务器系统的句柄值，将句柄值改为65535后，重启节点"
+msgstr ""
+
+#: ../../source/quickstart/Operations 9cb93a82b9484ae39a8da385d6971250
+#: manual.rst:1177
+msgid "8.5 配置异常"
+msgstr ""
+
+#: ../../source/quickstart/Operations 6962dea9cae84e87a00d4228cc6eabda
+#: manual.rst:1180
+msgid "8.5.1 配置异常"
+msgstr ""
+
+#: ../../source/quickstart/Operations 929c0cb6ef4849e9854255dbb59f1c6a
+#: manual.rst:1182
+msgid ""
+"**报错信息：**\\ new namespace [global] failed: While parsing config: (2, 25):"
+" parsing error: no value can start with h"
+msgstr ""
+
+#: ../../source/quickstart/Operations f0c121ec29d24f26944402f7fdac9303
+#: manual.rst:1185
+msgid ""
+"出现 “While parsing config: (X, X): parsing error….” "
+"日志意味着，namespace级别配置文件的格式存在异常，需要检查一下配置文件的格式，注意不要出现中文字符、双引号要成对出现等。这行日志括号里的阿拉伯数字表示配置文件解析出错的行、列号。"
+msgstr ""
+
+#: ../../source/quickstart/Operations d33e9f65a09b4a8aa108fd1541fad140
+#: manual.rst:1188
+msgid "|image15|"
+msgstr ""
+
+#: ../../source/quickstart/Operations 2b7e480b0e254f908943cd884b4e1584
+#: manual.rst:1274
+msgid "image15"
+msgstr ""
+
+#: ../../source/quickstart/Operations e46a321d0fd9406d883bdcf662082cdf
+#: manual.rst:1191
+msgid "8.5.2 lock文件异常"
+msgstr ""
+
+#: ../../source/quickstart/Operations 64180c16e31449bab8f89bf2481a6d17
+#: manual.rst:1193
+msgid ""
+"**报错信息：**\\ Please make sure that you have deleted the lock file before "
+"restart Hyperchain."
+msgstr ""
+
+#: ../../source/quickstart/Operations d62a85852f424674bddfab02f595d549
+#: manual.rst:1196
+msgid "在节点遇到上述任何异常，包括license过期、配置项异常、句柄值异常等，都会在根目录生成lock文件以防止守护进程启动异常的节点；修复方法为解决异常后，删除lock文件后重启启动节点"
+msgstr ""
+
+#: ../../source/quickstart/Operations 3f9404858e6b472d9e8860aedd97408a
+#: manual.rst:1198
+msgid "|image16|"
+msgstr ""
+
+#: ../../source/quickstart/Operations 1a3e9a3745a24fb3bec3698bd6f0def8
+#: manual.rst:1275
+msgid "image16"
+msgstr ""
+
+#: ../../source/quickstart/Operations f0292782f50f4851af1e0f5827943102
+#: manual.rst:1201
+msgid "第九章 产品激活、续期"
+msgstr ""
+
+#: ../../source/quickstart/Operations 257f37ba00274bbf93dfeee68966ac61
+#: manual.rst:1204
+msgid "9.1 激活"
+msgstr ""
+
+#: ../../source/quickstart/Operations ecddea985f104d9ab9a0c517a8e8ddd3
+#: manual.rst:1206
+msgid "使用Hyperchain需要拥有本产品的激活码。本产品的激活码为名为LICENSE的文件。激活本产品只需将LICENSE文件放置在产品根目录下即可。"
+msgstr ""
+
+#: ../../source/quickstart/Operations e2bc8cb7a05a42c9920e6476388a7264
+#: manual.rst:1209
+msgid "9.2 续期"
+msgstr ""
+
+#: ../../source/quickstart/Operations 1667d6dda552420b9de186bb268f6185
+#: manual.rst:1211
+msgid "当您购买的Hyperchain产品即将到期时，您可以重新向本公司购买新的激活码，在不停止hyperchain服务的情况下动态替换旧LICENSE文件即可。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 7b46e07e77d4428d80fc1f755dd7c434
+#: manual.rst:1214
+msgid "9.3 查询"
+msgstr ""
+
+#: ../../source/quickstart/Operations 4f076d3945e84fc4b00ad0716534edc5
+#: manual.rst:1216
+msgid "您可以通过\\ ``./hyperchain -L``\\ 来查看LICENSE文件的过期时间以及IP信息。"
+msgstr ""
+
+#: ../../source/quickstart/Operations 39557fb85a6a4c6b96d2b24e2e1119c4
+#: manual.rst:1219
+msgid "联系我们"
+msgstr ""
+
+#: ../../source/quickstart/Operations a00caab45b004952838b664f142b70a2
+#: manual.rst:1221
+msgid "您可以通过以下联系方式联系我们："
+msgstr ""
+
+#: ../../source/quickstart/Operations 325b767f725d48cbbf15aa777b75b0a3
+#: manual.rst:1223
+msgid "联系电话: 0571-89990052"
+msgstr ""
+
+#: ../../source/quickstart/Operations 33c5429807924ff1a40b5f7f5a2ac22a
+#: manual.rst:1225
+msgid "Email: tech_support@hyperchain.cn"
+msgstr ""
+
+#: ../../source/quickstart/Operations 87bb795db120472a8b7b7fb9e6fbc701
+#: manual.rst:1227
+msgid "我们的工作时间是：9:00 AM to 5:00 PM PST (Monday-Friday, except Holidays)"
+msgstr ""
+
+#: ../../source/quickstart/Operations e4083805c1e849ea96157b2ed94bd65f
+#: manual.rst:1230
+msgid "**请您在联系我们之前，将以下信息附上：**"
+msgstr ""
+
+#: ../../source/quickstart/Operations fab29ee3a0c64386af122fed08ffbef7
+#: manual.rst:1233
+msgid "姓名"
+msgstr ""
+
+#: ../../source/quickstart/Operations 060d1021f85543ed9ea3426de1ab4434
+#: manual.rst:1235
+msgid "公司"
+msgstr ""
+
+#: ../../source/quickstart/Operations f16c71b013f845f7b456ea91ed1b43d6
+#: manual.rst:1236
+msgid "联系电话"
+msgstr ""
+
+#: ../../source/quickstart/Operations 9a9bfd18b4924ab7b504973c51c4f3d5
+#: manual.rst:1237
+msgid "电子邮箱"
+msgstr ""
+
+#: ../../source/quickstart/Operations 89985cf3c4cb4c95919b48976df1bb5e
+#: manual.rst:1238
+msgid "操作系统及版本号"
+msgstr ""
+
+#: ../../source/quickstart/Operations dec6a37723924511804b42f0b36469fd
+#: manual.rst:1239
+msgid "产品版本号"
+msgstr ""
+
+#: ../../source/quickstart/Operations df902db3382e40cf87899829511f861a
+#: manual.rst:1240
+msgid "问题概述"
+msgstr ""
+
+#: ../../source/quickstart/Operations 670f9cbd9c644ec8b177ed245d62e8ef
+#: manual.rst:1241
+msgid "问题描述"
+msgstr ""
+
+#: ../../source/quickstart/Operations ad22a1f095014ae982dadc31668140ed
+#: manual.rst:1245
+msgid "附录"
+msgstr ""
+
+#: ../../source/quickstart/Operations c35f1fef70f74238b3216c88126ab226
+#: manual.rst:1248
+msgid "配置项具体含义说明"
+msgstr ""
+
+#: ../../source/quickstart/Operations fb67670eb5c74055b7998f1b77cabe39
+#: manual.rst:1250
+#, python-format
+msgid ""
+"`dynamic.toml配置说明.md <https://upload.filoop.com/RTD-"
+"Hyperchain%2Fdynamic.toml%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.md>`_"
+msgstr ""
+
+#: ../../source/quickstart/Operations c95b4872d5a14854b1d5e6613dc0d213
+#: manual.rst:1252
+#, python-format
+msgid ""
+"`ns_dynamic.toml配置说明.md <https://upload.filoop.com/RTD-"
+"Hyperchain%2Fns_dynamic.toml%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.md>`_"
+msgstr ""
+
+#: ../../source/quickstart/Operations 43c012109463431ba2fa81b306dfaaf0
+#: manual.rst:1254
+#, python-format
+msgid ""
+"`ns_dynamic.toml配置说明.md <https://upload.filoop.com/RTD-"
+"Hyperchain%2Fns_genesis.toml%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.md>`_"
+msgstr ""
+
+#: ../../source/quickstart/Operations 7ec696f8d4a947eea1e14815c4c3799b
+#: manual.rst:1256
+#, python-format
+msgid ""
+"`ns_static.toml配置说明.md <https://upload.filoop.com/RTD-"
+"Hyperchain%2Fns_static.toml%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.md>`_"
+msgstr ""
+
+#: ../../source/quickstart/Operations e1349c6caa444e9d992be1b5bf2063c9
+#: manual.rst:1258
+#, python-format
+msgid ""
+"`system.toml配置说明.md <https://upload.filoop.com/RTD-"
+"Hyperchain%2Fsystem.toml%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.md>`_"
+msgstr ""
+

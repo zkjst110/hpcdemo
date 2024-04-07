@@ -1,0 +1,411 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/application.rst:2 22af0db3b6a243cea53713eb83389749
+msgid "应用案例"
+msgstr ""
+
+#: ../../source/application.rst:5 1de098652aa44d24a89aabe0c57a2d86
+msgid "智慧城市"
+msgstr ""
+
+#: ../../source/application.rst:7 8326f539f91048d7840fe4791686ea4c
+msgid "推动区块链底层技术服务和新型智慧城市建设相结合，提升城市管理的智能化、精准化水平。"
+msgstr ""
+
+#: ../../source/application.rst:10 2769c544b7e94d7bb30e96c3de2f5fdc
+msgid "城市链服务"
+msgstr ""
+
+#: ../../source/application.rst:12 4b11993647e249b3ae4f3f59f5526a96
+msgid "基于区块链底层基础设施，提供智能合约、数字身份、数据共享、隐私计算等多维度区块链核心能力，向上打造区块链生态应用场景，助力智慧城市高效协同监管，让区块链深入融合到智慧城市的各个方面，推动智慧城市向可信智慧城市升级。"
+msgstr ""
+
+#: ../../source/application.rst:14 9a52128009a34dcd9a6d3471db2988d5
+msgid "智慧城市场景存在以下痛点问题："
+msgstr ""
+
+#: ../../source/application.rst:16 300f1d43bfd647ef9498198dc855e984
+msgid ""
+"**数据孤岛导致协同效率低下** "
+"：政府内部行政区隔形成天然屏障，导致数据结构与接口不统一、标准化程度不高、互联互通程度严重不足，业务数据分散保存在不同部门的不同系统，条块打通困难，信任成本高。"
+msgstr ""
+
+#: ../../source/application.rst:17 9c46ef3c73e54e9e8d38b15fadf4da90
+msgid ""
+"**数据泄露降低技术可信度** "
+"：隐私数据泄露事件频发，用户作为数据的生产者，在本质上缺少数据所有权和掌控权，往往未经同意就被第三方平台采集和出售，导致用户隐私数据大规模泄露事件。。"
+msgstr ""
+
+#: ../../source/application.rst:18 048d7464c16d4c7488d1a9052841a0b1
+msgid "**群众和企业办事流程繁琐** ：政务服务条块分割、业务流程烦琐、办事材料繁多、电子化信息提取困难等问题降低了政务服务水平。"
+msgstr ""
+
+#: ../../source/application.rst:20 ../../source/application.rst:47
+#: ../../source/application.rst:74 ../../source/application.rst:102
+#: ../../source/application.rst:129 ../../source/application.rst:156
+#: 0c4d75abeca54379ae86737bad091c57 20ec1558ef44413588fb67ee2c218c90
+#: 680566f96ccf4df0a126f7c9c59bee02 6d206c5a55b34050a273b4a9c32eef7e
+#: 80cc04cc2f764ed9b510629fdb7ab422 8b58d789bc614f318d9bb59d5d985791
+msgid "本方案具有以下价值："
+msgstr ""
+
+#: ../../source/application.rst:22 eadd204952b942788a275248d5114bd4
+msgid "**提升智慧城市数据可信共享** ：城市链可实现各系统原始数据或数据指纹上链流通，为企业和部门跨系统之间的数据共享提供可信能力基础。"
+msgstr ""
+
+#: ../../source/application.rst:23 bb71fbb5e5584f469c5d1d4961e2c872
+msgid ""
+"**提升智慧城市社会治理效度** "
+"：城市链打破传统中心化平台社会治理模式，采用分布式多方共识、一主多链、智能合约等区块链技术手段，全面提升社会治理效率、治理有效性。"
+msgstr ""
+
+#: ../../source/application.rst:25 ../../source/application.rst:53
+#: ../../source/application.rst:135 ../../source/application.rst:163
+#: 14b279b6e7564cdfa7b7a6bc950653a3 2f3b8e70bd4d4776ad46821718d1a14e
+#: dde203a18b9b471d87b484e4a3c7ba70 f068dee71a334e3badc10bf489fb6ac3
+msgid "落地方案架构如下："
+msgstr ""
+
+#: ../../source/application.rst:31 52cc58c37ee24dc994479124c400159c
+msgid "数字金融"
+msgstr ""
+
+#: ../../source/application.rst:33 813899946fa545458f5b7d4ffe3ae84a
+msgid "基于区块链构建的金融设施和市场活动将形成更加完善的金融网络，助推数字金融高质量发展。"
+msgstr ""
+
+#: ../../source/application.rst:36 2ea511031f37434e9de8e9697590ccb2
+msgid "供应链金融"
+msgstr ""
+
+#: ../../source/application.rst:38 2275dcd40339431eb5771c0e4513c172
+msgid "基于区块链搭建的应收账款平台，利用标准化数字资产凭证实现核心企业信用的应收账款凭证在供应链上的可签发、可流转、可融资、可拆分、可抵偿、可跟踪等业务，通过引入外部金融机构，为应收账款提供低成本融资利率。"
+msgstr ""
+
+#: ../../source/application.rst:40 d8e3a4204efb4621ad5350235e18b65a
+msgid "供应链金融场景存在以下痛点问题："
+msgstr ""
+
+#: ../../source/application.rst:42 a1dcf277d8d74ecc8d10028267aae39f
+msgid "**原始贸易数据伪造** ：物流信息、仓单、应收账款伪造，业务风险和金融风险高。"
+msgstr ""
+
+#: ../../source/application.rst:43 4b84aff5df8d4397ac76457fddbad455
+msgid "**四流难合一** ：企业间系统不互通，线下纸质化传递效率低。存在“信息孤岛”问题，加大风控难度。"
+msgstr ""
+
+#: ../../source/application.rst:44 6da1bc1a87454b47a33eed36ba2ce8d6
+msgid "**核心企业信用难传递** ：信用传递仅在一级，无法传递其他供应商，生态服务范围受限。"
+msgstr ""
+
+#: ../../source/application.rst:45 98ca73c97e4e4eceb20f46004e66cc6d
+msgid "**无法有效控制履约风险** ：缺乏有效的管控机制，资金挪用、恶意违约等情况时有发生。"
+msgstr ""
+
+#: ../../source/application.rst:49 72c973d317a94eb0ab378d41483f2598
+msgid "**降低融资成本** ：多级供应商融资体系，全链条信息可视化共享，提高资金流转效率。"
+msgstr ""
+
+#: ../../source/application.rst:50 c907b0eb8511448e8a1a15cb06d02925
+msgid "**挖掘优质资产** ：保障业务真实性，助力金融机构高效便捷地服务整个产业链。"
+msgstr ""
+
+#: ../../source/application.rst:51 6a94c05c04fc4bda8eb013d18a7155d8
+msgid "**实现穿透式监管** ：供应链交易数据上链后不可篡改，且全程可追溯。"
+msgstr ""
+
+#: ../../source/application.rst:59 a40c2837386a4245af52a168aa826842
+msgid "数字政法"
+msgstr ""
+
+#: ../../source/application.rst:61 ceeb95daf5c847b7af4e332a84999ac1
+msgid "趣发挥区块链技术所具备的“信任工具”的作用，推动政法智能化建设。"
+msgstr ""
+
+#: ../../source/application.rst:64 13639c468adb4d34ae29b58c2dc8c427
+msgid "公检法司联盟链"
+msgstr ""
+
+#: ../../source/application.rst:66 66211c1db34e4bec873ead9fa0169200
+msgid "区块链为公检法司联盟链，并基于该联盟链建设公检法司协作系统。通过“区块链+数据共享”打破各机构间信息孤岛，实现案件数据实时可信共享互通。"
+msgstr ""
+
+#: ../../source/application.rst:68 5d097a29aa7b4d7a830cc48c0e51b568
+msgid "公检法司联盟协作存在以下痛点问题："
+msgstr ""
+
+#: ../../source/application.rst:70 1fd32174634c43309d5539082a1a4f76
+msgid "**机构间存在“数据孤岛”** ：公检法司部分业务场景尚未实现可信网络内数据互通，机构间数据交换时无法确保信息未被篡改。"
+msgstr ""
+
+#: ../../source/application.rst:71 388c5a58011f408aafe45e7f8bf33fcd
+msgid "**机构间协作机制不完善** ：公检法司工作开展过程，各机关在处理案件过程中，先多为线下协作，易发生不合规、不到位等情况。"
+msgstr ""
+
+#: ../../source/application.rst:72 47802218959747d08aaec4250c600de9
+msgid "**身份互认难，协作不通畅** ：身份认证体系不同，在数据交换、业务协作时无法相验身份，导致线上协作共享难。"
+msgstr ""
+
+#: ../../source/application.rst:76 d8b812290afa4405aa82e2f37d1ec329
+msgid "**办案流程链上溯源** ：案件全流程链上协作，数据跨网可信共享，办理流程链上溯源。"
+msgstr ""
+
+#: ../../source/application.rst:77 75b264e9abe34981ad84cb77e25caa94
+msgid "**机构身份链上互认** ：机构身份链上可验可查，实现跨机构身份互认互信。"
+msgstr ""
+
+#: ../../source/application.rst:78 20afc171282945298037c15d4bb4a403
+msgid "**办案流程规范检验** ：结合智能合约实现办案全流程规范化自动核验。"
+msgstr ""
+
+#: ../../source/application.rst:80 ../../source/application.rst:108
+#: 432ec0f55bdc4e7dbfee442757f15e93 9fe0c16ec73b4db1a70eddcab9089d1e
+msgid "方案架构图如下："
+msgstr ""
+
+#: ../../source/application.rst:82 aaa1e80173e94d01b3f717019d57c841
+msgid "|image3|"
+msgstr ""
+
+#: ../../source/application.rst:202 0db64138a78944319597694a6309a032
+msgid "image3"
+msgstr ""
+
+#: ../../source/application.rst:86 76e23399cbc84f51ac52be219864b797
+msgid "能源双碳"
+msgstr ""
+
+#: ../../source/application.rst:88 ce68df1d06ea41f8a4fe2a5374964046
+msgid "区块链将创新性地促进能源行业转型重塑，在“双碳”目标推进过程中拥有显著的技术价值优势。"
+msgstr ""
+
+#: ../../source/application.rst:92 b121f341a9164286a030238ec83b487e
+msgid "碳普惠"
+msgstr ""
+
+#: ../../source/application.rst:94 28c3b2821b7a49f2b01469ee24446961
+msgid "建成全民碳普惠平台，对接个人减排场景，通过方法学认定与核查机制，将个人减排行为转化为碳减排量，实现碳资产交易流通管理，并面向民众提供碳普惠趣味玩法与激励机制，促进民众践行低碳理念。区块链对碳普惠认定、核查、交易、消纳等过程留痕可溯、交叉验真。"
+msgstr ""
+
+#: ../../source/application.rst:96 ab593263e37e42ca8335d90bff178ba0
+msgid "碳普惠场景存在以下痛点问题："
+msgstr ""
+
+#: ../../source/application.rst:98 ca34e4d8d3944dc5ba7b9fff869436af
+msgid "**个人碳减排机制不完善** ：居民生活领域涉及民生，难以通过政策手段实现减碳，个人减碳缺乏必要工具与抓手。"
+msgstr ""
+
+#: ../../source/application.rst:99 4fe1bb1e024b4b9b99c7d06bba4a7282
+msgid "**民众低碳理念认知不足** ：民众对碳排放、碳减排的认知尚未形成，对为什么要减碳、如何减碳、哪些行为减碳暂无了解。"
+msgstr ""
+
+#: ../../source/application.rst:100 b3e8698c3f6d48b7ab1ad072f8c20c8d
+msgid "**减排核算方法仍待健全** ：由于碳排放点分散，数据收集难度大，难以对居民生活领域的碳排放与碳减排情况进行精准核算。"
+msgstr ""
+
+#: ../../source/application.rst:104 9a8a161cd69c48078cc15abcd1569a19
+msgid "**普及低碳理念形成正向激励** ：通过城市成长体系、喂养体系等丰富玩法，融入减排理念常识，民众通过减排获得积分，实现持续的激励及行为导向。"
+msgstr ""
+
+#: ../../source/application.rst:105 c9c631cc24394d558abf70e2e766f218
+msgid ""
+"**促进居民生活领域节能减排** "
+"：通过碳普惠平台建设，设计绿色减排场景，接入各类减排数据源，摸清居民生活领域减排基本盘与潜力，助力政府推进居民生活领域减排。"
+msgstr ""
+
+#: ../../source/application.rst:106 a8ce59b49c564df2ab9a6716ad223802
+msgid "**创新低碳社会建设新模式** ：用趣味玩法将个人减碳推广工作融入平台，形成个人侧减排-激励-科普正向循环，创新低碳社会建设新模式。"
+msgstr ""
+
+#: ../../source/application.rst:115 b630aa60219c484e8658d9ccd0f6fb96
+msgid "企业数字化"
+msgstr ""
+
+#: ../../source/application.rst:117 506dcd4e1b734aba94ebcbbaf1dee212
+msgid "区块链作为数字化发展的关键技术，将助力企业适应新业态经济，培育发展新动能。"
+msgstr ""
+
+#: ../../source/application.rst:120 58c475f73c0442c284a0d81a54335da0
+msgid "招投标管理"
+msgstr ""
+
+#: ../../source/application.rst:122 be86098eecc049f4bf9a804527263dfb
+msgid "以区块链技术为基础设施搭建的招投标管理平台，为招投标代理商、企业招投标提供投标全程上链监管、投标文件隐私安全保障等服务支撑。"
+msgstr ""
+
+#: ../../source/application.rst:124 56abc285e9b141f897c97752edd9ea9e
+msgid "招投标管理场景存在以下痛点问题："
+msgstr ""
+
+#: ../../source/application.rst:126 2cdba464f2384e0baa4a2c9de61acca3
+msgid "**共享不畅，招投标低效重负** ：投标企业需要辗转众多机构把数据进行分析整合，然后投标。导致投标企业负担较重，效率较低。"
+msgstr ""
+
+#: ../../source/application.rst:127 2baf545634bc44f495639ba407225a39
+msgid "**数据无法追溯，监管核验难** ：电子化招投标流程中，相关平台数据存在平台中心系统中，数据无法追溯，监管部门无法对交易数据进行有效检核。"
+msgstr ""
+
+#: ../../source/application.rst:131 b97397099b9f472a886924fac44e9287
+msgid "**全流程链上可信追溯** ：全流程数据在区块链上进行存证，确保招投标全流程信息透明共享、不可篡改。"
+msgstr ""
+
+#: ../../source/application.rst:132 07ba716e96464590ac9a70018a15644b
+msgid "**标书文件隐私安全保障** ：标书通过区块链进行可信联盟存储，并进行防掉包、防泄漏设计。"
+msgstr ""
+
+#: ../../source/application.rst:133 fdb4d3cba40f4d028bf1300a3a176cc7
+msgid "**企业治理高效合规** ：支持精确定责，提升多方协同规范操作与办事效率。"
+msgstr ""
+
+#: ../../source/application.rst:141 5cb6b2cf9c1a4f5f95883c0c3e9b37b9
+msgid "数字乡村"
+msgstr ""
+
+#: ../../source/application.rst:143 a4fe6d718df946eeb08b03c2d3a8d7d7
+msgid "在乡村振兴战略背景下，结合智慧化、数字化农业发展趋势，大力推动区块链技术在农业发展中的应用，助力数字乡村建设。"
+msgstr ""
+
+#: ../../source/application.rst:146 76dd20a840c5446e856dca56b5082376
+msgid "农品溯源服务"
+msgstr ""
+
+#: ../../source/application.rst:148 626b5e6a39e74a74ae104d4c9bbd8803
+msgid "趣链农品溯源服务平台满足三农领域产品溯源、商品防伪、政府监管、设备管理等多场景应用要求，构建“源头可追溯、流程可跟踪、信息可查询、责任可追究”的农品高质量管理体系，主要应用于农林牧渔等特色产品溯源、冷链物流、订单农业等场景。平台依托可信数据治理体系助力品牌价值提升、服务食品安全战略，促进城乡融合发展。"
+msgstr ""
+
+#: ../../source/application.rst:150 b8f62dad872040e89952056aba0391be
+msgid "农品溯源服务场景存在以下痛点问题："
+msgstr ""
+
+#: ../../source/application.rst:152 595b3c8b0ade42158263551be15edec5
+msgid ""
+"**溯源数据难可信** "
+"：传统模式溯源数据易篡改、造假成本低，消费者对溯源内容真实性多有质疑，不仅无法为信誉好、质量优的产品保驾护航，而且导致溯源服务沦为鸡肋。"
+msgstr ""
+
+#: ../../source/application.rst:153 c19292c22c284ca089ca8454a9ee054b
+msgid ""
+"**溯源协同难互信** "
+"：溯源作为链接产业上下游重要手段，传统溯源模式一方面基于利益考量导致跨主体间数据互通难度大，另一方面标准林立且数据合规要求导致溯源数据无法实现互信互认。"
+msgstr ""
+
+#: ../../source/application.rst:154 4b853237504048a99b6c1f5a8b718080
+msgid ""
+"**溯源管理难采信** "
+"：传统模式溯源平台在响应业务审计、统计分析、处置决策等管理需求时难以提供及时准确的高质量数据支撑，往往导致问题趋势误判和风险处置不及时。"
+msgstr ""
+
+#: ../../source/application.rst:158 34721357bf3c40978403a33297e9382c
+msgid "**助力可信监管** ：区块链技术具有多方共识、共同验证、数据一经上链不可篡改等特点，这天然有利于监督管理部门对行业生产制造流程进行监管。"
+msgstr ""
+
+#: ../../source/application.rst:159 17deea76ba97475fa9fc0e640cac04a4
+msgid "**提高经济效益** ：减少伪劣产品销售，打击假冒伪劣产品销售，促进正规渠道正品销量增长，增加销售额和利润。"
+msgstr ""
+
+#: ../../source/application.rst:160 c362aef0ef6449e384460cb8875ee6a2
+msgid "**统一溯源标准** ：利用区块链技术及其他技术（如物联网等），能够将产品特性品质和生产行为客观化、数据化、固证化，使生产活动变得透明。"
+msgstr ""
+
+#: ../../source/application.rst:161 8e9ec771b1ed4cc8891121e2b4ba7b28
+msgid "**加强消费者信任度** ：全流程信息可见，形成可信任的数据环境，增强消费者对产品溯源信息可信度，加强品牌形象。"
+msgstr ""
+
+#: ../../source/application.rst:168 f363457dc0b54caba6fd941de83bebed
+msgid "数字版权"
+msgstr ""
+
+#: ../../source/application.rst:170 52a163e7686b4a9687fd145b4894f6b1
+msgid "用区块链技术构建更加可信安全的数字版权体系。"
+msgstr ""
+
+#: ../../source/application.rst:173 876154e074364149a1108128b8d0a863
+msgid "飞洛印"
+msgstr ""
+
+#: ../../source/application.rst:175 468f6a3ddbde44a282c8f74011a42429
+msgid "飞洛印，是趣链科技针对业务溯源、数据资产、版权保护、品牌维权场景推出的一站式数据价值保护平台。平台联合多家公证处、法院、知识产权中心等权威机构，构建司法服务联盟，为企业、个人提供具备司法效力的数据存证、侵权取证、在线公证、确权交易等链上服务生态，保障每个人的数据价值。"
+msgstr ""
+
+#: ../../source/application.rst:177 0e853ac09f094846ab2896ebec3de56b
+msgid "应用场景："
+msgstr ""
+
+#: ../../source/application.rst:179 ac3ecf7ea3eb49bf8565cbfa8209229b
+msgid "**司法取证** ：将侵权、违规等信息转化成电子证据在区块链上固定，作为后续诉讼的可信证据。"
+msgstr ""
+
+#: ../../source/application.rst:180 cc96cec6e1534a22a99e3813cc011c20
+msgid "**版权保护** ：将设计、作品等在飞洛印上进行登记保全，若被侵权可发起诉。"
+msgstr ""
+
+#: ../../source/application.rst:181 17d15358eaa044a790470ed156b2784d
+msgid "**公证服务** ：提供司法有效的区块链存取证平台，对用户在平台上进行的存取证可一键申请公证。"
+msgstr ""
+
+#: ../../source/application.rst:182 4faa49a63b7343afa440ec18d007b45d
+msgid "**数据保管** ：对业务数据进行区块链固证，提高数据可信度，便于数据审计追溯。"
+msgstr ""
+
+#: ../../source/application.rst:184 67cd8d10a63a4c51a4c38874b6863f7c
+msgid "产品特性："
+msgstr ""
+
+#: ../../source/application.rst:186 e3e07f9dcf3b4322a67711ea557f43d7
+msgid ""
+"**全场景应用** "
+"：业内领先的场景应用案例落地，覆盖电子合同、知识产权保护、招投标存证、金融纠纷存证、商品溯源等业务场景，根据客户需求灵活支持多类区块链存证、溯源业务模式。"
+msgstr ""
+
+#: ../../source/application.rst:187 3c0b2fac617245389df39999b3db5a06
+msgid ""
+"**强司法保障** "
+"：强大的节点联盟方成员共同见证数据，保障数据司法有效性，节点联盟方包括杭州互联网公证处、上海市新虹桥公证处、浙江知识产权研究与服务中心等。"
+msgstr ""
+
+#: ../../source/application.rst:188 2e014a0b063a464bab52293284f86adc
+msgid "**多服务模式** ：灵活的服务模式选择，面向企业及个人用户提供SaaS服务、系统对接服务、私有化部署服务等，满足不同类型用户的多样化需求。"
+msgstr ""
+
+#: ../../source/application.rst:189 250b2da410084ef092d7a476c2809d4a
+msgid ""
+"**低成本接入** "
+"：为用户提供成熟且司法有效的电子数据取证技术，支持用户零门槛接入使用，无需用户投入开发成本，实现低成本、高效使用取证、存证、溯源服务。"
+msgstr ""
+
+#: ../../source/application.rst:190 8d8f8ae24322435abaf0ad95a1689061
+msgid "**高存储安全** ：基于行业领先的国产自主可控区块链技术研发，满足行业区块链技术与性能测评标准，全方位保障用户数据数据安全。"
+msgstr ""
+
+#: ../../source/application.rst:192 56a71ee01cb74cd78926ca27b9afe258
+msgid "更多关于飞洛印产品介绍请参考 https://www.hyperchain.cn/products/fly"
+msgstr ""
+
+#: ../../source/application.rst:195 bbc5d1e51dac4dacaabf5768b855bcb8
+msgid "更多"
+msgstr ""
+
+#: ../../source/application.rst:197 e626cbd696894250bf8c5af039ac1706
+msgid "想了解更多应用案例介绍，可进入 `趣链科技官网 <https://www.hyperchain.cn/>`_ - 解决方案"
+msgstr ""
+

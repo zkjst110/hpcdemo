@@ -1,0 +1,1313 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/quickstart/Deployment 1bae06445c874b5c9b791d73baf23557
+#: docs.rst:4
+msgid "部署文档"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 3d9d7e3109e044138e308f74e979d258
+#: docs.rst:7
+msgid "前言"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 71d7c72fd4494935bf20cab9883b2972
+#: docs.rst:9
+msgid "该文档将介绍如何部署一个拥有4个节点的Hyperchain集群，用户需要 **分别登录到4台服务器** 上进行操作。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment a4ef4d8859404c379daf933645a87172
+#: docs.rst:11
+msgid ""
+"这里假设4台服务器的IP分别为 `node1` 、 `node2` 、 `node3` 和 `node4` ，操作用户都是 "
+"`hyperchain` 。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 470cd5e63c19418dbbebb2f15d0f0ee1
+#: docs.rst:13
+msgid "**该部署文档是为模拟平台上线部署的场景而编写的，所有的部署操作都只有普通用户权限。不推荐使用root用户部署平台，容易养成不好的操作习惯，也不利于发现操作步骤中的错误。**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment aab43df6bfef4e47a8067af50111f3dd
+#: docs.rst:16
+msgid "第一章 获取安装包以及用户登录"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 35700547319143908c41d32839c09dd6
+#: docs.rst:19
+msgid "1.1 获取安装包"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 78d5f9a03b0c4bcb98ab4af35e8be388
+#: docs.rst:21
+msgid "如果您已通过其他方式获取安装包请忽略此步骤。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment ce290c0ecc4f47a7a152a845fd3e4a36
+#: docs.rst:23
+msgid "【线下获取】对接趣链科技相关人员"
+msgstr ""
+
+#: ../../source/quickstart/Deployment dd072fe0db6c4dc98dd4224fe1b2364e
+#: docs.rst:25
+msgid "【公司外部】登录服务平台官方资源库下载"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 2e8ae21b75fe456a87f4c3df0201d437
+#: docs.rst:27
+msgid "https://baas.hyperchain.cn"
+msgstr ""
+
+#: ../../source/quickstart/Deployment a44359cd98504354abe79b05149f13af
+#: docs.rst:29
+msgid "没有开放权限的，可以找@王炎炎申请支持"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 1cd7a049d7b441c99e70917015c059bf
+#: docs.rst:31
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 87c4c9a5341645cd8a14888d688c49f7
+#: docs.rst:1287
+msgid "image1"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 66d32252a3274c248f10476ff1a31e76
+#: docs.rst:33
+msgid "【公司内部】登录OA：\\ https://moffi.hyperchain.cn"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:35
+#: fe742e3329c24df190ab1d9b14c03857
+msgid "点击签发->平台组件->组件列表->hyperchain->下载，选择使用您平台的hyperchain版本下载"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 53456fee603842c8a8a82aaf58064843
+#: docs.rst:37
+msgid "点击签发->证书->创建证书，选择V1.7+证书体系，按步骤点击后下载得到证书zip文件"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 408533eabfb74745aaa29e968ad361a1
+#: docs.rst:39
+msgid "点击签发->许可->我的许可，申请适合您需求的LICENSE，审批通过后在许可状态中下载LICENSE文件"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 45fdc2687634425eaefcb7d8b8cf499d
+#: docs.rst:41
+msgid "【免费试用版】\\ https://docs.hyperchain.cn/document/detail?type=1&id=55"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 4ab7be25e8d7419994191f954492aad3
+#: docs.rst:43
+msgid "至此，您已经获得了所有需要的安装包，注意： **证书和LICENSE文件将在hyperchain部署完成时用到，详见3.2节。**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:46
+#: f4ad7743ee8e4e4b94cafdca3880062e
+msgid "1.2 创建使用用户及文件权限"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 206ea9e3e9f54ccc82afbdae7add9a74
+#: docs.rst:48
+msgid "创建平台部署所需的用户，例如创建如下用户::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 71e6234c061044c9b4ffeb55f1989ad1
+#: docs.rst:53
+msgid "可用如下命令创建新用户::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 6107abe5df81434c8f999bd5a40164de
+#: docs.rst:58
+msgid "修改部署路径及数据存放路径的目录权限，例如 `/data/hyperchain`"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 5e160d0de80c402c950f11d29f53b7c7
+#: docs.rst:65
+msgid "1.3 上传安装包"
+msgstr ""
+
+#: ../../source/quickstart/Deployment bdb159668e5949da8676e4377334dc22
+#: docs.rst:67
+msgid "登录服务器前需要上传hyperchain安装包和另外的小工具。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment b47112c96ce94a3baf33e64d79792482
+#: docs.rst:69
+msgid "以服务器地址 `node1` ，用户名 `hyperchain` 为例，操作步骤如下::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 8e304340f5f84f00b557097f5ab5191d
+#: docs.rst:79
+msgid "1.4 登录操作用户"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:89
+#: ea3caf6318a748869490e437cf2ede16
+msgid "1.5 重复操作"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 7d6beb94b5024912b3c9e9ce2e7652ff
+#: docs.rst:91
+msgid "请按照\\ **1.2~1.3**\\ 中的步骤，再分别登录到 `node2~node4` 上，以继续之后的操作。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 06d23af52dd64a37a30fe3af2b112880
+#: docs.rst:94
+msgid "第二章 检查系统环境"
+msgstr ""
+
+#: ../../source/quickstart/Deployment bf7786281d23425ab9db72b412c503de
+#: docs.rst:96
+msgid "首先以 `node1` 服务器为例，完成以下的检查步骤。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 96d8ca5a3007474e94d81a009e2acb69
+#: docs.rst:99
+msgid "2.1 检查服务器时间"
+msgstr ""
+
+#: ../../source/quickstart/Deployment c1b58dea6fa048ea9d8aba9b3dc1529d
+#: docs.rst:101
+msgid "检查Hyperchain节点所在服务器的时间是否与标准时间同步，如果不同步请联络系管理员同步系统时钟。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 5c501eee292048de9d56c336b5623ffa
+#: docs.rst:109
+msgid "2.2 检查服务器配置"
+msgstr ""
+
+#: ../../source/quickstart/Deployment a8f071a3fca74ae183310baaade66c3e
+#: docs.rst:111
+msgid "检查服务器配置是否与预期的配置一致，如果不一致请联系系统管理调整配置。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:126
+#: fe146b7a79054d2c9d2be941507cfe3b
+msgid "2.3 检查端口占用情况"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 19f0206e65b245bb82a74b16aa4f9c25
+#: docs.rst:128
+msgid ""
+"检查Hyperchain节点所需的端口是否被其他进程占用，如已被占用请联络系统管理员进行调整或将各节点dynamic.toml "
+"中jsonrpc、grpc的端口改为其他端口即可(详见4.3)"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 6beb128d546a400991b6e25dfb3b111e
+#: docs.rst:131
+msgid "检查端口是否被监听，以查看8001端口为例："
+msgstr ""
+
+#: ../../source/quickstart/Deployment 314f146caf654dc0b7043e1364b4d2df
+#: docs.rst:138
+msgid "如果存在被占用的情况，上述命令会打印出以下类似信息::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 5fa7ed12245942f686e93077a284296c
+#: docs.rst:145
+msgid "2.4 检查网络连通性"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 6c06b1c6576140f69713820e979fbfa0
+#: docs.rst:147
+msgid "检查网络连通性的目的，就是为了检查Hyperchain节点所监听的端口能否被其他节点访问到，如果其他节点访问不到请联络系统管理做处理。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 570cd21466a84ac6ba415ae5f35512fc
+#: docs.rst:149
+msgid "可以使用以下三种方法检查网络连通性， `选择任意一种即可` 。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 4fd412df5393462bb53e8ef811d303e6
+#: docs.rst:151
+msgid "nt工具"
+msgstr ""
+
+#: ../../source/quickstart/Deployment cc4f76f3037544ab8c7d46c5858f1017
+#: docs.rst:153
+msgid "nc命令"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 974846f0f2a446a49d1e4864c8214f35
+#: docs.rst:155
+msgid "Python HTTP模块"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 14af7965f0fd49cd8f729cb13be51b03
+#: docs.rst:158
+msgid "2.4.1 使用nt工具测试连通性"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 0897e4191ea846be8c322c0b6ab2dede
+#: docs.rst:160
+msgid "nt是一个专门用于测试网络连通性的工具。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 048f7b7fe18d4332a902a7074d10b643
+#: 55655ec8a9f349218ae6f535b1df3de4 617844b43c714d07b6721e04fb2f5fb0
+#: docs.rst:162 docs.rst:203 docs.rst:229
+msgid "假设Hyperchain节点IP地址node1~node4，需要验证node2~node4与node1上8001端口的连通性，使用方法如下::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 620dbeeee4004d9683d8508181d7367f
+#: docs.rst:191
+msgid "**nt工具支持同时检查多个IP:Port的连通性，只要在servers.txt中以每行一个IP:Port的格式填写即可。**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment a7f2685b78b144c18695c880ea58aa76
+#: docs.rst:194
+msgid "2.4.2 使用nc命令测试连通性"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:196
+#: e887efe89f7546efb35e3f8f72b9c2f5
+msgid "还可以用nc命令测试连通性，此方法的优点是操作步骤简单，但缺点是有些系统不会自带安装nc命令。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:225
+#: fd2bfc9a71da4218b697d14ab9a066bb
+msgid "2.4.3 使用Python的HTTP模块测试连通性"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 14145dffe58c40a9a3035d496e8286f5
+#: docs.rst:227
+msgid "使用Python自带的HTTP模块也能快速开启对一个端口的监听，如果在使用上述两种方法时遇到问题，可以考虑使用此方法快速测试网络连通性。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 22185c3d5b3d443591a2e068377e655d
+#: docs.rst:249
+msgid "2.5 检查系统字符集"
+msgstr ""
+
+#: ../../source/quickstart/Deployment c7926c3a5a3c47c28d41c082272e7c6d
+#: docs.rst:251
+msgid ""
+"`hyperchain` 节点默认使用的字符集为 `UTF-8` ，请检查 `SDK` 或者应用服务器的默认字符集是否为 `UTF-8` "
+"，如果不是，有可能造成签名非法。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 24f0540c1219473fa55160f64195352c
+#: docs.rst:254
+msgid "**1、首先使用locale命令看看当前系统所使用的字符集，如下可以看到是en英文**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment b7f40742f7a744379f76a122922aa52b
+#: docs.rst:274
+msgid "**2、如上面的命令输出非utf-8字符集则按如下方法修改配置文件并重启系统测试**（在CentOS6里面该文件是/etc/sysconfig/i18n）"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 6643f38379cc4e5cb48396145729be3b
+#: docs.rst:282
+msgid "2.6 检查最大文件句柄数"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 2e68554402d94d7888faccadaad82f69
+#: docs.rst:284
+msgid "启动hyperchain之前，需要保证文件句柄数至少为65535，否则有可能会由于文件句柄数不足引发系统宕机。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment dd608610b19b403c9b940fd01c7d6c30
+#: docs.rst:291
+msgid "查询到的数值应至少为65535，否则，建议联系当前服务器的管理员进行修改（如有管理员权限则可以使用以下命令修改）::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 8e1dcd1d854c4a9fb37ebbe7d0657c62
+#: docs.rst:304
+msgid "查询到的数值应至少为65535，否则，建议联系当前服务器的管理员进行修改。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 7560de87fa1347b8aced37fe52003677
+#: docs.rst:307
+msgid "2.7 重复操作"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 4295b1e1c867491c9de53367fdf9ee6d
+#: docs.rst:309
+msgid ""
+"在完成以上步骤后， `node1` 服务器的系统环境就检查完毕了。请按照 **2.1~2.5** 中的步骤，再分别登录到 "
+"`node2~node4` 上做一次检查。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 2ebbc13115bf4165b8503c2b11881b34
+#: docs.rst:312
+msgid "第三章 安装节点"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 503565b055404258ad71790a6e8919eb
+#: docs.rst:314
+msgid "首先以node1服务器为例，完成以下的安装步骤。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment be898eee4afd4fc1b004206b77b2a08f
+#: docs.rst:317
+msgid "3.1 备份数据"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 654924bf0e4c4b2f896164bbceeae641
+#: docs.rst:319
+msgid "在做安装操作之前，需要先检查目标目录是否有数据，如果不是首次安装，请先备份一下历史数据。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 5e2e0a23466c48788f6550a435513db2
+#: docs.rst:322
+msgid "3.2 安装节点"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 12f5daaf9a374813a02aaebb87d2d81e
+#: docs.rst:324
+msgid "以下步骤以安装node1上的Hyperchain为例"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 47889e19d6914fd0be5ce6b35171f4fd
+#: docs.rst:326
+msgid "首先解压安装包"
+msgstr ""
+
+#: ../../source/quickstart/Deployment ce504b115dc546a98ecf51717f589bf5
+#: docs.rst:337
+msgid ""
+"假设目标安装目录是 `/data/hyperchain` , 请先对照操作步骤 **2.2** "
+"中的文件系统检查结果，再次确认目标目录的大小满足需求。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 705783ea88804dd394a55e16c377e465
+#: docs.rst:344
+msgid "**注意，在安装之前，一定要确认好目标目录的大小，这点经常会被忽略。请务必仔细检查，以避免不必要的麻烦。**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 652ef2dbf35748548473da4d0085491c
+#: docs.rst:346
+msgid "倘若检查结果没有问题，请执行以下命令完成安装："
+msgstr ""
+
+#: ../../source/quickstart/Deployment cdc24bfc76934d8a9523dbc90992b340
+#: docs.rst:354
+msgid "**注意：确保操作用户对-d指定的安装目录具有可写权限，否则安装将会出错。**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment d4ab9354a4304973ac383c3ad772a68e
+#: docs.rst:356
+msgid "部署完成可看到如下信息::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 732c8ff96c5341d3bdce83a05f8f3348
+#: docs.rst:364
+msgid ""
+"然后把之前申请的证书和license文件从本地机器复制到该节点的安装目录下（需要\\ **先退出用户登录在本地终端执行该命令**\\ "
+"，执行完毕后再登录）::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:370
+#: fbc301c966644363a668617454ed7816
+msgid "解压后的2019-10-31_06_43_59_allcerts文件夹里包含了一个README文件，请先仔细阅读该文件，并按照文件内容进行操作。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 4e87c7d794f5458187dd7bb9f1f03f1f
+#: docs.rst:383
+msgid "最后，再执行以下命令，完成Hyperchain节点的安装::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 97b75a919dcd48768f14473de23f282e
+#: docs.rst:388
+msgid "3.3 验证安装是否成功"
+msgstr ""
+
+#: ../../source/quickstart/Deployment a0ee37e3d89c49c69f0666635c6b92c4
+#: docs.rst:390
+msgid "在执行完步骤3.2后，需要验证一下节点是否已经正确安装。请执行以下命令做测试::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 8d7024a056c34796832298f21cbccfd3
+#: docs.rst:396
+msgid "假如显示正确的版本信息，说明节点安装成功，示例如下::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 99c9fd8b136842e1b65d9b1e6442ee84
+#: docs.rst:401
+msgid "如果出现了以下报错信息，说明openssl的动态链接库没有安装成功"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 6626eaaf620a41bd9b605cbebb726b45
+#: docs.rst:407
+msgid "需要向用户目录下的 `.bashrc` 文件添加一行::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 06b527fbcfcc44e697a0a7b50447d7de
+#: docs.rst:414
+msgid "在完成以上操作之后，再执行一次 `./hyperchain --version` ，应该就可以输出正常的版本信息了。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 67653e1f1f4c418a801e2d7e0152f9c1
+#: docs.rst:416
+msgid "至此，node1服务器上的Hyperchain节点就算完成了。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:419
+#: e8c5be33655446b981a0ecee4b1548c8
+msgid "第四章 检查、修改配置文件"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 511e4adfb47749818292b60d12ae2666
+#: docs.rst:421
+msgid ""
+"安装包中的配置文件只包含了最精简化的配置， **安装包中的配置文件已经足够满足hyperchain的正常使用** "
+"。若您是第一次使用hyperchain，且希望更深入地使用hyperchain时，可以查阅相关功能的使用手册从而知晓配置文件的修改方法；若您以前已经部署过hyperchain的历史版本，那么仍可以沿用原先的全量配置文件，只不过需要参考《配置变更》对一些配置上的变化进行确认。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 4cd5972457dd4ba2aa1649919ffc5179
+#: docs.rst:423
+msgid "**注意，以下操作都是在Hyperchain的目标安装目录操作的，不是在原先未安装前的目录下操作。本例中，是在/data/hyperchain路径下检查、修改配置文件。**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 272dbe005009411980711aea48f2f8e5
+#: docs.rst:425
+msgid "安装包中的文件内容包括："
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:427
+#: f6c37ec432554760a6376ebb6b6310b9
+msgid "|image2|"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 98fcadd26f934fdab0111662dce8c7d0
+#: docs.rst:1288
+msgid "image2"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:430
+#: f6e1abbad1bb4f3083464d487dfb2e21
+msgid "4.1 检查LICENSE文件"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 3200756da85f4c3b88befdfe57d83787
+#: docs.rst:432
+msgid "由于LINCESE文件和Hyperchain安装包不是一起打包分发的，所以在启动节点前，需要检查一下LICENSE文件是否已经更新到正确版本。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment d55dea78f7ce42d490f5648f33c63b56
+#: docs.rst:434
+msgid "LICENSE文件位于Hyperchain节点的根录下，文件名即LICENSE，如果不确定是否是最新版本，可以用原始的LICENSE文件再覆盖一遍。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment ac93e94dbb6d4fdf9ac818d072db5c03
+#: docs.rst:446
+msgid "**请依次检查4个节点的LICENSE文件。**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 6125df3e06a740a19f45e23e87a88fa1
+#: docs.rst:449
+msgid "4.2 vi编辑器使用方法"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 256b4ad010364394bfb4a44ced0dfdb1
+#: docs.rst:451
+msgid "下面的配置文件的编辑需要使用到vi文本编辑器，在此介绍vi的使用方法"
+msgstr ""
+
+#: ../../source/quickstart/Deployment dbf449857fd74e24971c8e4fe9e2ab34
+#: docs.rst:453
+msgid "1、使用vi命令加文件名对某个文件进行编辑，进入vi编辑文件的界面"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:459
+#: f8ad8fab78614ed899aaa36f9e4d76df
+msgid "2、按下i键进入编辑模式，方向键控制光标移动"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 59feb49b16fe4b1896701464bac69e7b
+#: docs.rst:461
+msgid "3、编辑完成后，按下Esc键进入命令模式，输入:wq保存修改并退出vi"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 9967707275bd4f5b84b1d9f80fbac33a
+#: docs.rst:467
+msgid "4、若要放弃本次编辑，按下Esc键进入命令模式,输入:q!放弃修改并退出vi"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:474
+#: f2082379a7ce42f882df845c72f5ed85
+msgid "4.3 修改配置文件"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 5e493515d4844eb8a4fa8c72468bded2
+#: docs.rst:477
+msgid "**4.3.1 dynamic.toml**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment a42bcfecab1c45aab82085d69fee1fe7
+#: docs.rst:479
+msgid "编辑 `dynamic.toml`"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 4a0f1df02d844bc684c3e339143c3c25
+#: c3922a000a8d47189e3b39b2bfab18da docs.rst:485 docs.rst:573
+msgid "其内容如下::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 368983ffa50f455ca72a0d7d929b8540
+#: docs.rst:516
+msgid "**修改port配置**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 9119a5b5e1af4e178996979ec86e7c82
+#: c26023e938e5478d9d12daa726f1bb46 docs.rst:518 docs.rst:626
+msgid "内容为::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment d24023303a314445a08240f60645bbd2
+#: docs.rst:526
+msgid ""
+"**因为我们选择4服务器4节点模式，每个节点可以使用默认的port配置，但是为了介绍如何正确修改节点配置，这里还是区别一下各节点的端口，即1~4号节点分别使用为**"
+" `xxxx1~xxxx4` **号端口**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 536ff1232c3e43e8874590566a710014
+#: docs.rst:528
+msgid "以2号节点为例，它的port内容如下::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment d9e6f68866e04d119c229c5468d57a80
+#: docs.rst:536
+msgid "需要注意的是，在默认配置中除了1号节点不需要修改port配置，其他节点都要修改port配置。请依次配置剩余节点的port配置。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:538
+#: efbfd48a142f47be87a3aaf65d5cd879
+msgid "**修改域配置**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 7be543122501434fb272fc6e541817eb
+#: docs.rst:540
+msgid "以下是详细的配置说明::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment d0bc21d2e28641ddb79f919de49b2bda
+#: docs.rst:554
+msgid "这里是配置是比较容易出错的地方，最简单的配置方式就是："
+msgstr ""
+
+#: ../../source/quickstart/Deployment 790fd55a88784aa98360890ec70278e9
+#: docs.rst:556
+msgid "所有节点都只使用一个domain1：所有节点都在同一个内网环境，只要配置一个domain和该节点在这个domain里的IP地址"
+msgstr ""
+
+#: ../../source/quickstart/Deployment a0f797c93cb546e2a88566c737094139
+#: docs.rst:558
+msgid "**请按照上述内容格式，依次更新剩余节点的域配置。**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment ba1270bab88f436883bd993823f5bc89
+#: docs.rst:560
+msgid "**更复杂的网络环境下：**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 3f22ab47f8414c1ab6ad73bdb90af108
+#: docs.rst:562
+msgid ""
+"在一些加入了类似Nginx代理的网络中，这个文件的配置极其容易出错，一般可以这样理解，服务器node1在domain1中有自己的 "
+"`node1_domain1_ip` ；但是在domain2中它的 `node1_domain2_ip` ，是它在domain2中 "
+"`最内层的一个Nginx代理上，所分配的服务器node1转发地址` "
+"，domain2中其他的服务器node2、node3是通过连接最内层的Nginx上的 `node1_domain2_ip` "
+"访问处于外部的node1服务器的。所以domain2中最内层Nginx上的 `node1_domain2_ip` "
+"，就是node1服务器dymanic.toml中，该填的 `domain2 node1_domain2_ip` 地址。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment dd9d39aa24aa4345a3de5e2e201fee6f
+#: docs.rst:565
+msgid "4.3.2 ns_dynamic.toml"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 777a8a7083c64e00b4ea173a9b9cff84
+#: docs.rst:567
+msgid "编辑 `ns_dynamic.toml`"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 35b244941a2c43e5892f6e38405be902
+#: docs.rst:610
+msgid "其中需要注意 `[[nodes]]` 配置，本次部署时部署多少个VP节点，就加入多少个 `[[nodes]]` 部分::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 82bc9d722a2145db8894ccc1048d5d0e
+#: docs.rst:615
+msgid "**上面的** `hostname` **必须要与** `dynamic.toml` **文件中的self 配置中保持一致；**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 2a02fb3983034efd815469669c2fc807
+#: docs.rst:617
+msgid "在 `self`  **部分需要注意的几个配置项以及配置解释**::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 3c5266dc0cb5462997d84e662078fb9f
+#: docs.rst:624
+msgid "**修改host配置**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:636
+#: e8428f4e0bb54e21a58c9b67921e431d
+msgid ""
+"配置规则很简单： `hostname ip_address:port` "
+"将所有的节点的节点名称和IP地址端口配置好即可（port为节点间通讯的端口）。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 3e094c64e9af48a49d91f248b473b3a9
+#: docs.rst:638
+msgid "修改方法为："
+msgstr ""
+
+#: ../../source/quickstart/Deployment 8f6250dfbc184a079d27c7536ab19aa1
+#: docs.rst:640
+msgid "将每行的 `127.0.0.1` 替换为4台服务器各自的IP地址"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 47a22c64014843be8eab6ff14a1f2c6b
+#: docs.rst:642
+msgid "将每行的 `5001x` 端口换成每个Hyperchain节点自己的grpc端口"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 02e97d50784647dcb9994569ad7f48ab
+#: docs.rst:644
+msgid ""
+"**因为我们选择单服务器单节点模式，实际上每个节点可以使用默认的50011端口，但是为了介绍如何正确修改节点配置，这里还是将grpc端口定为** "
+"`50011~50014`"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 7f81908ba7ad499ebb3bc913a5d6117c
+#: docs.rst:646
+msgid "以服务器IP `10.10.10.1~10.10.10.4` 为例，将hosts.toml文件修改为类似以下的内容::"
+msgstr ""
+
+#: ../../source/quickstart/Deployment b89ffb5afc70471c9fa2ee211fd21a37
+#: docs.rst:654
+msgid "需要注意的是，在同一个网络域中，4个节点的hosts配置都是一致的，请依次配置。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 96a6219817144b55839ad20299eb3f69
+#: docs.rst:656
+msgid "**需要注意的是，本例中除了1号节点不需要修改ns_dynamic.toml，其他节点都要修改配置。请依次配置剩余节点的ns_dynamic.toml文件。**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 5f50d35732a54f18982b0f70f411cd3f
+#: docs.rst:659
+msgid "4.3.3 跨域网络"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:661
+#: f3c9669543f4490e859c23308cd56201
+msgid "跨域网络相关内容请查阅 **《跨域网络使用手册》**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment da9f48a7d4e342bb8a2d9ad0732857d9
+#: docs.rst:664
+msgid "4.4 修改配置文件ns_genesis.toml"
+msgstr ""
+
+#: ../../source/quickstart/Deployment cfbc010cd87147bdbb360991c4d4934c
+#: docs.rst:667
+msgid "4.4.1 [genesis]模块说明："
+msgstr ""
+
+#: ../../source/quickstart/Deployment 66cc5c460d9c448a8d4ab218be4204f2
+#: docs.rst:669
+msgid "`[genesis]` **配置的是ca证书信息**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 1a5603d1c0734f2cb46a91e4b75bf6c7
+#: docs.rst:671
+msgid ""
+"`ca_mode` "
+"**ca模式，配置后不支持修改。支持的ca模式有：中心化ca，即Center，也叫非分布式ca；分布式ca，即Distributed；无ca，即none。**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:673
+#: fd41207d3ef4465e96a33048e2ac7f8b
+msgid ""
+"`root_ca` "
+"**当ca模式为中心化ca，即Center时，需要配置中心化ca使用的rootca，即root.cert的内容，其他模式下无需配置。**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment c3ab6b3ebf624be1a3bd554af1878dfb
+#: docs.rst:696
+msgid "4.4.2 [genesis.alloc] 模块说明："
+msgstr ""
+
+#: ../../source/quickstart/Deployment 924662cc71cb4f1f9a56355ecf816a98
+#: docs.rst:698
+msgid "在ns_genesis.toml文件中需要配置创世账户以及创世节点，里面没有默认配置，可自行安装当前链的实际情况进行配置。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 1104697bf7b94894a9863d97328f8861
+#: docs.rst:700
+msgid "`[genesis.alloc]` 配置的是创世账户的 **address** ，这些账户及其对应的余额会在区块链启动时被创建"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:702
+#: e07a0df4ca1545989650533020c8a6c6
+msgid "链启动时，会将带ns_genesis.toml配置文件中，有余额的账户初始化为链级管理员和合约管理员；链启动后（初始化完成后），只能通过提案管理链级角色，为其他账户授权或回收角色，其他账户有了余额也不会再被初始化为具有角色的账户"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 1d8421a04ba34065bb7be0a91faf3ea7
+#: docs.rst:704
+msgid "**示例如下，要注意的是，以下例子中的账户，它们的私钥并不会对外暴露，因此请您自行创建创世账户，配置相应的address，并妥善保管账户私钥（账户可通过sdk生成）**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:714
+#: f1a82bb00192401e8f8b44bf4aa92f8e
+msgid "**litesdk** 创建账户举例说明"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 024c7a20cea44574af919e0511d24349
+#: docs.rst:721
+msgid "**gosdk** 创建账户举例说明"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 0d210d77a74341f1b5aa8f8bf81ea4c0
+#: docs.rst:729
+msgid "4.4.3 [[genesis.nodes]] 模块说明："
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:731
+#: f5b442deccd448d38ea1d1930dacdfdc
+msgid "`[[genesis.nodes]]` 配置的是创世节点相关的信息"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 4941b27a57214f65919d789b0a6fe91b
+#: docs.rst:733
+msgid "`genesisNode` 是创世节点的名称（hostname），"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 72804cac96d64ad6ba7e001c53963ca7
+#: docs.rst:735
+msgid ""
+"`certContent` "
+"是此节点的证书信息，可以是本节点的cert证书，也可以是其他节点颁发给本节点的证书(如果是通过OA申请的证书,会是hyperchain2.0目录下对应节点的certs/node$i.cert的内容)"
+msgstr ""
+
+#: ../../source/quickstart/Deployment da273dd17a1c447ebbc4f624172da55d
+#: docs.rst:738
+msgid "有多少个创世节点就加多少个对应的 `[[genesis.nodes]]` 配置"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 6261f78d7fd046acbb3f6cc3191ed2e1
+#: docs.rst:740
+msgid "**注：**\\ 需要确保每个节点启动时，ns_genesis.toml配置相同。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 370152aebf3c4095b5b6c2cda3665555
+#: docs.rst:742
+msgid "示例如下："
+msgstr ""
+
+#: ../../source/quickstart/Deployment 19a28384d0e24f2ab42a31f41d1a2b5c
+#: docs.rst:792
+msgid "也可以使用以下脚本助你生成 **ns_genesis.toml配置文件**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 7baa6b3d5018488cb8524c4ab514b7e2
+#: docs.rst:794
+#, python-format
+msgid ""
+"`allcerts.zip <https://upload.filoop.com/RTD-"
+"Hyperchain%2Fstructure_genesis.sh>`_"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:796
+#: f009d8fd17294a21a2c3de4567fc842b
+msgid ""
+"将脚本和oa上下载的证书压缩包（*allcerts.zip结尾的压缩包）放在同一个目录下，依次执行以下命令，脚本会生成一份完整的 "
+"**ns_genesis.toml**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment ca01a1ddd0ec4026ad1beb45529364b3
+#: docs.rst:805
+msgid "4.4.4注意事项"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 5a39b6a852d04e9b98424115d434869c
+#: docs.rst:807
+msgid "**需要确保每个节点启动时，ns_genesis.toml配置相同（包括新增的节点,nvp,lp,cvp）**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 5ba7fdc8e3b24e898bbca9d31ebb3a73
+#: docs.rst:809
+msgid "**ns_genesis.toml配置文件只在首次部署时需要编辑，后续任何场景下都不再变动**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 508a1a099b484815afc350b13b6443a0
+#: docs.rst:811
+msgid "**部署时请不要使用示例中的配置**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 8e0868a381304970baad954265175d9a
+#: docs.rst:814
+msgid "4.5 证书配置"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 0e89629d2ffe41b789935d02f708b1dd
+#: docs.rst:817
+msgid "4.5.1 非分布式CA证书配置"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 6a96cd17572f4f7188045a16028f460e
+#: docs.rst:819
+msgid "证书部署完成后请将root.priv单独保存，不要放在ca目录中，避免安全问题"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 1631f0a783254333986dae9c1bb88784
+#: docs.rst:821
+msgid "证书是和节点绑定的，因为证书中写入了hostname的信息，因此node1的证书拷贝到node2是不能正常工作的"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 4705a52ac47b40a5b16ed3c203756960
+#: docs.rst:823
+msgid ""
+"当 `genesis.ca_mode` 配置为 `Center` "
+"时，表示使用中心ca，即非分布式ca。此时，需要将下载的ca目录下的root.ca的文件内容配置到 `genesis.root_ca` "
+"这个配置项中。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 7ff88cf69090466493e616c43fb4b8ad
+#: docs.rst:827
+msgid ""
+"在OA上下载的V1.7+证书套件解压后会看到ca、hyperchain1.0、hyperchain2.0三个目录，详细使用可见README.md。"
+" **注意下载时需要指明节点对应的节点名称（hostname），名称应该和稍后部署时填写的节点名称一致。**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 7f20fa7581124fd69131caa01903b12b
+#: docs.rst:829
+msgid "其中hyperchain2.0目录里的证书套件用来部署hyperchain2.7.0，打开hyperchain2.0目录后可以看到一系列node目录，如下图所示。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment b061d49c49f746c0a4074462d534d18b
+#: docs.rst:831
+msgid "|image3|"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:1289
+#: ef149ee7a1644abaa8799f3cc42b4a4b
+msgid "image3"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 6e0ff76bb03e445daf632a7bc237697d
+#: docs.rst:833
+msgid ""
+"以节点1为例，部署时直接\\ "
+"**将证书套件里node1目录下的CA、certs目录（如下图）放到./namespaces/global/certs/目录下**\\ "
+"即可。将tls目录下的tlsca.ca "
+"、tls_peer.cert、tls_peer.priv放到hyperchain项目node1的./tls目录下即可，tls相关的配置在system.toml的http.security配置项下。sdkcerts目录下的文件用于sdk平台使用，使用时替换sdk中对应的文件即可，详细使用可以查看Gosdk接口使用文档或Litesdk接口使用文档。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 06f59892ada14102a7d3fde256120e4a
+#: docs.rst:836
+msgid "|image4|"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 02de0ec67e0c484995654ac3984d450d
+#: docs.rst:1290
+msgid "image4"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:838
+#: f7ca1cf3f12d4d4581fd66d21c87ee23
+msgid "注意事项："
+msgstr ""
+
+#: ../../source/quickstart/Deployment c41bb64c5aae40aa9d36c75bae65a0da
+#: docs.rst:840
+msgid "如果发生找不到证书这类错误，请修改./configuration/global/ns_static.toml文件中添加"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 7fd037c18ffd4d57addf9dfa6302b670
+#: docs.rst:850
+msgid ""
+"如果节点启动报错\\ **“the searched certificate configuration item does not match "
+"hostname : need hostname1, but hostname2”**\\ "
+"此类的错误，请检查（可通过certgen工具）证书生成时是否有误。在OA上申请SDKCERT,ECERT时，节点名称（域名）一栏需要填写每个节点对应的hostname，如下图："
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:854
+#: ec878f2cf231481a9640d8963900fefa
+msgid "|image5|"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:1291
+#: e8582e076db44269b64c97791adbc94c
+msgid "image5"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 4f6e90d6f5e44d17ac6327470b26bde5
+#: docs.rst:857
+msgid "4.5.2 分布式CA证书配置"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 9b887d1b52b34b07a177bcf8776c2d36
+#: docs.rst:859
+msgid ""
+"当\\ ``genesis.ca_mode`` 配置为\\ ``Distributed`` 时，表示使用分布式ca。分布式ca模式下不需要配置\\"
+" ``genesis.root_ca`` 。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:862
+#: e26cc7a6304c435586d76f96538fed58
+msgid "目前分布式CA的证书能够通过certgen生成或INFO进行下载，证书放置路径和非分布式CA相同。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:864
+#: f71e36fcae054637aa7a7f6156aeee8f
+msgid "通过OA下载分布式CA证书需要选择“分布式CA”选项："
+msgstr ""
+
+#: ../../source/quickstart/Deployment cc429dfa107a478ea9b8f4931d8c81ff
+#: docs.rst:866
+msgid "|image6|"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 1ab8013a868b48289feab18c307dd4e2
+#: docs.rst:1292
+msgid "image6"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:868
+#: e04ca28a48e243ea9489cdc947546d02
+msgid "通过certgen生成的方式需要借助于如下脚本："
+msgstr ""
+
+#: ../../source/quickstart/Deployment 81e9155d55db40febb288adfe0bc0089
+#: docs.rst:870
+#, python-format
+msgid "`gencert.sh <https://upload.filoop.com/RTD-Hyperchain%2Fgencert.sh>`_"
+msgstr ""
+
+#: ../../source/quickstart/Deployment af33564896f647b68cbc1057e2308f58
+#: docs.rst:872
+msgid "下载完成后将其放到和可执行 certgen 二进制文件同一目录下，输入"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 2b7bc6d6e8bf4b7fb483ec781cef4a4f
+#: docs.rst:878
+msgid "指令运行，按照提示输入相关内容即可完成证书的创建。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:880
+#: ea1c5e20443b475a8bfaea7fbd05c058
+msgid "该shell脚本是通过调用certgen相关指令来完成创建证书的操作的，能够让操作者选择生成分布式CA或者非分布式CA的证书。无论是分布式CA还是非分布式CA都会选择是否生成国密自签证书和国密公私钥，需要说明的是，选择了生成国密自签证书会自动生成国密公私钥对，选择生成非国密自签证书会生成非国密公私钥对，两者需要配套。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment df816d747f654a8f9d6afa554f2113ec
+#: docs.rst:882
+msgid "对于分布式CA来说，该脚本默认生成4个CA，需要按照提示输入CA相关信息；并默认生成4个节点的证书，生成顺序为："
+msgstr ""
+
+#: ../../source/quickstart/Deployment dfd9675723a24cfab777c35123e66401
+#: docs.rst:884
+msgid "node1需要生成node2.cert(root2颁发), node3.cert(root3颁发), node4.cert(root4颁发);"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 873c0bb31ad04eb7ad3e5a7c11c9de4a
+#: docs.rst:887
+msgid "node2需要生成node1.cert(root1颁发),node3.cert, node4.cert;"
+msgstr ""
+
+#: ../../source/quickstart/Deployment a0fc0c17cfc34d54901d975bd99f5fc8
+#: docs.rst:889
+msgid "node3需要生成node1.cert, node2.cert, node4.cert;"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 6f938d66716b477199980c71525fff24
+#: docs.rst:891
+msgid "node4需要生成node1.cert, node2.cert, node3.cert;"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:893
+#: ee01eaa16b744acca90202bc7fad8149
+msgid "其中CA1与node1对应按照提示输入信息即可。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment af9f5f5f693141669ab4a462d8e9dc57
+#: docs.rst:895
+msgid "对于非分布式CA来说，默认生成一个CA，输入CA相关信息后会提示输入要生成的节点证书的数量，例如如果有5个节点需要生成证书，输入5，然后根据提示输入相关信息即可。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 7bafd3b8e363457385ab3bf3b536b1f8
+#: docs.rst:898
+msgid "4.5.3 SOLO模式的证书说明"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 03b0ccda55eb40f7a9f440eaf96daea2
+#: docs.rst:900
+msgid "共识算法配置为solo的情况下启动hyperchain时，hyperchain单节点运行的模式称为solo模式。solo模式仅用于单节点功能的演示或者测试，不需要节点间的链接，因而我们不需要额外的证书配置。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment cb045f79dc9942f9b4ec83326265e39c
+#: docs.rst:902
+msgid ""
+"当ns_dynamic.toml的[consensus.algo]配置为“SOLO”时，节点工作于solo模式。节点不需要任何证书的配置，故 "
+"`genesis.ca_mode` 需要配置为 `None` ，即无ca模式。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment b232ad89de2d43d68512c4d2e07d0208
+#: docs.rst:906
+msgid "4.5.4不启用证书功能"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 8359047076c745c3bcf4c37730a0bae0
+#: docs.rst:908
+msgid ""
+"当用户对区块链安全有较高要求时（例如有信息安全等级保护要求时）可能选择使用外部的硬件SSL "
+"VPN网关来保证准入控制和链路安全，这时可以手动关闭准入控制功能。方法是手动将ns_static.toml中的 "
+"**[encryption.check.enableT]** 设置为false，且ns_genesis.toml中的 "
+"`genesis.ca_mode` 配置为 `None` 。这种情况下节点不需要配置任何证书即可启动。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment c864e1940b8740df939ab63c8af9b6a8
+#: docs.rst:912
+msgid "ns_static.toml:"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 4acbb18a5c4345db9270a16a0d1b92ae
+#: docs.rst:919
+msgid "ns_genesis.toml:"
+msgstr ""
+
+#: ../../source/quickstart/Deployment b3b35783f344466bbbc6cf6a10c6a3c2
+#: docs.rst:926
+msgid ""
+"这时节点关闭准入控制功能，但是仍然会启用链路加密。可以同将 **[encryption.security.algo]** "
+"设置为pure关闭链路加密功能（默认为sm4加密保护）。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment ada6fb4fc0e8465399b8ece064efbe4a
+#: docs.rst:933
+msgid "请 **注意** 这种情况下 **请务必采取必要的外部措施保护区块链网络安全** 。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 183ea595b14d492689f254b5b0a6b424
+#: docs.rst:936
+msgid "4.6 检查配置文件"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:938
+#: f8fad34b20a54f0d8ef5b122204498e6
+msgid "假设服务器IP地址为 `10.10.10.1~10.10.10.4` ，各自使用的端口是 `xxxx1~xxxx4` ，以下是配置文件更新后的样例。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 2d507a6ff3d643e6bcd6bc87ae560bd4
+#: docs.rst:941
+msgid "4.6.1 各节点dynamic.toml"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 99bb5e9f8a3e49b7b362f680253c1153
+#: cead4f99a788461cbd1e6e34a2c925d1 docs.rst:943 docs.rst:1047
+msgid "1号节点："
+msgstr ""
+
+#: ../../source/quickstart/Deployment 02898466307042f59140cc81f637a395
+#: 22d5ec98774544a18d8c5665c350644d docs.rst:969 docs.rst:1080
+msgid "2号节点："
+msgstr ""
+
+#: ../../source/quickstart/Deployment 4d917ed772884a808777897873d63780
+#: 5fc538d90d704d6d9a7b87652e5e4dde docs.rst:994 docs.rst:1113
+msgid "3号节点："
+msgstr ""
+
+#: ../../source/quickstart/Deployment 57dc99e5a40f4118aa480954c7241e03
+#: 5928839c60a942bc9243c15d69803fcd docs.rst:1019 docs.rst:1146
+msgid "4号节点："
+msgstr ""
+
+#: ../../source/quickstart/Deployment 3e319f63317d479d8e73e8f7d980437d
+#: docs.rst:1045
+msgid "4.5.2 各节点ns_dynamic.toml"
+msgstr ""
+
+#: ../../source/quickstart/Deployment ae79e50043b7435a92b490a85f4dc1d9
+#: docs.rst:1180
+msgid "4.7证书检查"
+msgstr ""
+
+#: ../../source/quickstart/Deployment cffe808be781450887494372c3d10dfd
+#: docs.rst:1182
+msgid "4.7.1非分布式证书检查"
+msgstr ""
+
+#: ../../source/quickstart/Deployment dd4f0a1c65f242e8ac4ed2a4de41a6d4
+#: docs.rst:1184
+msgid "./namespaces/global/certs/目录下文件"
+msgstr ""
+
+#: ../../source/quickstart/Deployment b16137e4b33a4f848c0ae8817563e05a
+#: docs.rst:1186
+msgid "|image7|"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 9fa2c09ae7514bdeb967f01f0584aa09
+#: docs.rst:1293
+msgid "image7"
+msgstr ""
+
+#: ../../source/quickstart/Deployment b05e2b2fc40146eb9b1fc391ed6c170c
+#: docs.rst:1188
+msgid "./tls/目录下文件"
+msgstr ""
+
+#: ../../source/quickstart/Deployment cf63200f9e2c4716b92e7e18e7e9b53e
+#: docs.rst:1190
+msgid "|image8|"
+msgstr ""
+
+#: ../../source/quickstart/Deployment a0e95fd3c22e454fa05efadd3c2062f2
+#: docs.rst:1294
+msgid "image8"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 3704bef2ea534001bcbc3becd52932c5
+#: docs.rst:1193
+msgid "第五章 启动节点"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 61e6d8037e7a444d867798bc1200a6b2
+#: docs.rst:1196
+msgid "5.1 保存配置"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 0f7317a8a3f143f4b9472ea001475f52
+#: docs.rst:1198
+msgid "在启动节点前，备份整个/data/hyperchain目录，主要是dynamic.toml和ns_dynamic.toml需要备份。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 849dff3a1b9d49328ca1efe53d4ca94b
+#: docs.rst:1200
+msgid "备份方法如下："
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:1208
+#: fceeb5e4c5f8479b9940f7666834ca78
+msgid "**请依次备份4个节点的Hyperchain目标安装目录，本例中就是** `/data/hyperchain` **目录。**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment d74fa84a76b849b698fd979a6b215f6b
+#: docs.rst:1211
+msgid "5.2 启动节点"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 6a803d63c8984249933cdf055c2f046a
+#: docs.rst:1213
+msgid "启动请再按照步骤 `3.3` 检查一次hyperchain二进制程序能否正常执行。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 2caf2082447a431ba3d4530fbae1b25d
+#: docs.rst:1221
+msgid "检查完毕后，使用 `start.sh` 启动hyperchain进程:"
+msgstr ""
+
+#: ../../source/quickstart/Deployment ccfe8fe3a71b4b80a604efeebef79cc0
+#: docs.rst:1231
+msgid "**依次启动4台服务器上的hyperchain进程。**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 86e64799a3dd4aa1a75130696e15e008
+#: docs.rst:1234
+msgid "5.3 查看日志"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 323bb9ddaf974a458140ea6b8a5aeb76
+#: docs.rst:1236
+msgid "查看hyperchain的日志，查看运行情况。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 5eff456e4b1840d7a97fec933b18cdf8
+#: docs.rst:1238
+msgid "System级别日志的路径默认为："
+msgstr ""
+
+#: ../../source/quickstart/Deployment 175f12e2bcb042659173c51bc68c6ae1
+#: docs.rst:1240
+msgid "`/data/hyperchain/system/logs`"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:1242
+#: f29dd4a826c54b0597b729e9a825334a
+msgid "Namespace级别日志的路径默认(以global为例)："
+msgstr ""
+
+#: ../../source/quickstart/Deployment 90bee78b6e244d5cbe550aaac921ce71
+#: docs.rst:1244
+msgid "`/data/hyperchain/namespaces/global/data/logsls`"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 348075c46c71414781ffa0970cf8969c
+#: docs.rst:1246
+msgid "若Namespace级别日志显示如下信息，即表示节点正常加入共识网络，hyperchain平台部署启动完成。"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 1569ea0dc6654d6e90016b893564344b
+#: docs.rst:1248
+msgid "|image9|"
+msgstr ""
+
+#: ../../source/quickstart/Deployment d135bb9c65984068a4e30f56a1b6eb87
+#: docs.rst:1295
+msgid "image9"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 9b65397298f74a23aacc16a8c98c9398
+#: docs.rst:1250
+msgid "**请依次检查4台服务器上的Hyperchain日志。**"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 74d4b206c7a541a78f9ff159ef0290f2
+#: docs.rst:1253
+msgid "5.4 停止节点"
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:1255
+#: f2b94fc488894b528f1401f6f662f134
+msgid "停止某个节点的hyperchain，执行步骤如下："
+msgstr ""
+
+#: ../../source/quickstart/Deployment docs.rst:1264
+#: e29ea1f0da8344c2976dca730126c498
+msgid "5.5 重启节点"
+msgstr ""
+
+#: ../../source/quickstart/Deployment c200662d63b745b3b9b9c8fe41b429a6
+#: docs.rst:1266
+msgid "重启某个节点的hyperchain，执行步骤如下："
+msgstr ""
+
+#: ../../source/quickstart/Deployment 5b35c3839e504c3e804b5f75bbfab1b9
+#: docs.rst:1275
+msgid "5.6 失败恢复"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 59b3d747caf5443e96a54230b9bc817b
+#: docs.rst:1277
+msgid "若启动失败，需要使用5.1小节当中的备份进行失败恢复"
+msgstr ""
+
+#: ../../source/quickstart/Deployment 4c5e1dd9fc1f4888b95d0747f5ee27bd
+#: docs.rst:1279
+msgid "将/data/hyperchain中的dynamic.toml和ns_dynamic.toml两个配置文件替换为备份中的相应配置文件"
+msgstr ""
+

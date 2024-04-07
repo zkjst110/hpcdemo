@@ -1,0 +1,1269 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Platform 67b6d969216241a193516db556862531 deployment.rst:2
+msgid "平台部署"
+msgstr ""
+
+#: ../../source/Platform 9448767855bc451b9603c483a9129800 deployment.rst:5
+msgid "前言"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:7 eeec33ed345841ab87e73c684a9c4598
+msgid "该文档将介绍如何部署一个拥有4个节点的Flato集群，操作步骤会较其他系统的部署稍繁琐一些，用户需要 **分别登录到4台服务器** 上进行操作。"
+msgstr ""
+
+#: ../../source/Platform 2bb892c9cedd493ea86d388a37cf626a deployment.rst:9
+msgid "这里假设4台服务器的IP分别为 `node1` 、 `node2` 、 `node3` 和 `node4` ，操作用户都是 `flato` 。"
+msgstr ""
+
+#: ../../source/Platform bd8b1ec0708945318bc260c9b5784c3e deployment.rst:11
+msgid "**该部署文档是为模拟平台上线部署的场景而编写的，所有的操作都只有普通用户权限，因此不涉及任何sudo权限的操作。不推荐使用root用户部署平台，容易养成不好的操作习惯，也不利于发现操作步骤中的错误。**"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:14 f24e7c308ecc45ffb3670c1678088572
+msgid "第一章 获取安装包以及用户登录"
+msgstr ""
+
+#: ../../source/Platform 7a8d7d789ba24535aab41215114d2c40 deployment.rst:17
+msgid "1.1 获取安装包"
+msgstr ""
+
+#: ../../source/Platform 65edef13661d4a47abac240c44583798 deployment.rst:19
+msgid "如果您已通过其他方式获取安装包请忽略此步骤。"
+msgstr ""
+
+#: ../../source/Platform 3072ba23436c467189f7644bb0cd9fea deployment.rst:21
+msgid "【线下获取】对接趣链科技相关人员"
+msgstr ""
+
+#: ../../source/Platform cbe089bdfe6549679075ee3692e37e33 deployment.rst:23
+msgid "【公司外部】登录服务平台官方资源库下载"
+msgstr ""
+
+#: ../../source/Platform b784db0554d2440dba0772e5b25a297f deployment.rst:25
+msgid "https://baas.hyperchain.cn"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:27 f2c11aa1b0a848328592c708a68ee378
+msgid "【公司内部】登录OA：[__https://moffi.hyperchain.cn__](https://moffi.hyperchain.cn/)"
+msgstr ""
+
+#: ../../source/Platform 57ab82b00a3743dea220fb7b09423a73 deployment.rst:29
+msgid "点击签发->平台组件->组件列表->flato->下载，选择使用您平台的flato版本下载"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:31 f34dc8f0fc0e4f8993cbb97dd1a4b169
+msgid "点击签发->证书->创建证书，选择V1.7+证书体系，按步骤点击后下载得到证书zip文件"
+msgstr ""
+
+#: ../../source/Platform 40948fbe6b214678ac87f8cc45360c29 deployment.rst:33
+msgid "点击签发->许可->我的许可，申请适合您需求的LICENSE，审批通过后在许可状态中下载LICENSE文件"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:35 e4566508b87c4c90ab0d30297fb417cb
+msgid "至此，您已经获得了所有需要的安装包，注意：**证书和LICENSE文件将在flato部署完成时用到，详见3.2节**。"
+msgstr ""
+
+#: ../../source/Platform c1a1eefc79e9442eb06a1929432aa5fe deployment.rst:39
+msgid "## 1.2 创建使用用户及文件权限"
+msgstr ""
+
+#: ../../source/Platform 0e1fde6179914097b3bfc935b61bb9cb deployment.rst:41
+msgid "创建平台部署所需的用户，例如创建如下用户："
+msgstr ""
+
+#: ../../source/Platform 77a61fac5db8496dbeef2c4ac4598696 deployment.rst:44
+msgid "```bash"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:44 e6cac18b9a65436fb433c78f547ba031
+msgid "用户名：flato 密码：flato"
+msgstr ""
+
+#: ../../source/Platform 1f45dca8d4f140afb108c0fc29871a8a
+#: c9f495655b244accac45cce2b395d14a deployment.rst:46 deployment.rst:385
+msgid "```"
+msgstr ""
+
+#: ../../source/Platform 5c7c3807e0c94fa68e7b95f212a762d4 deployment.rst:48
+msgid "可用如下命令创建新用户："
+msgstr ""
+
+#: ../../source/Platform c4687ea3a45344788ea7c3a3c0020561 deployment.rst:50
+msgid "```bash s sudo passwd flato ```"
+msgstr ""
+
+#: ../../source/Platform 161b09905e2b4ff1a1fe1c2b660625f6 deployment.rst:55
+msgid "修改部署路径及数据存放路径的目录权限，例如`/opt/flato`及`/data/hype`"
+msgstr ""
+
+#: ../../source/Platform 98a06228d90c484d860ee65638e2f994 deployment.rst:57
+msgid "```bash sudo chown -R flato: /data/flato ```"
+msgstr ""
+
+#: ../../source/Platform 3972b08e5a1c4705a2531bf24e0e5c91 deployment.rst:61
+msgid "## 1.3 上传安装包"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:63 fe01a40706ba4278857472760a64c4fb
+msgid "登录服务器前需要上传Flato安装包和另外的小工具。"
+msgstr ""
+
+#: ../../source/Platform 9ea7bc4b1eb74972b91bd3ed5cbbb262 deployment.rst:65
+msgid "以服务器地址`node1`，用户名`flato`为例，操作步骤如下："
+msgstr ""
+
+#: ../../source/Platform 34ade493e05c4b199fa35f641d1ee6fd deployment.rst:67
+msgid ""
+"```bash #上传Flato安装包 #具体操作时将flato-install.tar.gz换成实际安装包名，将node1换成实际服务器IP地址"
+" scp flato-installer.tar.gz flato@node1:~ #上传nt工具包 "
+"#具体操作时将node1换成实际服务器IP地址 scp nt-linux64.tar.gz flato@node1:~ ```"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:76 eb482ec1eabe4e6c80d4b00a6d6afdeb
+msgid "## 1.4 登录操作用户"
+msgstr ""
+
+#: ../../source/Platform 24e998aff9724f12aeb86a89df2772c0 deployment.rst:78
+msgid "```bash #具体操作时将node1换成服务器IP地址 ssh flato@node1 Password: #输入登录密码 ```"
+msgstr ""
+
+#: ../../source/Platform 985a48a3c6d344b1ba816aded8b99f0a deployment.rst:85
+msgid "## 1.5 重复操作"
+msgstr ""
+
+#: ../../source/Platform a83b98236fba4ef49fbdcfb2036e3a02 deployment.rst:87
+msgid "请按照**1.2~1.3**中的步骤，再分别登录到`node2~node4`上，以继续之后的操作。"
+msgstr ""
+
+#: ../../source/Platform b37a8a88db6f4f6e83e91c0f35aaee6b deployment.rst:89
+msgid "# 第二章 检查系统环境"
+msgstr ""
+
+#: ../../source/Platform d1a435ae33844470ab75e58bdf0a928c deployment.rst:91
+msgid "首先以`node1`服务器为例，完成以下的检查步骤。"
+msgstr ""
+
+#: ../../source/Platform 23ab41b42c9e460681d2367dc1b170be deployment.rst:93
+msgid "## 2.1 检查服务器时间"
+msgstr ""
+
+#: ../../source/Platform c9c6c5d91ba241cd8784c52abdd8b58a deployment.rst:95
+msgid "检查Flato节点所在服务器的时间是否与标准时间同步，如果不同步请联络系管理员同步系统时钟。"
+msgstr ""
+
+#: ../../source/Platform 99db5051ae474b9b9c42c91236244bdc deployment.rst:97
+msgid "```bash #查看服务器时间命令 date ```"
+msgstr ""
+
+#: ../../source/Platform 8eed3b844abe4d68af90d29b91a0748f deployment.rst:102
+msgid "## 2.2 检查服务器配置"
+msgstr ""
+
+#: ../../source/Platform 06acba4b70ba45c0aa7da6dd91e8ba72 deployment.rst:104
+msgid "检查服务器配置是否与预期的配置一致，如果不一致请联系系统管理调整配置。"
+msgstr ""
+
+#: ../../source/Platform 8a634e6933554ef88ca3abafbb627830 deployment.rst:106
+msgid ""
+"```bash #查看CPU主频 cat /proc/cpuinfo | grep 'model name' | uniq #查看CPU核数 "
+"cat /proc/cpuinfo | grep 'model name' | wc -l #查看内存大小 #如果free "
+"-h执行失败，可以直接调用free查看 q #查看挂载的文件系统大小 df -h ```"
+msgstr ""
+
+#: ../../source/Platform 4f56da8922374268b81c53cc4025659a deployment.rst:118
+msgid "## 2.3 检查端口占用情况"
+msgstr ""
+
+#: ../../source/Platform 83dbcfbf6ca745ebbbce9b088d78a44b deployment.rst:120
+msgid "检查Flato节点所需的端口是否被其他进程占用，如已被占用请联络系统管理员进行调整。"
+msgstr ""
+
+#: ../../source/Platform 3793a23076734732a1da5f919a893ff3 deployment.rst:122
+msgid "/检查端口是否被监听，以查看8001端口为例："
+msgstr ""
+
+#: ../../source/Platform 7908e21477d540ff95f5c2648c4ab11d deployment.rst:124
+msgid "```bash #查看端口是否被占用的命令 netstat -nap | grep 8001 ```"
+msgstr ""
+
+#: ../../source/Platform 112e8450908c4726a863f9ff10475349 deployment.rst:129
+msgid "如果存在被占用的情况，上述命令会打印出以下类似信息："
+msgstr ""
+
+#: ../../source/Platform 6b46bb3f6e5e4340b6c6176d15f82b19 deployment.rst:131
+msgid ""
+"```bash (Not all processes could be identified, non-owned process info "
+"will not be shown, you would have to be root to see it all.)tcp6       0"
+"      0 :::8001                 :::*                    LISTEN      "
+"30207/./process1 ```"
+msgstr ""
+
+#: ../../source/Platform 83fcf59394554de0bf7433f17837a975 deployment.rst:135
+msgid "## 2.4 检查网络连通性"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:137 dfd8ed48f7614d20a3e528c19bdcc504
+msgid "检查网络连通性的目的，就是为了检查Flato节点所监听的端口能否被其他节点访问到，如果其他节点访问不到请联络系统管理做处理。"
+msgstr ""
+
+#: ../../source/Platform 86eeb58fe2f44760b6275d41c2bfcde9 deployment.rst:139
+msgid "可以使用以下三种方法检查网络连通性，`选择任意一种即可`。"
+msgstr ""
+
+#: ../../source/Platform 7a49e39673b54a5a95638521b4ebabc6 deployment.rst:141
+msgid "nt工具"
+msgstr ""
+
+#: ../../source/Platform 753bddde32064220aa330046bb0b36dd deployment.rst:143
+msgid "nc命令"
+msgstr ""
+
+#: ../../source/Platform 872205e6529a4615a679cbf5fdb055f7 deployment.rst:145
+msgid "Python HTTP模块"
+msgstr ""
+
+#: ../../source/Platform ca6dc76b6cb64a5eb4df0523c05b0edd deployment.rst:147
+msgid "### 2.4.1 使用nt工具测试连通性"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:149 e6ecf43daea34a9eb717048823c930aa
+msgid "nt是一个专门用于测试网络连通性的工具。"
+msgstr ""
+
+#: ../../source/Platform 0c8a49c5afa243d18abe8dfea0603fac
+#: af07c82c0d79408b913607c89fce5a72 d66f6660f05f4ffba238cc80d93ab0ce
+#: deployment.rst:151 deployment.rst:167 deployment.rst:177
+msgid "假设Flato节点IP地址node1~node4，需要验证node2~node4与node1上8001端口的连通性，使用方法如下："
+msgstr ""
+
+#: ../../source/Platform 14316171c37442178e6c0aca13e228b3 deployment.rst:153
+msgid ""
+"```bash #登录node1#具体操作时将node1换成服务器IP地址ssh flato@node1#解压nt工具包tar xvf nt-"
+"linux64.tar.gzcd nt-linux64#启动nt监听./nt server -l "
+"0.0.0.0:8001#登录node2#具体操作时将node2换成服务器IP地址ssh flato@node2#解压nt工具包tar xvf "
+"nt-"
+"linux64.tar.gz#编辑servers.txt，向servers.txt中加入需要检测的IP:Port，本例中填入一下内容#具体操作时将node1换成服务器IP地址echo"
+" 'node1:8001' > servers.txt#检查servers.txt内容是否符合预期cat "
+"servers.txt#启动客户端测试./nt client#看到类似如下带SUCCESS字样的输出，即表明测试成功[CLIENT] TEST "
+"node1:8001    [SUCCESS] RESP: s: server_resp [0.0.0.0:8001], C->S: 0 ms, "
+"RTT: 0 ms#在node3、node4上重复在node2上操作即可#测试完之后返回到node1#按 CTRL-C "
+"结束server监听CTRL-C ```"
+msgstr ""
+
+#: ../../source/Platform 9641f5da61524a8d8872806c0e52516c deployment.rst:157
+msgid "**nt工具支持同时检查多个IP:Port的连通性，只要在servers.txt中以每行一个IP:Port的格式填写即可。**"
+msgstr ""
+
+#: ../../source/Platform 2fc798b2b73848158fa441f8921fef67 deployment.rst:159
+msgid "### 2.4.2 使用nc命令测试连通性"
+msgstr ""
+
+#: ../../source/Platform d5d0ddd8b3b041d4b50fb69c99fb5ae6 deployment.rst:161
+msgid "还可以用nc命令测试连通性，此方法的优点是操作步骤简单，但缺点是有些系统不会自带安装nc命令。"
+msgstr ""
+
+#: ../../source/Platform bf9727ad651f45b8ab539cbeef67172c deployment.rst:163
+msgid "```text #安装nc命令如下：sudo yum install -y nc ```"
+msgstr ""
+
+#: ../../source/Platform d4d85a0c6d0a4337a4e99bebb4d6f45e deployment.rst:169
+msgid ""
+"```bash #登录node1#具体操作时将node1换成服务器IP地址ssh flato@node1#启动nc监听, "
+"-l设置开启监听模式，-k开启支持多客户端同时连接模式，-p指定监听端口nc -l -k -p "
+"8001#登录node2#具体操作时将node2换成服务器IP地址ssh "
+"flato@node2#使用nc命令测试连通性，-w选项设置3秒等待时间,-i选项设置连接成功后空闲等待时间(空闲超3秒即退出)#具体操作时将node1换成服务器IP地址nc"
+" -w 3 -i 3 -v node1 8001#如果出现以下带Connected字样的输出，表示测试成功。Ncat: Connected to "
+"node1:8001.Ncat: Idle timeout expired (3000 "
+"ms).#在node3、node4上重复在node2上操作即可#测试完之后返回到node1#按 CTRL-C 结束nc监听CTRL-C ```"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:173 ea1e7570d40b49d9b5c266340593163b
+msgid "### 2.4.3 使用Python的HTTP模块测试连通性"
+msgstr ""
+
+#: ../../source/Platform dab10b09b10345dc9eed19cb16753ad5 deployment.rst:175
+msgid "使用Python自带的HTTP模块也能快速开启对一个端口的监听，如果在使用上述两种方法时遇到问题，可以考虑使用此方法快速测试网络连通性。"
+msgstr ""
+
+#: ../../source/Platform beb6da2641354944b5e19e03f839d89d deployment.rst:179
+msgid ""
+"```bash #登录node1#具体操作时将node1换成服务器IP地址ssh flato@node1#启动Python "
+"HTTP模块监听，命令如下(注意大小写)python -m SimpleHTTPServer "
+"8001#登录node2#具体操作时将node2换成服务器IP地址ssh "
+"flato@node2#使用curl命令测试连通性#具体操作时将node1换成服务器IP地址curl node1:8001 >& "
+"/dev/null && echo yes || echo "
+"no#如果测试成功就打印yes，否则打印no#在node3、node4上重复在node2上操作即可#测试完之后返回到node1#按 CTRL-C "
+"结束Python监听CTRL-C ```"
+msgstr ""
+
+#: ../../source/Platform 0c9d4fbfc26249409ee3c1c0a01bce53 deployment.rst:183
+msgid "## 2.5 检查系统字符集"
+msgstr ""
+
+#: ../../source/Platform beee334d3de5457288cc93c8f32d3d93 deployment.rst:185
+msgid "`flato`节点默认使用的字符集为`UTF-8` ，请检查`SDK`或者应用服务器的默认字符集是否为`UTF-8`，如果不是，有可能造成签名非法。"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:187 fba4708df8dd40949ce8824d0af4eb25
+msgid ""
+"```bash Linux系统字符集查看echo $LANGLinux修改字符集vim "
+"/etc/sysconfig/i18nLANG=\"zh_CN.UTF-8\"修改文件保存退出之后要生效要执行如下命令才可生效source "
+"/etc/sysconfig/i18n ```"
+msgstr ""
+
+#: ../../source/Platform b7fd80fee4274d33956eff0b3ae39b50 deployment.rst:191
+msgid "## 2.6 检查最大文件句柄数"
+msgstr ""
+
+#: ../../source/Platform 5659e128469742d4a371ee9734b82837 deployment.rst:193
+msgid "启动flato之前，需要保证文件句柄数至少为65535，否则有可能会由于文件句柄数不足引发系统宕机。"
+msgstr ""
+
+#: ../../source/Platform dbbf50b543ee490c82651b4455b94cdb deployment.rst:195
+msgid "```bash > ulimit -n65535 ```"
+msgstr ""
+
+#: ../../source/Platform 26a0facb00d248029510a8998a036bf2 deployment.rst:199
+msgid "查询到的数值应至少为65535，否则，建议联系当前服务器的管理员进行修改。"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:201 e0ac8fbe003f42419ee6e638c6757c57
+msgid "## 2.7 重复操作"
+msgstr ""
+
+#: ../../source/Platform c6faa0fee24c40ba8393612287bb378d deployment.rst:203
+msgid "在完成以上步骤后，`node1`服务器的系统环境就检查完毕了。请按照**2.1~2.5**中的步骤，再分别登录到`node2~node4`上做一次检查。"
+msgstr ""
+
+#: ../../source/Platform 620d41672c4342ef9c9bd9a2dc5ea15c deployment.rst:205
+msgid "# 第三章 安装节点"
+msgstr ""
+
+#: ../../source/Platform d359b4d327bb4318ae14176c09ced748 deployment.rst:207
+msgid "首先以node1服务器为例，完成以下的安装步骤。"
+msgstr ""
+
+#: ../../source/Platform 68ff421318b242c29b5cf1d903242ade deployment.rst:209
+msgid "## 3.1 备份数据"
+msgstr ""
+
+#: ../../source/Platform 6323fa7e308d4dafb21081dff9139ec1 deployment.rst:211
+msgid "在做安装操作之前，需要先检查目标目录是否有数据，如果不是首次安装，请先备份一下历史数据。"
+msgstr ""
+
+#: ../../source/Platform dd491c7c4c154f409de604cd9a26a58f deployment.rst:213
+msgid "## 3.2 安装节点"
+msgstr ""
+
+#: ../../source/Platform a4a77d2af7584adeb3461296f7b0df3e deployment.rst:215
+msgid "以下步骤以安装node1上的Flato为例"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:217 e205097d20da4ac581ea0c922d873702
+msgid "首先解压安装包"
+msgstr ""
+
+#: ../../source/Platform 4d476f90ffca458d8f95f93841ce41f5 deployment.rst:219
+msgid ""
+"```bash #回到用户主目录，解压安装包cd#根据实际情况修改flato-install.tar.gztar xvf flato-"
+"installer.tar.gz#根据实际情况修改flato-abcdefcd flato-abcdef ```"
+msgstr ""
+
+#: ../../source/Platform 70c9c41430bf4c7fa1e1af3fd0a5a153 deployment.rst:223
+msgid "假设目标安装目录是`/opt/flato`, 请先对照操作步骤**2.2**中的文件系统检查结果，再次确认目标目录的大小满足需求。"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:225 f5268d063c5f404a90f0b5a7eaa09b55
+msgid "```bash df -h ```"
+msgstr ""
+
+#: ../../source/Platform c86c08adaf12449e970986343ad36d53 deployment.rst:229
+msgid "若安装目录尚不存在，且登陆用户为非root用户，则需要使用sudo命令获取管理员权限后新建安装目录"
+msgstr ""
+
+#: ../../source/Platform 221eebef53da4b819a0444861511de3d deployment.rst:231
+msgid "```bash sudo mkdir /opt/flato ```"
+msgstr ""
+
+#: ../../source/Platform 7d33c53bb6c44ea0acef138afe7e5a73 deployment.rst:235
+msgid "**注意，在安装之前，一定要确认好目标目录的大小，这点经常会被忽略。请务必仔细检查，以避免不必要的麻烦。**"
+msgstr ""
+
+#: ../../source/Platform 0b70e6c38e604a97a0204449311bc6f6 deployment.rst:237
+msgid "倘若检查结果没有问题，请执行以下命令完成安装："
+msgstr ""
+
+#: ../../source/Platform 6968dda6444e45bf88ef20b7271638ce deployment.rst:239
+msgid ""
+"```bash ./deploy-local.sh -d /opt/flato#如果想直接安装到当前目录，执行以下命令：#./deploy-"
+"local.sh -d ./ ```"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:243 df6b10417be74714a60938cc7ae23896
+msgid "**注意：确保操作用户对-d指定的安装目录具有可写权限，否则安装将会出错。**"
+msgstr ""
+
+#: ../../source/Platform 3d858406c5d241efb8150abce52b0820 deployment.rst:245
+msgid "部署完成可看到如下信息："
+msgstr ""
+
+#: ../../source/Platform ded520a003ae49638dadc8e4a7031099 deployment.rst:247
+msgid ""
+"```bash flato has been successfully installed in: /opt/flatoPlease run "
+"these commands to start flato process:cd /opt/flato./start.sh ```"
+msgstr ""
+
+#: ../../source/Platform c208b77755a84ac08dd84c1211c37dd3 deployment.rst:251
+msgid "然后把之前申请的证书和license文件从本地机器复制到该节点的安装目录下（需要**先退出用户登录在本地终端执行该命令**，执行完毕后再登录）："
+msgstr ""
+
+#: ../../source/Platform 69b391b3774347d8ae1cae543823f9f5 deployment.rst:253
+msgid ""
+"```bash #在本地解压证书文件#根据具体情况替换证书文件名字unzip 2019-10-31_06_43_59_allcerts.zip "
+"```"
+msgstr ""
+
+#: ../../source/Platform 68fbb944e2d5415aa36f10e7e8f9ecb7 deployment.rst:257
+msgid "解压后的2019-10-31_06_43_59_allcerts文件夹里包含了一个README文件，请先仔细阅读该文件，并按照文件内容进行操作。"
+msgstr ""
+
+#: ../../source/Platform 32c360af0a954ec39f18718104584f34 deployment.rst:259
+msgid ""
+"```bash #上传LICENSE文件#根据具体情况替换LICENSE文件的名字scp license.zip "
+"flato@node1:/opt/flato#解压license文件unzip xvf "
+"license.zip#解压出的license文件名可能不是LICENSE，需要重命名#根据实际情况替换LICENSE_20191031文件的名字mv"
+" LICENSE_20191031 LICENSE ```"
+msgstr ""
+
+#: ../../source/Platform ad71cb0763c34f898603c628b432c20c deployment.rst:263
+msgid "最后，再执行以下命令，完成Flato节点的安装："
+msgstr ""
+
+#: ../../source/Platform 1d71f275d65847c4a7d3edc1d9953ec6 deployment.rst:265
+msgid "```bash source ~/.bashrc ```"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:269 eea94fab711a466891ac568f9dc4d51f
+msgid "## 3.3 验证安装是否成功"
+msgstr ""
+
+#: ../../source/Platform 816216c3daa14958a3e0eb3a08acce03 deployment.rst:271
+msgid "在执行完步骤3.2后，需要验证一下节点是否已经正确安装。请执行以下命令做测试："
+msgstr ""
+
+#: ../../source/Platform 1b12dcf0130944c089dd6c59bcf6cc54 deployment.rst:273
+msgid ""
+"```bash #/opt/flato为Flato的目标安装目录，可根据实际情况做修改cd /opt/flato/./flato "
+"--version ```"
+msgstr ""
+
+#: ../../source/Platform 845441da83474a578d1ea44ac5ab734c deployment.rst:277
+msgid "假如显示正确的版本信息，说明节点安装成功，示例如下："
+msgstr ""
+
+#: ../../source/Platform d0fd5e80eae1425597ac0f7cbdb55864 deployment.rst:279
+msgid "```bash $ ./flato --versionFlato Commercial Version: 0.1 ```"
+msgstr ""
+
+#: ../../source/Platform d45370bb71344383855f53dab4d7be6f deployment.rst:283
+msgid "如果出现了以下报错信息，说明openssl的动态链接库没有安装成功"
+msgstr ""
+
+#: ../../source/Platform 9dfe0672bb66473892c480fb01fd810b deployment.rst:285
+msgid ""
+"```bash error while loading shared libraries: libxxx. so: cannot open "
+"shared object file: No such file or directory ```"
+msgstr ""
+
+#: ../../source/Platform bb6493cf2e4f4edfa42100752def6350 deployment.rst:289
+msgid "需要向用户目录下的`.bashrc`文件添加一行："
+msgstr ""
+
+#: ../../source/Platform deployment.rst:291 fe077b6a27ab4324b8ab04baadbfd270
+msgid ""
+"```bash #添加一个环境变量LD_LIBRARY_PATH，根据实际情况修改/opt/flato路径echo 'export "
+"LD_LIBRARY_PATH=/opt/flato/tools/lib/' >> ~/.bashrc#导出环境变量source "
+"~/.bashrc ```"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:295 e190f039326040609685eec2cebe16be
+msgid "在完成以上操作之后，再执行一次`./flato --version`，应该就可以输出正常的版本信息了。"
+msgstr ""
+
+#: ../../source/Platform 71bd5e1e0cc64260a15ff7778170cf76 deployment.rst:297
+msgid "至此，node1服务器上的Flato节点就算完成了。"
+msgstr ""
+
+#: ../../source/Platform beeca7fc2873436b86e945a72e325b2e deployment.rst:299
+msgid "# 第四章 检查、修改配置文件"
+msgstr ""
+
+#: ../../source/Platform c7565b8485ea432280608d0575656f11 deployment.rst:301
+msgid "在1.0.8版本及以后的安装包中的配置文件只包含了最精简化的配置，**安装包中的配置文件已经足够满足flato的正常使用**。若您是第一次使用flato，且希望更深入地使用flato时，可以查阅相关功能的使用手册从而知晓配置文件的修改方法；若您以前已经部署过flato，那么仍可以沿用原先的全量配置文件，只不过需要参考《配置变更》对一些配置上的变化进行确认。"
+msgstr ""
+
+#: ../../source/Platform 6f52f227ca9f4618b1823cd2d694c131 deployment.rst:303
+msgid "**注意，以下操作都是在Flato的目标安装目录操作的，不是在原先未安装前的目录下操作。本例中，是在/opt/flato路径下检查、修改配置文件。**"
+msgstr ""
+
+#: ../../source/Platform a67830b1483e4af98f83cf0b2a57bf20 deployment.rst:305
+msgid "安装包中的文件内容包括："
+msgstr ""
+
+#: ../../source/Platform 3461519bf17e43aea4bf2b43bfdfc2bf deployment.rst:307
+msgid ""
+"![](http://doc.hyperchain.cn:8099/storage/012640d76a6a90aef09202ca9b19e1fb4070?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYzNjYwNTkzNywiaWF0IjoxNjM2MDAxMTM3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzAxMjY0MGQ3NmE2YTkwYWVmMDkyMDJjYTliMTllMWZiNDA3MCJ9"
+"._ukG-fkZ1t6fq-1iA7VWkBGZAK1CrBhDSKeOQRmYdT0&download=image.png \"\")"
+msgstr ""
+
+#: ../../source/Platform 440cda73af7049828046614949d17878 deployment.rst:309
+msgid "## 4.1 检查LICENSE文件"
+msgstr ""
+
+#: ../../source/Platform 7b66c75a4e07469eb9b91c2596b31a70 deployment.rst:311
+msgid "由于LINCESE文件和Flato安装包不是一起打包分发的，所以在启动节点前，需要检查一下LICENSE文件是否已经更新到正确版本。"
+msgstr ""
+
+#: ../../source/Platform 9336becb98cd4928aa650ff68d58c9c4 deployment.rst:313
+msgid "LICENSE文件位于Flato节点的根录下，文件名即LICENSE，如果不确定是否是最新版本，可以用原始的LICENSE文件再覆盖一遍。"
+msgstr ""
+
+#: ../../source/Platform 5939dc97d75a4fc8a7a6929bb81ee64c deployment.rst:315
+msgid ""
+"```bash #解压缩cd ~tar xvf LICENSE-20180701.tar.gz "
+"#解压出来后，LICENSE文件夹的名字可能是License-20180701#更新所有节点的LICENSE#根据实际情况修改License-20180701"
+"/LICENSE-abcdef和/opt/flato#拷贝命令的目标文件名，一定是LICENSEcp License-20180701"
+"/LICENSE-abcdef /opt/flato/LICENSE ```"
+msgstr ""
+
+#: ../../source/Platform 422cef8f91504b83a87ffd156fa30dad deployment.rst:319
+msgid "**请依次检查4个节点的LICENSE文件。**"
+msgstr ""
+
+#: ../../source/Platform 96ee94801d7940f19c9072761a728440 deployment.rst:321
+msgid "## 4.2 vi编辑器使用方法"
+msgstr ""
+
+#: ../../source/Platform d1db77d8e4cc49d0a72b242c2aa1652a deployment.rst:323
+msgid "下面的配置文件的编辑需要使用到vi文本编辑器，在此介绍vi的使用方法"
+msgstr ""
+
+#: ../../source/Platform 33b7360ceefa4a7a9c843bfebe3d866a deployment.rst:325
+msgid "1、使用vi命令加文件名对某个文件进行编辑，进入vi编辑文件的界面"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:327 df4658d959764ba4b42e266da92b0a7b
+msgid "```javascript vi anyFile.txtna ```"
+msgstr ""
+
+#: ../../source/Platform 781f4ba32acd41c7b5527ab5cc87da30 deployment.rst:331
+msgid "2、按下i键进入编辑模式，方向键控制光标移动"
+msgstr ""
+
+#: ../../source/Platform 2ab4e5d13b9c4778b913534fb5ac1dc0 deployment.rst:333
+msgid "3、编辑完成后，按下Esc键进入命令模式，输入:wq保存修改并退出vi"
+msgstr ""
+
+#: ../../source/Platform 10cf7d014a0c441ba86cf0cdc3623cea deployment.rst:335
+msgid "```javascript :wq ```"
+msgstr ""
+
+#: ../../source/Platform d3682b0895bd483982e5b724b7be8f75 deployment.rst:339
+msgid "4、若要放弃本次编辑，按下Esc键进入命令模式,输入:q!放弃修改并退出vi"
+msgstr ""
+
+#: ../../source/Platform 4770125530ec4530befe0432e35b64e6 deployment.rst:341
+msgid "```javascript :q! ```"
+msgstr ""
+
+#: ../../source/Platform 86dc6e3b136843a187192fa2f97698d6 deployment.rst:345
+msgid "## 4.3 修改配置文件"
+msgstr ""
+
+#: ../../source/Platform 6a63f8df26d24a828126c45d9517e051 deployment.rst:347
+msgid "### **4.3.1 dynamic.toml **"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:349 f3ad850b10904661bae5d86ac06ecd35
+msgid "编辑 `dynamic.toml`"
+msgstr ""
+
+#: ../../source/Platform ca320fd16ddc4a75a91a759f1b017e97 deployment.rst:351
+msgid "```bash vi configuration/dynamic.toml ```"
+msgstr ""
+
+#: ../../source/Platform 6de7d18fbce4475db1143afba7ca6a3f deployment.rst:355
+msgid "其内容如下"
+msgstr ""
+
+#: ../../source/Platform db16e9fb57764d749eb9114b3d2b9075 deployment.rst:357
+msgid ""
+"```yaml self = \"node1\"[port]jsonrpc     = 8081grpc        = 50011 [p2p]"
+" [p2p.ip.self]        # domain 用于指定本地节点目前处在的网络域名称，比如本地节点目前        # "
+"所处的域名称为“domain1”         domain = \"domain1\"      # addrs "
+"用于指定本地节点网络可互通的网络域有哪些，并且指定了这些域        # 下的节点应该使用哪个 IP 地址来连自己（即本地节点），这个 IP "
+"地址可能为本地        # 节点的 IP 地址，也可能是代理设备的地址        addrs = [             "
+"\"domain1 127.0.0.1:50011\",             \"domain2 127.0.0.1:50011\","
+"             \"domain3 127.0.0.1:50011\",             \"domain4 "
+"127.0.0.1:50011\",         ][[namespace]]    name = \"global\"    start ="
+" true ```"
+msgstr ""
+
+#: ../../source/Platform 12c658c45dd043a7beedf375740e3f11 deployment.rst:361
+msgid "**修改port配置**"
+msgstr ""
+
+#: ../../source/Platform 26886bd9a0ce4f23a7f0f91c5602321c
+#: 3b38e473afb64ad7bb67e50edf39eca5 deployment.rst:363 deployment.rst:399
+msgid "内容为："
+msgstr ""
+
+#: ../../source/Platform cebf01a6763b437f96536dc847b8ffc1 deployment.rst:365
+msgid "```javascript [port]jsonrpc     = 8081grpc        = 50011 ```"
+msgstr ""
+
+#: ../../source/Platform 3a5ae70ad504496bb04937120a83bb9e deployment.rst:369
+msgid "**因为我们选择单服务器单节点模式，实际上每个节点可以使用默认的port配置，但是为了介绍如何正确修改节点配置，这里还是区别一下各节点的端口，即1~4号节点分别使用为**`**xxxx1~xxxx4**`**号端口**"
+msgstr ""
+
+#: ../../source/Platform 0a6f327a1ddc4a1997f5245d0da67854 deployment.rst:371
+msgid "以2号节点为例，它的port内容如下："
+msgstr ""
+
+#: ../../source/Platform deployment.rst:373 f09f486a66e5493fadc9b34019460481
+msgid "```javascript [port]jsonrpc     = 8082grpc        = 50012 # p2p ```"
+msgstr ""
+
+#: ../../source/Platform 952e69dfb0814aaf82578bd431369ebc deployment.rst:377
+msgid "需要注意的是，在默认配置中除了1号节点不需要修改port配置，其他节点都要修改port配置。请依次配置剩余节点的port配置。"
+msgstr ""
+
+#: ../../source/Platform 5a7d15619265465f9df74ba27ec5f492 deployment.rst:379
+msgid "**修改域配置**"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:381 fe2f1b856637441dac8edc91b45c597d
+msgid "以下是详细的配置说明："
+msgstr ""
+
+#: ../../source/Platform 62266259048449ebadecc9d45ee14993 deployment.rst:383
+msgid "```javascript"
+msgstr ""
+
+#: ../../source/Platform d3b50d201d184ad88f084c6e80caf97e deployment.rst:384
+msgid ""
+"[p2p.ip.self]        # 本节点所在域名的域名           domain = \"domain1\""
+"          # 本节点在不同的域中的地址          # "
+"举例来说，如果节点2属于域`domain2`，那么节点2访问节点1时需要用节点1声明的在`domain2`域中对外暴露的地址，换句话说，节点2访问本节点时用的地址是`127.0.0.1:50012`。"
+"      addrs = [        \"domain1 127.0.0.1:50012\",      \"domain2 "
+"127.0.0.1:50012\",      \"domain3 127.0.0.1:50012\",      \"domain4 "
+"127.0.0.1:50012\",     ]"
+msgstr ""
+
+#: ../../source/Platform a2de706de16e46d9b1d0cd0ff7b8950a deployment.rst:387
+msgid "这里是配置是比较容易出错的地方，最简单的配置方式就是："
+msgstr ""
+
+#: ../../source/Platform c5464024ead049beb5bf8f9b69b69392 deployment.rst:389
+msgid "所有节点都在一个domain里：所有节点都在同一个内网环境，只要配置一个domain和该节点在这个domain里的IP地址"
+msgstr ""
+
+#: ../../source/Platform d075347204d042b1bef2290139230a07 deployment.rst:391
+msgid "**请按照上述内容格式，依次更新剩余节点的域配置。**"
+msgstr ""
+
+#: ../../source/Platform 81c3314361a6444ebc0d26d97d6a95ed deployment.rst:393
+msgid "**更复杂的网络环境下：**"
+msgstr ""
+
+#: ../../source/Platform 62da95705a824ff6868cc5c1fdae0857 deployment.rst:395
+msgid ""
+"在一些加入了类似Nginx代理的网络环境中，这个文件的配置极其容易出错，一般可以这样理解，服务器node1在domain1中有自己的`node1_domain1_ip`；但是在domain2中它的`node1_domain2_ip`，是它在domain2中`最内层的一个Nginx代理上，所分配的服务器node1转发地址`，domain2中其他的服务器node2、node3是通过连接最内层的Nginx上的`node1_domain2_ip`访问处于外部的node1服务器的。所以domain2中最内层Nginx上的`node1_domain2_ip`，就是node1服务器addr.toml中，该填的`domain2"
+" node1_domain2_ip`地址。"
+msgstr ""
+
+#: ../../source/Platform a406154daff142619c352e49636394cd deployment.rst:397
+msgid "**修改host配置**"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:401 ff78a2ef3a5a47659f4f14782924e5bb
+msgid ""
+"```javascript [p2p.ip.remote]hosts = [ \"node1 127.0.0.1:50011\", \"node2"
+" 127.0.0.1:50012\", \"node3 127.0.0.1:50013\", \"node4 127.0.0.1:50014\","
+"  ] ```"
+msgstr ""
+
+#: ../../source/Platform cfafc859e7ad4c8ca606a3aae1bd844a deployment.rst:405
+msgid "配置规则很简单：`hostname ip_address:port`将所有的节点的节点名称和IP地址端口配置好即可（port为节点间通讯的端口）。"
+msgstr ""
+
+#: ../../source/Platform 1f5bbf4109324e748b8c79863bc8dd55 deployment.rst:407
+msgid "修改方法为："
+msgstr ""
+
+#: ../../source/Platform 318e5c72ac7a48e7b92284dacac41788 deployment.rst:409
+msgid "将每行的`127.0.0.1`替换为4台服务器各自的IP地址"
+msgstr ""
+
+#: ../../source/Platform 26c1345d693846bd889d0f10af02a7ef deployment.rst:411
+msgid "将每行的`5001x`端口换成每个Flato节点自己的grpc端口"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:413 fbf72d3b64d54f259844a75227f00e40
+msgid "**因为我们选择单服务器单节点模式，实际上每个节点可以使用默认的50011端口，但是为了介绍如何正确修改节点配置，这里还是将grpc端口定为**`**50011~50014**`"
+msgstr ""
+
+#: ../../source/Platform 9b32be75d88a4fc3945b33c4c88dc869 deployment.rst:415
+msgid "以服务器IP`10.10.10.1~10.10.10.4`为例，将hosts.toml文件修改为类似以下的内容："
+msgstr ""
+
+#: ../../source/Platform ad509b50410c4aec96407c7599e16721 deployment.rst:417
+msgid ""
+"```javascript hosts = [\"node1 10.10.10.1:50011\",\"node2 "
+"10.10.10.2:50012\",\"node3 10.10.10.3:50013\",\"node4 10.10.10.4:50014\"]"
+" ```"
+msgstr ""
+
+#: ../../source/Platform cb1110fe6fa44f6d887e5e2d06495e67 deployment.rst:421
+msgid "需要注意的是，4个节点的hosts配置都是一致的，请依次配置。"
+msgstr ""
+
+#: ../../source/Platform b533feb206a0433b914dfe074ce0bc86 deployment.rst:423
+msgid "### 4.3.2 ns_dynamic.toml"
+msgstr ""
+
+#: ../../source/Platform 3a16cb49ec7d406b85696b1fa0ca9570 deployment.rst:425
+msgid "编辑 `ns_dynamic.toml`"
+msgstr ""
+
+#: ../../source/Platform c8299f9ff1af4121a4e6e96ff9e84ed5 deployment.rst:427
+msgid "```bash vi configuration/global/ns_dynamic.toml ```"
+msgstr ""
+
+#: ../../source/Platform 2c9b34183f0441f9906cc2833f720176 deployment.rst:431
+msgid "其内容如下："
+msgstr ""
+
+#: ../../source/Platform 3a4a096ff29346f5944a31efb570a0cb deployment.rst:433
+msgid ""
+"```yaml [consensus]algo = \"RBFT\"[self]n           = 4         # "
+"运行时修改。表示所连vp节点的个数，该值在网络中有节点加入或退出时会实时变化。hostname    = \"node1\"   # "
+"本地节点的hostnamenew         = false     # "
+"运行时修改。新节点成功加入网络以后，该值会从true变为false。[[nodes]]hostname    = "
+"\"node1\"[[nodes]]hostname    = \"node2\"[[nodes]]hostname    = "
+"\"node3\"[[nodes]]hostname    = \"node4\"[p2p]        [p2p.ip.remote]"
+"               # hosts 用于指定本地节点启动后要向哪些节点发起连接，并且指定了通往               # "
+"这些节点的可连通地址，这个地址可能是对端节点的 IP 地址，也可能是               # 代理设备的地址。"
+"               # 如果该列表里指定了本地节点自己的hostname和地址，则自动忽略该项。                "
+"hosts = [                 \"node1 127.0.0.1:50011\",                 "
+"\"node2 127.0.0.1:50012\",                 \"node3 127.0.0.1:50013\","
+"                 \"node4 127.0.0.1:50014\",            ] ```"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:437 f1aa6661d85f47d9a77386d68ccd4279
+msgid "其中需要注意`[[nodes]]`配置，连接多少个VP节点，就加入多少个`[[nodes]]`部分："
+msgstr ""
+
+#: ../../source/Platform deployment.rst:439 e4d9cbfa3b5d4dc79421cb5a3544b57e
+msgid "```javascript [[nodes]]  hostname = \"node4\" ```"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:443 ec053d90002e4b07a1ab0f8ae6e076ac
+msgid "**上面的**`**hostname**`**必须要与**`**dynamic.toml**`**文件中的host配置中保持一致；**"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:445 e473dd2bd15b469997249137486966a6
+msgid "在`self`**部分需要注意的几个配置项以及配置解释**："
+msgstr ""
+
+#: ../../source/Platform 0516a61f261347c39d44912762f6e59d deployment.rst:447
+msgid ""
+"```javascript [self]n         = 4           # "
+"运行时修改。表示所连vp节点的个数，该值在有节点加入或退出时实时变化。hostname    = \"node1\"new         = "
+"false     # 运行时修改。新节点成功加入网络以后，该值会从true变为false。 ```"
+msgstr ""
+
+#: ../../source/Platform 772293d9556e480e8daaa1b92c237948 deployment.rst:451
+msgid "**需要注意的是，本例中除了1号节点不需要修改ns_dynamic.toml，其他节点都要修改配置。请依次配置剩余节点的ns_dynamic.toml文件。**"
+msgstr ""
+
+#: ../../source/Platform 55ea1fac5f4146c0ab5d9f3bc023be64 deployment.rst:455
+msgid "## 4.4 修改配置文件ns_static.toml"
+msgstr ""
+
+#: ../../source/Platform dbf71665c1634a62a8f1f52ea0f1dd15 deployment.rst:457
+msgid "在ns_static.toml的最上方有创世账户的默认配置，如下所示："
+msgstr ""
+
+#: ../../source/Platform 3a7f8bb0c79448a3b88b0b25448d7f0c deployment.rst:459
+msgid ""
+"```javascript "
+"[genesis][genesis.alloc]\"000f1a7a08ccc48e5d30f80850cf1cf283aa3abd\" = "
+"\"1000000000\"\"e93b92f1da08f925bdee44e91e7768380ae83307\" = "
+"\"1000000000\"\"6201cb0448964ac597faf6fdf1f472edf2a22b89\" = "
+"\"1000000000\"\"b18c8575e3284e79b92100025a31378feb8100d6\" = "
+"\"1000000000\"\"856E2B9A5FA82FD1B031D1FF6863864DBAC7995D\" = "
+"\"1000000000\"\"fbca6a7e9e29728773b270d3f00153c75d04e1ad\" = "
+"\"1000000000\" ```"
+msgstr ""
+
+#: ../../source/Platform 43ee2560e6d64b2f8e5165324b733f2c deployment.rst:463
+msgid "这些账户及其对应的余额会在区块链启动时被创建。**需要注意的是，作为默认账户，它们的私钥并不会对外暴露，因此请您自行创建创世账户，填入所有创世节点的配置文件，并妥善保管账户私钥。**"
+msgstr ""
+
+#: ../../source/Platform adb80c8d43c141f7b820e056e7fd4839 deployment.rst:467
+msgid "## 4.5 检查配置文件"
+msgstr ""
+
+#: ../../source/Platform db5fb88f8c3d469089243fa8e9895eaf deployment.rst:469
+msgid "假设服务器IP地址为`10.10.10.1~10.10.10.4`，各自使用的端口是`xxxx1~xxxx4`，以下是配置文件更新后的样例。"
+msgstr ""
+
+#: ../../source/Platform 0e777cf8f44b4dada8e274b26560d057 deployment.rst:471
+msgid "### 4.5.1 各节点dynamic.toml"
+msgstr ""
+
+#: ../../source/Platform 86ff8396f98b4563ab17019fcf8eebb4
+#: 99a7a0cc43d543d9adb7d967ad189244 deployment.rst:473 deployment.rst:499
+msgid "1号节点："
+msgstr ""
+
+#: ../../source/Platform 5b902bf628c441f7901dde347c155825 deployment.rst:475
+msgid ""
+"```javascript self = \"node1\"[port]jsonrpc     = 8081grpc        = "
+"50011[p2p]  [p2p.ip.self]       domain = \"domain1\"      addrs = ["
+"        \"domain1 10.10.10.1:50011\",            ][[namespace]]    name ="
+" \"global\"   start = true ```"
+msgstr ""
+
+#: ../../source/Platform 1a09093aa7fe40b2b41560bcef230a90
+#: 6f54ed59c9ab412ab1776a4bcd47af25 deployment.rst:479 deployment.rst:505
+msgid "2号节点："
+msgstr ""
+
+#: ../../source/Platform 297459539d62470fa18c883008e72cd9 deployment.rst:481
+msgid ""
+"```javascript self = \"node2\"[port]jsonrpc     = 8082grpc        = "
+"50012[p2p]  [p2p.ip.self]       domain = \"domain1\"      addrs = ["
+"        \"domain1 10.10.10.2:50012\",            ][[namespace]]    name ="
+" \"global\"   start = true ```"
+msgstr ""
+
+#: ../../source/Platform a0a3cfa2d0c344179a6479e8ea114947
+#: b29b8b2face14a19af80df5ad57464fb deployment.rst:485 deployment.rst:511
+msgid "3号节点："
+msgstr ""
+
+#: ../../source/Platform 9c009fff451b4a4984c064df403e050c deployment.rst:487
+msgid ""
+"```javascript self = \"node3\"[port]jsonrpc     = 8083grpc        = "
+"50013[p2p]  [p2p.ip.self]       domain = \"domain1\"      addrs = ["
+"        \"domain1 10.10.10.3:50013\",            ][[namespace]]    name ="
+" \"global\"   start = true ```"
+msgstr ""
+
+#: ../../source/Platform 8e459f460e4c4d8ab5cc54bce8ff4cab
+#: c05b0e541f8340718f4b937fe4129240 deployment.rst:491 deployment.rst:517
+msgid "4号节点："
+msgstr ""
+
+#: ../../source/Platform 0ac3eb24539247d79eb95498a51b0df9 deployment.rst:493
+msgid ""
+"```javascript self = \"node4\"[port]jsonrpc     = 8084grpc        = "
+"50014[p2p]  [p2p.ip.self]       domain = \"domain1\"      addrs = ["
+"        \"domain1 10.10.10.4:50014\",            ][[namespace]]    name ="
+" \"global\"   start = true ```"
+msgstr ""
+
+#: ../../source/Platform 401d8b19224544a9b4e35a1db0c4e2fd deployment.rst:497
+msgid "### 4.5.2 各节点ns_dynamic.toml"
+msgstr ""
+
+#: ../../source/Platform 699df8bf78fd46a48e68dd682872d96d deployment.rst:501
+msgid ""
+"```javascript [consensus]algo = \"RBFT\"[self]n         = 4hostname    = "
+"\"node1\"new         = false[[nodes]]hostname    = "
+"\"node1\"[[nodes]]hostname    = \"node2\"[[nodes]]hostname    = "
+"\"node3\"[[nodes]]hostname    = \"node4\"[p2p]        [p2p.ip.remote]"
+"                # this node will connect to those peer, if here has self "
+"hostname, we will ignore it                hosts = [                 "
+"\"node2 10.10.10.2:50012\",                 \"node3 10.10.10.3:50013\","
+"                 \"node4 10.10.10.4:50014\",            ] ```"
+msgstr ""
+
+#: ../../source/Platform 91449a82b01c4ec3b900eb544b7e1494 deployment.rst:507
+msgid ""
+"```javascript [consensus]algo = \"RBFT\"[self]n         = 4hostname    = "
+"\"node2\"new         = false[[nodes]]hostname    = "
+"\"node1\"[[nodes]]hostname    = \"node2\"[[nodes]]hostname    = "
+"\"node3\"[[nodes]]hostname    = \"node4\"[p2p]        [p2p.ip.remote]"
+"                # this node will connect to those peer, if here has self "
+"hostname, we will ignore it                hosts = [                 "
+"\"node1 10.10.10.1:50011\",                 \"node3 10.10.10.3:50013\","
+"                 \"node4 10.10.10.4:50014\",            ] ```"
+msgstr ""
+
+#: ../../source/Platform 049e74cbfa1d4bac9ce2870c253b6c18 deployment.rst:513
+msgid ""
+"```javascript [consensus]algo = \"RBFT\"[self]n         = 4hostname    = "
+"\"node3\"new         = false[[nodes]]hostname    = "
+"\"node1\"[[nodes]]hostname    = \"node2\"[[nodes]]hostname    = "
+"\"node3\"[[nodes]]hostname    = \"node4\"[p2p]        [p2p.ip.remote]"
+"                # this node will connect to those peer, if here has self "
+"hostname, we will ignore it                hosts = [                 "
+"\"node1 10.10.10.1:50011\",                 \"node2 10.10.10.2:50012\","
+"                 \"node4 10.10.10.4:50014\",            ] ```"
+msgstr ""
+
+#: ../../source/Platform 8f827b54ba514c21b122f747abe62884 deployment.rst:519
+msgid ""
+"```javascript [consensus]algo = \"RBFT\"[self]n         = 4hostname    = "
+"\"node4\"new         = false[[nodes]]hostname    = "
+"\"node1\"[[nodes]]hostname    = \"node2\"[[nodes]]hostname    = "
+"\"node3\"[[nodes]]hostname    = \"node4\"[p2p]        [p2p.ip.remote]"
+"                # this node will connect to those peer, if here has self "
+"hostname, we will ignore it                hosts = [                 "
+"\"node1 10.10.10.1:50011\",                 \"node2 10.10.10.2:50012\","
+"                 \"node3 10.10.10.3:50013\",            ] ```"
+msgstr ""
+
+#: ../../source/Platform 4bc0d336549f497e9c91a331303e3b33 deployment.rst:523
+msgid "## 4.6 检查证书配置"
+msgstr ""
+
+#: ../../source/Platform 30ac9ae6f7ea4f22ab3b2fd28ee6c9c5 deployment.rst:525
+msgid "### 4.6.1 非分布式CA证书配置"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:527 eb4b703cef6b4605bc89049700b5c2b1
+msgid "flato在默认配置下都是以非分布式CA的方式进行启动。"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:529 fb3a776bab0f4c6698af5934e5dcf0bd
+msgid "在INFO或者OA上下载的V1.7+证书套件解压后会看到ca、flato、hyperchain三个目录，详细使用可见README.md。**注意下载时需要指明节点对应的节点名称（hostname），名称应该和稍后部署时填写的节点名称一致。**"
+msgstr ""
+
+#: ../../source/Platform a5fabf7bbe0b4e41905355205b7a3af2 deployment.rst:531
+msgid "其中flato目录里的证书套件用来部署flato，打开flato目录后可以看到一系列node目录，如下图所示。"
+msgstr ""
+
+#: ../../source/Platform 138c016cfa77401581dde9648b6bc630 deployment.rst:533
+msgid ""
+"![](http://doc.hyperchain.cn:8099/storage/011wdc15e6755c5045267c28ebb6743a403a?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYzNjYwNTkzNywiaWF0IjoxNjM2MDAxMTM3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzAxMXdkYzE1ZTY3NTVjNTA0NTI2N2MyOGViYjY3NDNhNDAzYSJ9.Sf71WT86VblDAF6rdnyU_M03B4CP4MAeMsGat2OD9TM&download=image.png"
+" \"\")"
+msgstr ""
+
+#: ../../source/Platform 7ac59472b815454482f68d1e98a05c04 deployment.rst:535
+msgid ""
+"以节点1为例，部署时直接**将证书套件里node1目录下的CA、certs目录（如下图）放到./namespaces/global/certs/目录下**即可。将tls目录下的tlsca.ca"
+" "
+"、tls_peer.cert、tls_peer.priv放到flato项目node1的./tls目录下即可。tls相关的配置在global.toml的p2p配置项下。"
+msgstr ""
+
+#: ../../source/Platform d949884e975a48cd983012cc2d75c4bc deployment.rst:537
+msgid ""
+"![](http://doc.hyperchain.cn:8099/storage/011w7c53f321114635e0bad0f981d88ae965?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYzNjYwNTkzNywiaWF0IjoxNjM2MDAxMTM3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzAxMXc3YzUzZjMyMTExNDYzNWUwYmFkMGY5ODFkODhhZTk2NSJ9.PPkhkNqzHK6Reu3YPIPeSl0fEQ3iAJVxkI5g_QY6JCY&download=image.png"
+" \"\")"
+msgstr ""
+
+#: ../../source/Platform 1aa0f994ef4147aea986215bed811d7d deployment.rst:539
+msgid "注意事项："
+msgstr ""
+
+#: ../../source/Platform 426f73cf3b4d4881ba828082da3af7d7 deployment.rst:541
+msgid "如果发生找不到证书这类错误，请修改./configuration/global/ns_static.toml文件中的"
+msgstr ""
+
+#: ../../source/Platform 824609403722493a9c9549452918649a deployment.rst:543
+msgid "[encryption.]配置项，修改为 `ca = \"certs/CA\"`"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:545 f3a1819a968f454aac6a5ecdfe81c4ef
+msgid "[encryption.ecert]配置项，修改为 `ecert = \"certs/certs\"`"
+msgstr ""
+
+#: ../../source/Platform 476cc76a435447dea49e5f3cb60e97b8 deployment.rst:547
+msgid ""
+"如果节点启动报错**\"the searched certificate configuration item does not match "
+"hostname : need hostname1, but "
+"hostname2\"**此类的错误，请查看证书生成时是否有误。在INFO或者OA上申请SDKCERT,ECERT时，节点名称（域名）一栏需要填写每个节点对应的hostname，如下图："
+msgstr ""
+
+#: ../../source/Platform a19cd79282944d86980f49ed4d768e03 deployment.rst:549
+msgid ""
+"![](http://doc.hyperchain.cn:8099/storage/011vde077a93af963ac20b1d6ba4ba2db8d5?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYzNjYwNTkzNywiaWF0IjoxNjM2MDAxMTM3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzAxMXZkZTA3N2E5M2FmOTYzYWMyMGIxZDZiYTRiYTJkYjhkNSJ9.2-HQ1GHngv3amzNDVAxjQ6irrwvQCpTz9EFBms3RC-k&download=image.png"
+" \"\")"
+msgstr ""
+
+#: ../../source/Platform 0f710f7c1f2f4b94bfcb6577aa5f39cf deployment.rst:551
+msgid "### 4.6.2 分布式CA证书配置"
+msgstr ""
+
+#: ../../source/Platform 14dc4e375b4041db82c6b94d5fdea4a2 deployment.rst:553
+msgid "目前分布式CA的证书能够通过certgen生成或INFO进行下载，证书放置路径和非分布式CA相同，但是需要修改./configuration/global/ns_static.toml文件中的"
+msgstr ""
+
+#: ../../source/Platform 27c95a82fe0a4827886e160f39e06589 deployment.rst:555
+msgid "[distributedCA]配置项，修改为 `enable = true`"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:557 fa65f3703e714670a4fa0396bf22fedf
+msgid "通过INFO下载分布式CA证书需要选择“分布式CA”选项："
+msgstr ""
+
+#: ../../source/Platform 70fbfd3ad3c3476c95be969c232c9c0b deployment.rst:559
+#, python-format
+msgid ""
+"![](http://doc.hyperchain.cn:8099/storage/011v9ecbb85907fb4693915e8741ad99cea2?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYzNjYwNTkzNywiaWF0IjoxNjM2MDAxMTM3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzAxMXY5ZWNiYjg1OTA3ZmI0NjkzOTE1ZTg3NDFhZDk5Y2VhMiJ9.9XJj4S12qexDWtQAMzE3XmF8jaSGGKLWCIJerW0vCQI&download=%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202020-07-17%20%E4%B8%8B%E5%8D%888.07.28.png"
+" \"\")"
+msgstr ""
+
+#: ../../source/Platform b1af814931ff448f8a0b32d717e4ef92 deployment.rst:561
+msgid "通过certgen生成的方式需要借助于如下脚本："
+msgstr ""
+
+#: ../../source/Platform 4584b4008edf483cb93bb693c13ac8c6 deployment.rst:565
+msgid "下载完成后将其放到和可执行 certgen 二进制文件同一目录下，输入"
+msgstr ""
+
+#: ../../source/Platform 4e8036b7f236452c84e485825ce62616 deployment.rst:567
+msgid "```text ./gencert.sh ```"
+msgstr ""
+
+#: ../../source/Platform 67fbcc3e38c247c2851268c9e7a60f30 deployment.rst:571
+msgid "指令运行，按照提示输入相关内容即可完成证书的创建。"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:573 e150bea258914355b36ac1088ecec00b
+msgid "该shell脚本是通过调用certgen相关指令来完成创建证书的操作的，能够让操作者选择生成分布式CA或者非分布式CA的证书。无论是分布式CA还是非分布式CA都会选择是否生成国密自签证书和国密公私钥，需要说明的是，选择了生成国密自签证书会自动生成国密公私钥对，选择生成非国密自签证书会生成非国密公私钥对，两者需要配套。"
+msgstr ""
+
+#: ../../source/Platform a55bd6be23b643d7be6c72d6e34e6d9d deployment.rst:575
+msgid "对于分布式CA来说，该脚本默认生成4个CA，需要按照提示输入CA相关信息；并默认生成4个节点的证书，生成顺序为："
+msgstr ""
+
+#: ../../source/Platform deployment.rst:577 e3060685bc9b4949a7efe969d862e40b
+msgid "node1需要生成node2.cert(root2颁发), node3.cert(root3颁发), node4.cert(root4颁发);"
+msgstr ""
+
+#: ../../source/Platform 33b99a7a46e44200a86e79844f63a9ec deployment.rst:579
+msgid "node2需要生成node1.cert(root1颁发),node3.cert, node4.cert;"
+msgstr ""
+
+#: ../../source/Platform 4945ba08a24c48459d3c0fbe127993c9 deployment.rst:581
+msgid "node3需要生成node1.cert, node2.cert, node4.cert;"
+msgstr ""
+
+#: ../../source/Platform a94067a86f3e4159a19988572d708f24 deployment.rst:583
+msgid "node4需要生成node1.cert, node2.cert, node3.cert;"
+msgstr ""
+
+#: ../../source/Platform c583e2a321064154b3e6cae9627a980f deployment.rst:585
+msgid "其中CA1与node1对应按照提示输入信息即可。"
+msgstr ""
+
+#: ../../source/Platform c00cc4684011465aadf70aeaafb517dd deployment.rst:587
+msgid "对于非分布式CA来说，默认生成一个CA，输入CA相关信息后会提示输入要生成的节点证书的数量，例如如果有5个节点需要生成证书，输入5，然后根据提示输入相关信息即可。"
+msgstr ""
+
+#: ../../source/Platform 6138ff1b93064697865a9fc6be0e5da3 deployment.rst:589
+msgid "### 4.6.3 SOLO模式的证书说明"
+msgstr ""
+
+#: ../../source/Platform 3ac07c36051b47129f486eccea2e9a2b deployment.rst:591
+msgid "共识算法配置为solo的情况下启动flato时，flato单节点运行的模式称为solo模式。solo模式仅用于单节点功能的演示或者测试，不需要节点间的链接，因而我们不需要额外的证书配置。"
+msgstr ""
+
+#: ../../source/Platform 614061adc0fc4a61845963fae6cb796f deployment.rst:593
+msgid "当ns_dynamic.toml的[consensus.algo]配置为“SOLO”时，节点工作于solo模式。节点不需要任何证书的配置。"
+msgstr ""
+
+#: ../../source/Platform 66ecd434654e4d2db14a746248816d25 deployment.rst:595
+msgid "### 4.6.4不启用证书功能"
+msgstr ""
+
+#: ../../source/Platform a9817bc0abfd494ebb84a3b0301ea615 deployment.rst:597
+msgid ""
+"当用户对区块链安全有较高要求时（例如有信息安全等级保护要求时）可能选择使用外部的硬件SSL "
+"VPN网关来保证准入控制和链路安全，这时可以手动关闭准入控制功能。方法是手动将ns_static.toml中的**[encryption.check.enable]**和**[encryption.check.enableT]**设置为false。这种情况下节点不需要配置任何证书即可启动。"
+msgstr ""
+
+#: ../../source/Platform 89628da9df5c4a42a954517b88021d11 deployment.rst:599
+msgid ""
+"```text [encryption.check]enable     = false   #enable RCertenableT    = "
+"false  #enable TCert ```"
+msgstr ""
+
+#: ../../source/Platform 920e6f4f14bf44ceb1e6e7ac4f9dd388 deployment.rst:603
+msgid ""
+"这时节点关闭准入控制功能，但是仍然会启用链路加密。可以同将**[encryption.security. "
+"algo]**设置为pure关闭链路加密功能（默认为sm4加密保护）。"
+msgstr ""
+
+#: ../../source/Platform 441f4e06139a41bc8ec02ba91e1e3dc0 deployment.rst:605
+msgid "```text [consensus]algo = \"SOLO\" ```"
+msgstr ""
+
+#: ../../source/Platform 3dfe6377e13a401394f349541b60b01f deployment.rst:609
+msgid "请**注意**这种情况下**请务必采取必要的外部措施保护区块链网络安全**。"
+msgstr ""
+
+#: ../../source/Platform 347547291b2c4fafa0c0746fd624dcdb deployment.rst:611
+msgid "# 第五章 启动节点"
+msgstr ""
+
+#: ../../source/Platform 19a66fcf57af4f0d8cf335c34f06a5ad deployment.rst:613
+msgid "## 5.1 保存配置"
+msgstr ""
+
+#: ../../source/Platform 5af43c5e68bb49f2a57d352b00fefc68 deployment.rst:615
+msgid "在启动节点前，备份整个/opt/flato目录，主要是dynamic.toml和ns_dynamic.toml需要备份。"
+msgstr ""
+
+#: ../../source/Platform 799a28e0295843a2a23d35ac82fad2ce deployment.rst:617
+msgid "备份方法如下："
+msgstr ""
+
+#: ../../source/Platform 6936b7203f0e40cfb75fa63e3b58fd7c deployment.rst:619
+msgid ""
+"```bash #根据实际情况修改/opt/flatocd /opt/flato/. ./tar zcvf ~/flato-"
+"backup.tar.gz flato ```"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:623 e5341a1481564ecdb0a3b5001369015a
+msgid "**请依次备份4个节点的Flato目标安装目录，本例中就是**`**/opt/flato**`**目录。**"
+msgstr ""
+
+#: ../../source/Platform 875316b2e08247c4a656db51b2bfd50c deployment.rst:625
+msgid "## 5.2 启动节点"
+msgstr ""
+
+#: ../../source/Platform d34e50a529924a879623e645727d5b1b deployment.rst:627
+msgid "启动请再按照步骤`3.3`检查一次flato二进制程序能否正常执行。"
+msgstr ""
+
+#: ../../source/Platform c5f5235b3e694ebba96a25d1b0ef6c0d deployment.rst:629
+msgid "```bash #根据实际情况修改/opt/flatocd /opt/flato/./flato --version ```"
+msgstr ""
+
+#: ../../source/Platform c2ed29375f7a4f73b1a3dfbbc9b5e867 deployment.rst:633
+msgid "检查完毕后，使用`start.sh`启动flato进程:"
+msgstr ""
+
+#: ../../source/Platform 7123f42c7674477d99f8b8056997a881 deployment.rst:635
+msgid ""
+"```bash #根据实际情况修改/opt/flatocd "
+"/opt/flato./start.sh#或者如果上面命令失败，尝试下面这个命令#./flato start ```"
+msgstr ""
+
+#: ../../source/Platform 547225dc18624b4f9f0dedfd9ee65783 deployment.rst:639
+msgid "**依次启动4台服务器上的Flato进程。**"
+msgstr ""
+
+#: ../../source/Platform 54894e1c18c347709b10ad79fb7f08be deployment.rst:641
+msgid "## 5.3 查看日志"
+msgstr ""
+
+#: ../../source/Platform 98992f5b290746d99aab5c819b1b782a deployment.rst:643
+msgid "查看flato的日志，查看运行情况。"
+msgstr ""
+
+#: ../../source/Platform d362028c797341b98e4aa883ef0356f2 deployment.rst:645
+msgid "System级别日志的路径默认为："
+msgstr ""
+
+#: ../../source/Platform a432a154a7f44b43957a59c266f97c01 deployment.rst:647
+msgid "`/opt/flato/system/logs`"
+msgstr ""
+
+#: ../../source/Platform 8c2d06bb086e4a47b50b2eb87f260e43 deployment.rst:649
+msgid "Namespace级别日志的路径默认(以global为例)："
+msgstr ""
+
+#: ../../source/Platform 0472c7d00c3344109558586a9abab106 deployment.rst:651
+msgid "`/opt/flato/namespaces/global/data/logsls`"
+msgstr ""
+
+#: ../../source/Platform 8109ca55adc24fa99a571c623c659446 deployment.rst:653
+msgid "若Namespace级别日志显示如下信息，即表示节点正常加入共识网络，flato平台部署启动完成。"
+msgstr ""
+
+#: ../../source/Platform 0cfc9f921eca4c20912dceca8313d664 deployment.rst:655
+#, python-format
+msgid ""
+"![](http://doc.hyperchain.cn:8099/storage/011od45a6dc36dc1c4f1351155602c5fad69?Signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcHBJRCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9hcHBJZCI6IjU5Mzc3MGZmODM5NjMyMDAyZTAzNThmMSIsIl9vcmdhbml6YXRpb25JZCI6IiIsImV4cCI6MTYzNjYwNTkzNywiaWF0IjoxNjM2MDAxMTM3LCJyZXNvdXJjZSI6Ii9zdG9yYWdlLzAxMW9kNDVhNmRjMzZkYzFjNGYxMzUxMTU1NjAyYzVmYWQ2OSJ9"
+".TiYp98DECRcMM1GwfE7ACZ-"
+"pYqIS7FfZrR6zazq7SPo&download=%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-12-16%2019.10.06.png"
+" \"\")"
+msgstr ""
+
+#: ../../source/Platform 5ab5d7098fa644c08725859d4d7c86e1 deployment.rst:657
+msgid "**请依次检查4台服务器上的Flato日志。**"
+msgstr ""
+
+#: ../../source/Platform b023ebb10bed4eb8b0bd210119fd3b73 deployment.rst:659
+msgid "## 5.4 停止节点"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:661 f28f63db22134ae3aed37adf308cc079
+msgid "停止某个节点的flato，执行步骤如下："
+msgstr ""
+
+#: ../../source/Platform 588bb4e5e8c04e0d8f7d4d55419cab4d deployment.rst:663
+msgid "```bash cd /opt/flato./stop.sh#或者如果上面命令失败，尝试下面这个命令#./flato stop ```"
+msgstr ""
+
+#: ../../source/Platform 1efc97642daf413194f15c037ddcdf82 deployment.rst:667
+msgid "## 5.5 重启节点"
+msgstr ""
+
+#: ../../source/Platform 61eaf2e7abf2415fbf96422ba49728e5 deployment.rst:669
+msgid "重启某个节点的flato，执行步骤如下："
+msgstr ""
+
+#: ../../source/Platform de5f6587c65d4631aaa917cc8a46ce47 deployment.rst:671
+msgid "```bash cd /opt/flato./restart.sh#或者如果上面命令失败，尝试下面这个命令#./flato restart ```"
+msgstr ""
+
+#: ../../source/Platform 48470f1a6f65463c8debe0fadc5e347e deployment.rst:675
+msgid "## 5.6 失败恢复"
+msgstr ""
+
+#: ../../source/Platform deployment.rst:677 ebd053cedadd46f2807dd4326443a363
+msgid "若启动失败，需要使用5.1小节当中的备份进行失败恢复"
+msgstr ""
+
+#: ../../source/Platform 18a66f6a1bd74efaa0f3ced3e0d6e901 deployment.rst:679
+msgid "将/opt/flato中的dynamic.toml和ns_dynamic.toml两个配置文件替换为备份中的相应配置文件"
+msgstr ""
+
+#: ../../source/Platform 25bc5686808c44c5b57e4cc80e7fac45 deployment.rst:681
+msgid ""
+"```javascript tar xvf ~/flato-backup.tar.gz ~/cp "
+"~/flato/configuration/dynamic.toml "
+"/opt/flato/configuration/dynamic.tomlcp "
+"~/flato/configuration/global/ns_dynamic.toml "
+"/opt/flato/configuration/global/ns_dynamic.toml ```"
+msgstr ""
+

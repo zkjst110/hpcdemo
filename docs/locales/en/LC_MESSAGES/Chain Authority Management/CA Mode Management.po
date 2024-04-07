@@ -1,0 +1,205 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Chain 249fd1e98dc34047b6302973c8ed2159
+#: 47512a7e7ebd4b7685a8c60badd1c0bf Authority Management.rst:4
+#: Management.rst:15 Management/CA Mode
+msgid "CA模式管理"
+msgstr ""
+
+#: ../../source/Chain 70ea433428a342acab741654bb332c7b Authority
+#: Management.rst:7 Management/CA Mode
+msgid "引言"
+msgstr ""
+
+#: ../../source/Chain 9b3de3cfe57846158fcf882a72da4887 Authority
+#: Management.rst:10 Management/CA Mode
+msgid "编写目的"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:12 Management/CA Mode
+#: e1c8d4fd471744f0a54c22ffe10d8f03
+msgid "本文档提供Hyperchain中ca模式管理的操作指南，作为ca模式管理与root ca管理的使用说明。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:18 Management/CA Mode
+#: d1bdd8ce60314201b19ab7aa8d6b81ac
+msgid "功能描述"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:20 Management/CA Mode
+#: e412ad2457674f33827b46b179a6e37c
+msgid "ca模式管理用于管理ca模式。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:22 Management/CA Mode
+#: faa05e8d93c14670b6c9be08103c85e7
+msgid "默认情况下ca模式在启动时配置好无法更改，后续只能查询。但是对于特殊的，从2.7.0以前的版本升级到2.7.0时，配置的ca模式无法通过升级记录到链上，因此需要通过提案设置ca模式，设置后也无法更改。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:24 Management/CA Mode
+#: fca38494f9da470ea88659efa02a71a0
+msgid "ca模式管理包括如下操作："
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:26 Management/CA Mode
+#: c0a3d527685b493f8f7ee3d3f7caeab5
+msgid ""
+"设置ca模式。从2.7.0以前的版本升级到2.7.0+，需要通过提案设置ca模式，如果为中心ca，设置完ca模式后还需要通过新增root "
+"ca的方式将所有使用的root ca上链。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:28 Management/CA Mode
+#: b74c458cd2bd4e1089eb9b647a54c393
+msgid "查询ca模式。查询ca模式可以通过提案的 `Direct` 操作直接进行查询。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:30 Management/CA Mode
+#: a00b4d41144f4924a8c31b0fdfa01919
+msgid ""
+"当ca模式为中心ca（非分布式ca）即Center时，可通过 `RootCAContract` 合约管理中心ca模式下使用的root "
+"ca，root ca管理包括如下操作："
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:32 Management/CA Mode
+#: ae99b13799054db9ba880ac645db72d2
+msgid "新增root ca，即增加一个新的信任的root ca。"
+msgstr ""
+
+#: ../../source/Chain 400d285806124f99b0d947ac2d80ba2d Authority
+#: Management.rst:34 Management/CA Mode
+msgid "查询root ca，即查询当前模式下信任的所有的root ca。"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:37 Management/CA Mode
+#: ac4a40ac7b3c4b5b93e1a41612741351
+msgid "litesdk接口说明"
+msgstr ""
+
+#: ../../source/Chain 30c08bdf72174ab59513c0b88a2afdb4 Authority
+#: Management.rst:40 Management/CA Mode
+msgid "ca模式接口说明"
+msgstr ""
+
+#: ../../source/Chain 25e89d5cccde4168899b327d3957435e Authority
+#: Management.rst:42 Management/CA Mode
+msgid ""
+"litesdk提供了 `ProposalBuilder` 构造器用于构造提案的操作，在 `ProposalBuilder` 中提供了 "
+"`createForCAMode` 、 `directForCAMode` 、 `vote` 、 `cancel` 和 `execute` "
+"方法分别用于创建ca模式类提案、直接执行ca模式类操作、提案投票、取消提案和执行提案的提案操作，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:88 Management/CA Mode
+#: f41a85f74a9240998eb6fb87df85d205
+msgid "ca模式的操作分以下几种："
+msgstr ""
+
+#: ../../source/Chain 1553949a1f9d4db5ba195a4a2ab99c6a Authority
+#: Management.rst:90 Management/CA Mode
+msgid "SetCAMode，设置ca模式，即为当前ns设置ca模式。ca模式存在的情况下不能再次设置ca模式，即只有当老版本升级到2.7.0+的版本时，可通过这届操作设置ca模式，设置的ca模式需要与新版启动时设置的ca模式相同，否则当前ns将停止运行。"
+msgstr ""
+
+#: ../../source/Chain 15ff2fe68771416fabe2876bc53a741d Authority
+#: Management.rst:92 Management/CA Mode
+msgid ""
+"GetCAMode，查询ca模式，即返回当前ns设置的ca模式。可通过 `ProposalContract` 的 `Direct` "
+"操作直接查询，无需投票。"
+msgstr ""
+
+#: ../../source/Chain 60adbf1d18c54429bdbc49570656121c Authority
+#: Management.rst:94 Management/CA Mode
+msgid ""
+"构造合约命名类操作 `CAModeOperation` 的构造器 `CAModeBuilder` 提供了 `setCAMode` 、 "
+"`getCAMode` 和 `build` 方法，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:122 Management/CA Mode
+#: e628726eb3ca4e1583573b1eef57b8f6
+msgid "root ca接口说明"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:124 Management/CA Mode
+#: af1e0a67e6b04cf2b781311ac7cce5ce
+msgid "`RootCAContract` 中提供的合约方法如下："
+msgstr ""
+
+#: ../../source/Chain 60be083e6981493e9ef24ee6c2e41d6d Authority
+#: Management.rst:126 Management/CA Mode
+msgid ""
+"`AddRootCA` : AddRootCA方法接收一个参数，即新增的root.ca文件内容，用于新增root ca，当ca "
+"mode为center，即中心ca时，链级管理员（admin用户）可以新增root ca。"
+msgstr ""
+
+#: ../../source/Chain 8286a622f0724e9cbd4a489e49e46086 Authority
+#: Management.rst:128 Management/CA Mode
+msgid ""
+"`GetRootCAs` : GetRootCAs方法不需要入参，用于查询链上所有的root ca，当ca "
+"mode为center时，返回链上所有当root ca。"
+msgstr ""
+
+#: ../../source/Chain 87a442dd6c3d41238a762977b20edf4d Authority
+#: Management.rst:130 Management/CA Mode
+msgid ""
+"构造 `RootCAContract` 操作的构造器 `RootCABuilder` 提供了 `addRootCA` 和 `getRootCAs`"
+" 方法，分别用于构造 `RootCAContract` 合约中的 `AddRootCA` 和 `GetRootCAs` 方法，其定义如下::"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:153 Management/CA Mode
+#: f19e1221df8b4b3eb16bbbdbacddbe70
+msgid "litesdk使用示例"
+msgstr ""
+
+#: ../../source/Chain 2f0196e99fc74e9fa7c5267b68b4f5b3 Authority
+#: Management.rst:156 Management/CA Mode
+msgid "ca模式使用示例"
+msgstr ""
+
+#: ../../source/Chain 41035f76fef447cab2f4b37118239cd2 Authority
+#: Management.rst:158 Management/CA Mode
+msgid "设置ca模式::"
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:204 Management/CA Mode
+#: a8b91c2ca42a488eafc0439f90573bb7
+msgid "通过 `Direct` 查询ca模式"
+msgstr ""
+
+#: ../../source/Chain 3d82e06c6ab14c6ea0a385d5cccd12d7 Authority
+#: Management.rst:223 Management/CA Mode
+msgid "root ca使用示例"
+msgstr ""
+
+#: ../../source/Chain 990311bb7b774d6cb55f5aecfeece421 Authority
+#: Management.rst:225 Management/CA Mode
+msgid "当ca模式为 `Center` 即中心ca时，可以对root ca进行管理。"
+msgstr ""
+
+#: ../../source/Chain 2970de1b31544e1090f3022a526c6b23 Authority
+#: Management.rst:227 Management/CA Mode
+msgid "新增root ca ::"
+msgstr ""
+
+#: ../../source/Chain 16584cc50b05460f9bd954d83d07835d Authority
+#: Management.rst:259 Management/CA Mode
+msgid "查询root ca ::"
+msgstr ""
+

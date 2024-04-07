@@ -1,0 +1,35 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Security 80de384ba3dd438b85bea67714a67c07 Audit/Audit
+#: Manual.rst:4 list
+msgid "[附录]审计列表清单"
+msgstr ""
+
+#: ../../source/Security Audit/Audit Manual.rst:6
+#: b571baa4885845e8b6f264060ef13e89 list
+#, python-format
+msgid ""
+"`审计列表清单 <https://upload.filoop.com/RTD-"
+"Hyperchain%2F%E9%99%84%E5%BD%95-%E5%AE%A1%E8%AE%A1%E5%86%85%E5%AE%B9%E5%88%97%E8%A1%A8.pdf>`_"
+msgstr ""
+

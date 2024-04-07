@@ -1,0 +1,990 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/VM 45a18b7c404f4249a908a0c64ec14101 Funtions Manual.rst:4
+#: Manual/KVSQL/Operators Related User
+msgid "Operators&Funtions 使用说明"
+msgstr ""
+
+#: ../../source/VM 1b73d7eb7b324eb794ba149d40dcb5df Funtions Manual.rst:7
+#: Manual/KVSQL/Operators Related User
+msgid "说明"
+msgstr ""
+
+#: ../../source/VM 7ff8f5bfbe63447abeea289dd218a263 Funtions Manual.rst:9
+#: Manual/KVSQL/Operators Related User
+msgid "KVSQL是一款SQL合约执行引擎，可以运行符合范围的SQL语句，目标支持了部分常见运算符以及函数功能。以及在区块链的特殊场景下，并非所有功能都能够正常使用，部分函数被KVSQL限制以保障SQL智能合约执行的沙箱环境的安全。"
+msgstr ""
+
+#: ../../source/VM 2eccfa51327a49048c3c61deccc62ca3 Funtions Manual.rst:11
+#: Manual/KVSQL/Operators Related User
+msgid "限制功能主要包括如下："
+msgstr ""
+
+#: ../../source/VM 7549e24df8d7455c82269356a625b3eb Funtions Manual.rst:13
+#: Manual/KVSQL/Operators Related User
+msgid "随机数"
+msgstr ""
+
+#: ../../source/VM 293f0e40a7824618867fd748d253d284 Funtions Manual.rst:15
+#: Manual/KVSQL/Operators Related User
+msgid "部分浮点数函数"
+msgstr ""
+
+#: ../../source/VM 0bd894d9899a4f42b58f8b6e78621ac3 Funtions Manual.rst:18
+#: Manual/KVSQL/Operators Related User
+msgid "Operators"
+msgstr ""
+
+#: ../../source/VM 0f57ed35a2724c869929d57873920507
+#: 4a5cea5f3a674ce39f98d73cf4ecedf7 6f71c38a6eb34406816f9595a3455077
+#: 7288a40ba0974438866a4c938b4ccb67 88f17b2448004df58a500d3ab45a18ee Funtions
+#: Manual.rst:21 Manual.rst:110 Manual.rst:129 Manual.rst:178 Manual.rst:203
+#: Manual.rst:233 Manual.rst:244 Manual.rst:259 Manual/KVSQL/Operators Related
+#: User acbf20f70d9f47c0b4767767a4dcecbe d8c79a62495b4e2ea4606ff2617195a4
+#: e66d92dd27764181b28b5f034f84df64
+msgid "Name"
+msgstr ""
+
+#: ../../source/VM 0c7ca7c421c54138a5d3e03668a74dc6
+#: 3d8e8708737b49679e6174cb7295ad1a 44f3deed456a46adb2d1a6cedbcab4c1
+#: 4b9c1fcf231143d7b5012eccd74585ab 78d4c45e90114e238ed34939264a2fff
+#: 8f9f188b1d2a4dab899aef2785f04ac7 Funtions Manual.rst:21 Manual.rst:110
+#: Manual.rst:129 Manual.rst:178 Manual.rst:203 Manual.rst:233 Manual.rst:244
+#: Manual.rst:259 Manual/KVSQL/Operators Related User
+#: ae7b6a136efe45ca9e4a558f28a6a43c aed5c9e3bdf141bbacfaecdeea42cef8
+msgid "Description"
+msgstr ""
+
+#: ../../source/VM 6f4f175c247f487eb994134fd840a245 Funtions Manual.rst:23
+#: Manual.rst:246 Manual/KVSQL/Operators Related User
+#: d2335f1a654a4a30b9c7eb0b28f0dbe8
+msgid "&"
+msgstr ""
+
+#: ../../source/VM 7bec938c66aa4ac19d4ef755a75be023 Funtions Manual.rst:23
+#: Manual.rst:246 Manual/KVSQL/Operators Related User
+#: c220f95f00bd4f20baa9a2173e60f2be
+msgid "Bitwise AND"
+msgstr ""
+
+#: ../../source/VM 028939d18d1648c698ae216b69fa1263 Funtions Manual.rst:25
+#: Manual/KVSQL/Operators Related User
+msgid ">"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:25 Manual/KVSQL/Operators Related User
+#: a8c6dcde790c418a9944442cbdfc7162
+msgid "Greater than operator"
+msgstr ""
+
+#: ../../source/VM 7c3530911014445e98124ba1fd714281
+#: 87669e91a66246feb4913fb3c2fb0c66 Funtions Manual.rst:27 Manual.rst:247
+#: Manual/KVSQL/Operators Related User
+msgid ">>"
+msgstr ""
+
+#: ../../source/VM 01afaf2aaff442c0b7d590476c18b015
+#: 86c618ccf0ea48449f55396c50d6e640 Funtions Manual.rst:27 Manual.rst:247
+#: Manual/KVSQL/Operators Related User
+msgid "Right shift"
+msgstr ""
+
+#: ../../source/VM 7a8a5fc5be9344958ff867bdc021d60e Funtions Manual.rst:29
+#: Manual/KVSQL/Operators Related User
+msgid ">="
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:29 Manual/KVSQL/Operators Related User
+#: ffa866f5431a4eb9978ab7cc6ead7a06
+msgid "Greater than or equal operator"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:31 Manual/KVSQL/Operators Related User
+#: dc25eb6dbb5442409af19e040b14fe58
+msgid "<"
+msgstr ""
+
+#: ../../source/VM 7464d0ac3937403ea1ff329c20191b7d Funtions Manual.rst:31
+#: Manual/KVSQL/Operators Related User
+msgid "Less than operator"
+msgstr ""
+
+#: ../../source/VM 43c09db81f314142846e567167be83d2 Funtions Manual.rst:33
+#: Manual/KVSQL/Operators Related User
+msgid "<>,!="
+msgstr ""
+
+#: ../../source/VM 97466deab7d94d53905ac39ed87842ca Funtions Manual.rst:33
+#: Manual/KVSQL/Operators Related User
+msgid "Not equal operator"
+msgstr ""
+
+#: ../../source/VM 177d949a3678452dbc5495c96378466a Funtions Manual.rst:35
+#: Manual.rst:248 Manual/KVSQL/Operators Related User
+#: d6875d68271f4392970c5ff708e644bb
+msgid "<<"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:35 Manual.rst:248 Manual/KVSQL/Operators
+#: Related User a7570f6376f14243943092a2c46c5a14
+#: dd2e3584d5d64c7d87b14233859ec947
+msgid "Left shift"
+msgstr ""
+
+#: ../../source/VM 8750fe6193c24853b13be478f5c2abb4 Funtions Manual.rst:37
+#: Manual/KVSQL/Operators Related User
+msgid "<="
+msgstr ""
+
+#: ../../source/VM 2134da4a752c4c3a8baa10ad17d9f992 Funtions Manual.rst:37
+#: Manual/KVSQL/Operators Related User
+msgid "Less than or equal operator"
+msgstr ""
+
+#: ../../source/VM 1ff5ed2391294395b8c7d80f37e39e41 Funtions Manual.rst:39
+#: Manual/KVSQL/Operators Related User
+msgid "<=>"
+msgstr ""
+
+#: ../../source/VM 73c4df9a65ed4b20ad23f4b66b461c48 Funtions Manual.rst:39
+#: Manual/KVSQL/Operators Related User
+msgid "NULL-safe equal to operator"
+msgstr ""
+
+#: ../../source/VM 6b07e0d6ae8a474b88df672cf63b108b Funtions Manual.rst:41
+#: Manual.rst:131 Manual/KVSQL/Operators Related User
+#: d18acaaa37f44f70bd25d46e307a8857
+msgid "%,MOD"
+msgstr ""
+
+#: ../../source/VM 96086ccf9e214e4991a40c59c1600dd5 Funtions Manual.rst:41
+#: Manual.rst:131 Manual/KVSQL/Operators Related User
+#: a3d3d9904fd641658ebcd7b6507e57f4
+msgid "Modulo operator"
+msgstr ""
+
+#: ../../source/VM 04968502209e4d42b9bf1367f048f9d3
+#: 82e60dce6fc448e4b46a1698b6182aa1 Funtions Manual.rst:43 Manual.rst:133
+#: Manual/KVSQL/Operators Related User
+msgid "\\*"
+msgstr ""
+
+#: ../../source/VM 05672c9768284478bdd13bfc77b17ce9
+#: 0e1862edf5964805b46e0daddb42ae3d Funtions Manual.rst:43 Manual.rst:133
+#: Manual/KVSQL/Operators Related User
+msgid "Multiplication operator"
+msgstr ""
+
+#: ../../source/VM 5f78aae72dd8401796598854779f9d03 Funtions Manual.rst:45
+#: Manual.rst:135 Manual/KVSQL/Operators Related User
+#: ce9f00a64c1d4aba82528bf086f6f46d
+msgid "Addition operator"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:47 Manual.rst:137 Manual/KVSQL/Operators
+#: Related User e33f111128c24a11b3693b6176f156e3
+#: ee6bce2ce8174b6ebf391772ef45b456
+msgid "Minus operator"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:49 Manual.rst:139 Manual/KVSQL/Operators
+#: Related User b92ee0996dee41ffa128b76f2a738848
+#: c5e1ff982e2e4f65b16ba2aff449d2e4
+msgid "Change the sign of the argument"
+msgstr ""
+
+#: ../../source/VM 014beefd636f42418d25d507b30f1dc2
+#: 2422dbd5ae0b474cb2dfaa2dd3374443 Funtions Manual.rst:51 Manual.rst:141
+#: Manual/KVSQL/Operators Related User
+msgid "/"
+msgstr ""
+
+#: ../../source/VM 68237ea992274039acf186986d934a32
+#: 95965b9f40c74c91a835c1419292c48b Funtions Manual.rst:51 Manual.rst:141
+#: Manual/KVSQL/Operators Related User
+msgid "Division operator"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:53 Manual.rst:56 Manual/KVSQL/Operators
+#: Related User d75930051bcc4f5088e6dfb80a0699c6
+#: f8154916794c43e0a543bb3ab743ef8d
+msgid "="
+msgstr ""
+
+#: ../../source/VM 5c533394c68147cf97ddc1d67856fed1 Funtions Manual.rst:53
+#: Manual/KVSQL/Operators Related User
+msgid ""
+"Assign a value (as part of aSETstatement, or as part of theSETclause in "
+"aUPDATEstatement)"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:56 Manual/KVSQL/Operators Related User
+#: b4392fd910dd4abc99d9ae2b99bded1f
+msgid "Equal operator"
+msgstr ""
+
+#: ../../source/VM 4f75719100ac49fca311bccb2db8d9d0
+#: 9abb1a73781141f9873c1494dcaaedb3 Funtions Manual.rst:58 Manual.rst:249
+#: Manual/KVSQL/Operators Related User
+msgid "^"
+msgstr ""
+
+#: ../../source/VM 9d8ecc00b3d6446e923971898b10b19e Funtions Manual.rst:58
+#: Manual.rst:249 Manual/KVSQL/Operators Related User
+#: a0488d0ca6164489a646086b5b01694d
+msgid "Bitwise XOR"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:60 Manual/KVSQL/Operators Related User
+#: adb662b41b2e4391a68cf2ac06502d3c
+msgid "AND, &&"
+msgstr ""
+
+#: ../../source/VM 34acaa8fc0d748b690158a40fdb42c13 Funtions Manual.rst:60
+#: Manual/KVSQL/Operators Related User
+msgid "Logical AND"
+msgstr ""
+
+#: ../../source/VM 1d41141b8d454017b273f746544afc51 Funtions Manual.rst:62
+#: Manual/KVSQL/Operators Related User
+msgid "BETWEEN … AND …"
+msgstr ""
+
+#: ../../source/VM 7d9c2564b06249a482dd4d4afecefbd9 Funtions Manual.rst:62
+#: Manual/KVSQL/Operators Related User
+msgid "Whether a value is within a range of values"
+msgstr ""
+
+#: ../../source/VM 8c8e01216f1c41a393cad747e74154dc Funtions Manual.rst:64
+#: Manual.rst:235 Manual/KVSQL/Operators Related User
+#: ba83aece0ad1462aada114fcb45135ed
+msgid "BINARY"
+msgstr ""
+
+#: ../../source/VM 734533ae32eb49b4989f24f4c0d089aa Funtions Manual.rst:64
+#: Manual.rst:235 Manual/KVSQL/Operators Related User
+#: a1b38c466ee84d889cabcff3c633dbba
+msgid "Cast a string to a binary string"
+msgstr ""
+
+#: ../../source/VM 7a5ff4f207d64de5ad7b6a1bc5d45685 Funtions Manual.rst:66
+#: Manual.rst:112 Manual/KVSQL/Operators Related User
+#: c2fc9d3cd38f4877b14135ce4194077c
+msgid "CASE"
+msgstr ""
+
+#: ../../source/VM 070731111d8c44d883ea092df03e73b5 Funtions Manual.rst:66
+#: Manual.rst:112 Manual/KVSQL/Operators Related User
+#: db479f93aeb14e6eba2e57a7b04591f0
+msgid "Case operator"
+msgstr ""
+
+#: ../../source/VM 0efd3be405834917ba4f515e6415a5c3 Funtions Manual.rst:68
+#: Manual.rst:155 Manual/KVSQL/Operators Related User
+#: faea3f480c744ccb8f7aca406a1947d5
+msgid "DIV"
+msgstr ""
+
+#: ../../source/VM 40d421335ca54d7c971b734671ff00a5
+#: 65fb996d0fc744e18a572f64f93c4df7 Funtions Manual.rst:68 Manual.rst:155
+#: Manual/KVSQL/Operators Related User
+msgid "Integer division"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:70 Manual/KVSQL/Operators Related User
+#: ec202f79694e43cdaeb6df050b6a5e40
+msgid "IN()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:70 Manual/KVSQL/Operators Related User
+#: e19db64460f748a3baaa3bc92b2d59d6
+msgid "Whether a value is within a set of values"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:72 Manual/KVSQL/Operators Related User
+#: abe48c99539941348e3900d0eea64139
+msgid "IS"
+msgstr ""
+
+#: ../../source/VM 2a6e28a0c13e403d91be43a902be9cf0 Funtions Manual.rst:72
+#: Manual.rst:74 Manual/KVSQL/Operators Related User
+#: e89b222ca0ea4c7998f0aa25e22bf012
+msgid "Test a value against a boolean"
+msgstr ""
+
+#: ../../source/VM 75e7c93625764a518b920cf211a1b1bf Funtions Manual.rst:74
+#: Manual/KVSQL/Operators Related User
+msgid "IS NOT"
+msgstr ""
+
+#: ../../source/VM 755c8c4fc1a442d28a0fa256596b07bd Funtions Manual.rst:76
+#: Manual/KVSQL/Operators Related User
+msgid "IS NOT NULL"
+msgstr ""
+
+#: ../../source/VM 1df0cdf8d35946f7ac91a8f7a992009f Funtions Manual.rst:76
+#: Manual/KVSQL/Operators Related User
+msgid "NOT NULL value test"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:78 Manual/KVSQL/Operators Related User
+#: a845f1b629ee4d7cb2096e9f8d630f31
+msgid "IS NULL"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:78 Manual/KVSQL/Operators Related User
+#: f9666a5d2d9e4fadba65c24503869cde
+msgid "NULL value test"
+msgstr ""
+
+#: ../../source/VM 765fd4fb256b46dcb82a5e3190409bb6
+#: 87038eacbec948018e72a9c8e66ffb94 Funtions Manual.rst:80 Manual.rst:210
+#: Manual/KVSQL/Operators Related User
+msgid "LIKE"
+msgstr ""
+
+#: ../../source/VM 45787b827b76457c8d9ec2be5195df7b Funtions Manual.rst:80
+#: Manual.rst:210 Manual/KVSQL/Operators Related User
+#: c906d1ab337f4566b6a6692dd65fe681
+msgid "Simple pattern matching"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:82 Manual/KVSQL/Operators Related User
+#: b351229970f04380ac327550df792ab5
+msgid "NOT,!"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:82 Manual/KVSQL/Operators Related User
+#: bc15b9971d054d86b5e1ac599e871e14
+msgid "Negates value"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:84 Manual/KVSQL/Operators Related User
+#: e700b39d2a64437d94cb60eb0f22a42b
+msgid "NOT BETWEEN … AND …"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:84 Manual/KVSQL/Operators Related User
+#: e875a890657749b1a11be165440f6c1f
+msgid "Whether a value is not within a range of values"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:87 Manual/KVSQL/Operators Related User
+#: c3d6b76620a647c78c158ed36e244b53
+msgid "NOT IN()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:87 Manual/KVSQL/Operators Related User
+#: d17951408b7a4cea8363c53b47c470eb
+msgid "Whether a value is not within a set of values"
+msgstr ""
+
+#: ../../source/VM 033f2c0e86d6494cbaf43e6963d8151d
+#: 5007855fcdd94222a095361445fa65fd Funtions Manual.rst:89 Manual.rst:214
+#: Manual/KVSQL/Operators Related User
+msgid "NOT LIKE"
+msgstr ""
+
+#: ../../source/VM 426492b38ac44a91b02364f957f8d203 Funtions Manual.rst:89
+#: Manual.rst:214 Manual/KVSQL/Operators Related User
+#: fe178c21687b4c508a6715a88b9c8771
+msgid "Negation of simple pattern matching"
+msgstr ""
+
+#: ../../source/VM 1fe387e820944f129cb1af5bd23533fc
+#: 484b4fe24dbe47218f14cca9ad7eeb6b Funtions Manual.rst:91 Manual.rst:216
+#: Manual/KVSQL/Operators Related User
+msgid "NOT REGEXP"
+msgstr ""
+
+#: ../../source/VM 1f92945deb21433b87f6e5144f758e11
+#: 56790038621843c3a0a7bcc5c361aa83 Funtions Manual.rst:91 Manual.rst:216
+#: Manual/KVSQL/Operators Related User
+msgid "Negation of REGEXP"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:93 Manual/KVSQL/Operators Related User
+#: aba802636ff64c4098df834f78b577ba
+msgid "OR,"
+msgstr ""
+
+#: ../../source/VM 7850cfa466aa43c49d5ecd8da30d97d5 Funtions Manual.rst:95
+#: Manual.rst:218 Manual/KVSQL/Operators Related User
+#: cdb3c629e3d347a6809f64a101b9bb6d
+msgid "REGEXP"
+msgstr ""
+
+#: ../../source/VM 29f7f9cb06a644c3b9ff3c7969d7f6e1
+#: 667703ebe2964cb2bbaaa59150ecddbb 8b944a8b61f24f05baf90ef39c2fbe99 Funtions
+#: Manual.rst:95 Manual.rst:97 Manual.rst:218 Manual.rst:220
+#: Manual/KVSQL/Operators Related User b08e065a8ce44170925fd2c1b7d68161
+msgid "Whether string matches regular expression"
+msgstr ""
+
+#: ../../source/VM 4e40622b63d34db0a5f8d4bc823fba9c Funtions Manual.rst:97
+#: Manual.rst:220 Manual/KVSQL/Operators Related User
+#: dd382e5b705c48bc9a355d53ff70e4c6
+msgid "RLIKE"
+msgstr ""
+
+#: ../../source/VM 3c347f78d2f24a9d9126fcf1010709a2 Funtions Manual.rst:99
+#: Manual/KVSQL/Operators Related User
+msgid "XOR"
+msgstr ""
+
+#: ../../source/VM 8514151183004034bbfdc9c5736a87ce Funtions Manual.rst:99
+#: Manual/KVSQL/Operators Related User
+msgid "Logical XOR"
+msgstr ""
+
+#: ../../source/VM 1ec4a58fceff4ee7971c7487c312b89f
+#: 63d91b1f28534f9aa377a139ab674011 Funtions Manual.rst:103 Manual.rst:252
+#: Manual/KVSQL/Operators Related User
+msgid "~"
+msgstr ""
+
+#: ../../source/VM 095ad0d579ce492f9317bf69fd6b5d43
+#: 7d3ce74287414d1aa9be38d714c5c318 Funtions Manual.rst:103 Manual.rst:252
+#: Manual/KVSQL/Operators Related User
+msgid "Bitwise inversion"
+msgstr ""
+
+#: ../../source/VM 251a27c56f724b02b15287d34eb388c1 Funtions Manual.rst:107
+#: Manual/KVSQL/Operators Related User
+msgid "Flow Control Functions"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:113 Manual/KVSQL/Operators Related User
+#: d936bf2532eb4b99b8d5f53886050243
+msgid "IF()"
+msgstr ""
+
+#: ../../source/VM 068bd8acc10d41629d7e0818a2d89e86 Funtions Manual.rst:113
+#: Manual/KVSQL/Operators Related User
+msgid "If/else construct"
+msgstr ""
+
+#: ../../source/VM 9ba2c2e5d0b340af9e8a8388da11bce4 Funtions Manual.rst:114
+#: Manual/KVSQL/Operators Related User
+msgid "IFNULL()"
+msgstr ""
+
+#: ../../source/VM 69766e67a0d7447fb9246a6f99b3ee06 Funtions Manual.rst:114
+#: Manual/KVSQL/Operators Related User
+msgid "Null if/else construct"
+msgstr ""
+
+#: ../../source/VM 5091c5c3c97249d4b1516f0f07958f7c Funtions Manual.rst:115
+#: Manual/KVSQL/Operators Related User
+msgid "NULLIF()"
+msgstr ""
+
+#: ../../source/VM 1608465a499d4f64a2034d97af18c765 Funtions Manual.rst:115
+#: Manual/KVSQL/Operators Related User
+msgid "Return NULL if expr1 = expr2"
+msgstr ""
+
+#: ../../source/VM 7903ddfcc4de4bf4bad01ae5177a9955 Funtions Manual.rst:121
+#: Manual/KVSQL/Operators Related User
+msgid ""
+"CASE value WHEN compare_value THEN result [WHEN compare_value THEN result"
+" ...] [ELSE result] END"
+msgstr ""
+
+#: ../../source/VM 3902231eaf67468c99391b7d1f04a65e Funtions Manual.rst:123
+#: Manual/KVSQL/Operators Related User
+msgid "需要注意的是，以上四种语句中的结果表达式的类型不同时，会将所有的表达式返回类型统一。这一点与mySQL存在差异。"
+msgstr ""
+
+#: ../../source/VM 69774de044314d19b2e5da0f08fbf3d2 Funtions Manual.rst:126
+#: Manual/KVSQL/Operators Related User
+msgid "Numeric Functions and Operators"
+msgstr ""
+
+#: ../../source/VM 6054107edef34abeb4a1b9614ebeda2f Funtions Manual.rst:143
+#: Manual/KVSQL/Operators Related User
+msgid "ABS()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:143 Manual/KVSQL/Operators Related User
+#: eddf17b04d0c46f29f80d3b1ebe87765
+msgid "Return the absolute value"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:145 Manual/KVSQL/Operators Related User
+#: fee1a8c8f942492289598a8bc60db384
+msgid "CEIL()"
+msgstr ""
+
+#: ../../source/VM 1bbee5d311dc49e0888f310ec42b9410
+#: 4a0565d0672e416abeabdf19f1978592 Funtions Manual.rst:145 Manual.rst:147
+#: Manual/KVSQL/Operators Related User
+msgid "Return the smallest integer value not less than the argument"
+msgstr ""
+
+#: ../../source/VM 012deb843a264b169b0bad8adeac58aa Funtions Manual.rst:147
+#: Manual/KVSQL/Operators Related User
+msgid "CEILING()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:149 Manual/KVSQL/Operators Related User
+#: dc93ba1f6c9e415cb60ae74c3ff125e8
+msgid "CONV()"
+msgstr ""
+
+#: ../../source/VM 1dbe4121664e4a1e91caf235c377b542 Funtions Manual.rst:149
+#: Manual/KVSQL/Operators Related User
+msgid "Convert numbers between different number bases"
+msgstr ""
+
+#: ../../source/VM 44eca247e504451085189a12e6271d72 Funtions Manual.rst:151
+#: Manual/KVSQL/Operators Related User
+msgid "CRC32()"
+msgstr ""
+
+#: ../../source/VM 45058367b2134f03b398b7824611f07e Funtions Manual.rst:151
+#: Manual/KVSQL/Operators Related User
+msgid "Compute a cyclic redundancy check value"
+msgstr ""
+
+#: ../../source/VM 0e99022651244baa81199d85481c65c5 Funtions Manual.rst:153
+#: Manual/KVSQL/Operators Related User
+msgid "DEGREES()"
+msgstr ""
+
+#: ../../source/VM 1dc22cf3d6694a129f28eaae69efd520 Funtions Manual.rst:153
+#: Manual/KVSQL/Operators Related User
+msgid "Convert radians to degrees"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:157 Manual/KVSQL/Operators Related User
+#: d1bdd305a0f14b38864adbb9e6a32280
+msgid "FLOOR()"
+msgstr ""
+
+#: ../../source/VM 2779f403eac545e9af7f02020d29c4fb Funtions Manual.rst:157
+#: Manual/KVSQL/Operators Related User
+msgid "Return the largest integer value not greater than the argument"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:159 Manual/KVSQL/Operators Related User
+#: ff696a44701d468d990cc675319bb33b
+msgid "MOD()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:159 Manual/KVSQL/Operators Related User
+#: e764ded445af4682a32a1e2465958ffd
+msgid "Return the remainder"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:161 Manual/KVSQL/Operators Related User
+#: c8e40194610443e9bbe16e1c0f659658
+msgid "PI()"
+msgstr ""
+
+#: ../../source/VM 7c5064ac43c8406592f213306b1ebd99 Funtions Manual.rst:161
+#: Manual/KVSQL/Operators Related User
+msgid "Return the value of pi"
+msgstr ""
+
+#: ../../source/VM 06440324ea234638b3677578b059da34 Funtions Manual.rst:163
+#: Manual/KVSQL/Operators Related User
+msgid "RADIANS()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:163 Manual/KVSQL/Operators Related User
+#: ba0d505dc61f4fcabcef2504af475ab8
+msgid "Return argument converted to radians"
+msgstr ""
+
+#: ../../source/VM 59938545f6a6401ea9173d91f6f585c5 Funtions Manual.rst:165
+#: Manual/KVSQL/Operators Related User
+msgid "ROUND()"
+msgstr ""
+
+#: ../../source/VM 0f65a2adebcc4219ab49550d8054b2ca Funtions Manual.rst:165
+#: Manual/KVSQL/Operators Related User
+msgid "Round the argument"
+msgstr ""
+
+#: ../../source/VM 4025c3211b374f28b965b0bd4813ca06 Funtions Manual.rst:167
+#: Manual/KVSQL/Operators Related User
+msgid "SIGN()"
+msgstr ""
+
+#: ../../source/VM 35f1927b3f454932bed330d4bcf373b7 Funtions Manual.rst:167
+#: Manual/KVSQL/Operators Related User
+msgid "Return the sign of the argument"
+msgstr ""
+
+#: ../../source/VM 327011d9134d418dafa22d9fdd78d1b6 Funtions Manual.rst:169
+#: Manual/KVSQL/Operators Related User
+msgid "SQRT()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:169 Manual/KVSQL/Operators Related User
+#: ebcc7a596a8449fcae7299c1ad01ca2e
+msgid "Return the square root of the argument"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:171 Manual/KVSQL/Operators Related User
+#: a7445197b2ef4a0996d67482ade2838a
+msgid "TRUNCATE()"
+msgstr ""
+
+#: ../../source/VM 3b5172f8e145427e85b6791da5ef24f2 Funtions Manual.rst:171
+#: Manual/KVSQL/Operators Related User
+msgid "Truncate to specified number of decimal places"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:175 Manual/KVSQL/Operators Related User
+#: d38e29c2970449bfae008e84a872e734
+msgid "Date and Time Functions"
+msgstr ""
+
+#: ../../source/VM 7c7b7788e4c045f4b3c7a05318cc9434 Funtions Manual.rst:180
+#: Manual/KVSQL/Operators Related User
+msgid "CURDATE()"
+msgstr ""
+
+#: ../../source/VM 2c6807eda7744295bd1268adc35b926a Funtions Manual.rst:180
+#: Manual/KVSQL/Operators Related User
+msgid "Return the current date"
+msgstr ""
+
+#: ../../source/VM 1219c66e2b4d4ca4b9697225c1da6a6a Funtions Manual.rst:182
+#: Manual/KVSQL/Operators Related User
+msgid "CURRENT_DATE(),CURRENT_DATE"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:182 Manual/KVSQL/Operators Related User
+#: e7e011099da44f20ad5c31d41f6f3744
+msgid "Synonyms for CURDATE()"
+msgstr ""
+
+#: ../../source/VM 60eb4b808b9343c8a7261f43613ad2df Funtions Manual.rst:184
+#: Manual/KVSQL/Operators Related User
+msgid "CURRENT_TIME(),CURRENT_TIME"
+msgstr ""
+
+#: ../../source/VM 9b0cc4ac6f3947358cd4935e9f2d3f6d Funtions Manual.rst:184
+#: Manual/KVSQL/Operators Related User
+msgid "Synonyms for CURTIME()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:186 Manual/KVSQL/Operators Related User
+#: c3ce502488ca4165b5c48b5e12148287
+msgid "CURRE NT_TIMESTAMP(),CURRENT_TIMESTAMP"
+msgstr ""
+
+#: ../../source/VM 4e24d3e7490440ee9c118960496f0c8a Funtions Manual.rst:186
+#: Manual/KVSQL/Operators Related User
+msgid "Synonyms for NOW()"
+msgstr ""
+
+#: ../../source/VM 7f15af8a18f14e50a1061fc0a3b31bcb Funtions Manual.rst:189
+#: Manual/KVSQL/Operators Related User
+msgid "CURTIME()"
+msgstr ""
+
+#: ../../source/VM 5320a0b3da3144fd927f4855cceef501 Funtions Manual.rst:189
+#: Manual/KVSQL/Operators Related User
+msgid "Return the current time"
+msgstr ""
+
+#: ../../source/VM 078b2aaefdf640ef8180501ae9c1dca8 Funtions Manual.rst:191
+#: Manual/KVSQL/Operators Related User
+msgid "UTC_DATE()"
+msgstr ""
+
+#: ../../source/VM 9ae5bc04f5fd4602afe51ca4a0fb2690 Funtions Manual.rst:191
+#: Manual/KVSQL/Operators Related User
+msgid "Return the current UTC date"
+msgstr ""
+
+#: ../../source/VM 988a25f00a5b41baa6f9df7b59a31312 Funtions Manual.rst:193
+#: Manual/KVSQL/Operators Related User
+msgid "UTC_TIME()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:193 Manual/KVSQL/Operators Related User
+#: e1eb911f4804424c939ce90465dd05dd
+msgid "Return the current UTC time"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:195 Manual/KVSQL/Operators Related User
+#: ca29e6ab4c3c4f3faf990753382b90ad
+msgid "UTC_TIMESTAMP()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:195 Manual/KVSQL/Operators Related User
+#: af2a27908fc444a0bee16fa13fa82902
+msgid "Return the current UTC date and time"
+msgstr ""
+
+#: ../../source/VM 0ae9dbbd05db4349a0047d0f69a2d7ba Funtions Manual.rst:200
+#: Manual/KVSQL/Operators Related User
+msgid "String Functions and Operators"
+msgstr ""
+
+#: ../../source/VM 4894510895cc4984863a9ea4827b64d8 Funtions Manual.rst:205
+#: Manual/KVSQL/Operators Related User
+msgid "CONCAT()"
+msgstr ""
+
+#: ../../source/VM 71a22dcca77b445fb5729e76d744cad8 Funtions Manual.rst:205
+#: Manual/KVSQL/Operators Related User
+msgid "Return concatenated string"
+msgstr ""
+
+#: ../../source/VM 580c6ac671894fd986c98355d1e4cf94 Funtions Manual.rst:207
+#: Manual/KVSQL/Operators Related User
+msgid "FORMAT()"
+msgstr ""
+
+#: ../../source/VM 99259bc808e4478287f4fe28acb69af1 Funtions Manual.rst:207
+#: Manual/KVSQL/Operators Related User
+msgid "Return a number formatted to specified number of decimal places"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:212 Manual/KVSQL/Operators Related User
+#: e4de291c837f4317a18a3dbe82afa324
+msgid "LOWER()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:212 Manual/KVSQL/Operators Related User
+#: d875154a0f10494daabe47a8701b5da7
+msgid "Return the argument in lowercase"
+msgstr ""
+
+#: ../../source/VM 7b994315e0874b89adcde7ef9969edbe Funtions Manual.rst:222
+#: Manual/KVSQL/Operators Related User
+msgid "TRIM()"
+msgstr ""
+
+#: ../../source/VM 38347266c94d4f2a91430e887696f578 Funtions Manual.rst:222
+#: Manual/KVSQL/Operators Related User
+msgid "Remove leading and trailing spaces"
+msgstr ""
+
+#: ../../source/VM 618573504d174a93bbe597b0a4f11324 Funtions Manual.rst:224
+#: Manual/KVSQL/Operators Related User
+msgid "UPPER()"
+msgstr ""
+
+#: ../../source/VM 744dbce407474ba091560bd263c5f9b1 Funtions Manual.rst:224
+#: Manual/KVSQL/Operators Related User
+msgid "Convert to uppercase"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:228 Manual/KVSQL/Operators Related User
+#: d7c940dc778b430da885d465633bebd9
+msgid "Cast Functions and Operators"
+msgstr ""
+
+#: ../../source/VM 822682fa4e134ed08023aceea2f5ac1e Funtions Manual.rst:230
+#: Manual/KVSQL/Operators Related User
+msgid "不支持json类型的转换与被转换；不支持指定字符集"
+msgstr ""
+
+#: ../../source/VM 76c0ccf957d2497282490ca059f2f6b2 Funtions Manual.rst:236
+#: Manual/KVSQL/Operators Related User
+msgid "CAST()"
+msgstr ""
+
+#: ../../source/VM 285978e964094a4daa9dbd672fb33b35
+#: 8a12b30ca84c42349419530f3c4021bb Funtions Manual.rst:236 Manual.rst:237
+#: Manual/KVSQL/Operators Related User
+msgid "Cast a value as a certain type"
+msgstr ""
+
+#: ../../source/VM 3e660fae3d0949b0a77be6745feeeefd Funtions Manual.rst:237
+#: Manual/KVSQL/Operators Related User
+msgid "CONVERT()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:241 Manual/KVSQL/Operators Related User
+#: e34f0665e4e9441b8d63c00ebceb23c3
+msgid "**Bit Functions and Operators**"
+msgstr ""
+
+#: ../../source/VM 38cb8dbb37ef44c587e47486da622075 Funtions Manual.rst:250
+#: Manual/KVSQL/Operators Related User
+msgid "BIT_COUNT()"
+msgstr ""
+
+#: ../../source/VM 816d9cbce15a451faa1f2f1216c1062c Funtions Manual.rst:250
+#: Manual/KVSQL/Operators Related User
+msgid "Return the number of bits that are set"
+msgstr ""
+
+#: ../../source/VM 010fb624271346a3abd202b9ef9f4bfe Funtions Manual.rst:251
+#: Manual/KVSQL/Operators Related User
+msgid "\\"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:256 Manual/KVSQL/Operators Related User
+#: e37a36db66054aefbbbb577a83da034d
+msgid "Aggregate Functions"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:261 Manual/KVSQL/Operators Related User
+#: f1c8aad4a5fb4ea7a7708440a2e2d668
+msgid "AVG()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:261 Manual/KVSQL/Operators Related User
+#: d26eb0cf5d734bb98a44f983deb86acb
+msgid "Return the average value of the argument"
+msgstr ""
+
+#: ../../source/VM 56afb58ccb0849b6a18f53517e5ad885 Funtions Manual.rst:262
+#: Manual/KVSQL/Operators Related User
+msgid "BIT_AND()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:262 Manual/KVSQL/Operators Related User
+#: a5c790b0c57c41c2bac397db48cafdb5
+msgid "Return bitwise AND"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:263 Manual/KVSQL/Operators Related User
+#: d56dd320a4c044f98b577ea1919b73e5
+msgid "BIT_OR()"
+msgstr ""
+
+#: ../../source/VM 150b3b3cb174403ea2e89faa566a26aa Funtions Manual.rst:263
+#: Manual/KVSQL/Operators Related User
+msgid "Return bitwise OR"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:264 Manual/KVSQL/Operators Related User
+#: aa308069305944db8b9f6556bd4c47e7
+msgid "BIT_XOR()"
+msgstr ""
+
+#: ../../source/VM 9582e34b105e482db21282e667a6ce64 Funtions Manual.rst:264
+#: Manual/KVSQL/Operators Related User
+msgid "Return bitwise XOR"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:265 Manual/KVSQL/Operators Related User
+#: fa77a7f15d844acd9f4c1fedc0802a8b
+msgid "COUNT()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:265 Manual/KVSQL/Operators Related User
+#: ffea1ae233e34444b135cce0c0a962d0
+msgid "Return a count of the number of rows returned"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:266 Manual/KVSQL/Operators Related User
+#: d3e73eece053432da6231cb2e3afd00d
+msgid "COUNT(DISTINCT)"
+msgstr ""
+
+#: ../../source/VM 1fd8d433a87d427683a48f283eb4cf54 Funtions Manual.rst:266
+#: Manual/KVSQL/Operators Related User
+msgid "Return the count of a number of different values"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:267 Manual/KVSQL/Operators Related User
+#: ded74829d7ad4ee9bc941aab01fc5b74
+msgid "GROUP_CONCAT()"
+msgstr ""
+
+#: ../../source/VM 5fb6c40118034de18ba9ca451cb5a885 Funtions Manual.rst:267
+#: Manual/KVSQL/Operators Related User
+msgid "Return a concatenated string"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:268 Manual/KVSQL/Operators Related User
+#: bdc4e08d5b9049f9b266ef7fb5b3ea8b
+msgid "MAX()"
+msgstr ""
+
+#: ../../source/VM 87734945a6e04e0f82616dae21654665 Funtions Manual.rst:268
+#: Manual/KVSQL/Operators Related User
+msgid "Return the maximum value"
+msgstr ""
+
+#: ../../source/VM 32c64462496d4bf0aec4a1f1ea751dbf Funtions Manual.rst:269
+#: Manual/KVSQL/Operators Related User
+msgid "MIN()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:269 Manual/KVSQL/Operators Related User
+#: fb150253b6464b3c9b5ee775aa42106d
+msgid "Return the minimum value"
+msgstr ""
+
+#: ../../source/VM 5efa3a0ce16446abb03d469645995522 Funtions Manual.rst:270
+#: Manual/KVSQL/Operators Related User
+msgid "STDDEV_POP()"
+msgstr ""
+
+#: ../../source/VM 810aec3a3bc7457b8a4f3a6055a80811 Funtions Manual.rst:270
+#: Manual/KVSQL/Operators Related User
+msgid "Return the population standard deviation"
+msgstr ""
+
+#: ../../source/VM 8d415db0b9594ec497dcb4c573cb5662 Funtions Manual.rst:271
+#: Manual/KVSQL/Operators Related User
+msgid "STDDEV_SAMP()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:271 Manual/KVSQL/Operators Related User
+#: fed2a1aa50dc4673aaac12c1d5ac52ad
+msgid "Return the sample standard deviation"
+msgstr ""
+
+#: ../../source/VM 86fc5229277b4aaaa3e7c9e1b9de0351 Funtions Manual.rst:272
+#: Manual/KVSQL/Operators Related User
+msgid "SUM()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:272 Manual/KVSQL/Operators Related User
+#: d8b8a9a2778441bf87db57bf228c6a17
+msgid "Return the sum"
+msgstr ""
+
+#: ../../source/VM 73a36cf374c44adcafbe88265e757f15 Funtions Manual.rst:273
+#: Manual/KVSQL/Operators Related User
+msgid "VAR_POP()"
+msgstr ""
+
+#: ../../source/VM 893e1457193341d78d0b0cb09dcba3c2 Funtions Manual.rst:273
+#: Manual/KVSQL/Operators Related User
+msgid "Return the population standard variance"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:274 Manual/KVSQL/Operators Related User
+#: c360366a51d9475687b9864cfd28cb9f
+msgid "VAR_SAMP()"
+msgstr ""
+
+#: ../../source/VM Funtions Manual.rst:274 Manual/KVSQL/Operators Related User
+#: ca8bbccbcf7d4efc9c87927351124b4d
+msgid "Return the sample variance"
+msgstr ""
+

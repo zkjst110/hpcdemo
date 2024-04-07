@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Module.rst:4 4b3e368796df48be8dd3676c9ddede53
+msgid "（用户）组件库"
+msgstr ""
+
+#: ../../source/Module.rst:7 b27048fe6637411fa9b9a8039fd19cda
+msgid "状态证明使用手册"
+msgstr ""
+
+#: ../../source/Module.rst:9 7634134cd9b8446889700d21c8c02775
+msgid ":ref:`状态证明使用手册 <Statement-prove-manual>`"
+msgstr ""
+
+#: ../../source/Module.rst:12 3cad488987374d2892edee4db5ec4f5c
+msgid "交易证明使用手册"
+msgstr ""
+
+#: ../../source/Module.rst:14 8a10a9b5a2484055b3ae173f67c3b566
+msgid ":ref:`交易证明使用手册 <Deal-statement-manual>`"
+msgstr ""
+
+#: ../../source/Module.rst:17 3f34e1b172e64c9a8a13d70eb7b8c328
+msgid "消息订阅使用手册"
+msgstr ""
+
+#: ../../source/Module.rst:19 279610d8032f4115a1d724ecf8582f21
+msgid ":ref:`消息订阅使用手册 <Message-Subscription>`"
+msgstr ""
+
+#: ../../source/Module.rst:22 0ed865e1ac694ae29fdcb6cf6db3f698
+msgid "Certgen使用手册"
+msgstr ""
+
+#: ../../source/Module.rst:24 fcb74c3681924922a6a5fe2642006555
+msgid ":ref:`Certgen使用手册 <Certgen-manage>`"
+msgstr ""
+
+#: ../../source/Module.rst:27 e73626b1df1846cda0ed5ad5964a3d25
+msgid "ArchiveReader使用手册"
+msgstr ""
+
+#: ../../source/Module.rst:29 039fba33bbe344cab43187d002a92ea1
+msgid ":ref:`ArchiveReader使用手册 <ArchiveReader-manage>`"
+msgstr ""
+
+#: ../../source/Module.rst:32 49bf81e271d742559e859e82e277ecef
+msgid "（用户）Litesdk使用手册"
+msgstr ""
+
+#: ../../source/Module.rst:34 83f760f31efc473d88d49bff81fe278d
+msgid ":ref:`Litesdk使用手册 <litesdk>`"
+msgstr ""
+
+#: ../../source/Module.rst:37 f759b06cacc44418acfe11954d651d68
+msgid "（用户）Gosdk使用手册"
+msgstr ""
+
+#: ../../source/Module.rst:39 79ef84c570ea43a2ba281bc6dd09df8c
+msgid ":ref:`Gosdk使用手册 <GoSDK>`"
+msgstr ""
+

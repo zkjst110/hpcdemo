@@ -1,0 +1,787 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Module/Message 86c82bc9620e4891acb45e85d5357f23
+#: Subscription.rst:4
+msgid "消息订阅MQ"
+msgstr ""
+
+#: ../../source/Module/Message 0c360f4c196b448390f7b0618b5d2db0
+#: Subscription.rst:7
+msgid "功能描述"
+msgstr ""
+
+#: ../../source/Module/Message 7b7216c87c2540688c7e81086c5c018b
+#: Subscription.rst:10
+msgid "MQ介绍"
+msgstr ""
+
+#: ../../source/Module/Message 5fecbc6d8dd94e4b8ca278e759a14b86
+#: Subscription.rst:11
+msgid ""
+"平台MQ服务底层依赖 "
+"RabbitMQ（KafkaMQ）服务，用户需要独立与平台启动一个rabbitmq（kafkamq）服务器，我们将rabbitmq（kafkamq"
+"）所在的服务器称为rabbitmq-broker（kafkamq-broker），平台提供的MQ服务相当于一个生产者客户端"
+"，负责将平台消息推送到rabbitmq-broker（kafkamq-broker）。 消息的消费者作为一个消费者客户端，与rabbitmq-"
+"broker（kafkamq-broker）建立连接，等待从rabbitmq-broker（kafkamq-broker）推送出来的消息。"
+msgstr ""
+
+#: ../../source/Module/Message 9662b16b741d42dbb707df472360792e
+#: Subscription.rst:14
+msgid "**RabbitMQ术语说明**"
+msgstr ""
+
+#: ../../source/Module/Message 211f8b51d45245b2bb14e4eb2b6d110a
+#: Subscription.rst:20 Subscription.rst:37 b6b9b62f74c0403fac0dab31668f0e91
+msgid "术语名称"
+msgstr ""
+
+#: ../../source/Module/Message 139a30b327d44946867a713c248618df
+#: Subscription.rst:21 Subscription.rst:38 b2462f793e0c461b940eda06b90bac92
+msgid "解释说明"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:22
+#: f5a31dab472e483a8c1989b7e1b76804
+msgid "channel"
+msgstr ""
+
+#: ../../source/Module/Message 4b49c8bac5414488b5b3792ced807e53
+#: Subscription.rst:23
+msgid ""
+"与rabbitmq-"
+"broker建立连接后，可以通过connection创建channel，一个channel对象相当于一个连接会话，是客户端（生产者，消费者）直接用来推送或消费消息的媒介"
+msgstr ""
+
+#: ../../source/Module/Message 54ef9e8e75f14921afb3e2339e40ce50
+#: Subscription.rst:24
+msgid "queue"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:25
+#: a141312ce292481b88814da3b51923f1
+msgid ""
+"由客户端创建，通过绑定路由键routingkey来决定感兴趣的消息类型，相应的消息会在rabbitmq-"
+"broker内部被分发到queue中等待被消费"
+msgstr ""
+
+#: ../../source/Module/Message 375e3c8e2b324faab87fb326e718f267
+#: Subscription.rst:26
+msgid "routingkey"
+msgstr ""
+
+#: ../../source/Module/Message 5b33f77bc06e4bf285a131c942e53ee9
+#: Subscription.rst:27
+msgid "路由键，标识一种消息"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:28
+#: ce5e45f889da4fb69a34e6bd28bc7232
+msgid "exchanger"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:29
+#: f999497fe7484174bbac713a0e277bab
+msgid ""
+"rabbitmq-"
+"broker内部直接接收生产者消息的组件，通过名称标识，exchanger负责将消息按照routingkey分发到相应的queue中"
+msgstr ""
+
+#: ../../source/Module/Message 86bd05b89a7344edba4911cac681bdff
+#: Subscription.rst:31
+msgid "**KafkaMQ术语说明**"
+msgstr ""
+
+#: ../../source/Module/Message 309959b42fd84719bdeca1d76e1004bc
+#: Subscription.rst:39
+msgid "topic"
+msgstr ""
+
+#: ../../source/Module/Message 7effc01438664f7e8cd416603d708be2
+#: Subscription.rst:40
+msgid "逻辑概念，消息的类别，同一topic的消息可以认为是同一类，在kafka集群中会被作为一类存储。每一条生产者推送的消息，只可以属于一个topic"
+msgstr ""
+
+#: ../../source/Module/Message 74b2ebbe61b14df1a4148a10992a5f94
+#: Subscription.rst:41
+msgid "partition"
+msgstr ""
+
+#: ../../source/Module/Message 0291e077fe894fcab5b49343da375b74
+#: Subscription.rst:42
+msgid "partition是一个物理概念，是kafka集群真正存储数据的地方。一个topic可以包含多个partition，该topic下的消息可以在partition之间做负载均衡。一个partition上存储的消息是有序的"
+msgstr ""
+
+#: ../../source/Module/Message 6d7aaad89e63422aa1a6fe36274c6420
+#: Subscription.rst:43
+msgid "replica"
+msgstr ""
+
+#: ../../source/Module/Message 74599ddacc9344b2b1200362f925d194
+#: Subscription.rst:44
+msgid "这是kafka集群内部的概念，可以认为replica是partition的备份"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:47
+#: c1878b5f8b2d408887cb794e3556aac2
+msgid "使用步骤"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:49
+#: d190b243dc014e59916ac222507781ee
+msgid "独立启动mq服务，一般来讲，只需要一个节点连接mq服务端。需要连接mq服务端的节点只需要在节点配置中启用mq服务，并配置mq服务的地址即可。剩下的操作都可以来API接口进行；"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:50
+#: f75f0fc911214460ad28c36f5cc6d654
+msgid "用户向平台注册自己的消息队列queue，指明queue感兴趣的路由键集合；平台会创建队列同时启动服务，将queue的名称与交换机名称exchanger返回给用户；"
+msgstr ""
+
+#: ../../source/Module/Message 73073f74904842188cb08346a1838196
+#: Subscription.rst:51
+msgid "用户正常使用平台发送交易，当有routingkey相应的事件产生时，消息会被MQ服务自动推送至broker，用户可以通过命令行或管理页面查询；"
+msgstr ""
+
+#: ../../source/Module/Message 9d2e5cb8927c4684acbfb0f493b8a365
+#: Subscription.rst:52
+msgid "消费者消费消息；"
+msgstr ""
+
+#: ../../source/Module/Message 4639aac0cf084358abd4d105695c0c5e
+#: Subscription.rst:53
+msgid "用户可以查询当前节点上注册过的所有的queue名称；"
+msgstr ""
+
+#: ../../source/Module/Message 7d373a10ac7e4f1e98ab16a8bde02537
+#: Subscription.rst:54
+msgid "用户可以删除queue，但需要提供注册时平台返回的exchanger。"
+msgstr ""
+
+#: ../../source/Module/Message 0dd578de98924286ba090f3329738dca
+#: Subscription.rst:57
+msgid "安装及初始化"
+msgstr ""
+
+#: ../../source/Module/Message 5235d2a132164ff3aba4ecbb9f714b42
+#: Subscription.rst:60
+msgid "配置说明"
+msgstr ""
+
+#: ../../source/Module/Message 9537ca9526484214bac958e6298b507e
+#: Subscription.rst:62
+msgid "``service.service_name``：节点开启的外部服务。"
+msgstr ""
+
+#: ../../source/Module/Message 9c9d0d81bfad4bb19453f0e047dc228b
+#: Subscription.rst:64
+msgid "开启MQ服务的示例如下::"
+msgstr ""
+
+#: ../../source/Module/Message 96b05b1520004b16a9f3e3836a69cd11
+#: Subscription.rst:69
+msgid "``mq.broker``：MQ的Broker类型，可选项为 ``rabbit`` 和 ``kafka``；"
+msgstr ""
+
+#: ../../source/Module/Message 4f988346f88e454bbd91b1d5fe60d933
+#: 9b44333539fe402796b82c7b7deadad1 Subscription.rst:71 Subscription.rst:78
+#: Subscription.rst:87 c954a7fe23cb4617b4a43419de1f1b73
+msgid "示例如下::"
+msgstr ""
+
+#: ../../source/Module/Message 00bba834829649cc980d039ae7e23e4c
+#: Subscription.rst:76
+msgid "``mq.rabbit.url``：RabbitMQ地址。"
+msgstr ""
+
+#: ../../source/Module/Message 65e8a36a951f462296eb92a4a1cf9af6
+#: Subscription.rst:83
+msgid "``mq.kafka.urls``：Kafka地址列表；"
+msgstr ""
+
+#: ../../source/Module/Message 82fd20aa5ad94a7aaa39aeec2261b784
+#: Subscription.rst:84
+msgid "``mq.kafka.partitionNums``：每个kafka实例下分区(partition)的数量；"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:85
+#: e2ed9c3570b649f99978018e0b81c7a3
+msgid "``mq.kafka.replicaFactor``：每个kafka实例在zookeeper下的备份数量。"
+msgstr ""
+
+#: ../../source/Module/Message 1a69f264c24d4e3c8a7390b237e2f227
+#: Subscription.rst:99
+msgid "安装RabbitMQ"
+msgstr ""
+
+#: ../../source/Module/Message 3b247991c9e94a09871b08b7b3a03594
+#: Subscription.rst:101
+msgid "**下载安装**"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:103
+#: a473add747574d4fa705a1b11533f458
+msgid ""
+"RabbitMQ官方下载地址： http://www.rabbitmq.com/download.html "
+"（如未安装Erlang，请首先安装Erlang）"
+msgstr ""
+
+#: ../../source/Module/Message 27b6c4685d4342378009afeba374fd19
+#: Subscription.rst:104
+msgid "通过命令行工具直接安装（brew或yum等）"
+msgstr ""
+
+#: ../../source/Module/Message 5d17618efd09444ca48645cf1883aae6
+#: Subscription.rst:106
+msgid "**启动MQ服务**"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:108
+#: f661850a385a4d50994d8584022b6309
+msgid "当前窗口启动： `rabbitmq-server`"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:109
+#: c2c5b420c2664c09baeb475e73e79a3c
+msgid "如需开启插件，在启动前设置： `rabbitmq-plugins enable rabbitmq_management`"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:110
+#: a98ba924babe443391ced3446d2c1ac6
+msgid "浏览器打开管理界面： http://localhost:15672/"
+msgstr ""
+
+#: ../../source/Module/Message 3c46907634064b59ba52742b7893a95b
+#: Subscription.rst:111
+msgid "默认用户名和密码：guest,guest"
+msgstr ""
+
+#: ../../source/Module/Message 3c9e8f3267484dbabd249e78185c6e34
+#: Subscription.rst:113
+msgid "**使用docker容器启动**"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:115
+#: f128334c5fbf493f98493343ed4a9d7b
+msgid "启动带管理界面的MQ::"
+msgstr ""
+
+#: ../../source/Module/Message 90fb632b88d345e89039632a8d50e092
+#: Subscription.rst:119
+msgid "启动不带管理界面的MQ::"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:125
+#: f767812b0b2b4b9e8a7d86967010ab1d
+msgid "安装KafkaMQ"
+msgstr ""
+
+#: ../../source/Module/Message 1b90071a9f6f47fa89c04df64211ca67
+#: Subscription.rst:127
+msgid "请参考官方文档： https://kafka.apachecn.org/quickstart.html"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:132
+#: cf177b9b29824bc39d11f838bdc0feec
+msgid "使用说明"
+msgstr ""
+
+#: ../../source/Module/Message 9dce46f2b5c2426b8be583adeb5adbd6
+#: Subscription.rst:135
+msgid "完整操作流程"
+msgstr ""
+
+#: ../../source/Module/Message 750b3e809a1647a4b85003fe99fcfdd3
+#: Subscription.rst:137
+msgid "调用informNormal，通知节点与rabbitmqMQ建立连接（kafka可跳过）"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:138
+#: a9d9e86661d045769ecddc389b1debd9
+msgid "注册队列"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:139
+#: b5935573fc1442c1808029b08f518190
+msgid "正常发送交易，产生消息"
+msgstr ""
+
+#: ../../source/Module/Message 4d7fa2996bfa4be2bff296ed2879821d
+#: Subscription.rst:140
+msgid "消费者等待rabbitmq-broker推送的消息"
+msgstr ""
+
+#: ../../source/Module/Message 1166b97e0bd146f38ae147d5d7d0d5f7
+#: Subscription.rst:141
+msgid "当queue不再使用时，删除queue"
+msgstr ""
+
+#: ../../source/Module/Message 850cc63626dd49cfa99075b9315d2fef
+#: Subscription.rst:145
+msgid "JSONRPC接口"
+msgstr ""
+
+#: ../../source/Module/Message 8f083af3fae54acea94a67dd829d0c4d
+#: Subscription.rst:147
+msgid ""
+"MQ服务对外提供的API有六种，分别用于注册queue、删除queue、查询指定节点注册的所有queue、通知平台rabbitmq-"
+"broker正常工作、查询当前节点最新的exchangerName，以及删除指定名称的exchanger。"
+msgstr ""
+
+#: ../../source/Module/Message 8bfaf701df8340f29dfc01af82d4251b
+#: Subscription.rst:149
+msgid "**MQ服务接口详情请参考** https://docs.hyperchain.cn/document/detail?type=1&id=14"
+msgstr ""
+
+#: ../../source/Module/Message 4e7c0447308c4927b678ae10bbb27422
+#: Subscription.rst:153
+msgid "注册queue"
+msgstr ""
+
+#: ../../source/Module/Message 8529ed86838045b2836076cd8c123eba
+#: Subscription.rst:155
+msgid "平台接口名称为 **mq_register** ，参数为：RegisterMeta结构，MQ服务将创建与发送目标节点绑定的exchanger。"
+msgstr ""
+
+#: ../../source/Module/Message 143dd7a6b64b488c87b110520c321bb5
+#: Subscription.rst:157
+msgid "目前Signature字段暂时为预留字段，平台不会对Signature字段做处理。"
+msgstr ""
+
+#: ../../source/Module/Message 6200b0bc31e44a4aa07b003968f7bc11
+#: Subscription.rst:159
+msgid "目前可选的routingKey字段包括："
+msgstr ""
+
+#: ../../source/Module/Message 4847f86f89ea4883846bd06dec46bab8
+#: Subscription.rst:176
+msgid ""
+"其中以 \"Signed\" "
+"字段开头routingKey，表示该事件推送时，需要附带节点的ECert签名，具体的签名方式为将事件做json序列化，然后用SHA3算法做哈希，再用Ecert签名。"
+msgstr ""
+
+#: ../../source/Module/Message 1466a5a90e634fa68314082698482599
+#: 184becc896c44d62951063c1d81034ba 85a0500df1684576910a432cc5bda391
+#: 8de50d072c25476aa9072f37b053d39a Subscription.rst:198 Subscription.rst:231
+#: Subscription.rst:260 Subscription.rst:286 Subscription.rst:316
+#: Subscription.rst:344 a547df69ce0c491794b2061cf64fc2ce
+#: e6feff1cdde34e88b1bca1d27add7dc6
+msgid "返回值示例::"
+msgstr ""
+
+#: ../../source/Module/Message 147d6c2195b24fe698819b9b2913466b
+#: Subscription.rst:210
+msgid "其中的result字段内容为：队列名称(queueName)，exchanger名称(exchangerName)；如果发生异常，这两个返回值为空字符串。"
+msgstr ""
+
+#: ../../source/Module/Message 1b04e1ca21dc48208bdae1232ec573e6
+#: Subscription.rst:212
+msgid "在使用此接口注册订阅了带签名的事件时，需要注意： **平台务必开启Ecert，否则注册不成功**。"
+msgstr ""
+
+#: ../../source/Module/Message 9572bf5a75cd433da97795210dec61cd
+#: Subscription.rst:215
+msgid "删除queue"
+msgstr ""
+
+#: ../../source/Module/Message 6c51d5bb160e4c268b8a9bd30764bf39
+#: Subscription.rst:217
+msgid "平台接口名称为 **mq_unRegister** ，参数为：队列名称，exchanger名称，账户地址，签名（目前只用到前三个）。"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:243
+#: c97a4328ece041a3b334d52520ff748f
+msgid "其中result字段内容为：队列中还未消费掉的消息数目(count)，是否删除成功(success)，以及过程中产生的error信息(error，正常情况下为\"null\")，如果exchangerName与注册queue时的返回值不匹配，会删除失败。"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:246
+#: f966c484cffd4a249a73139b76d5cab6
+msgid "查询所有的queueName"
+msgstr ""
+
+#: ../../source/Module/Message 6c2e71b96e12430984443121cf672dfe
+#: Subscription.rst:248
+msgid "平台接口名称为 **mq_getAllQueueNames** ，不需要参数。"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:271
+#: b0b172e9b97447439b0b2bc5b0f7be65
+msgid "通知节点rabbitmq-broker正常工作"
+msgstr ""
+
+#: ../../source/Module/Message 403d236df39c4f7aa6596a88b647050b
+#: 72286c7ded88451bb57b6726f77df633 Subscription.rst:273 Subscription.rst:303
+#: Subscription.rst:330 e321c0a1a09444daa7c7065bbbb5adae
+msgid "**注意：该接口仅再以rabbitmq作为mq服务时生效**"
+msgstr ""
+
+#: ../../source/Module/Message 53455bdb18e548e785e15f2315764192
+#: Subscription.rst:275
+msgid "平台接口为 **mq_informNormal** ，不需要参数。"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:301
+#: da7dbd2e2a704e908bf0551d7017b5c9
+msgid "查询节点的exchangerName"
+msgstr ""
+
+#: ../../source/Module/Message 1533de26e7ca40468361781ef04e7877
+#: Subscription.rst:305
+msgid "平台接口为 **mq_getExchangerName** ，不需要参数。"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:328
+#: a6cbb5a4390c4e62b754054c250567f8
+msgid "删除exchanger"
+msgstr ""
+
+#: ../../source/Module/Message 43a5ede9c1bc4ff5b06592116e2afc15
+#: Subscription.rst:332
+msgid "平台接口为 **mq_deleteExchanger** ，参数为exchanger名称。"
+msgstr ""
+
+#: ../../source/Module/Message 89d3392d27734dcdb3fe411a500e3eff
+#: Subscription.rst:359
+msgid "SDK接口"
+msgstr ""
+
+#: ../../source/Module/Message 5a67d88c7b314d7aaff34af8b80e6535
+#: Subscription.rst:362
+msgid "订阅"
+msgstr ""
+
+#: ../../source/Module/Message 9a790c9174e04f16803f7bc7a9dde6cd
+#: Subscription.rst:364
+msgid "**方法名称**：registerQueue"
+msgstr ""
+
+#: ../../source/Module/Message 10cb74e4954f466dab7dc074636d3b41
+#: Subscription.rst:366
+msgid "**方法说明**：注册queue队列，只有调用了registerQueue，服务才能够正常工作"
+msgstr ""
+
+#: ../../source/Module/Message 562297b6ac4f42cabcab761e50a6ffec
+#: 7b7a4ac1c77a4289b5cc3a740be10dfd 8e407a1ad5874e2a98d1a1bc4a61f453
+#: Subscription.rst:368 Subscription.rst:446 Subscription.rst:478
+#: Subscription.rst:503 Subscription.rst:528 Subscription.rst:551
+#: b1b8d28a239b49b6a47d1ae191615422 b477be1f4b804479adaccc448426c5f9
+#: f66b27a6aaf0412b81855279e35d08e4
+msgid "**输入参数**："
+msgstr ""
+
+#: ../../source/Module/Message 7c02916adb1d4b1086d71202baa87036
+#: Subscription.rst:370
+msgid "RegisterMeta结构体"
+msgstr ""
+
+#: ../../source/Module/Message 11bd1c6664394f019f869dc829f84a92
+#: 5e102cdea6c64a3a8b58d5f3ceb2bd82 76f05192c0d34956a11b409bf970e904
+#: 9b3e56908b5c427b96fa7a68de07e059 Subscription.rst:372 Subscription.rst:454
+#: Subscription.rst:482 Subscription.rst:508 Subscription.rst:532
+#: Subscription.rst:556 bfd04652310045bdbccbf164e4f2fd4e
+#: e4c2788c4d6440f68e174756433ece90
+msgid "**返回值**："
+msgstr ""
+
+#: ../../source/Module/Message 2a4873b7296843e08563af506cbad957
+#: 7b2af99536cb4d24b82c8eb3b0499892 Subscription.rst:374 Subscription.rst:534
+msgid "exchanger名称"
+msgstr ""
+
+#: ../../source/Module/Message 2308fef5e4454528ae15854b669b4cf5
+#: Subscription.rst:375
+msgid "queue名称"
+msgstr ""
+
+#: ../../source/Module/Message 888e80599c874fbf9bdb03f7e179c9e2
+#: Subscription.rst:378 Subscription.rst:460 Subscription.rst:486
+#: Subscription.rst:512 Subscription.rst:536 Subscription.rst:560
+#: cca02181b7764846b9288f85f2c0873a e30b971ac5bc441a9918f37d0bce6cc5
+#: e939ea205ec743a0a39a47d6a2c99b67 eae589fe342e401490b8e11e8d962c9b
+#: fc7ace10e58341e5a90c387e98efbe61
+msgid "**调用示例**::"
+msgstr ""
+
+#: ../../source/Module/Message 2074755692ae4654acac04f2ac68428b
+#: Subscription.rst:415
+msgid "**MQ中事件Demo**"
+msgstr ""
+
+#: ../../source/Module/Message 65f392d9f7b14d94b8714525bcef5d73
+#: Subscription.rst:417
+msgid "以订阅了SignedMQBlock为例，在rabbitmq-broker中收到的事件内容为::"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:440
+#: cc1d3a77ef20424383298eb58500a15f
+msgid "解订阅"
+msgstr ""
+
+#: ../../source/Module/Message 9c3a80a2b89142c48dc1cc1b3a4f321a
+#: Subscription.rst:442
+msgid "**方法名称**：unregisterQueue"
+msgstr ""
+
+#: ../../source/Module/Message 061d5f563b394ddab9564e4e4332e59a
+#: Subscription.rst:444
+msgid "**方法说明**：删除指定名字的queue，如果queue不存在或者给出了不匹配的excahngerName，都将删除失败"
+msgstr ""
+
+#: ../../source/Module/Message 31e4adc5180c4d15b80136ba58be3b0b
+#: Subscription.rst:448
+msgid "queue名称(string)"
+msgstr ""
+
+#: ../../source/Module/Message 680d48fd0cf64ee099dc258e33f99d16
+#: Subscription.rst:449
+msgid "exchanger名称(string)"
+msgstr ""
+
+#: ../../source/Module/Message 6f8e8c3a24c241eab0bbf757260e53b7
+#: Subscription.rst:450
+msgid "发起者地址(string)"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:451
+#: f4f6c11c03d249fa8a104a49e50af166
+msgid "签名(string)"
+msgstr ""
+
+#: ../../source/Module/Message 4f2ab7d0c0c94ba1b1a86acc111abac1
+#: 536dc9190d184ec9a12c383be35a068f 5996bcc141604b34a7e354874bf6ba2e
+#: Subscription.rst:452 Subscription.rst:480 Subscription.rst:506
+#: Subscription.rst:530 Subscription.rst:554 a492a6764da94c7693ed45c404a80d1d
+#: d7ac8dc1504e4f248e69dd8dbb8ec70c
+msgid "节点ID(int)"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:456
+#: a361c8b5ea35422cbf902a4c7c1f4b52
+msgid "queue删除时仍持有的消息数目"
+msgstr ""
+
+#: ../../source/Module/Message 792da074e6f44b1e9e5afaeb2c20b107
+#: Subscription.rst:457 Subscription.rst:558 b8ab321a9a174cf498167099e1fd54cc
+msgid "是否删除成功"
+msgstr ""
+
+#: ../../source/Module/Message 11255d1c5e02459b9fe51ed58c4bfd0d
+#: Subscription.rst:458
+msgid "过程中的错误信息"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:474
+#: d54c432621d04909a6ad871fea3e0a68
+msgid "查询指定节点应注册的所有的queue名称"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:476
+#: b7bff6b159304eb386006572364a1588
+msgid "**方法名称**：getAllQueueNames"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:484
+#: b256165896d94942a643bb6eed5cbbfa
+msgid "queue名称列表"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:497
+#: a9b318319c0642a19765bb6669dc26eb
+msgid "通知平台rabbitmq-broker正常工作"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:499
+#: e4128805992f4adaba9e4d16909337be
+msgid "**方法名称**：informNormal"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:501
+#: e6d17c82c96d4f75898610e966fe36aa
+msgid "**方法说明**：该方法主要用于在broker宕机后，可以通过调用该方法，通知节点，节点会尝试建立连接以及恢复曾经注册的queue"
+msgstr ""
+
+#: ../../source/Module/Message 126db5e9def445719ed9c4f1a2b129fd
+#: Subscription.rst:505
+msgid "rabbitmq-broker的完整url"
+msgstr ""
+
+#: ../../source/Module/Message 38b0904722424113851fdf2365dbb927
+#: Subscription.rst:510
+msgid "平台建立连接，队列恢复的结果"
+msgstr ""
+
+#: ../../source/Module/Message 4919d239c9554da9b473e8ad249e96d7
+#: Subscription.rst:524
+msgid "查询指定节点exchanger的名称"
+msgstr ""
+
+#: ../../source/Module/Message 12170be931e647ad9863e6879a7b3c8d
+#: Subscription.rst:526
+msgid "**方法名称**：getExchName"
+msgstr ""
+
+#: ../../source/Module/Message 1c94d60ce90841c595279384af0d063d
+#: Subscription.rst:547
+msgid "删除指定的exchanger"
+msgstr ""
+
+#: ../../source/Module/Message 3fdb468844c14623b7e4b55be010586f
+#: Subscription.rst:549
+msgid "**方法名称**：deleteExchanger"
+msgstr ""
+
+#: ../../source/Module/Message 3126abe055614f8f963d1361ceacb854
+#: Subscription.rst:553
+msgid "exchanger名称(String)"
+msgstr ""
+
+#: ../../source/Module/Message 0dcd80e4727e4df8ba1c413aa265fc32
+#: Subscription.rst:573
+msgid "消息消费者Demo"
+msgstr ""
+
+#: ../../source/Module/Message 2da8e9ab336f4639b028602893fcfb0d
+#: Subscription.rst:575
+msgid "消费者程度调用receiveMsg()接口，可以消费相应的消息，外部程序可以通过getMessages()接口，获得所有消费者消费掉的消息记录"
+msgstr ""
+
+#: ../../source/Module/Message 33be4c55e7cf461ba22ea464af720fef
+#: Subscription.rst:608
+msgid "目前javasdk提供了对事件验签的功能，接口为MQUtil.verifyEvent，入参为从broker中直接接收到的事件。"
+msgstr ""
+
+#: ../../source/Module/Message 8293f695287a4ea99d65b7a012671008
+#: Subscription.rst:612
+msgid "订阅规则"
+msgstr ""
+
+#: ../../source/Module/Message 044af636d1724cdfb890e16acbd3ec56
+#: Subscription.rst:613
+msgid "订阅规则依赖于一个RegisterMeta结构实现，该结构体表现为一个json格式的字符串作为参数传入RegisterQueue()方法，RegisterMeta中不同的字段应用于不同的事件订阅规则，具体如下::"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:639
+#: d801f989d8d44945bb7f8ff203d44ff6
+msgid "异常处理"
+msgstr ""
+
+#: ../../source/Module/Message 6e15cdd3af424e65bf5f26dd63b88dbd
+#: Subscription.rst:642
+msgid "broker未启动"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:643
+#: a7dd9d27f2224db495da470e7ef3503c
+msgid "broker未启动时，在不注册队列，不需要消息推送时，平台正常输出日志，在用户调用API发起请求注册队列时，平台会打印错误日志。"
+msgstr ""
+
+#: ../../source/Module/Message 0dd5a464d81e40048b883e7149b4e0f1
+#: Subscription.rst:646
+msgid "broker宕机"
+msgstr ""
+
+#: ../../source/Module/Message 1b07342e84f74fe7bb4990a84a39202c
+#: Subscription.rst:647
+msgid "rabbitmq-broker端单方面宕机，宕机之后，平台可以继续的提交区块，但会打印相关的推送消息失败的日志；"
+msgstr ""
+
+#: ../../source/Module/Message 9595870c0073492f8dd47779bcfb0341
+#: Subscription.rst:649
+msgid ""
+"在rabbitmq-"
+"broker重启恢复后，需要用户再次注册队列，如果注册了与异常发生前同名的队列，则可以自动恢复broker宕机过程中的消息，平台会打印相关的日志提示消息已经恢复。"
+msgstr ""
+
+#: ../../source/Module/Message 2ddec8b52a5349a69a460e493b0829df
+#: Subscription.rst:652
+msgid "节点宕机"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:653
+#: d1baee258a5844d49c17b1c0ce4e325a
+msgid "节点宕机重启后，需要用户调用InformNormal接口，MQ服务会自动恢复队列，权限映射关系，并将缓存的数据推送到broker。"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:657
+#: fe6218543cc449af94af43629eb85b4f
+msgid "注意事项"
+msgstr ""
+
+#: ../../source/Module/Message 41c51bfdc40248b9ba55d2f7fbe889da
+#: Subscription.rst:659
+msgid "Log事件中data的编码方式为 **hex** ，按照相应格式解码，即可得到原始的字节数组；"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:660
+#: ae975edc5cb648b8ac994a03030bda5a
+msgid "在启动时使用kafka作为实现时，启动kafka服务之前需要保证kafka带着如下两个配置项启动："
+msgstr ""
+
+#: ../../source/Module/Message 5e991d63b64a40cea06f108e78cddb47
+#: Subscription.rst:662
+msgid "在配置文件server.properties中增加如下两个配置项"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:668
+#: dc0486a3b10440a7abbb962d300003da
+msgid "配置项"
+msgstr ""
+
+#: ../../source/Module/Message 9b794e5869f6463093e6a8775206617b
+#: Subscription.rst:669
+msgid "含义"
+msgstr ""
+
+#: ../../source/Module/Message 40cdf55c09fc48bc892056c4abdce0b5
+#: Subscription.rst:670
+msgid "值"
+msgstr ""
+
+#: ../../source/Module/Message 2b16202a47694b9f840661cd7eb295b1
+#: Subscription.rst:671
+msgid "auto.create.topics.enable"
+msgstr ""
+
+#: ../../source/Module/Message 469bf74f28d84fe8968d9d23e5223961
+#: Subscription.rst:672
+msgid "是否自动创建topic"
+msgstr ""
+
+#: ../../source/Module/Message 545f5ff0aac24e79aa84f3fabc31e30a
+#: Subscription.rst:673
+msgid "false"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:674
+#: e362fb628640490597a3343bae376cd1
+msgid "delete.topic.enable"
+msgstr ""
+
+#: ../../source/Module/Message 837339c10fdb4d638c803e438bf1b89c
+#: Subscription.rst:675
+msgid "是否直接删除topic"
+msgstr ""
+
+#: ../../source/Module/Message Subscription.rst:676
+#: f7b3891ad69b44d7a949d2f50229a451
+msgid "true"
+msgstr ""
+

@@ -1,0 +1,1545 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and
+#: ba82b3af980d46a2a1a7e3b4901e0f92 built-in methods tools.rst:4
+msgid "HVM合约内置方法和工具方法使用手册"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: d13a56c3ed2540009f6fadece9849d51 methods tools.rst:7
+msgid "1. 合约内置变量"
+msgstr ""
+
+#: ../../source/VM 0c0b37251bf144dfb6395b59c5724f40 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:9
+msgid "目前合约的内置变量"
+msgstr ""
+
+#: ../../source/VM 55b351300f2f4a1690005f12b899a4de Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:11
+msgid "`sender` ：合约方法调用者的地址（当且仅当存在跨合约调用时值会与orgin不同）"
+msgstr ""
+
+#: ../../source/VM 4fa86f5d06ad49fcb14bac2752c58cbe Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:13
+msgid "`origin` ：合约调用者的地址"
+msgstr ""
+
+#: ../../source/VM 60aaa83113c14bceb81bfbe01f2b17b4 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:15
+msgid "`txHash` ：当前交易的哈希"
+msgstr ""
+
+#: ../../source/VM 54c0ab1a3b7240c48773f731a4ba1133 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:17
+msgid "`blockTimestamp` ：交易所在区块的时间戳"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: d5baf567ec4849d099381176a0bd9cd9 methods tools.rst:19
+msgid "`blockNumber` ：交易所在区块"
+msgstr ""
+
+#: ../../source/VM 2fcd1ffaebfd4e418b89b1acf451ac73 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:21
+msgid "`contractAddress` ：合约地址"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: dda0014cd5e042ef8c4119c3e9506e8c methods tools.rst:24
+msgid "2. 合约内置方法"
+msgstr ""
+
+#: ../../source/VM 89dde07dbfe847de91d3773656d85ede Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:26
+msgid "合约内置方法是HVM合约实现类继承自BaseContract的方法，可在合约主类中通过this引用直接使用。"
+msgstr ""
+
+#: ../../source/VM 5a2110bd88a14e769c2eed67734e24fc Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:29
+msgid "获取交易extra信息"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: ef81b90f379041f1a501542b2a0a2966 methods tools.rst:31
+msgid "**getValueFromExtra**"
+msgstr ""
+
+#: ../../source/VM 996b414530ab4b1b8a7ff65960a2d359 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:33
+msgid "获得当前交易的extra字段信息，其中extra记录了链上额外的存证信息，是一个json字符串。"
+msgstr ""
+
+#: ../../source/VM 00d6ffc978c547a2883bdb843e99db1d
+#: 03170540129140b987a6cb7f355e70b8 051b2104a777481590dc0cca95626aa0
+#: 07c19d583e3149ffbe88370b0964e969 1264ed6da87e41b98755304d32b471b2
+#: 19b2a820c4be4ada9903f533684fe1ad 1d40bf2d5b784f18acae6cf7bdd53056
+#: 3181db244186447baeaad14af1181557 3b3361fd5b8f4d318507ab64deb96034
+#: 44815d7f8c0f4173a29915aa7605604b 4c6018a2fc994fd38f7ec89e823b1113
+#: 57c7a6bb1990449cbe0ced0528c46200 67a2a323d1cb43b7bc1632a1780bc063
+#: 6ae15d1665bc4e5080870f9c1e0c0c9a 6f3145dd29904537a01e6e25ea931117
+#: 7237f84a7f76485d83e61da32defdfa3 74b013d156f043e68ea8ecad0c48dc59
+#: 789e0ad16e03443d98519688ebfe1150 838016d26da44e899023e07b3fb6bcd5
+#: 872878abf2a8463db324fad59b33e133 8a9fd7f6a8dc4f9e98927c74fbfe0987
+#: 8e5bc493ee7e44dfb631f50c021bc0e9 9d485463b3354ac2a4611c201e4b4511 Contract
+#: Manual/HVM/HVM Related User a1c676c377d3496ebf1a2d2437754120
+#: a2ea5707d862408eb1e4d7ad0a1080cd a37baeda754a462090d61883e69053f3
+#: aa72b5ebed7942a4a2206784ca48f897 and b765824bcbfe4d62a75b745433524d84
+#: built-in c65dd53cea0e481e8d64ea09f9444441 c6ba155b1d23482d8bfbb82f142c6c49
+#: d82392a562f444579eae4046156c5f69 dcaf7c473b8a4d26b407c3396c0a029d
+#: dd519e2a827543f19f03f359b65feb57 df2b132a5a0b4c4c8062ce2efe8bcd8a
+#: e8c71dfef5884b0e8ffef2d98f7ca0ab fefaed73a309432cb907db3441162ee0 methods
+#: tools.rst:40 tools.rst:175 tools.rst:194 tools.rst:215 tools.rst:236
+#: tools.rst:257 tools.rst:278 tools.rst:333 tools.rst:352 tools.rst:378
+#: tools.rst:397 tools.rst:419 tools.rst:443 tools.rst:470 tools.rst:498
+#: tools.rst:511 tools.rst:536 tools.rst:549 tools.rst:574 tools.rst:588
+#: tools.rst:612 tools.rst:635 tools.rst:658 tools.rst:680 tools.rst:706
+#: tools.rst:732 tools.rst:751 tools.rst:765 tools.rst:779 tools.rst:793
+#: tools.rst:807 tools.rst:821 tools.rst:842 tools.rst:860 tools.rst:911
+#: tools.rst:930
+msgid "方法"
+msgstr ""
+
+#: ../../source/VM 0db4b3f277854c45a50b60321925095f
+#: 134b0e92a043465daf8c5330aa693e5e 1740905da63b40f28689e4ac7b1c4788
+#: 1b0f4137bebc45f2a2867e5c8d73c8e5 211c70f839c04cdb9e54028b3ef057aa
+#: 2dd641e132924b5095369ec86c506d89 3b3716de4ef54b548427466d471dd1ee
+#: 40bc528f23cc439c9cf45e2bbf394c5b 4334ff65791346ed94bff7ce61c46454
+#: 4568480694eb43ca9423d86a14413081 46c074f00cbb45958b2de95603fcea8e
+#: 4eef224813334ef1b2f1654d3f880721 4f9a541ed3004468be97b1c62757df79
+#: 5bfec62ebe714aac8d70909c72f6ed4a 5ffe39e2ba1d43d3af88ccb7da1fe7f8
+#: 61877c99119b4a4c8e084be8cace89be 65c947ff0b344ae6aa455504cf96d80d
+#: 69dd2597f7f142f18777ff8a2dd85e60 6a00f19a8aaa4f13b36356957116080c
+#: 72e5b37f527b4586ac1b82febb53472d 73380f49a97d47b39dc8a3dd1ed1d4e4
+#: 7a9bff070c1845209233df5ccd51b915 7bd3fcee48d144f69f888d435464d753
+#: 818ce8e4e3c946a29ad89aa7a0823bd5 862611bb9d9a4de9947bfe6ae67bbd35
+#: 8f005a4c4f83443f9d09d014204f8632 Contract Manual/HVM/HVM Related User
+#: a8f88fde4ab04675a7447d968390e992 and bffdab9061af47fe9bdc499edfc92448
+#: built-in dc0ebc8242314370b1c3b20502ae73fd dd6ab0da68a44aabb87a464312a66f5a
+#: dec0226cd1894ad3ae0f39f8805f3bc5 dfedbc024ce742a3bc50ff3ccdc27fdf
+#: e7aaa5d575ac4871b42b95467ea5807f e9f526c38f3a48379c9ee891b6475e87
+#: eb3b78f2d5e045eea45b0624340de1e9 ffa9645384084f439c0e48255d987af7 methods
+#: tools.rst:40 tools.rst:175 tools.rst:194 tools.rst:215 tools.rst:236
+#: tools.rst:257 tools.rst:278 tools.rst:333 tools.rst:352 tools.rst:378
+#: tools.rst:397 tools.rst:419 tools.rst:443 tools.rst:470 tools.rst:498
+#: tools.rst:511 tools.rst:536 tools.rst:549 tools.rst:574 tools.rst:588
+#: tools.rst:612 tools.rst:635 tools.rst:658 tools.rst:680 tools.rst:706
+#: tools.rst:732 tools.rst:751 tools.rst:765 tools.rst:779 tools.rst:793
+#: tools.rst:807 tools.rst:821 tools.rst:842 tools.rst:860 tools.rst:911
+#: tools.rst:930
+msgid "参数"
+msgstr ""
+
+#: ../../source/VM 0d1d147d01bb4321bc73375f35911f71
+#: 1169db0a86c6456894184bcb3ad7f09e 13d190b32616474fada8e0c37244011c
+#: 151bdb4a0d6948b98454a945950c579f 1a3da51a99a34499989b623c7ffdbf0d
+#: 217e8e28330740d888a8704c3129fe38 327f4937057d46b5866da02262cb364f
+#: 36043a3ba8ad4b94b92dd9d1c0150d4a 3a68a05568a04620b0482591859e1d9c
+#: 428fafec1090478ba624e8eb579f32ee 59a738538d6c40d7ba259ceb870f8f09
+#: 5dfb1bcf5f2b4c1696e91620e0baeed0 607478c49ef44d9e96d96a5d8404637a
+#: 6d588abdbc50496981c8f4f6ec5acec9 7b729dd936224fcfbaa28c85e969349b
+#: 7e47722c2daa4a99994a4063bc7af66a 8580489ba39b4888ae1ef6f75b66b247
+#: 87ba04a257804c2db4137cc8da03a26d 882dcecb4c8b4a96af14b56e0f92436a
+#: 8e5f3fa4a4074868804a909f13504135 92c14b073b7e47488b042500f26ba364
+#: 9356e7af536b40c2b1a074f8347ddc86 973305bd775841b59c393325fd60c65b
+#: 9df61073738a4e29b2c26dcd56b632b1 Contract Manual/HVM/HVM Related User and
+#: bcaf5a6ff2554db8be41cd6b506470f2 built-in c42355c856c04728b887852f5a8b27db
+#: c7241cec2efc47c093ff75af6a0778ab d08f9f89ad7a4c5586f312c783f33f8b
+#: d317981a28f14fc9bba24b5622397e77 e0ce81990e994677b4edb6f823523f6f
+#: e6bc37a40c6042b1a8620d05674f3dc6 e96e7a04816349238a7fca2b831206c1
+#: e99df0f533d74adfbb26421fe3bd639b e9beed1aa8dc4910832ad61ce20c5177
+#: ea513b8b901b4237b45acac86759d143 fc2657e3dcdf4821bff2e3a22887bbde methods
+#: tools.rst:40 tools.rst:175 tools.rst:194 tools.rst:215 tools.rst:236
+#: tools.rst:257 tools.rst:278 tools.rst:333 tools.rst:352 tools.rst:378
+#: tools.rst:397 tools.rst:419 tools.rst:443 tools.rst:470 tools.rst:498
+#: tools.rst:511 tools.rst:536 tools.rst:549 tools.rst:574 tools.rst:588
+#: tools.rst:612 tools.rst:635 tools.rst:658 tools.rst:680 tools.rst:706
+#: tools.rst:732 tools.rst:751 tools.rst:765 tools.rst:779 tools.rst:793
+#: tools.rst:807 tools.rst:821 tools.rst:842 tools.rst:860 tools.rst:911
+#: tools.rst:930
+msgid "返回值"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c361d1d60cdf407b93ee3af0772e7afc methods tools.rst:42
+msgid "getVal ueFromExtra"
+msgstr ""
+
+#: ../../source/VM 8a6624d8b16a4932ad490dd96cfeced0 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:42
+msgid "path：对得 到的extra字段进行过滤的规则"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and
+#: b0db5efd649f49d1a8822e45842e758d built-in methods tools.rst:42
+msgid "String类型 ，从extra字段得到的信息"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c758603a88f9463198626e8d900952dc methods tools.rst:46
+msgid "其中path是一系列由 `.` 分隔的key组成的字符串。"
+msgstr ""
+
+#: ../../source/VM 8ec9f2d1c2724d28bcda7e0dc9bc508b Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:48
+msgid ""
+"在key中可以包含一些特殊的通配符比如 `*` 和 `?` "
+"。如果要访问数组的指定元素，使用下标作为key。要获取数组的长度或者要基于数组添加子path，可以使用 `#` 。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: df583850cc0e47058ecf590ab3b05e54 methods tools.rst:50
+msgid ""
+"你可以对一个数组使用条件查询， `#[...]` 将返回第一个匹配元素， `#[...]#` 将返回所有匹配元素，其中查询条件支持比较运算符： "
+"`==` ，  `!=` ，  `<` ， `<=` ， `>` ， `>=` ，还有一些简单的模式匹配： `%` （like）和 `!%`"
+" （not like）。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: d0617c71551048ac9792d743b8b2f850 methods tools.rst:52
+msgid "注意： `.` 和 `?` 和 `*` 可以通过 `\\\\` 转义成为一般字符。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: cf7d88fc423e417d84a9b370014abc10 methods tools.rst:54
+msgid "实例::"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: f9aae601a7f14607aac594b32fc557cf methods tools.rst:59
+msgid "Path"
+msgstr ""
+
+#: ../../source/VM 776b40fa54c940b7a6a0a26613e5fa6f Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:59
+msgid "Result"
+msgstr ""
+
+#: ../../source/VM 739111126da742b2bfcee60e5affb765 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:59
+msgid "说明"
+msgstr ""
+
+#: ../../source/VM 4a22ea98553f45a7aba27cb6aea79bb7 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:61
+msgid "“name.last”"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and
+#: b6e3f2d3bf394bd48ce87834ebff5b30 built-in methods tools.rst:61
+msgid "Anderson"
+msgstr ""
+
+#: ../../source/VM 43c9540911574ba59073d03a225aab5a Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:61
+msgid "name的属性"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: f7c77c03eed544ee9600e833bc5e831b methods tools.rst:63
+msgid "“age”"
+msgstr ""
+
+#: ../../source/VM 3d76b152c03940708cb0e3d289929174 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:63
+msgid "37"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: f51ea517edde4e8e96001953785aadb4 methods tools.rst:63
+msgid "age属性"
+msgstr ""
+
+#: ../../source/VM 92e4c6fbe8264bfcb3c99560ea3b198d Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:65
+msgid "“children”"
+msgstr ""
+
+#: ../../source/VM 2815ab12e0f744ddb0a816acff613287 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:65
+msgid "[“Sara”,“Al ex”,“Jack”]"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: eec9df1e1d494aefb8239108af3f37b6 methods tools.rst:65
+msgid "children属性"
+msgstr ""
+
+#: ../../source/VM 94b1552e54334270a7830df04d90c3a9 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:68
+msgid "“children.#”"
+msgstr ""
+
+#: ../../source/VM 2ed77ffb1b0a4b06b3948a23bb5eef67 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:68
+msgid "3"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: fa7befbb57c7457793e71ccc86cb48eb methods tools.rst:68
+msgid "children数组的长度"
+msgstr ""
+
+#: ../../source/VM 789983b67a1541f4b5f507c30b1783d5 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:70
+msgid "“children.1”"
+msgstr ""
+
+#: ../../source/VM 3d4972df45ba48c5a1536ddb3762609a Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:70
+msgid "“Alex”"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and
+#: bb1462b6cdea423dbf03d409388ab2ce built-in methods tools.rst:70
+msgid "children数组的下标为1的元素"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: e6798fc1f0624680a4b5ea370b6da8ca methods tools.rst:72
+msgid "c?ildren.0”"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: e6dd278d3ecc4a0cb7ff8aa645533234 methods tools.rst:72
+msgid "“Sara”"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: f395b346287f4ae7b1b33052f74025d4 methods tools.rst:72
+msgid "匹配模式 为“c?ildren”的元素的下标为0的元素"
+msgstr ""
+
+#: ../../source/VM 4b360c95ef58493fb0afdc9470b235f4 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:75
+msgid "“fav.movie”"
+msgstr ""
+
+#: ../../source/VM 6058b705a9c84339a29b5f591a41c565 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:75
+msgid "“Deer Hunter”"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and
+#: b33dd9ecf56f4cbfad560d18dce769ae built-in methods tools.rst:75
+msgid "转义.，“fav.movie”属性"
+msgstr ""
+
+#: ../../source/VM 0785a0865e3045a4a5b6dffc14a53e34 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:78
+msgid "“friends.#.first”"
+msgstr ""
+
+#: ../../source/VM 3b3e8fab4fb242aea87edfeccd1afd16 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:78
+msgid "[ “Dale”,“Rog er”,“Jane”]"
+msgstr ""
+
+#: ../../source/VM 8ecaba5bb572479da6ed478df7004525 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:78
+msgid "friends数组内每个元素的first属性"
+msgstr ""
+
+#: ../../source/VM 9855a5c4b72944b98bcf2dfa25be229c Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:82
+msgid "“friends.1.last”"
+msgstr ""
+
+#: ../../source/VM 64b2bf5f5e7946d18ec27db3e03ba579 Contract Manual/HVM/HVM
+#: Related User aa858fbc8e1c4f7ab6eee73432d06056 and built-in methods
+#: tools.rst:82 tools.rst:96
+msgid "“Craig”"
+msgstr ""
+
+#: ../../source/VM 7354b1ed17d9441eb26a190542ecd29c Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:82
+msgid "friends数组的第2个元素的last属性"
+msgstr ""
+
+#: ../../source/VM 5af0e7e7d8714c93a18cc1c47b2d85f7 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:84
+msgid "“friends.#[last= =”Murphy”].first”"
+msgstr ""
+
+#: ../../source/VM 8b432dc1e92e433d9f598a6262b56f35 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:84
+msgid "“Dale”"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: fbdf22dcaee64776a8d01deed0ed584b methods tools.rst:84
+msgid "friends数组中第一个满足last 属性等于“Murphy”的元素的first属性"
+msgstr ""
+
+#: ../../source/VM 9eca2179df3748889dbbce9e9d01ddc5 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:87
+msgid "“friends.#[last== ”Murphy”]#.first”"
+msgstr ""
+
+#: ../../source/VM 73b9f7d80d1340e098791a3e1b8c934f Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:87
+msgid "[“Da le”,“Jane”]"
+msgstr ""
+
+#: ../../source/VM 7b3e971b694f4c4a94ffd4f10ad6ce49 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:87
+msgid "friends数组中所有满足last 属性等于“Murphy”的元素的first属性"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c06f63cb1b62449d861dc0deca56f0b5 methods tools.rst:90
+msgid "“friends .#[age>45]#.last”"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: e9c5c2ec913c4631a2aa4523d588432f methods tools.rst:90
+msgid "[“Craig ”,“Murphy”]"
+msgstr ""
+
+#: ../../source/VM 4b9fad1ebe6f4aedb96f52c4051dbf4f Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:90
+msgid "friends数组中所有 满足age属性大于45的元素的last属性"
+msgstr ""
+
+#: ../../source/VM 503486d91a60469fb1ae1afa1db97ec0 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:93
+msgid "“friends.#[ first%”D*”].last”"
+msgstr ""
+
+#: ../../source/VM 7b7cfd88111645df80e89f4326374d5c Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:93
+msgid "“Murphy”"
+msgstr ""
+
+#: ../../source/VM 5d7bfa2d6b1d43b89c4a4a5fbbea2899 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:93
+msgid "friends数组中第一个满足：first属 性符合”D*“模式，的元素的last属性"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: d47a081d1e5d4a13927b625a3c8b4066 methods tools.rst:96
+msgid "“friends.#[f irst!%”D*”].last”"
+msgstr ""
+
+#: ../../source/VM 6e878042e0e140d38ebb50cb2ef26550 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:96
+msgid "f riends数组中第一个不满足：first属 性符合”D*“模式，的元素的last属性"
+msgstr ""
+
+#: ../../source/VM 069289792df64a8382c31842bde3e19b
+#: 092a4a1b425b46febd6760ec82fb8ef8 12f29a872b5a486d92249a746cbda0f8
+#: 146e1101ef204934a4796fcf9bd8eca5 1e653c12035343f98b512c7b9eafe7c5
+#: 298ab9d9d9374edbb265517bd21ba7c0 2b418808b14a4696be02c4b49f0832fa
+#: 38ea68c55156486987a87bc732e3b5dc 457be16558b44fc9a1a9c3bd949fe718
+#: 4e80f54f060e4abc9a9a2d9ce31cad4b 5319b2f5197e4c9cae4184825fc66b2d
+#: 6030d13f03c842d19e7423195efcee5c 61b8ba09ebbc4ca7b48a13568cc79671
+#: 692f6dfddd95467eb10d9348ae380c2d 6a9b5c0cee024ea7a0d8e9b911014fd9
+#: 6b45e26eca524041ba5829f0909203d7 724b6f4004144cd5a22151e8bd600c4c
+#: 76d2b395252549caaf2e764cf8690de5 7b9f8a929e6d4f8d9c7faf41d791d5f4
+#: 88f298cbf4a24aac8d622e0ea5045ae0 8956829b63124639b8b744360ccfbde1
+#: 994ac98d6e6e47a3a04f854dc3de172d 9a2c30a6fef24def93e5d3d8b44cf006
+#: 9c67ee8ecdf24917a7a4bff397b7c5d3 Contract Manual/HVM/HVM Related User and
+#: b6b1242263d34129afb17751b3168c7a built-in c909a127e7d24b15b144db1f310457ab
+#: cbefd58b9d1343e08368bcf9c1cb6376 cfdb9de856a44d25b919be2558e34fd7
+#: d6203d4d873e473aabe193e78e0b32db ecaeed8469924b3ea76169fc43f878e1
+#: f9cb2a2c781645f3875f794bc7370aea fce2ea35498e4c5c92b1f40eb1db6463
+#: ff744ed7ba1a479192109c6c44411104 methods tools.rst:101 tools.rst:125
+#: tools.rst:180 tools.rst:199 tools.rst:220 tools.rst:241 tools.rst:262
+#: tools.rst:283 tools.rst:338 tools.rst:357 tools.rst:383 tools.rst:402
+#: tools.rst:424 tools.rst:448 tools.rst:477 tools.rst:517 tools.rst:555
+#: tools.rst:595 tools.rst:640 tools.rst:664 tools.rst:685 tools.rst:712
+#: tools.rst:737 tools.rst:756 tools.rst:770 tools.rst:784 tools.rst:798
+#: tools.rst:812 tools.rst:826 tools.rst:848 tools.rst:866 tools.rst:916
+#: tools.rst:937
+msgid "**示例**::"
+msgstr ""
+
+#: ../../source/VM 587272f2063c489a86adb9e63771f315 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:106
+msgid "合约事件推送"
+msgstr ""
+
+#: ../../source/VM 96e7cfa54e1b424f9a71aa6e32e95a5d Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:108
+msgid "hvm为合约的开发者提供了合约事件推送的功能，即可以在合约的执行过程中，将事件推送给客户端。订阅了相关事件类型的客户端可以接收到该事件消息。"
+msgstr ""
+
+#: ../../source/VM 5b58295cb6744f1cbd8249e82007fb89 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:111
+msgid "合约事件的推送"
+msgstr ""
+
+#: ../../source/VM 3907af55670e46e78c1caaf3e0780560 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:113
+msgid "合约事件推送的功能由合约基础类BaseContract实现，提供的接口如下::"
+msgstr ""
+
+#: ../../source/VM 2b87062203e14521b04a2490f94a8b24 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:117
+msgid "**参数：**"
+msgstr ""
+
+#: ../../source/VM 3fd891a8d9f1434cb88458e3d8ed20ae Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:119
+msgid "data：指定的合约推送数据，最后会转换json的数据的形式推送给客户端"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: afd976ced928438aabc87f34f1b8cd8f and built-in methods tools.rst:121
+msgid "name：事件的名称，必须提供一个非空的字符串来作为标识。"
+msgstr ""
+
+#: ../../source/VM 28a63fd53d0e4959993f11f62475bff7 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:123
+msgid "topics：用来事件的类型。用户订阅时，可以指定自己想要接收的topic来精确订阅相应的事件。通过topics来确定要接收哪些类型的事件。"
+msgstr ""
+
+#: ../../source/VM 17eeb4034b2b4c1491dbec74a64ae0f4 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:133
+msgid "合约事件的订阅"
+msgstr ""
+
+#: ../../source/VM 894828c63bfb4c6e9ae9ab0a613a8473 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:135
+msgid "用户可以通过LiteSdk提供的API来订阅合约事件，合约事件必须通过MQParam来注册订阅队列。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: e63f9cb39648427e8c14a7904a35f3ab methods tools.rst:137
+msgid "MQParam对象的创建示例如下::"
+msgstr ""
+
+#: ../../source/VM 6d9ba822d101434d8d4cd4038eb3bb71 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:158
+msgid "详细的订阅规则请查看LiteSdk使用文档的 **第七章. MQ相关接口(MQService)** 以及Litedk的 **MQ使用手册**"
+msgstr ""
+
+#: ../../source/VM 724b52d664d04ced9797dcc8c038894a Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:161
+msgid "获取内置变量"
+msgstr ""
+
+#: ../../source/VM 8ac525a9297d438db1bfea542112934d Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:164
+msgid "获取合约方法调用者地址"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: dd41a55fad4b4f238d4495d0653c3cca methods tools.rst:166
+msgid "**getSender**"
+msgstr ""
+
+#: ../../source/VM 5347e9361ea340dea55e3cf664deef18 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:168
+msgid "得到sender，合约方法调用者的地址（当且仅当存在跨合约调用时值会与orgin不同）"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a79fb035781d4260ae3bbdd0c89edb07 and built-in methods tools.rst:177
+msgid "getSender"
+msgstr ""
+
+#: ../../source/VM 23da8a8bdda94c1a8420629f251147c0
+#: 400314e458bb48c4ad4f72fb55f7f747 69bc94880d1e43b1a1a4899a97a1a25d
+#: 6ee22c2196e245beb6a1f547e69a9b4d 722dd2eac2f9470a93b937aefa276e24 Contract
+#: Manual/HVM/HVM Related User a3868778cf7e42889602c376ebc37b27 and
+#: b33cd56114614042adaf2e7a12d1d06a built-in cb5b0755560349e3a5dd49092e4d2270
+#: d42a4ba93d5045d7b518e6cc0bf30ba9 d7e025712e7e4c8c9cbda6b59ef49093
+#: dc9d28b86ff5498b9796c9b0e0656d78 f26ea0f6b0ed47ea8c47f855fae7bb66 methods
+#: tools.rst:177 tools.rst:196 tools.rst:217 tools.rst:238 tools.rst:259
+#: tools.rst:280 tools.rst:753 tools.rst:767 tools.rst:781 tools.rst:795
+#: tools.rst:809 tools.rst:823
+msgid "无"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: cabfd33201bd43c685b38551bd3fbb39 methods tools.rst:177
+msgid "sender，即合约方法调用者的地址"
+msgstr ""
+
+#: ../../source/VM 41edfebb86fc40648a29e6e940f784b2 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:185
+msgid "获取合约调用者地址"
+msgstr ""
+
+#: ../../source/VM 0b49e51085974bd9b672275d57644dc1 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:187
+msgid "**getOrigin**"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: fb8e9c7f5399433587abb5ef476d137e methods tools.rst:189
+msgid "得到origin，合约调用者的地址::"
+msgstr ""
+
+#: ../../source/VM 998a7f5b98c14039bafee2b211480539 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:196
+msgid "getOrigin"
+msgstr ""
+
+#: ../../source/VM 9c8f577c9e1841948f4c51e4b5754988 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:196
+msgid "origin，即合约调用者的地址"
+msgstr ""
+
+#: ../../source/VM 9c95e044fc064a10ba1f3e087df96b22 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:204
+msgid "获取交易哈希"
+msgstr ""
+
+#: ../../source/VM 143374b21ac341ca84565933ac4c7f17 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:206
+msgid "**getTxHash**"
+msgstr ""
+
+#: ../../source/VM 8df3d0584e3741d8bdf602b92b2caddc Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:208
+msgid "得到txHash，当前交易哈希"
+msgstr ""
+
+#: ../../source/VM 13521c706048476299b9adc99646e569 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:217
+msgid "getTxHash"
+msgstr ""
+
+#: ../../source/VM 1deab5f062a1423c9312eed05cf6cb2a Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:217
+msgid "txHash，即当前交易的hash"
+msgstr ""
+
+#: ../../source/VM 43920f421e244c5bb6d4ddad3a4d848b Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:225
+msgid "获取时间戳"
+msgstr ""
+
+#: ../../source/VM 58779aec6c154bd685bbf6b594b95e80 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:227
+msgid "**getBlockTimestamp**"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c42f4142784f4411b622e31f571f60fe methods tools.rst:229
+msgid "得到blockTimestamp，交易所在区块的时间戳"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: cc21d61f6e384bd99fff447678e2ec2f methods tools.rst:238
+msgid "getBlockTimestamp"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: affae0d9fe7c49059860ea48e745b6e9 and built-in methods tools.rst:238
+msgid "blockTimestamp，即交易所在区块的时间戳"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: caef78670e6148c381787c6aa07594b2 methods tools.rst:246
+msgid "获取区块号"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: f2987202611d461cbe9c50853b8a82ff methods tools.rst:248
+msgid "**getBlockNumber**"
+msgstr ""
+
+#: ../../source/VM 18844904e4ed4a3abd499819dcb8ad70 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:250
+msgid "得到blockNumber，交易所在的区块号"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: ca7b1ea7594448f09417fc6535c49cfe methods tools.rst:259
+msgid "getBlockNumber"
+msgstr ""
+
+#: ../../source/VM 86daeecf12bc424289d17262d79d0940 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:259
+msgid "blockNumber，即交易所在区块号"
+msgstr ""
+
+#: ../../source/VM 048807ee5d744917b1076549a5951d1e Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:267
+msgid "获取合约地址"
+msgstr ""
+
+#: ../../source/VM 6b4aced46d884ab98b923e32e006298a Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:269
+msgid "**getContractAddress**"
+msgstr ""
+
+#: ../../source/VM 5b82f92c188c41f2a0ed2f1fc9b6e643 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:271
+msgid "得到contractAddress，合约地址"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: f3d0396aae0a4491b29f35bc5afc892f methods tools.rst:280
+msgid "getContractAddress"
+msgstr ""
+
+#: ../../source/VM 0defbd4328304e91804cf47ef50764c9 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:280
+msgid "contractAddress，即合约地址"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: f73ab57a57474ce285675165b771e527 methods tools.rst:288
+msgid "合约内置方法使用demo"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: e362f2e3b9874672883bb80580052ad5 methods tools.rst:290
+msgid "**【源码包可参考HVM使用手册 - HVM合约Demo附件源码- hvm-manual-demo的contractMethodDemo目录】**"
+msgstr ""
+
+#: ../../source/VM 3f230e46dc2f4891a5693740100fa887 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:295
+msgid "3. HVM合约工具方法"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c7b0e75400ba46e78dae12bba61ad3d0 methods tools.rst:298
+msgid "概述"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: ac38747b64be4fd5b07a2bdb7c03345b and built-in methods tools.rst:300
+msgid "本文档介绍HVM合约编写过程可能使用到的工具方法，将分为以下8类进行说明。"
+msgstr ""
+
+#: ../../source/VM 11f8fc8fdcf646779ccfbd9b44c7395b
+#: 96babc082f474e799ba6864686f0b646 Contract Manual/HVM/HVM Related User and
+#: built-in methods tools.rst:302 tools.rst:319
+msgid "ByteUtil"
+msgstr ""
+
+#: ../../source/VM 39599793d2ef4a9ca041482bde8c9d77 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:304
+msgid "CryproUtil"
+msgstr ""
+
+#: ../../source/VM 5e207687649e4505b60a3678016ed0ac
+#: 7843918784814df58441d99dc3290669 Contract Manual/HVM/HVM Related User and
+#: built-in methods tools.rst:306 tools.rst:623
+msgid "HashUtil"
+msgstr ""
+
+#: ../../source/VM 1c8f2a3d9d8645e4af2944239597d848
+#: 29b9fda5a293413cbc362652af4b56a9 Contract Manual/HVM/HVM Related User and
+#: built-in methods tools.rst:308 tools.rst:646
+msgid "ObjectsUtil"
+msgstr ""
+
+#: ../../source/VM 85b85947a5c14d1086344c1c10341039 Contract Manual/HVM/HVM
+#: Related User and built-in f84e00ce7ab9418c95ab5822cdf5917c methods
+#: tools.rst:310 tools.rst:694
+msgid "StringUtil"
+msgstr ""
+
+#: ../../source/VM 22a37f7ded6e43708973ba6abf2e0cf7 Contract Manual/HVM/HVM
+#: Related User and built-in cbad7912fd144cf2b947adf9fb333f1f methods
+#: tools.rst:312 tools.rst:718
+msgid "Logger"
+msgstr ""
+
+#: ../../source/VM 3c5353805aa44e43b71a69021bc362cd Contract Manual/HVM/HVM
+#: Related User and built-in f8023a03d38645d9a55f99372d85cbd6 methods
+#: tools.rst:314 tools.rst:832
+msgid "DIDUtil"
+msgstr ""
+
+#: ../../source/VM 9f66d85ef50949d4a603300d815e868d Contract Manual/HVM/HVM
+#: Related User af65153bac014c01be8b4179379b63a4 and built-in methods
+#: tools.rst:316 tools.rst:871
+msgid "Hyperson"
+msgstr ""
+
+#: ../../source/VM 01d1fac7bceb4e9ab52ad4aa45b05c52 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:322
+msgid "byte数组与Hex String转换"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a5efd69ca06d4288b0e764cc67d59225 and built-in methods tools.rst:324
+msgid "**bytesToHex**"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c080c79f9fa943db92f946274b2f5283 methods tools.rst:326
+msgid "byte数组转换为十六进制String类型"
+msgstr ""
+
+#: ../../source/VM 16f9181c7cdc4202a6fffdac4ea67a6c Contract Manual/HVM/HVM
+#: Related User and built-in ef012f003b794f1d8f7d2a82bd521b52 methods
+#: tools.rst:335 tools.rst:380
+msgid "bytesToHex"
+msgstr ""
+
+#: ../../source/VM 441af9fa9c5d42cabdd8b0ef460f303e
+#: 682a144f6b72436bb13f6b7189f55b0e Contract Manual/HVM/HVM Related User and
+#: built-in methods tools.rst:335 tools.rst:380
+msgid "input：需要转换的byte数组"
+msgstr ""
+
+#: ../../source/VM 4ea8678b02c8465988441107b50034ff Contract Manual/HVM/HVM
+#: Related User ab94674a6c4a4acc9475a3b881ec8677 and built-in methods
+#: tools.rst:335 tools.rst:380
+msgid "十六进制String"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: e017b8dde0ec49238170f75fa11273a8 methods tools.rst:343
+msgid "**fromHexString**"
+msgstr ""
+
+#: ../../source/VM 9ddee281f81c4abbb3acb043652ebd67 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:345
+msgid "十六进制String类型转换为byte数组"
+msgstr ""
+
+#: ../../source/VM 8d17413da30143138c680aa49e8627a4 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:354
+msgid "fromHexString"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c2c5a340c24342ba9a71a9029a6482fd methods tools.rst:354
+msgid "s：需要转换的十六进制String"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: d15e932c24d349b6bc603df100942c11 methods tools.rst:354
+msgid "byte[]类型"
+msgstr ""
+
+#: ../../source/VM 9580df765bf3454297c06473488a5987 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:367
+msgid "byte数组和int转换"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c2bfb4112d544ea0a52d56afee94ef57 methods tools.rst:369
+msgid "**bytesToInt**"
+msgstr ""
+
+#: ../../source/VM 1063d178844340b3a9d7950c1e25db98 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:371
+msgid "byte数组转换为int类型"
+msgstr ""
+
+#: ../../source/VM 945e4f63ac7040efb1c490a344bed676 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:388
+msgid "**intToBytes**"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c664a8069d94428e83fe0a4521bacc79 methods tools.rst:390
+msgid "int类型转换为byte数组"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: d04c4a4491fc411e993b7ea154b6b012 methods tools.rst:399
+msgid "intToBytes"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: e395db7e89b04137bdfa1fe561c87e6f methods tools.rst:399
+msgid "value：需要转换的int类型"
+msgstr ""
+
+#: ../../source/VM 21684d19d3ee468985add783dadd2ed0
+#: 534f001f0ab743f79e6d91bf9aca01cc 8468d040ac444235880130084a7a3bc0 Contract
+#: Manual/HVM/HVM Related User and built-in methods tools.rst:399 tools.rst:421
+#: tools.rst:445
+msgid "byte[] 类型"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: cbf65d3e225e46dea7aa89539cbe4c20 methods tools.rst:408
+msgid "base64编码转byte数组"
+msgstr ""
+
+#: ../../source/VM 7dee0acfd2444927922d1180589c3657 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:410
+msgid "**fromBase64Str**"
+msgstr ""
+
+#: ../../source/VM 84e854c5a9d841079094d2408075871d Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:412
+msgid "将base64编码的String转换为byte数组"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a08c9e5f5f174f54ad86a86f45a52a3e and built-in
+#: d04f8c265a8544b3b9f20da103c8d462 methods tools.rst:421 tools.rst:445
+msgid "fromBase64Str"
+msgstr ""
+
+#: ../../source/VM 51f6c897e86a487eaa9d7934f280934f Contract Manual/HVM/HVM
+#: Related User and built-in de0b24627d6a4cf1bcdf69eb8d497110 methods
+#: tools.rst:421 tools.rst:445
+msgid "string：需要转换的base64编码的String类型"
+msgstr ""
+
+#: ../../source/VM 2f03b4405eee4574a7122d823b6d7808 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:429
+msgid "CryptoUtil"
+msgstr ""
+
+#: ../../source/VM 15e707c2e49240acb5f7960036c77a1b Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:432
+msgid "ECDSA账户验签"
+msgstr ""
+
+#: ../../source/VM 9db69e4b19e84b9f80658ad51b96b24b Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:434
+msgid "**verifySignature**"
+msgstr ""
+
+#: ../../source/VM 1a0c117c97a5473da723944f65f66f3c Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:436
+msgid "EC账户验签，通过公钥、原文和签名内容来验证签名内容。"
+msgstr ""
+
+#: ../../source/VM 658082763e494a6f9fad1246213425c9 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:459
+msgid "SM2国密账户验签"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: fa4b9867aa94459f962d32f87ea6ed14 methods tools.rst:461
+msgid "**verifySM2Signature**"
+msgstr ""
+
+#: ../../source/VM 8b5e8cfefc4b448682cfc3699446bc4f Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:463
+msgid "SM账户验签，通过公钥、原文和签名内容来验证签名内容是否正确。"
+msgstr ""
+
+#: ../../source/VM 1f3ec1efef8149919f43ee63027c11d2 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:472
+msgid "verifySM2 Signature"
+msgstr ""
+
+#: ../../source/VM 282cf3eb92e1496c906440f7f7a2a7d3 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:472
+msgid "pubKey：byte[] 类型的公钥origin：byte[]类 型的原文signature：byte[]类型的签名。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c527eb6f03ac483b99cbabd717c6d0c9 methods tools.rst:472
+msgid "布尔值，签名正 确则返回true， 否则返回false。"
+msgstr ""
+
+#: ../../source/VM 58ae3bce24f345e4842360deb99d8a5b Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:489
+msgid "SM4加解密"
+msgstr ""
+
+#: ../../source/VM 8809ccfcd5d943f6b192a63232347781 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:491
+msgid "**sm4Encrypt**"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: ad1de5b776e44cd4b7d82ad6f3960874 and built-in methods tools.rst:493
+msgid "sm4加密::"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c5552cc89ca04e26a19e69f11015ec50 methods tools.rst:500
+msgid "sm4Encrypt"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: ebf6a4f6777d4076b549feed1551734f methods tools.rst:500
+msgid "key：16字节的 对称加密密钥src：需要被加密的内容"
+msgstr ""
+
+#: ../../source/VM 7ba4af698cd5477891dad0420b55a2a8 Contract Manual/HVM/HVM
+#: Related User and b2ff597a6ced409796d9cac3be4830d7 built-in methods
+#: tools.rst:500 tools.rst:538
+msgid "byte[] 类型被加密的密文"
+msgstr ""
+
+#: ../../source/VM 8cba84445a01426281d980375d8377c8 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:504
+msgid "**sm4Decrypt**"
+msgstr ""
+
+#: ../../source/VM 30db301fcc244278b8414dd54164c779 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:506
+msgid "sm4解密::"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: df1cd1d59d714324ad0ee53c88bfbb65 methods tools.rst:513
+msgid "sm4Decrypt"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c75a5c70be2c4a1eb62b69e6c26b8d7d methods tools.rst:513
+msgid "key：16字节的 对称加密密钥src：需要被解密的内容"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: d3e68ca6a0254987912348bbfb7641d3 ee6630c91ac6480b8b6072ad6b6b2f46 methods
+#: tools.rst:513 tools.rst:551
+msgid "byte[] 类型被解密的原文"
+msgstr ""
+
+#: ../../source/VM 8c28948e00cd462b9150e469513f9c3c Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:527
+msgid "AES加解密"
+msgstr ""
+
+#: ../../source/VM 64d57b9e92484b4487346d172891dad8 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:529
+msgid "**aesEncrypt**"
+msgstr ""
+
+#: ../../source/VM 5dc0d57ab4bb405c8c0bcae0d5519a35 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:531
+msgid "AES加密::"
+msgstr ""
+
+#: ../../source/VM 41a360a369df4df99e15e156adb8c23e Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:538
+msgid "aesEncrypt"
+msgstr ""
+
+#: ../../source/VM 841af662c00446ae8fbc9e9cf8842b7e Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:538
+msgid "key：32字节的 对称加密密钥src：需要被加密的内容"
+msgstr ""
+
+#: ../../source/VM 0354ff2941a0439cb4ab2e25a10c1862 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:542
+msgid "**aesDecrypt**"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: ca233332494b49a5bfeac4c0dff7a91e methods tools.rst:544
+msgid "AES解密::"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: cf05cd9c61e343c591b781eee69103d6 methods tools.rst:551
+msgid "aesDecrypt"
+msgstr ""
+
+#: ../../source/VM 724d13e569ae443083a1af660bb026e3 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:551
+msgid "key：32字节的 对称加密密钥src：需要被解密的内容"
+msgstr ""
+
+#: ../../source/VM 76c42a51ebcb47c68c3e242be3880c59 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:565
+msgid "tripleDES加解密"
+msgstr ""
+
+#: ../../source/VM 66bc18f0d5a447fa9732b4ef4b0b0416 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:567
+msgid "**tripleDESEncrypt**"
+msgstr ""
+
+#: ../../source/VM 690196a5a1054c1abc0f0ea3c9f7a545 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:569
+msgid "tripleDES 加密::"
+msgstr ""
+
+#: ../../source/VM 239123e4318a4fdca0aa5c46b7aa02b4 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:576
+msgid "tripleDESEncrypt"
+msgstr ""
+
+#: ../../source/VM 3c5b0a49a27c430a8d1e41b9a90e418c Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:576
+msgid "key：24字节的对称 加密密钥src：需要被加密的内容"
+msgstr ""
+
+#: ../../source/VM 7b51ce0dea704baebd82acf69908ffdc Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:576
+msgid "byte[] 类 型被加密的密文"
+msgstr ""
+
+#: ../../source/VM 6e648a5c4a46405bb9e45c7ed95ed911 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:581
+msgid "**tripleDESDecrypt**"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: d58ba8400fba44cb975835d71c6fea3f methods tools.rst:583
+msgid "tripleDES 解密::"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: d3d3ad9f36a446b8a478b3770a1df0bc methods tools.rst:590
+msgid "tripleDESDecrypt"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: fc0123281b7c4972a533c1c04c33a1d5 methods tools.rst:590
+msgid "key：24字节的对称 加密密钥src：需要被解密的内容"
+msgstr ""
+
+#: ../../source/VM 7e4490935b95487ca93da42ac3558b97 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:590
+msgid "byte[] 类 型被解密的原文"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: ed7bac0dadec472184f9eaaf17aedd00 methods tools.rst:605
+msgid "ecc加密"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: fab14c21768e47b183cf546a6a8be590 methods tools.rst:607
+msgid "**eccEncrypt**::"
+msgstr ""
+
+#: ../../source/VM 6398aff959c7413cb75194e787377040 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:614
+msgid "eccEncrypt"
+msgstr ""
+
+#: ../../source/VM 2412421181364b33b0766f9b1434a6ab Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:614
+msgid "key：加密密钥src：需要被加密的内容"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: f8c35fd5785045d78701febf38d9ec39 methods tools.rst:614
+msgid "byte[] 类型被加密的原文"
+msgstr ""
+
+#: ../../source/VM 13649fb79ec849c0a056dc525bbb0125 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:618
+msgid "CryptoUtil使用demo"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: debca2354a6c4fd7ac3b277f3756120e methods tools.rst:620
+msgid "【源码包可参考HVM使用手册 - HVM合约Demo附件源码 -** hvm-manual-demo的cryptoCallDemo目录**】"
+msgstr ""
+
+#: ../../source/VM 9300090603444b4d8ca4a6e84423f7fd Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:626
+msgid "sha3-256哈希计算"
+msgstr ""
+
+#: ../../source/VM 9260e669fd4d4c71974f64d803f1116e Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:628
+msgid "**sha3**"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: e650bbf17b3f49c8abe45dc5fec01fac methods tools.rst:630
+msgid "对输入的byte数组进行sha3-256哈希计算，返回散列值::"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: f1dbc44d45e042a4949dc0ad04b3a4e9 methods tools.rst:637
+msgid "sha3"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: f62a621c0dca463dbf38d89d34addbb2 methods tools.rst:637
+msgid "input：需要哈希的byte数组"
+msgstr ""
+
+#: ../../source/VM 538866f0023a427e8ada677189298105 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:637
+msgid "byte[] 类型散列值"
+msgstr ""
+
+#: ../../source/VM 1aabc996efb74e2698fb7b0e5c71b91f Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:649
+msgid "判断对象是否相等"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and
+#: b2bd5d88d14b44f1b5e4c0d1314d9783 built-in methods tools.rst:651
+msgid "**equals**"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and
+#: b40aac1e3f4d4edaa043bd290ddf2517 built-in methods tools.rst:653
+msgid "判断Object是否相等，返回布尔值::"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a171ec88698b4ab18b0c369b3684c1d3 and built-in methods tools.rst:660
+msgid "equals"
+msgstr ""
+
+#: ../../source/VM 2625ad5f257e47da873dd3e9f96a094f Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:660
+msgid "x：Java Object。y：Java Object"
+msgstr ""
+
+#: ../../source/VM 81b887d1aa1c4f618920ff64fd8c3e31 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:660
+msgid "布尔值，x和y相等， 返回true，否则返回false。"
+msgstr ""
+
+#: ../../source/VM 4c1f9a7703ec412aaf47ced34b5b385e Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:671
+msgid "哈希计算"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c1b54304ec4c49448536a203e587d0ac methods tools.rst:673
+msgid "**hash**"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: f3a359acf073449d84d9db37b01d5384 methods tools.rst:675
+msgid "计算多个Object的哈希值，返回多个Object的哈希值::"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and
+#: b713ced177a74a66aef7f3989397032d built-in methods tools.rst:682
+msgid "hash"
+msgstr ""
+
+#: ../../source/VM 6a2426ada4f742f89aca7235ebe38fa0 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:682
+msgid "values：0个或多个Java Object。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c93671cdc2d9455b9031dc7b60971afa methods tools.rst:682
+msgid "多个Object的哈希值"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: f3bc87387daf43daa0f8d4cde7d76293 methods tools.rst:697
+msgid "检查String对象是否为空"
+msgstr ""
+
+#: ../../source/VM 007c15c540544a539c0d8af364507c1a Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:699
+msgid "**checkEmpty**"
+msgstr ""
+
+#: ../../source/VM 5c42d1d79eef4180a7b61972b30cec26 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:708
+msgid "checkEmpty"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a8c9a743c38844fd840472d8b2ffa30f and built-in methods tools.rst:708
+msgid "string: 需检查的String对象"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: f5ecf59d7b4342e89c84b10acfe4975a methods tools.rst:708
+msgid "布尔值，String对象 为空则返回true，否则返回false。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: d6ebbef9252446018ef486e8674ba0d5 methods tools.rst:720
+msgid "Logger类提供了打印对应classlog信息的功能。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and
+#: b806865d07a740ccac7823606784eeca built-in methods tools.rst:723
+msgid "获取logger"
+msgstr ""
+
+#: ../../source/VM 89c609f9a30c4989acd2cbed56d8703b Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:725
+msgid "**getLogger**"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and
+#: b09e1870738b492b9fee1c0b1f2f9b41 built-in methods tools.rst:734
+msgid "getLogger"
+msgstr ""
+
+#: ../../source/VM 297552cf9032409895626d1378c5db32 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:734
+msgid "clazz: 对应的class对象"
+msgstr ""
+
+#: ../../source/VM 87532cb668304119b92ca86981d36c0e Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:734
+msgid "Logger对象"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c551f255bbee411dbb8c7c6ae3471b3f methods tools.rst:744
+msgid "日志级别"
+msgstr ""
+
+#: ../../source/VM 48f316e9e6614099a5a74ab13a7840c2 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:746
+msgid "**critical级别的日志**::"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and
+#: be125e63fee54daf9b2c85283403112d built-in methods tools.rst:753
+msgid "critical"
+msgstr ""
+
+#: ../../source/VM 0dcddd04485949ae82f8195ed183dca5
+#: 58022a7496d34e739a0a8ccbc95af18c 6d444f21ee494404be57b8eda16e20ce
+#: 9aac83f688dd477eb6ea9cc4a8872c22 Contract Manual/HVM/HVM Related User
+#: a262fa61d7cf4de6b15b29e9149e5a0e and built-in
+#: d9c4ab367465416ab75d2d3f3459568f methods tools.rst:753 tools.rst:767
+#: tools.rst:781 tools.rst:795 tools.rst:809 tools.rst:823
+msgid "message: Object对象，需打印的日志信息"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: ee8bf3043a9749a199121742d9185185 methods tools.rst:760
+msgid "**err级别的日志**::"
+msgstr ""
+
+#: ../../source/VM 9a7bd12be48e4d319270b4f530e27f61 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:767
+msgid "err"
+msgstr ""
+
+#: ../../source/VM 659b41539ef942a4b5584c5974213d12 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:774
+msgid "**warning级别的日志**::"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and
+#: ba1518f773a4454c945ec14ba452f054 built-in methods tools.rst:781
+msgid "warning"
+msgstr ""
+
+#: ../../source/VM 330fc95f9a604565ac413a420e5997a1 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:788
+msgid "**notice级别的日志**::"
+msgstr ""
+
+#: ../../source/VM 85b4350f5b474bc5b6f5a2dd0c302911 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:795
+msgid "notice"
+msgstr ""
+
+#: ../../source/VM 1e04fe4ed31d470bb72e8804115371eb Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:802
+msgid "**info级别的日志**::"
+msgstr ""
+
+#: ../../source/VM 7c5868c3ef784ec2adacd6b2a67a9e2c Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:809
+msgid "info"
+msgstr ""
+
+#: ../../source/VM 1338fec7b7934f5ca03dc6e30dec49b7 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:816
+msgid "**debug级别的日志**::"
+msgstr ""
+
+#: ../../source/VM 025502e862ad445b8bd3043c400d9f2f Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:823
+msgid "debug"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: dfe117aade2149838eccb19f9b82d334 methods tools.rst:835
+msgid "检查凭证是否有效"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: d9c2f21de82d4d4ca5a7863be86e30c9 methods tools.rst:837
+msgid "**credentialIsValid**::"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: f3e8b5d6dd494e5eb82c0f5a9ad26250 methods tools.rst:844
+msgid "credent ialIsValid"
+msgstr ""
+
+#: ../../source/VM 274c3c5d707c4f67905b3c279beb199c
+#: 2a9146ae8982424bb6feede95b2239c6 Contract Manual/HVM/HVM Related User and
+#: built-in methods tools.rst:844 tools.rst:862
+msgid "string: 需检查的凭证ID"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: d505c2ed032c41b794300ed8727c2b29 methods tools.rst:844
+msgid "布尔值，凭证被 吊销或过期则返回false，否则返回true。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c494e17ac70e495e8840784cbed3c915 methods tools.rst:853
+msgid "检查凭证是否吊销"
+msgstr ""
+
+#: ../../source/VM 0c6ebc8a753c4bda80b7aabf350d01a5 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:855
+msgid "**credentialIsAbondoned**::"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: e5b8f23e6ca043a4b558b69a7072c7cc methods tools.rst:862
+msgid "credent ialIsAbondoned"
+msgstr ""
+
+#: ../../source/VM 1038083c33644870968008f98fc4a6bc Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:862
+msgid "布尔值，凭证 被吊销则返回true，否则返回false。"
+msgstr ""
+
+#: ../../source/VM 017007a0b3674c9986f2f3ffe87d853d Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:873
+msgid ""
+"Hyperson提供了 `toHyperson` 方法将Java对象序列化成json字符串，以及 `fromHyperson` "
+"方法将json字符串反序列化成Java对象。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c4e0a914dd7c4d2f82586eab711e8f7a methods tools.rst:875
+msgid "在使用Hyperson提供的序列化和反序列化方法之前，首先要构造一个Hyperson对象，可通过构造方法以及HypersonBuilder来构建，示例如下::"
+msgstr ""
+
+#: ../../source/VM 17dccf0e1ab2425daeb5f745425dc0f8 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:891
+msgid "配置项说明如下："
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a9651a3989fe46608a77bb940a4b4928 and built-in methods tools.rst:893
+msgid ""
+"serializeNull "
+"控制是否序列化对象中值为null的字段，设置为true，则序列化值为null的字段；设置为false，则忽略值为null的字段，默认为false。"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c74f4e9c4bff488ebdbc5bf97ff812f2 methods tools.rst:895
+msgid ""
+"escapeHtml 控制是否转义html字符，如 `<` "
+"，设置为true，则对html字符进行转义；设置为false，则不对html字符转义，默认为true。"
+msgstr ""
+
+#: ../../source/VM 869aee83b96d4d85ac7ebc57d8c27c63 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:897
+msgid ""
+"excludeAnnotationField "
+"记录了注解类型，序列化和反序列化的过程中，将会忽略添加了这些注解的字段。即如果不想序列化对象中的某些字段，可以给相应字段添加注解，并将该注解类型设置到excludeAnnotationField中，那么添加了该注解的对象字段将不会被序列化。"
+msgstr ""
+
+#: ../../source/VM 9357c8911b46424fb9b07742a0069f42 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:899
+msgid ""
+"excludeClassField "
+"记录了不被序列化及反序列化的字段类型。即如果不想序列化某一类型的字段，则可以将该类型设置到excludeClassField中，那么该类型的字段将不会被序列化。"
+msgstr ""
+
+#: ../../source/VM 829106cc27e647a98ae6f63b217648fc Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:904
+msgid "序列化"
+msgstr ""
+
+#: ../../source/VM 56de56e2427f4067aa99edab5b087621 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:906
+msgid "**toHyperson**::"
+msgstr ""
+
+#: ../../source/VM 11f73764829f47af973b41e7608852bd Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:913
+msgid "toHyperson"
+msgstr ""
+
+#: ../../source/VM 910e966286ac4d1e8982a50cb79e73a1 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:913
+msgid "object: 需序列化的对象"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: ac701363575a41279aaf2d620568ce04 and built-in methods tools.rst:913
+msgid "字符串，对象序列化后的json字符串"
+msgstr ""
+
+#: ../../source/VM 3b89a09859b44c3db1a3d9c8e243dce2 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:923
+msgid "反序列化"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User and built-in
+#: c890925f98f54f38915b7d8eb236791f methods tools.rst:925
+msgid "**fromHyperson**::"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a116349de43b4fe29bdba7b27c3a83e4 and built-in methods tools.rst:932
+msgid "fromHyperson"
+msgstr ""
+
+#: ../../source/VM 13bc8c3679aa4add89275432c9d8f47f Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:932
+msgid "hyperson: 对象的json字符串type：对象的类型"
+msgstr ""
+
+#: ../../source/VM Contract Manual/HVM/HVM Related User
+#: a7b02113291640f48eafef4b7cdc3c9b and built-in methods tools.rst:932
+msgid "反 序列化生成 的对象实例"
+msgstr ""
+
+#: ../../source/VM 94229cc1d4994ca1b4ed847b17c6c97b Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:951
+msgid "**注意事项**"
+msgstr ""
+
+#: ../../source/VM 3b8608403ad943c3995fa1da9e488489 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:953
+msgid "对象中不允许存在同名字段，即父类和子类不能存在同名字段"
+msgstr ""
+
+#: ../../source/VM 46205223105d46519da3916d633e04fa Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:955
+msgid "序列化Map类型的对象时，其key不能为复杂类型，可为八大基本类型或String类型"
+msgstr ""
+
+#: ../../source/VM 0dd22d274f254c12b8ff927b9cd9fdfd Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:957
+msgid "反序列化时，传入的类型参数必须是class类型对象或者实现了ParameterizedType接口的对象"
+msgstr ""
+
+#: ../../source/VM 50c82a490b754a7f9818360de97c433b Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:959
+msgid "反序列化时，如果没有传入相应的类型参数，则数组、集合对象默认反序列化为ArrayList；byte、short、int、long、float、double默认为Double；char、String默认为String；boolean默认为Boolean；其他对象反序列化为LinkedHashMap对象"
+msgstr ""
+
+#: ../../source/VM 1fbeead15ab24f65ab90b9cb1f1d1162 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:961
+msgid "反序列化时，当传入的类型参数是抽象类或接口时，如果其为继承或实现Collection的接口或抽象类类型，则SortedSet接口类型对应TreeSet类型，EnumSet类型对应EnumSet的子类，Set接口类型对应LinkedHashSet类型，Queue接口类型对应ArrayDeque类型，其他为ArrayList类型；如果其为继承或实现Map的接口或抽象类类型，则ConcurrentNavigableMap接口类型对应ConcurrentSkipListMap类型，ConcurrentMap接口类型对应ConcurrentHashMap类型，SortedMap接口类型对应TreeMap类型，其他为LinkedHashMap类型。如果不为Map、Collection以及Number，其他抽象类或接口会反序列化失败。"
+msgstr ""
+
+#: ../../source/VM 147e3c3a045b4cd39ca3a8465bc6cd06 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:963
+msgid "浮点数不允许为NaN或者inf(无穷值）"
+msgstr ""
+
+#: ../../source/VM 074cae0c251d47359633cac67ba5c523 Contract Manual/HVM/HVM
+#: Related User and built-in methods tools.rst:965
+msgid "Hyperson不支持对增加了注释的json字符串进行反序列化"
+msgstr ""
+

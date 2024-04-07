@@ -1,0 +1,272 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Chain Authority Management/chain conf
+#: f1291694919448e48ddf9f16bcbd459c mange.rst:4
+msgid "状态证明使用手册"
+msgstr ""
+
+#: ../../source/Chain 7cc7764dab9b41ad9fba793bd033e2ff Authority
+#: Management/chain conf mange.rst:7
+msgid "1. 数据准备"
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain conf
+#: fc2089e951f6486c9f43fba1604ccdac mange.rst:9
+msgid "archivereader的状态证明依赖一份archivereader维护的归档路径下的线下账本数据。即如图所示的情况："
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain conf
+#: ee030f84996e4c579e73d6222f49fa20 mange.rst:11
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain
+#: ab35fd0db55f458c9d5e8ee3bb753b3d conf mange.rst:230
+msgid "image0"
+msgstr ""
+
+#: ../../source/Chain 89bedad9689541a0a984c6e38843f68f Authority
+#: Management/chain conf mange.rst:13
+msgid "红色方框中的数据就是状态证明所需要的数据。这份数据与hyperchain上归档产生的数据有一定的区别："
+msgstr ""
+
+#: ../../source/Chain 6e861072e2154c9d8fee637e637e601e Authority
+#: Management/chain conf mange.rst:15
+msgid "只需要账本数据即可；"
+msgstr ""
+
+#: ../../source/Chain 5efbebb2f60c456d89f70ff804ec71dd Authority
+#: Management/chain conf mange.rst:17
+msgid "ledger.zip文件需解压缩后，得到accountdb、statedb、diddb、credentialdb这四个文件夹；（backup.meta和compress.meta是因为这个路径被当成了一个hyperchainDB打开了，系统自动生成了这两个文件；当解压完成后，ledger.zip这个文件与证明过程完全无关）"
+msgstr ""
+
+#: ../../source/Chain 6cb4fa6c5e394d9a94390647434f9bd8 Authority
+#: Management/chain conf mange.rst:19
+msgid "因此，联动hyperchain和archiveReader，完整的数据拷贝过程应该是："
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain conf
+#: dff94e29ca4d45b5a0b195fb69d3e19c mange.rst:21
+msgid ""
+"hyperchain仓库调用Snapshot接口（这一个步骤在第3章会做详细说明），制作出一个seqNo对应的照数据，这份数据在hyperchain上的路径为：`namespaces"
+"/any-ns/data/archive/any-filterID/ledger.zip`；"
+msgstr ""
+
+#: ../../source/Chain 02480f6dc7c241a29a2fa2204aa18ceb Authority
+#: Management/chain conf mange.rst:23
+msgid ""
+"将上述的ledger.zip文件拷贝到archiveReader的相同路径下（`namespaces/same-ns/data/archive"
+"/same-filterID/ledger.zip`）;"
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain
+#: c10008bf18724415a6eadc76f7a73792 conf mange.rst:25
+msgid ""
+"在archiveReader的`namespaces/same-ns/data/archive/same-"
+"filterID`路径下解压缩文件，得到如下目录结构::"
+msgstr ""
+
+#: ../../source/Chain 991bef65be20482a9beb5119e0c2a949 Authority
+#: Management/chain conf mange.rst:34
+msgid "至此，archiveReader便可以读取到这份数据并对外提供证明服务。"
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain
+#: be424e9cd4b94d5c8de34de10959db7a conf mange.rst:37
+msgid "2. 接口说明"
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain conf
+#: f9da7834a5a34c5bb2e5498a082ae516 mange.rst:39
+msgid "archiveReader会新增两个api接口，用户可以通过curl的形式向archiveReader发送请求。新增的两个接口分别为："
+msgstr ""
+
+#: ../../source/Chain 66efc188250a48d2a10ab1a383e0f66a Authority
+#: Management/chain conf mange.rst:41
+msgid "接口名称                     | 参数               | 返回值              |"
+msgstr ""
+
+#: ../../source/Chain 604b80b69bb84ca08ca666339ed68073 Authority
+#: Management/chain conf mange.rst:42
+msgid "------------------------ | ---------------- | ---------------- |"
+msgstr ""
+
+#: ../../source/Chain 4c2396dba17c4e4bbf758e1f65740f65 Authority
+#: Management/chain conf mange.rst:43
+msgid "proof_getStateProof      | json结构ProofParam | json结构StateProof |"
+msgstr ""
+
+#: ../../source/Chain 51bb8957ae0240ab8f1246526b27a1c4 Authority
+#: Management/chain conf mange.rst:44
+msgid "proof_validateStateProof |                  | true/false       |"
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain
+#: b2dd41e8e93e40f1afa9adea2a7d133b conf mange.rst:47
+msgid "json结构ProofParam"
+msgstr ""
+
+#: ../../source/Chain 5c61c147f7d249a6b39d0815b372181d Authority
+#: Management/chain conf mange.rst:65
+msgid "首先，整体上上述结构包含两个子部分：**meta**和**key**："
+msgstr ""
+
+#: ../../source/Chain 651973b1f3f64329a13e41d3f9d514fd Authority
+#: Management/chain conf mange.rst:67
+msgid "**meta**的含义是这一次proof相请求涉及的是哪一个账本数据："
+msgstr ""
+
+#: ../../source/Chain 0fc2c3ff46394b7ab872afc97c3beea0 Authority
+#: Management/chain conf mange.rst:69
+msgid "**snapshotID**：（带0x的16进制字符串）即当前账本所在的snapshotID目录；"
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain conf
+#: d5799671fe374e2da31289e075d4f340 mange.rst:71
+msgid "**seqNo**：（uint64）因为vidb会保留最近的40个区块的数据，即假设hyperchain上在100号做了snapshot，那么在这份账本数据中61-100号的账本数据都是可查的；因此用户可以传入seqNo声明基于哪个区块的数据做证明或者验证证明；"
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain
+#: c48bb949740d4f0fabd2dd6a1a363675 conf mange.rst:73
+msgid "**key**的结构中封装了本次proof操作请求相关的账本上的key的全部信息："
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain conf
+#: fe55cc60a3f24f04b00f405c672cc0ca mange.rst:75
+msgid "**address：**（带0x的16进制字符串）合约地址"
+msgstr ""
+
+#: ../../source/Chain 9b98b40549084623a30511b1cdae0cd7 Authority
+#: Management/chain conf mange.rst:77
+msgid "**filedName：**（string）用于预期查询的合约中的字段名称（带@StoreField注解的合约类中的属性）"
+msgstr ""
+
+#: ../../source/Chain 86bf203085c84cefa8e7af965292e3dc Authority
+#: Management/chain conf mange.rst:79
+msgid "**params：**（string数组）为复杂的复合key准备的额外参数，具体的规则见文档（）第2.1节"
+msgstr ""
+
+#: ../../source/Chain 4bc27ee503d3485f8a804ba5c19be590 Authority
+#: Management/chain conf mange.rst:81
+msgid "**vmType：**（string）虚拟机类型"
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain
+#: ca7326633bac4a14a9a8ded61729e5db conf mange.rst:84
+msgid "json结构StateProof"
+msgstr ""
+
+#: ../../source/Chain 8112e8d19add4a248e391af609f42597 Authority
+#: Management/chain conf mange.rst:175
+msgid "上述json案例就是一个完整的“证明数据”返回值。其中包含两个字段：statePath、accountPath。"
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain
+#: aa9d820efd274464b69e13cfa1baea8c conf mange.rst:177
+msgid "其中statePath表示的是：statedb目录对应的vidb中获取的proofPath；"
+msgstr ""
+
+#: ../../source/Chain 0b3eea6285984b418a24ee46fbc4b639 Authority
+#: Management/chain conf mange.rst:179
+msgid "相应的，accountPath表示的是：accountdb目录对应的vidb获取的proofPath；"
+msgstr ""
+
+#: ../../source/Chain 517e0af72c054dbe9ec5db8338bb9e71 Authority
+#: Management/chain conf mange.rst:181
+msgid "**proofPath说明：**"
+msgstr ""
+
+#: ../../source/Chain 1731acb6cc64403ab6e4e1be15d5b9aa Authority
+#: Management/chain conf mange.rst:183
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/Chain 7837b6feec0f442a8fcdba4b0fec1d9f Authority
+#: Management/chain conf mange.rst:231
+msgid "image1"
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain conf
+#: ddce9b0ed56d462dab760702974f270f mange.rst:185
+msgid "对于vidb而言，证明路径就是由每层一个节点构成的。节点的内容定义如下::"
+msgstr ""
+
+#: ../../source/Chain 56630e5b96d54ae2b8e2c87f47435ed0 Authority
+#: Management/chain conf mange.rst:204
+msgid "3. hyperchain上制作快照"
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain conf
+#: f19c010defa14886934e009dcb85babf mange.rst:206
+msgid "hyperchain上暴露了一个新的jsonrpc接口用于制作快照："
+msgstr ""
+
+#: ../../source/Chain 7f411619173b4e31823d08994f1f334b Authority
+#: Management/chain conf mange.rst:208
+msgid "接口名称             | 参数      | 返回值              | 同步接口 |"
+msgstr ""
+
+#: ../../source/Chain 172ca63a4881426d90f8df5cd7947060 Authority
+#: Management/chain conf mange.rst:209
+msgid "---------------- | ------- | ---------------- | ---- |"
+msgstr ""
+
+#: ../../source/Chain 1282ac54aefd4b1e9f5cb67163acf168 Authority
+#: Management/chain conf mange.rst:210
+msgid "archive_snapshot | int-区块号 | string-账本快照的标识ID | 是    |"
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain
+#: c9334185d9cf42afb24a74db29ce3d19 conf mange.rst:212
+msgid ""
+"hyperchain在执行命令时，会以apply "
+"journal的形式，制作出“至入参区块号执行完成时为止”的账本快照数据。该过程可以类比archive过程中的制作快照步骤。"
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain
+#: a8cc1ea72ca94d5a94d5aa54c022b6c1 conf mange.rst:214
+msgid ""
+"当制作快照完成时，hyperchain节点下会新增`namespaces/specific-ns/data/archive/current-"
+"filterID/`目录，在这个目录下的`ledger.zip压缩文件`就是账本快照数据。"
+msgstr ""
+
+#: ../../source/Chain 10d0b97c71f34a6392b35b699b2ec82d Authority
+#: Management/chain conf mange.rst:216
+msgid "示例::"
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain conf
+#: fcf4f6118b87495a9a491fdbbfc1c190 mange.rst:221
+msgid "4. 备注说明"
+msgstr ""
+
+#: ../../source/Chain 8e2ac1bebb1c4518bc66263880ff7dc7 Authority
+#: Management/chain conf mange.rst:223
+msgid "在合约执行过程中，拼接出来最后提交到数据库层的数据是带有前缀的，但是在vidb中，数据真正存到磁盘上时，会将前缀trim掉，因此getStateProof接口返回的路径最后一个数据节点的元素中，key都是不带前缀的。"
+msgstr ""
+
+#: ../../source/Chain Authority Management/chain conf
+#: ff5d4ce588bb41d8907327528ca6d83f mange.rst:228
+msgid "从hyperchain2.7的数据开始支持状态证明，之前版本生成的数据不支持证明"
+msgstr ""
+

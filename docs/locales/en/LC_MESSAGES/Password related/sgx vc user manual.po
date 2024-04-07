@@ -1,0 +1,856 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Password 51c93f7d64be42ba8f97af26ffa5a024 manual.rst:4
+#: related/sgx user vc
+msgid "SGX VC 使用手册"
+msgstr ""
+
+#: ../../source/Password 719b819642954c968a308d74b75a83e6 manual.rst:7
+#: related/sgx user vc
+msgid "1. 引言"
+msgstr ""
+
+#: ../../source/Password e5e143d55fac4cd2ae339f3ecd123453 manual.rst:10
+#: related/sgx user vc
+msgid "1.1 编写目的"
+msgstr ""
+
+#: ../../source/Password c65344409ac7439db7531cc36f346dd6 manual.rst:12
+#: related/sgx user vc
+msgid "本文档为sgx vc使用文档，着重以fabric多链为例。"
+msgstr ""
+
+#: ../../source/Password a03badadaf9842e4abdc7f5ccf800fb6 manual.rst:15
+#: related/sgx user vc
+msgid "1.2背景"
+msgstr ""
+
+#: ../../source/Password 4559df8274804b60952b2932dbd9abcb manual.rst:17
+#: related/sgx user vc
+msgid "zkp多链主要是通过插件机制对不同的区块链系统进行支持，在使用fabric的时候需要提前编译好fabric插件。"
+msgstr ""
+
+#: ../../source/Password 989a19ef319f4379be769f8b055e85e2 manual.rst:20
+#: related/sgx user vc
+msgid "2. 安装和初始化"
+msgstr ""
+
+#: ../../source/Password 3b4d0428cd5747858a625d015c87e434 manual.rst:22
+#: related/sgx user vc
+msgid "编译安装"
+msgstr ""
+
+#: ../../source/Password 7d4eb6bc16a244889167ae80347893a0 manual.rst:24
+#: related/sgx user vc
+msgid "解压缩tar包，得到zkp目录"
+msgstr ""
+
+#: ../../source/Password 325ecd2bc464462e8b8253d015d65371 manual.rst:26
+#: related/sgx user vc
+msgid "zkp server  -C ./config.toml运行"
+msgstr ""
+
+#: ../../source/Password b8ef6d36aea349b1ae114bcda9fb3fd7 manual.rst:28
+#: related/sgx user vc
+msgid "初始化fabric网络： 启动fabric节点组网"
+msgstr ""
+
+#: ../../source/Password a08ae6a6c8a04532b2a8a923050a8c0c manual.rst:30
+#: related/sgx user vc
+msgid "部署fabric合约：依次部署proxy chaincode, business chaincode"
+msgstr ""
+
+#: ../../source/Password fbaf0ef15a5d4323933388cbed5db819 manual.rst:33
+#: related/sgx user vc
+msgid "3.配置说明"
+msgstr ""
+
+#: ../../source/Password 0f3cdff31dd647b9be3210a3e4367714 manual.rst:35
+#: related/sgx user vc
+msgid "配置模式"
+msgstr ""
+
+#: ../../source/Password 40dbfcb03b8341cb8c3e92e44fe6ffe3 manual.rst:42
+#: related/sgx user vc
+msgid "服务监听相关说明::"
+msgstr ""
+
+#: ../../source/Password 6c236171ac2847919f8e44677952a677 manual.rst:55
+#: related/sgx user vc
+msgid "隐私数据库配置说明::"
+msgstr ""
+
+#: ../../source/Password 9ed1596b57fc4f719e2ca5862233494b manual.rst:89
+#: related/sgx user vc
+msgid "电路数据库相关配置::"
+msgstr ""
+
+#: ../../source/Password f8cdcfcbf4854749a35f21ff74c0a8c6 manual.rst:94
+#: related/sgx user vc
+msgid "sdk配置说明（fabric）::"
+msgstr ""
+
+#: ../../source/Password adac94fb499d4943b5edaf6dd6141610 manual.rst:106
+#: related/sgx user vc
+msgid "enable 为true时，使用插件"
+msgstr ""
+
+#: ../../source/Password d875e53985644b1199dce66a8b8a24cc manual.rst:108
+#: related/sgx user vc
+msgid "nodes：根据proxy chaincode部署时的策略，对proxy chaincode使用invoke时需要的背书节点集合。"
+msgstr ""
+
+#: ../../source/Password 03732a7821e34811bd4a21c8cba7bd04 manual.rst:110
+#: related/sgx user vc
+msgid "plugin：插件的位置"
+msgstr ""
+
+#: ../../source/Password 0ccf1b7a2c1942da8ed391f8401835ac manual.rst:112
+#: related/sgx user vc
+msgid "configpath：使用fabric go sdk时的配置文件位置"
+msgstr ""
+
+#: ../../source/Password 15ad13a123754bbfa7b3c2da2d9d4223 manual.rst:114
+#: related/sgx user vc
+msgid "user：对proxy chaincode使用invoke时需要的用户"
+msgstr ""
+
+#: ../../source/Password 10e4fc5b2e8746bead1e20f3efb7be7f manual.rst:116
+#: related/sgx user vc
+msgid "namespace：proxy chaincode和business chaincode所处的channel"
+msgstr ""
+
+#: ../../source/Password 02b3db08319648f9bc6941be0fbd6e37 manual.rst:121
+#: related/sgx user vc
+msgid "4.操作实例"
+msgstr ""
+
+#: ../../source/Password 409fa002179e40f384311c2383a74465 manual.rst:124
+#: related/sgx user vc
+msgid "4.1 场景介绍"
+msgstr ""
+
+#: ../../source/Password 78f0833bf6304c35b28dcd863a8354c4 manual.rst:126
+#: related/sgx user vc
+msgid ""
+"启动fabric1.4的一个网络，本文档以fabric "
+"samples中byfn的网络为例2个org，每个org下有两个节点，1个orderer，依次部署proxy chaincode, "
+"business chaincode。"
+msgstr ""
+
+#: ../../source/Password 63b6e522b01b462fbb86333133ddcb97 manual.rst:129
+#: related/sgx user vc
+msgid "4.2 启动vc节点"
+msgstr ""
+
+#: ../../source/Password 8f1be72e735347d4adf9efda2f050c9b manual.rst:131
+#: related/sgx user vc
+msgid "zkp  server -C ./config.toml"
+msgstr ""
+
+#: ../../source/Password 117a3e9b31e74f2fb5c1b6550fa362da manual.rst:133
+#: related/sgx user vc
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/Password 56ff0c7f83a34155b0b33af45c56b075 manual.rst:424
+#: related/sgx user vc
+msgid "image0"
+msgstr ""
+
+#: ../../source/Password e1023253b29b4f56a7b77cf3dd84771b manual.rst:136
+#: related/sgx user vc
+msgid "4.3 sdk操作"
+msgstr ""
+
+#: ../../source/Password ba4eda71cfd54950b3b7081d049b3ac9 manual.rst:138
+#: related/sgx user vc
+msgid ""
+"本文档用fabric go sdk在业务调用侧进行一次对business "
+"chaincode的invoke操作，并在invoke前后分别做一次query。"
+msgstr ""
+
+#: ../../source/Password 9aa6dd8b45ee40c6ad7aa0abd14bbafe manual.rst:140
+#: related/sgx user vc
+msgid "进行invoke的参数::"
+msgstr ""
+
+#: ../../source/Password 37a0255a0ce74c90b4d6905c421c7b66 manual.rst:144
+#: related/sgx user vc
+msgid "分别对应为"
+msgstr ""
+
+#: ../../source/Password db17208384694bcb8ae54ca7d56607ba manual.rst:146
+#: related/sgx user vc
+msgid ""
+"proxyContractAddr, input, businessContractAddr, businessContractMethod, "
+"WebHook and WebHookBodyPattern"
+msgstr ""
+
+#: ../../source/Password 1129363a405b4d14aa74a814ca18bca6 manual.rst:148
+#: related/sgx user vc
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/Password 35e624451e1f47d6b41f074e5dbdf91b manual.rst:425
+#: related/sgx user vc
+msgid "image1"
+msgstr ""
+
+#: ../../source/Password 01e505f679434094b459851fcd35b213 manual.rst:150
+#: related/sgx user vc
+msgid "sdk执行结果："
+msgstr ""
+
+#: ../../source/Password ee4e536e92d74dab8c41a2b93d70c9f6 manual.rst:152
+#: related/sgx user vc
+msgid "|image2|"
+msgstr ""
+
+#: ../../source/Password 82ac38efe24444079909c8046b401845 manual.rst:426
+#: related/sgx user vc
+msgid "image2"
+msgstr ""
+
+#: ../../source/Password cd2253fe75ee4ef48cd5d66468cf5b56 manual.rst:154
+#: related/sgx user vc
+msgid "vc节点执行结果："
+msgstr ""
+
+#: ../../source/Password 6f9acc98a01346e5b81d981f9ee09965 manual.rst:156
+#: related/sgx user vc
+msgid "|image3|"
+msgstr ""
+
+#: ../../source/Password 19450b61da3b4a5caab576c90e40f684 manual.rst:427
+#: related/sgx user vc
+msgid "image3"
+msgstr ""
+
+#: ../../source/Password ff85d8e1c0904eac8ac8f281be92aa52 manual.rst:159
+#: related/sgx user vc
+msgid "4.4 非sdk操作"
+msgstr ""
+
+#: ../../source/Password edba8f61b02f46c2800618be28325d0c manual.rst:161
+#: related/sgx user vc
+msgid "可以不使用sdk，而直接使用restful接口进行操作。例如4.3所示操作可以使用5.2中接口6computeandprove实现类似效果的操作。"
+msgstr ""
+
+#: ../../source/Password 62c8235b50f342f180dda2f1621875b7 manual.rst:164
+#: related/sgx user vc
+msgid "5.restful 接口"
+msgstr ""
+
+#: ../../source/Password f411d637338248b7a27726c6f7047174 manual.rst:167
+#: related/sgx user vc
+msgid "5.1 zkp vc"
+msgstr ""
+
+#: ../../source/Password db8e774e21814beab03098b8e69ab5b7 manual.rst:169
+#: related/sgx user vc
+msgid "注：localhost:8080作为参考，最终IP和端口以服务器地址为准。"
+msgstr ""
+
+#: ../../source/Password ea8d54a9cd334572ae53a2bdbbad4167 manual.rst:172
+#: related/sgx user vc
+msgid "接口1：编译"
+msgstr ""
+
+#: ../../source/Password 493ae6e0b6244ad49fad4a564ae2cd45 manual.rst:174
+#: related/sgx user vc
+msgid ""
+"url： `https://localhost:8080/v1/zkp/circom/build "
+"<https://localhost:8080//v1/zkp/circom/build>`_"
+msgstr ""
+
+#: ../../source/Password 8ff9d11d5dea4e06a8f691ebb84ccaeb manual.rst:176
+#: related/sgx user vc
+msgid "输入（form-data格式）::"
+msgstr ""
+
+#: ../../source/Password 1c692f5a942048de9e1c9f385832e059
+#: 28c4766de2de4053bc20ebaa4be58012 2c357edf96184bc0ad00c80a0fa367fa
+#: 5817c49d23b44527845d721bee94b1df 642933a056ff4286b47715acecb84909
+#: a23ada1f6b604ef28abf195071ca5071 a836ded4f45d477aa234f35c465e2bb9
+#: b94beb01fafe4e7990c31d50af94ef4d e083386b34d44451961abf6580c5b770
+#: manual.rst:183 manual.rst:192 manual.rst:215 manual.rst:246 manual.rst:279
+#: manual.rst:287 manual.rst:316 manual.rst:343 manual.rst:351 related/sgx user
+#: vc
+msgid "如下图："
+msgstr ""
+
+#: ../../source/Password dacf36d65e8a4638aa048f8837976c0d manual.rst:185
+#: related/sgx user vc
+msgid "|image4|"
+msgstr ""
+
+#: ../../source/Password cc47b8a10a9e4845bfb2fdfe4cf54897 manual.rst:428
+#: related/sgx user vc
+msgid "image4"
+msgstr ""
+
+#: ../../source/Password 0182f6fe0f4c4fd6ab2493b4383cef8f
+#: 5c3bba12d673483586b31fc3fa75307e 62cf6a9cb4944850a0e718715b1c7f09
+#: f81bc7a08bbe4e8abefa9a595d06c7f8 manual.rst:187 manual.rst:219
+#: manual.rst:320 manual.rst:347 related/sgx user vc
+msgid "输出::"
+msgstr ""
+
+#: ../../source/Password a595d2ce77c84f5fafbe2fd5f9051490 manual.rst:194
+#: related/sgx user vc
+msgid "|image5|"
+msgstr ""
+
+#: ../../source/Password 6c1ab3d8033849ab97a96fc19b4d08ac manual.rst:429
+#: related/sgx user vc
+msgid "image5"
+msgstr ""
+
+#: ../../source/Password 4bb6db33a7744af083574d0eb5f4982f
+#: 540e227324c74df0a7195d4f4d22b544 6e6a758b1dca45f2ae4bf4527f48ea34
+#: manual.rst:196 manual.rst:256 manual.rst:291 related/sgx user vc
+msgid "错误提示"
+msgstr ""
+
+#: ../../source/Password 8808ff133f014d44b0bd37418b42644f manual.rst:198
+#: related/sgx user vc
+msgid ""
+"输入错误，错误码601，缺少字段，错误信息（\"input data error , give input(algo or target is "
+"nil) error, should input eg. (file, target, algo)\"）;"
+msgstr ""
+
+#: ../../source/Password d46d210de7644012bda60b4cec6d15db manual.rst:200
+#: related/sgx user vc
+msgid ""
+"输入错误，错误码601，字段内容解析错误，错误信息（\"input data error , give input(err.Error()) "
+"error, should input eg. (file, target, algo)\"）；"
+msgstr ""
+
+#: ../../source/Password 149d31a425954057baaa28bb223c5aa8 manual.rst:202
+#: related/sgx user vc
+msgid ""
+"内部错误，错误码602，编译失败的具体原因，错误信息（\"inner compilation error, "
+"function(genR1csAndSol) error: err.Error()\"）"
+msgstr ""
+
+#: ../../source/Password 1404b30c9316427ebbdea80f868d849d
+#: 82f378857e984ce5b25812f348ffddb9 manual.rst:204 manual.rst:233 related/sgx
+#: user vc
+msgid ""
+"内部错误，错误码602，数据库操作失败，错误信息（\"inner compilation error, function(db.Put) "
+"error: err.Error\"）"
+msgstr ""
+
+#: ../../source/Password d02e3da106a045888c45ca9c9ee114ce manual.rst:207
+#: related/sgx user vc
+msgid "接口2：重置"
+msgstr ""
+
+#: ../../source/Password 3b51f6ed3aeb45ada5f9d0ae38be8e4d manual.rst:209
+#: related/sgx user vc
+msgid ""
+"url： `https://localhost:8080//v1/zkp/circom/resetup "
+"<https://localhost:8080//v1/zkp/circom/resetup>`_"
+msgstr ""
+
+#: ../../source/Password 732dbe2461fd4ab18a771ce10bcf3835 manual.rst:211
+#: related/sgx user vc
+msgid "输入（raw-json格式）::"
+msgstr ""
+
+#: ../../source/Password 925d4f7747914edda84cfab3cc14e95a manual.rst:217
+#: related/sgx user vc
+msgid "|image6|"
+msgstr ""
+
+#: ../../source/Password 98551e3e4e4948c5a887c60553c6a373 manual.rst:430
+#: related/sgx user vc
+msgid "image6"
+msgstr ""
+
+#: ../../source/Password 66d363a601a7405dad5a5c122a973d83 manual.rst:223
+#: related/sgx user vc
+msgid "|image7|"
+msgstr ""
+
+#: ../../source/Password ec66d323ec3f423c99297f004d086d30 manual.rst:431
+#: related/sgx user vc
+msgid "image7"
+msgstr ""
+
+#: ../../source/Password 6d258a4724394e0d882b4ceb5d46e420 manual.rst:225
+#: related/sgx user vc
+msgid "错误码："
+msgstr ""
+
+#: ../../source/Password b59cf334ac9e4f17b85c9fcb64484708 manual.rst:227
+#: related/sgx user vc
+msgid ""
+"输入错误，错误码602，没有传入请求body，检查是否是post格式，是否按照接口传入了正确的参数，错误信息（check whether it "
+"is an https post request or whether~~ ~~parameters are passed in）"
+msgstr ""
+
+#: ../../source/Password d8a3fc3099aa4ec4a2a16e45249460f0 manual.rst:229
+#: related/sgx user vc
+msgid ""
+"输入错误，错误码601，缺少字段，错误信息（\"input data error , give input(your input) error, "
+"should input eg. (id)\"）"
+msgstr ""
+
+#: ../../source/Password 932711fab06f4c058da457ecd5ec82ea manual.rst:231
+#: related/sgx user vc
+msgid ""
+"输入错误，错误码601，ID不存在，错误信息（\"input data error , give input(your ID) error, "
+"should input eg. (a right id)\"）"
+msgstr ""
+
+#: ../../source/Password 90652feb73c74abbb61212828d381551 manual.rst:236
+#: related/sgx user vc
+msgid "接口3：证明"
+msgstr ""
+
+#: ../../source/Password 455f784a208d401f83c930ae6804ba0a manual.rst:238
+#: related/sgx user vc
+msgid ""
+"url： `https://localhost:9080/v1/zkp/circom/computeandprove "
+"<https://localhost:9080/v1/zkp/circom/computeandprove>`_"
+msgstr ""
+
+#: ../../source/Password 06d8c8cab8ad45a2aa9ee72270f63f72
+#: 110a256b1ce44f76aea4bcb4a2350453 manual.rst:240 manual.rst:273 related/sgx
+#: user vc
+msgid "输入（form-data）::"
+msgstr ""
+
+#: ../../source/Password 4268c96acfa842a08b7f040e95002f67 manual.rst:248
+#: related/sgx user vc
+msgid "|image8|"
+msgstr ""
+
+#: ../../source/Password 8f4290fa352d472c9a7bc10aabe8afe9 manual.rst:432
+#: related/sgx user vc
+msgid "image8"
+msgstr ""
+
+#: ../../source/Password 50785c7ed38e4a16ae5046ca7da51977
+#: c6d769f9895843dcbcbeb515ba58ea6d manual.rst:250 manual.rst:283 related/sgx
+#: user vc
+msgid "输出"
+msgstr ""
+
+#: ../../source/Password 2c471fefc4de455d8a2531f43e63b200 manual.rst:252
+#: related/sgx user vc
+msgid "正确则直接返回proof。如下图："
+msgstr ""
+
+#: ../../source/Password f4165902f8214f89b320c8664e5e2cfd manual.rst:254
+#: related/sgx user vc
+msgid "|image9|"
+msgstr ""
+
+#: ../../source/Password 2a325661878d454c99e5d518e78a9ec1 manual.rst:433
+#: related/sgx user vc
+msgid "image9"
+msgstr ""
+
+#: ../../source/Password 3d939623eadb432e95cfad58012c2b9f manual.rst:258
+#: related/sgx user vc
+msgid ""
+"输入错误，错误码601，缺少字段，错误信息（input data error , give input(err.error) error, "
+"should input eg. (file, id, tx_version)）"
+msgstr ""
+
+#: ../../source/Password 1f21dde418ea449ea9df3b8f375cf05d
+#: 78a49f781aec4571984c7625cce9323d c6be7628cafe40b9aeb957a51495ec0e
+#: db7d1861c76b4cfa8634933639bcbcfb manual.rst:260 manual.rst:297
+#: manual.rst:332 manual.rst:361 related/sgx user vc
+msgid ""
+"输入错误，错误码601，id不存在，错误信息（input data error , give input(err.error) error, "
+"should input eg. (a  right id )）"
+msgstr ""
+
+#: ../../source/Password 15fd86ed1982453fb3659c7335f86ecb manual.rst:262
+#: related/sgx user vc
+msgid ""
+"输入错误，错误码601，字段内容解析错误，错误信息（input data error , give input(err.error) error,"
+" should input eg. (right input json file)）"
+msgstr ""
+
+#: ../../source/Password 95ad8815e25c4e9f9b6d9e75abb846a7 manual.rst:264
+#: related/sgx user vc
+msgid ""
+"内部错误，错误码602，数据库脏数据，错误信息（\"inner compilation error, "
+"function(ReadR1CS/ReadPkBytes) error: "
+"err.Error\"），此种情况是从数据库中获取数据，发现数据读取失败，可能的原因是服务器端发生异常，写数据到数据库时内容错误，或者服务器端数据库数据被手动更改"
+msgstr ""
+
+#: ../../source/Password 4af51ed60af940f1aed344812878518e manual.rst:266
+#: related/sgx user vc
+msgid ""
+"内部错误，错误码602，生成证明失败或计算过程失败，详细原因在error中，错误信息（\"inner compilation error, "
+"function(ComputeAndProve) error: err.Error\"）"
+msgstr ""
+
+#: ../../source/Password fae5c0b3f6ca4108926b45dc0db78e84 manual.rst:269
+#: related/sgx user vc
+msgid "接口4：验证"
+msgstr ""
+
+#: ../../source/Password 76de5375fc694c84ae3b0c55f9013275 manual.rst:271
+#: related/sgx user vc
+msgid ""
+"url：`https://localhost:9080/v1/zkp/circom/verify "
+"<https://localhost:9080/v1/zkp/circom/verify>`_"
+msgstr ""
+
+#: ../../source/Password c3c6c83a868849ae9318cefc06c0ed22 manual.rst:281
+#: related/sgx user vc
+msgid "|image10|"
+msgstr ""
+
+#: ../../source/Password 3fa0ad9ab91a4d628045696460980be7 manual.rst:434
+#: related/sgx user vc
+msgid "image10"
+msgstr ""
+
+#: ../../source/Password 425dad2f5b1e4729a9b3ed54c8edbd5a manual.rst:285
+#: related/sgx user vc
+msgid "成功显示verify success，错误显示具体原因"
+msgstr ""
+
+#: ../../source/Password 75843f514dc04ddab707be75d25fb072 manual.rst:289
+#: related/sgx user vc
+msgid "|image11|"
+msgstr ""
+
+#: ../../source/Password 48f92673ea3241dc819f5f5fa1bb738d manual.rst:435
+#: related/sgx user vc
+msgid "image11"
+msgstr ""
+
+#: ../../source/Password a551f5b4533b48a492fcd42538f72a38 manual.rst:293
+#: related/sgx user vc
+msgid ""
+"输入错误，错误码601，缺少字段，错误提示（input data error , give input(err.error) error, "
+"should input eg. (proof, public, id)）"
+msgstr ""
+
+#: ../../source/Password f30f34a47793470aa1105602f94e6ad2 manual.rst:295
+#: related/sgx user vc
+msgid ""
+"输入错误，错误码601，proof出错，错误提示（input data error , give input(err.error) error, "
+"should input eg. (a right proof)）"
+msgstr ""
+
+#: ../../source/Password 3863ef41254f45d69b36c253dbda34d5 manual.rst:299
+#: related/sgx user vc
+msgid ""
+"输入错误，错误码601， 输入的public.json解析失败，错误信息（input data error , give input(your "
+"public json) error, should input eg. (a  right public json )）"
+msgstr ""
+
+#: ../../source/Password 0a6236f5640c4652a3fd39b3765003e7 manual.rst:301
+#: related/sgx user vc
+msgid ""
+"输入错误，错误码601，给定的proof组数与公共输入组数不相等，错误信息（error: give public json num[xxx], "
+"but proof num[xxx].）"
+msgstr ""
+
+#: ../../source/Password 13678919ce8e46d68f87cadc7b3b8482 manual.rst:303
+#: related/sgx user vc
+msgid ""
+"内部错误，错误码602，数据库脏数据，错误信息（\"inner compilation error, function(ReadVkBytes) "
+"error: err.Error\"）"
+msgstr ""
+
+#: ../../source/Password bc8b8d4bf7df4e0eac920a30be938ccd manual.rst:305
+#: related/sgx user vc
+msgid ""
+"内部错误，错误码602，验证失败具体返回，错误信息（verify failed, proof[xxx], public json[xxx], "
+"error: xxx）"
+msgstr ""
+
+#: ../../source/Password 636a24a6e08c42f2a24392d8c50c0f0f manual.rst:308
+#: related/sgx user vc
+msgid "接口5：查询solidity源码"
+msgstr ""
+
+#: ../../source/Password 460b9b88cab145dd98c88eaab9b3f6ee manual.rst:310
+#: related/sgx user vc
+msgid ""
+"url： `https://localhost:9080/v1/zkp/circom/getsol "
+"<https://localhost:9080/v1/zkp/circom/getsol>`_"
+msgstr ""
+
+#: ../../source/Password 1d2908895a794b8cbe160586e7b1e5de
+#: c153f5ec55cd41b8bef03b6c73947d7d manual.rst:312 manual.rst:339 related/sgx
+#: user vc
+msgid "输入 (raw-json)::"
+msgstr ""
+
+#: ../../source/Password 83b3b546d6044c63a3c1ad0eecc96096
+#: ab44f809249b4b55a9c63f2b26123da5 manual.rst:314 manual.rst:341 related/sgx
+#: user vc
+msgid "id：链下计算id"
+msgstr ""
+
+#: ../../source/Password d7ec490cd1394713bd1a392c1a9b27fe manual.rst:318
+#: related/sgx user vc
+msgid "|image12|"
+msgstr ""
+
+#: ../../source/Password 97b3ba0565614a6eb00ccbcce86aba87 manual.rst:436
+#: related/sgx user vc
+msgid "image12"
+msgstr ""
+
+#: ../../source/Password 3cc4c77c99b54607bc7cc722487584e5 manual.rst:324
+#: related/sgx user vc
+msgid "|image13|"
+msgstr ""
+
+#: ../../source/Password 62d192f233144e0392fda865f78ff406 manual.rst:437
+#: related/sgx user vc
+msgid "image13"
+msgstr ""
+
+#: ../../source/Password 4ab6c2ebd06f450ab2508964761d2329 manual.rst:326
+#: related/sgx user vc
+msgid "错误信息"
+msgstr ""
+
+#: ../../source/Password 1cac1a5e652e42678c36cd1607734ef3
+#: dc2f34b3ba1845f7ac00dd1df010540d manual.rst:328 manual.rst:357 related/sgx
+#: user vc
+msgid ""
+"输入错误，错误码601，没有传入请求body，检查是否是post格式，是否按照接口传入了正确的参数，错误信息（check whether it "
+"is an https post request or whether parameters are passed in）"
+msgstr ""
+
+#: ../../source/Password 1c2df00e2f174e128a20279423c212ba
+#: 1d420ee9e6ba4e85a524b23cd56b7eaa manual.rst:330 manual.rst:359 related/sgx
+#: user vc
+msgid ""
+"输入错误，错误码601，字段解析失败，错误信息（input data error , give input(your input) error, "
+"should input eg. (only need to provide id)）"
+msgstr ""
+
+#: ../../source/Password 915422e5f9744b2e8560266ea8e4e8b3 manual.rst:335
+#: related/sgx user vc
+msgid "接口6：查询编译结果"
+msgstr ""
+
+#: ../../source/Password 686d603a999848cbbef1516a14ce4949 manual.rst:337
+#: related/sgx user vc
+msgid ""
+"url： `https://localhost:9080/v1/zkp/circom/getbin "
+"<https://localhost:9080/v1/zkp/circom/getbin>`_"
+msgstr ""
+
+#: ../../source/Password 74127f9a82be4871bc18d4dca8a89cc0 manual.rst:345
+#: related/sgx user vc
+msgid "|image14|"
+msgstr ""
+
+#: ../../source/Password 2479648b3e454034ab26975dd852ef0e manual.rst:438
+#: related/sgx user vc
+msgid "image14"
+msgstr ""
+
+#: ../../source/Password 17b5767fbc094f699b1785b6052c38a2 manual.rst:353
+#: related/sgx user vc
+msgid "|image15|"
+msgstr ""
+
+#: ../../source/Password fb99bb82cf7d434a93fa157b12b12419 manual.rst:439
+#: related/sgx user vc
+msgid "image15"
+msgstr ""
+
+#: ../../source/Password a94e63fbc2154850bd336309ff16839e manual.rst:355
+#: related/sgx user vc
+msgid "错误信息："
+msgstr ""
+
+#: ../../source/Password 3f0c3cce5b34413b93ba608155fda10f manual.rst:366
+#: related/sgx user vc
+msgid "5.2 sgx vc"
+msgstr ""
+
+#: ../../source/Password e374626449ae427298ec75b5bd98ae9b manual.rst:369
+#: related/sgx user vc
+msgid "接口1：build"
+msgstr ""
+
+#: ../../source/Password 7c473f0414ca4e7eab8537fe6fe0f728 manual.rst:371
+#: related/sgx user vc
+msgid "url：https://ino4:8080/v1/sgx/wasm/build"
+msgstr ""
+
+#: ../../source/Password 76eeef4371554eaba05f5f5de123b7ca manual.rst:373
+#: related/sgx user vc
+msgid "|image16|"
+msgstr ""
+
+#: ../../source/Password d3e11a52afa44c10b9f357bb9f359a87 manual.rst:440
+#: related/sgx user vc
+msgid "image16"
+msgstr ""
+
+#: ../../source/Password c597e129dcad45fa92a6de3a6e0f320b manual.rst:376
+#: related/sgx user vc
+msgid "接口2：resetup"
+msgstr ""
+
+#: ../../source/Password fb50bccc8dc04380879bcfb6e462f5a6 manual.rst:378
+#: related/sgx user vc
+msgid "url：https://ino4:8080/v1/sgx/wasm/resetup"
+msgstr ""
+
+#: ../../source/Password 0645fdcfad5f4af89240edf04e8213f0 manual.rst:380
+#: related/sgx user vc
+msgid "|image17|"
+msgstr ""
+
+#: ../../source/Password 8f2f480077a14e4989d4124aaa8bd3b7 manual.rst:441
+#: related/sgx user vc
+msgid "image17"
+msgstr ""
+
+#: ../../source/Password c045af6ba5a54f0eb222d1cbe093512f manual.rst:383
+#: related/sgx user vc
+msgid "接口3：getsol"
+msgstr ""
+
+#: ../../source/Password 371dbc7ddbad40c4a27f8d01c1f8f397 manual.rst:385
+#: related/sgx user vc
+msgid "url：https://ino4:8080/v1/sgx/wasm/getsol"
+msgstr ""
+
+#: ../../source/Password 1b10a5bf77074e6eb3d060a2288f4f1c manual.rst:387
+#: related/sgx user vc
+msgid "|image18|"
+msgstr ""
+
+#: ../../source/Password 989a3e94126b4293a62b51014ccf6afd manual.rst:442
+#: related/sgx user vc
+msgid "image18"
+msgstr ""
+
+#: ../../source/Password 9756eaf77daa470995719845a17d0629 manual.rst:390
+#: related/sgx user vc
+msgid "接口4：getbin"
+msgstr ""
+
+#: ../../source/Password 6e56be3103564e1ea4184f69d3fd35eb manual.rst:392
+#: related/sgx user vc
+msgid "url：https://ino4:8080/v1/sgx/wasm/getbin"
+msgstr ""
+
+#: ../../source/Password 19917524a97f474b95661c19684361af manual.rst:394
+#: related/sgx user vc
+msgid "|image19|"
+msgstr ""
+
+#: ../../source/Password 94068f873bb04ebaad4e28b785aae65a manual.rst:443
+#: related/sgx user vc
+msgid "image19"
+msgstr ""
+
+#: ../../source/Password adf1ca995cef452f993ea2cd119c5923 manual.rst:396
+#: related/sgx user vc
+msgid "接口5：computeandprove >>>>>>>>>>>>>>>>>>>>>>>>>."
+msgstr ""
+
+#: ../../source/Password 2b65ce11fda745f28c687d38cc9da288
+#: cebf6896c9744f2caa26e82c26f57851 manual.rst:399 manual.rst:406 related/sgx
+#: user vc
+msgid "url：https://ino4:8080/v1/sgx/wasm/computeandprove"
+msgstr ""
+
+#: ../../source/Password c33750f18e484469b0f4e5fc2610e27e manual.rst:401
+#: related/sgx user vc
+msgid "|image20|"
+msgstr ""
+
+#: ../../source/Password 72a2d48a58e142f68f9e0648282ac44b manual.rst:444
+#: related/sgx user vc
+msgid "image20"
+msgstr ""
+
+#: ../../source/Password 42dc729399ec471ba6e90e3987f08db1 manual.rst:404
+#: related/sgx user vc
+msgid "接口6：computeandprove异步"
+msgstr ""
+
+#: ../../source/Password ff561ea5b3834d6c861281e702380dad manual.rst:408
+#: related/sgx user vc
+msgid "|image21|"
+msgstr ""
+
+#: ../../source/Password ca6a290ced6b4b16b334cfbd5a2f3f24 manual.rst:445
+#: related/sgx user vc
+msgid "image21"
+msgstr ""
+
+#: ../../source/Password 8938abc8de164fcebcec801e3e80f15d manual.rst:411
+#: related/sgx user vc
+msgid "接口7：querytaskresult"
+msgstr ""
+
+#: ../../source/Password f52e69f6111b407f8fa86e3076ee99d3 manual.rst:413
+#: related/sgx user vc
+msgid "url：https://ino4:8080/v1/sgx/wasm/querytaskresult"
+msgstr ""
+
+#: ../../source/Password 5edefcd8df5f422c9f6f1eb461730f1b manual.rst:415
+#: related/sgx user vc
+msgid "|image22|"
+msgstr ""
+
+#: ../../source/Password eae432d8a62b4d31a3a08346795f420f manual.rst:446
+#: related/sgx user vc
+msgid "image22"
+msgstr ""
+
+#: ../../source/Password ef5fe44f864d42fc88a98a1c29dff453 manual.rst:418
+#: related/sgx user vc
+msgid "接口8：verify"
+msgstr ""
+
+#: ../../source/Password 7ba6fcdf4f9748588b2fbcef6e60d125 manual.rst:420
+#: related/sgx user vc
+msgid "url：https://ino4:8080/v1/sgx/wasm/verify"
+msgstr ""
+
+#: ../../source/Password db20fecdece24b2e86febdaaa118d244 manual.rst:422
+#: related/sgx user vc
+msgid "|image23|"
+msgstr ""
+
+#: ../../source/Password aa79a0d656114d4bb4e6ea8a7c2440e1 manual.rst:447
+#: related/sgx user vc
+msgid "image23"
+msgstr ""
+

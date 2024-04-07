@@ -1,0 +1,271 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/NFT and contract dfef1d39510148ebabb45ac1c8789e9c writing.rst:4
+msgid "数字藏品合约编写"
+msgstr ""
+
+#: ../../source/NFT and contract f740c38855b547c8886fb108f705803d writing.rst:7
+msgid "前言"
+msgstr ""
+
+#: ../../source/NFT a8d1a5699ed94697880fcab05a0967a0 and contract writing.rst:9
+msgid "数字藏品作为近期区块链领域的热点之一而备受大众关注，因其利用区块链技术，数字藏品便有了唯一不可篡改的凭证，在保护其数字版权的基础上，实现真实可信的数字化发行、购买、收藏和使用。但是数字藏品是如何产生的、它是如何流转的，以及又是如何与区块链进行结合起来保护数字藏品的安全的这些问题却不被大众所了解，区块链上的数字藏品对普通人而言还存在着一定的门槛。"
+msgstr ""
+
+#: ../../source/NFT and c38e594e1aea4c2aab18a326f88012a4 contract
+#: writing.rst:12
+msgid "概念介绍"
+msgstr ""
+
+#: ../../source/NFT and b4462c7770974b9f987fa01ea083ae8e contract
+#: writing.rst:15
+msgid "智能合约？"
+msgstr ""
+
+#: ../../source/NFT 7549fba88a744d21b76cd529f69bc65e and contract
+#: writing.rst:17
+msgid "智能合约，是一段写在区块链上的代码，一旦某个事件触发合约中的条款，代码即自动执行。也就是说，满足条件就执行，不需要人为操控。"
+msgstr ""
+
+#: ../../source/NFT and contract e6dfcca4dfca479c8ef8175f56a55365
+#: writing.rst:19
+msgid "简单来说，智能合约就是一种把我们生活中的合约数字化，当满足一定条件后，可以由程序自动执行的技术。我们的生活中处处充满着合约，就好比你跟我做了一个约定，我们订好了奖惩措施，但由于种种原因可能没法履行其中的条款，出现了无法履约的情况，而在进入赔付环节，往往会出现毁约，失约，耍赖的情况，最后弄得有理说不清。但是如果我们把约定通过代码的形式，录入区块链中，一旦触发约定时的条件，就会有程序来自动执行，这就是智能合约。"
+msgstr ""
+
+#: ../../source/NFT 1cb2f44b8b4744dd9d94fed22d3863a0 and contract
+#: writing.rst:22
+msgid "数字藏品？"
+msgstr ""
+
+#: ../../source/NFT and c6393223c1914f71b23e40753c60cb7c contract
+#: writing.rst:24
+msgid "NFT全称为Non-Fungible Tokens，即“非同质化代币”。"
+msgstr ""
+
+#: ../../source/NFT 160b1f4c2e3b47958c4c4fd341adbad8 and contract
+#: writing.rst:26
+msgid ""
+"同质化代币又称可互换型代币，各代币之间没有任何区别，可以随意交换及拆分整合，每个单位彼此等效，类似于每个面额相同的硬币一样。在以太坊上，有三种代币协议"
+"，使用ERC-20协议开发的智能合约生成的token是同质化代币也就是大家说的最多的加密货币，而使用ERC-721和ERC-"
+"1155协议开发的智能合约生成的token是非同质化代币也就是大家说的NFT。"
+msgstr ""
+
+#: ../../source/NFT 94cea7c1ce2148b080ed9fdbeac54798 and contract
+#: writing.rst:28
+msgid "NFT实质是一种数字藏品，不以融资为目的，不具有等价交换物特征。数字藏品的创新在于使用区块链技术进行加密编码，在中心化服务之外重新定义原生数字藏品所有权的标记方式，最大特点在于其唯一性、不可拆分性，每一个数字藏品都单独存在，无法相互替代。数字藏品的特性决定了其不可能成为一般等价物或统一的记账单位，因此也不可能成为虚拟货币或代币，它的交易和变现必须通过货币实现。"
+msgstr ""
+
+#: ../../source/NFT and contract e3b3947b18d44c50862932b022bf1629
+#: writing.rst:30
+msgid "数字藏品可以通过区块链技术将艺术品、声音、图像、文字、游戏中的物品等任何有价值的内容通证化，生成一个无法篡改的独特编码，将物品转化为数字化抽象物，从而确保其唯一性和真实性，该数字藏品的所有权可实时追溯。这也表明，数字藏品本身并不是交易的对象，通过数字藏品技术转变为数字藏品的商品才是被交易的对象，相应价值也是由数字商品来实现的。"
+msgstr ""
+
+#: ../../source/NFT and c51d4bd20eb14911b89994b1408ee5ee contract
+#: writing.rst:33
+msgid "数字藏品合约功能？"
+msgstr ""
+
+#: ../../source/NFT 70d47a7367cc40b4bf02200869b55fb3 and contract
+#: writing.rst:35
+msgid "假如你想发一套属于自己的系列数字藏品，需要怎么写合约？，这个合约将有可能需要什么功能？"
+msgstr ""
+
+#: ../../source/NFT and b6c71c88a0964e3e94a6257be0be6f4c contract
+#: writing.rst:37
+msgid "”铸造“功能（mint）：数字藏品是非同质化代币，即一种token，所谓铸造，就是在区块链上记载一个token的ID和其拥有者的地址。"
+msgstr ""
+
+#: ../../source/NFT and c720e081b6ed4b85a0d2d28d5ecf4693 contract
+#: writing.rst:38
+msgid "转移功能：即拥有者把一个token转移给另一个人。"
+msgstr ""
+
+#: ../../source/NFT 214f859cd34146d9ba5201b740d6fe0b and contract
+#: writing.rst:39
+msgid "查询功能：查询某个token在谁手里，某个人有多少个token等查询功能。"
+msgstr ""
+
+#: ../../source/NFT 8272022571184d8ba81d82ff2aba5f41 and contract
+#: writing.rst:40
+msgid "元数据功能：描述某事物各种属性的信息，比如一个人的属性就有姓名、性别、年龄、肤色、身份证号、职业等。一个数字藏品的元数据就比如人物的发型、肤色、性别、年龄等。一般情况下，都先读取某个"
+msgstr ""
+
+#: ../../source/NFT and contract de2c254c9f5247308adc6e7522d4d68a
+#: writing.rst:41
+msgid "合约元数据功能：在数字藏品平台上的一些基本属性设置，其与元数据不同是针对于整个数字藏品系列来说的。"
+msgstr ""
+
+#: ../../source/NFT 32ab5c562c5d4f299a9c1be6807dd054 and contract
+#: writing.rst:42
+msgid "其他：例如团队分账、白名单预售等等。"
+msgstr ""
+
+#: ../../source/NFT 30816ebdcb044eafa023037051d71fd9 and contract
+#: writing.rst:45
+msgid "数字藏品协议"
+msgstr ""
+
+#: ../../source/NFT and contract f1165cca61a34792944f5f90cef95564
+#: writing.rst:47
+msgid "工欲善其事必先利其器，在对数字藏品进行深入解剖前，需要先了解下数字藏品协议。数字藏品协议是一种约定当前数字藏品项目规范的方式，因为不同的数字藏品项目的需求都不同，其对外提供的接口服务也会因为其项目自身的特殊性而不同。但是没有统一的标准就不适合一个行业的产生，一旦每个数字藏品项目都有其自己的对外提供服务接口，那么对于区块链浏览器、数字钱包和买卖交易双方都将造成很大的困扰，需要为每个数字藏品项目都进行适配，那显然是不合适的。因此需要有数字藏品项目的规范来约定一个数字藏品项目应该提供怎么样的功能以及其接口的出入参格式，方便第三方进行适配统一才能让数字藏品变得流通，所以一个具备标准通用的数字藏品协议就变得十分迫切。"
+msgstr ""
+
+#: ../../source/NFT and contract d569cfc6c2214decabedadaed888887d
+#: writing.rst:49
+msgid "类似以太坊中的ERC721协议，我们在HVM中也提供了相同功能的HPC721协议，让我们来看看协议中的具体内容::"
+msgstr ""
+
+#: ../../source/NFT 9ca473843fa747008d146afd0f395408 and contract
+#: writing.rst:87
+msgid "同时还有HPC721的扩展协议，用来定义数字藏品项目的扩展信息(可按需实现)::"
+msgstr ""
+
+#: ../../source/NFT 2715b2f655c54cf080e1a052cfc9a0ce and contract
+#: writing.rst:101
+msgid "简单来讲数字藏品项目就是一个数字藏品合约，而数字藏品协议就是一个合约接口，指定了合约所提供的功能。"
+msgstr ""
+
+#: ../../source/NFT 0427c5ff4a834521aeaf5c0af6a405ba and contract
+#: writing.rst:104
+msgid "实现一个数字藏品合约"
+msgstr ""
+
+#: ../../source/NFT and c1fae6bac3fa4cf1a4b02c73d92b5641 contract
+#: writing.rst:106
+msgid "了解了数字藏品协议以后我们就可以基于上述接口来实现一个数字藏品合约。首先是构建一个HVM合约项目，将合约主类名称之为PropertyContract并实现HPC721协议接口::"
+msgstr ""
+
+#: ../../source/NFT 3299a0e2fd6045ff9a08dd18eb84ad4d and contract
+#: writing.rst:112
+msgid "定义好合约主类后，我们便可以填充合约主类的内容了，首先是 **定义存储合约数据的账本数据结构** ::"
+msgstr ""
+
+#: ../../source/NFT 1f431869e41e414786aff1e92b80f483 and contract
+#: writing.rst:126
+msgid "分别定义了三个NestedMap结构来存储以下信息：账户地址下的数字藏品数量、某个数字藏品是否授权给某个账户地址和某个账户是否给另一个账户全部数字藏品的授权，用于满足协议中的方法所定义的功能。此处可能会发现与一般的数字藏品合约不同，没有一个存储数字藏品的数据结构，也没有存储数字藏品ID到所有者的对应关系，这是因为我们在HVM中引入了PropertyAccount藏品账户的概念，藏品账户是一种将数字藏品映射为区块链底层账户模型的一种方式，用一个区块链底层账户来存储数字藏品，既能提高执行效率又能提高数据的安全性。"
+msgstr ""
+
+#: ../../source/NFT 25ece43690324964a76dd9eb3114012b and contract
+#: writing.rst:128
+msgid ""
+"在对合约方法进行正式编写前，还需要定义好合约事件，在某些情况下触发合约事件，外部可以通过合约事件来解析在智能合约中发生的行为，以此一些第三方在获取合约数据时，便有了一个统一方便的方式。"
+" **合约中需要定义的事件** 如下::"
+msgstr ""
+
+#: ../../source/NFT 74a8e3ab11514c8b8cfe539a5288fc6a and contract
+#: writing.rst:145
+msgid "三个事件分别在发生数字藏品转移(包括铸造)、授权某个数字藏品和对某个账户的全部数字藏品授权这三个场景下。定义好了事件内容后，便可以完善合约方法的部分了，同时将上述提到的账本数据结构、藏品账户和合约事件融入到合约方法中。"
+msgstr ""
+
+#: ../../source/NFT 703a0e88c3f14160a703fc54452672b6 and contract
+#: writing.rst:147
+msgid "首先是进行 **数字藏品铸造** 。由于铸造数字藏品并不属于协议内容，因此对数字藏品的铸造逻辑的自由度就会大一些::"
+msgstr ""
+
+#: ../../source/NFT 4213486075744757bd8eeb49a1a8b18d and contract
+#: writing.rst:167
+msgid "在示例中我们通过了内置的emit0方法铸造生产了一个藏品账户，在藏品账户铸造时要求传入藏品账户的ID、所有者和meta元数据信息，随后更新藏品数量和发送铸造合约事件，因此完成对一个数字藏品的铸造，将来可通过ID来查询到当前合约中的数字藏品藏品账户。"
+msgstr ""
+
+#: ../../source/NFT and contract e8b3f0283608427ab762a819206fc478
+#: writing.rst:169
+msgid "有了数字藏品后我们便可以将数字藏品托管给第三方帮忙进行交易，这里托管的方式有两种，对单一数字藏品进行托管或对账户下所有数字藏品都进行托管，后续的转移将只能由数字藏品所有者或其指定的托管人才有权限操作。"
+msgstr ""
+
+#: ../../source/NFT 67b30be95d3143a5aed954c8d1c99912 and contract
+#: writing.rst:171
+msgid "**单一数字藏品托管** ::"
+msgstr ""
+
+#: ../../source/NFT 178f5388100e4580b0c2bc8a72753504 and contract
+#: writing.rst:189
+msgid "**所有数字藏品托管** ::"
+msgstr ""
+
+#: ../../source/NFT ab6ef9016ace4356bd817f516ad43df1 and contract
+#: writing.rst:210
+msgid "托管后可通过 `getApproved` 和 `isApprovedForAll` 来查询是否托管的信息:"
+msgstr ""
+
+#: ../../source/NFT 94e3cb7cbb414bc88eb997562395ab6f and contract
+#: writing.rst:212
+msgid "**查询单个数字藏品托管信息** ::"
+msgstr ""
+
+#: ../../source/NFT 5a56bed31ca044c696d5931a5527ce7b and contract
+#: writing.rst:229
+msgid "查询所有数字藏品托管信息::"
+msgstr ""
+
+#: ../../source/NFT a28249b8c9a844cf835858a9575476f4 and contract
+#: writing.rst:238
+msgid "有了托管功能后便可将数字藏品交由第三方代为管理，当然拥有者仍然具有权限进行管理。"
+msgstr ""
+
+#: ../../source/NFT 7c52288560c445e6a9d883a31612cd69 and contract
+#: writing.rst:240
+msgid "接着我们就可以为 **合约定义转移功能** 了::"
+msgstr ""
+
+#: ../../source/NFT and b7909e452f7a4a43a626ea4d2f82b1ed contract
+#: writing.rst:269
+msgid ""
+"由此我们便拥有了一个数字藏品合约项目所需要主要功能，最后再将 **查询数字藏品信息** "
+"的功能补充上，例如查询账户下的藏品数量和查询藏品拥有者信息::"
+msgstr ""
+
+#: ../../source/NFT 077dd5b102704e12ae0df2047cf16b7f and contract
+#: writing.rst:285
+msgid "调用数字藏品合约"
+msgstr ""
+
+#: ../../source/NFT 5246a149a768414db20c3ab5162a5f4e and contract
+#: writing.rst:287
+msgid "最后，我们便可以通过SDK来发起对合约的调用了::"
+msgstr ""
+
+#: ../../source/NFT and contract e8f2d15809a640c68f6658834cf0972c
+#: writing.rst:328
+msgid "该调用逻辑模拟了账号A铸造了一个ID为1的数字藏品，并在数字藏品的meta元数据中记录了源文件所在的ipfs地址，随后将数字藏品转移给账户B，之后向合约进行查询发现账户A下的数字藏品数量变为0，且ID为1的数字藏品的拥有者变为了账户B。进行完整的合约调用后将获得如下输出："
+msgstr ""
+
+#: ../../source/NFT 676bfb7d95a84b6f8381b16b4aaa9258 and contract
+#: writing.rst:330
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/NFT 2f37828cd6684e04bc6ffde335654c6b and contract
+#: writing.rst:337
+msgid "image0"
+msgstr ""
+
+#: ../../source/NFT 9fc007899cca4b03b8d16cf10a76abc8 and contract
+#: writing.rst:333
+msgid "总结"
+msgstr ""
+
+#: ../../source/NFT 1e26c7aa6afd4fbb87ae6c6616e3f5e1 and contract
+#: writing.rst:335
+msgid "至此我们完成了通过HVM来编写一个数字藏品合约项目，了解了数字藏品协议的内容和作用，并基于数字藏品协议补充了数字藏品合约的内容，最后通过SDK模拟场景调用了编写的合约方法，进行了数字藏品铸造、转移和查询。从这一系列过程中我们发现数字藏品其实也没有那么难理解，其本质上是通过区块链技术进行背书的数字凭证，通过区块链来明确数字藏品的所有权和保障数据安全。"
+msgstr ""
+

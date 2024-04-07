@@ -1,0 +1,254 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Consensus Manual.rst:4 Switch User
+#: f5adbdd3845b4729aebf205ff650c524 manual/Consensus related user
+msgid "共识线下切换使用手册"
+msgstr ""
+
+#: ../../source/Consensus 86fbe1c0f2964cdea08302456a4ff8a5 Manual.rst:7 Switch
+#: User manual/Consensus related user
+msgid "1. 引言"
+msgstr ""
+
+#: ../../source/Consensus 9fb7c70b127e41e8ab883a5de1f99928 Manual.rst:10 Switch
+#: User manual/Consensus related user
+msgid "1.1 编写目的"
+msgstr ""
+
+#: ../../source/Consensus 93c017f50efe46868c75a2dda29ccab9 Manual.rst:12 Switch
+#: User manual/Consensus related user
+msgid ""
+"此文档描述Hyperchain中如何线下完成共识算法切换，在v2.7.0版本中，目前仅支持 **RBFT到NoxBFT** 的 **线下切换** "
+"步骤"
+msgstr ""
+
+#: ../../source/Consensus 8200d18769a7453f860bbe80dbb09564 Manual.rst:15 Switch
+#: User manual/Consensus related user
+msgid "1.2 术语"
+msgstr ""
+
+#: ../../source/Consensus Manual.rst:18 Switch User
+#: fce0df85a7454e358e97564fb8aa2455 manual/Consensus related user
+msgid "英文"
+msgstr ""
+
+#: ../../source/Consensus Manual.rst:18 Switch User
+#: d4ada62b64374e48bf693b8314c29c0d manual/Consensus related user
+msgid "中文"
+msgstr ""
+
+#: ../../source/Consensus 74480a9a22634a5caadb6427e7c18753 Manual.rst:18 Switch
+#: User manual/Consensus related user
+msgid "含义"
+msgstr ""
+
+#: ../../source/Consensus 3c7d8db100694eccae83817a50c221ad Manual.rst:20
+#: Manual.rst:23 Switch User a0c6d6d9e47d454a8dbd17219cf7711a manual/Consensus
+#: related user
+msgid "/"
+msgstr ""
+
+#: ../../source/Consensus Manual.rst:20 Switch User
+#: a74cebc931cf484c942b21882ae4cb9f manual/Consensus related user
+msgid "共识算法切换"
+msgstr ""
+
+#: ../../source/Consensus Manual.rst:20 Switch User
+#: a094ee4cf80645a2a46a3595c9808b43 manual/Consensus related user
+msgid "区块链平台在保留账本数 据的前提下，从一种共识切换到另一种共识"
+msgstr ""
+
+#: ../../source/Consensus Manual.rst:23 Switch User
+#: a0c25cf8595045e2abcf0046372deb51 manual/Consensus related user
+msgid "NoxBFT"
+msgstr ""
+
+#: ../../source/Consensus Manual.rst:23 Switch User
+#: e64623bdf76b4c808de48975fb8ae2a4 manual/Consensus related user
+msgid "Hyperchain新型拜占庭共识算法"
+msgstr ""
+
+#: ../../source/Consensus Manual.rst:25 Switch User
+#: b91995272dbf4f59a1ff9b64f5b2526f manual/Consensus related user
+msgid "RBFT"
+msgstr ""
+
+#: ../../source/Consensus 050fec9e6fe04efaa9d7f39d45ca1511 Manual.rst:25 Switch
+#: User manual/Consensus related user
+msgid "鲁棒性拜占庭 容错共识算法"
+msgstr ""
+
+#: ../../source/Consensus Manual.rst:25 Switch User
+#: e831275592cb48c8bc8211e7e46a12e7 manual/Consensus related user
+msgid "Hyperch ain实现的一种强鲁棒性拜占庭容错共识算法"
+msgstr ""
+
+#: ../../source/Consensus Manual.rst:28 Switch User
+#: d63f061973554568b09d10f55f393b7b manual/Consensus related user
+msgid "epoch"
+msgstr ""
+
+#: ../../source/Consensus 114ca696405340f18dfedf8846149ce5 Manual.rst:28 Switch
+#: User manual/Consensus related user
+msgid "世代"
+msgstr ""
+
+#: ../../source/Consensus 3c7bd0718ca14e239421330fceb23f04 Manual.rst:28 Switch
+#: User manual/Consensus related user
+msgid "共识算法 在发生集群配置变更后会触发“世代”的更替"
+msgstr ""
+
+#: ../../source/Consensus 1dfb703123904f52946984292f3f1a7c Manual.rst:33 Switch
+#: User manual/Consensus related user
+msgid "2. 配置说明"
+msgstr ""
+
+#: ../../source/Consensus Manual.rst:35 Switch User
+#: e9e8daca44f04cf0ae647ef5b0b796a6 manual/Consensus related user
+msgid "注意：只有在epoch变更后没有提交交易的场景下，才支持共识算法切换"
+msgstr ""
+
+#: ../../source/Consensus 62e7dbc1b88b4bfbb3b72b242b6f8664 Manual.rst:37 Switch
+#: User manual/Consensus related user
+msgid ""
+"链未进行过升级操作的场景下，共识从RBFT切换到NoxBFT仅需修改 `configuration/<分区名>/ns_dynamic.toml` "
+"中的共识算法类型而无需额外的配置文件。"
+msgstr ""
+
+#: ../../source/Consensus 76e08a6cdb3d4edc829fb37a445b9087 Manual.rst:39 Switch
+#: User manual/Consensus related user
+msgid "但若系统从历史版本升级到v2.7.0，则需要额外配置 `upgrade.toml` （详见 **《v2.7.0 升级说明》** ）"
+msgstr ""
+
+#: ../../source/Consensus 55a464e0df49421089e4e74161f094b8 Manual.rst:42 Switch
+#: User manual/Consensus related user
+msgid "2.1 ns_dynamic.toml"
+msgstr ""
+
+#: ../../source/Consensus Manual.rst:44 Switch User
+#: f4dbcb628c644b2ca1e68985786ba585 manual/Consensus related user
+msgid "将 `consensus.algo` 配置项的 **RBFT** 修改为 **NoxBFT**"
+msgstr ""
+
+#: ../../source/Consensus Manual.rst:52 Switch User
+#: f516f5be615b45b4adba8b36959a1a5a manual/Consensus related user
+msgid "2.2 NoxBFT共识配置"
+msgstr ""
+
+#: ../../source/Consensus 6aabaabb93fc4c419e1c8d44ceac3c23 Manual.rst:54 Switch
+#: User manual/Consensus related user
+msgid "详见《 **v2.7.0 NoxBFT使用手册** 》"
+msgstr ""
+
+#: ../../source/Consensus 363ea3128b484985ab337fc63bbc99d9 Manual.rst:57 Switch
+#: User manual/Consensus related user
+msgid "3. 流程说明"
+msgstr ""
+
+#: ../../source/Consensus 83dc700907734ae6852452892c546fba Manual.rst:59 Switch
+#: User manual/Consensus related user
+msgid "说明RBFT线下切换为NoxBFT的具体操作流程"
+msgstr ""
+
+#: ../../source/Consensus 8abbdcfddef447378a42310ef8d0bdcd Manual.rst:62 Switch
+#: User manual/Consensus related user
+msgid "3.1 停止RBFT集群"
+msgstr ""
+
+#: ../../source/Consensus 517ec9939c3f45ea88335fa5f6e1cf9d Manual.rst:64 Switch
+#: User manual/Consensus related user
+msgid "从历史版本升级到v2.7.0的详见3.1.1，从v2.7.0版本切换的场景详见3.1.2"
+msgstr ""
+
+#: ../../source/Consensus 8e453367ea3840e9a261d5d92e92844e Manual.rst:67 Switch
+#: User manual/Consensus related user
+msgid "3.1.1 历史版本的RBFT算法切换v2.7.0的NoxBFT"
+msgstr ""
+
+#: ../../source/Consensus Manual.rst:69 Switch User
+#: db2b879ac405481b99e3fcb0faccd0e9 manual/Consensus related user
+msgid "保证集群所有节点在相同的高度停止RBFT节点"
+msgstr ""
+
+#: ../../source/Consensus Manual.rst:70 Switch User
+#: fcb58f1672c94a92b61bc4ba4dc75ada manual/Consensus related user
+msgid "保证不再有新的交易提交"
+msgstr ""
+
+#: ../../source/Consensus 38823bf039dc4158b83846731923fc88 Manual.rst:72 Switch
+#: User manual/Consensus related user
+msgid "例：在集群中所有节点高度都为19时停止节点"
+msgstr ""
+
+#: ../../source/Consensus 69dd23a2eb03491dadab7044c88d701b Manual.rst:132
+#: Switch User manual/Consensus related user
+msgid "使用v2.7.0的hyperchain二进制文件生成配置 `upgrade.toml`"
+msgstr ""
+
+#: ../../source/Consensus 33ac7921a79e418d84a3d6cea77927f8 Manual.rst:134
+#: Switch User manual/Consensus related user
+msgid "在集群中每个节点根目录使用命令生成upgrade.toml"
+msgstr ""
+
+#: ../../source/Consensus 7596a25dac47496c8ca25dcdeb121309 Manual.rst:142
+#: Switch User manual/Consensus related user
+msgid "3.1.2 v2.7.0版本的RBFT算法切换到NoxBFT"
+msgstr ""
+
+#: ../../source/Consensus 971544d61cb14485a73a2790760fea4e Manual.rst:144
+#: Switch User manual/Consensus related user
+msgid "在epoch变更的区块高度停止节点，可通过配置交易触发"
+msgstr ""
+
+#: ../../source/Consensus 48fae488cd304ee0b4fc26ffca5e8ff2 Manual.rst:145
+#: Switch User manual/Consensus related user
+msgid "保证epoch变更后不再有新的交易提交"
+msgstr ""
+
+#: ../../source/Consensus Manual.rst:147 Switch User
+#: e70f076803c34b0e8e4f4f0b252f0c7f manual/Consensus related user
+msgid "例：RBFT集群在区块高度13时将epoch变更为2，此时不再提交新交易并停止节点"
+msgstr ""
+
+#: ../../source/Consensus Manual.rst:207 Switch User
+#: c5fc95f2b1794405a1ad37ffa954fa65 manual/Consensus related user
+msgid "3.2 修改共识算法类型"
+msgstr ""
+
+#: ../../source/Consensus Manual.rst:209 Switch User
+#: a09f68edaf3a428fb6f7ed0136099631 manual/Consensus related user
+msgid ""
+"修改 `configuration/<分区名>/ns_dynamic.toml` 中 `consensus.algo` 为 **NoxBFT** "
+"::"
+msgstr ""
+
+#: ../../source/Consensus 45f90608884d4410a92aee36d8ec9583 Manual.rst:225
+#: Switch User manual/Consensus related user
+msgid "3.3 重启节点"
+msgstr ""
+
+#: ../../source/Consensus 66470e27f2564eddb3aabf89e4761fe7 Manual.rst:227
+#: Switch User manual/Consensus related user
+msgid "节点重启后集群即可以NoxBFT算法进行共识"
+msgstr ""
+

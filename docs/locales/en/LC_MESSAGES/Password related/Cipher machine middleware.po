@@ -1,0 +1,397 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Password 38c4ed4efc1c40f89489d74b1ded21ab machine
+#: middleware.rst:4 related/Cipher
+msgid "密码机中间件用户开发手册"
+msgstr ""
+
+#: ../../source/Password e0a3b64abead45acadc100ea9cd47e42 machine
+#: middleware.rst:7 related/Cipher
+msgid "1. 引言"
+msgstr ""
+
+#: ../../source/Password d51f0596c07545819240ea90b6151968 machine
+#: middleware.rst:10 related/Cipher
+msgid "1.1 编写目的"
+msgstr ""
+
+#: ../../source/Password c9b610c9da434edc81faadc2cba3c0ac machine
+#: middleware.rst:12 related/Cipher
+msgid "密码机中间件的接口实现与测试涉及部分硬件环境，本文档为密码机中间件的开发与测试提供一定的指导。"
+msgstr ""
+
+#: ../../source/Password 828e2b3d27ea48fabbd4d8bca0e4bf01 machine
+#: middleware.rst:15 related/Cipher
+msgid "2. 开发guide"
+msgstr ""
+
+#: ../../source/Password d950822a65b3455fb1d440e999048bd0 machine
+#: middleware.rst:17 related/Cipher
+msgid "本文档通过结合接口定义与实现demo，为密码机中间件的开发提供一定的指导。"
+msgstr ""
+
+#: ../../source/Password 5a644af596b543e19394bafb9c3f5681 machine
+#: middleware.rst:19 related/Cipher
+msgid "注意："
+msgstr ""
+
+#: ../../source/Password 0bce69a7495c4eb4b863edeef8d25cce machine
+#: middleware.rst:21 related/Cipher
+msgid ""
+"plugin应该仅依赖 `github.com/meshplus/crypto "
+"<https://github.com/meshplus/crypto>`_ 和go官方包进行开发"
+msgstr ""
+
+#: ../../source/Password 524f0675a6ee49bda2062553b9b4ea29 machine
+#: middleware.rst:23 related/Cipher
+msgid "go版本和配套使用的平台版本保持一致，目前(flato1.0.6及之前)是go1.15.6"
+msgstr ""
+
+#: ../../source/Password 393ee8b924524d279b2e86ba4a949ef2 machine
+#: middleware.rst:25 related/Cipher
+msgid "golang编译插件需要使用--trimpath编译选项"
+msgstr ""
+
+#: ../../source/Password 5f1e106a06af4eeeb7f36a1862bbad2d machine
+#: middleware.rst:27 related/Cipher
+msgid "开发的插件名称(动态链接库的名称)应该有前缀 \"plugin_\""
+msgstr ""
+
+#: ../../source/Password 73a11620c791408ca817ce15fc1d3ed6 machine
+#: middleware.rst:30 related/Cipher
+msgid "2.1 接口定义与说明"
+msgstr ""
+
+#: ../../source/Password 220545a4051f4881a26d99324962b8ed machine
+#: middleware.rst:32 related/Cipher
+msgid ""
+"接口包可以从 `https://github.com/meshplus/crypto "
+"<https://github.com/meshplus/crypto>`_ 获取"
+msgstr ""
+
+#: ../../source/Password 0d2b0bf93cb64f13b49bb6109b3be233 machine
+#: middleware.rst:35 related/Cipher
+msgid "2.1.1 插件对外提供的方法"
+msgstr ""
+
+#: ../../source/Password 3a20c5bab5994837a8814a9590273154 machine
+#: middleware.rst:43 related/Cipher
+msgid "2.1.2  hash、随机数生成器、加解密等工厂接口"
+msgstr ""
+
+#: ../../source/Password 48f3acd3619347a5807949388eb8cf71 machine
+#: middleware.rst:98 related/Cipher
+msgid "2.1.3签名验签接口"
+msgstr ""
+
+#: ../../source/Password 7b2e5b331cc04d81b1857f3a6d1e8e39 machine
+#: middleware.rst:140 related/Cipher
+msgid "PluginSignFunc接口实现密钥的签名功能，该接口的两个关键方法为GetSignKey和ImportSignKey。"
+msgstr ""
+
+#: ../../source/Password 020efe1f928b42f69c8838838dbacd37 machine
+#: middleware.rst:142 related/Cipher
+msgid "1.GetSignKey：获取签名密钥"
+msgstr ""
+
+#: ../../source/Password d59f14c79e454365a2552c25356f5404 machine
+#: middleware.rst:144 related/Cipher
+msgid "key参数的内容由插件解释，flato会从私钥索引文件中读取相关内容传递给插件。关于私钥索引文件的约定格式见下文"
+msgstr ""
+
+#: ../../source/Password f1d37028a4924321bd3ce94ad1a4462e machine
+#: middleware.rst:146 related/Cipher
+msgid "mode表示对应的算法，对于不支持的算法可以返回crypto包中定义的ErrNotSupport错误"
+msgstr ""
+
+#: ../../source/Password 5550a812448b4bfc8945655c762e249c machine
+#: middleware.rst:148 related/Cipher
+msgid "私钥索引文件的约定格式。所谓私钥索引文件是用于替代私钥文件的占位文件。该文件只有一行文本内容，由三部分组成，三部分间用空格分割，样例如下::"
+msgstr ""
+
+#: ../../source/Password 2e231868806d473f8f7b5d4076589ef1 machine
+#: middleware.rst:150 related/Cipher
+msgid "plugin sm2 3081a40201010430bdb9839c08ee793d1157886a7"
+msgstr ""
+
+#: ../../source/Password a5f909eebed74cff8b446d07d716c310 machine
+#: middleware.rst:152 related/Cipher
+msgid ""
+"**第一部分** 是固定开头plugin； **第二部分** "
+"是算法名称，为如下字符串之一：sm2、secp256k1、secp256r1、secp256k1recover，flato会解析得到算法类型后用mode参数传递给GetSignKey方法；"
+" **第三部分** "
+"是hex编码，flato会将hex解码后的字节数组传递给GetSignKey方法作为key参数。第三部分的具体内容和含义是plugin负责解释的，对flato透明，因此第三部分可以是密钥的名称，索引，密钥本身，加密后的密钥等等。"
+msgstr ""
+
+#: ../../source/Password 212443950aea4145bb59559f3e6e6169 machine
+#: middleware.rst:154 related/Cipher
+msgid "2.ImportSignKey：导入签名密钥"
+msgstr ""
+
+#: ../../source/Password 9c7d1ae8c43746318bab36f7cbbe0f90 machine
+#: middleware.rst:156 related/Cipher
+msgid "如果key是crypto.None，则key内容是pkcs8格式私钥，DER编码"
+msgstr ""
+
+#: ../../source/Password 9b9e0d709fde4fad847cea61d33b0d17 machine
+#: middleware.rst:158 related/Cipher
+msgid "如果key是crypto中定义的具体算法，则key内容是对应算法的私钥，但是解析方式由插件确定，对flato透明（因此可以是加密格式）"
+msgstr ""
+
+#: ../../source/Password a6f81a06fc4549f7aa4069a57e80c303 machine
+#: middleware.rst:160 related/Cipher
+msgid "返回值index是该密钥导入后的索引，对应GetSignKey接口的第一个参数"
+msgstr ""
+
+#: ../../source/Password 469ab90e792942c2863574ad57b62b09 machine
+#: middleware.rst:162 related/Cipher
+msgid "该方法在falto运行的主流程中不会调用，但是未来可能在ipc中增加相应调用功能，帮助用户完成密钥导入。"
+msgstr ""
+
+#: ../../source/Password 007eb8be1ee6484f979d63d5fae7f07a machine
+#: middleware.rst:165 related/Cipher
+msgid "2.2 接口实现demo以及具体说明"
+msgstr ""
+
+#: ../../source/Password cbb4d2e6ee4d47319f589740af063b30 machine
+#: middleware.rst:168 related/Cipher
+msgid "2.2.1 对外提供函数的实现"
+msgstr ""
+
+#: ../../source/Password 4877598ba9b84ef7b103d5d593a19f4f machine
+#: middleware.rst:177 related/Cipher
+msgid "本例中提供了所有类别的实现，实际插件可以仅仅实现其中的部分。例如如果仅仅需要签名验签，就只需要实现 以下几个就可以了。"
+msgstr ""
+
+#: ../../source/Password b2d95779c2f84578b244d8a70b7b921f machine
+#: middleware.rst:185 related/Cipher
+msgid "2.2.2 hash工厂实现"
+msgstr ""
+
+#: ../../source/Password 57a3648ecacf448985c3f8405b24ec42 machine
+#: middleware.rst:207 related/Cipher
+msgid "1、其中GetLevel 函数返回支持的算法列表以及算法使用的优先级别，默认1最小，255最大。"
+msgstr ""
+
+#: ../../source/Password 7c5aa8ea84b34a82b46714bc5e7d502c machine
+#: middleware.rst:209 related/Cipher
+msgid "2、GetHash 返回并创建一个支持的模式（mode）的 Hash实例。"
+msgstr ""
+
+#: ../../source/Password 8764b600f8d947449cea010d894f4721 machine
+#: middleware.rst:212 related/Cipher
+msgid "2.2.3 随机数生成器工厂实现"
+msgstr ""
+
+#: ../../source/Password 6f1316b3d1f84acf8fb364e1631f1024 machine
+#: middleware.rst:232 related/Cipher
+msgid "1、GetLevel 以及以下所有的GetLevel 说明参考2.2.2"
+msgstr ""
+
+#: ../../source/Password 37c44f2e6dc14f9a8e244daf735685c1 machine
+#: middleware.rst:234 related/Cipher
+msgid "2、Rander()创建一个随机数生成器"
+msgstr ""
+
+#: ../../source/Password 5a9c1e93527140babcc641e84b4d4b03 machine
+#: middleware.rst:237 related/Cipher
+msgid "2.2.4  签名工厂实现"
+msgstr ""
+
+#: ../../source/Password 7694e75393c54eaa9622fda3660050bd machine
+#: middleware.rst:239 related/Cipher
+msgid "1、签名Key的工厂实现"
+msgstr ""
+
+#: ../../source/Password 690d12c20dea4be2893fec87233b9bdd machine
+#: middleware.rst:290 related/Cipher
+msgid "注意事项："
+msgstr ""
+
+#: ../../source/Password 4602a745f3e746d887b4c4cf6804c328 machine
+#: middleware.rst:292 related/Cipher
+msgid "1）GetSignKey 的key入参不是pkcs8的私钥，定义如下："
+msgstr ""
+
+#: ../../source/Password 95ffdc50925d4ba2a541afeea27eac63 machine
+#: middleware.rst:294 related/Cipher
+msgid "ecdsa、sm2 为大整数的大端序，例如10000 代表1万，而不是1"
+msgstr ""
+
+#: ../../source/Password 894af126798145d58a0f2fdfb8b5cb0c machine
+#: middleware.rst:296 related/Cipher
+msgid "rsa key为pkcs1私钥格式"
+msgstr ""
+
+#: ../../source/Password a18e11daa4a04c3f89221b2776bbb88c machine
+#: middleware.rst:298 related/Cipher
+msgid "2）ImportSignKey 的key入参参照GetSignKey"
+msgstr ""
+
+#: ../../source/Password 36ff451589cd4e79a9fed340188576f2 machine
+#: middleware.rst:300 related/Cipher
+msgid "ImportSignKey返回 []byte 为"
+msgstr ""
+
+#: ../../source/Password 382bf88229c843d9be6afaa2a0375951 machine
+#: middleware.rst:302 related/Cipher
+msgid "3）如果key可以导出，则 key为pkcs8模式"
+msgstr ""
+
+#: ../../source/Password f0e083c8e7944968a072a344a97c955a machine
+#: middleware.rst:304 related/Cipher
+msgid "4）如果key不可导出，则 key为实际的信息索引，例如gm0018所规定的 uint 值"
+msgstr ""
+
+#: ../../source/Password 447557e6a5904d64995844adb3241bd8 machine
+#: middleware.rst:307 related/Cipher
+msgid "2、签名Key的生成器工厂实现"
+msgstr ""
+
+#: ../../source/Password 42c6a33f018b46b8b8faf8c1206290fe machine
+#: middleware.rst:334 related/Cipher
+msgid "2.2.5 验签工厂实现"
+msgstr ""
+
+#: ../../source/Password cb4e19bf2d9a4ffe874ea52bd310207c machine
+#: middleware.rst:359 related/Cipher
+msgid "1、GetVerifyKey的入参key 定义如下："
+msgstr ""
+
+#: ../../source/Password 275d222e8a6f455797dfc8607cbfc0fd machine
+#: middleware.rst:361 related/Cipher
+msgid "ecdsa、sm2为公钥点x，y 的椭圆曲线序列化 elliptic.Unmarshal(）"
+msgstr ""
+
+#: ../../source/Password f2a3f0485c4043dca16939622f8a209a machine
+#: middleware.rst:363 related/Cipher
+msgid "rsa 为pkcs1 公钥格式"
+msgstr ""
+
+#: ../../source/Password d6f4ddc21bb04aa7b377c96049c2afd6 machine
+#: middleware.rst:367 related/Cipher
+msgid "3.测试说明"
+msgstr ""
+
+#: ../../source/Password 4d6326392ae347c7a48d2e97ff74ac4a machine
+#: middleware.rst:370 related/Cipher
+msgid "3.1 插件自测"
+msgstr ""
+
+#: ../../source/Password f0725a0263564406a0923394a7e932e5 machine
+#: middleware.rst:372 related/Cipher
+msgid "应针对插件所支持的算法提供测试用例，例如demo实现中对于sm3的测试，可以参考如下::"
+msgstr ""
+
+#: ../../source/Password 963d2a64150d4748a34be1c33fd358c9 machine
+#: middleware.rst:403 related/Cipher
+msgid "其它签名验签的方法测试用例也要完整覆盖到，这样发现的错误可以以最小的成本解决。"
+msgstr ""
+
+#: ../../source/Password f06de50f538d44ce8f8e6b4afd99e7cd machine
+#: middleware.rst:407 related/Cipher
+msgid "3.2 hyperchain 接入测试"
+msgstr ""
+
+#: ../../source/Password e41d9d25b20a4e1e87cb4da5f61e4204 machine
+#: middleware.rst:409 related/Cipher
+msgid ""
+"hyperchain 接入插件，需要修改hyperchain "
+"配置文件。为使外部插件生效，如果为优先级模式，需插件的GetLevel为所有插件最大；指定插件模式，需指定当前插件。具体可参照密码机中间件的设计文档。"
+msgstr ""
+
+#: ../../source/Password cda58ffc6a5f402c9f3bf5bcbc9c8476 machine
+#: middleware.rst:413 related/Cipher
+msgid "3.3加载成功关键日志"
+msgstr ""
+
+#: ../../source/Password 8664e62ba1f3481890ca8ce6fbc4a0c9 machine
+#: middleware.rst:415 related/Cipher
+msgid "example:"
+msgstr ""
+
+#: ../../source/Password 20f459c50f2a4e14aa8e483b16963aa2 machine
+#: middleware.rst:417 related/Cipher
+msgid ""
+"> NOTI [2021-02-22T15:01:38.772] [identitymanager] "
+"plugin/engine_external.go:84 start load external crypto engine: "
+"**plugin_ceb.so**"
+msgstr ""
+
+#: ../../source/Password 81c5e554c3524e60a998a88866a7c799 machine
+#: middleware.rst:419 related/Cipher
+msgid ""
+"> NOTI [2021-02-22T15:01:38.834] [identitymanager] "
+"plugin/engine_external.go:100 crypto engine **[plugin_ceb.so]** have  "
+"**1** function: **[sign]**"
+msgstr ""
+
+#: ../../source/Password 054493626c6a4dbfb40180d9d89ca882 machine
+#: middleware.rst:421 related/Cipher
+msgid ""
+"> NOTI [2021-02-22T15:01:38.834] [identitymanager] "
+"plugin/external_algo_select.go:105 crypto engine: external function "
+"[SignGet] for Sm2p256v1 from plugin_ceb.so is loading..."
+msgstr ""
+
+#: ../../source/Password 3cd2ba9394b8445b80d389ec0ccd3149 machine
+#: middleware.rst:423 related/Cipher
+msgid ""
+"> NOTI [2021-02-22T15:01:38.834] [identitymanager] plugin/engine.go:406 "
+"loading a external crypto engine (plugin_ceb.so) finish"
+msgstr ""
+
+#: ../../source/Password 15ffe6a7af41440fbd624a5b075e6568 machine
+#: middleware.rst:425 related/Cipher
+msgid ""
+"> NOTI [2021-02-22T15:01:38.834] [identitymanager] plugin/engine.go:409 "
+"external plugin loading info:"
+msgstr ""
+
+#: ../../source/Password 4e8a1d642e90481185650e14d7f39974 machine
+#: middleware.rst:427 related/Cipher
+msgid "> **[SignGet]       : Sm2p256v1 -> plugin_ceb.so**"
+msgstr ""
+
+#: ../../source/Password b23d37ef81bb456e8d309d47dda193c9 machine
+#: middleware.rst:430 related/Cipher
+msgid "4.注意事项"
+msgstr ""
+
+#: ../../source/Password 8fa3ab8351e64ff2a311ce1bfa22867d machine
+#: middleware.rst:432 related/Cipher
+msgid "1、具体实现的注意事项请参照2.2章节"
+msgstr ""
+
+#: ../../source/Password 8b389d81c24645deb9185c3bc7ad25de machine
+#: middleware.rst:434 related/Cipher
+msgid "2、由于密码机中间件的接口实现与测试涉及部分硬件环境，这给程序的测试带来了一定的难度，因此插件内部实现的自测就显得十分重要。"
+msgstr ""
+
+#: ../../source/Password 0ee21e26d667413f90599e8a59658b6c machine
+#: middleware.rst:436 related/Cipher
+msgid ""
+"3、插件名要以plugin为前缀，例如: go build - **trimpath** -buildmode=plugin -o "
+"plugin_pcie.so plug.go"
+msgstr ""
+

@@ -1,0 +1,543 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Governonce a88b12f13fed493b98c774436c900a5d and audit.rst:2
+msgid "治理与审计"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:5 edac21e12a0041eb81aa3cf0ce936f9f
+msgid "身份认证/准入机制"
+msgstr ""
+
+#: ../../source/Governonce 159022bd4d0f451185ca706b1025b391 and audit.rst:7
+msgid "平台使用CA证书体系进行联盟成员的准入控制。主要分为集中式CA认证体系、分布式CA认证体系两种方式。根据业务需求，任一节点可能参与一个或多个业务分区，所有在同一个分区中的节点都处于同一条链上，不同的分区处于不同的链上。不同的分区将拥有各自的证书体系，分区间不共享证书体系。"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:13 f3071adbcd43457bbb6a57b5525a7920
+msgid "证书"
+msgstr ""
+
+#: ../../source/Governonce 3e2108a2fb39483fa5f0c6faabc80330 and audit.rst:14
+msgid "说明"
+msgstr ""
+
+#: ../../source/Governonce a93607eeac784864831d2c2dc4909aee and audit.rst:15
+msgid "Root.ca"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:16 c66c9e35db044d5b93d17d0e569106a4
+msgid "CA体系的信任锚持有根证书Root.ca，具有签发各类证书的权限。在节点连接时，若节点的信任锚与其他链上节点的信任锚不同，则无法与其他节点成功建立连接。"
+msgstr ""
+
+#: ../../source/Governonce 230b228a9143476ca9c5d6017ad1d785 and audit.rst:17
+msgid "ECert"
+msgstr ""
+
+#: ../../source/Governonce 3c776e7c01fc49599973815545451e31 and audit.rst:18
+msgid "ECert是节点准入证书，持有ECert的节点为共识节点，可以同链上其他节点同步数据并参与共识。在节点连接时，若节点的ECert无法通过证书合法性校验，则无法与其他节点成功建立连接。"
+msgstr ""
+
+#: ../../source/Governonce 47a473b52d804b13b49ab52e3241bdca and audit.rst:19
+msgid "RCert"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:20 c629568a04804c44ba4ba8e26b770c68
+msgid "RCert主要是用于证明该节点是受信任的准入节点，该节点为非共识节点（NVP），不可参与共识验证，仅允许向特定共识节点同步账本数据。在节点连接时，若节点的RCert无法通过证书合法性校验，则无法与其他节点成功建立连接。"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:21 ea1024c9268e4faa8ac4dcc518cc3796
+msgid "SDKCert"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:22 e40413bb311945b1a3e30530b94ee1ad
+msgid ""
+"SDKCert "
+"为客户端的准入证书，用于证明客户端的合法性，非法的客户端将无法向节点发出请求。每一个SDKCert将对应连接一个节点。若一个客户端需要连接多个节点，则该客户端连接每个节点都需要一个SDKCert。在交易发送时，若客户端的SDKCert无法通过证书合法性校验，则交易将无法被节点接收。"
+msgstr ""
+
+#: ../../source/Governonce 2939b5f549c74edebe5e7a98a7cf192c and audit.rst:23
+msgid "IDCert"
+msgstr ""
+
+#: ../../source/Governonce 8a87584dabde420da5493cc85a8e44e6 and audit.rst:24
+msgid "IDCert为账户证书，用于维持账户地址与账户密钥间的映射关系。依此证书，账户将获得注册、冻结/解冻、密钥重置、注销的账户生命周期管理功能。"
+msgstr ""
+
+#: ../../source/Governonce 3bc703b2f1a940d28b42c92f52ef574c and audit.rst:25
+msgid "TLSCert"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:26 d844f5ef6bc349c7935b7dc799b9bbac
+msgid ""
+"TLSCert(Transport Layer Security Cert) 为安全传输层协议证书。TlsCert "
+"用于传输层安全协议证书，即在传输网络传输过程中需要验证传输层安全协议证书的安全性，验证通过即可以进行正常网络通信，反之则无法进行网络通信。"
+msgstr ""
+
+#: ../../source/Governonce 5bdf1d578c2a463284722d839ea28570 and audit.rst:30
+msgid "中心化CA"
+msgstr ""
+
+#: ../../source/Governonce 41b5bc28579442bc9f576d820940500c and audit.rst:32
+msgid ""
+"中心化CA认证体系可以由可信机构提供，也可通过自建CA体系实现。平台已通过集成CFCA（China Financial Certification"
+" "
+"Authority）实现数字证书管理功能，适用于对于证书系统安全性与权威性有较高要求的银行或金融机构；自建CA体系需要建设独立的PKI／CA系统，并且建立完整的运营管理体系。中心化CA证书体系的证书类型与签发关系如下图所示："
+msgstr ""
+
+#: ../../source/Governonce 401affddfc65407a9b4c7f736490e430 and audit.rst:34
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/Governonce 63c23d47a9144552a2d8e119057b01fe and audit.rst:209
+msgid "image0"
+msgstr ""
+
+#: ../../source/Governonce 0c081f11496a402bb5e66d2a13df97cc and audit.rst:36
+msgid "在中心化CA模型下，每个节点需配置其参与的每个分区所信任的CA，将CA的根证书配置到成员管理文件夹（MSP）中，后续该节点在与其他节点建立P2P网络连接时（节点加入区块链阶段），该节点将信任由成员管理文件夹中所记录的CA根证书所签发的数字证书。因为，数字证书签发能力由若干CA掌握，因此我们称其为中心化CA。"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:38 b98f88b9b83f4b8786436a7ef323f1e9
+msgid "|image6|"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:215 be7bfc4624e64e759aedf612d3b19fb0
+msgid "image6"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:41 c373594996af4956b0d794ce9410f852
+msgid "分布式CA"
+msgstr ""
+
+#: ../../source/Governonce 2c0eb16fff024d1788da601f3526395d and audit.rst:43
+msgid "分布式CA体系认证管理是将证书管理权限由中心机构移到联盟链各参与方，联盟网络节点互相颁发准入证书给其他网络节点，在建立连接阶段完成证书认证。分布式CA治理具有去中心、自动化、高效等优点。如：网络中有四个节点（node1、node2、node3、node4），node1需要与其他三个节点交互需要三个节点各向它签发一个证书。在该结构下，暂不支持非共识节点（NVP）。分布式CA证书体系的证书类型与签发关系如下图所示"
+msgstr ""
+
+#: ../../source/Governonce 427674e18e9f4da0a05c005c105bfc74 and audit.rst:45
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/Governonce 764b71ff99564c45959c75e4236f71c7 and audit.rst:210
+msgid "image1"
+msgstr ""
+
+#: ../../source/Governonce 86171a6ca261489a8e0ec06a5f3ea058 and audit.rst:47
+msgid "在分布式CA模型下，每个节点将拥有独立的根证书，并使用该根证书签发网络连接身份证明所需的数字证书。在初次加入区块链网络时，节点将与其他区块链节点两两互换证书，节点增删事项以提案的形式提交至区块链中进行投票共识决议。因为该模式下，节点是两两相互签发认证证书的，无需指定的CA进行签发，具有分布式认证的特征，遂称为分布式CA。在分布式CA体系下，SDKCert和IDCert皆由某一节点的根证书签发。"
+msgstr ""
+
+#: ../../source/Governonce 7293970017dc4fe3992076cbbdb0ff7b and audit.rst:49
+msgid "|image7|"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:216 ece79cd8dbd840feb8bf87b5c53a4d5c
+msgid "image7"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:52 daacc1c3b67c42f1ae47e67f19f42161
+msgid "用户账户体系"
+msgstr ""
+
+#: ../../source/Governonce 98e7617f04334c4ea8194cf62073f910 and audit.rst:54
+msgid "公私钥对是用户在联盟链平台中进行交易发起、账户操作的主要元素，为标识用户在联盟链中的账户进而基于公钥通过数学运算生成一个账户地址，该账户地址即为用户在区块链上的标识。不同的应用场景对账户的使用需求和管理需求各不相同，针对不同的账户体系需求，趣链区块链平台提供两类账户标识、三类用户账户。两类账户标识分别是普通账户标识和DID账户标识，三类用户账户分别是普通账户、证书账户、DID账户。"
+msgstr ""
+
+#: ../../source/Governonce 37c74e3ac0dd41ab89acafead09d52c6 and audit.rst:56
+msgid ""
+"**普通账户** "
+"使用普通账户标识，为链上的基础账户，是另外两类账户的基础，但该账户不具备账户生命周期管理能力，亦不具备密钥更换的能力，因此使用普通账户的用户应妥善保管其私钥。"
+msgstr ""
+
+#: ../../source/Governonce 69e9123673964faeaf3e51d5733e7f3f and audit.rst:57
+msgid ""
+"**证书账户** "
+"使用普通账户标识，为链上的高安全账户。普通账户经CA认证获得IDCert后可升级为证书账户，用户也可直接向CA申请IDCert注册证书账户。证书账户具有账户生命周期管理功能，且支持密钥更换，具有高安全的特点，但对区块链的开销较大，不建议注册大量证书账户，适用于业务场景中具有强安全需求的账户。"
+msgstr ""
+
+#: ../../source/Governonce 10e02507055b409bb35c7b7f74cf9d0a and audit.rst:58
+msgid ""
+"**DID账户** "
+"使用DID账户标识，每一个DID账户标识都有一个普通账户标识与之对应。用户需要基于DID账户使用分布式数字身份的功能。用户可自主将普通账户升级为DID账户，亦可在初次注册时直接注册DID账户。DID账户支持账户生命周期管理能力，可为每个DID账户定义不同的管理员账户，支持密钥更换，具有灵活、安全、易用的特点。"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:61 f89b14e485504367994617c82a908eaf
+msgid "分布式数字身份（DID）"
+msgstr ""
+
+#: ../../source/Governonce 9f482c80e92549e2be9bad84a9a6c861 and audit.rst:63
+msgid ""
+"趣链提供用户自主可控、全域自发现的分布式数字身份（Decentralized Identity, "
+"DID），将用户身份的管控权还给用户，并打破跨平台间的信息屏障。一个用户的数字身份由DID、DID文档、可验证凭证三个部分组成。每一个DID都必须拥有唯一的DID文档，但拥有不定数量的可验证凭证。"
+msgstr ""
+
+#: ../../source/Governonce 1b32df3018dc438cadacbf6e47631d61 and audit.rst:65
+msgid "**DID** 为用户在数字世界的标识，对每一个所使用的数字应用，用户都将有一个DID数字身份。"
+msgstr ""
+
+#: ../../source/Governonce ae1084ed135d486f8844bee95b56510e and audit.rst:66
+msgid ""
+"**DID文档** "
+"为DID在数字世界的身份档案，包含账户公钥、账户状态、授权管理账户等。倘若用户未注册DID账户，链上将无DID文档的记录，则无法签发和接收可验证凭证，他人也无法在该区块链中寻得未注册的DID账户。"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:67 f7277fd919904b978d357ab58991b26f
+msgid ""
+"**可验证凭证** "
+"为桥接用户数字世界身份与现实世界身份的桥梁，用于表述、证明DID账户持有人在现实世界的身份属性，具有描述性、可验证的特点。用户可部署智能合约，通过智能合约进行可验证凭证的验证和使用。"
+msgstr ""
+
+#: ../../source/Governonce 41d72c864b1047bd9a75fde5cf3aac62 and audit.rst:69
+msgid "|image5|"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:214 f565bd5a120541898a62c176c1482e2c
+msgid "image5"
+msgstr ""
+
+#: ../../source/Governonce 961adb072ea54294bf74318983788a76 and audit.rst:71
+msgid "DID数字身份基于区块链技术实现数字身份自主管控、身份信息可信查验、身份属性跨域使用，可有效降低身份泄露风险、提高身份证明复用能力，解决身份信息易泄露、难互通、难协同的问题。"
+msgstr ""
+
+#: ../../source/Governonce 38276b4a0b1d403189af446aa3daff38 and audit.rst:73
+msgid "其应用主要体现在以下几个方面："
+msgstr ""
+
+#: ../../source/Governonce 895f32e7f258472a884ac8225c70af55 and audit.rst:75
+msgid "**私钥丢失不丢资产**"
+msgstr ""
+
+#: ../../source/Governonce 77f37640be4c4682be022f1eb5b0affa and audit.rst:77
+msgid "采用DID账户结构的终端应用，当用户丢失私钥时，可在本地生成新的公私钥对，并通过管理账户发起链上变更操作，重新替换原有公钥（私钥仍在本地），进而完成新的公私钥对与DID账户的重新绑定，进而重新掌握资产所有权，安全放心。"
+msgstr ""
+
+#: ../../source/Governonce aa249698719543eaa6f5535a9d26daa8 and audit.rst:79
+msgid "**多应用一键登录**"
+msgstr ""
+
+#: ../../source/Governonce 0792e7b1946c43399e12a93720c9c28f and audit.rst:81
+msgid "在同条链中衍生出的终端应用，用户无需重复注册账号，可通过给同一DID账户签发各应用方的授权登录凭证，即可实现账户统一登录、多应用资产统一管理，省去繁琐的账户注册及管理程序，方便用户快捷使用。"
+msgstr ""
+
+#: ../../source/Governonce 6ac89f4470714a49b48728d8957eb100 and audit.rst:83
+msgid "**元宇宙身份**"
+msgstr ""
+
+#: ../../source/Governonce 4344ce913f324c14a5f7eb1848627f5a and audit.rst:85
+msgid "用户在元宇宙中拥有唯一DID账户身份，里面可以包含个人在现实生活中的各种真实有效证件凭证，也可以包含虚拟世界中的各种授权凭证，根据实际所需，用户可以自行选择展示或使用，体验元宇宙带来的更好服务。"
+msgstr ""
+
+#: ../../source/Governonce a87290da2e164210aec5600950ae98cf and audit.rst:89
+msgid "DID数字身份的应用非常广泛，在电子政务场景中，区块链可以帮助民众、企业归集统筹自身数据，建立民众的电子档案袋，平台作为数据托管的可信第三方，为数据来源、去向及可靠性做背书，让用户保存在政府端的数据能够“有依据、够安全”地开放给社会机构使用。用户可以通过数字身份技术将不同系统间的信息统筹管理；上链共享电子证照等材料，可推动机构互认，助力材料复用；并且所有用户的信息都可以通过链进行记录并查询。"
+msgstr ""
+
+#: ../../source/Governonce 2b5b4b2a6c96460483ced5cbde22fca3 and audit.rst:92
+msgid "多级权限管理"
+msgstr ""
+
+#: ../../source/Governonce 0f6d9c87ad274436abfb502a38669fd2 and audit.rst:94
+msgid "联盟链的准入机制虽然能一定程度上保障安全性，但缺乏针对不同角色的细粒度的权限管理。因此，为了支撑更丰富复杂的商业应用场景需求，平台建立了多层级权限管理体系，以此满足联盟链运维权限管理的需求。"
+msgstr ""
+
+#: ../../source/Governonce a32ae434a6a440549da35837a1690f3d and audit.rst:96
+msgid "目前，平台设有系统管理员、审计管理员、节点管理员、合约操作员以及用户五个主要账户角色："
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:98 d7f30343e4f5459dbd33c2e82d68f06f
+msgid ""
+"**系统管理员** "
+":参与区块链级别的权限管理，包括节点管理、系统升级、合约升级的权限控制，往往是各联盟机构指定的内部超级管理员。节点准入、系统升级这种链级别的操作权限需由系统管理员代表联盟各机构投票决定。链级权限管理需要借助联盟自治框架进行提案发起与提案投票，详见章节联盟自治CAF。"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:99 f7dc34354b7d4e489d85ca7f8eaeb35c
+msgid ""
+"**节点管理员** "
+":往往是各联盟机构指定的运维管理员，参与节点级别的访问权限管理。节点管理员责任包括：向受节点信任的客户端颁发SDK证书，配置用户权限表，分配用户访问SDK的权限，比如访问调用合约的权限、获取区块权限等。"
+msgstr ""
+
+#: ../../source/Governonce 610f7eb1aabf468bb9d7a3d33345257d and audit.rst:100
+msgid ""
+"**合约管理员** "
+":负责对链上已部署的智能合约进行运维管理。平台支持合约管理员或合约部署者对智能合约发起合约升级、合约冻结、合约解冻、合约禁用、合约访问权限的操作提案。合约管理员需借助联盟自治框架对上述提案进行发起与投票，投票通过的提案由平台执行提案。"
+msgstr ""
+
+#: ../../source/Governonce 65311dde980d481d833ecbd545153876 and audit.rst:101
+msgid "**用户** :普通用户，可按规则参与链上交易，可被赋予上述管理员角色。"
+msgstr ""
+
+#: ../../source/Governonce 42f41e7161f0489e9a370b4311e3bdd7 and audit.rst:104
+msgid "接口权限管理"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:106 eaa1e19ce5b148f0bd23db8283da2f12
+msgid "权限，即是资源和操作的一套组合，接口权限控制，即是某种用户/角色对接口这一资源对操作控制，权限控制中有三个重要元素：人（用户/角色）、资源（要控制的对象）、操作（如何控制如增删改查）。"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:108 e6db8d59ef1042b5b6c404c62fe2424d
+msgid "当前的平台接口权限设计中，只有对于交易类的接口权限管理，其通过SDKCert进行证书验证，而RPC方法中很多是没有签名验签的，需要在RPC层做权限拦截控制，对用户访问接口进行权限验证，保证业务场景中用户访问链上信息的安全性。"
+msgstr ""
+
+#: ../../source/Governonce 4c71033696cb43559a7d146c4a273d93 and audit.rst:110
+msgid "接口权限管理用于对节点查询接口的权限进行管理，是节点级的接口权限管理。例如，某一节点针对某一namespace设置了节点自身的接口访问的规则，则只对此节点中对应的namespace生效，对此节点的其他namespace和其他节点是不生效的。"
+msgstr ""
+
+#: ../../source/Governonce 3a081e0da982454bad3d5a9821098938 and audit.rst:112
+msgid "目前接口权限管理功能主要包含角色管理和规则管理。其中，角色管理指的是账户与节点级角色的管理，例如，添加角色、删除角色、查询账户角色、查询角色账户及查询所有角色；规则管理描述的是对节点级接口权限管理规则进行管理，包括规则设置、规则读取等。"
+msgstr ""
+
+#: ../../source/Governonce 7f017402b63d473f9e46f514b2cd93f0 and audit.rst:115
+msgid "CA模式管理"
+msgstr ""
+
+#: ../../source/Governonce 480d74de2ec741d19b6fc84af4d1fdad and audit.rst:117
+msgid "2.12支持ca模式切换，即从中心化转向分布式的单向切换。"
+msgstr ""
+
+#: ../../source/Governonce 6366a2a3a6fa47eba37182c39c6c3eb3 and audit.rst:119
+msgid "ca模式管理包括如下操作："
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:121 d8466192ca104f7181f9c59ff7463429
+msgid ""
+"设置ca模式。从2.7.0以前的版本升级到2.7.0+，需要通过提案设置ca模式，如果为中心ca，设置完ca模式后还需要通过新增root "
+"ca的方式将所有使用的root ca上链。"
+msgstr ""
+
+#: ../../source/Governonce 4edb1b1a433e42cab109fcba544a2556 and audit.rst:122
+msgid "查询ca模式。查询ca模式可以通过提案的Direct 操作直接进行查询。"
+msgstr ""
+
+#: ../../source/Governonce 985fc69f8a7248a4be848a8cde921659 and audit.rst:124
+msgid ""
+"当ca模式为中心ca（非分布式ca）即Center时，可通过RootCAContract 合约管理中心ca模式下使用的root ca，root "
+"ca管理包括如下操作："
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:126 b844231b382749c4a3b9bc16b236b553
+msgid "新增root ca，即增加一个新的信任的root ca；"
+msgstr ""
+
+#: ../../source/Governonce 93d13d305b75459fb5860e8508f9083d and audit.rst:127
+msgid "查询root ca，即查询当前模式下信任的所有的root ca。"
+msgstr ""
+
+#: ../../source/Governonce 06000f194e2041d9bb434d0fabdc8164 and audit.rst:131
+msgid "联盟自治框架CAF"
+msgstr ""
+
+#: ../../source/Governonce 6f97fe3a4399454f9c0a12a8ed1bd2d0 and audit.rst:133
+msgid ""
+"为了满足灵活多变、迭代更替的业务规则，平台提出了一种具备联盟协商、迭代升级的联盟自治框架CAF（Consortium Autonomous "
+"Framework），由管理员共同形成“联盟自治成员组织”，以联盟协商的形式管理联盟链。该框架适用于一切链级的变更，如节点增删、合约升级等。"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:135 dbcbfe83e1d744b9b6b5b959f465440e
+msgid "**系统管理委员会**：由系统管理员组成，负责系统级提案及节点增删提案的商议与投票。"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:136 e89c427de50346a990df61af62a328f2
+msgid "**合约管理委员会**：由合约管理员组成，负责合约管理与合约升级等提案的商议与投票。"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:138 d740cd0981984df4ba0ffa600442f8c5
+msgid "|image2|"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:211 ede53e04432544f6a111787170769e57
+msgid "image2"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:140 e43ff99f31dd462d97f29e2341d4f7e9
+msgid "提案从创建到执行的整个流程，具体如下："
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:142 c57b2276c2374d36beea472dae5b197b
+msgid "系统管理或合约管理的行为，会被申请人以提案形式提交给相应的委员会；"
+msgstr ""
+
+#: ../../source/Governonce af6d54ba662c4664ab302b184c85832f and audit.rst:143
+msgid "所有组织成员根据自身制定的投票策略对每个提案作出判断；"
+msgstr ""
+
+#: ../../source/Governonce 49e6bd3033ca472ebd1310a38f94d068 and audit.rst:144
+msgid "当组织中同意该提案的成员数量达到预设阈值时，提案被通过；"
+msgstr ""
+
+#: ../../source/Governonce 88ad46aaa5394dc2905834b9df54a8e1 and audit.rst:145
+msgid "所有链上节点根据通过提案的内容自动变更节点状态。"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:147 ce3e15a2626c4c7cb604d652c6c9f906
+msgid "其中，提案的提出、表决、通过等核心逻辑都依托于智能合约实现。由于智能合约在不同节点间的状态由平台的共识算法保证，能保持时刻同步且严格一致，因此借助智能合约为载体，可以高效实现提案事件的分发以及投票结果的聚合。"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:149 e4a280315e544097bd29c40eebd6a089
+msgid "目前，CAF可灵活用于共识节点管理、成员角色管理以及智能合约管理三类应用场景："
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:151 e350be1f7a9d44098fb46d68c2780418
+msgid ""
+"**共识节点管理** "
+":现有联盟链的节点变更往往与管理机构身份认证绑定，身份认证一般都是由CA授权认证，成为多中心区块链系统中的身份认证中心。CAF利用预编译智能合约，支持系统不停机的进行联盟成员增删提案发起、提案投票、提案执行，使成员变更流程具有多中心化的特点，同时整个协商过程也公开透明。"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:152 d08f39bb0cb944b2aca3661159e1a6ce
+msgid ""
+"**成员角色管理** "
+":联盟链中系统管理员的增删、合约管理员的增删都需由系统管理员进行提案，并由提案前的系统管理委员会进行投票表决，平台对符合预设投票规则的提案予以执行，完成成员角色管理。"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:153 fb1279c06fa1412f8f4ae45a3c7d267e
+msgid ""
+"**智能合约管理** "
+":传统的合约升级方式只能由合约部署者发起合约升级交易完成，这种方式一方面存在单点故障风险，导致合约无法升级，另一方面合约部署者可能在没征得其余参与方同意的情况下，单方面进行合约升级。基于CAF，组织成员可事先指定升级策略写入智能合约，在需要升级时由部署者或合约管理员发起提案，借助权限受控的合约自升级指令，解决智能合约的升级问题。"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:156 cfd637b0fbb64b96acfafd4e5fd20e98
+msgid "安全审计服务"
+msgstr ""
+
+#: ../../source/Governonce 932a8d79e86d46f1a753890574cad5a9 and audit.rst:158
+msgid "随着区块链商业应用的步伐加快，如何通过有效审计来保障区块链系统及数据安全是区块链行业发展需要重点关注的问题。央行于今年发布了《金融分布式账本技术安全规范》和《区块链技术金融应用评估规则》，被业内视为区块链在金融行业内应用的重要标准，两份标准都对区块链系统的安全审计提出了明确要求。"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:160 e398441ceedd4b67be259b8cae511df8
+msgid "为此，平台推出了区块链系统安全审计服务，帮助审计方对系统事件展开精确有效的审计工作，全面符合金融级审计要求。"
+msgstr ""
+
+#: ../../source/Governonce 31cc3bba82f5400d85e876e903950fdb and audit.rst:162
+msgid "作为审计对象的系统事件包括账本数据访问记录、变更记录、同步记录，节点共识历史以及系统异常事件等。事件在平台内部以日志形式进行记录和采集，再通过外接日志分析系统，实现日志的快速检索、风险告警以及可视化展示功能。"
+msgstr ""
+
+#: ../../source/Governonce 8d8e86bf495542f89fb04011706e491f and audit.rst:164
+msgid "|image3|"
+msgstr ""
+
+#: ../../source/Governonce 6219ffdf355f48379932411643bd0ec7 and audit.rst:212
+msgid "image3"
+msgstr ""
+
+#: ../../source/Governonce 8bb598f36a34455f9d8845e4600aadf9 and audit.rst:166
+msgid "平台的审计日志中记录了丰富的事件信息，一方面支持对异常操作和安全事故进行追本溯源，另一方面也帮助用户建立一套贴合实际业务场景的安全告警机制，及时防范风险。这里的告警规则是灵活可配的，为了降低使用门槛，平台预先将审计事件分为NORMAL、WARN、RISK三个风险等级，并以字段形式记录在审计日志中，用户可按需对不同等级的事件进行告警。此外，平台也支持用户根据审计日志中的IP、用户、时间、操作内容等字段信息，按需设置用户访问黑白名单等规则，适应多样化的应用场景。"
+msgstr ""
+
+#: ../../source/Governonce 06334828d9fe40038aa9cbe86d852204 and audit.rst:168
+msgid "安全审计服务的使用十分便捷，用户只需要在启动平台之前修改配置文件开启审计即可。平台现已适配GaryLog和ELK两种常用日志分析系统，用户可根据实际需求进行选择。"
+msgstr ""
+
+#: ../../source/Governonce 3cb77e08ed6d4a05a2f96f8f8e47af50 and audit.rst:170
+msgid "除了符合《金融分布式账本技术安全规范》以及《区块链技术金融应用评估规则》的要求，该功能可在供应链金融等多个领域发挥潜在价值。以区块链供应链金融服务平台为例，借助安全审计平台，一方面可以帮助用户及时识别节点异常、数据一致性校验失败等威胁系统正常运行的特征事件，避免风险进一步扩大导致服务中断；另一方面，事后能快速追踪链上数字资产的异常变更和访问操作，为虚拟交易、非法融资等提供便捷的追责功能。"
+msgstr ""
+
+#: ../../source/Governonce 233e28da431848f8b24fa9c40f0c9000 and audit.rst:172
+msgid "|image4|"
+msgstr ""
+
+#: ../../source/Governonce 8fcbed0b28a24e4597575468ed400d7b and audit.rst:213
+msgid "image4"
+msgstr ""
+
+#: ../../source/Governonce 90d9192c87434508944cbc5aa4db1115 and audit.rst:175
+msgid "合约命名CNS"
+msgstr ""
+
+#: ../../source/Governonce a34c8f26d7314dec968eedad95585136 and audit.rst:177
+msgid ""
+"智能合约在区块链业务处理过程中扮演着重要的角色，区块链系统中针对不同业务会有不同的智能合约，而当前对于这些智能合约的操作管理都是通过“合约地址/Contract"
+" "
+"Address”来桥接实现，若想调用某合约，可能要配置\"0x62524766cd4b022c7e84bac128bbbf71e26666668\"类似这样一个地址，相信大家已经发现了他的规律：就是没有规律。并且存在以下问题："
+msgstr ""
+
+#: ../../source/Governonce 89c52fcc5193486b8e7f527d5081c07f and audit.rst:179
+msgid "合约地址冗长无规律（magic number），不方便记忆、存储以及校验，丢失后合约无法访问。"
+msgstr ""
+
+#: ../../source/Governonce 62bf345fd8064ec2b9ac6118e641dfdd and audit.rst:180
+msgid "合约ABI描述会是很长的JSON字符串, 是调用端需要, 对使用者来说并不友好。"
+msgstr ""
+
+#: ../../source/Governonce 3d56d170b2854c4f9502d105804ff38a and audit.rst:181
+msgid "合约重新部署过程繁琐：合约因为业务逻辑的变化而被重新升级部署后，需要逐一去修改之前已经引用这个合约地址的所有业务模块，以指向新的合约的地址，整个过程繁琐且容易错漏。"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:182 fe3b25fd48a64a2b96b667f6c4330720
+msgid "不便于进行合约版本管理以及合约灰度升级。"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:184 c9f886f1342e4b6ab1a49b8147469bbe
+msgid ""
+"这会导致日常在使用时要确认这一串合约地址的完整性、正确性，才能正确调用这个地址上的合约接口，同样也增加了运维时候配置使用的难度，由此，合约命名服务CNS(Contract"
+" Name Service)应运而生。"
+msgstr ""
+
+#: ../../source/Governonce 3b5c264467cf4afabc083a1b597b8082 and audit.rst:186
+msgid ""
+"CNS意在解决合约生命周期管理以及运维配置过程中因合约地址冗长无规律导致的一系列操作繁琐问题。其灵感来源可以追溯到互联网域名系统，域名之于IP地址相当于合约命名之于合约地址。CNS通过简单合约地址命名与合约地址&abi等合约信息进行映射。当用户调用合约接口时,传入合约映射的name、接口名称等信息。在CNS服务模块维护name与合约信息的映射关系,将根据调用传入的name"
+" 、接口、参数, "
+"转换底层虚拟机需要的字节码进行调用，通过这种命名关系友好化的方式让用户不再关于冗长的合约地址，只需要操作简单的命名就可以使用合约。"
+msgstr ""
+
+#: ../../source/Governonce 6f036ef2a88d4f0eab1ce5bc694a4579 and audit.rst:188
+msgid "CNS命名服务的初衷是用户在涉及到合约地址的使用过程中，可以不用去管复杂的合约地址相关信息，只需要一个简单的合约名name就可以完成原有的相关操作，具体的流程如下图：假设用户发起一笔交易调用HelloC.sol合约，这时To的地址就会变成我们的合约名称HelloC，交易执行时会首先访问CNS服务，解析出真实的合约信息，再对业务合约进行真实的调用，最终将访问结果返回给客户端。"
+msgstr ""
+
+#: ../../source/Governonce 56ee48612272446080bc1f6ee55ed494 and audit.rst:190
+msgid "|image8|"
+msgstr ""
+
+#: ../../source/Governonce 8fabd34b2dba439aab43488b1b6111f3 and audit.rst:217
+msgid "image8"
+msgstr ""
+
+#: ../../source/Governonce 4ac8ea43dad0401ba59af922c5c8dd7c and audit.rst:193
+msgid "证书链上吊销"
+msgstr ""
+
+#: ../../source/Governonce and audit.rst:195 c5e8f89ece6b4a1a98a38ddad37f1d17
+msgid "证书是节点加入网络、客户端连接节点的合法性凭证，证书的签发者为CA。CA并不诞生或注册在链上，区块链仅以配置的方式记录受信任的CA，以此判断未来需验证的证书是否来源于受信任的CA。然而证书的吊销如今并非在链上完成的，具有两大缺点："
+msgstr ""
+
+#: ../../source/Governonce 60e7828f79874d0c803d115c1575f51b and audit.rst:197
+msgid "**时效性** ：CA吊销证书到通知区块链各节点可能存在较长时间的时间差。"
+msgstr ""
+
+#: ../../source/Governonce 96cf7ce050e5464a97de2f04de8e53a3 and audit.rst:198
+msgid "**原子性** ：CA吊销节点证书或客户端证书后，理论上该节点/客户端应在证书吊销生效的同时不再被网络所信任，但如今无法实现这样的效果。"
+msgstr ""
+
+#: ../../source/Governonce 169ec30054de4ad9a9181255ed0fe0e1 and audit.rst:200
+msgid "针对上述缺点，结合CA证书体系和区块链的关系，平台设计了证书链上吊销功能，以实现：证书吊销操作以交易的形式在链上被执行，执行后，证书失效，相关逻辑连接断开；链上将记录失效证书；将证书生效后的管理能力与区块链交易结合，实现链上证书管理。"
+msgstr ""
+
+#: ../../source/Governonce 1b7aa3c2f1e74ab68bda3b3044981724 and audit.rst:202
+msgid "链上证书吊销分为节点证书吊销、sdk证书吊销，详述如下："
+msgstr ""
+
+#: ../../source/Governonce 7b2f9e039b4c4966addaef366a40efa4 and audit.rst:204
+msgid ""
+"**节点证书吊销** "
+"：节点证书的吊销不提供单独的用户接口，但将作为节点删除的附加操作，即当执行删除节点的操作时，被删节点的证书也将自动转为吊销状态。该被删节点如需重新启动，应更换节点目录下的相关证书。"
+msgstr ""
+
+#: ../../source/Governonce 4bdb03abb02f42b79ba62f993b58b734 and audit.rst:205
+msgid ""
+"**sdk证书吊销** "
+"：使用sdk接口发起一笔调用bvm合约的普通交易，完成证书的吊销操作。当发起操作的角色为管理员时，无需提供sdk证书私钥的签名；若为普通角色则需要通过验签证明自己为该证书私钥的所有者。"
+msgstr ""
+

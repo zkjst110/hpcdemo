@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/Chain 53361d9d65754e93bf11d0c8bff39cf2 Authority
+#: Management.rst:4 Management/Contract
+msgid "合约权限管理"
+msgstr ""
+
+#: ../../source/Chain 6539049b054d489baa83430bb59ff19b Authority
+#: Management.rst:6 Management/Contract
+msgid "合约权限管理，是基于链级角色，对账户进行链上的合约（也可以是转账交易的to）访问权限进行管理。"
+msgstr ""
+
+#: ../../source/Chain 5a77aa09e1c140e39517db4dc9634500 Authority
+#: Management.rst:9 Management/Contract
+msgid "合约权限管理概述"
+msgstr ""
+
+#: ../../source/Chain 0de682121de74338949859a7d16771c0 Authority
+#: Management.rst:11 Management/Contract
+msgid ""
+"合约权限管理是基于 :ref:`链级角色管理 <chain-role-manage>`，为账户分配不同的链级角色，然后使用 "
+":ref:`链级配置管理 <chain-conf-manage>` "
+"设置基于角色的交易拦截规则以及交易拦截开关。当开关打开时，设置了交易拦截规则后，交易在被执行之前会按照这个规则检验交易发送者是否有权限发送此交易。"
+msgstr ""
+
+#: ../../source/Chain 1fb608ccabf04567a1c5ebbdebfc0ef0 Authority
+#: Management.rst:13 Management/Contract
+msgid "拦截规则包含以下字段："
+msgstr ""
+
+#: ../../source/Chain Authority Management.rst:15 Management/Contract
+#: b327c3e5c071432e912f1d2b8a6e9024
+msgid "allowAnyone : bool 是否允许任何人访问"
+msgstr ""
+
+#: ../../source/Chain 5529f8191c004cd3875b6b87172777fd Authority
+#: Management.rst:17 Management/Contract
+msgid "authorizedRoles : []string 允许访问的角色列表"
+msgstr ""
+
+#: ../../source/Chain 33f473784a1b485cb28bf97c1cc5a66c Authority
+#: Management.rst:19 Management/Contract
+msgid "forbiddenRoles : []string 禁止访问的角色列表"
+msgstr ""
+
+#: ../../source/Chain 3fa08f741e04483588a646fdea16d078 Authority
+#: Management.rst:21 Management/Contract
+msgid "id : int 规则id"
+msgstr ""
+
+#: ../../source/Chain 59b67ac563af4134af63c060b534e256 Authority
+#: Management.rst:23 Management/Contract
+msgid "name : string 规则名称"
+msgstr ""
+
+#: ../../source/Chain 7644c0038e394037b1a97af0f5e5b6b9 Authority
+#: Management.rst:25 Management/Contract
+msgid "to :  []string 规则限制的交易地址（可以是合约地址、或账户地址，目前支持通配符*）"
+msgstr ""
+
+#: ../../source/Chain 4aa73ed6782f43fc8d882e4d2339269e Authority
+#: Management.rst:27 Management/Contract
+msgid "vm ：[]string 规则限制的虚拟机类型（目前支持的是evm 、 hvm、bvm三种，支持通配符*）"
+msgstr ""
+
+#: ../../source/Chain 4406b665fd554b41a3eca785236390b7 Authority
+#: Management.rst:29 Management/Contract
+msgid ""
+"当同一交易地址被多个拦截规则匹配时，会按照 **id更小** 当规则进行校验。对于上述拦截规则中包含的字段，其优先级为forbiddenRoles"
+" > allowAnyone > authorizedRoles。对于没有拦截规则限制的交易地址，则不进行校验拦截。"
+msgstr ""
+
+#: ../../source/Chain 46932ae392a24ba18d5b5752088189af Authority
+#: Management.rst:31 Management/Contract
+msgid "例如，当某笔交易的to在多个规则中被添加了拦截规则时，会取出id更小的规则进行校验，先验证交易发起者是否含有被禁止的角色，有则校验不通过；再校验是否允许任何人访问，是则校验通过；最后校验交易发起者是否含有允许访问的角色列表，是则校验通过，否则校验不通过。"
+msgstr ""
+
+#: ../../source/Chain 409c685506c94b7ba0a0b818d6384b64 Authority
+#: Management.rst:34 Management/Contract
+msgid "litesdk使用示例"
+msgstr ""
+
+#: ../../source/Chain 5a9a4ce485ea4669bb0ca8dc61685545 Authority
+#: Management.rst:36 Management/Contract
+msgid "开启交易拦截过滤器，设置拦截规则，只有链级管理员(admin)才能访问hvm中的合约地址contractA，其中accountA具有链级管理员角色，而accouuntB没有，则使用accountA调用hvm的contractA合约成功，使用accountB调用hvm的contractA合约提示没有权限，其代码如下::"
+msgstr ""
+

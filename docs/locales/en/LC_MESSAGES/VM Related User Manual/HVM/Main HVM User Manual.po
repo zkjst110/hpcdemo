@@ -1,0 +1,1010 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/VM 5a8b07527f4a4e4288b1a71875f2adbf HVM Manual.rst:4
+#: Manual/HVM/Main Related User
+msgid "[主文件]HVM使用手册"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:6 Manual/HVM/Main Related User
+#: fa3e25573140452d842eb1a9cd81cda0
+msgid "HVM是趣链底层区块链平台自主研发的执行Java智能合约的执行引擎，通过实现轻量级的Java虚拟机，通过定制合约编写规范和结合区块链账本实现高可用的智能合约执行引擎。"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:9 Manual/HVM/Main Related User
+#: ce4263261ae846eb907708629c116016
+msgid "配套设施"
+msgstr ""
+
+#: ../../source/VM 56c5e5c86ad2473190bbb28769d43579 HVM Manual.rst:12
+#: Manual/HVM/Main Related User
+msgid "LiteSDK"
+msgstr ""
+
+#: ../../source/VM 1bb98f3c9b9e4b3d9f0a334d8a4d0391 HVM Manual.rst:14
+#: Manual/HVM/Main Related User
+msgid "LiteSDK是趣链开源的一款JavaSDK，可用于同区块链平台交互，部署和调用hvm合约，以及提供了对hvm参数编码和解码的功能，以下hvm的功能均可通过LiteSDK来进行使用。"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:16 Manual/HVM/Main Related User
+#: df1b9592a32c412d961d9012f27e4919
+msgid "开源项目地址：https://github.com/hyperchain/javasdk"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:18 Manual/HVM/Main Related User
+#: d7ad88d8b55f45588c977040c0fc971c
+msgid ""
+"LiteSDK使用文档： `https://github.com/hyperchain/javasdk/tree/master/docs "
+"<https://github.com/hyperchain/javasdk/tree/master/docs>`_"
+msgstr ""
+
+#: ../../source/VM 237bdabd3d6147fa93e29a9d8d28a029 HVM Manual.rst:21
+#: Manual/HVM/Main Related User
+msgid "hvm-sdk"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:23 Manual/HVM/Main Related User
+#: b5c56d83e55d4b048a74eaad2bb3a375
+msgid "hvm-sdk是用于编写hvm合约的工具包，包括以下介绍的合约主体类，InvokeBean接口和账本数据结构等，是编写合约项目必不可少的工具包。"
+msgstr ""
+
+#: ../../source/VM 3b826c90567e4e34a58b5c88f67286f6 HVM Manual.rst:25
+#: Manual/HVM/Main Related User
+msgid ""
+"公网maven仓库地址： `https://mvnrepository.com/artifact/cn.hyperchain/hvm-sdk "
+"<https://mvnrepository.com/artifact/cn.hyperchain/hvm-sdk>`_"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:27 Manual/HVM/Main Related User
+#: b431d9ee9a754841b4ece3dfe525fea0
+msgid "可以使用maven或gradle来导入合约项目中::"
+msgstr ""
+
+#: ../../source/VM 04f32ee7636c45729838fb35ff311143 HVM Manual.rst:42
+#: Manual/HVM/Main Related User
+msgid "合约规范"
+msgstr ""
+
+#: ../../source/VM 7132ff1548bc49a189a0b57544ba703b HVM Manual.rst:45
+#: Manual/HVM/Main Related User
+msgid "合约接口"
+msgstr ""
+
+#: ../../source/VM 59906689c0e04d5f95622a7bc6454be1 HVM Manual.rst:47
+#: Manual/HVM/Main Related User
+msgid ""
+"我们可以编写一个或多个合约接口来指定合约提供的功能，最终合约需要实现这些接口定义的功能，而每个合约接口都需要继承自 "
+"**BaseContractInterface** ， **BaseContractInterface** 是一个空接口，用于标识合约的作用。"
+msgstr ""
+
+#: ../../source/VM 9f2830d2ad084c718721529f8e3111fb HVM Manual.rst:49
+#: Manual/HVM/Main Related User
+msgid "一个合约接口的定义可以是如下的::"
+msgstr ""
+
+#: ../../source/VM 566e28cfbf45497a8b49c4f587c1e1ca HVM Manual.rst:58
+#: Manual/HVM/Main Related User
+msgid "合约主体类"
+msgstr ""
+
+#: ../../source/VM 83f2e22215014934a98375d581c64cf8 HVM Manual.rst:60
+#: Manual/HVM/Main Related User
+msgid ""
+"我们规定一个继承了 **BaseContract** 并实现了一系列 **BaseContractInterface** "
+"的子接口（合约接口）的类被称为一个合约主体类。该类内的所有实现自合约接口的方法代表合约方法，可以被外界调用。要求该合约主体类中 "
+"**必须提供无参构造方法，且不建议在构造函数中写合约逻辑** ，为了解决可能存在的初始化的需求，我们提供了一个钩子函数 `onInit()` "
+"来代替原构造函数的作用（见下文）。其中 **BaseContract** 提供了一系列特性和钩子函数的功能。"
+msgstr ""
+
+#: ../../source/VM 3f35797687414510bb8551515d3dfe77 HVM Manual.rst:62
+#: Manual/HVM/Main Related User
+msgid "一个合约主体类的结构大概如下::"
+msgstr ""
+
+#: ../../source/VM 285ee8b95c7e498ea981461804905bcc HVM Manual.rst:93
+#: Manual/HVM/Main Related User
+msgid "合约执行的生命周期"
+msgstr ""
+
+#: ../../source/VM 887c704ddc694253aea5032c52993b7f HVM Manual.rst:95
+#: Manual/HVM/Main Related User
+msgid ""
+"用户可以通过按需重写 **BaseContract** 中四个钩子方法 `onInit()` 、 `onCreated()` 、 "
+"`onPreCommit()` 和 `onCommitted()` 来在合约生命周期中的不同阶段加入自定代码。"
+msgstr ""
+
+#: ../../source/VM 74367b5089dc4649877e93dd49b27f70 HVM Manual.rst:97
+#: Manual/HVM/Main Related User
+msgid "合约的生命周期如下："
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:99 Manual/HVM/Main Related User
+#: e8b43672d1bd4d7ea9e5986093c2c6eb
+msgid "`deploy` ：合约部署阶段，该阶段只会在合约部署时出现一次。"
+msgstr ""
+
+#: ../../source/VM 11e3233a3db24d8ab993296eb87e9422 HVM Manual.rst:101
+#: Manual/HVM/Main Related User
+msgid "`create` ：构建合约对象阶段，无论部署还是调用均有该阶段。"
+msgstr ""
+
+#: ../../source/VM 37c842c068c34bab85d3a3e28fad800f HVM Manual.rst:103
+#: Manual/HVM/Main Related User
+msgid "`execute` ：执行指定的合约方法阶段，该阶段仅仅在调用合约时出现。"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:105 Manual/HVM/Main Related User
+#: fe19ab10524148ec99410cd15c6ab965
+msgid "`commit` ：持久化阶段会自动扫描合约对象所有的持久化变量并做持久化操作（即数据真正上链），该阶段仅仅在调用合约时出现。"
+msgstr ""
+
+#: ../../source/VM 84872a6d435a47d1b2f48bc00db18cc3 HVM Manual.rst:107
+#: Manual/HVM/Main Related User
+msgid "各钩子函数的调用顺序如下："
+msgstr ""
+
+#: ../../source/VM 9fbf8dfda95c4308a63be6617033ad56 HVM Manual.rst:109
+#: Manual/HVM/Main Related User
+msgid ""
+"`部署合约` : **onInit()** -> **onCreate()** -> **onPreCommit()** -> "
+"**onCommitted()**"
+msgstr ""
+
+#: ../../source/VM 0e16a00d197c49868729078cfb164105 HVM Manual.rst:111
+#: Manual/HVM/Main Related User
+msgid "`调用合约` : **onCreate()** -> **onPreCommit()** -> **onCommitted()**"
+msgstr ""
+
+#: ../../source/VM 33d82be7bb7a446aada555f705dc5f6f HVM Manual.rst:113
+#: Manual/HVM/Main Related User
+msgid "> 注：上面提到的四个钩子函数除了`onInit()`外，无论是在合约部署还是合约调用的时候均会被调用。"
+msgstr ""
+
+#: ../../source/VM 85b1a0473ccb4d359fbcd435cfbde3e7 HVM Manual.rst:115
+#: Manual/HVM/Main Related User
+msgid "|image0|"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:599 Manual/HVM/Main Related User
+#: e1c258cf4f5d4fd19ae486f6554669f5
+msgid "image0"
+msgstr ""
+
+#: ../../source/VM 81f0b736fa294915a5ca7a8c041f865b HVM Manual.rst:117
+#: Manual/HVM/Main Related User
+msgid ""
+"**用户可以在钩子函数中添加自定义的逻辑，比如可以在** `onInit()` **中代替空参空体的构造函数初始化合约属性，在** "
+"`onCreate()` **中添加权限检查或者非持久化变量的初始化，在** `onPreCommit()` **中添加执行结果的校验，在** "
+"`onCommitted()` **中添加日志的打印等。**"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:119 Manual/HVM/Main Related User
+#: e90b4fb036ee4712ad43835ea452830d
+msgid ""
+"一般而言不建议重写 **BaseContract** "
+"中的钩子函数，增加钩子函数后会带来不必要的性能开销，一般可用于调试。如不需要使用则可以忽略钩子函数。"
+msgstr ""
+
+#: ../../source/VM 205434a70c3742629bf93a6c2588ee15 HVM Manual.rst:122
+#: Manual/HVM/Main Related User
+msgid "合约功能bean"
+msgstr ""
+
+#: ../../source/VM 5bc407b144dd46baa231c2024f760162 HVM Manual.rst:124
+#: Manual/HVM/Main Related User
+msgid ""
+"合约中需要用到一些数据结构的定义，对象转换的bean等等时，编写这些类时需要注意必须提供 **空参构造函数** ，并且重写 "
+"`hashCode()` 函数和 `equals()` 函数。"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:126 Manual/HVM/Main Related User
+#: c491a0ee45454c0991a2472723b76242
+msgid "例如SBank中Account账户bean的编写::"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:145 Manual/HVM/Main Related User
+#: bdac5ea6cdeb4d1eb186b73e89b8522d
+msgid "合约持久化属性"
+msgstr ""
+
+#: ../../source/VM 8e6871a1aa494bf08ae484a16657c732 HVM Manual.rst:147
+#: Manual/HVM/Main Related User
+msgid ""
+"并非所有的合约属性都会被保存到区块链账本中，我们定义了合约持久化注解 `@StoreField` "
+"来表示该合约属性是需要保存到区块链账本当中的，StoreField注解只能用于修饰合约主类当中的属性，不能用于修饰其他bean文件当中的属性，合约主类中用StoreField注解修饰的形式如下::"
+msgstr ""
+
+#: ../../source/VM 84aa78f207464445a6cb9256a388d3fd HVM Manual.rst:155
+#: Manual/HVM/Main Related User
+msgid ""
+"使用StoreField修饰后的属性将在合约执行完成后保存数据到账本中，在合约中执行时也将从账本内获取最新值，StoreField注解还用于 "
+"**配合HyperMap、HyperTable、HyperList和NestedMap** "
+"等账本数据结构使用，具体说明可以参看后续的合约账本数据结构内容。"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:157 Manual/HVM/Main Related User
+#: aa97f02fc9dc4ed4ac3d534ff35b58a7
+msgid "而对于合约中非@StoreField注解修饰的属性值，则在每次合约调用时初始化为默认值，例如::"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:164 Manual/HVM/Main Related User
+#: e37bb4714fc3497395e6223e0a678845
+msgid "合约结构"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:166 Manual/HVM/Main Related User
+#: f59e62fd39214f39bffe1a2275622204
+msgid "上述是合约规范的介绍，了解了上述的编写规则后，我们可以完成一个简单的合约项目的构建。我们以一个银行积分转账的项目为例，来给出合约项目demo。合约项目我们推荐使用maven来构建，一个合约项目主要就包括了合约接口、合约主类和bean类，以及maven项目的pom.xml文件，用于执行合约主类和要打包的合约class文件。最终一个项目的结构大概如下(具体逻辑可以查看合约demo文件)："
+msgstr ""
+
+#: ../../source/VM 799622431e744c5ca6831e4743f3322a HVM Manual.rst:168
+#: Manual/HVM/Main Related User
+msgid "|image1|"
+msgstr ""
+
+#: ../../source/VM 0dfda889c60c4e69b5065392e2ffc6b7 HVM Manual.rst:600
+#: Manual/HVM/Main Related User
+msgid "image1"
+msgstr ""
+
+#: ../../source/VM 9e69edb940904855819ee63f087d4215 HVM Manual.rst:170
+#: Manual/HVM/Main Related User
+msgid "下面简单介绍一下样例代码："
+msgstr ""
+
+#: ../../source/VM 8d4913f5bff54cc1adbf06a9bb02f2c9 HVM Manual.rst:172
+#: Manual/HVM/Main Related User
+msgid ""
+"**Sbank.java** : 合约主体类。需要继承 **BaseContract** "
+"父类。合约主要功能是模拟了一个银行业务，提供了存钱、取钱和转账接口。"
+msgstr ""
+
+#: ../../source/VM 885a7b5b84344fbbb8c1ae9d032d3314 HVM Manual.rst:174
+#: Manual/HVM/Main Related User
+msgid ""
+"**ISBank.java** : 交付接口类，继承了 **BaseContractInterface** "
+"。用来交付给应用程序开发者，包含了合约拥有者想要对应用程序1（假设）暴露的接口。"
+msgstr ""
+
+#: ../../source/VM 37ed63c733994666b893c13f15e55766 HVM Manual.rst:176
+#: Manual/HVM/Main Related User
+msgid ""
+"**ISBank2.java** : 交付接口类，继承了 **BaseContractInterface** "
+"。用来交付给应用程序开发者，包含了合约拥有者想要对应用程序2（假设）暴露的接口。"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:178 Manual/HVM/Main Related User
+#: bd5a72425158481db25ce9ad4ffd5444
+msgid ""
+"**pom.xml** : 用户需要根据编写的合约主体类修改pom中 `<main-class></main-class>` 属性，值应该为 "
+"**合约主体类的全限定类名** 。"
+msgstr ""
+
+#: ../../source/VM 5a9df706f05d456184293db9615704b0 HVM Manual.rst:180
+#: Manual/HVM/Main Related User
+msgid "pom.xml的样例如下::"
+msgstr ""
+
+#: ../../source/VM 585ba3ac125e4b368433cc9e4336c621 HVM Manual.rst:233
+#: Manual/HVM/Main Related User
+msgid "最终通过 **mvn package -DskipTests** 即可打包出合约jar包。"
+msgstr ""
+
+#: ../../source/VM 5c49b633f17b4e539868c31341173a39 HVM Manual.rst:236
+#: Manual/HVM/Main Related User
+msgid "注意事项"
+msgstr ""
+
+#: ../../source/VM 5952587f812c43589ce36934fecbc9eb HVM Manual.rst:238
+#: Manual/HVM/Main Related User
+msgid ""
+"合约中的任意类以及InvokeBean类的包名都不能以 "
+"**cn.hyperchain、com.google.gson、gnu、java、sun** 这些包名开头，否则hvm将拒绝部署和调用；"
+msgstr ""
+
+#: ../../source/VM 4d99c2e6f8074a2aba0e1bfafa5d344b HVM Manual.rst:240
+#: Manual/HVM/Main Related User
+msgid "合约打包时pom.xml文件中一定要有<Main-Class>配置"
+msgstr ""
+
+#: ../../source/VM 0c5def96ef2c41a9be3e0fbe61261ad6 HVM Manual.rst:242
+#: Manual/HVM/Main Related User
+msgid "合约必须继承自BaseContract虚类"
+msgstr ""
+
+#: ../../source/VM 735fca712efe4b519420f3fa6102b6c6 HVM Manual.rst:245
+#: Manual/HVM/Main Related User
+msgid "Demo"
+msgstr ""
+
+#: ../../source/VM 8181972c8d34416281e3ec015738cb50 HVM Manual.rst:247
+#: Manual/HVM/Main Related User
+msgid "**【完整的合约项目demo文件，参考HVM使用手册——HVM合约demo文件——hvm-manual-demo的sbank合约】**"
+msgstr ""
+
+#: ../../source/VM 1e0f89f9ac474658b3bf67326edd6916 HVM Manual.rst:250
+#: Manual/HVM/Main Related User
+msgid "**合约调用**"
+msgstr ""
+
+#: ../../source/VM 5030998194c6453cb05efc610097179e HVM Manual.rst:252
+#: Manual/HVM/Main Related User
+msgid "调用合约之前需要先部署合约，部署合约时使用的即为合约jar包，部署成功后将获得一个合约地址，对于合约调用都需要基于部署的合约地址。对于合约的部署和调用则请结合SDK的使用说明来使用，这里不再展开讲解。"
+msgstr ""
+
+#: ../../source/VM 83464836af184097aec4e9436adc33ed HVM Manual.rst:254
+#: Manual/HVM/Main Related User
+msgid "hvm合约提供了两种调用的方式，分别是编写InvokeBean类和直接调用合约方法的形式。"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:257 Manual/HVM/Main Related User
+#: bb1542b3b70b4717b7e0441624432b7d
+msgid "InvokeBean"
+msgstr ""
+
+#: ../../source/VM 8931b1e8fd7f4491a6c5077f3c063939 HVM Manual.rst:259
+#: Manual/HVM/Main Related User
+msgid ""
+"我们将InvokeBean称为合约调用类，通过InvokeBean形式调用合约需要编写一个合约调用类，且该调用类需要实现 `BaseInvoke`"
+" 接口，该接口的具体实现如下::"
+msgstr ""
+
+#: ../../source/VM 06f7a701397f4c21bf6199332b14ab77 HVM Manual.rst:266
+#: Manual/HVM/Main Related User
+msgid "实现接口的 `invoke` 来编写执行合约的具体逻辑， `obj` 即为合约对象，其中对于该调用类必须有一个空参空体的构造函数。"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:268 Manual/HVM/Main Related User
+#: bc0381c18fde494998f742d6bfd86abd
+msgid "一次合约交易是以一个InvokeBean内实现的invoke方法逻辑决定的，可以在invoke方法内调用一个或多个合约接口的方法，InvokeBean作为交易调用参数传入到SDK中，一个InvokeBean的invoke方法调用逻辑为原子的。"
+msgstr ""
+
+#: ../../source/VM 82f5d297a794464a937687229572f900 HVM Manual.rst:270
+#: Manual/HVM/Main Related User
+msgid "泛型T表示返回的类型，即最终这笔合约调用交易的返回结果；"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:272 Manual/HVM/Main Related User
+#: be5d76b88cef478980596243dbcc4cd4
+msgid "泛型V表示合约接口，用于在invoke方法内调用合约主体类的实现逻辑。"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:274 Manual/HVM/Main Related User
+#: c5173291b21b4a3a8d8655845a3d3a43
+msgid "以调用之前 `SBank` 为例，编写 `BankInvoke` 来进行转账操作，调用类具体示例如下::"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:307 Manual/HVM/Main Related User
+#: b95b9bcd5f084a56a40a39c955774bc2
+msgid "我们以LiteSDK中构造使用InvokeBean的调用交易为例::"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:311 Manual/HVM/Main Related User
+#: df781ef500854e8a84ebd428dd274f8c
+msgid "上述例子中contractAddress为合约地址，invokeBean为我们编写的合约调用类的实例。"
+msgstr ""
+
+#: ../../source/VM 98887bddeae44ccebded57a63d367d5e HVM Manual.rst:314
+#: Manual/HVM/Main Related User
+msgid "直接调用"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:316 Manual/HVM/Main Related User
+#: ee898d0c1afc4d93ac4f324e4d6b8f32
+msgid "直接调用相对于InvokeBean的优势是不需要编写额外的调用类，可以通过合约方法名直接调用合约方法，相对而言更加简单、高效，但是一笔交易只能调用一个合约方法，不能像InvokeBean一样对多个合约方法形成一个原子调用。"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:318 Manual/HVM/Main Related User
+#: e1968740507d446d83e6a17ea8cf448c
+msgid "直接调用则使用SDK提供的编码类，通过传入合约方法名称和要调用的合约方法的参数，通过SDK完成编码后，在封装成交易发送给区块链平台。"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:320 Manual/HVM/Main Related User
+#: eea0f0f505a4479ab177c7830b070ef8
+msgid "我们以之前编写的SBank中的transfer方法为例，说明使用LiteSDK的调用形式。"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:322 Manual/HVM/Main Related User
+#: c2eac0fa50244e14af9d0b1882a8b052
+msgid "合约方法::"
+msgstr ""
+
+#: ../../source/VM 0afe29a43d6b4edd9444fb257ab9ae91 HVM Manual.rst:328
+#: Manual/HVM/Main Related User
+msgid "使用LiteSDK中构造上述方法的直接调用的参数如下::"
+msgstr ""
+
+#: ../../source/VM 5ad6febbea5d46b396ea733cc88046c6 HVM Manual.rst:336
+#: Manual/HVM/Main Related User
+msgid ""
+"**注意直接调用函数参数类型和数量必须与合约方法里面声明的类型一致，否则会出现找到不方法定义的错误，不支持参数的自动拆箱和装箱， "
+"比如Integer 和int不能混用。**"
+msgstr ""
+
+#: ../../source/VM 6b3b8bd19e104766ba23c8fd85e74f05 HVM Manual.rst:338
+#: Manual/HVM/Main Related User
+msgid "最终构造出直接调用的交易::"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:342 Manual/HVM/Main Related User
+#: b7c979c0d2384095bf313ad4c7aff507
+msgid "上述例子中contractAddress为合约地址，invokeDirectlyParams为我们编写的直接调用合约方法参数。"
+msgstr ""
+
+#: ../../source/VM 0be7f48eb150459c8ea4ad3b8f646813 HVM Manual.rst:344
+#: Manual/HVM/Main Related User
+msgid "LiteSDK直接调用InvokeDirectlyParams的Builder类中增加参数的方法和Java参数类型的对应关系如下："
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:347 Manual/HVM/Main Related User
+#: f9dce409b2d246b7badb9b111878a9bc
+msgid "增加参数方法"
+msgstr ""
+
+#: ../../source/VM 45aee75a7f3d44dabf6410e2eba82b93 HVM Manual.rst:347
+#: Manual/HVM/Main Related User
+msgid "对应Java参数类型"
+msgstr ""
+
+#: ../../source/VM 0cb2e9a98bbe423890505fce2e776fed HVM Manual.rst:349
+#: Manual/HVM/Main Related User
+msgid "addInteger"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:349 Manual/HVM/Main Related User
+#: fb3f076fd0b34941a3ee53e3991125df
+msgid "Integer"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:351 Manual/HVM/Main Related User
+#: f98a4f7fce474453ad0cc418aefbfa96
+msgid "addInt"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:351 Manual/HVM/Main Related User
+#: bcf300765b3e48dca7fe1724f9d89783
+msgid "int"
+msgstr ""
+
+#: ../../source/VM 5fc5fc727a754910906fb0359c465dd0 HVM Manual.rst:353
+#: Manual/HVM/Main Related User
+msgid "addShort"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:353 Manual/HVM/Main Related User
+#: ad5be51d8c8c493aa7e731d72f3476ae
+msgid "Short"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:355 Manual/HVM/Main Related User
+#: a151ddc36d8d4baf8cb1dddbaae1d5c4
+msgid "addshort"
+msgstr ""
+
+#: ../../source/VM 433e160b690d46bf93e02b184d9dd074 HVM Manual.rst:355
+#: Manual/HVM/Main Related User
+msgid "short"
+msgstr ""
+
+#: ../../source/VM 0e902a76a5f7424cbecdbd7942d5d6fc HVM Manual.rst:357
+#: Manual/HVM/Main Related User
+msgid "addLong"
+msgstr ""
+
+#: ../../source/VM 55c8f980dfdd4ceb9c57202365e18f9e HVM Manual.rst:357
+#: Manual/HVM/Main Related User
+msgid "Long"
+msgstr ""
+
+#: ../../source/VM 92a00db1a7d54d5eb8289131cef1eaee HVM Manual.rst:359
+#: Manual/HVM/Main Related User
+msgid "addlong"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:359 Manual/HVM/Main Related User
+#: c2409fed10ce433db81ecf691d0ed477
+msgid "long"
+msgstr ""
+
+#: ../../source/VM 79b3fa8a3b8244e58891a022c8c5dea4 HVM Manual.rst:361
+#: Manual/HVM/Main Related User
+msgid "addByte"
+msgstr ""
+
+#: ../../source/VM 216e566110904bb2a70ec7c8656c484f HVM Manual.rst:361
+#: Manual/HVM/Main Related User
+msgid "Byte"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:363 Manual/HVM/Main Related User
+#: da7e2e03011e47879952582b98246f0e
+msgid "addbyte"
+msgstr ""
+
+#: ../../source/VM 539229800dfe4626acb36ceca4058f65 HVM Manual.rst:363
+#: Manual/HVM/Main Related User
+msgid "byte"
+msgstr ""
+
+#: ../../source/VM 9246640af5604a889be5af136bb18aa6 HVM Manual.rst:365
+#: Manual/HVM/Main Related User
+msgid "addFloat"
+msgstr ""
+
+#: ../../source/VM 47a3de4cb27d4aa2911f04b60fb8f5ab HVM Manual.rst:365
+#: Manual/HVM/Main Related User
+msgid "Float"
+msgstr ""
+
+#: ../../source/VM 976e5643aec04587ba7637e0747b6d46 HVM Manual.rst:367
+#: Manual/HVM/Main Related User
+msgid "addfloat"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:367 Manual/HVM/Main Related User
+#: c1079873036a47869b6d90fbc096bedb
+msgid "float"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:369 Manual/HVM/Main Related User
+#: ed70196feda14e4c93743b774606170c
+msgid "addDouble"
+msgstr ""
+
+#: ../../source/VM 474f222f34694befa2cec2de1e2f1111 HVM Manual.rst:369
+#: Manual/HVM/Main Related User
+msgid "Double"
+msgstr ""
+
+#: ../../source/VM 2683f180f68246b08eed025b021217f1 HVM Manual.rst:371
+#: Manual/HVM/Main Related User
+msgid "adddouble"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:371 Manual/HVM/Main Related User
+#: f398bc13d86c4fda988af75c01dcfc0c
+msgid "double"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:373 Manual/HVM/Main Related User
+#: e08e2cc3c95e479b9aa183240a0583bc
+msgid "addCharacter"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:373 Manual/HVM/Main Related User
+#: f92054d5d9f148e786fb3d94676e12ac
+msgid "Character"
+msgstr ""
+
+#: ../../source/VM 2ad9a64b3054492e90c7578b9fc67c2e HVM Manual.rst:375
+#: Manual/HVM/Main Related User
+msgid "addchar"
+msgstr ""
+
+#: ../../source/VM 790638f7ebbb4873ac957f4e26eddc72 HVM Manual.rst:375
+#: Manual/HVM/Main Related User
+msgid "char"
+msgstr ""
+
+#: ../../source/VM 2efc0a4d0e8c495bbb47c40204751e6e HVM Manual.rst:377
+#: Manual/HVM/Main Related User
+msgid "addBoolean"
+msgstr ""
+
+#: ../../source/VM 35ea7c6e276349f8ab92646895235293 HVM Manual.rst:377
+#: Manual/HVM/Main Related User
+msgid "Boolean"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:379 Manual/HVM/Main Related User
+#: dd5d3b36289849b08e3949692a841c98
+msgid "addboolean"
+msgstr ""
+
+#: ../../source/VM 7d4995b2b5f34ea9bf2190c22c94ec8d HVM Manual.rst:379
+#: Manual/HVM/Main Related User
+msgid "boolean"
+msgstr ""
+
+#: ../../source/VM 4745440ea3f2485185e967869c5f660f HVM Manual.rst:381
+#: Manual/HVM/Main Related User
+msgid "addString"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:381 Manual/HVM/Main Related User
+#: dd5389d9f78747539fad904d4cc43d60
+msgid "java.lang.String"
+msgstr ""
+
+#: ../../source/VM 408a1de6a9cf41efabc08c93f4a58a12 HVM Manual.rst:383
+#: Manual.rst:391 Manual/HVM/Main Related User f8e9be74600d46399f1654f1f73c6260
+msgid "addObject(Class<?> clazz, Object obj)"
+msgstr ""
+
+#: ../../source/VM 3d93e818e67e45f79fe62a8231653bd1 HVM Manual.rst:383
+#: Manual/HVM/Main Related User
+msgid "java.lang.Object"
+msgstr ""
+
+#: ../../source/VM 537749fceee94fd293c8e5e58fc1833f
+#: 6772c4790da248b8a11e0b0799d4169e HVM Manual.rst:385 Manual.rst:397
+#: Manual/HVM/Main Related User
+msgid "addParamizedObject(Class<?>[] classes, Object obj)"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:385 Manual/HVM/Main Related User
+#: a09a1678e6464546b3de5bf4f889eb08
+msgid "Colle ction或Map接口的实现类"
+msgstr ""
+
+#: ../../source/VM 5c11223a9ed84ea888e9af66ee08edf6 HVM Manual.rst:389
+#: Manual/HVM/Main Related User
+msgid ""
+"需要特殊说明的是addObject(Class<?> clazz, Object "
+"obj)和addParamizedObject(Class<?>[] classes, Object obj)两个接口："
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:393 Manual/HVM/Main Related User
+#: ffb165ee220b48c496d50a639a5123b1
+msgid "需要注意的是支持没有泛型的Java类型，添加参数时需要指定Java的class，一般用于合约中bean类的传参。例如::"
+msgstr ""
+
+#: ../../source/VM 291f2896b2564e27ba70720876ecacb9 HVM Manual.rst:399
+#: Manual/HVM/Main Related User
+msgid "泛型类型，仅支持实现Collection或Map的接口类型，且需要把泛型类型也添加到classes中，不支持泛型类型嵌套泛型类型。泛型需要按顺序增加，Collection接口只能带一个泛型，Map接口只能带两个泛型。例如："
+msgstr ""
+
+#: ../../source/VM 49a2bcae0f714734833b5709ddd7d3f8 HVM Manual.rst:401
+#: Manual/HVM/Main Related User
+msgid "增加ArrayList::"
+msgstr ""
+
+#: ../../source/VM 5aea20c8601d40a3a80ee2c13197b53d HVM Manual.rst:407
+#: Manual/HVM/Main Related User
+msgid "增加HashMap，Map类型的泛型应按K-V的顺序给::"
+msgstr ""
+
+#: ../../source/VM 9b47255837524e67845f2911af73cf62 HVM Manual.rst:413
+#: Manual/HVM/Main Related User
+msgid "以下情况的类型添加则是**不被允许**的::"
+msgstr ""
+
+#: ../../source/VM 424f02443efb4c8b9d61b60d234af17e HVM Manual.rst:420
+#: Manual/HVM/Main Related User
+msgid "demo"
+msgstr ""
+
+#: ../../source/VM 6864c8c52ea6471398372b4b60c97f0a HVM Manual.rst:422
+#: Manual/HVM/Main Related User
+msgid "提供的demo还是以SBank为例，增加了单元测试，提供的了通过InvokeBean和直接调用两种形式来调用合约的transfer方法::"
+msgstr ""
+
+#: ../../source/VM 319de968a2ab4700bc26c131ebafe20a HVM Manual.rst:455
+#: Manual/HVM/Main Related User
+msgid "完整例子代码可获取源码包后直接运行体验，需在项目根目录下先运行mvn package。"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:457 Manual/HVM/Main Related User
+#: ee17c68585a14663952b6fd940d51cd9
+msgid "【完整的合约项目demo文件，参考HVM使用手册——HVM合约demo文件——hvm-manual-demo的sbank合约】"
+msgstr ""
+
+#: ../../source/VM 5d4615bfb17a4ea4a4c4bef2d53b5ca7 HVM Manual.rst:460
+#: Manual/HVM/Main Related User
+msgid "合约账本结构"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:462 Manual/HVM/Main Related User
+#: d4471d332057451493033e475ad395a7
+msgid "为方便合约中和账本的交互，以及提供多样化的合约功能，能让合约编写者像使用本地Java集合一样来操作区块链账本，目前hvm中提供了HyperTable，HyperMap、HyperList和NestedMap四种类型，当合约中需要保存持续增长的数据的时候，都应考虑使用提供的账本数据结构。"
+msgstr ""
+
+#: ../../source/VM 3e5172aa76db4364820ca8bd76158465 HVM Manual.rst:465
+#: Manual/HVM/Main Related User
+msgid "HyperTable"
+msgstr ""
+
+#: ../../source/VM 7848c724333945de9f509820e34872fa HVM Manual.rst:467
+#: Manual/HVM/Main Related User
+msgid "HyperTable通过将账本kv数据抽象为数据表格的形式提供服务，可以精确保存和读取每一行数据的每一个字段，提供了高效的数据写入和查询功能。"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:469 Manual/HVM/Main Related User
+#: aa05913076bc4725b8666d1de286679e
+msgid "【HyperTable使用详情参考HVM使用手册文件 - 合约账本数据结构使用手册 - HyperTable】"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:472 Manual/HVM/Main Related User
+#: b88a9a3e14de4551a10adf96a4796020
+msgid "HyperMap"
+msgstr ""
+
+#: ../../source/VM 018392ffea07459098ed4cb36919dd67 HVM Manual.rst:474
+#: Manual/HVM/Main Related User
+msgid "HyperMap实现了Java中Map接口，可以操作Map一样来操作账本数据，适合以kv形式保存的数据，key作为唯一索引，需要注意的是value数据不应该是持续增长的类型。"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:476 Manual/HVM/Main Related User
+#: d28c3b4ff9734613af60e1688338876f
+msgid "【HyperMap使用详情参考HVM使用手册文件 - 合约账本数据结构使用手册 - HyperMap】"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:479 Manual/HVM/Main Related User
+#: d9e8de9bfc004c83aaab0cf8911c18e7
+msgid "HyperList"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:481 Manual/HVM/Main Related User
+#: f11222ca63764459b895a1b0ec34a018
+msgid "HyperList实现了Java中的List接口，可以操作List一样来操作账本数据，保持插入有序，以数据的index下标作为索引，需要注意的是HyperList不适合做为持续保存的数据结构，更适合做为队列，需要消费过期数据。"
+msgstr ""
+
+#: ../../source/VM 6b77be90d4c34e7c8dca14c719505816 HVM Manual.rst:483
+#: Manual/HVM/Main Related User
+msgid "【HyperList使用详情参考HVM使用手册文件 - 合约账本数据结构使用手册 - HyperList】"
+msgstr ""
+
+#: ../../source/VM 44c64e197208444e8f782a39bdb31454 HVM Manual.rst:486
+#: Manual/HVM/Main Related User
+msgid "NestedMap"
+msgstr ""
+
+#: ../../source/VM 16cf58e63a804eddabf0d5e9005f42cc HVM Manual.rst:488
+#: Manual/HVM/Main Related User
+msgid "NestedMap和HashMap一样，实现了Map接口，所以其提供的功能与HashMap基本一致，不过在部分接口的使用上还是略有差别，更适合做复杂的嵌套数据。具体请查看直接接口章节。"
+msgstr ""
+
+#: ../../source/VM 9750a163737c450e9ad40826b19edf79 HVM Manual.rst:490
+#: Manual/HVM/Main Related User
+msgid "【NestedMap使用详情参考HVM使用手册文件 - 合约账本数据结构使用手册 - NestedMap】"
+msgstr ""
+
+#: ../../source/VM 66aae259639945578872b468cced9224 HVM Manual.rst:493
+#: Manual/HVM/Main Related User
+msgid "跨合约调用"
+msgstr ""
+
+#: ../../source/VM 9910347380fc4062ae45061f872460e5 HVM Manual.rst:495
+#: Manual/HVM/Main Related User
+msgid "hvm提供了在一个合约内调用另一个合约的功能。"
+msgstr ""
+
+#: ../../source/VM 9041fcab06874ea7ba07a6a83285af93 HVM Manual.rst:497
+#: Manual/HVM/Main Related User
+msgid "【跨合约调用使用详情参考HVM使用手册文件 - HVM跨合约功能使用说明】"
+msgstr ""
+
+#: ../../source/VM 84d792100bc04af0b380480711ec9b6e HVM Manual.rst:500
+#: Manual/HVM/Main Related User
+msgid "合约内置方法功能"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:502 Manual/HVM/Main Related User
+#: ff18b3996a984d9093a3ed84350a4ebd
+msgid "hvm在合约基类BaseContract中提供了许多内置方法，合约编写者可在合约主类中通过this引用直接调用。"
+msgstr ""
+
+#: ../../source/VM 28e2dd15716540b3bbcc095fba7b81a2 HVM Manual.rst:504
+#: Manual/HVM/Main Related User
+msgid "【HVM合约内置方法使用详情参考HVM使用手册文件 - HVM合约内置方法和工具方法使用手册】"
+msgstr ""
+
+#: ../../source/VM 387958c42ede4da7b39e04ea7534fe61 HVM Manual.rst:507
+#: Manual/HVM/Main Related User
+msgid "工具方法"
+msgstr ""
+
+#: ../../source/VM 0042c7b987434e08ae51e011e0243ce6 HVM Manual.rst:509
+#: Manual/HVM/Main Related User
+msgid "hvm合约中提供了一些不同类型的工具方法，包括密码学套件、字节转换工具等，相较于原生JDK实现有较高的性能"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:511 Manual/HVM/Main Related User
+#: bbf5bd686d034a2c8eb25eb659329249
+msgid "【HVM合约工具方法使用详情参考HVM使用手册文件 - HVM合约工具方法和工具方法使用手册】"
+msgstr ""
+
+#: ../../source/VM 32083658d2ba48b09614a45927c20c20 HVM Manual.rst:514
+#: Manual/HVM/Main Related User
+msgid "合约升级"
+msgstr ""
+
+#: ../../source/VM 08f9acda433e491d8201be6f3e6ad117 HVM Manual.rst:517
+#: Manual/HVM/Main Related User
+msgid "合约升级介绍"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:519 Manual/HVM/Main Related User
+#: a2d2dd3b2f3c423c824ab02867b0a597
+msgid "HVM在LiteSdk中为用户提供了合约升级的功能，即可以用新的合约覆盖旧的合约。其升级操作示例如下::"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:523 Manual/HVM/Main Related User
+#: d5d84f944c0a44f88d546b02c6a87b1b
+msgid "示例中的contractAddress为原合约地址，payload为新合约的代码。两者均为String类型。"
+msgstr ""
+
+#: ../../source/VM 0f045d0252884ecea7f8eab45ccb64e7 HVM Manual.rst:525
+#: Manual/HVM/Main Related User
+msgid "playload可以通过合约的jar文件获得，获取方式示例如下::"
+msgstr ""
+
+#: ../../source/VM 6181e3a9164d415ab07c7dd73e4822e4 HVM Manual.rst:531
+#: Manual/HVM/Main Related User
+msgid "合约升级需要注意事项："
+msgstr ""
+
+#: ../../source/VM 069296af7bbb4466a32feb4d008156b2 HVM Manual.rst:533
+#: Manual/HVM/Main Related User
+msgid "**权限**"
+msgstr ""
+
+#: ../../source/VM 715d9070229b4c57966d562b95519086 HVM Manual.rst:535
+#: Manual/HVM/Main Related User
+msgid "与冻结合约和解冻合约一样，合约升级需要权限。只有创建合约的账户才有升级该合约的权限。"
+msgstr ""
+
+#: ../../source/VM 3a07cbf523a24010ad2415e5d34d39f7 HVM Manual.rst:537
+#: Manual/HVM/Main Related User
+msgid "**合约类原有的属性不能删改**"
+msgstr ""
+
+#: ../../source/VM 09c7c63f140c4422bf8286268bf732f2 HVM Manual.rst:539
+#: Manual/HVM/Main Related User
+msgid "合约升级支持对合约类中方法的增加、修改和删除。也支持在合约类中增加属性，但是不允许删除或修改原有属性。"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:541 Manual/HVM/Main Related User
+#: e7034761f1c54b5186c81c58af59188a
+msgid "以下场景是被允许的："
+msgstr ""
+
+#: ../../source/VM 23dbc7f9dfe14fb0927cfa1fe541ffac HVM Manual.rst:543
+#: Manual/HVM/Main Related User
+msgid "新合约增加了新的成员变量"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:545 Manual/HVM/Main Related User
+#: ef0349cae96a47a09886ef24e70b4d28
+msgid "新合约增加了新的函数"
+msgstr ""
+
+#: ../../source/VM 823c5993c870471d8f4dec28e051fbdc HVM Manual.rst:547
+#: Manual/HVM/Main Related User
+msgid "新合约删除和修改了旧合约的函数"
+msgstr ""
+
+#: ../../source/VM 4092a428b8394df6a7f193feb108411d HVM Manual.rst:549
+#: Manual/HVM/Main Related User
+msgid "如果类是enum，enum可以新增新的常量，但不可以删除已有的常量"
+msgstr ""
+
+#: ../../source/VM 5e89379e2df147ba9d6a4f5d7fec8166 HVM Manual.rst:551
+#: Manual/HVM/Main Related User
+msgid "类里面引用的其他类可以增加成员变量"
+msgstr ""
+
+#: ../../source/VM 3a13f5d5253a40d89cb8c8356276d8e1 HVM Manual.rst:553
+#: Manual/HVM/Main Related User
+msgid "数组或者HyperMap，HyperList里面的类增加成员变量"
+msgstr ""
+
+#: ../../source/VM 3b7657a7fb0b4922b25ed90229af34ae HVM Manual.rst:555
+#: Manual/HVM/Main Related User
+msgid "HyperMap的泛型key为String类型的情况下，支持升级为NestedMap，泛型类型需保持不变"
+msgstr ""
+
+#: ../../source/VM 48c3ed1b9e964062bd669572b1ea002d HVM Manual.rst:557
+#: Manual/HVM/Main Related User
+msgid "以下场景是不被允许的："
+msgstr ""
+
+#: ../../source/VM 281973d12e0b4f54914b44c77ea71fb4 HVM Manual.rst:559
+#: Manual/HVM/Main Related User
+msgid "新合约删除了旧合约的成员变量"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:561 Manual/HVM/Main Related User
+#: d5be4f3026d242d885e60464c112d594
+msgid "新合约修改了旧合约成员变量的名字"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:563 Manual/HVM/Main Related User
+#: bb7a111e98c646dfab9838b191cde234
+msgid "enum减少常量"
+msgstr ""
+
+#: ../../source/VM 42cf986e2e8042c9a81b979310106b49 HVM Manual.rst:565
+#: Manual/HVM/Main Related User
+msgid "类里面引用的其他类减少成员变量"
+msgstr ""
+
+#: ../../source/VM 62e8c358717348c38ad001d2cf31b636 HVM Manual.rst:567
+#: Manual/HVM/Main Related User
+msgid "数组或者HyperMap，HyperList里面的类减少成员变量"
+msgstr ""
+
+#: ../../source/VM 0e72978807a14b2ab075dbee1793d7c8 HVM Manual.rst:569
+#: Manual/HVM/Main Related User
+msgid "StoreField属性类型被修改(除部分HyperMap升级为NestedMap的场景)"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:572 Manual/HVM/Main Related User
+#: ed4a0c448e224696880ce8616d6c593b
+msgid "合约升级demo"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:574 Manual/HVM/Main Related User
+#: dba348a6a75d46d3aa7c58dd244636f0
+msgid "完整例子代码可获取源码包后直接运行体验，包中已经包含了新旧两份合约的jar文件。例子中的代码为新合约，其相对旧合约的改变在代码中均标有注释。"
+msgstr ""
+
+#: ../../source/VM 7d15e877737248d0a864ec33802b3402 HVM Manual.rst:576
+#: Manual/HVM/Main Related User
+msgid "【HVM合约升级使用详情参考HVM使用手册文件 - HVM合约demo文件 - hvm-manual-demo的contractUpdate目录 】"
+msgstr ""
+
+#: ../../source/VM 8437b7917ae54ac48f84f70641188a30 HVM Manual.rst:579
+#: Manual/HVM/Main Related User
+msgid "Oracle调用"
+msgstr ""
+
+#: ../../source/VM 69afa9bab3a8494486f9596564947885 HVM Manual.rst:581
+#: Manual/HVM/Main Related User
+msgid "hvm中提供了调用外部可信数据源的功能，该功能需要hyperchain v2.0.0和hvm-sdk 1.1.0及其以上版本"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:583 Manual/HVM/Main Related User
+#: a4a9bb7330bb429a90cd35e645c7d70a
+msgid "【Oracle调用使用详情参考预言机使用手册文件】"
+msgstr ""
+
+#: ../../source/VM 450edae2b65c4eba8f6e89ce0fea72e3 HVM Manual.rst:586
+#: Manual/HVM/Main Related User
+msgid "hvm-abi插件"
+msgstr ""
+
+#: ../../source/VM 34341d1e2f1f49538da0ed66d0e87bca HVM Manual.rst:588
+#: Manual/HVM/Main Related User
+msgid "hvm提供了类似Solidity的二进制调用接口abi文件，通过abi我们可以提供给非LiteSDK实现的SDK调用hvm合约，目前提供了gosdk的支持。"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:590 Manual/HVM/Main Related User
+#: ad2f3f40b3744541a5cf0809b6edfbce
+msgid "hvm-abi插件支持了对hvm合约进行字节码增强，实现合约的storefiled在hvm中懒加载的功能。"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:592 Manual/HVM/Main Related User
+#: ab061a2c730e4c469eb3edf4546c740f
+msgid "【HVM abi使用详情参考HVM使用手册文件 - HVM ABI插件使用手册】"
+msgstr ""
+
+#: ../../source/VM HVM Manual.rst:595 Manual/HVM/Main Related User
+#: f98cb1ad156e4f289e6aa51334ce1620
+msgid "JDK支持列表"
+msgstr ""
+
+#: ../../source/VM 6ef6759d06b249a6b96d42b6b8ff46d8 HVM Manual.rst:597
+#: Manual/HVM/Main Related User
+msgid "【JDK支持列表使用详情参考HVM使用手册文件 - 附录 HVM JDK支持列表】"
+msgstr ""
+

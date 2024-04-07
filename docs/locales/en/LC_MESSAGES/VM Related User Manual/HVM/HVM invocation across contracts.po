@@ -1,0 +1,408 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024, hpctest
+# This file is distributed under the same license as the hocdemotest
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: hocdemotest \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-07 15:07+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../source/VM 8a32f2b40e9b4f2887ebab00de0fcc45 Manual/HVM/HVM Related User
+#: across contracts.rst:4 invocation
+msgid "HVM跨合约功能使用手册"
+msgstr ""
+
+#: ../../source/VM 86120d64a8a64c8ea931434b93f25724 Manual/HVM/HVM Related User
+#: across contracts.rst:7 invocation
+msgid "概念说明"
+msgstr ""
+
+#: ../../source/VM 261c2e169bfc44fa9254cb236a8438b7 Manual/HVM/HVM Related User
+#: across contracts.rst:9 invocation
+msgid ""
+"在区块链中，有些功能需要通过多个智能合约完成，在这种情况下，需要使用到合约的跨合约调用。在HVM中，用户可以通过hvm-"
+"sdk提供的接口获取到跨合约实例并进行调用。"
+msgstr ""
+
+#: ../../source/VM 1a443bbf332342d98020e4e1819d1d1a Manual/HVM/HVM Related User
+#: across contracts.rst:11 invocation
+msgid "HVM提供了两种跨合约调用实例："
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User a9444f609f7d493f85e9668192c70fac
+#: across contracts.rst:13 invocation
+msgid "contract"
+msgstr ""
+
+#: ../../source/VM 634d764039ce4f1bbd0760fd12a8881f Manual/HVM/HVM Related User
+#: across contracts.rst:15 invocation
+msgid "library"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across contracts.rst:17
+#: e4eaa98b141a48a78becc5a1e6ea68f5 invocation
+msgid "其中被跨合约的两个内置变量sender将变成发起跨合约调用的合约地址，origin则同发起跨合约调用的相同，都为交易发起者账户地址。"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across contracts.rst:20
+#: d9b0b010ccf243baa98a0dc3d408e066 invocation
+msgid "contract实例"
+msgstr ""
+
+#: ../../source/VM 923cee43b0094f0fa2579e3cc6cd59db Manual/HVM/HVM Related User
+#: across contracts.rst:22 invocation
+msgid "调用contract实例时，会影响到该合约账本中的状态变量。即如果在跨合约调用中被调用contract实例合约对应的合约状态变量被修改了，那么在持久化阶段，被调用合约中的被修改的状态变量也将被持久化。"
+msgstr ""
+
+#: ../../source/VM 228ceb770e6d4d8fb3fcf7eeb864c26f Manual/HVM/HVM Related User
+#: across contracts.rst:24 invocation
+msgid "在不跨合约的场景下，正常调用或者合约部署是，合约默认为contract实例。"
+msgstr ""
+
+#: ../../source/VM 95b1622ec4fd49148f1cd6c23e58fba8 Manual/HVM/HVM Related User
+#: across contracts.rst:27 invocation
+msgid "library实例"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User a2d662dd2ae146228b3b81909f8a9bc9
+#: across contracts.rst:29 invocation
+msgid "调用library实例时，被调用合约是以工具类的角色存在，对被调用合约的修改最终不会在账本中体现，即所有修改均会被抛弃。"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across
+#: c27d912c899e44efb5f7013815d089a6 contracts.rst:32 invocation
+msgid "使用说明"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User a3275f9e974f4ae4893d7ee8b1cdc687
+#: across contracts.rst:34 invocation
+msgid "在hvm-sdk的BaseContract中提供了内部类CrossCall，用于获取跨合约实例，CrossCall的字段属性如下表所示。"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across
+#: b4933b1452284520bba0bf6a5f0f1536 contracts.rst:37 invocation
+msgid "名称"
+msgstr ""
+
+#: ../../source/VM 88648e7add2f443fa9d0048f4ce0b525 Manual/HVM/HVM Related User
+#: across contracts.rst:37 invocation
+msgid "类型"
+msgstr ""
+
+#: ../../source/VM 57fc8abbfc3d4f4a9419ec5be936234b Manual/HVM/HVM Related User
+#: across contracts.rst:37 invocation
+msgid "描述"
+msgstr ""
+
+#: ../../source/VM 7e381ffe6a2c47ecb4282c28124c5439 Manual/HVM/HVM Related User
+#: across contracts.rst:39 invocation
+msgid "crossAddress"
+msgstr ""
+
+#: ../../source/VM 4dc10d1bd1524b54a9052ce34eab38a7 Manual/HVM/HVM Related User
+#: across contracts.rst:39 invocation
+msgid "String"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across
+#: c20bf4e7684841b296dd40e8672eaae1 contracts.rst:39 invocation
+msgid "被调用的合约地址"
+msgstr ""
+
+#: ../../source/VM 7100fbd6d58645d3a4614039f782718b Manual/HVM/HVM Related User
+#: across contracts.rst:40 invocation
+msgid "isLibrary"
+msgstr ""
+
+#: ../../source/VM 456194e1f8db40c1829fb0bd9bcd20ef Manual/HVM/HVM Related User
+#: across contracts.rst:40 invocation
+msgid "boolean"
+msgstr ""
+
+#: ../../source/VM 797a23b66b574442928bbd46fd75ffe7 Manual/HVM/HVM Related User
+#: across contracts.rst:40 invocation
+msgid "true表示获取library实例，false表示获取contract实例"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across
+#: c7c78ca40ea647fa8171f83489750bfc contracts.rst:44 invocation
+msgid "定义说明"
+msgstr ""
+
+#: ../../source/VM 53e068bd4dff4c8081947dceece22110 Manual/HVM/HVM Related User
+#: across contracts.rst:46 invocation
+msgid "在介绍跨合约调用的流程前，我们先规定需要使用到的概念："
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across contracts.rst:49
+#: e5f0cf242b074ff387ec900f9299584d invocation
+msgid "**合约A**"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across
+#: bc05851680784b7c8eb419ecbc37b39b contracts.rst:57 invocation
+msgid "合约A继承了BaseContract类，实现了IA中声明的方法，该合约方法中会调用合约B的方法。"
+msgstr ""
+
+#: ../../source/VM 2a9d2eeda7cd433a80f293e036c35560 Manual/HVM/HVM Related User
+#: across contracts.rst:65 invocation
+msgid "IA继承了BaseContractInterface类。"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across
+#: cffdf0b3a241445583c0e71625fed024 contracts.rst:68 invocation
+msgid "**合约B**"
+msgstr ""
+
+#: ../../source/VM 559999633bd041a6a37cbcfe36750e9c Manual/HVM/HVM Related User
+#: across contracts.rst:76 invocation
+msgid "合约B继承了BaseContract类，实现了IB中声明的方法。"
+msgstr ""
+
+#: ../../source/VM 0c9c313c548c4c289f6da015e984bdf9 Manual/HVM/HVM Related User
+#: across contracts.rst:84 invocation
+msgid "IB继承了BaseContractInterface类。"
+msgstr ""
+
+#: ../../source/VM 15fb3cda077a4b83bea4a687715f23f7 Manual/HVM/HVM Related User
+#: across contracts.rst:87 invocation
+msgid "注解说明"
+msgstr ""
+
+#: ../../source/VM 25aeb24b0b7a4708ab5e02d14dbc5fc8 Manual/HVM/HVM Related User
+#: across contracts.rst:89 invocation
+msgid ""
+"CrossCall需要配合相应的注解来使用。用户必须在合约声明CrossCall字段时，配合使用 `@Contract` 和 `@Library`"
+" 注解来声明实例类型，并且需要设置合约的地址。"
+msgstr ""
+
+#: ../../source/VM 971f438cc96c41e0995956332f764227 Manual/HVM/HVM Related User
+#: across contracts.rst:91 invocation
+msgid "如果我们要在合约A中调用合约B的方法，我们需要先在平台部署合约B，然后在合约A中声明一个带有注解的CrossCall字段，注解中的address即我们部署好的合约B地址，如下面的代码所示::"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across contracts.rst:99
+#: e17ad06bf2e94d2c8fd51bb0d9514f15 invocation
+msgid "跨合约调用"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across contracts.rst:101
+#: e7ea0add6ff4400197086cdf7132f32f invocation
+msgid ""
+"我们给CrossCall提供了一个获取被调用合约实例的方法 `getCrossContract`  ,若 `isLibrary=true` "
+"，返回合约地址对应的library实例；若 `isLibrary=false` "
+"，返回合约地址对应的contract实例。需要注意的是，该合约地址对应的合约主体类必须实现 **BaseContractInterface** "
+"接口，可以使用对应 **合约接口类型变量** 进行接收。"
+msgstr ""
+
+#: ../../source/VM 2880110381fc4376af823fdfd4e46447 Manual/HVM/HVM Related User
+#: across contracts.rst:107 invocation
+msgid ""
+"在我们合约A中声明了含有 `@contract` 的CrossCall字段以后，我们可以在合约A的方法中，通过 "
+"`getCrossContract` 获取合约B的contract实例，然后调用合约B的方法。"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across
+#: c64808d9e4804cec99a9fd84663ee3b9 contracts.rst:122 invocation
+msgid "注意事项"
+msgstr ""
+
+#: ../../source/VM 51d9a8653ec34a339e16433f99bbaea5 Manual/HVM/HVM Related User
+#: across contracts.rst:124 invocation
+msgid "下面是一些在跨合约调用中需要注意的方法，或者是建议的用法。"
+msgstr ""
+
+#: ../../source/VM 4ec7add90b4c4655ba5744299d0a5266 Manual/HVM/HVM Related User
+#: across contracts.rst:127 invocation
+msgid "同全限定名类"
+msgstr ""
+
+#: ../../source/VM 5761aeb20649468684d4ed5c99e5bdee Manual/HVM/HVM Related User
+#: across contracts.rst:129 invocation
+msgid "在一个调用中涉及到的所有的合约中不能出现：使用全限定类名相同(即包名和类名都相同)，但是具体实现不同的类。"
+msgstr ""
+
+#: ../../source/VM 88d6763c30054feca456aaa045ce07a3 Manual/HVM/HVM Related User
+#: across contracts.rst:131 invocation
+msgid "若出现，将会得到如下异常::"
+msgstr ""
+
+#: ../../source/VM 856bef3274ab4f30972137cfeed8e9db Manual/HVM/HVM Related User
+#: across contracts.rst:136 invocation
+msgid "跨合约调用链"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across contracts.rst:138
+#: d41f88cf60794d698f95f08911001ac3 invocation
+msgid "目前的跨合约调用只支持一层跨合约调用。有以下跨合约调用场景："
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across contracts.rst:140
+#: f1c1c748ca264176a6a611f927037f7e invocation
+msgid "合约A中，调用了contract实例B的方法和contract实例C的方法。 **调用成功** 。"
+msgstr ""
+
+#: ../../source/VM 19f44b01eb85427d8aaafff8edeb2c6e Manual/HVM/HVM Related User
+#: across contracts.rst:142 invocation
+msgid "合约A中，调用了contract实例B的方法，该实例B的方法中又跨合约调用了contract实例C的方法。 **调用失败** 。"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across
+#: b6f1b5e594b84f7394949d93b8e3de74 contracts.rst:145 invocation
+msgid "合约生命周期钩子方法"
+msgstr ""
+
+#: ../../source/VM 2de4eaa8dfda4a5f9c6d162107630de9 Manual/HVM/HVM Related User
+#: across contracts.rst:147 invocation
+msgid "在每次获取contract实例（library实例）时，均会触发contract实例（library实例）的onCreated钩子函数，即使该实例曾经已经被获取过。"
+msgstr ""
+
+#: ../../source/VM 1528ee1ea0c345f5ad5eb349769272df Manual/HVM/HVM Related User
+#: across contracts.rst:149 invocation
+msgid ""
+"合约可以通过在 **onCreated** 钩子函数中，通过检查 **sender** 和 **origin** "
+"地址，来进行权限控制，若想要终止对自己跨合约调用只需要在 **onCreated** 钩子函数中抛出 **RuntimeException** "
+"即可。合约可以通过 **getSender()** 获取到本次对自己的直接调用者(用户或者合约)的地址，可以通过 **getOrigin()** "
+"方法获取到调用链的起点(必然是用户)的地址。"
+msgstr ""
+
+#: ../../source/VM 276d996042c54f17a2f7688bfb9cf172 Manual/HVM/HVM Related User
+#: across contracts.rst:151 invocation
+msgid ""
+"因为library实例的变更最终不会被持久化到账本，所以library实例的 **onPreCommit** 和 **onCommited** "
+"钩子函数不会被触发。"
+msgstr ""
+
+#: ../../source/VM 4bb0547becd6438988dfd2c77824dcaf Manual/HVM/HVM Related User
+#: across contracts.rst:153 invocation
+msgid ""
+"**onCreated** 的执行顺序与合约执行顺序相同。 **onPreCommit** 和 **onCommited** "
+"钩子方法的调用顺序与合约执行顺序相反。比如：有调用链A->B，那么 **onCreated** 的调用顺序为A->B，而 "
+"**onPreCommit** 和 **onCommited** 的调用顺序为B->A。"
+msgstr ""
+
+#: ../../source/VM 00a086d3e12f46b5b3ec70616897dee5 Manual/HVM/HVM Related User
+#: across contracts.rst:156 invocation
+msgid "实例演示"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across contracts.rst:158
+#: e7c2c401291c46fd99efde3e2f2c71de invocation
+msgid ""
+"本小节将给出一个跨合约调用的实例，实例中包含两个合约：NumAdd合约和CrossCall合约。我们将通过跨合约调用的方式，在crossCall合约中调用addNum合约中的方法。合约的调用与部署都基于"
+" `LiteSDK` 。"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across contracts.rst:161
+#: d05fb74109174c6c9fd9f474da333440 invocation
+msgid "NumAdd合约"
+msgstr ""
+
+#: ../../source/VM 601b0665264f46e9aa5da0baab838f45 Manual/HVM/HVM Related User
+#: across contracts.rst:163 invocation
+msgid ""
+"NumAdd合约代码如下。在合约部署阶段，通过 `onInit` 方法初始化 `num=100` 。合约提供了 `getNum` "
+"方法获取num的值以及 `addNum` 方法增加num的值。"
+msgstr ""
+
+#: ../../source/VM 9a6fe77a8d2740c8a5cf314b04728ed9 Manual/HVM/HVM Related User
+#: across contracts.rst:189 invocation
+msgid "部署NumAdd合约"
+msgstr ""
+
+#: ../../source/VM 207bbec2ef074084a3bfeabf08d6d035 Manual/HVM/HVM Related User
+#: across contracts.rst:191 invocation
+msgid "首先，我们部署打包好的NumAdd合约，并输出部署好的合约地址。"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across contracts.rst:213
+#: eba69269b3774417a88cf62e162ecad3 invocation
+msgid "输出合约地址::"
+msgstr ""
+
+#: ../../source/VM 21c7ee5a3dcb43eaa9523b83a62b421d Manual/HVM/HVM Related User
+#: across contracts.rst:218 invocation
+msgid "CrossCallContract"
+msgstr ""
+
+#: ../../source/VM 693250f313b947a2bd86768cfbef788a Manual/HVM/HVM Related User
+#: across contracts.rst:220 invocation
+msgid ""
+"在部署好NumAdd合约后，我们在CrossCallContract合约中编写调用addNum合约逻辑的代码。合约中声明了一个 "
+"`CrossCall` 类型的字段，使用 `@Contract` 注解标识这是一个 `Contract` "
+"实例，注解中的address属性对应前面部署好的NumAdd合约的地址。"
+msgstr ""
+
+#: ../../source/VM 109f798387254d92a20781fdadfc4897 Manual/HVM/HVM Related User
+#: across contracts.rst:222 invocation
+msgid "CrossCallContract合约包含了两个方法："
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across
+#: c479308646e3455b958ead99537d55b2 contracts.rst:224 invocation
+msgid "crossCallGetNum：调用NumAdd合约的getNum方法，打印num的值。"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across
+#: b004b65f71154c22beca18e3f38d0ce1 contracts.rst:226 invocation
+msgid "crossCallAddNum：调用NumAdd合约的getNum方法，打印num的值；调用NumAdd的addNum方法，使num的值加1."
+msgstr ""
+
+#: ../../source/VM 37b5f59aba7e42dab85f8cc134ede53f Manual/HVM/HVM Related User
+#: across contracts.rst:249 invocation
+msgid "调用CrossCallContract合约"
+msgstr ""
+
+#: ../../source/VM Manual/HVM/HVM Related User across
+#: b2b866e6ba204f87bab5c292eac5b48d contracts.rst:251 invocation
+msgid "CrossCallContract合约的部署与NumAdd合约的部署类似，这里不再赘述。部署好CrossCallContract合约后，我们通过直接调用的方式调用CrossCall合约。"
+msgstr ""
+
+#: ../../source/VM 3de064031c8a4701b1582d941bec2c0a Manual/HVM/HVM Related User
+#: across contracts.rst:289 invocation
+msgid "上面的代码进行了三次调用："
+msgstr ""
+
+#: ../../source/VM 03fc83ceee314fbfb0b897552112da4b
+#: 5ec5217e2da2450e9a16b5320c8f6bb1 Manual/HVM/HVM Related User across
+#: contracts.rst:291 contracts.rst:303 invocation
+msgid "调用crossCallGetNum方法，获取num的值，打印结果为"
+msgstr ""
+
+#: ../../source/VM 2c721cb14e3544b886af7178b60cba6b Manual/HVM/HVM Related User
+#: across contracts.rst:297 invocation
+msgid "调用crossCallAddNum方法，使num的值加1，打印结果为"
+msgstr ""
+
+#: ../../source/VM 74cd452ee6e6489ca7a6bf944a2f5d67 Manual/HVM/HVM Related User
+#: across contracts.rst:309 invocation
+msgid ""
+"通过上面的例子，我们可以发现被CrossCallContract合约调用的NumAdd合约将num的值被持久化记录到了账本上，符合contract实例的特点。有兴趣的读者可以在CrossCallContract合约中将CrossCall的"
+" `@Contract` 注解类型改为 `@Library` ，观察区别。"
+msgstr ""
+
+#: ../../source/VM 51a81ab4fe8248fb99a591093476a8e7 Manual/HVM/HVM Related User
+#: across contracts.rst:311 invocation
+msgid ""
+"下面是给出的跨合约调用demo，可以下载在本地体验。调用测试代码码时，请先部署NumAdd合约，然后在CrossCallContract合约的跨合约注解中，写入这个地址。接着执行"
+" `mvn package` 命令，生成CrossCallContract合约的jar包。"
+msgstr ""
+
+#: ../../source/VM 1b1946ceb7a5414c966be1193ed4a900 Manual/HVM/HVM Related User
+#: across contracts.rst:313 invocation
+msgid "**【源码包可参考HVM使用手册 - HVM合约Demo附件源码-hvm-manual-demo的crossCallDemo目录】**"
+msgstr ""
+
